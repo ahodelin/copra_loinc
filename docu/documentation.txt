@@ -1,0 +1,32 @@
+from view v_loinc_german_translation
+- extract loinc-code + long_common_name
+- extract loinc-code + shortname
+
+from table copra_config_variables
+- extract id + name
+- extract id + description
+- extract id + display_name
+
+in generated files from copra
+- remove ^"
+- remove "$
+- from _ to space
+
+in generated files from loinc
+- remove ^"
+- remove "$
+- from ; to ";" (loinc_long_common_name)
+
+run python-script to search tokens
+- loinc_long_common_name + copra_name
+- loinc_long_common_name + copra_description
+- loinc_long_common_name + copra_displayname
+
+- loinc_shortname + copra_names
+- loinc_shortname + copra_description
+- loinc_shortname + copra_displayname
+
+modifications in result file to csv
+- %s/ /;/
+- %s/\( ('\)\([0-9][0-9]*\)\( \)/;\2;/g
+- %s/\(', \)\([0-9][0-9]*\)\()\)/;\2/
