@@ -15,13 +15,20 @@ from thefuzz import process, fuzz
 import pandas as pd
 
 loincFile = pd.read_csv('/home/ahodelin/git_repos/copra_loinc/csv/loinc_long_common_name.csv', header=None, sep=';', quotechar='"')
-# print(loincFile[1].to_string(index=False))
+loincParam = loincFile[1].values.tolist()
+loincParam = [x.strip() for x in loincParam]
+# print(loincParam)
+# print(loincFile[1].to_string(index=False).to_list())
 
-#exit()
+# exit()
 copraFile = pd.read_csv('/home/ahodelin/git_repos/copra_loinc/csv/copra_name.csv', header=None, sep=';', quotechar='"')
+copraParam = copraFile[1].values.tolist()
+copraParam = [x.strip() for x in copraParam]
+# print(copraParam)
+# exit()
 
-for loincRow in loincFile:
-    match_ratios = process.extract(loincRow[1].to_string(index=False), copraFile[1].to_string(index=False), scorer=fuzz.token_set_ratio)
+for loincElement in loincParam:
+    match_ratios = process.extract(loincElement, copraParam, scorer=fuzz.token_set_ratio)
     for loinc_match_copra in match_ratios:
-      print(loincRow[0].to_string(index=False), copraFile[0].to_string(index=False), loincRow[1].to_string(index=False), loinc_match_copra) 
+      print(loincElement, ';', loinc_match_copra[0],';', loinc_match_copra[1]) 
 
