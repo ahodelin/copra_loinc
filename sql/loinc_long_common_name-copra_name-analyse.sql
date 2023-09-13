@@ -144,3 +144,5 @@ where copra_name ~ '^Aufnahme allgemein'
 ;
 --------------------------
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp order by copra_name;
+
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where accuracy < 50;

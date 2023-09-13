@@ -13,11 +13,12 @@
 
 from thefuzz import process, fuzz
 
-with open("/home/ahodelin/git_repos/copra_loinc/csv/loinc_long_common_name_mod.csv") as fp: # profils_names.csv
+with open("/home/ahodelin/git_repos/copra_loinc/csv/loinc_long_common_name.csv") as fp: # profils_names.csv
     prn = fp.readlines()
 
 prn = [x.strip() for x in prn]
-
+print(type(prn))
+exit()
 with open("/home/ahodelin/git_repos/copra_loinc/csv/copra_name_mod.csv") as fc: # config_vars_names.csv
     cvn = fc.readlines()
 
