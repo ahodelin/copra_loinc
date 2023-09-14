@@ -1,11 +1,40 @@
--- loinc_long_common_name-copra_name
+-- Analyse by loinc_long_common_name & copra_name 
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp
+where accuracy < 50;
+
+-- Gesamt
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gesamt';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gesamt';
+
+-- Datum
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Datum';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Datum';
+
+-- Gruppe
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gruppe';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gruppe';
+
+-- Diagnostik
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnostik';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnostik';
+
+-- Fall
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Fall';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Fall';
+
+-- Untersuchung
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Untersuchung';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Untersuchung';
+
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp;
+
 
 select count(accuracy), accuracy
 from loinc_copra.loinc_long_common_name_copra_name_tmp
 group by accuracy
 order by accuracy desc;
 
--- Analyse by copra_name
+
 
 -- ^ABP1, ABP2
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp
