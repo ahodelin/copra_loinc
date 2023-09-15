@@ -11,13 +11,8 @@
 10073;Kategorie der Diagnostik- oder Konsilanforderung
 10074;Lokalisation der zu befundenden Region
 10075;Methode der Diagnostik bzw. des Konsils
-10257;Filter
 10258;Datum Beginn
 10259;Datum Ende
-10260;Filter Zahl
-10261;Filter Ja/Nein1
-10262;Filter Ja/Nein2
-10263;Filter Verordnungskategorie
 10410;Status der Verordnung/Aufgabe
 10411;Termin Untersuchung/Massnahme
 10412;Untersuchung/Massnahme für x Tage
@@ -31,12 +26,6 @@
 10484;Filter Verordnungstermin Bis
 10492;Filter Verordnungsschicht
 10506;Verordnungsschema
-10508;Filter Name
-10509;Filter Ort
-10510;Filter Postleitzahl
-10511;Filter externe ID
-10512;Filter MultiString
-10513;Filter MultiString
 10514;Durchführungsobjekte zur VO
 10515;Texteintrag zum Durchführungsobjekt
 10516;Link zum Durchführungsobjekt
@@ -44,22 +33,14 @@
 10597;Intervall zwischen Wiederholungen der AO
 10598;AO absteigend sortieren
 10599;Labor auszublenden
-10945;Filter - Freitext
 11214;Visierstatus der VO
 11215;Kopierstatus der VO
 11288;Leistungsanforderung zur Anordnung
-20151;Praemedikation Filter Name
-20152;Praemedikation Filter Vorname
-20153;Praemedikation Filter FallID
 20154;Praemedikation Filter Geburtsdatum
 20155;Praemedikation Filter OP Saal
 20156;Praemedikation Filter OP Tag
 20204;Praemedikation Filter Prämed-Datum
 20205;Praemedikation Filter Freigabe
-100029;Betreuer (Telefon)
-100031;Betreuer (Name)
-100034;Angehörige (Telefon)
-100035;Angehörige (Name)
 100146;Atemwege (Typ)
 100147;Atemwege (Größe)
 100151;Atemwege - Lage
@@ -366,7 +347,6 @@
 103904;Pflegedoku - Körperpflege (assistiert)
 103905;Pflegedoku - Körperpflege (selbstständig)
 103906;Pflegedoku - Bewegungen (Handicap)
-103937;Befinden - Sprache
 103939;Bewegen - Dekubitus Zusatzrisiko
 103940;Bewegen - Lagerung
 103941;Bewegen - Mobilisation
@@ -445,7 +425,7 @@
 106467;Groesse bei Behandlungbeginn
 106616;geplanter Verlegungsort
 106617;ärztliche Maßnahmen
-106646;Allergie vorhanden
+106646;Allergie vorhanden 
 106647;Allergiestatus nicht bekannt
 106648;Allergiestatus nicht erhoben
 106649;nicht bekannt
@@ -492,7 +472,6 @@
 108242;Aufnahme (Indikation zur Sectio)
 108256;Sozialanamnese / Betreuung (Schulklasse)
 108260;Sozialanamnese / Betreuung (Sonstiges)
-108261;Impfungen Sonstige
 108276;Aufnahme (Erstversorgung / Epikrise)
 108277;Aufnahme (Geburtslage - andere)
 108278;Aufnahme (Geburtskomplikationen)
@@ -529,7 +508,7 @@
 108343;Pers. Aspekte - Elternan. (Stillanleitung/Fütter.)
 108344;Pers. Aspekte - Elternan. (Verhalten Notsituation)
 108345;Pers. Aspekte - Elternan. (Inhalation)
-108346;Pers. Aspekte - Elternan. (Manu. Beutelbeat. TK)
+108346;Pers. Aspekte - Elternan. (Manu. Beutelbeat. TK) 
 108347;Pers. Aspekte - Elternan. (Absaugen TK)
 108348;Pers. Aspekte - Elternan. (TK Wechsel)
 108349;Pers. Aspekte - Elternan. (TK Pflege)

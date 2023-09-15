@@ -1,7 +1,4 @@
 -- Analyse by loinc_long_common_name & copra_name 
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where accuracy < 50;
-
 -- Gesamt
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gesamt';
 delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gesamt';
@@ -26,7 +23,43 @@ delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name =
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Untersuchung';
 delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Untersuchung';
 
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp;
+-- Anamnese
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Anamnese';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Anamnese' and loinc_num <> '35090-0';
+
+-- Diagnose
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnose';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnose' and loinc_num <> '29308-4';
+
+-- Dokumentation
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Dokumentation';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
+where copra_name = 'Dokumentation' 
+and loinc_num <> '77599-9' 
+and loinc_num <> '55107-7'
+and loinc_num <> '56446-8';
+
+-- SV
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SV';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SV';
+
+-- PT
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'PT';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'PT';
+
+
+-- SM Empfindlichkeit
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SM Empfindlichkeit';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SM Empfindlichkeit';
+
+-- A AT02 2, A AT03 2
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'A AT02 2';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_id in (101806, 101812);
+
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp order by copra_name;
+----------------------------------
+
+--select * from loinc_copra.loinc_long_common_name_copra_name_tmp where loinc_long_common_name = 'Anamnese' and loinc_num <> '35090-0';
 
 
 select count(accuracy), accuracy

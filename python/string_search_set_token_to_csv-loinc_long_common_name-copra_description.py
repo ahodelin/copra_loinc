@@ -20,7 +20,7 @@ loincFile['loincPar'] = [x.strip() for x in loincFile['loincPar']]
 loincFile['loincPar'] = loincFile['loincPar'].values.tolist()
 loincFile.set_index('loincNum', inplace=True)
 
-copraFile = pd.read_csv('/home/ahodelin/git_repos/copra_loinc/csv/copra_name.csv', header=None, sep=';', quotechar='"')
+copraFile = pd.read_csv('/home/ahodelin/git_repos/copra_loinc/csv/copra_description.csv', header=None, sep=';', quotechar='"')
 copraFile.columns=['copraId', 'copraPar']
 copraFile['copraPar'] = [x.strip() for x in copraFile['copraPar']]
 copraFile['copraPar'] = copraFile['copraPar'].values.tolist()
@@ -29,7 +29,5 @@ copraFile.set_index('copraId', inplace=True)
 for loincElement in loincFile.index:
   for copraElement in copraFile.index:
     accuracy=fuzz.token_set_ratio(loincFile['loincPar'][loincElement], copraFile['copraPar'][copraElement])
-    #print(accuracy, type(accuracy))
     if accuracy >= 50:
       print(f'{loincElement};{copraElement};{loincFile["loincPar"][loincElement]};{copraFile["copraPar"][copraElement]};{accuracy}')
-      # print(loincElement, ';', copraElement, ';', loincFile['loincPar'][loincElement], ';', copraFile['copraPar'][copraElement], ';', accuracy)

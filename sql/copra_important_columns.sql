@@ -8,7 +8,7 @@ copy(
 
 -- copra descriptions
 copy(
- select id_syst, regexp_replace(description, '^"|^" | "$|"$', '','g')
+ select id_syst, regexp_replace(description, '"', '','g')
  from icu_copra.copra_config_vars
  where description notnull
  order by id_syst 
@@ -18,7 +18,7 @@ copy(
 
 -- copra displaynames
 copy(
- select id_syst, regexp_replace(displayname, '^"|^" | "$|"$', '','g')  
+ select id_syst, regexp_replace(displayname, '"', '','g')  
  from icu_copra.copra_config_vars
  where displayname notnull
  order by id_syst

@@ -20,9 +20,9 @@
 31;Bewegungsnummer für die eindeutige Identifizierung der Behandlung
 33;Behandlungabschluß
 34;Medizinischer Behandlungsabschluss
-35;Behandlung_LEP_Ereignis
-36;Behandlung_LEP_Information
-37;Behandlung_LEP_Zeitstrahl
+35;Behandlung LEP Ereignis
+36;Behandlung LEP Information
+37;Behandlung LEP Zeitstrahl
 38;Typ der Behandlung
 39;Status des Ausdrucks
 40;Behandlungsort
@@ -35,28 +35,28 @@
 60;Medikamentenmischung
 61;Medikamentengabe
 62;Medikament
-64;Rate der ersten Gabe. Ist die Rate 0, dann ist das Medikament diskontinuierlich.
+64;Rate der ersten Gabe. Ist die Rate 0, dann ist das Medikament diskontinuierlich
 65;Grund der Nicht-Nachverordnung von einer Gabe
 66;Medikament einer Verordnung
-67;Gesamtvolumen der Mischung.
-68;DSer COPRArang der Mischung. Dieser ist gleich dem Rang des ersten Medikamentes in der Mischung.
-69;Name der Mischung. Dieser ergibt sich aus der Liste der Medikamente.
+67;Gesamtvolumen der Mischung
+68;DSer COPRArang der Mischung. Dieser ist gleich dem Rang des ersten Medikamentes in der Mischung
+69;Name der Mischung. Dieser ergibt sich aus der Liste der Medikamente
 70;Darstellung der Medikamentengabe als Objekt
-71;Volumenrate bei kontinuierlichen Medikamentengabe.
-72;Form der Gabe.
-73;Menge bei diskontinuierlichen Medikamentengaben.
+71;Volumenrate bei kontinuierlichen Medikamentengabe
+72;Form der Gabe
+73;Menge bei diskontinuierlichen Medikamentengaben
 74;Zeitpunkt der Medikamentengabe
-75;Verordnung für ein Medikament.
-76;Referenz auf die Verordnung, welche durch diese Gabe erfüllt wurde.
+75;Verordnung für ein Medikament
+76;Referenz auf die Verordnung, welche durch diese Gabe erfüllt wurde
 77;Einheit des Medikamentengabe-Objektes
-78;"Name des Wirkstoffes, auf den sich die Gabe bezieht. Wird für den Event """"Schnelle Medikamentengabe V2"""" benötigt."
-79;Enthällt den ConnectionString für die Remote-Verbindung zum COPRA-Pumpeninterface. Dieser folgt dem Schema tcp:--COMPUTERNAME:PORT/ENDPUNKTNAME.
+78;Name des Wirkstoffes, auf den sich die Gabe bezieht. Wird für den Event Schnelle Medikamentengabe V2 benötigt
+79;Enthällt den ConnectionString für die Remote-Verbindung zum COPRA-Pumpeninterface. Dieser folgt dem Schema tcp:--COMPUTERNAME:PORT/ENDPUNKTNAME
 80;Organisationseinheit
 81;Name der Organisationseinheit
 82;Beschreibung der Organisationseinheit
 83;Automatendaten werden in diesem Intervall an den Patienten geschrieben
 90;Verordnung von Serien
-91;Wird beim Dokumentieren und Nachverordnen einer Gabe erzeugt.
+91;Wird beim Dokumentieren und Nachverordnen einer Gabe erzeugt
 110;Zuordnung Ort zu Organisationseinheit
 111;Zuordnung Beginn
 112;Zuordnung Ende
@@ -65,7 +65,7 @@
 121;Name des Clients (Workstation)
 122;Zuordnung Computer zu Behandlungsort
 123;Zuordnung Computer zu Drucker
-124;Wert wird bei die Berechtigungsfunktion 'Unbegrenzter Zeitraum, wenn Computerberechtigung' verwendet. Wert ungleich 0, dann gesetzt.
+124;Wert wird bei die Berechtigungsfunktion 'Unbegrenzter Zeitraum, wenn Computerberechtigung' verwendet. Wert ungleich 0, dann gesetzt
 130;INPULS-Pflegekategorie
 131;gemeldete Beatmungsstunden (in Minuten)
 132;Tag für den die Pflegekategorie erhoben wurde
@@ -85,8 +85,6 @@
 174;ExtMaterialNr
 175;Einrichtung
 176;Leistungsklasse
-177;Extetrne Nummer
-178;Extetrne Nummer Schweiz
 179;EANNR
 180;Leistung gueltig ab
 181;Leistung gueltig bis
@@ -120,29 +118,12 @@
 209;Leistungserbringer gueltig ab
 210;Leistungserbringer gueltig bis
 211;Dienststellung
-220;Archivdruck
-221;Archivdruck-Pfad
-222;Archivdruck-Hash
-223;Archivdruck-Hashalgorithmus
-224;Archivdruck-Beginn
-225;Archivdruck-Ende
-226;Archivdruck-Intervall
-227;Archivdruck-Container
-228;Archivdruck-ContainerVersion
-229;Archivdruck-Fehlernachricht
-230;Archivdruck-Druckdatum
-231;Archivdruck-Status
-232;Archivdruck-Druckobjekt
 500;Objekt für die Geratedefinition
 501;Eindeutige Identifikation innerhalb des Geratetyp-Namensraums (z.B. Seriennummer)
 502;Name des Gerätetyps
 503;Name des Geräts, der innerhalb des Gerätetyps eindeutig ist, damit Mitarbeiter ihn aus der Liste zuordnen können
 505;Verknüpfung zwischen Patient und einem Gerät
 650;Transientes Objekt für Filterkriterien
-651;Filtervariable für ein Beginndatum
-652;Filtervariable für die Dauer in Stunden
-1000;Variable kann als Attribut verwendet werden
-1001;Variable kann als Attribut verwendet werden
 1258;Verweis von der Ziel-Behandlung auf die Quell-Behandlung einer Zusammenführung
 1259;Verweis von der Quell-Behandlung auf die Ziel-Behandlung einer Zusammenführung
 1260;fachliche Organisationseinheit der Behandlung
@@ -166,76 +147,33 @@
 1280;Bezeichnung der Diagnose
 1281;Typ der Diagnose
 1282;Erhebungszeitpunkt der Diagnose
-1298;Liste der medizinisch/pflegerischen Fachkräfte
-1299;Familienname des Mitarbeiters
-1300;Vorname des Mitarbeiters
-1301;Titel des Mitarbeiters
 1316;NYHA-Kalassifikation für Anaesthesie
 1343;Verweis auf die für diese Behandlung gültige Prämedikation
 1442;Chargen-Nummer der Blutkonserve
-10066;In diesem Objekt werden Verordnungsanforderungen und -befunde zu Diagnostik bzw. Konsilen eingetragen.
+10066;In diesem Objekt werden Verordnungsanforderungen und -befunde zu Diagnostik bzw. Konsilen eingetragen
 10067;Diagnostik- bzw. Konsilanforderung angemeldet
 10068;Befund zur Diagnostik- bzw. Konsilanforderung
 10069;Zeitpunkt, zu dem die Diagnostik- bzw. Konsilanforderung geschrieben wurde
 10070;Fragestellung zur Diagnostik- bzw. Konsilanforderung
 10071;Zeitpunkt der erledigten Diagnostik- bzw. Konsilanforderung
-10072;Name des Arztes, der die Diagnostik- bzw. Konsilanforderung befundet.
-10073;Kategorie, ob es sich um Diagnostik- oder Konsilanforderung handelt.
+10073;Kategorie, ob es sich um Diagnostik- oder Konsilanforderung handelt
 10074;Lokalisation der zu befundenden Region
 10075;Methode der Diagnostik bzw. des Konsils
 10257;Transientes Objekt für Filterkriterien
-10258;Filtervariable für ein Beginndatum
-10259;Filtervariable für ein Endedatum
-10260;Filtervariable für eine Ganzzahl
-10261;Filtervariable ein Ja-/Nein-Feld
-10262;Filtervariable ein Ja-/Nein-Feld
-10263;Filtervariable für die VO-Kategorie
 10410;Status der Verordnung/Aufgabe (z.B. offen oder erledigt)
-10411;Termin für die Untersuchung/Massnahme
 10412;Wiederholung der Untersuchung/Massnahme für x Tage
 10413;Anzeigetext der Anordnung/Aufgabe (verwendet für Darstellung in ObjectLine))
 10414;mehrfache Zeiten für Anordnung/Aufgabe
 10415;Zeit für Anordnung/Aufgabe
-10416;wird zur Anzeige in ObjektLines verwendet und dynamisch angelegt bzw. geändert
-10465;Filtervariable für die VO-Methode
-10466;Filtervariable für den VO-Status
-10483;Filtervariable für die VO-Termin Von
-10484;Filtervariable für die VO-Termin Bis
-10492;Filtervariable für die Schicht, deren Aufgaben in der Verordnungsliste dargestellt werden sollen.
 10506;Schema für Verordnungen
-10508;Filtervariable für einen Namen
-10509;Filtervariable für einen Ort/eine Stadt
-10510;Filtervariable für eine Postleitzahl
-10511;Filtervariable für eine externe ID
-10512;Filter Objekt für multiple String
-10513;Filtervariable für einen multiplen String
-10514;Objekt mit Links auf die zugehörigen Durchführungsobjekte
 10515;Texteintrag zum zugehörigen Durchführungsobjekt der VO
-10516;Link zum zugehörigen Durchführungsobjekt der VO
-10596;Variable die Berechtigungen für Neuanlage enthält
 10597;Intervall zwischen den Wiederholungen der Untersuchung/Massnahme in x Tagen
-10598;Filtervariable um AO absteigend sortieren
-10599;Filtervariable um Labor auszublenden
-10945;Filtervariable für Freitextsuche
-11214;Gibt an ob die Verordnung nicht visiert ist
-11215;Kopierstatus der Verordnung
 11288;Link auf Leistungsanforderungsobjekt zur Anordnung
-20151;Filtervariable Prämedikation Nachname
-20152;Filtervariable Prämedikation Nachname
-20153;Filtervariable Prämedikation Fallnummer
-20154;Filtervariable PrämedikationGeburtsdatum
-20155;Filtervariable Prämedikation OP Saal
-20156;Filtervariable Prämedikation OP Datum
-20204;Filtervariable Prämedikation Datum
-20205;Filtervariable Prämedikation Freigabestatus
 100004;Diagnosennummer
-100005;Person die die Diagnose erhoben hat
 100010;Nummer der Massnahme
 100015;Dokumentationszeit
 100023;Adresse des Patienten: Strasse + Hausnummer
 100024;Nationalität des Patienten
-100025;Der Patient wurde 'wohin?' verlegt?
-100026;hat der Patient einen Organspenderausweis?
 100027;Patientenverfügung
 100028;Besucherverinbarung für den Patienten
 100029;Telefonummer des Patientenbetreuers
@@ -252,9 +190,9 @@
 100067;Auswahl der Kliniken
 100068;Extravasales Lungenwasser
 100069;Intrathorakales Blutvolumen
-100070;Schlagvolumenabweichung
+100070;Schlagvolumenabweichung 
 100072;Herzindex
-100073;Index des systemischen Gefäßwiderstandes
+100073;Index des systemischen Gefäßwiderstandes 
 100074;Systemischer Gefäßwiderstand
 100077;Schrittmacher AV-Intervall
 100078;Schrittmacher Frequenz
@@ -267,7 +205,7 @@
 100086;Zerebraler Perfusionsdruck
 100088;Intrakranialer Druck
 100089;zweiter arterieller Blutdruck
-100090;zweiter nichtinvasiver Blutdruck
+100090;zweiter nichtinvasiver Blutdruck 
 100091;Linksatrial  Mitteldruck
 100092;Ereignisse Vitlaparameter Graphisch als Listenauswahl
 100093;arterieller Blutdruck 1
@@ -275,14 +213,14 @@
 100095;Herzrhythmus
 100096;VTe / ex. Atemzugvolumen (Tidal Volumen expir.)
 100097;Mindest Volumen sp
-100098;Mindest Volumen tot.
-100099;Frequenz tot.
+100098;Mindest Volumen tot
+100099;Frequenz tot
 100100;FiO2
 100101;Atemzugvolumen/Atemhubvolumen [Tidal volume] (VT)
 100102;Positiver endexspiratorischer Druck (PEEP)
 100103;Atemzeitverhältnis (I:E)
 100104;Inspiratorische Flowrate
-100105;O²- Konzentration im Inspirationsgemisch (FiO2)
+100105;O2- Konzentration im Inspirationsgemisch (FiO2)
 100106;Inspiratorische Druckunterstützung [inspiratory pressure support] (IPS) bzw. assisted spontaneuous breathig (ASB)
 100107;Atemminutenvolumen (AMV)
 100108;Beatmungsfrequenz (f/AF)
@@ -294,7 +232,7 @@
 100116;Anordnung Atemminutenvolumen (AMV)
 100117;Anordnung Beatmungsfrequenz (f/AF)
 100118;beatmungs-Verordung
-100128;Anordnung O² Konzentration im Inspirationsgemisch (FiO2)
+100128;Anordnung O2 Konzentration im Inspirationsgemisch (FiO2)
 100240;Oberer Druckniveau
 100250;HFOV Frequenz
 100254;Inspirationszeit in %
@@ -311,7 +249,6 @@
 100418;beinhaltet Ruhen und Schlafen, Befinden, Krampfanfälle, Sedierung, Schmerzdiagnose
 100641;Für Monitoringdatenübernahme
 100766;Atemwegszugang
-100815;mit SQL select getdate()
 100905;Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit
 101009;Nervensysteme
 101317;Alter des Patienten in Jahren
@@ -331,8 +268,8 @@
 101443;Minimum Airway Pressure
 101444;Intrinsic PEEP
 101447;Plateau Druck
-101448;Patient_Verlusst_ExtrakorporaleAbnahme
-101449;Patient_Blutverlusst
+101448;Patient Verlusst ExtrakorporaleAbnahme
+101449;Patient Blutverlusst
 101461;Familienstand des Patienten
 101462;Handy Nummer der Angehörigen des Patienten
 101463;Berufliche Telefonnummer der Angehörigen des Patienten
@@ -361,15 +298,9 @@
 101961;parentale Ernährung
 101963;Transpoort eines Intensivpatienten
 101965;zentralvenöser Zugang
-101967;Verbesserung der Lufu.
+101967;Verbesserung der Lufu
 101970;Labor / Midi
 101971;Standard Monitoring
-102004;Temperatur 1a
-102005;Temperatur 1b
-102006;Temperatur 2a
-102007;Temperatur 2b
-102008;Temperatur 3a
-102009;Temperatur 3b
 102010;Sauerstoffsättigung Pulsoxymetrie
 102011;Pulsrate errechnet aus der SpO2 Messung
 102012;End-tidales CO2
@@ -377,32 +308,32 @@
 102018;Pulmunaler Wedgedruck
 102019;Mittlerer pulmonale arterieller Druck
 102021;Herzleistung
-102022;Linksseitiger Herzkranzperfusionsdruck
-102023;Linksventrikulärer Schlagarbeit
-102024;Linksventrikulärer Schlagarbeitsindex
-102025;Pulmunaler Gefäßwiderstand
-102026;Pulmunaler Gefäßwiderstandsindex
-102027;Rate-/Druck-Produkt
-102028;Rechtsvetrikulärer Schlagarbeit
-102029;Rechtsvetrikulärer Schlagarbeitsindex
-102030;Schlagvolumen
-102031;Index des Schlagvolumens
-102032;Pulmonaler Gesamtgefäßwiderstand
-102033;Gesamtgefäßwiderstand
-102034;Pulskontur-Herzzeitvolumen
-102035;Herzindex (kontinuirlich)
+102022;Linksseitiger Herzkranzperfusionsdruck 
+102023;Linksventrikulärer Schlagarbeit 
+102024;Linksventrikulärer Schlagarbeitsindex 
+102025;Pulmunaler Gefäßwiderstand 
+102026;Pulmunaler Gefäßwiderstandsindex 
+102027;Rate-/Druck-Produkt 
+102028;Rechtsvetrikulärer Schlagarbeit 
+102029;Rechtsvetrikulärer Schlagarbeitsindex 
+102030;Schlagvolumen 
+102031;Index des Schlagvolumens 
+102032;Pulmonaler Gesamtgefäßwiderstand 
+102033;Gesamtgefäßwiderstand 
+102034;Pulskontur-Herzzeitvolumen 
+102035;Herzindex (kontinuirlich) 
 102036;Schlagvolumenindex  (PICCO Modul Dräger Monitoring)
-102037;Systemischer Gefäßwiderstand (PICCO Modul Dräger Monitoring)
-102038;Index des systemischen Gefäßwiderstandes (PICCO Modul Dräger Monitoring) 
-102039;Index der linken Ventrikelkontraktilität 
-102040;Herzzeitvolumen (PICCO Modul Dräger Monitoring)
-102041;Globales enddiastolisches Volumen
-102042;Index des enddiastolisches Volumen
-102043;Extravaskuläres Lungenwasser
-102044;Extravaskuläres Lungenwasserindex
-102045;Globale Auswurffraktion
-102046;Index des extravaskulären Thermovolumens
-102047;Pulmonalvaskuläer Permeabilitätsindex
+102037;Systemischer Gefäßwiderstand (PICCO Modul Dräger Monitoring) 
+102038;Index des systemischen Gefäßwiderstandes (PICCO Modul Dräger Monitoring)  
+102039;Index der linken Ventrikelkontraktilität  
+102040;Herzzeitvolumen (PICCO Modul Dräger Monitoring) 
+102041;Globales enddiastolisches Volumen 
+102042;Index des enddiastolisches Volumen 
+102043;Extravaskuläres Lungenwasser 
+102044;Extravaskuläres Lungenwasserindex 
+102045;Globale Auswurffraktion 
+102046;Index des extravaskulären Thermovolumens 
+102047;Pulmonalvaskuläer Permeabilitätsindex 
 102050;Pulmunalarterieller Druck
 102051;Herzzeitvolumen
 102053;Pulmonalkapillardruck
@@ -424,7 +355,6 @@
 102170;Intrathorakales Blutvolumen
 102171;Intrathorakaler Blutvolumenindex
 102173;Herzzeitvolumen
-102176;ml/b
 102178;Cardiac output / -index
 102179;SchlagvolumenindexSchlagvolumenindex
 102180;Systemic vascular resistance
@@ -458,16 +388,16 @@
 102858;CPAP Einstellung in der Maßeinheit cm H2O, Verwendung bei F120 und CF 800
 102859;Isolierte Ultrafiltration/Bergström
 102860;gemessener CPAP in der Maßeinheit cm H2O
-102861;Pimax (Maximaler inspiratorischer Atemwegsdruck) 
-102862;gemeesener IPAP (Inspiratorisch Positiver Atemwegsdruck)
-102863;gemessener EPAP (=Expiratorisch Positiver Atemwegsdruck) 
-102864;Ti/Ttot (Inspirationszeit/Dauer des ganzen Zyklus)
-102865;Patientenleck - Die Leckage die aufgrund Masken- bzw. Helmleckage unabhängig der Sollleckage gemessen wird 
+102861;Pimax (Maximaler inspiratorischer Atemwegsdruck)  
+102862;gemeesener IPAP (Inspiratorisch Positiver Atemwegsdruck) 
+102863;gemessener EPAP (=Expiratorisch Positiver Atemwegsdruck)  
+102864;Ti/Ttot (Inspirationszeit/Dauer des ganzen Zyklus) 
+102865;Patientenleck - Die Leckage die aufgrund Masken- bzw. Helmleckage unabhängig der Sollleckage gemessen wird  
 102866;Die gemessene Gesamtleckage inclusive der bestehenden Sollleckage
-102867;Pat.Trig (Prozentsatz der vom Patienten ausgelösten Atemzüge)
+102867;Pat.Trig (Prozentsatz der vom Patienten ausgelösten Atemzüge) 
 102868;eingestellter IPAP Wert
 102869;eingestellter EPAP Wert
-102870;IPAP-Anstiegszeit in Sekunden eingestellt
+102870;IPAP-Anstiegszeit in Sekunden eingestellt 
 102871;System vorfüllen mit Flüssigkeiten aus einer Auswahlliste
 102872;Oszillationsfrequenz Gerät: Alpha Vision Modus: HFO
 102873;Mittlerer Atemwegsdruck (MAP)
@@ -524,7 +454,7 @@
 102932;Antikoagulation Medikament
 102933;Spüllösung zum Vorbereiten des extrakorporalen Verfahrens
 102934;Liste hinterlegt mit Lösungen zum Befüllen des Systems vor Anschluss
-102935;Eine Parametereinstellung. Anstiegszeit des Drucks bei druckkontrollierten und druckunterstützten Atemzyklus.
+102935;Eine Parametereinstellung. Anstiegszeit des Drucks bei druckkontrollierten und druckunterstützten Atemzyklus
 102937;max Blutpumpengeschwindigkeit VO
 102938;Anzahl der Atemzyklen pro Minute, Parametereinstellung
 102939;Ultrafiltrationsrate
@@ -560,7 +490,7 @@
 103014;Kumulativwert
 103032;Plateau-Atemwegsdruck, ein Monitoring-Parameter
 103033;Minimaler Atemwegsdruck, ein Monitoring Parameter
-103034;Exspiratorisches Minutenvolumen, Monitoring-Parameter
+103034;Exspiratorisches Minutenvolumen, Monitoring-Parameter 
 103035;Gesamtatemfrequenz, ein Monitoring Parameter
 103036;Spontane Atemfrequenz
 103037;Sauerstoffkonzentration des abgegebenen Gasgemisches
@@ -635,7 +565,7 @@
 103154;Auswahl für die Applikationsform von NIV Anwendungen
 103206;Kumulativer Entzug, bilanzrelevant
 103209;Einstellwert: eingestellter Basisfluss im Beatmungssystem
-103210;Einstellwert: eingestellte Oszillationsfrequenz
+103210;Einstellwert: eingestellte Oszillationsfrequenz 
 103211;Einstellwert: prozentualer Anteil der Inspirationszeit bezogen auf den gesamtem Atemzyklus
 103212;Einstellwert: prozentuale Kolbenauslenkung
 103213;Einstellwert: eingestellter mittlerer Atemwegsdruck
@@ -681,9 +611,9 @@
 103290;gemessenes spontanes Atemminutenvolumen
 103291;gemessene spontane Atemfrequenz
 103292;gemessenes CPAP Niveau
-103293;kleinster gemessener Beatmungsdruck während des Atemzyklus
+103293;kleinster gemessener Beatmungsdruck während des Atemzyklus 
 103294;Ergebnis eines Messmanövers im Modus IPPV, IPPV assist
-103295;Messergebnis eines Messmanövers im ASB Spontan Modus
+103295;Messergebnis eines Messmanövers im ASB Spontan Modus 
 103296;eingestellte O2 Konzentration des Frischgases
 103297;eingestellte absolute Inspirationszeit
 103298;eingestellte Atemfrequenz
@@ -723,16 +653,8 @@
 103332;gemessener P0.1 Druck nach Meßmanöver
 103333;Einstellwert: Tidalvolumen
 103334;Hochdruckalarmgrenze im 'ASV Modus
-103336;Desinfektionsprogramme Gerät
+103336;Desinfektionsprogramme Gerät 
 103339;Kathetertyp
-103341;Listenauswahl
-103344;Listenanhang
-103349;Liste
-103350;Liste
-103353;Liste
-103356;Liste
-103359;Liste
-103367;Liste
 103380;Medtronic 5348
 103381;Medtronic 5348
 103382;Medtronic 5348
@@ -783,18 +705,9 @@
 103439;gemessene Sauerstoffkonzentration im Atemgas
 103440;gemessene statische Compliance
 103443;gemessener AutoPEEP
-103568;Liste
-103571;Liste
-103572;LIste
-103573;Liste
-103574;Liste
-103576;Liste
-103577;Liste
-103585;Drainagen_SekretmlKum: Drainagen-Sekret Kumulativ zur Dokumentation, nicht bilanzrelevant
+103585;Drainagen SekretmlKum: Drainagen-Sekret Kumulativ zur Dokumentation, nicht bilanzrelevant
 103587;Gefäßdefinition
 103588;Katheterart
-103589;Bezeichnung
-103590;Bezeichnung
 103594;Patient Allergie - Datum
 103597;Patient Besonderheit Datum
 103602;Dokumentation der Markierung des Katheters bzgl. der Lage bzw. Tiefe
@@ -824,8 +737,6 @@
 103634;Gerät auswählen
 103636;Hypothermiebehandlung
 103637;Hypothermiebehandlung
-103640;Liste
-103641;Liste
 103642;Bilanzrelevante Dokumentation der Sekretmenge, gefördert über die V.A.C. Pumpe
 103643;Dokumentation des Füllstandes vom Auffangbehälter der VAC Pumpe
 103644;Dokumentation des Füllstandes des Auffangbehälters der V.A.C. Pumpe im Rahmen der Dekubitusversorgung
@@ -848,10 +759,6 @@
 103680;GCS Aufnahme
 103689;Hypothermiebehandlung
 103690;Hypothermiebehandlung
-103691;Liste
-103692;Gerät auswählen
-103696;Listenauswahl
-103701;Geräteauswahl
 103704;0=Vorerkrankungen, 1=Hauptdiagnose, ab 2 sonstige Diagnosen
 103715;Temperatur bei der PICCO Messung
 103716;Bluttemperatur bei der HZV Messung
@@ -859,31 +766,26 @@
 103731;Dokumentation der eingestellten Temperatur am ECMO Gerät
 103733;Dokumentationsmöglichkeit des Füllstandes des Auffangbehältnisses für den Magensaft
 103734;Eingestellter Temperaturwert an der ECMO (Gerät)
-103735;"Dokumentation der Tätigkeit """"Flushen"""" bei Einsatz eines ECMO Verfahrens"
-103736;"Dokumentation der Tätigkeit """"Flushen"""" bei Einsatz eines ILA Verfahrens"
+103735;Dokumentation der Tätigkeit Flushen bei Einsatz eines ECMO Verfahrens
+103736;Dokumentation der Tätigkeit Flushen bei Einsatz eines ILA Verfahrens
 103737;Angeordnete Temperatureinstellung bei ECMO Verfahren
 103738;Dokumentation der Mege des Nasen- und Rachensekrets
 103739;Statusdokumentation eines implantierten AICD
 103742;Beschreibung des Sprachverhaltens des Patienten
 103743;Dokumentation des Sprachverhaltens des Patienten bei Aufnahme
-103744;Listenauswahl
-103745;Liste
-103746;Liste
 103748;Dokumentation der eingestellten Tubuskompensation
-103750;Dokumentation der zeitlichen Dauer der CPR.
-103751;Dokumentierte Dauer der pflegerischen Assistenz bei therapeutischen, diagnostischen und oder operativen Interventionen.
-103752;Dokumentation durchgeführter diagnostischer Maßnahmen.
+103750;Dokumentation der zeitlichen Dauer der CPR
+103751;Dokumentierte Dauer der pflegerischen Assistenz bei therapeutischen, diagnostischen und oder operativen Interventionen
+103752;Dokumentation durchgeführter diagnostischer Maßnahmen
 103777;indirekte Lichtreaktion
 103778;indirekte Lichtreaktion
-103779;Zeitpunkt für den die Pupillenreaktion erfasst wurde.
+103779;Zeitpunkt für den die Pupillenreaktion erfasst wurde
 103790;indirekte Lichtreaktion
 103791;indirekte Lichtreaktion
-103792;Zeitpunkt für den die Pupillenreaktion erfasst wurde.
-103804;Liste
-103805;Liste
+103792;Zeitpunkt für den die Pupillenreaktion erfasst wurde
 103807;Über eine Messsonde transcutan gemessener Prozentwert
-103808;Über eine Sonde gemessener regionaler cerebraler Blutfluss.
-103809;transcutan gemessener pCO2 Wert.
+103808;Über eine Sonde gemessener regionaler cerebraler Blutfluss
+103809;transcutan gemessener pCO2 Wert
 103814;Zielwert für den ICP Wert unter Hirndrucktherapie
 103815;Zielwert für den CPP unter Hirndrucktherapie
 103816;Zielwert für den intraparenchymen Sauerstoffpartialdruck ermittelt über PtiO2 Sonde
@@ -891,415 +793,386 @@
 103818;Über eine Messsonde transcutan gemessener Prozentwert
 103820;Dokumentationsmöglichkeit für die Zielvorgabe des Natriumwertes
 103821;Dokumentationsmöglichkeit für die Zielvorgabe des Kaliumwertes
-103822;Anordnungsmöglichkeit bzgl. der Drainagenhöhe
+103822;Anordnungsmöglichkeit bzgl. der Drainagenhöhe 
 103823;Anordnungsmöglichkeit für den Sog einer Drainage
 103826;Dokumentation der Applikationsform bei Atemtherapie mittels EzPAP
 103827;Messung des PAP unter der Atemtherapie EzPAP
-103828;Liste
-103829;Liste
 103837;Rotationswinkel
 103838;Rotationswinkel
 103841;Rotationszeit/Haltezeit
 103842;Haltedauer
 103844;Schläge /sek
-103845;Listeneintrag
-103847;Listenauswahl
 103859;Einstellung der Lage
-103860;Liste
 103865;Dokumentation der Ohrenpflege rechts ab dem 22.02.2010
 103866;Dokumentation des Ohrenstatus links ab dem 22.02.2010
-103867;Dokumentation der Nasenpflege links ab dem 22.02.2010.
-103868;Dokumentation des Nasenstatus links ab dem 22.02.2010.
+103867;Dokumentation der Nasenpflege links ab dem 22.02.2010
+103868;Dokumentation des Nasenstatus links ab dem 22.02.2010
 103869;Dokumentation der Augenpflege links ab dem 22.02.2010
 103870;Dokumentation des Augensekrets links ab dem 22.02.2010
 103871;Beschreibung des AugenStatus links ab 23.02.2010
-103872;Dokumentation von Angehörigengesprächen.
+103872;Dokumentation von Angehörigengesprächen
 103873;Dokumentation von Angehörigenbetreuung
 103874;Dokumentation eines Angehörigengesprächs
-103875;Dokumentation der Versorgung von einen sterbenden Patienten.
-103876;Dokumenttion der Versorgung verstorbener Patienten.
-103906;Liste
-103907;Liste
-103908;Liste
-103909;Liste
-103910;Liste
+103875;Dokumentation der Versorgung von einen sterbenden Patienten
+103876;Dokumenttion der Versorgung verstorbener Patienten
 103934;Beschreibung der Eigenschaft des Sekrets NRR
-103935;Beschreibung der Menge des Trachealsekrets im Verlegungsbericht.
-103936;Beschreibung der Menge des Sekrets NRR im Verlegungsbericht.
+103935;Beschreibung der Menge des Trachealsekrets im Verlegungsbericht
+103936;Beschreibung der Menge des Sekrets NRR im Verlegungsbericht
 103937;Beurteilung der Sprache im Verlegungsbericht Pflege
 103938;Rchmond Atation Sedtion Sale bei Vrlegung
 103939;Dokumentation des Dekubitus Zusatzrisikos bei Verlegung
 103940;Dokumentation des Status der Lagerungsmaßnahmen bei Verlegung
 103941;Dokumentation des Mobilisationsgrad zum Zeitpunkt der Verlegung
 103942;Dokumentation des Status des Schluckaktes
-103944;Freitext
 103945;Dokumentation des Nasenstatus im Pflegeverlegungsbericht
 103946;Dokumentation des Nasenstus links im Pflegeverlegungsbericht
 103947;Dokumentation des Ohrenstatus rechts im Pflegeverlegungsbericht
 103948;Dokumentation des Ohrenstatus links im Pflegeverlegungsbericht
-103949;Dokumentation der Körperpflege des Patienten, die durch das Pflegepersonal übernommen wird.
-103950;Dokumentation der assistierten Körperpflege im Pflegeverlegungsbericht.
-103951;Dokumentation der selbstständigen Körperpflege des Pat. im Pflegeverlegungsbericht.
-103952;Dokumentation des Zahnstatus zum Zeitpunkt der Verlegung im Pflegeverlegungsbericht.
-103953;Dokumentation des Haarstatus bei Verlegung im Pflegeverlegungsbericht.
-103954;Dokumentation des Lippenstatus zum Zeitpunkt der Verlegung im Pflegeverlegungsbericht.
-103955;Dokumentation des Urogenitalstatus zum Zeitpunkt der Verlegung im Pflegeverlegungsbericht.
-103956;Der letzte in der Verlaufsdokumentation ermittelter Braden Score, der in den Pflegeverlegungsbericht gespiegelt wird.
+103949;Dokumentation der Körperpflege des Patienten, die durch das Pflegepersonal übernommen wird
+103950;Dokumentation der assistierten Körperpflege im Pflegeverlegungsbericht
+103951;Dokumentation der selbstständigen Körperpflege des Pat. im Pflegeverlegungsbericht
+103952;Dokumentation des Zahnstatus zum Zeitpunkt der Verlegung im Pflegeverlegungsbericht
+103953;Dokumentation des Haarstatus bei Verlegung im Pflegeverlegungsbericht
+103954;Dokumentation des Lippenstatus zum Zeitpunkt der Verlegung im Pflegeverlegungsbericht
+103955;Dokumentation des Urogenitalstatus zum Zeitpunkt der Verlegung im Pflegeverlegungsbericht
 103957;Dokumentation des Zugangswegs bei Schrittmachertherapie im Pflegeverlegungsbericht
-103958;Pupillendokumentation im Pflegeverlegungsbericht.
-103959;Pupillendokumentation im Pflegeverlegungsbericht.
-103960;Dokumentation der Pupillenisokorie im Pflegeverlegungsbericht.
-103961;Dokumentation des Cornealreflexes im Pflegeverlegungsbericht.
-103962;Dokumentation de4s Cornealreflexes im Pflegeverlegungsbericht.
-104012;Listendoku zusätzl. Personal
+103960;Dokumentation der Pupillenisokorie im Pflegeverlegungsbericht
+103961;Dokumentation des Cornealreflexes im Pflegeverlegungsbericht
+103962;Dokumentation de4s Cornealreflexes im Pflegeverlegungsbericht
 104018;Dokumentation der Urinbeschaffenheit zum zeitpunkt der Verlegung
 104019;Dokumentation der Stuhlbeschaffenheit zum zeitpunkt der Verlegung
 104020;Dokumentation des Ventilationsstatus zum Zeitpunkt der Verlegung
-104024;Dokumentation des Sekretverlustes über den Dekubitus in ml.
-104025;Dokumentation des Sekretverlustes über die Wunden und Defekte in ml.
-104030;Zeile für einen automatisierten Eintrag, für das Merkmal Sterbebegleitung in INPULS.
+104024;Dokumentation des Sekretverlustes über den Dekubitus in ml
+104025;Dokumentation des Sekretverlustes über die Wunden und Defekte in ml
+104030;Zeile für einen automatisierten Eintrag, für das Merkmal Sterbebegleitung in INPULS
 104032;Messung des Horowitz-Indexes
 104033;Einstellwert des NO bei NO Beatmung
 104034;Messwert der  NO Konzentration bei NO Beatmung
 104035;Messwert der NO2 Konzentration bei NO Beatmung
-104091;Liste
-104101;Liste
-104102;Liste
-104103;Liste
-104107;Liste
-104108;Liste
-104109;Liste
-104110;Liste
-104111;Liste
-104112;Liste
 104115;Marker für die Sterbebegleitung in Inpuls 48 h prä Exitus
-104116;Liste
-104118;Liste
 104134;Ist eine Aufnahme geplant chirurgisch, ungeplant chirurgisch oder medizinisch
 104147;Temperatureinstellung am Gerät Airvo
 104149;Einstellunggröße  des Flows am Gerät
-104150;Dokumentation des eingestellten O2 Flusses, welcher am Gerät Airvo angeschlossen ist.
-104151;Dokumentation der O2 Konzentration in Abhängigkeit der Einstellgrößen FlowSetting und O2 Flow.
+104150;Dokumentation des eingestellten O2 Flusses, welcher am Gerät Airvo angeschlossen ist
+104151;Dokumentation der O2 Konzentration in Abhängigkeit der Einstellgrößen FlowSetting und O2 Flow
 104152;Beschreibung der Schnittstelle vom Gerät zum Patienten
 104153;Dokumentation des Apllikationsweges
 104192;Liste Highflow Highflow CPAP
-104226;Edi-Mindestwert
-104227;Edi-Spitzenwert
-104228;Shallow Breathing Index (Index für flache Atmung)
-104229;P0.1
-104230;Elastanz
-104231;Atemarbeit, Patient
-104232;Atemarbeit, Ventilator
-104233;Exstiratorische Resistenz
-104234;Inspiratorische Resistenz
-104235;Statische Compliance
-104236;Dynamische Charakteristika
-104237;Gemessene Sauerstoffkonzentration
-104238;Endexspiratorischer Flow
-104239;Exsp. Tidalvolumen
-104240;Insp. Tidalvolumen
-104241;Leckage in %
-104242;MVe [l/min]
-104243;Insp. Minutenvolumen
-104244;Spontanes exsp. Minutenvolumen
-104245;Atemfrequenz
-104246;Spontane Atemzüge pro Minute
-104247;Continuous Positive Airway Pressure
-104248;Positiver Endexsp. Druck
-104249;Mittlerer Atemwegsdruck
-104250;Atemwegsdruck Pause
-104251;Atemdruck Spitze
-104252;Backup Ti [s]
-104253;Backup I:E [Einstellung]
-104254;Backup DK über PEEP [cmH2O]
-104255;Backup Frequenz [n/min]
-104256;Backup Vt [ml]
-104257;Automode Triggerfenster (s)
-104258;Gewicht (kg)
-104259;EDI Trigger
-104260;Nava Pegel
-104261;Sauerstoffkonzentration
-104262;zeit unteres Druckniveau (tniedrig)
-104263;zeit oberes Druckniveau (thoch)
-104264;PEEP
-104265;Druckunterstüzung hoch (cmH2O)
-104266;Phoch (cmH2O)
-104267;Phoch (cmH2O)
-104268;DU über PEEP
-104269;DK über PEEP
-104270;Drucktrigger
-104271;Flowtrigger
-104272;TPause (%)
-104273;TPause (s)
-104274;I:E [Einstellung]
-104275;End. Insp. Zyklusende (% des Spitzenflows)
-104276;Insp.-Anstiegszeit (%)
-104277;Insp.-Anstiegszeit (s)
-104278;Pausendauer [s]
-104279;Pausendauer
-104280;Ti (s)
-104281;CMV Frequenz
-104282;SIMV Frequenz
-104283;Atemfrequenz
-104284;Tidalvolumen
-104315;Dokumentation der durchgeführten Spitzfußprophylaxe.
-104319;Dokumentation der Füllstandsmenge des Auffandbehälters.
-104342;Dokumentation des Wechsels der Beatmungsbeutels.
-104343;Dokumentation des Wechsels der Beatmungsmasken.
-104345;Dokumentation des prozentualen Anteil des Aufblasens des Ballons.
-104347;Dokumentation des prozentualen Anteils des Leersaugens des Ballons.
-104349;Dokumentation des Unterstützungsdruckes.
-104351;Dokumentation des verwendeten Ballonkatheters.
-104352;Dokumentation des Ballonvolumens.
-104353;Dokumentation der gewählten EG Ableitung für den IABP Einsatz.
-104354;Dokumentation der IABP Frequenz.
-104355;Dokumentation des ausgewählten Triggers der IABP.
-104356;Dokumentation des gemessenen Blutdruckes unter IABP.
+104226;Edi-Mindestwert 
+104227;Edi-Spitzenwert 
+104228;Shallow Breathing Index (Index für flache Atmung) 
+104229;P0.1 
+104230;Elastanz 
+104231;Atemarbeit, Patient 
+104232;Atemarbeit, Ventilator 
+104233;Exstiratorische Resistenz 
+104234;Inspiratorische Resistenz 
+104235;Statische Compliance 
+104236;Dynamische Charakteristika 
+104237;Gemessene Sauerstoffkonzentration 
+104238;Endexspiratorischer Flow 
+104239;Exsp. Tidalvolumen 
+104240;Insp. Tidalvolumen 
+104241;Leckage in % 
+104242;MVe [l/min] 
+104243;Insp. Minutenvolumen 
+104244;Spontanes exsp. Minutenvolumen 
+104245;Atemfrequenz 
+104246;Spontane Atemzüge pro Minute 
+104247;Continuous Positive Airway Pressure 
+104248;Positiver Endexsp. Druck 
+104249;Mittlerer Atemwegsdruck 
+104250;Atemwegsdruck Pause 
+104251;Atemdruck Spitze 
+104252;Backup Ti [s] 
+104253;Backup I:E [Einstellung] 
+104254;Backup DK über PEEP [cmH2O] 
+104255;Backup Frequenz [n/min] 
+104256;Backup Vt [ml] 
+104257;Automode Triggerfenster (s) 
+104258;Gewicht (kg) 
+104259;EDI Trigger 
+104260;Nava Pegel 
+104261;Sauerstoffkonzentration 
+104262;zeit unteres Druckniveau (tniedrig) 
+104263;zeit oberes Druckniveau (thoch) 
+104264;PEEP 
+104265;Druckunterstüzung hoch (cmH2O) 
+104266;Phoch (cmH2O) 
+104267;Phoch (cmH2O) 
+104268;DU über PEEP 
+104269;DK über PEEP 
+104270;Drucktrigger 
+104271;Flowtrigger 
+104272;TPause (%) 
+104273;TPause (s) 
+104274;I:E [Einstellung] 
+104275;End. Insp. Zyklusende (% des Spitzenflows) 
+104276;Insp.-Anstiegszeit (%) 
+104277;Insp.-Anstiegszeit (s) 
+104278;Pausendauer [s] 
+104279;Pausendauer 
+104280;Ti (s) 
+104281;CMV Frequenz 
+104282;SIMV Frequenz 
+104283;Atemfrequenz 
+104284;Tidalvolumen 
+104315;Dokumentation der durchgeführten Spitzfußprophylaxe
+104319;Dokumentation der Füllstandsmenge des Auffandbehälters
+104342;Dokumentation des Wechsels der Beatmungsbeutels
+104343;Dokumentation des Wechsels der Beatmungsmasken
+104345;Dokumentation des prozentualen Anteil des Aufblasens des Ballons
+104347;Dokumentation des prozentualen Anteils des Leersaugens des Ballons
+104349;Dokumentation des Unterstützungsdruckes
+104351;Dokumentation des verwendeten Ballonkatheters
+104352;Dokumentation des Ballonvolumens
+104353;Dokumentation der gewählten EG Ableitung für den IABP Einsatz
+104354;Dokumentation der IABP Frequenz
+104355;Dokumentation des ausgewählten Triggers der IABP
+104356;Dokumentation des gemessenen Blutdruckes unter IABP
 104403;Inhalte der Prämedikation
-104406;Präanästhetische Anordnung Option.
-104407;Präanästhetische Anordnung nüchtern ab definiertertem Zeitpunkt.
-104408;Präanästhetische Anordnung spezielle Untersuchung.
-104409;Präanästhetische Anordnung BZ Tagesprofil.
-104410;Präanästhetische Anordnung Gerinnung.
-104411;Präanästhetische Anordnung Wiedervorstellung.
+104406;Präanästhetische Anordnung Option
+104407;Präanästhetische Anordnung nüchtern ab definiertertem Zeitpunkt
+104408;Präanästhetische Anordnung spezielle Untersuchung
+104409;Präanästhetische Anordnung BZ Tagesprofil
+104410;Präanästhetische Anordnung Gerinnung
+104411;Präanästhetische Anordnung Wiedervorstellung
 104412;Präanästhetische Anordnung aktuelles EKG
-104413;Präanästhetische Anordnung Schilddrüsenwerte.
-104414;Präanästhetische Anordnung aktuelles Labor.
-104415;Präanästhetische Anordnung nüchtern bleiben.
-104416;Name des Anästhesisten, der die Prämedikation erstellt.
-104418;Präanästhetische Anordnung: Anzahl der anzufordernden Einheiten an Eigenblut.
-104419;Präanästhetische Anordnung: Anzahl der anzufordernden Einheiten an TKs.
-104420;Präanästhetische Anordnung: Anzahl der anzufordernden Einheiten an FFPs.
-104421;Präanästhetische Anordnung: Anzahl der anzufordernden Einheiten an EKs.
-104422;Dokumentation des geplanten OP Datums.
+104413;Präanästhetische Anordnung Schilddrüsenwerte
+104414;Präanästhetische Anordnung aktuelles Labor
+104415;Präanästhetische Anordnung nüchtern bleiben
+104416;Name des Anästhesisten, der die Prämedikation erstellt
+104418;Präanästhetische Anordnung: Anzahl der anzufordernden Einheiten an Eigenblut
+104419;Präanästhetische Anordnung: Anzahl der anzufordernden Einheiten an TKs
+104420;Präanästhetische Anordnung: Anzahl der anzufordernden Einheiten an FFPs
+104421;Präanästhetische Anordnung: Anzahl der anzufordernden Einheiten an EKs
+104422;Dokumentation des geplanten OP Datums
 104423;Dokumentation freier Arztwahl
 104453;Dokumentation der vorläufigen Diagnose
-104454;Dokumentation der Art des geplanten Eingriffes.
+104454;Dokumentation der Art des geplanten Eingriffes
 104455;Dokumentation der klinischen Fachrichtung der OP
-104456;Dokumentation, wenn OSAS CPAP versorgt ist.
-104457;Dokumentation, wenn OSAS vorliegt.
-104458;Dokumentation, wenn Opiatgewöhnung vorliegt.
-104459;Dokumentation, wenn eine Infektion vorliegt.
-104460;Dokumentation, wenn schwieriger Atemweg bekannt ist.
-104461;Dokumentation, wenn PONV vorliegt.
+104456;Dokumentation, wenn OSAS CPAP versorgt ist
+104457;Dokumentation, wenn OSAS vorliegt
+104458;Dokumentation, wenn Opiatgewöhnung vorliegt
+104459;Dokumentation, wenn eine Infektion vorliegt
+104460;Dokumentation, wenn schwieriger Atemweg bekannt ist
+104461;Dokumentation, wenn PONV vorliegt
 104462;Dokumentation, wenn MH-Disposition vorliegt
-104463;Dokumentation, wenn Reflux besteht.
-104464;Dokumentation Anästhesierelevanter Vorerkrankungen des Patienten.
+104463;Dokumentation, wenn Reflux besteht
+104464;Dokumentation Anästhesierelevanter Vorerkrankungen des Patienten
 104465;Dokumentation früherer durchgeführter Anästhesien
-104466;Doku Noteingriff.
-104467;Doku Dringlicher Eingriff.
-104468;Doku Wahleingriff.
-104469;Doku einer vorliegenden Patientenverfügung.
-104470;Doku ASA Hirntod.
-104471;Doku ASA V.
-104472;Doku ASA IV.
-104473;Doku ASA III.
-104474;Doku ASA II.
-104475;Doku ASA I.
-104476;Doku Einwilligung DE.
-104477;Doku Einwilligung ICU.
-104478;Doku Einwilligung BK.
-104479;Doku Einwilligung DIB.
-104480;Doku Einwilligung Fem. Katheter.
-104481;Doku Einwilligung Art. Katheter.
-104482;Doku Einwilligung BTx.
-104483;Doku Einwilligung TEE.
-104484;Doku Einwilligung PAK.
-104485;Doku Einwilligung ZVK.
-104486;Doku Einwilligung thorakale PDA.
-104487;Doku Einwilligung Plexusanästhesie.
-104488;Doku Einwilligung Chefvwertreter.
-104489;Doku Einwilligung QEA.
-104490;Doku Einwilligung PDA.
-104491;Doku Einwilligung SpA.
-104492;Doku Einwilligung AS.
-104493;Doku Einwilligung Deep Sedierung.
-104494;Doku Einwilligung Sedierung.
-104495;Doku Einwilligung fieberoptische Intubation.
-104496;Doku Einwilligung Kaudale.
-104497;Doku Einwilligung ITN.
-104498;Doku Neurologie Option 2.
-104499;Doku Neurologie ICP Erhöhung.
-104500;Doku Neurologie Krampfleiden.
-104501;Doku Neurologie Parese.
-104502;Doku Neurologie Wert.
-104503;Doku Neurologie Option 1.
-104504;Doku Neurologie GCS.
-104505;Doku Neurologie Ischämie.
-104506;Doku Neurologie ohne pathologischen Befund.
-104507;Doku Allergien Option 2.
-104508;Doku Allergie Kontrastmittel.
-104509;Doku Allergie Kontakt.
+104466;Doku Noteingriff
+104467;Doku Dringlicher Eingriff
+104470;Doku ASA Hirntod
+104471;Doku ASA V
+104472;Doku ASA IV
+104473;Doku ASA III
+104474;Doku ASA II
+104475;Doku ASA I
+104476;Doku Einwilligung DE
+104477;Doku Einwilligung ICU
+104478;Doku Einwilligung BK
+104479;Doku Einwilligung DIB
+104480;Doku Einwilligung Fem. Katheter
+104481;Doku Einwilligung Art. Katheter
+104482;Doku Einwilligung BTx
+104483;Doku Einwilligung TEE
+104484;Doku Einwilligung PAK
+104485;Doku Einwilligung ZVK
+104486;Doku Einwilligung thorakale PDA
+104487;Doku Einwilligung Plexusanästhesie
+104488;Doku Einwilligung Chefvwertreter
+104489;Doku Einwilligung QEA
+104490;Doku Einwilligung PDA
+104491;Doku Einwilligung SpA
+104492;Doku Einwilligung AS
+104493;Doku Einwilligung Deep Sedierung
+104494;Doku Einwilligung Sedierung
+104495;Doku Einwilligung fieberoptische Intubation
+104496;Doku Einwilligung Kaudale
+104497;Doku Einwilligung ITN
+104498;Doku Neurologie Option 2
+104499;Doku Neurologie ICP Erhöhung
+104500;Doku Neurologie Krampfleiden
+104501;Doku Neurologie Parese
+104502;Doku Neurologie Wert
+104503;Doku Neurologie Option 1
+104504;Doku Neurologie GCS
+104505;Doku Neurologie Ischämie
+104506;Doku Neurologie ohne pathologischen Befund
+104507;Doku Allergien Option 2
+104508;Doku Allergie Kontrastmittel
+104509;Doku Allergie Kontakt
 104510;Doku Allergie Allergiepass
-104511;Doku Allergien Option 1.
-104512;Doku Allergie Antibiotikum.
-104513;Doku Allergien Pollen.
+104511;Doku Allergien Option 1
+104512;Doku Allergie Antibiotikum
+104513;Doku Allergien Pollen
 104514;Doku Allergie Keine
-104515;Doku Medikation AT Antagonist.
-104516;Doku Medikation Analgetikum.
-104517;Doku Medikation Antidiabetikum.
-104518;Doku Medikation Keine.
-104519;Doku Medikation Option 3.
-104520;Doku Medikation Antikoagulans.
-104521;Doku Medikation Sartan.
-104522;Doku Medikation ACE Hemmer.
-104523;Doku Medikation Option 1.
-104524;Doku Medikation Nitrat.
+104515;Doku Medikation AT Antagonist
+104516;Doku Medikation Analgetikum
+104517;Doku Medikation Antidiabetikum
+104518;Doku Medikation Keine
+104519;Doku Medikation Option 3
+104520;Doku Medikation Antikoagulans
+104521;Doku Medikation Sartan
+104522;Doku Medikation ACE Hemmer
+104523;Doku Medikation Option 1
+104524;Doku Medikation Nitrat
 104525;Doku Medikation Antiarrhythmikum
 104526;Doku Medikation NNR Hormon
-104527;Doku Medikation Option 2.
-104528;Doku Medikation Beta blocker.
+104527;Doku Medikation Option 2
+104528;Doku Medikation Beta blocker
 104529;Doku Medikation Kalziumantagonist
-104530;Doku Medikation Diuretikum.
+104530;Doku Medikation Diuretikum
 104531;Dokumentation Stoffwechsel Zusatzoption
-104532;Doku Stoffwechsel Hyperthyreose.
-104533;Doku Stoffwechsel Immobilisation.
-104534;Doku Stoffwechsel Gravidität / Gestose.
-104535;Doku Stoffwechsel C2H5OH Tagesdosis.
-104536;Doku Stoffwechsel ohne pathologischen Befund.
-104537;Doku Stoffwechsel Niereninsuffizienz.
-104538;Doku Stoffwechsel C2H5OH.
-104539;Doku Stoffwechsel Hepathopathie.
-104540;Doku Stoffwechsel Diabetes.
-104541;Dokumentation der Mallampati Klassifikation.
-104542;Dokumentation der Mallampati Klassifikation.
-104543;Dokumentation der Mallampati Klassifikation.
-104544;Dokumentation der Mallampati Klassifikation.
-104545;Dokumentation der Mallampati Klassifikation.
-104546;Dokumentation des Abstandes Kinnspitze Kehlkopf.
-104547;Dokumentation des Abstandes Kinnspitze Kehlkopf.
-104548;Dokumentation des Abstandes Kinnspitze Kehlkopf.
-104549;Dokumentation des Abstandes Kinnspitze Kehlkopf.
+104532;Doku Stoffwechsel Hyperthyreose
+104533;Doku Stoffwechsel Immobilisation
+104534;Doku Stoffwechsel Gravidität / Gestose
+104535;Doku Stoffwechsel C2H5OH Tagesdosis
+104536;Doku Stoffwechsel ohne pathologischen Befund
+104537;Doku Stoffwechsel Niereninsuffizienz
+104538;Doku Stoffwechsel C2H5OH
+104539;Doku Stoffwechsel Hepathopathie
+104540;Doku Stoffwechsel Diabetes
+104541;Dokumentation der Mallampati Klassifikation
+104542;Dokumentation der Mallampati Klassifikation
+104543;Dokumentation der Mallampati Klassifikation
+104544;Dokumentation der Mallampati Klassifikation
+104545;Dokumentation der Mallampati Klassifikation
+104546;Dokumentation des Abstandes Kinnspitze Kehlkopf
+104547;Dokumentation des Abstandes Kinnspitze Kehlkopf
+104548;Dokumentation des Abstandes Kinnspitze Kehlkopf
+104549;Dokumentation des Abstandes Kinnspitze Kehlkopf
 104550;Dokumentation der Möglichkeit zur Kopfreklination
 104551;Dokumentation der Möglichkeit zur Kopfreklination
 104552;Dokumentation der Möglichkeit zur Kopfreklination
-104553;Dokumentation der Möglichkeit zur Kopfreklination
-104554;Dokumentation der Sauerstoffsättigung.
-104555;Dokumentation des Blutdruckes.
-104556;Dokumentation der Pulsfrequenz.
-104557;Dokumentation der Aufnahmeart.
-104558;Dokumentation der Aufnahmeart.
-104559;Dokumentation der Aufnahmeart.
-104560;Dokumentation der Aufnahmeart.
-104561;Dokumentation des Patientengewichts.
-104562;Dokumentation der Patienntengröße.
+104553;Dokumentation der Möglichkeit zur Kopfreklination 
+104554;Dokumentation der Sauerstoffsättigung
+104555;Dokumentation des Blutdruckes
+104556;Dokumentation der Pulsfrequenz
+104557;Dokumentation der Aufnahmeart
+104558;Dokumentation der Aufnahmeart
+104559;Dokumentation der Aufnahmeart
+104560;Dokumentation der Aufnahmeart
+104561;Dokumentation des Patientengewichts
+104562;Dokumentation der Patienntengröße
 104563;Dokumentation der Klinik und der Station des Patienten
 104564;Dokumentation einer BGA
-104565;Doku des Thrombozyten Wertes.
-104566;Doku des Hb Wertes.
-104567;Doku des Leukozyten Wertes.
-104568;Doku des Fibrinogen Wertes.
-104569;Doku des APPT Wertes.
-104570;Doku des INR Wertes.
-104571;Doku des Quick Wertes.
-104572;Doku des TSH Wertes.
-104573;Doku des Glucose Wertes.
-104574;Doku des Gamma GT Wertes.
-104575;Doku des GOT Wertes.
-104576;Doku des CRP Wertes.
-104577;Doku des CK Wertes.
-104578;Doku des GPT Wertes.
-104579;Doku des Harnstoo N Wertes.
-104580;Doku des Creatinin Wertes.
-104581;Doku des Calcium Wertes.
-104582;Doku des Kalium Wertes.
-104583;Doku des Natrium Wertes.
-104584;Doku Herz Kreislauf Ödeme.
+104565;Doku des Thrombozyten Wertes
+104566;Doku des Hb Wertes
+104567;Doku des Leukozyten Wertes
+104568;Doku des Fibrinogen Wertes
+104569;Doku des APPT Wertes
+104570;Doku des INR Wertes
+104571;Doku des Quick Wertes
+104572;Doku des TSH Wertes
+104573;Doku des Glucose Wertes
+104574;Doku des Gamma GT Wertes
+104575;Doku des GOT Wertes
+104576;Doku des CRP Wertes
+104577;Doku des CK Wertes
+104578;Doku des GPT Wertes
+104579;Doku des Harnstoo N Wertes
+104580;Doku des Creatinin Wertes
+104581;Doku des Calcium Wertes
+104582;Doku des Kalium Wertes
+104583;Doku des Natrium Wertes
+104584;Doku Herz Kreislauf Ödeme
 104585;Doku Herz Kreislauf AVK
-104586;Doku Herz Kreislauf Schrittmacher.
+104586;Doku Herz Kreislauf Schrittmacher
 104587;Doku Herz Kreislauf Arrhythmie
-104588;Doku Herz Kreislauf Vitium.
-104589;Doku Herz Kreislauf Allen Test rechts.
-104590;Doku Herz Kreislauf Allen Test links.
-104591;Doku Herz Kreislauf Allen Test.
-104592;Doku Herz Kreislauf Infarkt.
-104601;Doku Herz Kreislauf Herzinsuffizinez.
-104602;Doku Herz Kreislauf KHK.
-104603;Doku Herz Kreislauf Flüssigkeits / Volumen Defizit.
-104604;Doku Herz Kreislauf Hypotonieneigung.
+104588;Doku Herz Kreislauf Vitium
+104589;Doku Herz Kreislauf Allen Test rechts
+104590;Doku Herz Kreislauf Allen Test links
+104591;Doku Herz Kreislauf Allen Test
+104592;Doku Herz Kreislauf Infarkt
+104601;Doku Herz Kreislauf Herzinsuffizinez
+104602;Doku Herz Kreislauf KHK
+104603;Doku Herz Kreislauf Flüssigkeits / Volumen Defizit
+104604;Doku Herz Kreislauf Hypotonieneigung
 104605;Doku Herz Kreislauf Hypertonie
-104606;Doku Herz Kreislauf
-104607;Doku Herz Kreislauf Ruhe EKG.
-104608;Doku Lunge Röntgen Thorax.
-104609;Doku Lunge Auskultation.
-104610;Doku Lunge FEV1.
-104611;Doku Lunge FVC.
-104612;Doku Lunge Beatmungseinstellung.
-104613;Doku Lunge Anzahle der Pack Years.
-104614;Doku Lunge Pack Years.
-104615;Doku Lunge Beatmung vorhanden ja/nein.
-104616;Doku Lunge COPD.
-104617;Doku Lunge ohne pathologischen Befund.
-104618;Doku Lunge Asthma Bronchiale.
-104619;Doku Lunge Inspiratorischer Stridor.
-104620;Doku Lunge Restriktion.
-104621;Doku Lunge Infekt.
-104622;Doku Kardiologische Diagnostik P LV.
-104623;Doku Kardiologische Diagnostik R/L Shunt.
-104624;Doku Kardiologische Diagnostik EF.
-104625;Doku Kardiologische Diagnostik L/R Shunt.
-104626;Doku Kardiologische Diagnostik dP.
-104627;Doku Kardiologische Diagnostik P AO.
-104628;Doku Kardiologische Diagnostik P LA.
-104629;Doku kardiologische Diagnostik CI.
-104630;Doku Kardiologische Diagnostik PCWP.
-104631;Doku Kardiologische Diagnostik P PA.
-104632;Doku Kardiologische Diagnostik P RV.
-104633;Doku Kardiologische Diagnostik P RA.
-104634;Doku Kardilogische Diagnostik Option 2.
-104635;Doku Kardiologische Diagnostik Option 1.
+104606;Doku Herz Kreislauf 
+104607;Doku Herz Kreislauf Ruhe EKG
+104608;Doku Lunge Röntgen Thorax
+104609;Doku Lunge Auskultation
+104610;Doku Lunge FEV1
+104611;Doku Lunge FVC
+104612;Doku Lunge Beatmungseinstellung
+104613;Doku Lunge Anzahle der Pack Years
+104614;Doku Lunge Pack Years
+104615;Doku Lunge Beatmung vorhanden ja/nein
+104616;Doku Lunge COPD
+104617;Doku Lunge ohne pathologischen Befund
+104618;Doku Lunge Asthma Bronchiale
+104619;Doku Lunge Inspiratorischer Stridor
+104620;Doku Lunge Restriktion
+104621;Doku Lunge Infekt
+104622;Doku Kardiologische Diagnostik P LV
+104623;Doku Kardiologische Diagnostik R/L Shunt
+104624;Doku Kardiologische Diagnostik EF
+104625;Doku Kardiologische Diagnostik L/R Shunt
+104626;Doku Kardiologische Diagnostik dP
+104627;Doku Kardiologische Diagnostik P AO
+104628;Doku Kardiologische Diagnostik P LA
+104629;Doku kardiologische Diagnostik CI
+104630;Doku Kardiologische Diagnostik PCWP
+104631;Doku Kardiologische Diagnostik P PA
+104632;Doku Kardiologische Diagnostik P RV
+104633;Doku Kardiologische Diagnostik P RA
+104634;Doku Kardilogische Diagnostik Option 2
+104635;Doku Kardiologische Diagnostik Option 1
 104637;Doku Kardiologische Diagnostik UKG / Angio
-104638;Dokumentation von welcher Person das Medikament verabreicht wurde.
-104639;Dokumentation der Applikationsform des verordneten Medikaments.
-104640;Dokumentation der Dosis des verordneten Medikaments.
-104641;Dokumentation des Medikamentes, welche als Prämedikation appliziert werden soll.
-104642;Dokumentation der Uhrzeit zu der  die Prämedikation appliziert werden soll.
-104643;Dokumentation des Tages an dem die Prämedikation appliziert werden soll. In der Regel Vorabend des OP Tages oder OP Tag.
-104708;Dokumentation des eingestellten PEEP.
-104709;Dokumentation des Alters des Patienten.
-104710;Dokumentation des eingestellten Pmax.
-104712;Dokumentation des eingestellten Triggers.
-104714;Dokumentation der eingestellten Rampenzeit.
-104715;Dokumentation der Inspirationszeit. Verhältnis zwischen Tip und Tinsp. 0 bis 60 %.
-104716;Dokumentation der Inspirationszeit.
-104717;Dokumentation des eingestellten Pressure Support.
-104718;Dokumentation der eingestellten Frequenz.
-104719;Dokumentation ders eingestellten Vt.
-104720;Dokumentation des gemessenen Beatmungsspitzendruck.
-104721;Dokumentation des gemessenen Plateaudruckes.
-104722;Dokumentation des gemessenen PEEPs.
+104638;Dokumentation von welcher Person das Medikament verabreicht wurde
+104639;Dokumentation der Applikationsform des verordneten Medikaments
+104640;Dokumentation der Dosis des verordneten Medikaments
+104641;Dokumentation des Medikamentes, welche als Prämedikation appliziert werden soll
+104642;Dokumentation der Uhrzeit zu der  die Prämedikation appliziert werden soll
+104643;Dokumentation des Tages an dem die Prämedikation appliziert werden soll. In der Regel Vorabend des OP Tages oder OP Tag
+104708;Dokumentation des eingestellten PEEP
+104709;Dokumentation des Alters des Patienten
+104710;Dokumentation des eingestellten Pmax
+104712;Dokumentation des eingestellten Triggers
+104714;Dokumentation der eingestellten Rampenzeit
+104715;Dokumentation der Inspirationszeit. Verhältnis zwischen Tip und Tinsp. 0 bis 60 %
+104716;Dokumentation der Inspirationszeit
+104717;Dokumentation des eingestellten Pressure Support
+104718;Dokumentation der eingestellten Frequenz
+104719;Dokumentation ders eingestellten Vt
+104720;Dokumentation des gemessenen Beatmungsspitzendruck
+104721;Dokumentation des gemessenen Plateaudruckes
+104722;Dokumentation des gemessenen PEEPs
 104723;Dokumention des gemessenen endtidalen
-104724;Inspiratorisch gemessenes CO2.
-104725;Gemessenes Atemminutenvolumen.
-104726;Gemessenes Tidalvolumen.
-104727;Gemessene Atemfrequenz.
-104728;Gemessene Leckage.
-104729;Die gemessene Gesamtcompliance abzüglich der im Selbsttest ermittelten System- und Schlauchcompliance ergibt die Lungencompliance.
-104730;Gemessene inspiratorische O2 Konzentration.
-104731;Gemessene exspiratorische O2 Konzentration.
+104724;Inspiratorisch gemessenes CO2
+104725;Gemessenes Atemminutenvolumen
+104726;Gemessenes Tidalvolumen
+104727;Gemessene Atemfrequenz
+104728;Gemessene Leckage
+104729;Die gemessene Gesamtcompliance abzüglich der im Selbsttest ermittelten System- und Schlauchcompliance ergibt die Lungencompliance
+104730;Gemessene inspiratorische O2 Konzentration
+104731;Gemessene exspiratorische O2 Konzentration
 104732;Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)
-104733;Inspiratorisch gemessene Halothan Konzentration.
-104734;Exspiratorisch gemessene Halothankonzentration.
-104735;Inspiratorisch gemessene Enfluran Konzentration.
-104736;Exspiratorisch gemessene Enfluran Kozentration.
-104737;Inspiratorisch gemessene Isofluran.
-104738;Exspiratorisch gemessene Isofluran Konzentration.
-104739;Inspiratorisch gemessene Desfluran Konzentration.
-104740;Exspiratorisch gemessene Desfluran Konzentration.
-104741;Inspiratorisch gemessene Sevofluran Konzentration.
-104742;Exspiratorisch gemessene Sevofluran Konzentration.
-104743;Gemessener Frischgas Flow.
-104745;An der Flowröhre eingestellter O2 Frischgasflow.
-104746;An der Flowröhre eingestellter Frischgas Flow für Air.
-104747;Eingestellter Inspiration Druck.
-104748;Eingestellte Mindestfrequenz (Apnoeventilation) in dme Modus Pressure Support.
-104749;Dokumentation des eingestellten I : E.
+104733;Inspiratorisch gemessene Halothan Konzentration. 
+104734;Exspiratorisch gemessene Halothankonzentration
+104735;Inspiratorisch gemessene Enfluran Konzentration
+104736;Exspiratorisch gemessene Enfluran Kozentration
+104737;Inspiratorisch gemessene Isofluran
+104738;Exspiratorisch gemessene Isofluran Konzentration
+104739;Inspiratorisch gemessene Desfluran Konzentration
+104740;Exspiratorisch gemessene Desfluran Konzentration
+104741;Inspiratorisch gemessene Sevofluran Konzentration
+104742;Exspiratorisch gemessene Sevofluran Konzentration
+104743;Gemessener Frischgas Flow
+104745;An der Flowröhre eingestellter O2 Frischgasflow
+104746;An der Flowröhre eingestellter Frischgas Flow für Air
+104747;Eingestellter Inspiration Druck
+104748;Eingestellte Mindestfrequenz (Apnoeventilation) in dme Modus Pressure Support
+104749;Dokumentation des eingestellten I : E
 104751;Arztdoku S. 10
 104752;Vt in der Backupeinstellung
-104753;Frequenzeinstellung inder Backupeinstellung.
-104754;Apnoezeiteinstellung in der Backupeinstellung.
+104753;Frequenzeinstellung inder Backupeinstellung
+104754;Apnoezeiteinstellung in der Backupeinstellung
 104758;gemessenes Schlagvolumen
-104760;Wert des gemessenen Schlagvolumenindex.
+104760;Wert des gemessenen Schlagvolumenindex
 104770;Gesamt Frischgasfluss (Summe aus O2 + AIR)
 104771;Eingestelter Patientengewicht am Pallas
 104772;Gemesener Atemwegsmitteldruck
@@ -1323,72 +1196,62 @@
 105028;atriale Refraktärzeit
 105029;ventrikuläre Stimulationsfrequenz
 105030;obere Frequenzbegrenzung
-105031;Liste
 105035;abhängig in ES der Sense-Liste
 105042;Art d.Narkosegas
 105043;kontrollierte Wassertemperatur, gemessener Wert
-105044;Name des Anästhesisten, der als entlassender Anästhesist auf dem Ausdruck des Anästhesieprotokolls erscheint.
-105045;Der Bispectral Index (BIS) ist ein verarbeiteter EEG Parameter und zeigt die Auswirkungen der Sedierung auf das Gehirn an.
+105044;Name des Anästhesisten, der als entlassender Anästhesist auf dem Ausdruck des Anästhesieprotokolls erscheint
+105045;Der Bispectral Index (BIS) ist ein verarbeiteter EEG Parameter und zeigt die Auswirkungen der Sedierung auf das Gehirn an
 105046;entspricht der SR Anzeige am Gerät. Burst Supression Ratio
-105047;Dokumentationsmöglichkeit für den Qualitätscheck (Kontrollle der eingestellten Verfahrensparameter) des Dialyse- bzw. Hämofiltrationsgerät.
-105049;neu angelegt am 18.05.2012
-105050;Neuanlage 18.05.2012 String
-105051;Anlage 18.05.2012 String
-105052;Anlage 18.05.2012
-105053;Listenauswahl
-105054;Listenauswahl
-105057;Der dokumentierte Füllstand des Auffangbehälters der subglotischen Absaugung.
-105058;Dokumentierte Menge des extrahierten subglottischen Sekrets.
-105059;Der am Gerät gemessene Sog bei der Verwendung eines Gerätes zur subglottischen Absaugung.
-105060;Der eingestellte Modus am Gerät beim Einsatz der subglottischen Absaugung.
-105065;Dokumentierter Zeitpunkt, zu dem der Aufwachversuch abgebrochen wurde.
-105066;Gründe für den Abbruch des dokumentierten Aufwachversuches.
-105067;Möglichkeit Freitext zu einem Aufwachversuch zu dokumentieren.
-105068;CAM ICU Einschätzung des dokumentierten Aufwachversuches.
-105069;Beurteilung der Motorik im dokumentierten Aufwachversuches.
-105070;Beurteilung des Augen öffnens im dokumentierten Aufwachversuches.
-105071;Beurteilung der Schutzreflexe im dokumentierten Aufwachversuches.
-105072;Beurteilung der Vegetativen Reaktion im dokumentierten Aufwachversuches.
-105073;Dokumentation des  Aufwachversuches. Dürchführung Ja /Nein.
-105074;Datum des dokumentierten Aufwachversuches.
-105075;Eingestelltes Körpergewicht beim respirator C2.
-105076;Inspiratorische Bemühung des Patienten, die das Beatmungsgerät veranlasst, einen Atemhub abzugeben.
-105077;Eingestellte Alarmhochdruckgrenze. Einstellung erfolgtdirekt über die Alarmeinstellung aber auch indirekt über die Einstellung Pasvlimit. Die Alarmhochdruckgrenze liegt automatisch 10 mbar über der Pasvlimit Einstellung.
-105078;Eingestellter PEEP, CPAP oder Ptief am C2.
-105079;Eingestellter Pkontrol oder Phoch am C2.
-105080;Eingestellte CMV Frequenz bei dem Respirator C2  in den Beatmungsmodi DUOPAP, APVcmv, Pcmv,
-105081;Eingestellt SIMV Frequenz bei dne Respiratoren C2 5 in den Beatmungsmodi APVsimv, Psimv.
-105082;Eingestelltes Körpergewicht.
-105083;Eingestellte CMV Frequenz bei dem Respirator G5 in den Beatmungsmodi DUOPAP, APVcmv, Pcmv,
-105084;Eingestellt SIMV Frequenz bei dem Respirator G5 in den Beatmungsmodi APVsimv, Psimv.
-105085;Eingestelltes unteres Druckniveau bei den Respirator G5 in verschiedenen Beatmungsmodis.
-105086;Eingestelltes oberes Druckniveau bei dem Respirator  G5 in verschiedenen Beatmungsmodi.
+105047;Dokumentationsmöglichkeit für den Qualitätscheck (Kontrollle der eingestellten Verfahrensparameter) des Dialyse- bzw. Hämofiltrationsgerät
+105057;Der dokumentierte Füllstand des Auffangbehälters der subglotischen Absaugung
+105058;Dokumentierte Menge des extrahierten subglottischen Sekrets
+105059;Der am Gerät gemessene Sog bei der Verwendung eines Gerätes zur subglottischen Absaugung
+105060;Der eingestellte Modus am Gerät beim Einsatz der subglottischen Absaugung
+105065;Dokumentierter Zeitpunkt, zu dem der Aufwachversuch abgebrochen wurde
+105066;Gründe für den Abbruch des dokumentierten Aufwachversuches
+105067;Möglichkeit Freitext zu einem Aufwachversuch zu dokumentieren
+105068;CAM ICU Einschätzung des dokumentierten Aufwachversuches
+105069;Beurteilung der Motorik im dokumentierten Aufwachversuches
+105070;Beurteilung des Augen öffnens im dokumentierten Aufwachversuches
+105071;Beurteilung der Schutzreflexe im dokumentierten Aufwachversuches
+105072;Beurteilung der Vegetativen Reaktion im dokumentierten Aufwachversuches
+105073;Dokumentation des  Aufwachversuches. Dürchführung Ja /Nein
+105074;Datum des dokumentierten Aufwachversuches
+105075;Eingestelltes Körpergewicht beim respirator C2
+105076;Inspiratorische Bemühung des Patienten, die das Beatmungsgerät veranlasst, einen Atemhub abzugeben
+105077;Eingestellte Alarmhochdruckgrenze. Einstellung erfolgtdirekt über die Alarmeinstellung aber auch indirekt über die Einstellung Pasvlimit. Die Alarmhochdruckgrenze liegt automatisch 10 mbar über der Pasvlimit Einstellung
+105078;Eingestellter PEEP, CPAP oder Ptief am C2
+105079;Eingestellter Pkontrol oder Phoch am C2
+105080;Eingestellte CMV Frequenz bei dem Respirator C2  in den Beatmungsmodi DUOPAP, APVcmv, Pcmv, 
+105081;Eingestellt SIMV Frequenz bei dne Respiratoren C2 5 in den Beatmungsmodi APVsimv, Psimv
+105082;Eingestelltes Körpergewicht
+105083;Eingestellte CMV Frequenz bei dem Respirator G5 in den Beatmungsmodi DUOPAP, APVcmv, Pcmv, 
+105084;Eingestellt SIMV Frequenz bei dem Respirator G5 in den Beatmungsmodi APVsimv, Psimv
+105085;Eingestelltes unteres Druckniveau bei den Respirator G5 in verschiedenen Beatmungsmodis
+105086;Eingestelltes oberes Druckniveau bei dem Respirator  G5 in verschiedenen Beatmungsmodi
 105087;Person, die die Wertsachen angenommen hat
-105088;Ob alle Wertsachen vollständig ausgehändigt wurden (Ja/Nein)
 105101;post operative Empfehlung der Pflege bei Verlegung AWR 24h
 105113;Verknüpfung zum entsprechenden Fall zu dem ein Befund erhoben wurde (muss also ggf. bei Abfrage immer mit berücksichtigt werden!)
 105114;freigebender Arzt der übermittelnden Einrichtung
-105116;Flag für das logische Löschen
 105119;Name des Subsystems, ggf. bereits geändert durch den Trigger
-105120;Dokumentation des Füllstandes des Urinauffang.
-105122;Dekanülierungsplan des Patienten. Anlage mehrerer Pläne ist möglich.
-105123;Dokunentiertes Datum, wenn eine Dekanülierungsplan abgeschlossen wurde.
-105124;Datum des Anlagezeitpunkts des Dekanülierungsplans.
+105120;Dokumentation des Füllstandes des Urinauffang
+105122;Dekanülierungsplan des Patienten. Anlage mehrerer Pläne ist möglich. 
+105123;Dokunentiertes Datum, wenn eine Dekanülierungsplan abgeschlossen wurde
+105124;Datum des Anlagezeitpunkts des Dekanülierungsplans
 105202;0/1-Repräsentation des Storno-Flags aus SAP
 105203;Objekt für die Tabelle der körperlichen Untersuchung der ärztlichen Dokumentation
 105212;Transientes Objekt für die temporäre Aufnahme der Vorwerte für die medizinische Dokumentation Untersuchung körperlicher Status
 105221;Bemerkung zu einer Diagnose
-105227;Erhebungszeitpunkt des BPS Scores.
-105229;Dokumentation des Aufnahmegrunds in der Dokumentation Medizinischer Dienst.
-105230;Dokumentation ob eine Versorgungsvollmacht vorliegt.
-105231;Dokumentation des ärztlichen Aufnahmebfundes zur Rubrik Abdomen.
+105227;Erhebungszeitpunkt des BPS Scores
+105229;Dokumentation des Aufnahmegrunds in der Dokumentation Medizinischer Dienst
+105230;Dokumentation ob eine Versorgungsvollmacht vorliegt
+105231;Dokumentation des ärztlichen Aufnahmebfundes zur Rubrik Abdomen
 105232;Befundsdokumentation des Aufnahme EKGs
-105242;Dokumentation des Patientengewichtes bei Aufnahme.
-105243;Dokumentation der Patientengröße bei Aufnahme.
-105244;Dokumentation der Aufnahmeart.
-105256;Dokumentierender Mitarbeiter.
-105258;Link zu einem Befundobjekt
-105259;Beinhaltet den Namen der Bettplätze, wie er aus SAP bekannt ist.
+105242;Dokumentation des Patientengewichtes bei Aufnahme
+105243;Dokumentation der Patientengröße bei Aufnahme
+105244;Dokumentation der Aufnahmeart
+105256;Dokumentierender Mitarbeiter
+105259;Beinhaltet den Namen der Bettplätze, wie er aus SAP bekannt ist. 
 105264;ICD-Katalogtext wie er aus SAP übermittelt wird
 105266;Laufende Nummer aus SAP, zur eindeutigen Identifikation eines Datensatzes
 105269;Keim-Objekt für die Zuordnung von Antibiogrammen und das Speichern der Erregerinformationen
@@ -1396,21 +1259,10 @@
 105277;Winkel der Extremitätenlagerung/Bett/Kopf
 105278;Spüllösung die intermittierend appliziert wird, Wert wirdals Bilanzwert verrechnet
 106278;Hilfsmittel
-106279;Listenauswahl
 106284;Dokumentation Oxygenator - Liste
 106295;%Systole Verhältnis Systolendauer zur Diastolendauer
 106299;Verhältnis Systole zur Diastolendauer
-106301;Liste - Doku Durchführung
-106302;Liste ein aus
-106303;Liste durchgeführt
-106307;Liste
-106308;Liste
-106309;bei luftblasen, Liste ein aus
-106310;Liste ein aus
-106311;Liste durchgeführt
 106312;Delta P2/P3
-106313;Liste
-106314;interne (durch Presenter erhoben) oder externer (durch Schnittstelle) Befund
 106315;Welcher Befundtyp (Beispiel: Konsil, Bildgebung etc.)
 106316;Objekt für die Keime von mikrobiologischen Befunden
 106317;Erregername zur eindeutigen Identifikation des Objekts
@@ -1421,19 +1273,9 @@
 106322;Für die Filterung auf der Seite Massnahmen, Bildgebung, Diagnostik und Konsile nach Herkunft (extern, d.h. über Schnittstelle, oder intern, d.h. über Presenter dokumentiert)
 106354;Messung nur unter ASV Intellivent
 106355;Negativ Wert/positiv Wert
-106356;Liste ein aus
-106357;Liste ein aus
-106358;Liste ein aus
-106359;Liste ein aus
-106360;Liste ein aus
-106361;Liste ein aus
-106362;Liste ein aus
-106363;Bereich Decimal - bis +
-106364;Bereich Decimal - bis +
 106366;Uhrzeit
 106370;Zeit zwishen 2 SBT
 106371;Zeit bis zum Start STB
-106372;Tabellen-Object-Variable für den Befundtest aus der Virologie
 106377;Auf was getestet wurde
 106384;Anpassung für automatische Gerätedataenübernahme mit IBUS
 106385;Anpassung für IBUS Anbindung
@@ -1450,11 +1292,9 @@
 106396;Anpassung für automatische Datenübernahme IBUS
 106397;Neuanlage im Zuge der IBUS Anbindung
 106398;Anpassung im Zuge der automatischen Geräteanbindung über IBUS. Änderung in ml
-106399;Anpassung analog zu Geräten mit automatischer Datenübernahme Änderung in ml
+106399;Anpassung analog zu Geräten mit automatischer Datenübernahme Änderung in ml 
 106400;automatische Datenübernahme IBUS
 106401;Anpassung im Zuge der automatischen Datenübernahme IBUS
-106402;neue Variable für automatische Datenübernahme IBUS
-106403;Texteintrag
 106404;Anlage für IBUS Datenübermittlung
 106405;Anlage für IBUS Datenübermittlung
 106407;Messwert im Verlaufbis zum erreichen der eingestellten Zieltemperatur
@@ -1482,8 +1322,8 @@
 106460;ICP Messintervall
 106461;ZVD Messintervall
 106463;Pupillen Zielwert
-106464;Bewusstsein Messintervall
-106465;Globaler Zwischenspeicherfür die Fallnummer für die Verwendung in Dialogen die aufgrund der Var-Struktur nicht an das Fallobjekt kommen.
+106464;Bewusstsein Messintervall 
+106465;Globaler Zwischenspeicherfür die Fallnummer für die Verwendung in Dialogen die aufgrund der Var-Struktur nicht an das Fallobjekt kommen
 106468;Dokumentation des gemessenen Blutdruckes unter IABP
 106469;Dokumentation des prozentualen Anteils des Aufblasens des Ballons
 106470;Dokumentation der gewählten EKG Ableitung für den IABP Einsatz
@@ -1491,16 +1331,13 @@
 106472;Dokumentation der IABP Frequenz
 106473;Dokumentation des ausgewählten Triggers der IABP
 106474;Dokumentation des prozentualen Anteils des Leersaugens des Ballons
-106517;Liste
-106518;Liste
 106519;Gegangen ohne Arztkontakt
 106521;Auslandsaufenthalt in den letzten 6 Monaten?
 106522;Auslandsaufenthalt in den letzten 6 Monaten?
 106556;CODE zum Überspringen der Pflichtfelder Vitalparameter - Anforderung für IT Lizenz
-106567;Freitextfeld
 106581;Pat. wird unter Reanimstionsbedingungen aufgenommen
-106610;RR_systolisch Zielwert
-106611;RR_diastolisch Zielwert
+106610;RR systolisch Zielwert
+106611;RR diastolisch Zielwert
 106612;Atemfrequenz Zielwert
 106613;GCS Zielwert
 106614;NRS Zielwert
@@ -1508,10 +1345,10 @@
 106626;Eingestelltes Körpergewicht
 106630;Inspiratorische Bemühung des Patienten, die das Beatmungsgerät veranlasst, einen Atemhub abzugeben
 106633;Exspiratorische Triggersensitivität, eine Parametereinstellung
-106634;Eingestellte CMV Frequenz bei dem Respirator G5 in den Beatmungsmodi DUOPAP, APVcmv, Pcmv,
-106635;Eingestellt SIMV Frequenz bei dem Respirator T1 in den Beatmungsmodi APVsimv, Psimv.
-106636;Eingestelltes unteres Druckniveau bei den Respirator G5 in verschiedenen Beatmungsmodis.
-106637;Beatmung_ES_T1_Psupport
+106634;Eingestellte CMV Frequenz bei dem Respirator G5 in den Beatmungsmodi DUOPAP, APVcmv, Pcmv, 
+106635;Eingestellt SIMV Frequenz bei dem Respirator T1 in den Beatmungsmodi APVsimv, Psimv
+106636;Eingestelltes unteres Druckniveau bei den Respirator G5 in verschiedenen Beatmungsmodis
+106637;Beatmung ES T1 Psupport
 106638;Eingestelltes oberes Druckniveau bei dem Respirator  G5 in verschiedenen Beatmungsmodi
 106639;prozentualer Anteil der Inspiration, der Plateauphase bestimmt wird
 106640;Einstelungswert für die Inspirationszeit
@@ -1519,7 +1356,7 @@
 106645;Für die Kopie Aufnahmemedikation--> Entlassmedikation
 106646;Implementierung für anamnestische Erhebung des Status innerhalb d. Active X Anwendung
 106647;Allergiestatus unbekannt fallbezogen - Active X Plugin
-106648;Fall_Allergie_nichtErhoben - Active X Plugin
+106648;Fall Allergie nichtErhoben - Active X Plugin
 106649;Status nicht bekannt
 106650;Peaklfowmeter Messung in % mit Definition <> Messung exspirat. Spitzenfluss
 106665;Listenanhang mit positiv und negativ Auswahl
@@ -1528,7 +1365,7 @@
 106694;bezogen auf kontinuierliche Verordnungen
 106696;Listeneintrag -Fotodokumentation durchgeführt
 106697;Verlaufseintrag bei Erstellung einer Fotodokumentation. Dient nur als Durchführungsnachweis
-106720;Neuanlage für B_Entlassbefund, da diese den falschen Datentyp hat
+106720;Neuanlage für B Entlassbefund, da diese den falschen Datentyp hat
 106773;Behandlungsdiagnose
 106774;Relevante Vorgeschichte
 106776;Ort der Messung ABP1
@@ -1597,12 +1434,12 @@
 108035;Inspiratorische Flow-Resistance
 108036;Statische Compliance
 108038;Atemwegs-Okklusionsdruck
-108039;Index für schnelle Flachatmung („Rapid Shallow Breathing Index“)
+108039;Index für schnelle Flachatmung („Rapid Shallow Breathing Index“) 
 108042;Ectopic Status Label
 108043;Arrhytmia Rhytm Status label
 108044;Windelgewicht in g. Wird in Bilanz als ml verrechnet
 108047;Magenrestesatz Intervention
-108053;Kopfumfang Grenzwert
+108053;Kopfumfang Grenzwert 
 108054;tcpO2 Grenzwert
 108070;Verordnung AP Ersatz
 108072;Stuhlgang Messintervall
@@ -1624,7 +1461,6 @@
 108158;Insulinapplikation während der Schwangerschaft
 108231;Ernährungszustand bei Aufnahme
 108232;Allgemeinzustand bei Aufnahme
-108264;Impfungen nach STIKO durchgeführt
 108302;Standard Base Excess
 108321;Menge der Nahrung in ml, die getrunken wurde. Die Menge wird nicht mit der Bilanz verrechnet
 108322;Menge der Nahrung in ml, die gestillt wurde. Die Menge wird nicht mit der Bilanz verrechnet
@@ -1632,15 +1468,15 @@
 108390;Mittlerer Arterieller Blutdruck
 108391;Wachheit/Aufmerksamkeit
 108411;Schwangerschaftswoche
-108479;Betreuung nach AWMF bei Kindern mit Geb. Gew. unter 1500g
+108479;Betreuung nach AWMF bei Kindern mit Geb. Gew. unter 1500g 
 108502;Kopfumfang bit cm
 108503;Nichtinvaiver Blutdruck linkes Bein
 108504;Nichtinvasiver Blutdruck rechtes Bein
 108505;Nichtinvasiver Blutdruck linker Arm
 108506;Nichtinvasiver Blutdruck rechter Arm
 108507;Ort der Messung NBP1
-108508;transcutan gemessener pO2 Wert.
-108522;Soziale_Besonderheiten, z.B. Familiensituation
+108508;transcutan gemessener pO2 Wert
+108522;Soziale Besonderheiten, z.B. Familiensituation
 108525;Parameter im Modus Highflow - ab 08.06.2017
 108529;Elternanleitung
 108563;Pupillenform links bei Aufnahme
@@ -1653,13 +1489,13 @@
 108574;Magensonde Intervention
 108575;Stuhlgang Messintervall
 108576;Stuhltherapie Intervention
-108577;Urinstix Messinterval
+108577;Urinstix Messinterval 
 108578;Drainagen/Sog Intervention
 108579;Fototherapie Intervention Wert
 108580;Fototherapie Intervention Maßnahme
 108581;Magenrestersatz Intervention
 108582;Nahrungsersatz Intervention
-108583;AP_Ersatz Intervention
+108583;AP Ersatz Intervention
 108584;Sonstige Intervention
 108585;Herzfrequenz Grenzwert
 108586;Herzfrequenz Messintervall
@@ -1670,25 +1506,25 @@
 108591;SpO2 Grenzwert
 108592;tcpO2 Messintervall
 108593;tcpO2 Zielwert
-108594;tcpCO2 Zielwert
+108594;tcpCO2 Zielwert 
 108595;tcpO2 Grenzwert
 108596;tcpCO2 Grenzwert
 108598;etCO2 Grenzwert
 108599;etCO2 Messintervall
-108600;etCO2 Zielwert
+108600;etCO2 Zielwert 
 108601;ABP Grenzwert
 108602;ABP Messintervall
-108603;ABP Zielwert
+108603;ABP Zielwert 
 108604;NBP Grenzwert
 108605;NBP Messintervall
-108606;NBP Zielwert
+108606;NBP Zielwert 
 108607;PAP Grenzwert
-108608;PAP Messintervall
-108609;PAP Zielwert
+108608;PAP Messintervall 
+108609;PAP Zielwert 
 108610;LAP Grenzwert
-108611;LAP Messintervall
-108612;LAP Zielwert
-108613;Temperatur Grenzwert
+108611;LAP Messintervall 
+108612;LAP Zielwert 
+108613;Temperatur Grenzwert 
 108614;Temperatur Messintervall
 108615;Gewicht Grenzwert
 108616;Gewicht Messintervall
@@ -1700,20 +1536,16 @@
 108622;Sonstige Messintervall
 108625;Einstellung des Neigungswinkels
 108626;Verordnung des Neigungswinkels
-108632;Liste
 108666;Dokumentation von Interventionen (Operationen, andere Maßnahmen)
 108676;Blutgruppenspezifität der Mutter
 108677;Neutrophile Granulozyten absolut
-108716;automatisch berechnet aus Pset ml/h
-108726;Listenauswahl
-108732;Liste Ja Nein
-108733;Liste Gefäßauswahl
+108716;automatisch berechnet aus Pset ml/h 
 108742;Delta Temperatur zentral/Temperatur peripher
 109747;Verantwortlicher Mitarbeiter
-110759;Körperlänge Messintervall
-110760;Kopfumfang Messintervall
+110759;Körperlänge Messintervall 
+110760;Kopfumfang Messintervall 
 110761;tcpCO2 Messintervall
-110768;Die/Der verantwortliche Arzt/Ärztin der/die die Reakarte freigibt.
+110768;Die/Der verantwortliche Arzt/Ärztin der/die die Reakarte freigibt
 110770;Der/Die verantwortliche Pflegekraft der/die die Reakarte freigibt
 110790;Auswahl von nummerisch einzugebenden Profilen
 110832;Gabe von Atemgasen
@@ -1725,45 +1557,33 @@
 110838;O2 Konzentration des Gasgemisches
 110839;gemessene Druckamplitude
 110840;Gemessene O2 Konzentration
-110842;Ein/Aus
-110871;Liste ein aus
-110873;Liste ein aus
-110874;Liste ein aus
-110875;Liste ein aus
 110876;Zeit zwischen 2 SBT
 110877;Zeit bis zum Start SBT
 110880;Einstellung Tidalvolumen
-110882;eingestellte maximale Inspirationszeit
-110886;Die Nummer der Waage, mit der das Gewicht ermittelt wurde.
+110882;eingestellte maximale Inspirationszeit 
+110886;Die Nummer der Waage, mit der das Gewicht ermittelt wurde
 110887;MAD Messintervall
-110888;MAD Zielwert
-110889;MAD Grenzwert
+110888;MAD Zielwert 
+110889;MAD Grenzwert 
 110902;Gibt an welchen Inhalt die Windel hat
-110903;"Menge des Stuhlgangs der vom AP oral in den AP aboral umgefüllt wird. Der Wert wird in der Bilanz als """"Plus"""" verrechnet"
+110903;Menge des Stuhlgangs der vom AP oral in den AP aboral umgefüllt wird. Der Wert wird in der Bilanz als Plus verrechnet
 110904;Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags
 110915;I:E Verhältnis (Messung)
-110918;Validierender Mitarbeiter der Verordnung Medikation für den Zeitraum 06:00 bis 06:00 am aktuellen Tag. Diskontinuierlich.
+110918;Validierender Mitarbeiter der Verordnung Medikation für den Zeitraum 06:00 bis 06:00 am aktuellen Tag. Diskontinuierlich
 110919;linksartrialer Druck
 110921;rechtsartrialer Druck
-110922;Left Cardiac Work Index
+110922;Left Cardiac Work Index 
 110923;intracranieller Druck
-110924;Anlage im Rahmen PhilipsMonitoring
-110925;Anlage im Rahmen PhilipsMonitoring
-110926;Anlage im Rahmen PhilipsMonitoring
-110927;Anlage im Rahmen PhilipsMonitoring
-110928;Anlage im Rahmen PhilipsMonitoring
-110929;Anlage im Rahmen PhilipsMonitoring
-110930;Anlage im Rahmen Philips Monitoring
-110931;Temperatur iat keinem spezieelnMessort über das Monitoring zugeordnet.
+110931;Temperatur iat keinem spezieelnMessort über das Monitoring zugeordnet
 110932;Anlage im Rahmen PhilipsMonitoring
 110933;Anlage für Philips Monitoring
 110934;Anlage für Philips Monitoring
 110935;2. artereille Messung, ab 201712 im Rahmen Umstellung Philips Monitoring
 110937;Umstellung PhilipsMonitoring
-110976;Score FOUR = Full Outline of UnResponsiveness.
+110976;Score FOUR = Full Outline of UnResponsiveness
 110985;Hinweis bei abgeschlossener Behandlung - Anzeige Datum behandlungsende
 110987;Kalium Zielwert
-110988;24h_Urin Zielwert
+110988;24h Urin Zielwert
 110989;paO2 Zielwert
 110990;PEEP Zielwert
 110991;RASS Zielwert
@@ -1816,8 +1636,7 @@
 117118;geplante Verlegung - Station
 117140;Parameter im Modus Highflow
 117144;Blutverlust intraoperativ
-117167;l/min
-117178;Dokumentation ob der Spontanatemtest bestanden wurde.
+117178;Dokumentation ob der Spontanatemtest bestanden wurde
 117188;Verordnung der Zeitvorgabe der Entwöhnungsphase
 117189;Verordnung der Einstellung des FiO2 während der Entwöhnungsphase
 117190;Verordnung der Einstellung des PEEP/CPAP während der Entwöhnungsphase
@@ -1826,8 +1645,7 @@
 117193;Verordnung der Einstellung des Beatmungsmodus während der Entwöhnungsphase
 117194;Verordnung der Entwöhnungsmethode während der Entwöhnungsphase
 117211;FIO2 passt zu PEEP
-117217;dient ausschließlich zu Testzwecken
-117219;Gerätekonfiguration DokumentationVentilation ICU_IMC
+117219;Gerätekonfiguration DokumentationVentilation ICU IMC
 117220;VO Monitoring Auscheidung/Intervall
 117232;Zusatzgerät bei einer ECMO Therapie
 117242;Filter - O2Flow zur Ausspülung CO2
