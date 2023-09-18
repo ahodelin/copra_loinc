@@ -33,7 +33,7 @@ delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_id = 1
 
 -- ...
 delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
-where copra_id in (108155, 108156, 108157, 108158, 108106, 108112, 108111, 108242, 100243, 102539, 108171, 108169, 108282, 108281, 108280, 102057, 110935, 103751, 100132, 108510, 105041, 108153, 108154, 108276, 108279, 108159, 108160, 108247, 103408);
+where copra_id in (102792, 102795, 108100, 102575, 104757, 106283, 108155, 108156, 108157, 108158, 108106, 108112, 108111, 108242, 100243, 102539, 108171, 108169, 108282, 108281, 108280, 102057, 110935, 103751, 100132, 108510, 105041, 108153, 108154, 108276, 108279, 108159, 108160, 108247, 103408);
 
 -- Aufnahme Geburt
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp 
@@ -44,7 +44,9 @@ delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name l
 delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
 where copra_id = 100037 and loinc_num not in ('82810-3', '90767-5')
 
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp order by copra_name;
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where accuracy < 61;
+
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp order by accuracy ;
 ----------------------------------
 
 --select * from loinc_copra.loinc_long_common_name_copra_name_tmp where loinc_long_common_name = 'Anamnese' and loinc_num <> '35090-0';
