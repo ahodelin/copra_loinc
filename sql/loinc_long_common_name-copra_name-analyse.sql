@@ -1,15 +1,4 @@
 -- Analyse by loinc_long_common_name & copra_name 
--- Gesamt
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gesamt';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gesamt';
-
--- Datum
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Datum';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Datum';
-
--- Gruppe
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gruppe';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Gruppe';
 
 -- Diagnostik
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnostik';
@@ -19,42 +8,41 @@ delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name =
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Fall';
 delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Fall';
 
--- Untersuchung
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Untersuchung';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Untersuchung';
-
--- Anamnese
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Anamnese';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Anamnese' and loinc_num <> '35090-0';
-
 -- Diagnose
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnose';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnose' and loinc_num <> '29308-4';
-
--- Dokumentation
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Dokumentation';
 delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
-where copra_name = 'Dokumentation' 
-and loinc_num <> '77599-9' 
-and loinc_num <> '55107-7'
-and loinc_num <> '56446-8';
+where copra_name = 'Diagnose' 
+and loinc_num not in ('29308-4', '29548-5');
 
 -- SV
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SV';
 delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SV';
-
--- PT
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'PT';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'PT';
 
 
 -- SM Empfindlichkeit
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SM Empfindlichkeit';
 delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SM Empfindlichkeit';
 
--- A AT02 2, A AT03 2
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'A AT02 2';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_id in (101806, 101812);
+-- ABP1, ABP2
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name like 'ABP%';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_id in (106777, 106776);
+
+-- Allergie
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name like 'Allergie';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_id = 100065;
+
+-- ...
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
+where copra_id in (108155, 108156, 108157, 108158, 108106, 108112, 108111, 108242, 100243, 102539, 108171, 108169, 108282, 108281, 108280, 102057, 110935, 103751, 100132, 108510, 105041, 108153, 108154, 108276, 108279, 108159, 108160, 108247, 103408);
+
+-- Aufnahme Geburt
+select * from loinc_copra.loinc_long_common_name_copra_name_tmp 
+where copra_name like 'Aufnahme Geburt%';
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name like 'Aufnahme Geburt%'
+
+-- akt. Schwangerschaftwoche
+delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
+where copra_id = 100037 and loinc_num not in ('82810-3', '90767-5')
 
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp order by copra_name;
 ----------------------------------
