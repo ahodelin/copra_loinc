@@ -49,6 +49,14 @@ delete from loinc_copra.loinc_long_common_name_copra_name_tmp where accuracy < 6
 select * from loinc_copra.loinc_long_common_name_copra_name_tmp order by accuracy ;
 ----------------------------------
 
+alter table loinc_copra.loinc_long_common_name_copra_name
+add column is_match boolean default false;
+
+select * from loinc_copra.loinc_long_common_name_copra_name
+where copra_id in (select copra_id from loinc_copra.loinc_long_common_name_copra_description_tmp) 
+and loinc_num in (select loinc_num from loinc_copra.loinc_long_common_name_copra_description_tmp)
+order by copra_name ;
+
 --select * from loinc_copra.loinc_long_common_name_copra_name_tmp where loinc_long_common_name = 'Anamnese' and loinc_num <> '35090-0';
 
 
