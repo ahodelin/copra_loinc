@@ -1,14 +1,9 @@
 -- copra names
 copy(
- select id_syst, 
- regexp_replace(regexp_replace(name, '_', ' ', 'g'), '"|COPRA|CO6', '', 'g')
- from icu_copra.copra_config_vars
- where parent in (1, 20)
- and "name" !~* 'Betreuer|Anordnung|Balken|Angehoerige|Pseudonym|Archivdruck|telefon|MergeSource|MergeTarget|ToDo|Dekanuelierungsplan|Koerperpflege|AllgBefund|IstPflege|VerlPfl|Tabelle|Behandlungsstrategie|KlinikNervensys|PROCDiagnosMassnahm|Verlegung|Arztbriefunterstuetzung|Schrittmacher|Beruf|Sprache|Religion|name'
- order by id_syst 
+ select id, regexp_replace(regexp_replace(names_mod, '^\s+|\s+$', ''), '\s+', ' ', 'g') names_mod from loinc_copra.copra_name_words_to_clean order by id
 ) to '/home/ahodelin/git_repos/copra_loinc/csv/copra_name.csv' csv delimiter E';'
 ;
-select * from icu_copra.copra_config_vars ccv where description ~* 'Kumulativ$';
+select * from copra.co6_config_variables ccv where id in (100110);
 -- copra descriptions
 copy(
  select id_syst, regexp_replace(description, '"|COPRA|CO6', '','g')

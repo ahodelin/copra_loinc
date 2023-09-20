@@ -1,28 +1,29 @@
-4;Patient Geburtsdatum
-5;Patient Geschlecht
-6;Patient Gewicht
-7;Patient Groesse
-8;Patient ID
-9; Patient Schwangerschaftswoche
-10; Patient errechneter Geburtstermin
-11; Patient Kopfumfang
-12; Patient Perzentile
-13; Patient Bezugsgewicht
-14; Patient Geburtsgewicht
-20;Fall
-21;Fall Aufnahme
-22;Fall Entlassung
+4;Geburtsdatum
+5;Geschlecht
+6;Gewicht
+7;Groesse
+9;Schwangerschaftswoche
+10;errechneter Geburtstermin
+11;Kopfumfang
+12;Perzentile
+13;Bezugsgewicht
+14;Geburtsgewicht
+15;CO
+16;CO MergeTarget
+22;Entlassung
+24;CO
+25;CO MergeTarget
 30;Behandlung
+60;Medikamentenmischung
+90;V2
 100;Laborwert
-144;Medikamente gestellt pro Tag
-670; Pflege Fall
-677; Pflege Fall Intervention
+144;Medikamente gestellt
+670;Pflege 
+677;Pflege Intervention
 1266;HF
 1267;AF
 1268;Puls
 1269;ZVD
-1270;T K
-1271;T K2
 1272;SO2
 1273;SaO2
 1274;SvO2
@@ -33,19 +34,18 @@
 1316;NYHA
 100003;Massnahmen
 100008;Vormedikation
-100024;Patient Nationalitaet
-100037;akt. Schwangerschaftwoche
+100024;Nationalitaet
+100025;Verlegung wo
+100032;Sprache
+100037;Schwangerschaftwoche
 100038;Schwangerschaftswoche
-100065;Allergie
-100066;OP-Tag
-100067;Klinik
 100068;EVLW/EV
 100069;ITBV
 100070;SVV
 100072;CI
 100073;SVRI
 100074;SVR
-100075;HZVGeraet Auswahl
+100075;HZV Auswahl
 100076;IABP Auswahl
 100077;SM AV Intervall
 100078;SM Frequenz
@@ -55,28 +55,31 @@
 100082;SM-Draehte
 100083;SM Modus
 100084;SM Art
+100085;Pacergeräte
 100086;CPP
 100088;ICP
 100089;ABP 2
 100090;NBP 2
 100091;LAP
-100092;Ereignisse Vitlaparameter Graphisch
 100093;ABP 1
 100094;NBP 1
 100095;Herzrhythmus
-100096;Beatmung Messung VTeMl
-100097;Beatmung Messung MVSpontan
-100098;Beatmung Messung MV
-100099;Beatmung Messung Frequenz
-100100;Beatmung Messung FiO2
-100101;Beatmung Einstellung VT
-100102;Beatmung Einstellung PEEP
-100103;Beatmung Einstellung I:E
-100104;Beatmung Einstellung Flow
-100105;Beatmung Einstellung FiO2
-100106;Beatmung Einstellung ASB
-100107;Beatmung Einstellung AMV
-100108;Beatmung Einstellung AF
+100096;VTeMl
+100097;MVSpontan
+100098;MV
+100099;Frequenz
+100100;FiO2
+100102;PEEP
+100104;Flow
+100105;FiO2
+100106;ASB
+100107;AMV
+100111;PEEP
+100113;Flow
+100115;ASB
+100116;AMV
+100118;BV
+100128;FiO2
 100131;Zugaenge
 100132;Atemwege
 100133;Enteralesonden
@@ -84,195 +87,211 @@
 100135;Drainagen
 100182;Dekubitus
 100189;Wunddokumentation
-100199;Verlauf Pflege
-100202;Verlauf Arzt
-100203;Verlauf PT
-100204;Verlauf Konsil
-100233;Beatmung Einstellung Okklusiondruck
-100234;Beatmung Einstellung PAW
-100235;Beatmung Einstellung Druckanstieg
-100236;Beatmung Einstellung PASB
-100237;Beatmung Einstellung FlowAssist
-100238;Beatmung Einstellung VolAssist
-100239;Beatmung Einstellung TApnoe
-100240;Beatmung Einstellung Pinsp
-100242;Beatmung Einstellung AutoTubuskompentationEin
-100243;Beatmung Einstellung AutoTubuskompentationAus
-100245;Beatmung Einstellung Biasflow
-100246;Beatmung Einstellung CPAP
-100247;Beatmung Einstellung DruckHoch
-100248;Beatmung Einstellung DruckNiedrig
-100249;Beatmung Einstellung FlowTrigger
-100250;Beatmung Einstellung FrequenzHFOV
-100251;Beatmung Einstellung idealesKoerpergewicht
-100253;Beatmung Einstellung IMVFrequenz
-100254;Beatmung Einstellung Inspirationszeit
-100257;Beatmung Einstellung InspiratorischePause
-100258;Beatmung Einstellung intermPEEP
-100259;Beatmung Einstellung IPPVFrequenz
-100261;Beatmung Einstellung Leistung
-100262;Beatmung Einstellung MitteldruckHFOV
-100263;Beatmung Einstellung Peakflow
-100264;Beatmung Einstellung Pmax
-100265;Beatmung Einstellung Power
-100267;Beatmung Einstellung PSV
-100268;Beatmung Einstellung ZeitHoch
-100269;Beatmung Einstellung ZeitNiedrig
-100270;Beatmung Messung AFSpontan
-100271;Beatmung Messung AMV
-100272;Beatmung Messung ASB
-100273;Beatmung Messung Flow
-100274;Beatmung Messung IE
-100275;Beatmung Messung PEEP
-100276;Beatmung Messung VTeL
-100278;Beatmung Messung CPAP
-100279;Beatmung Messung AutoTubuskompentationAus
-100281;Beatmung Messung Biasflow
-100282;Beatmung Messung Druckanstieg
-100283;Beatmung Messung DruckHoch
-100284;Beatmung Messung DruckNiedrig
-100285;Beatmung Messung FlowAssist
-100286;Beatmung Messung FlowTrigger
-100287;Beatmung Messung AFKontrol
-100288;Beatmung Messung IMVFrequenz
-100289;Beatmung Messung Inspirationszeit
-100290;Beatmung Messung InspirationszeitI:E
-100291;Beatmung Messung InspiratorischePause
-100292;Beatmung Messung intermPEEP
-100293;Beatmung Messung IPPVFrequenz
-100294;Beatmung Messung Leistung
-100295;Beatmung Messung MitteldruckHFOV
-100296;Beatmung Messung Okklussionsdruck
-100297;Beatmung Messung PASB
-100298;Beatmung Messung Peakflow
-100299;Beatmung Messung Pinsp
-100300;Beatmung Messung Pmax
-100301;Beatmung Messung Power
-100302;Beatmung Messung PSV
-100303;Beatmung Messung TApnoe
-100304;Beatmung Messung VolAssist
-100305;Beatmung Messung ZeitHoch
-100306;Beatmung Messung ZeitNiedrig
+100199;Pflege
+100202;Arzt
+100203;PT
+100204;Konsil
+100233;Okklusiondruck
+100234;PAW
+100235;Druckanstieg
+100236;PASB
+100237;FlowAssist
+100238;VolAssist
+100239;TApnoe
+100240;Pinsp
+100243;AutoTubuskompentationAus
+100245;Biasflow
+100246;CPAP
+100247;DruckHoch
+100248;DruckNiedrig
+100249;FlowTrigger
+100250;FrequenzHFOV
+100251;idealesKoerpergewicht
+100253;IMVFrequenz
+100254;Inspirationszeit
+100257;InspiratorischePause
+100258;intermPEEP
+100259;IPPVFrequenz
+100261;Leistung
+100262;teldruckHFOV
+100263;Peakflow
+100264;Pmax
+100265;Power
+100267;PSV
+100268;ZeitHoch
+100269;ZeitNiedrig
+100270;AFSpontan
+100271;AMV
+100272;ASB
+100273;Flow
+100275;PEEP
+100276;VTeL
+100278;CPAP
+100279;AutoTubuskompentationAus
+100281;Biasflow
+100282;Druckanstieg
+100283;DruckHoch
+100284;DruckNiedrig
+100285;FlowAssist
+100286;FlowTrigger
+100287;AFKontrol
+100288;IMVFrequenz
+100289;Inspirationszeit
+100290;Inspirationszeit
+100291;InspiratorischePause
+100292;intermPEEP
+100293;IPPVFrequenz
+100294;Leistung
+100295;teldruckHFOV
+100296;Okklussionsdruck
+100297;PASB
+100298;Peakflow
+100299;Pinsp
+100300;Pmax
+100301;Power
+100302;PSV
+100303;TApnoe
+100304;VolAssist
+100305;ZeitHoch
+100306;ZeitNiedrig
+100356;Koerperpflege
 100359;Bewegen
 100418;Befinden
 100446;Ernaehren
 100533;PT Massnahme
+100560;PT Allg
 100637;PT Bewegungskontrolle
-100676;PT Befund
+100649;AtmungKreislaufTemp
+100676;PT
 100680;PT Partizipation
 100694;PT Koerperstruktur
-100742;PT Kontextfaktoren
+100742;PT Kontextfren
+100779;Inhalation 
+100781;Anfeuchtung 
+100795;sform
+100796;sgeraet
+100797;pmax
+100798;pPlateau
+100800;O2Lmin
+100802;SauerstoffFlow
+100803;DruckluftFlow
+100804;O2Konzentration
+100807;O2 
+100808;Sauerstoff
+100809;Anfeuchtung
+100813;Atemform
 100905;PflVerleg verlegt am
-100965;KlinikThorax
-100999;KlinikStamm
-101000;KlinikExtraemitaeten
-101007;KlinikTemperaturstatus
-101008;KlinikVegetativeFunktion
-101010;KlinikPeriNervenFunkt
-101317;Patient Alter
-101322;Patient AufnGewicht
-101323;Patient AufnGroesse
-101324;Patient AufnKO
-101325;Patient PLZ
-101326;Patient Ort
-101327;Patient Land
-101329;Fall Art
+100999;Stamm
+101000;Extraemitaeten
+101007;Temperaturstatus
+101008;VegetativeFunktion
+101009;Nervensys
+101010;PeriNervenFunkt
+101317;Alter
+101322;AufnGewicht
+101323;AufnGroesse
+101327;Land
+101328;Pseudonym
+101329;Art
 101337;MassnahmeArzt
-101377;Nierenersatzverfahren VO Verfahren
-101378;Nierenersatzverfahren VO Option
-101379;Nierenersatzverfahren VO Startzeit
-101380;Nierenersatzverfahren VO Antikoagulanz
-101381;Nierenersatzverfahren VO Bolus
-101382;Nierenersatzverfahren VO FuellenMit
-101383;Nierenersatzverfahren VO BlutflussMax
-101384;Nierenersatzverfahren VO Umsatz
-101385;Nierenersatzverfahren VO AbnahmeMax
-101386;Nierenersatzverfahren VO Bilanzziel
-101387;Nierenersatzverfahren VO HarnstoffZiel
-101388;Nierenersatzverfahren VO CreaZiel
-101389;Nierenersatzverfahren VO KaliumZiel
-101390;Nierenersatzverfahren VO HFLoesung
-101391;Nierenersatzverfahren Dokumentation Verfahren
-101393;Nierenersatzverfahren Einstell Umsatz
-101395;Nierenersatzverfahren Mess UmsatzKumulati
-101397;Nierenersatzverfahren Mess AbnahmeKumulat
-101398;Nierenersatzverfahren Dokumentation Blutfluss
-101399;Nierenersatzverfahren Mess DruckVorFilter
-101400;Nierenersatzverfahren Dokumentation Filtratdruck
-101401;Nierenersatzverfahren Mess ArteriellDruck
-101402;Nierenersatzverfahren Mess VenDruck
-101404;Nierenersatzverfahren Dokumentation Antikoagulatio
-101405;Nierenersatzverfahren Dokumentation Option
-101406;Nierenersatzverfahren Dokumentation HFLoesung
-101412;Lungenersatzverfahren Doku ECMOInspiratorischSaO2
-101413;Lungenersatzverfahren Doku ECMOAirFlow
-101414;Lungenersatzverfahren Doku ECMOBlutfluss
-101415;Lungenersatzverfahren Doku ECMOPumpendrehzahl
-101416;Lungenersatzverfahren Doku ECMOAntikoagulation
-101422;Patient KO
+101379;Startzeit
+101380;Antikoagulanz
+101381;Bolus
+101382;Fuellen
+101383;BlutflussMax
+101384;Umsatz
+101385;AbnahmeMax
+101386;Bilanzziel
+101387;HarnstoffZiel
+101388;CreaZiel
+101389;KaliumZiel
+101390;HFLoesung
+101391;Dokumentation 
+101393;Umsatz
+101395;Mess UmsatzKumulati
+101397;Mess AbnahmeKumulat
+101398;Dokumentation Blutfluss
+101399;Mess DruckVorFilter
+101400;Dokumentation Filtratdruck
+101401;Mess ArteriellDruck
+101402;Mess VenDruck
+101404;Dokumentation Antikoagulatio
+101405;Dokumentation 
+101406;Dokumentation HFLoesung
+101407;ECMOAirFlow
+101408;ECMOBlutfluss
+101409;ECMOPumpendrehzahl
+101410;ECMOAntikogulation
+101411;ECMOInspiratioSaO2
+101412;Doku ECMOInspiratorischSaO2
+101413;Doku ECMOAirFlow
+101414;Doku ECMOBlutfluss
+101415;Doku ECMOPumpendrehzahl
+101416;Doku ECMOAntikoagulation
+101417;Dokumentation 
+101419;Doku 
+101422;KO
 101423;CO2
-101433;Beatmung Messung Compliance
-101434;Beatmung Messung CO2
-101435;Beatmung Messung Resistance
-101436;Beatmung Messung AMVSpontan
-101437;Beatmung Messung Expirationszeit
-101438;Beatmung Messung O2Konzentration
-101439;Beatmung Messung SauerstoffFlow
-101440;Beatmung Messung DruckluftFlow
-101441;Beatmung Messung Pmean
-101442;Beatmung Messung AF
-101443;Beatmung Messung Pmin
-101444;Beatmung Messung IntrinsicPEEP
-101446;Beatmung Einstellung ApnoeZeit
-101447;Beatmung Messung Pplateau
-101448;Patient Verlusst ExtrakorporaleAbnahme
-101449;Patient Blutverlusst
-101472;Patient Blutgruppe
-101473;Patient BMI
-101481;Beatmung Einstellung Sauerstoff
-101482;Beatmung Einstellung Anfeuchtung
-101483;VO Diagnostik
+101433;Compliance
+101434;CO2
+101435;Resistance
+101436;AMVSpontan
+101437;Expirationszeit
+101438;O2Konzentration
+101439;SauerstoffFlow
+101440;DruckluftFlow
+101441;Pmean
+101443;Pmin
+101444;IntrinsicPEEP
+101446;ApnoeZeit
+101447;Pplateau
+101448;Verlusst ExtrakorporaleAbnahme
+101449;Blutverlusst
+101460;Station
+101461;Familienst
+101472;Blutgruppe
+101473;BMI
+101481;Sauerstoff
+101482;Anfeuchtung
+101483;Diagnostik
 101530;TabeIntensivDiagnosen
-101595;Beatmung VO AF
-101596;Beatmung Proc AF
+101596;Proc AF
+101599;AMV
+101600;PzvCO2
+101602;SpO2
+101603;FiO2
+101604;SAP
+101605;MAP
+101606;HR
+101607;Neurologie
+101608;PHzv
 101609;Score Braden
-101617;Beatmung VO AMV
-101618;Beatmung VO ASB
-101619;Beatmung VO FiO2
-101620;Beatmung VO Flow
-101621;Beatmung VO IzuE
-101622;Beatmung VO PEEP
-101623;Beatmung VO VT
-101624;Beatmung VO O2
-101625;Beatmung VO Pmax
-101626;Beatmung VO PPlateau
-101627;Beatmung Proc AMV
-101628;Beatmung Proc ASB
-101629;Beatmung Proc FiO2
-101630;Beatmung Proc Flow
-101631;Beatmung Proc IzuE
-101632;Beatmung Proc PEEP
-101633;Beatmung Proc VT
-101634;Beatmung Proc O2
-101635;Beatmung Proc Pmax
-101636;Beatmung Proc PPlateau
-101641;Beatmung VO BedingteVerordnung
-101642;Beatmung Proc BedingteVerordnung
-101644;Beatmung VO GeraetForm
-101645;Beatmung Proc GeraetForm
+101617;AMV
+101618;ASB
+101619;FiO2
+101620;Flow
+101621;IzuE
+101622;PEEP
+101624;O2
+101625;Pmax
+101626;PPlateau
+101627;Proc AMV
+101628;Proc ASB
+101629;Proc FiO2
+101630;Proc Flow
+101631;Proc IzuE
+101632;Proc PEEP
+101634;Proc O2
+101635;Proc Pmax
+101636;Proc PPlateau
+101642;Proc 
+101644;Form
+101645;Proc Form
 101683;Messsonden
 101696;Mikrobio
-101763;Patient Kopfumfang
-101773;Patient Verfügung
-101774;Patient Versicherung
-101775;Patient Versicherungsnummer
-101787;Hausarzt Strasse
-101788;Hausarzt PLZ
-101789;Hausarzt Ort
-101790;Hausarzt Land
-101794;Hausarzt Fax
-101795;Hausarzt Email
-101885;KlinikHerzKreislaufFunktion
+101763;Kopfumfang
+101792;Verwandschaftsgrad
+101885;HerzKreislaufFunktion
 101947;Score TISS28
 101973;Score SAPS2
 101992;Score SOFA
@@ -298,7 +317,6 @@
 102027;RPP
 102028;RVSA
 102029;RVSAI
-102030;SV
 102032;TPR
 102033;TVR
 102034;PCCO
@@ -321,46 +339,50 @@
 102055;LVP
 102056;RVP
 102057;ARR
-102058;Beatmung Einstellung Inspirationsflow
-102059;Beatmung Einstellung ASBAnstieg
-102060;Beatmung Einstellung InspirationszeitIE
-102061;Beatmung Messung ExpirationszeitI:E
-102062;Beatmung Einstellung PAW/Pinspiration
-102063;Beatmung Einstellung BIPAPP1
-102064;Beatmung Einstellung BIPAPP2
-102065;Beatmung Einstellung BIPAPT1
-102066;Beatmung Einstellung BIPAPT2
-102067;Beatmung Einstellung Beatmungsmodus
-102068;Beatmung Einstellung DruckTrigger
-102069;Beatmung Messung I:EVerhaeltnisI
-102070;Beatmung Messung I:EVerhaeltnisE
-102071;Beatmung Messung O2KonzentrationG5
-102072;Beatmung Einstellung DruckFlow
-102073;Beatmung Einstellung O2Konzentration
-102074;Beatmung Einstellung SauerstoffFlow
+102058;Inspirationsflow
+102059;ASBAnstieg
+102060;Inspirationszeit
+102061;Expirationszeit
+102062;PAW/Pinspiration
+102063;BIPAPP1
+102064;BIPAPP2
+102065;BIPAPT1
+102066;BIPAPT2
+102067;smodus
+102068;DruckTrigger
+102071;O2KonzentrationG5
+102072;DruckFlow
+102073;O2Konzentration
+102074;SauerstoffFlow
 102075;Behandlung GCS ADULT
 102081;Behandlung GCS CHILD
-102087;Lungenersatzverfahren Doku ECMOFiO2
-102088;Lungenersatzverfahren Doku ECMOATZ
-102096;Lungenersatzverfahren Doku ILASystem
-102097;Lungenersatzverfahren Doku ILAQ1Flow
-102098;Lungenersatzverfahren Doku ILAQ2Flow
-102099;Lungenersatzverfahren Doku ILAPressure
-102100;Lungenersatzverfahren Doku ILAAnalogIn
-102101;Lungenersatzverfahren Doku ILACuppling
-102102;Nierenersatzverfahren Einstell Blutfluss
-102103;Nierenersatzverfahren Einstell FlussratePBP
-102104;Nierenersatzverfahren Einstell SubstituatRate
-102106;Nierenersatzverfahren Einstell Dialysatfluß
-102107;Nierenersatzverfahren Einstell PatFluessigkeitRate
-102108;Nierenersatzverfahren Mess Blutfluss
-102110;Nierenersatzverfahren Mess FlussratePBP
-102112;Nierenersatzverfahren Mess SubstituatRate
-102113;Nierenersatzverfahren Mess PatFluessigkeitRate
-102114;Nierenersatzverfahren Mess Dialysatfluß
-102117;Nierenersatzverfahren Mess FilterDruck
-102118;Nierenersatzverfahren Mess FiltratDruck
-102119;Nierenersatzverfahren Mess TMP
+102087;Doku ECMOFiO2
+102088;Doku ECMOATZ
+102089;ECMOATZ
+102090;ECMOFiO2
+102091;ILAQ1Flow
+102092;ILAQ2Flow
+102093;ILAPressure
+102094;ILAAnalogIn
+102096;Doku ILASystem
+102097;Doku ILAQ1Flow
+102098;Doku ILAQ2Flow
+102099;Doku ILAPressure
+102100;Doku ILAAnalogIn
+102101;Doku ILACuppling
+102102;Blutfluss
+102103;FlussratePBP
+102104;SubstituatRate
+102106;Dialysatfluß
+102107;PatFluessigkeitRate
+102108;Mess Blutfluss
+102110;Mess FlussratePBP
+102112;Mess SubstituatRate
+102113;Mess PatFluessigkeitRate
+102114;Mess Dialysatfluß
+102117;Mess FilterDruck
+102118;Mess FiltratDruck
+102119;Mess 
 102120;IABP Trigger
 102121;IABP Frequenz
 102122;IABP Unterstützung
@@ -369,39 +391,40 @@
 102125;IABP EKG
 102126;IABP RR
 102127;IABP Unterstützungsdruck
-102128;Untersuchung Kopf Haut
-102129;Untersuchung Kopf Augen
-102130;Untersuchung Kopf Ohren
-102131;Untersuchung Kopf Nas Mund
-102132;Untersuchung Kopf Hals
-102133;Untersuchung Thorax Haut
-102134;Untersuchung Thorax Wand
-102135;Untersuchung Thorax Pulmo
-102136;Untersuchung Thorax Cor
-102137;Untersuchung Abdomen Haut
-102138;Untersuchung Abdomen Bauchwand
-102139;Untersuchung Abdomen Nieren
-102140;Untersuchung Abdomen Leber
-102141;Untersuchung Abdomen Gallenblase
-102142;Untersuchung ExtremitaetenLeiste Haut
-102143;Untersuchung ExtremitaetenLeiste ObereExtremitaet
-102144;Untersuchung ExtremitaetenLeiste UntereExtremitaet
-102145;Untersuchung ZNS Bewusstsein
-102146;Untersuchung ZNS Reflexe
-102147;Untersuchung ZNS Hirnnerven
-102148;Untersuchung ZNS Motorik
-102149;Untersuchung ZNS Sensibilitaet
-102150;Untersuchung ZNS Vegetativum
-102151;Untersuchung Status Reizbildung
-102152;Untersuchung Status Makrozirkulation
-102153;Untersuchung Status Mikrozirkulation
-102154;Untersuchung Status Oxygenierung
-102155;Untersuchung Status Ventilation
-102156;Untersuchung Status Atemform
-102157;Untersuchung Status Wasserhaushalt
-102158;Untersuchung Status Koerpertemperatur
-102159;Untersuchung Status Urin
-102160;Untersuchung Status Stuhl
+102128;Kopf Haut
+102129;Kopf Augen
+102130;Kopf Ohren
+102131;Kopf Nas Mund
+102132;Kopf Hals
+102133;Thorax Haut
+102134;Thorax Wand
+102135;Thorax Pulmo
+102136;Thorax Cor
+102137;Abdomen Haut
+102138;Abdomen Bauchwand
+102139;Abdomen Nieren
+102140;Abdomen Leber
+102141;Abdomen Gallenblase
+102142;Haut
+102143;ObereExtremitaet
+102144;UntereExtremitaet
+102145;ZNS Bewusstsein
+102146;ZNS Reflexe
+102147;ZNS Hirnnerven
+102148;ZNS Motorik
+102149;ZNS Sensibilitaet
+102150;ZNS Vegetativum
+102151;Reizbildung
+102152;Makrozirkulation
+102153;Mikrozirkulation
+102154;Oxygenierung
+102155;Ventilation
+102156;Atemform
+102157;Wasserhaushalt
+102158;Koerpertemperatur
+102159;Urin
+102160;Stuhl
+102161;IABP
 102162;PICCO ABP
 102163;PICCO ZVD
 102164;PICCO SVR
@@ -414,192 +437,224 @@
 102171;PICCO ITBVI
 102172;PICCO EVLW/EV
 102173;PICCO HZV
-102176;Vigileo SV
-102178;Vigileo COCI
-102179;Vigileo SVI
-102180;Vigileo SVR
-102181;Vigileo SVRI
-102182;Vigileo SVV
-102183;Vigileo ScvO2
-102184;VigilanceC HZV
-102185;VigilanceC CI
-102186;VigilanceC SV
-102187;VigilanceC SVI
-102188;VigilanceC SVV
-102189;VigilanceC SVR
-102190;VigilanceC SVRI
-102191;VigilanceC PVR
-102192;VigilanceC PVRI
-102193;VigilanceC ITBV
-102194;VigilanceC EVLW
-102195;VigilanceC LCWI
-102196;VigilanceC RCWI
-102197;VigilanceC SI
-102198;VigilanceC O2
-102199;HZV VigileoGeraet
-102200;HZV PICCOGeraet
-102201;HZV VigilanceCGeraet
+102176;SV
+102178;COCI
+102179;SVI
+102180;SVR
+102181;SVRI
+102182;SVV
+102183;ScvO2
+102184;HZV
+102185;CI
+102186;SV
+102187;SVI
+102188;SVV
+102189;SVR
+102190;SVRI
+102191;PVR
+102192;PVRI
+102193;ITBV
+102194;EVLW
+102195;LCWI
+102196;RCWI
+102197;SI
+102198;O2
+102199;HZV
+102200;HZV PICCO
+102201;HZV
+102374;Grunderkrankung
+102375;VorErkranungOpertion
+102376;PrimarerGrund/Vitalfunktions
+102377;ICUDiagnosen
+102378;Verletzungen
+102380;AnamneseVor
 102408;p-SV
+102409;Labor
+102419;Bedarfsmedikation
 102444;Darm
-102489;Vigileo CO
-102490;Vigileo CI
+102462;Antikoagulanz
+102463;Antikoagulanz
+102464;Bolus
+102465;Bolus
+102469;Bilanzziel
+102470;Bilanzziel
+102473;CreaZiel
+102474;CreaZiel
+102475;Fuellen
+102476;Fuellen
+102477;HarnstoffZiel
+102478;HarnstoffZiel
+102479;HFLoesung
+102480;HFLoesung
+102481;KaliumZiel
+102482;KaliumZiel
+102489;CO
+102490;CI
 102491;Oxidationswasser
 102493;PerspiratioInsensibilis
 102494;PerspiratioSensibilis
-102503;Nierenersatzverfahren Dokumentation BlutflussEinst
-102504;Nierenersatzverfahren Dokumentation Abschluss
-102505;HZV Platzhalter
-102506;PICCODraegerModul Platzhalter
-102508;WeitereBlutdruecke Platzhalter
-102529;Beatmung Einstellung I:EInsp
-102530;Beatmung Einstellung I:EExsp
-102531;Beatmung Einstellung InspirationsflowMax
+102495;Umsatz
+102496;BlutflussMax
+102497;AbnahmeMax
+102498;AbnahmeMax
+102499;BlutflussMax
+102500;Umsatz
+102503;Dokumentation BlutflussEinst
+102504;Dokumentation Abschluss
+102505;HZV
+102506;PICCODraegerModul
+102508;WeitereBlutdruecke
+102509;Transport
+102530;Exsp
+102531;InspirationsflowMax
 102532;PPV
 102533;CFI
 102535;p-CI
 102536;ITBVI
-102538;Beatmung Messung ASV
-102539;Beatmung Einstellung ASV
-102543;Beatmung Einstellung Beatmungsgeraet
-102559;Inpuls Erfassung Kriterien zusätzliche
+102538;ASV
+102539;ASV
+102543;sgeraet
+102553;Doku 
+102554;Doku Antikoagulation
+102555;Doku HFLoesung
+102557;Druck 
+102558;Infektionsphylaxe 
+102559;Inpuls Erfassung Kriterien
 102560;Inpuls Erfassung Kategorie
 102561;Inpuls Erfassung Kriterien 4
 102562;Inpuls Erfassung Kriterien 3
 102563;Inpuls Erfassung Kriterien 2
 102564;Inpuls Erfassung Kriterien 1
 102565;Inpuls Erfassung Transporte Dauer
-102566;Inpuls Erfassung Transporte Anzahl
-102567;Inpuls Erfassung Beatmungszeit
-102568;Beatmung Einstellung Ptief
-102569;Beatmung Einstellung Phoch
-102570;Beatmung Einstellung Pkontrol
-102571;Beatmung Einstellung Thoch
-102572;Beatmung Einstellung Ttief
-102573;Beatmung Einstellung Druckrampe
-102575;Beatmung Einstellung Plateau
-102576;Beatmung Einstellung Psupport
-102577;Beatmung Einstellung TiMax
-102578;Beatmung Einstellung ProzentMinVol
-102580;Beatmung Messung AFTotal
-102581;Nierenersatzverfahren Einstell Plasmavolumen
-102582;Nierenersatzverfahren Einstell Austausch
-102583;Nierenersatzverfahren Einstell SollTemperatur
-102585;Nierenersatzverfahren Einstell Plasmarate
-102586;Nierenersatzverfahren Einstell SubBolus
-102587;Nierenersatzverfahren Einstell UFR
-102589;Nierenersatzverfahren Einstell Austauschrate
-102590;Nierenersatzverfahren Einstell EffektiverEntzug
-102591;Nierenersatzverfahren Einstell UFZiel
-102596;Nierenersatzverfahren Einstell SollNatrium
-102597;Nierenersatzverfahren Einstell Bicarbonat
-102602;Nierenersatzverfahren Einstell Filter
-102610;Nierenersatzverfahren Einstell Temperatur
-102611;Nierenersatzverfahren Einstell SubstituatVolumen
-102614;Nierenersatzverfahren Einstell Fluss
-102615;Nierenersatzverfahren Mess Plasmavolumen
-102617;Beatmung Messung FrequenzHFOV
-102622;Nierenersatzverfahren Mess SollTemperatur
-102623;Nierenersatzverfahren Mess Temperatur
-102624;Nierenersatzverfahren Mess BehandlungsZeit
-102625;Nierenersatzverfahren Mess UFRBFRVerhaeltnis
-102626;Nierenersatzverfahren Mess UFR
-102627;Nierenersatzverfahren Mess SubstituatVolumen
-102628;Nierenersatzverfahren Mess Bilanz
-102629;Nierenersatzverfahren Mess SubBolusVolumen
-102630;Nierenersatzverfahren Mess UFVolumenKumulativ
-102631;Nierenersatzverfahren Mess Dialysatvolumen
-102632;Nierenersatzverfahren Mess BilanzGleichUFVolumen
-102634;Nierenersatzverfahren Mess UFZiel
-102635;Nierenersatzverfahren Mess RestZeit
-102638;Nierenersatzverfahren Mess SollNatrium
-102639;Nierenersatzverfahren Mess Bicarbonat
-102642;Nierenersatzverfahren Mess ISOUFZiel
-102643;Nierenersatzverfahren Mess ISOUFZeit
-102644;Nierenersatzverfahren Mess ISOUFRate
-102649;Nierenersatzverfahren Mess KumuliertesBlutvolumen
-102650;Nierenersatzverfahren Mess Fluss
-102651;Nierenersatzverfahren Einstell DialyseZeit
-102652;Nierenersatzverfahren Einstell StartNatrium
-102655;Nierenersatzverfahren Mess ZufuhrSubstituat
-102656;Nierenersatzverfahren Einstell ZufuhrSubstituat
-102657;Beatmung Einstellung ETS
-102658;Beatmung Messung Amplitude
-102659;Nierenersatzverfahren Einstell UFProfil
-102660;Nierenersatzverfahren Einstell NatriumProfil
-102661;Nierenersatzverfahren Einstell ISOUFZiel
-102662;Nierenersatzverfahren Einstell ISOUFZeit
-102663;Nierenersatzverfahren Einstell ISOUFRate
-102664;Nierenersatzverfahren Einstell BlutflussSNPumpe
-102665;Nierenersatzverfahren Mess Dialysekonzentrat
-102666;Nierenersatzverfahren Mess DialyseZeit
-102667;Nierenersatzverfahren Mess SubBolus
-102668;Nierenersatzverfahren Mess UltrafiltrationsVolumen
-102669;Nierenersatzverfahren Mess AktuellesNatrium
-102670;Nierenersatzverfahren Mess BasisNatrium
-102671;Nierenersatzverfahren Mess BlutflussSNPumpe
-102672;Nierenersatzverfahren VO DialysekonzentratALT
-102674;Nierenersatzverfahren VO UFZiel
-102675;Nierenersatzverfahren VO DialyseZeit
-102676;Nierenersatzverfahren VO SollNatrium
-102677;Nierenersatzverfahren VO Bicarbonat
-102678;Nierenersatzverfahren VO Temperatur
-102679;Nierenersatzverfahren VO Filter
-102680;Nierenersatzverfahren VO NatriumProfil
-102681;Nierenersatzverfahren VO StartNatrium
-102682;Nierenersatzverfahren VO BasisNatrium
-102686;Nierenersatzverfahren VO BlutflussSNPumpe
-102687;Nierenersatzverfahren VO SubstituatVolumen
-102688;Nierenersatzverfahren VO SubBolus
-102689;Nierenersatzverfahren VO SpueloesungAntikoagulanz
-102690;Nierenersatzverfahren VO Dialysatloesung
-102691;Nierenersatzverfahren VO PlasmaVolumen
-102692;Nierenersatzverfahren VO UFProfil
-102695;Nierenersatzverfahren Einstell Dialysekonzentrat
-102696;Nierenersatzverfahren Einstell Abnahme
-102697;Nierenersatzverfahren Einstell BasisNatrium
-102698;Nierenersatzverfahren Einstell Substituat
-102699;Nierenersatzverfahren Einstell Dialysierfluessigke
-102700;Nierenersatzverfahren Mess Austauschrate
-102702;Nierenersatzverfahren Mess EffektiverEntzug
-102704;Nierenersatzverfahren VO Fluß
-102707;Nierenersatzverfahren Doku SpuelbeutelInitialdosis
-102708;Nierenersatzverfahren Mess GBV
-102710;Nierenersatzverfahren VO Zugang
-102711;Nierenersatzverfahren Doku Zugang
-102712;Nierenersatzverfahren Doku AbschlussBeurteilung
-102713;Nierenersatzverfahren Doku Schlauchsystem
-102714;Nierenersatzverfahren Doku Filter
-102716;Nierenersatzverfahren Doku Verfahren
-102721;Nierenersatzverfahren Einstell Calcium
-102723;Nierenersatzverfahren Mess iCaPostFilter
-102724;Nierenersatzverfahren Mess iCasystemBGA
-102725;Nierenersatzverfahren Mess iCaGesammt
-102726;Nierenersatzverfahren Mess StartNatrium
-102727;Nierenersatzverfahren Mess Abnahme
-102729;Nierenersatzverfahren Einstell Citrat
-102737;Nierenersatzverfahren Doku SpueloesungAntikoagulan
-102738;Nierenersatzverfahren Mess Leitfähigkeit
-102739;Nierenersatzverfahren VO SubstituatRate
-102740;Nierenersatzverfahren VO Plasma
-102741;Nierenersatzverfahren VO Spueldauer
-102742;Nierenersatzverfahren VO CitratLoesung
-102743;Nierenersatzverfahren VO Calcium
-102744;Nierenersatzverfahren VO CitratDosis
-102745;Nierenersatzverfahren VO Austauschrate
-102746;Nierenersatzverfahren VO EffektiverEntzug
-102747;Nierenersatzverfahren Einstell Spueldauer
-102748;Nierenersatzverfahren Einstell CitratLoesung
-102749;Nierenersatzverfahren Einstell CalciumLoesung
-102750;Nierenersatzverfahren Mess AustauschrateKumulativ
-102751;Nierenersatzverfahren Mess PF
-102752;Nierenersatzverfahren Mess CitratFluss
-102753;Nierenersatzverfahren Mess CalciumFluss
-102754;Nierenersatzverfahren VO Austausch
-102755;Nierenersatzverfahren VO Dialysat
-102756;Nierenersatzverfahren Mess VenoeserDruck
-102758;Nierenersatzverfahren VO UFR
-102760;Nierenersatzverfahren VO ISOUF
-102763;Nierenersatzverfahren VO CalciumLoesung
+102566;Inpuls Erfassung Transporte
+102567;Inpuls Erfassung szeit
+102569;Phoch
+102570;Pkontrol
+102571;Thoch
+102572;Ttief
+102573;Druckrampe
+102575;Plateau
+102576;Psupport
+102577;TiMax
+102578;ProzentMinVol
+102580;AFTotal
+102581;Plasmavolumen
+102582;Austausch
+102583;Temperatur
+102585;Plasmarate
+102586;SubBolus
+102587;UFR
+102589;Austauschrate
+102590;EffektiverEntzug
+102591;UFZiel
+102596;Natrium
+102597;Bicarbonat
+102602;Filter
+102610;Temperatur
+102611;Substituat
+102614;Fluss
+102615;Mess Plasmavolumen
+102617;FrequenzHFOV
+102622;Mess Temperatur
+102623;Mess Temperatur
+102624;Mess BehandlungsZeit
+102625;Mess UFRBFR
+102626;Mess UFR
+102627;Mess Substituat
+102628;Mess Bilanz
+102629;Mess SubBolus
+102630;Mess UFKumulativ
+102631;Mess Dialysatvolumen
+102632;Mess BilanzGleichUF
+102634;Mess UFZiel
+102635;Mess RestZeit
+102638;Mess Natrium
+102639;Mess Bicarbonat
+102642;Mess ISOUFZiel
+102643;Mess ISOUFZeit
+102644;Mess ISOUFRate
+102649;Mess KumuliertesBlutvolumen
+102650;Mess Fluss
+102651;DialyseZeit
+102652;StartNatrium
+102655;Mess ZufuhrSubstituat
+102656;ZufuhrSubstituat
+102657;ETS
+102658;Amplitude
+102659;UFProfil
+102660;NatriumProfil
+102661;ISOUFZiel
+102662;ISOUFZeit
+102663;ISOUFRate
+102665;Mess Dialysekonzentrat
+102666;Mess DialyseZeit
+102667;Mess SubBolus
+102668;Mess Ultrafiltrations
+102669;Mess esNatrium
+102670;Mess BasisNatrium
+102671;Mess 
+102672;DialysekonzentratALT
+102674;UFZiel
+102675;DialyseZeit
+102676;Natrium
+102677;Bicarbonat
+102678;Temperatur
+102679;Filter
+102680;NatriumProfil
+102681;StartNatrium
+102682;BasisNatrium
+102687;Substituat
+102688;SubBolus
+102689;SpueloesungAntikoagulanz
+102690;Dialysatloesung
+102691;Plasma
+102692;UFProfil
+102695;Dialysekonzentrat
+102696;Abnahme
+102697;BasisNatrium
+102698;Substituat
+102699;Dialysierfluessigke
+102700;Mess Austauschrate
+102702;Mess EffektiverEntzug
+102704;Fluß
+102707;Doku SpuelbeutelInitialdosis
+102708;Mess GBV
+102710;Zugang
+102711;Doku Zugang
+102712;Doku 
+102713;Doku Schlauchsystem
+102714;Doku Filter
+102716;Doku 
+102721;Calcium
+102723;Mess iCaPostFilter
+102724;Mess iCasystemBGA
+102725;Mess iCaGesammt
+102726;Mess StartNatrium
+102727;Mess Abnahme
+102729;Citrat
+102737;Doku SpueloesungAntikoagulan
+102738;Mess Leitfähigkeit
+102739;SubstituatRate
+102740;Plasma
+102741;Spueldauer
+102742;CitratLoesung
+102743;Calcium
+102744;CitratDosis
+102745;Austauschrate
+102746;EffektiverEntzug
+102747;Spueldauer
+102748;CitratLoesung
+102749;CalciumLoesung
+102750;Mess AustauschrateKumulativ
+102751;Mess PF
+102752;Mess CitratFluss
+102753;Mess CalciumFluss
+102754;Austausch
+102755;Dialysat
+102756;Mess VenoeserDruck
+102758;UFR
+102760;ISOUF
+102763;CalciumLoesung
 102764;Score ARDS
 102771;Score TISS10
 102784;Score RASS
@@ -634,487 +689,490 @@
 102815;Score VICS
 102816;Score Waterlow
 102832;Score Barthel
-102848;Score Braden Verlauf
-102858;Beatmung Einstellung CPAPcmH2O
-102859;Nierenersatzverfahren VO ISOUFZeit
-102860;Beatmung Messung CPAPcmH2O
-102861;Beatmung MS BiPAPV Pimax
-102862;Beatmung MS BiPAPV IPAP
-102863;Beatmung MS BiPAPV EPAP
-102864;Beatmung MS BiPAPV TiTtot
-102865;Beatmung MS BiPAPV Patientenleckage
-102866;Beatmung MS BiPAPV Gesamtleckage
-102867;Beatmung MS BiPAPV PatientenTrigger
-102868;Beatmung ES BiPAPV IPAP
-102869;Beatmung ES BiPAPV EPAP
-102870;Beatmung ES BiPAPV IPAPAnstiegszeit
-102871;Nierenersatzverfahren Einstellung FuellenMit
-102872;Beatmung ES VisionA Oszillationsfrequenz
-102873;Beatmung ES VisionA MAP
-102874;Beatmung ES VisionA Schlagvolumen
-102876;Beatmung ES VisionA HFOBaseFlow
-102877;Beatmung ES VisionA SISetting
-102878;Beatmung MS VisionA MAP
-102880;Beatmung MS VisionA SISetting
-102881;Beatmung MS VisionA HFOBaseFlow
-102882;Nierenersatzverfahren VO Schlauchsystem
-102883;Beatmung ES VisionA PS
-102884;Beatmung ES VisionA RiseTime
-102885;Beatmung MS VisionA PIP
-102886;Beatmung ES G5 Timax
-102887;Beatmung ES G5 Ti
-102888;Beatmung ES G5 Thoch
-102889;Beatmung ES G5 Plateau
-102890;Beatmung ES G5 Phoch
-102891;Beatmung ES G5 Pkontrol
-102892;Beatmung ES G5 Psupport
-102893;Beatmung ES G5 PeepCPAP
-102894;Beatmung ES G5 Ttief
-102895;Beatmung ES G5 Ptief
-102897;Nierenersatzverfahren VO DialysatMultifiltrate
-102898;Beatmung ES G5 IEVerhaeltnis
-102899;Beatmung MS G5 Ppeak
-102900;Beatmung MS G5 Pmittel
-102901;Beatmung MS G5 PeepCPAP
-102902;Beatmung MS G5 VTE
-102903;Beatmung MS G5 InspFlow
-102904;Beatmung MS G5 TI
-102905;Beatmung MS G5 Rinsp
-102906;Beatmung MS G5 Rexsp
-102907;Beatmung MS G5 Cstat
-102908;Beatmung MS G5 RCinsp
-102909;Beatmung MS G5 RCexsp
-102910;Beatmung MS G5 RSB
-102911;Beatmung MS G5 WOBimp
-102912;Beatmung MS G5 AutoPeep
-102913;Beatmung MS G5 PTP
-102914;Beatmung MS G5 VLeckage
-102915;Beatmung MS G5 ExspFlow
-102916;Beatmung MS G5 TE
-102919;Nierenersatzverfahren Doku Dialysekonzentrat
-102921;Nierenersatzverfahren VO Dialysekonzentrat
-102922;Beatmung Einstellung SauerstoffVolG5
-102923;Beatmung Messung O2VolG5
-102926;Beatmung MS G5 IEVerhaeltnis
-102927;Nierenverfahren VO Zugang
-102928;Nierenverfahren VO Filter
-102929;Nierenverfahren VO HFLoesung
-102930;Nierenverfahren VO Option
-102931;Beatmung ES G5 ETS
-102932;Nierenverfahren VO Antikoagulanz
-102933;Nierenverfahren VO SpülloesungAntikoagulanz
-102934;Nierenverfahren VO FüllenMit
-102935;Beatmung ES G5 Druckrampe
-102937;Nierenverfahren VO Multi BlutflussMax
-102938;Beatmung ES G5 Frequenz
-102939;Nierenverfahren VO Multi UltrafiltrationMax
-102940;Nierenverfahren VO Multi Substituat
-102941;Nierenverfahren VO Multi SubstituatBolus
-102942;Beatmung ES G5 Sauerstoff
-102943;Nierenverfahren VO Multi Temperatur
-102944;Beatmung ES G5 ProzentMinVol
-102946;Beatmung ES G5 Groeße
-102953;Nierenverfahren VO BM25 BlutflussMax
-102954;Nierenverfahren VO BM25 AbnahmeMax
-102955;Nierenverfahren VO BM25 Umsatz
-102956;Nierenverfahren VO BM25 Temperatur
-102965;Nierenverfahren VO ADM BlutflussMax
-102966;Nierenverfahren VO ADM effEntzug
-102967;Nierenverfahren VO ADM Austauschrate
-102968;Nierenverfahren VO ADM Temperatur
-102976;Nierenverfahren ES Multi Blutfluss
-102977;Nierenverfahren ES Multi Ultrafiltration
-102978;Nierenverfahren ES Multi Substituat
-102979;Nierenverfahren ES Multi SubstituatBolus
-102980;Nierenverfahren ES Multi Temperatur
-102990;Nierenverfahren ES BM25 Blutfluss
-102991;Nierenverfahren ES BM25 Abnahme
-102992;Nierenverfahren ES BM25 Umsatz
-102993;Nierenverfahren ES BM25 Temperatur
-103004;Nierenverfahren ES ADM Blutfluss
-103005;Nierenverfahren ES ADM effEntzug
-103006;Nierenverfahren ES ADM Austauschrate
-103007;Nierenverfahren ES ADM Temperatur
-103010;Nierenverfahren MS Multi artDruck
-103011;Nierenverfahren MS Multi venDruck
-103012;Nierenverfahren MS Multi TMPDruck
-103013;Nierenverfahren MS Multi DruckvorFilterDruck
-103014;Nierenverfahren MS Multi Bilanz
-103015;Nierenverfahren MS Multi SubvolumenKumulativ
-103016;Nierenverfahren MS Multi SubbolusvolumenKumulativ
-103017;Nierenverfahren MS Multi UFRBFRVerhaeltnis
-103018;Nierenverfahren MS Multi Behandlungszeit
-103019;Nierenverfahren MS BM25 artDruck
-103020;Nierenverfahren MS BM25 venDruck
-103021;Nierenverfahren MS BM25 TMPDruck
-103022;Nierenverfahren MS BM25 DruckvorFilter
-103023;Nierenverfahren MS BM25 Bilanz
-103024;Nierenverfahren MS BM25 UmsatzvolumenKumulativ
-103025;Nierenverfahren MS BM25 Behandlungszeit
-103026;Nierenverfahren MS ADM artDruck
-103027;Nierenverfahren MS ADM TMPDruck
-103028;Nierenverfahren MS ADM Bilanz
-103029;Nierenverfahren MS ADM AustauschKumulativ
-103030;Nierenverfahren MS ADM Behandlungszeit
-103031;Nierenverfahren MS ADM venDruck
-103032;Beatmung MS G5 Pplateau
-103033;Beatmung MS G5 Pmin
-103034;Beatmung MS G5 ExpMinVol
-103035;Beatmung MS G5 ftotal
-103036;Beatmung MS G5 fspontan
-103037;Beatmung MS G5 O2VolProzent
-103040;Beatmung MS G5 Pinsp
-103041;Beatmung MS G5 P01
-103042;Nierenverfahren VO Dialysatlösung
-103043;Nierenverfahren VO Multi Dialysat
-103045;Nierenverfahren VO BM25 Dialysat
-103049;Nierenverfahren MS Multi DialysatvolumenKumulativ
-103050;Nierenverfahren MS BM25 DialysatvolumenKumulativ
-103051;Nierenverfahren VO Citratloesung
-103052;Nierenverfahren VO Calciumloesung
-103053;Nierenverfahren VO Multi Citrat
-103054;Nierenverfahren VO Multi Calcium
-103055;Nierenverfahren ES Multi Calciumloesung
-103056;Nierenverfahren ES Multi Citratloesung
-103057;Nierenverfahren ES Multi CitratBlut
-103058;Nierenverfahren ES Multi CalciumFiltrat
-103059;Nierenverfahren MS Multi CitratvolumenKumulativ
-103060;Nierenverfahren MS Multi CalciumvolumenKumulativ
-103061;Nierenverfahren MS Multi Citratfluss
-103062;Nierenverfahren MS Multi Calciumfluss
-103063;Nierenverfahren VO MultiPlasmavolumen
-103064;Nierenverfahren VO BM25 Plasmavolumen
-103065;Nierenverfahren ES Multi Plasmavolumen
-103066;Nierenverfahren ES Multi Plasma
-103067;Nierenverfahren ES BM25 Plasmavolumen
-103068;Nierenverfahren ES BM25 Plasma
-103069;Nierenverfahren ES ADM Plasmavolumen
-103070;Nierenverfahren ES ADM PlasmaAustausch
-103071;Nierenverfahren MS Multi PlasmavolumenKumulativ
-103072;Nierenverfahren MS BM25 verabreichtesPlasma
-103073;Nierenverfahren MS ADM verabreichtesPlasma
-103074;Nierenverfahren VO BM25 Spueldauer
-103075;Nierenverfahren VO Spueldauer
-103076;Nierenverfahren VO ADM Spueldauer
-103077;Beatmung ES VisionA O2Konzentration
-103078;Beatmung MS VisionA Amplitude
-103079;Beatmung MS VisionA O2Konzentration
-103080;Beatmung ES VisionA Trigger
-103081;Beatmung ES VisionA ETS
-103082;Beatmung MS VisionA AFSpontan
-103083;Beatmung MS VisionA SpontanAMV
-103084;Beatmung MS VisionA Tidalvolumen
-103085;Nierenverfahren VO ADM Plasmavolumen
-103086;Beatmung ES F120 CPAP
-103087;Beatmung ES F120 Flow
-103088;Beatmung ES F120 O2Konzentration
-103091;Beatmung ES CF800 SauerstoffFlow
-103092;Beatmung ES CF800 DruckluftFlow
-103093;Beatmung ES CF800 O2Konzentration
-103094;Beatmung ES CF800 CPAP
-103095;Nierenverfahren Doku Dialysatlösung
-103097;Nierenverfahren Doku SpuellösungAntikoagulanz
-103098;Nierenverfahren MS Multi pFDruck
-103107;Nierenverfahren Doku Zugang
-103108;Nierenverfahren Doku Filter
-103109;Nierenverfahren Doku HFLoesung
-103110;Nierenverfahren Doku Option
-103111;Nierenverfahren Doku Antikoagulation
-103114;Nierenverfahren Doku Spueldauer
-103115;Nierenverfahren Doku FüllenMit
-103116;Nierenverfahren MS Bilanz
-103117;Nierenverfahren Doku AbschlussBeurteilung
-103118;Nierenverfahren Doku Abschlussbegruendung
-103121;Nierenverfahren Doku Calciumloesung
-103122;Nierenverfahren Doku Citratloesung
-103123;Nierenverfahren ES Multi Dialysat
-103124;Nierenverfahren ES BM25 Dialysat
-103125;Beatmung ES BiPAPV CPAP
-103126;Beatmung ES BiPAPV O2Konzentration
-103127;Beatmung MS BiPAPV AF
-103128;Beatmung MS BiPAPV CPAP
-103129;Beatmung MS BiPAPV AMV
-103130;Beatmung MS BiPAPV O2Konzentration
-103132;Beatmung MS BiPAPV Vt
-103133;Beatmung ES BiPAPV Inspirationszeit
-103134;Beatmung ES BiPAPV AF
-103135;Nierenverfahren VO Bolus
-103136;Nierenverfahren Doku Bolus
-103139;Beatmung ES VisionA PEEPCPAP
-103142;Beatmung MS VisionA PEEP
-103143;Nierenverfahren VO Plasmaloesung
-103145;Nierenverfahren Doku Plasmalösung
-103146;Nierenverfahren ES 4008HS DialyseZeit
-103147;Nierenverfahren ES 4008HS UFZiel
-103148;Nierenverfahren ES 4008HS UFRate
-103149;Nierenverfahren ES 4008HS IsoUFZiel
-103150;Nierenverfahren ES 4008HS IsoUFZeit 
-103151;Nierenverfahren ES 4008HS IsoUFRate
-103152;Nierenverfahren ES 4008HS Blutfluss
-103153;Nierenverfahren ES 4008HS BlutflussSNPumpe
-103154;Beatmung Doku NIV Applikationsform
-103155;Nierenverfahren ES 4008HS NaProfil
-103156;Nierenverfahren ES 4008HS StartNa
-103157;Nierenverfahren ES 4008HS BasisNa
-103158;Nierenverfahren ES 4008HS SollNa
-103159;Nierenverfahren ES 4008HS UFProfil
-103160;Nierenverfahren ES 4008HS Bicarbonat
-103161;Nierenverfahren ES 4008HS Temperatur
-103162;Nierenverfahren ES 4008HS Fluss
-103163;Nierenverfahren MS 4008HS artDruck
-103164;Nierenverfahren MS 4008HS venDruck
-103165;Nierenverfahren MS 4008HS TMP
-103166;Nierenverfahren MS 4008HS Restzeit
-103167;Nierenverfahren MS 4008HS SollNatrium
-103168;Nierenverfahren MS 4008HS Leitfähigkeit
-103169;Nierenverfahren MS 4008HS effBlutfluss
-103170;Nierenverfahren MS 4008HS BlutvolumenKum
-103171;Nierenverfahren MS 4008HS ISOUFVolumenKum
-103172;Nierenverfahren Doku Dialysekonzentrat
-103174;Nierenvwerfahren ES 4008onl Dialysezeit
-103175;Nierenverfahren ES 4008onl UFZiel
-103176;Nierenverfahren ES 4008onl UFRate
-103177;Nierenverfahren ES 4008onl ISOUFZiel
-103178;Nierenverfahren ES 4008onl ISOUFZeit
-103179;Nierenverfahren ES 4008onl ISOUFRate
-103180;Nierenverfahren ES 4008onl Blutfluss
-103181;Nierenverfahren ES 4008onl BlutflussSNPumpe
-103182;Nierenverfahren ES 4008onl Substituat
-103183;Nierenverfahren ES 4008onl Substituatbolus
-103184;Nierenverfahren ES 4008onl Substituatrate
-103185;Nierenverfahren ES 4008onl UFProfil
-103186;Nierenverfahren ES 4008onl NaProfil
-103188;Nierenverfahren ES 4008onl StartNa
-103189;Nierenverfahren ES 4008onl BasisNa
-103190;Nierenverfahren ES 4008onl SollNa
-103191;Nierenverfahren ES 4008onl Bicarbonat
-103192;Nierenverfahren ES 4008onl Temperatur
-103193;Nierenverfahren ES 4008onl Fluss
-103194;Nierenverfahren MS 4008onl artDruck
-103195;Nierenverfahren MS 4008onl venDruck
-103196;Nierenverfahren MS 4008onl TMP
-103197;Nierenverfahren MS 4008onl Restzeit
-103198;Nierenverfahren MS 4008onl SollNa
-103199;Nierenverfahren MS 4008onl Leitfähigkeit
-103200;Nierenverfahren MS 4008onl effBlutfluss
-103201;Nierenverfahren MS 4008onl BlutvolumenKumulativ
-103202;Nierenverfahren MS 4008onl IsoUFVolumenKumulativ
-103203;Nierenverfahren MS 4008onl SubtvolumenKumulativ
-103204;Nierenverfahren MS 4008onl SubtbolusvolKumulativ
-103205;Nierenverfahren ES 4008onl Dialysezeit
-103206;Nierenverfahren MS UltrafiltratmengeKum
-103209;Beatmung ES 3100B BiasFlow
-103210;Beatmung ES 3100B Frequenz
-103211;Beatmung ES 3100B Inspirationszeit
-103212;Beatmung ES 3100B Leistung
-103213;Beatmung ES 3100B Mitteldruck
-103214;Beatmung ES 3100B O2Konzentration
-103215;Beatmung MS 3100B Amplitude
-103216;Beatmung MS 3100B O2Konzentration
-103218;Nierenverfahren VO 4008onl Dialysezeit
-103219;Nierenverfahren VO 4008onl UFZiel
-103220;Nierenverfahren VO 4008onl Blutfluss
-103221;Nierenverfahren VO 4008onl UFProfil
-103222;Nierenverfahren VO 4008onl StartNatrium
-103224;Nierenverfahren VO 4008onl Dialysekonzentrat
-103226;Nierenverfahren VO 4008onl SollNatrium
-103227;Nierenverfahren VO 4008onl Bicarbonat
-103228;Nierenverfahren VO 4008onl NatriumProfil
-103229;Nierenverfahren VO 4008onl Temperatur
-103230;Nierenverfahren VO 4008onl Fluss
-103231;Nierenverfahren VO 4008onl Substituat
-103232;Nierenverfahren VO 4008onl Substituatbolus
-103233;Nierenverfahren VO 4008onl ISOUFZiel
-103234;Nierenverfahren VO 4008onl ISOUFZeit
-103235;Nierenverfahren VO 4008onl BlutflussSNPumpe
-103237;Nierenverfahren VO 4008HS UFZiel
-103238;Nierenverfahren VO 4008HS BlutflussMax
-103239;Nierenverfahren VO 4008HS UFProfil
-103240;Nierenverfahren VO 4008HS NaProfil
-103241;Patient Nierenverfahren VO 4008HS StartNatrium
-103242;Nierenverfahren VO 4008HS SollNatrium
-103243;Nierenverfahren VO 4008HS Bicarbonat
-103244;Nierenverfahren VO 4008HS Temperatur
-103245;Nierenverfahren VO 4008HS Fluss
-103246;Nierenverfahren VO 4008HS BlutflussSNPumpe
-103247;Nierenverfahren VO 4008HS ISOUFZiel
-103248;Nierenverfahren VO 4008HS ISOUFZeit
-103250;Nierenverfahren VO Dialysekonzentrat
-103253;Nierenverfahren VO 4008HS StartNatrium
-103254;Nierenverfahren VO 4008HS Dialysezeit
-103255;Beatmung ES VisionA Vt
-103256;Beatmung ES VisionA Peakflow
-103257;Beatmung ES VisionA Frequenz
-103258;Beatmung ES VisionA ApneaRate
-103259;Beatmung ES VisionA Plateau
-103260;Beatmung ES VisionA Ti
-103261;Beatmung ES VisionA DeltaP
-103262;Beatmung MS VisionA Plateau
-103264;Beatmung MS VisionA AMVtotal
-103265;Beatmung MS VisionA BreathRate
-103266;Beatmung MS VisionA IEVerhaeltnis
-103267;Beatmung ES Evita2 O2Konzentration
-103268;Beatmung ES Evita2 InspFlow
-103269;Beatmung ES Evita2 Frequenz
-103270;Beatmung ES Evita2 VerhaeltnisTiTe
-103271;Beatmung ES Evita2 Anstiegszeit
-103272;Beatmung ES Evita2 Vt
-103273;Beatmung ES Evita2 Pmax
-103274;Beatmung ES Evita2 Frequenzimv
-103275;Beatmung ES Evita2 PEEP
-103276;Beatmung ES Evita2 CPAP
-103277;Beatmung ES Evita2 ASB
-103278;Beatmung ES Evita2 Pinsp
-103279;Beatmung ES Evita2 Flowtrigger
-103280;Beatmung MS Evita2 AMV
-103281;Beatmung MS Evita2 O2Konzentration
-103282;Beatmung MS Evita2 Pmax
-103283;Beatmung MS Evita2 Pplat
-103284;Beatmung MS Evita2 Ppeep
-103285;Beatmung MS Evita2 Pmittel
-103286;Beatmung MS Evita2 Vte
-103287;Beatmung MS Evita2 frequenz
-103288;Beatmung MS Evita2 Resistance
-103289;Beatmung MS Evita2 Compliance
-103290;Beatmung MS Evita2 MVspon
-103291;Beatmung MS Evita2 frequenzspon
-103292;Beatmung MS Evita2 CPAP
-103293;Beatmung MS Evita2 Pmin
-103294;Beatmung MS Evita2 IntrinsicPEEP
-103295;Beatmung MS Evita2 OkklusionsdruckP01
-103296;Beatmung ES Evita4 O2Konzentration
-103297;Beatmung ES Evita4 Tinsp
-103298;Beatmung ES Evita4 frequenz
-103299;Beatmung ES Evita4 Rampe
-103300;Beatmung ES Evita4 Pinsp
-103301;Beatmung ES Evita4 PEEP
-103302;Beatmung ES Evita4 ASB
-103303;Beatmung ES Evita4 Flowtrigger
-103304;Beatmung ES Evita4 Vt
-103305;Beatmung ES Evita4 VtApnoe
-103306;Beatmung ES Evita4 fApnoe
-103307;Beatmung ES Evita4 Tubuskompensation
-103308;Beatmung ES Evita4 FlowAssist
-103309;Beatmung ES Evita4 VolAssist
-103310;Beatmung ES Evita4 Thoch
-103311;Beatmung ES Evita4 Ttief
-103312;Beatmung ES Evita4 Phoch
-103313;Beatmung ES Evita4 Ptief
-103314;Beatmung MS Evita4 FiO2
-103315;Beatmung MS Evita4 Ppeak
-103316;Beatmung MS Evita4 Pplat
-103317;Beatmung MS Evita4 Pmean
-103318;Beatmung MS Evita4 PEEP
-103319;Beatmung MS Evita4 Pmin
-103320;Beatmung MS Evita4 MV
-103321;Beatmung MS Evita4 MVspn
-103322;Beatmung MS Evita4 Mvleck
-103323;Beatmung MS Evita4 frequenz
-103324;Beatmung MS Evita4 fspn
-103325;Beatmung MS Evita4 fmand
-103326;Beatmung MS Evita4 Vte
-103327;Beatmung MS Evita4 Vt
-103328;Beatmung MS Evita4 Resistance
-103329;Beatmung MS Evita4 Compliance
-103330;Beatmung MS Evita4 PEEPi
-103331;Beatmung MS Evita4 Vtrap
-103332;Beatmung MS Evita4 P01
-103333;Beatmung ES G5 Vt
-103334;Beatmung ES G5 Pmax
-103335;Nierenverfahren VO ZielKalium
-103336;Nierenverfahren ES GeräteDesinfektion
-103338;Nierenverfahren MS BM25 AbnahmeKumulativ
+102848;Score Braden
+102858;CPAPcmH2O
+102859;ISOUFZeit
+102860;CPAPcmH2O
+102861;MS BiPAPV Pimax
+102862;MS BiPAPV IPAP
+102863;MS BiPAPV EPAP
+102864;MS BiPAPV TiTtot
+102865;MS BiPAPV 
+102866;MS BiPAPV Gesamtleckage
+102867;MS BiPAPV enTrigger
+102868;BiPAPV IPAP
+102869;BiPAPV EPAP
+102870;BiPAPV IPAPAnstiegszeit
+102871;Fuellen
+102872;Oszillationsfrequenz
+102873;MAP
+102874;Schlagvolumen
+102876;HFOBaseFlow
+102877;SISetting
+102878;MS MAP
+102880;MS SISetting
+102881;MS HFOBaseFlow
+102882;Schlauchsystem
+102883;PS
+102884;RiseTime
+102885;MS PIP
+102886;G5 Timax
+102887;G5 Ti
+102888;G5 Thoch
+102889;G5 Plateau
+102890;G5 Phoch
+102891;G5 Pkontrol
+102892;G5 Psupport
+102893;G5 PeepCPAP
+102894;G5 Ttief
+102895;G5 
+102897;Dialysatfiltrate
+102898;G5 
+102899;MS G5 Ppeak
+102900;MS G5 Pmittel
+102901;MS G5 PeepCPAP
+102902;MS G5 VTE
+102903;MS G5 InspFlow
+102904;MS G5 TI
+102905;MS G5 Rinsp
+102906;MS G5 R
+102907;MS G5 Cstat
+102908;MS G5 RCinsp
+102909;MS G5 RC
+102910;MS G5 RSB
+102911;MS G5 WOBimp
+102912;MS G5 
+102913;MS G5 PTP
+102914;MS G5 VLeckage
+102915;MS G5 ExspFlow
+102916;MS G5 TE
+102919;Doku Dialysekonzentrat
+102921;Dialysekonzentrat
+102922;SauerstoffVolG5
+102923;O2VolG5
+102926;MS G5 
+102927;Zugang
+102928;Filter
+102929;HFLoesung
+102931;G5 ETS
+102932;Antikoagulanz
+102933;ulanz
+102934;Füllen
+102935;G5 Druckrampe
+102937;BlutflussMax
+102938;G5 Frequenz
+102939;UltrafiltrationMax
+102940;Substituat
+102941;SubstituatBolus
+102942;G5 Sauerstoff
+102943;Temperatur
+102944;G5 ProzentMinVol
+102946;G5 Groeße
+102953;BM25 BlutflussMax
+102954;BM25 AbnahmeMax
+102955;BM25 Umsatz
+102956;BM25 Temperatur
+102965;ADM BlutflussMax
+102966;ADM effEntzug
+102967;ADM Austauschrate
+102968;ADM Temperatur
+102976;Blutfluss
+102977;Ultrafiltration
+102978;Substituat
+102979;SubstituatBolus
+102980;Temperatur
+102990;BM25 Blutfluss
+102991;BM25 Abnahme
+102992;BM25 Umsatz
+102993;BM25 Temperatur
+103004;ADM Blutfluss
+103005;ADM effEntzug
+103006;ADM Austauschrate
+103007;ADM Temperatur
+103010;MS artDruck
+103011;MS venDruck
+103012;MS Druck
+103014;MS Bilanz
+103015;MS SubvolumenKumulativ
+103016;MS SubbolusvolumenKumulativ
+103017;MS UFRBFR
+103018;MS Behandlungszeit
+103019;MS BM25 artDruck
+103020;MS BM25 venDruck
+103021;MS BM25 Druck
+103022;MS BM25 DruckvorFilter
+103023;MS BM25 Bilanz
+103024;MS BM25 UmsatzvolumenKumulativ
+103025;MS BM25 Behandlungszeit
+103026;MS ADM artDruck
+103027;MS ADM Druck
+103028;MS ADM Bilanz
+103029;MS ADM AustauschKumulativ
+103030;MS ADM Behandlungszeit
+103031;MS ADM venDruck
+103032;MS G5 Pplateau
+103033;MS G5 Pmin
+103034;MS G5 ExpMinVol
+103035;MS G5 ftotal
+103036;MS G5 fan
+103037;MS G5 O2VolProzent
+103040;MS G5 Pinsp
+103041;MS G5 P01
+103042;Dialysatlösung
+103043;Dialysat
+103045;BM25 Dialysat
+103049;MS DialysatvolumenKumulativ
+103050;MS BM25 DialysatvolumenKumulativ
+103051;Citratloesung
+103052;Calciuoesung
+103053;Citrat
+103054;Calcium
+103055;Calciuoesung
+103056;Citratloesung
+103057;CitratBlut
+103058;CalciumFiltrat
+103059;MS CitratvolumenKumulativ
+103060;MS CalciumvolumenKumulativ
+103061;MS Citratfluss
+103062;MS Calciumfluss
+103063;Plasmavolumen
+103064;BM25 Plasmavolumen
+103065;Plasmavolumen
+103066;Plasma
+103067;BM25 Plasmavolumen
+103068;BM25 Plasma
+103069;ADM Plasmavolumen
+103070;ADM PlasmaAustausch
+103071;MS PlasmavolumenKumulativ
+103072;MS BM25 verabreichtesPlasma
+103073;MS ADM verabreichtesPlasma
+103074;BM25 Spueldauer
+103075;Spueldauer
+103076;ADM Spueldauer
+103077;O2Konzentration
+103078;MS Amplitude
+103079;MS O2Konzentration
+103080;Trigger
+103081;ETS
+103082;MS AFSpontan
+103083;MS SpontanAMV
+103084;MS Tidalvolumen
+103085;ADM Plasmavolumen
+103086;F120 CPAP
+103087;F120 Flow
+103088;F120 O2Konzentration
+103090;Filter
+103091;CF800 SauerstoffFlow
+103092;CF800 DruckluftFlow
+103093;CF800 O2Konzentration
+103094;CF800 CPAP
+103095;Doku Dialysatlösung
+103097;Doku SpuellösungAntikoagulanz
+103098;MS pFDruck
+103107;Doku Zugang
+103108;Doku Filter
+103109;Doku HFLoesung
+103110;Doku 
+103111;Doku Antikoagulation
+103114;Doku Spueldauer
+103115;Doku Füllen
+103116;MS Bilanz
+103117;Doku 
+103118;Doku Abschlussbedung
+103121;Doku Calciuoesung
+103122;Doku Citratloesung
+103123;Dialysat
+103124;BM25 Dialysat
+103125;BiPAPV CPAP
+103126;BiPAPV O2Konzentration
+103127;MS BiPAPV AF
+103128;MS BiPAPV CPAP
+103129;MS BiPAPV AMV
+103130;MS BiPAPV O2Konzentration
+103132;MS BiPAPV 
+103133;BiPAPV Inspirationszeit
+103134;BiPAPV AF
+103135;Bolus
+103136;Doku Bolus
+103139;PEEPCPAP
+103142;MS PEEP
+103143;Plasmaloesung
+103145;Doku Plasmalösung
+103146;DialyseZeit
+103147;UFZiel
+103148;UFRate
+103150;IsoUFZeit 
+103151;IsoUFRate
+103152;Blutfluss
+103154;Doku NIV Applikationsform
+103155;NaProfil
+103156;StartNa
+103157;BasisNa
+103158;Na
+103159;UFProfil
+103160;Bicarbonat
+103161;Temperatur
+103162;Fluss
+103163;MS artDruck
+103164;MS venDruck
+103166;MS Restzeit
+103167;MS Natrium
+103168;MS Leitfähigkeit
+103169;MS effBlutfluss
+103170;MS BlutvolumenKum
+103171;MS ISOUFKum
+103172;Doku Dialysekonzentrat
+103174;Nierenvwerfahren Dialysezeit
+103175;UFZiel
+103176;UFRate
+103177;ISOUFZiel
+103178;ISOUFZeit
+103179;ISOUFRate
+103180;Blutfluss
+103182;Substituat
+103183;Substituatbolus
+103184;Substituatrate
+103185;UFProfil
+103186;NaProfil
+103188;StartNa
+103189;BasisNa
+103190;Na
+103191;Bicarbonat
+103192;Temperatur
+103193;Fluss
+103194;MS artDruck
+103195;MS venDruck
+103197;MS Restzeit
+103198;MS Na
+103199;MS Leitfähigkeit
+103200;MS effBlutfluss
+103201;MS BlutvolumenKumulativ
+103203;MS SubtvolumenKumulativ
+103204;MS SubtbolusvolKumulativ
+103205;Dialysezeit
+103206;MS UltrafiltratmengeKum
+103209;BiasFlow
+103210;Frequenz
+103211;Inspirationszeit
+103212;Leistung
+103213;teldruck
+103214;O2Konzentration
+103215;MS Amplitude
+103216;MS O2Konzentration
+103218;Dialysezeit
+103219;UFZiel
+103220;Blutfluss
+103221;UFProfil
+103222;StartNatrium
+103224;Dialysekonzentrat
+103226;Natrium
+103227;Bicarbonat
+103228;NatriumProfil
+103229;Temperatur
+103230;Fluss
+103231;Substituat
+103232;Substituatbolus
+103233;ISOUFZiel
+103234;ISOUFZeit
+103237;UFZiel
+103238;BlutflussMax
+103239;UFProfil
+103240;NaProfil
+103241;StartNatrium
+103242;Natrium
+103243;Bicarbonat
+103244;Temperatur
+103245;Fluss
+103247;ISOUFZiel
+103248;ISOUFZeit
+103250;Dialysekonzentrat
+103253;StartNatrium
+103254;Dialysezeit
+103256;Peakflow
+103257;Frequenz
+103258;ApneaRate
+103259;Plateau
+103260;Ti
+103261;DeltaP
+103262;MS Plateau
+103264;MS AMotal
+103265;MS BreathRate
+103267;O2Konzentration
+103268;InspFlow
+103269;Frequenz
+103271;Anstiegszeit
+103273;Pmax
+103274;Frequenzimv
+103275;PEEP
+103276;CPAP
+103277;ASB
+103278;Pinsp
+103279;Flowtrigger
+103280;MS AMV
+103281;MS O2Konzentration
+103282;MS Pmax
+103283;MS Pplat
+103284;MS Ppeep
+103285;MS Pmittel
+103287;MS frequenz
+103288;MS Resistance
+103289;MS Compliance
+103290;MS MVspon
+103291;MS frequenzspon
+103292;MS CPAP
+103293;MS Pmin
+103294;MS IntrinsicPEEP
+103295;MS OkklusionsdruckP01
+103296;O2Konzentration
+103297;Tinsp
+103298;frequenz
+103299;Rampe
+103300;Pinsp
+103301;PEEP
+103302;ASB
+103303;Flowtrigger
+103305;Apnoe
+103306;fApnoe
+103307;Tubuskompensation
+103308;FlowAssist
+103309;VolAssist
+103310;Thoch
+103311;Ttief
+103312;Phoch
+103314;MS FiO2
+103315;MS Ppeak
+103316;MS Pplat
+103317;MS Pmean
+103318;MS PEEP
+103319;MS Pmin
+103320;MS MV
+103321;MS MVspn
+103322;MS Mvleck
+103323;MS frequenz
+103324;MS fspn
+103325;MS fmand
+103328;MS Resistance
+103329;MS Compliance
+103330;MS PEEPi
+103331;MS rap
+103332;MS P01
+103333;G5 
+103334;G5 Pmax
+103335;ZielKalium
+103336;eDesinfektion
+103338;MS BM25 AbnahmeKumulativ
 103339;IABP Doku Ballonkatheter
 103340;IABP Doku Ballonvolumen
-103341;IABP ACAT ES Triggerauswahl
-103343;IABP ACAT ES Unterstützungsdruck
-103344;IABP ACAT ES EKGAbleitung
-103347;IABP ACAT ES Inflation
-103348;IABP ACAT ES Deflation
-103349;IABP AutoCat ES Modus
-103350;IABP AutoCat ES Triggerauswahl
-103352;IABP AutoCat ES Unterstützungsdruck
-103353;IABP AutoCat ES EKGAbleitung
-103356;IABP AutoCat ES Arrhythmietiming
-103357;IABP AutoCat ES Inflation
-103358;IABP AutoCat ES Deflation
-103359;IABP Datascope ES Triggerauswahl
-103361;IABP Datascope ES Unterstützungsdruck
-103365;IABP Datascope ES IABPAufblasen
-103366;IABP Datascope ES IABPLeersaugen
-103367;IABP Datascope ES EKGAbleitung
+103341;IABP ACAT Triggerauswahl
+103343;IABP ACAT Unterstützungsdruck
+103344;IABP ACAT EKGAbleitung
+103347;IABP ACAT Inflation
+103348;IABP ACAT Deflation
+103349;IABP Modus
+103350;IABP Triggerauswahl
+103352;IABP Unterstützungsdruck
+103353;IABP EKGAbleitung
+103356;IABP Arrhythmietiming
+103357;IABP Inflation
+103358;IABP Deflation
+103359;IABP Datascope Triggerauswahl
+103361;IABP Datascope Unterstützungsdruck
+103365;IABP Datascope
+103366;IABP Datascope IABPLeersaugen
+103367;IABP Datascope EKGAbleitung
 103368;IABP ACAT MS SystoleDiastole
-103369;IABP ACAT MS Mitteldruck
-103370;IABP AutoCat MS SystoleDiastole
-103371;IABP AutoCat MS Mitteldruck
+103369;IABP ACAT MS teldruck
+103370;IABP MS SystoleDiastole
+103371;IABP MS teldruck
 103372;IABP Datascope MS SystoleDiastole
-103373;IABP Datascope MS Mitteldruck
-103403;Beatmung ES G5 Drucktrigger
-103404;Beatmung ES G5 Flowtrigger
-103406;IABP Geraet Doku
-103407;Beatmung ES Avea Frequenz
-103408;Beatmung ES Avea Volumen
-103409;Beatmung ES Avea PeakFlow
-103410;Beatmung ES Avea InspPause
-103411;Beatmung ES Avea PEEP
-103412;Beatmung ES Avea FlowTrigger
-103413;Beatmung ES Avea FiO2
-103414;Beatmung ES Avea InspDruck
-103415;Beatmung ES Avea InspZeit
-103416;Beatmung ES Avea PSV
-103417;Beatmung ES Avea ZeitHoch
-103418;Beatmung ES Avea ZeitNiedrig
-103419;Beatmung ES Avea DruckHoch
-103420;Beatmung ES Avea DruckNiedrig
-103421;Beatmung MS Avea Vte
-103422;Beatmung MS Avea PIP
-103423;Beatmung MS Avea Ve
-103424;Beatmung MS Avea Ti
-103425;Beatmung MS Avea PEEP
-103426;Beatmung MS Avea IE
-103427;Beatmung MS Avea Te
-103428;Beatmung MS Avea fVt
-103429;Beatmung MS Avea Mitteldruck
-103430;Beatmung MS Avea Frequenz
-103431;Beatmung MS Avea MandVte
-103432;Beatmung MS Avea SpontVte
-103433;Beatmung MS Avea Vti
-103434;Beatmung MS Avea SpontVe
-103435;Beatmung MS Avea SpontAF
-103436;Beatmung MS Avea MandAF
-103438;Beatmung MS Avea Pplat
-103439;Beatmung MS Avea FiO2
-103440;Beatmung MS Avea Cstat
-103441;Beatmung MS Avea WOBp
-103442;Beatmung MS Avea WOBi
-103443;Beatmung MS Avea AutoPEEP
-103458;Score DGAI AufnBeatmungsstundenbiszurAufnahme
+103373;IABP Datascope MS teldruck
+103374;Doku Modus
+103375;Doku Art
+103376;Doku Drähte
+103380;Eins RAPFrequenz
+103381;Eins Frequenz
+103382;Eins Ausgang
+103383;Eins Empfindlichkeit
+103386;Frequenz
+103387;Ausgang
+103388;Empfindlichkeit
+103389;Basisfrequenz
+103390;FrequenzMax
+103391;AusgangA
+103392;AusgangV
+103393;EmpfindlichkeitA
+103394;EmpfindlichkeitV
+103395;VentrikelintervallAV
+103396;ÜberstimulationsFreq
+103397;Siemens Frequenz
+103398;Siemens Empfindlichkeit
+103399;Defi Frequenz
+103400;Defi Empfindlichkeit
+103401;Siemens Ausgang
+103402;Defi Ausgang
+103403;G5 Drucktrigger
+103404;G5 Flowtrigger
+103406;IABP Doku
+103407;Frequenz
+103409;PeakFlow
+103410;InspPause
+103411;PEEP
+103412;FlowTrigger
+103413;FiO2
+103414;InspDruck
+103416;PSV
+103417;ZeitHoch
+103418;ZeitNiedrig
+103419;DruckHoch
+103420;DruckNiedrig
+103422;MS PIP
+103423;MS Ve
+103424;MS Ti
+103425;MS PEEP
+103427;MS Te
+103429;MS teldruck
+103430;MS Frequenz
+103431;MS Mande
+103432;MS Sponte
+103433;MS i
+103434;MS SpontVe
+103435;MS SpontAF
+103436;MS MandAF
+103438;MS Pplat
+103439;MS FiO2
+103440;MS Cstat
+103441;MS WOBp
+103442;MS WOBi
+103443;MS AutoPEEP
+103444;Score DGAI
+103458;Score DGAI
 103462;Score DGAI EntlDatum
 103463;Score DGAI EntlZeit
+103464;Score DGAI EntlArzt
 103492;Score DGAI EntlPostVisiteDatum
-103504;Score DGAI AufnChronischeAIDS
-103506;Score DGAI AufnChronischeHaematologischeNeoplasie
-103507;Score DGAI AufnChronischeMetastasierenNeoplasie
-103508;Score DGAI AufnIndikationBeatmungsfall
-103509;Score DGAI AufnIndikationIntensivBehandlung
-103510;Score DGAI AufnIndikationIntensivUeberwachung
-103511;Score DGAI AufnIndikationSchwerstkrankerPatient
-103512;Score DGAI AufnVonIntensivstationWachstation
+103504;Score DGAI AufnChronischeAS
+103506;Score DGAI
+103507;Score DGAI
+103508;Score DGAI AufnIndikationsfall
+103509;Score DGAI
+103510;Score DGAI
+103511;Score DGAI
+103512;Score DGAI
 103513;Score DGAI AufnNachOperation
 103514;Score DGAI AufnTraumaPolytrauma
-103515;Score DGAI AufnVonExterneKlinik
+103515;Score DGAI AufnVonExterne
 103516;Score DGAI AufnVonNotaufnahmeNAW
 103517;Score DGAI AufnVonOPAWR
-103518;Score DGAI AufnVonPeriphererStation
+103518;Score DGAI
 103519;Score DGAI AufnWiederaufnahmeGroesser48h
 103520;Score DGAI AufnWiederaufnahmeKleiner48h
 103521;Score DGAI EntlInfoANV
 103522;Score DGAI EntlInfoARDSALI
-103523;Score DGAI EntlInfoBarthelIndexErhoben
+103523;Score DGAI
 103524;Score DGAI EntlInfoECMOILA
-103525;Score DGAI EntlInfoESBL
+103525;Score DGAI EntlInfoBL
 103526;Score DGAI EntlInfoHFOV
-103527;Score DGAI EntlInfoMaximaleTherapieAufStation
+103527;Score DGAI
 103528;Score DGAI EntlInfoMODMOV
 103529;Score DGAI EntlInfoMRSA
 103530;Score DGAI EntlInfoNET
@@ -1123,1119 +1181,1134 @@
 103533;Score DGAI EntlInfoSepsis
 103534;Score DGAI EntlInfoTherapieMinima
 103535;Score DGAI EntlInfoVRE
-103536;Score DGAI EntlNachAndereIntensivstation
+103536;Score DGAI
 103537;Score DGAI EntlNachExterneNormalklinik
-103538;Score DGAI EntlNachExterneSpezialklinik
+103538;Score DGAI
 103539;Score DGAI EntlNachHause
+103540;Score DGAI
 103541;Score DGAI EntlNachNormalstation
 103542;Score DGAI EntlNachWachstation
-103543;Score DGAI EntlPostVisiteBeeintraechtigungDauerhaf
-103544;Score DGAI EntlPostVisiteBeeintraechtigungPassager
-103545;Score DGAI EntlPostVisiteExitusImKrankenhaus
-103546;Score DGAI EntlPostVisiteKeineDurchgefuehrt
+103543;Score DGAI
+103544;Score DGAI
+103545;Score DGAI
+103546;Score DGAI EntlPostVisiteDurchgefuehrt
 103547;Score DGAI EntlPostVisiteRestitutioAdIntegrum
 103548;Score DGAI EntlZustandExitus
 103549;Score DGAI EntlZustandGeringBeeintraechtigungDauer
-103550;Score DGAI EntlZustandGeringBeeintraechtigungPassa
-103551;Score DGAI EntlZustandRestitutioAdIntegrum
+103550;Score DGAI
+103551;Score DGAI
 103552;Score DGAI EntlZustandUeberlebenErheblicherDefekt
 103553;Score DGAI AufnGeplantChirurgisch
-103554;Score DGAI AufnUngeplantChirurgisch
+103554;Score DGAI
 103555;Score DGAI AufnMedizinisch
-103556;Score DGAI AufnASA1
-103557;Score DGAI AufnASA2
-103558;Score DGAI AufnASA3
-103559;Score DGAI AufnASA4
-103560;Score DGAI AufnASA5
+103556;Score DGAI
+103557;Score DGAI
+103558;Score DGAI
+103559;Score DGAI
+103560;Score DGAI
 103561;Score DGAI AufnBeatmet
-103562;Score DGAI EntlPostVisiteUeberlebenErheblicherDefe
+103562;Score DGAI
 103563;PCWP
-103567;IABPneu Datascope ES IABPFrequenz
-103568;IABP ACAT ES Unterstuetzungsverhaeltnis
-103571;IABP AutoCat ES Unterstützungsverhältnis
-103572;IABP Datascope ES IABPFrequenz
-103573;IABP Abiomed Impella Spuelloesung
-103574;IABP Abiomed Impella Zugang
-103575;IABP Abiomed Impella PurgeFR
-103576;IABP Abiomed Impella Flow
-103577;IABP Abiomed Impella Leistungsstufe
-103578;IABP Abiomed Impella LVDruck
-103586;Lungenersatzverfahren MS ECMO ACT
-103587;Lungenersatzverfahren VO Zugang
-103588;Lungenersatzverfahren Kathetertyp
-103589;Lungenersatzverfahren ECMO Oxygenator
-103590;Lungenersatzverfahren Schlauchsystem
-103591;Patient Allergie
-103592;Patient Allergie Zusatz
-103595;Patient Besonderheit
-103598;Patient Infektion
-103622;Lungenersatzverfahren Doku Zugang
-103623;Lungenersatzverfahren Doku Schlauchsystem
-103624;Lungenersatzverfahren Doku Kathetertyp
+103564;Doku Reizschwelle
+103565;Doku Wahrnehmung
+103567;IABP Datascope IABPFrequenz
+103568;IABP ACAT
+103571;IABP Unterstützungsverhältnis
+103572;IABP Datascope IABPFrequenz
+103573;IABP Abiomed Spuelloesung
+103574;IABP Abiomed Zugang
+103575;IABP Abiomed PurgeFR
+103576;IABP Abiomed Flow
+103577;IABP Abiomed Leistungsstufe
+103578;IABP Abiomed LVDruck
+103586;MS ECMO ACT
+103587;Zugang
+103588;Kathetertyp
+103589;ECMO Oxygenator
+103590;Schlauchsystem
+103592;Zusatz
+103595;Besonderheit
+103598;Infektion
+103622;Doku Zugang
+103623;Doku Schlauchsystem
+103624;Doku Kathetertyp
 103630;Lungenerstazverfahren Doku ECMO Oxygenator
-103636;SonstVerfahren VO Hypothermiegerät Zieltemperatur
-103637;SonstVerfahren VO Hypothermiegerä Kuehlrate
-103640;SonstVerfahren VO Hypothermiegerät Kuehlverfahren
-103641;SonstVerfahren VO Hypothermiegerät Kathetertyp
-103661;NeurochirurgischeMessungen Platzhalter
-103686;Hypothermie Coolgard VO Rate
-103687;Hypothermie Coolgard VO Zieltemperatur
-103688;Hypothermie Coolgard VO Behandlungsmodi
-103689;Hypothermie ArticSun VO KuehlWaermeRate
-103690;Hypothermie ArticSun VO Zieltemperatur
-103691;Hypothermie VO Kuehlverfahren
-103692;Hypothermie VO Gerät
-103693;Hypothermie Coolgard Doku Patiententemperatur
+103636;Hypothermiegerät Zieltemperatur
+103637;Hypothermiegerä Kuehlrate
+103640;Hypothermiegerät Kuehlverfahren
+103641;Hypothermiegerät Kathetertyp
+103646;internerPacer
+103661;Neurochirurgischeen
+103686;Hypothermie Coolgard Rate
+103687;Hypothermie Coolgard Zieltemperatur
+103688;Hypothermie Coolgard
+103689;Hypothermie ArticSun KuehlWaermeRate
+103690;Hypothermie ArticSun Zieltemperatur
+103691;Hypothermie Kuehlverfahren
+103692;Hypothermie
+103693;Hypothermie Coolgard Doku entemperatur
 103694;Hypothermie Coolgard Doku-Rate
 103695;Hypothermie Coolgard Doku Zieltemperatur
-103696;Hypothemie Coolgard Doku Behandlungsmodi
+103696;Hypothemie Coolgard Doku
 103697;Hypothermie ArticSun Doku KuehlWaermerate
 103698;Hypothermie ArticSun Doku Zieltemperatur
-103702;Hypothermie ArticSun Doku Patiententemperatur
-103707;Patient Antikoerper
-103708;Patient Spezifitaet
-103709;Patient GekreuzteEKs
-103710;Patient BlutKreuzprobe Datum
-103711;Patient BlutKreuzprobe Arzt
-103712;Patient Kreuzprobe Besonderheit
+103699;Hypothermie Doku Kühlverfahren
+103700;Hypothermie Doku Kathetertyp-
+103701;Hypothermie Doku
+103702;Hypothermie ArticSun Doku entemperatur
+103707;Antikoerper
+103708;Spezifitaet
+103709;GekreuzteEKs
+103710;BlutKreuzbe Datum
+103711;BlutKreuzbe Arzt
+103712;Kreuzbe Besonderheit
 103715;TempPBT
 103716;TempBT
-103717;IABP DatascopeCS100 ES Triggerauswahl
-103718;IABP DatascopeCS100 ES IABPFrequenz
-103720;IABP DatascopeCS100 ES Unterstützungsdruck
-103721;IABP DatascopeCS100 ES EKGAbleitung
-103722;IABP DatascopeCS100 ES IABPAufblasen
-103723;IABP DatascopeCS100 ES IABPLeersaugen
-103724;IABP DatascopeCS100 MS SystoleMittelDiastole
-103731;Lungenersatzverfahren Doku Temperatur
-103734;Lungenersatzverfahren Doku ECMOTemperatur
-103735;Lungenersatzverfahren Doku ECMOFlushen
-103736;Lungenersatzverfahren Doku ILAFlushen
+103717;IABP Triggerauswahl
+103718;IABP IABPFrequenz
+103720;IABP Unterstützungsdruck
+103721;IABP EKGAbleitung
+103722;IABP
+103723;IABP IABPLeersaugen
+103724;IABP MS SystoletelDiastole
+103731;Doku Temperatur
+103734;Doku ECMOTemperatur
+103735;Doku ECMOFlushen
+103736;Doku ILAFlushen
+103737;ECMOTemperatur
+103739;AICD
 103744;Hypothermie Doku Kuehlverfahren
-103745;Nierenverfahren ES BM25 Temperaturstufe
-103746;Nierenverfahren VO BM25 Temperaturstufe
-103748;Beatmung ES G5 Tubuskompensation
-103749;GewichtGroeße Platzhalter
+103745;BM25 Temperaturstufe
+103746;BM25 Temperaturstufe
+103748;G5 Tubuskompensation
+103749;GewichtGroeße
+103750;Reanimation
 103751;Assistenz bei Eingriffen Diagnostik
 103752;Diagnostik
-103753;Patient Pupillen
-103804;Hypothermie ArticSun VO Behandlungsmodi
-103805;Hypothermie ArticSun Doku Behandlungsmodi
+103753;Pupillen
+103804;Hypothermie ArticSun
+103805;Hypothermie ArticSun Doku
 103807;NIRS
 103808;rCBF
 103809;tcpCO2
 103817;PtiO2Druck
 103818;NIRSlinks MS
-103819;NIRSrechts MS
-103826;Beatmung Doku EzPAP Applikationsform
-103827;Beatmung MS EzPAP PAP
-103828;Waermesysteme Warmtouch Doku Geblaese
-103829;Waermesysteme Warmtouch Doku Temperatur
-103831;Lungenersatzverfahren Doku ILA Gasfluss
-103832;Lungenersatzverfahren Doku ILA Blutfluss
-103833;Lungenersatzverfahren VO ILA KontrolleExtremitaete
-103834;Lungenersatzverfahren VO ILA GasflussMax
-103835;Lungenersatzverfahren VO ILA GasflussMin
-103836;Lungenersatzverfahren VO ILA BlutflussMin
-103837;Therapiebetten Doku Triadyne reDrehWinkel
-103838;Therapiebetten Doku Triadyne liDrehWinkel
-103839;Therapiebetten Doku Triadyne rePause
-103841;Therapiebetten Doku Triadyne liPause
-103842;Therapiebetten Doku Triadyne mittePause
-103843;Therapiebetten Doku Triadyne IntensPerkussion
-103844;Therapiebetten Doku Triadyne SchlägePerkussion
-103845;Therapiebetten Doku Triadyne StaerkePulsation
-103847;Therapiebetten Doku Triadyne Lagerung
-103848;Therapiebetten Doku Triadyne DruckKopf
-103850;Therapiebetten Doku Triadyne DruckSchulter
-103851;Therapiebetten Doku Triadyne DruckKoerper
-103852;Therapiebetten Doku Triadyne DruckBeine
-103857;Lungenersatzverfahren VO ILA Flushmanoever
-103858;Therapiebetten Doku Triadyne FrequenzPulsation
-103859;Therapiebetten Doku Triadyne Position
-103860;Therapiebetten Doku Triadyne Temp
-103877;Therapiebetten Doku BariAir reDrehwinkel
-103878;Therapiebetten Doku BariAir liDrehwinkel
-103880;Therapiebetten Doku BariAir rePause
-103881;Therapiebetten Doku BariAir liPause
-103882;Therapiebetten Doku BariAir mittePause
-103883;Therapiebetten Doku BariAir FrequenzPulsation
-103884;Therapiebetten Doku BariAir Staerke Pulsation
-103885;Therapiebetten Doku BariAir SchlägePerkussion
-103886;Therapiebetten Doku BariAir IntenPerkussion
-103887;Therapiebetten Doku BariAir Position
-103888;Therapiebetten Doku BariAir Temp
-103889;Therapiebetten Doku Rotorest reRotWinkel
-103890;Therapiebetten Doku Rotorest liRotWinkel
-103891;Therapiebetten Doku Rotorest liVerweildauer
-103892;Therapiebetten Doku Rotorest reVerweildauer
-103895;Therapiebetten Doku Rotorest Position
-103896;Therapiebetten Doku TheraPulse Lagerung
-103897;Therapiebetten Doku TheraPulse IntensitaetPulsatio
-103898;Therapiebetten Doku TheraPulse ZyklusPulsation
+103819;NIRS MS
+103826;Doku EzPAP Applikationsform
+103827;MS EzPAP PAP
+103828;Warmtouch Doku Geblaese
+103829;Warmtouch Doku Temperatur
+103831;Doku ILA Gasfluss
+103832;Doku ILA Blutfluss
+103833;ILA KontrolleExtremitaete
+103834;ILA GasflussMax
+103835;ILA GasflussMin
+103836;ILA BlutflussMin
+103837;Doku Triadyne reDrehWinkel
+103838;Doku Triadyne liDrehWinkel
+103839;Doku Triadyne 
+103841;Doku Triadyne liPause
+103842;Doku Triadyne mittePause
+103843;Doku Triadyne IntensPerkussion
+103844;Doku Triadyne SchlägePerkussion
+103845;Doku Triadyne StaerkePulsation
+103847;Doku Triadyne Lagerung
+103848;Doku Triadyne DruckKopf
+103850;Doku Triadyne DruckSchulter
+103851;Doku Triadyne DruckKoerper
+103852;Doku Triadyne DruckBeine
+103857;ILA Flushmanoever
+103858;Doku Triadyne FrequenzPulsation
+103859;Doku Triadyne Position
+103860;Doku Triadyne Temp
+103861;Doku 
+103877;Doku reDrehwinkel
+103878;Doku liDrehwinkel
+103880;Doku 
+103881;Doku liPause
+103882;Doku mittePause
+103883;Doku FrequenzPulsation
+103884;Doku Staerke Pulsation
+103885;Doku SchlägePerkussion
+103886;Doku IntenPerkussion
+103887;Doku Position
+103888;Doku Temp
+103889;Doku Rotorest reRotWinkel
+103890;Doku Rotorest liRotWinkel
+103891;Doku Rotorest liVerweildauer
+103892;Doku Rotorest reVerweildauer
+103895;Doku Rotorest Position
+103896;Doku TheraPulse Lagerung
+103897;Doku TheraPulse IntensitaetPulsatio
+103898;Doku TheraPulse ZyklusPulsation
 103907;Therapiematratze Doku TheraKair Festigkeit
 103908;Therapiematratze Doku TheraKair ZyklusPulsation
 103909;Therapiematratze Doku TheraKair IntensPulsation
 103910;Therapiematratze Doku TheraKair Waermefunktion
-103912;Therapiebetten VO Triadyne reDrehWinkel
-103913;Therapiebetten VO Triadyne liDrehWinkel
-103914;Therapiebetten VO Triadyne rePause
-103915;Therapiebetten VO Triadyne liPause
-103916;Therapiebetten VO Triadyne mittePause
-103917;Therapiebetten VO Triadyne Lagerung
-103920;Therapiebetten VO BariAir reDrehwinkel
-103921;Therapiebetten VO BariAir liDrehwinkel
-103922;Therapiebetten VO BariAir rePause
-103923;Therapiebetten VO BariAir liPause
-103924;Therapiebetten VO BariAir mittePause
-103925;Therapiebetten VO Rotorest reRotWinkel
-103926;Therapiebetten VO Rotorest liRotWinkel
-103927;Therapiebetten VO Rotorest liVerweildauer
-103928;Therapiebetten VO Rotorest reVerweildauer
-103943;Beatmung ES Heimbeatmung Peep
-103992;Therapiebetten Doku FluidAirPlus Temperatur
-103994;Therapiebetten Doku FluidAirPlus Fluidation
-104009;Beatmung Messung Horrowitz
-104026;VAD Gerät Doku
+103912;Triadyne reDrehWinkel
+103913;Triadyne liDrehWinkel
+103914;Triadyne 
+103915;Triadyne liPause
+103916;Triadyne mittePause
+103917;Triadyne Lagerung
+103920;reDrehwinkel
+103921;liDrehwinkel
+103923;liPause
+103924;mittePause
+103925;Rotorest reRotWinkel
+103926;Rotorest liRotWinkel
+103927;Rotorest liVerweildauer
+103928;Rotorest reVerweildauer
+103943;Heimbeatmung Peep
+103944;Doku Heimbeatmung 
+103992;Doku FluidAirPlus Temperatur
+103994;Doku FluidAirPlus Fluidation
+104009;Horrowitz
+104012;Pflegepersonalaufwand erhöht
+104026;VAD Doku
 104027;VAD Blutfluss Doku
 104028;VAD Vakuum Doku
 104029;VAD Weaning Doku
-104031;Patient Datum letzte Transplantation
-104032;Beatmung MS HorowitzINPULS
-104033;Beatmung ES NO
-104034;Beatmung MS NO
-104035;Beatmung MS NO2
-104036;Beatmung ES G5 Pasvlimit
-104037;Beatmung MS G5 Mvspont
-104039;Beatmung ES G5 Pinsp
-104040;Beatmung MS G5 VTi
-104101;Ort Temperatur1a Messung
-104102;Ort Temperatur1b Messung
-104103;Ort Temperatur2a Messung
-104104;Ort Temperatur2b Messung
-104105;Ort Temperatur3a Messung
-104106;Ort Temperatur3b Messung
-104107;Temperatur Messung Ort1a
-104108;Temperatur Messung Ort2a
-104109;Temperatur Messung Ort2b
-104110;Temperatur Messung Ort1b
-104111;Temperatur Messung Ort3a
-104112;Temperatur Messung Ort3b
-104116;SpO2 Messung Ort
-104117;Lungenersatzverfahren MS ILA SpO2
-104118;Lungenersatzverfahren Doku ILA SpO2Messort
-104147;Beatmung ES Airvo Temperatur
-104149;Beatmung ES Airvo FlowSetting
-104150;Beatmung ES Airvo O2Flow
-104151;Beatmung ES Airvo O2Konzentration
-104152;Beatmung ES Airvo Zugangsweg
-104160;Beatmung ES Zephyros Druckrampe
-104161;Beatmung ES Zephyros FIO2
-104163;Beatmung ES Zephyros AF
-104164;Beatmung ES Zephyros Tinsp
-104165;Beatmung ES Zephyros Texp
-104166;Beatmung ES Zephyros IE
-104167;Beatmung ES Zephyros Trigger
-104168;Beatmung ES Zephyros Peep
-104169;Beatmung ES Zephyros Pinsp
-104170;Beatmung ES Zephyros By-Flow
-104171;Beatmung ES Zephyros CPAP
-104173;Beatmung ES Zephyros Pmax
-104174;Beatmung ES Zephyros Endflow
-104175;Beatmung ES Zephyros Tubuskompensation
-104176;Beatmung MS Zephyros Ppeak
-104177;Beatmung MS Zephyros Pplat
-104178;Beatmung MS Zephyros Pmin
-104179;Beatmung MS Zephyros spAF
-104180;Beatmung MS Zephyros Tve
-104181;Beatmung MS Zephyros MVe
-104182;Beatmung MS Zephyros O2
-104183;Beatmung ES Zephyros Ppsv
-104185;Beatmung MS Zephyros C
-104186;Beatmung MS Zephyros R
-104187;Beatmung MS Zephyros Pmean
-104188;Beatmung MS Zephyros Tvi
-104189;Beatmung MS Zephyros Ppeep
-104190;Beatmung MS Zephyros Ppeepi
-104192;Beatmung Doku Zephyros Option
-104193;Beatmung ES Zephyros Flow
-104195;Beatmung ES Zephyros IE Verhältnis
+104031;Datum letzte Transplantation
+104032;MS HorowitzINPULS
+104033;NO
+104034;MS NO
+104035;MS NO2
+104036;G5 Pasvlimit
+104037;MS G5 Mv
+104039;G5 Pinsp
+104040;MS G5 VTi
+104101;Temperatur1a 
+104102;Temperatur1b 
+104103;Temperatur2a 
+104104;Temperatur2b 
+104105;Temperatur3a 
+104106;Temperatur3b 
+104107;Temperatur 1a
+104108;Temperatur 2a
+104109;Temperatur 2b
+104110;Temperatur 1b
+104111;Temperatur 3a
+104112;Temperatur 3b
+104116;SpO2
+104117;MS ILA SpO2
+104118;Doku ILA SpO2Messort
+104147;Airvo Temperatur
+104149;Airvo FlowSetting
+104150;Airvo O2Flow
+104151;Airvo O2Konzentration
+104152;Airvo Zugangsweg
+104153;Airvo Applikationsweg 
+104160;Zephyros Druckrampe
+104161;Zephyros FIO2
+104163;Zephyros AF
+104164;Zephyros Tinsp
+104165;Zephyros Texp
+104166;Zephyros 
+104167;Zephyros Trigger
+104168;Zephyros Peep
+104169;Zephyros Pinsp
+104170;Zephyros By-Flow
+104171;Zephyros CPAP
+104173;Zephyros Pmax
+104174;Zephyros Endflow
+104175;Zephyros Tubuskompensation
+104176;MS Zephyros Ppeak
+104177;MS Zephyros Pplat
+104178;MS Zephyros Pmin
+104179;MS Zephyros spAF
+104180;MS Zephyros Tve
+104181;MS Zephyros MVe
+104182;MS Zephyros O2
+104183;Zephyros Ppsv
+104185;MS Zephyros C
+104186;MS Zephyros R
+104187;MS Zephyros Pmean
+104188;MS Zephyros Tvi
+104189;MS Zephyros Ppeep
+104190;MS Zephyros Ppeepi
+104192;Doku Zephyros 
+104193;Zephyros Flow
+104195;Zephyros Verhältnis
 104196;Therapiematratze Doku ProfiCare Komfortlevel
-104221;Nierenverfahren MS Cobespectra BilanzwertKumulativ
-104224;CardiacAssistsysteme Gerät Doku
-104226;Beatmung MS Servoi Edi min
-104227;Beatmung MS Servoi Edi peak
-104228;Beatmung MS Servoi SBI
-104229;Beatmung MS Servoi P0 1
-104230;Beatmung MS Servoi E
-104231;Beatmung MS Servoi WOBp
-104232;Beatmung MS Servoi WOBv
-104233;Beatmung MS Servoi Re
-104234;Beatmung MS Servoi Ri
-104235;Beatmung MS Servoi Cstatic
-104236;Beatmung MS Servoi Cdyn
-104237;Beatmung MS Servoi O2
-104238;Beatmung MS Servoi Vee
-104239;Beatmung MS Servoi Vte
-104240;Beatmung MS Servoi Vti
-104241;Beatmung MS Servoi Leckage
-104242;Beatmung MS Servoi MVe
-104243;Beatmung MS Servoi MVi
-104244;Beatmung MS Servoi Mve spont
-104245;Beatmung MS Servoi AF
-104246;Beatmung MS Servoi Afspont
-104247;Beatmung MS Servoi CPAP
-104248;Beatmung MS Servoi PEEP
-104249;Beatmung MS Servoi Pmean
-104250;Beatmung MS Servoi Pplat
-104251;Beatmung MS Servoi Ppeak
-104252;Beatmung ES Servoi Backup Ti
-104253;Beatmung ES Servoi Backup I E
-104254;Beatmung ES Servoi Backup DK ueber PEEP
-104255;Beatmung ES Servoi Backup Frequenz
-104256;Beatmung ES Servoi Backup Vt
-104257;Beatmung ES Servoi Automode Triggerfenster
-104258;Beatmung ES Servoi Gewicht
-104259;Beatmung ES Servoi EDI Trigger
-104260;Beatmung ES Servoi Nava Pegel
-104261;Beatmung ES Servoi O2
-104262;Beatmung ES Servoi Tpeep
-104263;Beatmung ES Servoi Thoch
-104264;Beatmung ES Servoi PEEP
-104265;Beatmung ES Servoi DU ueber Phoch
-104266;Beatmung ES Servoi Pniedrig
-104267;Beatmung ES Servoi Phoch
-104268;Beatmung ES Servoi DU ueber PEEP
-104269;Beatmung ES Servoi DK ueber PEEP
-104270;Beatmung ES Servoi Drucktrigger
-104271;Beatmung ES Servoi Flowtrigger
-104272;Beatmung ES Servoi Tpause Prozent
-104273;Beatmung ES Servoi Tpause s
-104274;Beatmung ES Servoi I E
-104275;Beatmung ES Servoi End Insp Zyklusende
-104276;Beatmung ES Servoi Insp Anstiegszeit Prozent
-104277;Beatmung ES Servoi Insp Anstiegszeit s
-104278;Beatmung ES Servoi Pausendauer s
-104279;Beatmung ES Servoi Pausendauer Prozent
-104280;Beatmung ES Servoi Ti
-104281;Beatmung ES Servoi CMV Frequenz
-104282;Beatmung ES Servoi SIMV Frequenz
-104283;Beatmung ES Servoi Frequenz
-104284;Beatmung ES Servoi Vt
-104286;Hypothermie ArticSun VO KuehlWaermeRate neu
-104288;Hypothermie ArticSun Doku KuehlWaermerate neu
+104221;MS Cobespectra BilanzwertKumulativ
+104224;CardiacAssistsysteme Doku
+104226;MS Servoi Edi min
+104227;MS Servoi Edi peak
+104228;MS Servoi SBI
+104229;MS Servoi P0 1
+104230;MS Servoi E
+104231;MS Servoi WOBp
+104232;MS Servoi WOBv
+104233;MS Servoi Re
+104234;MS Servoi Ri
+104235;MS Servoi Cstatic
+104236;MS Servoi Cdyn
+104237;MS Servoi O2
+104238;MS Servoi Vee
+104239;MS Servoi e
+104240;MS Servoi i
+104241;MS Servoi Leckage
+104242;MS Servoi MVe
+104243;MS Servoi MVi
+104244;MS Servoi Mve 
+104245;MS Servoi AF
+104246;MS Servoi Af
+104247;MS Servoi CPAP
+104248;MS Servoi PEEP
+104249;MS Servoi Pmean
+104250;MS Servoi Pplat
+104251;MS Servoi Ppeak
+104252;Servoi Ti
+104253;Servoi I E
+104254;Servoi DK PEEP
+104255;Servoi Frequenz
+104256;Servoi 
+104257;Servoi Automode Triggerfenster
+104258;Servoi Gewicht
+104259;Servoi EDI Trigger
+104260;Servoi Nava Pegel
+104261;Servoi O2
+104262;Servoi Tpeep
+104263;Servoi Thoch
+104264;Servoi PEEP
+104265;Servoi DU Phoch
+104266;Servoi Pniedrig
+104267;Servoi Phoch
+104268;Servoi DU PEEP
+104269;Servoi DK PEEP
+104270;Servoi Drucktrigger
+104271;Servoi Flowtrigger
+104272;Servoi Tpause Prozent
+104273;Servoi Tpause s
+104274;Servoi I E
+104275;Servoi End Insp Zyklusende
+104276;Servoi Insp Anstiegszeit Prozent
+104277;Servoi Insp Anstiegszeit s
+104278;Servoi Pausendauer s
+104279;Servoi Pausendauer Prozent
+104280;Servoi Ti
+104281;Servoi CMV Frequenz
+104282;Servoi SIMV Frequenz
+104283;Servoi Frequenz
+104284;Servoi 
+104286;Hypothermie ArticSun KuehlWaermeRate
+104288;Hypothermie ArticSun Doku KuehlWaermerate
 104289;Score CAM ICU Punktwert Gesamt
-104320;Wertsachen Wertgegenstaende
-104321;Wertsachen Papiere
-104322;Wertsachen Pflegeuntensilien
-104323;Wertsachen Kleidungsstuecke
-104324;Wertsachen Prothese
-104325;Wertsachen POE
-104326;Wertsachen Kleidungsstuecke Ort
-104327;Wertsachen Papiere Ort
-104328;Wertsachen Wertgegenstaende Ort
-104329;Wertsachen Datum
-104331;Wertsachen Pflegeuntensilien Ort
-104332;Wertsachen Prothese Ort
-104345;IABP DatascopeCS300 ES IABPAufblasen
-104347;IABP DatascopeCS300 ES IABPLeersaugen
-104349;IABP DatascopeCS300 ES Unterstützungsdruck
-104351;IABP DatascopeCS300 ES Doku Ballonkatheter
-104352;IABP DatascopeCS300 ES Doku Ballonvolumen
-104353;IABP DatascopeCS300 ES EKG Ableitung
-104354;IABP DatascopeCS300 ES IABP Frequenz
-104355;IABP DatascopeCS300 ES Triggerauswahl EKG RR Pacer
-104356;IABP DatascopeCS300 MS Systole Mittel Diastole
+104324;Prothese
+104325;POE
+104329;Datum
+104332;Prothese 
+104340;Pflegekraft
+104345;IABP
+104347;IABP IABPLeersaugen
+104349;IABP Unterstützungsdruck
+104351;IABP Doku Ballonkatheter
+104352;IABP Doku Ballonvolumen
+104353;IABP EKG Ableitung
+104354;IABP IABP Frequenz
+104355;IABP Triggerauswahl EKG RR Pacer
+104356;IABP MS Systole tel Diastole
 104403;Praemedikation
-104678;Patient Spezifitaet Liste
-104679;Patient Antikoerper Liste
-104680;Patient Blutggruppe Liste
-104708;Beatmung ES Pallas PEEP
-104709;Beatmung ES Pallas Alter
-104710;Beatmung ES Pallas Pmax
-104712;Beatmung ES Pallas Trigger
-104714;Beatmung ES Pallas T Rampe
-104715;Beatmung ES Pallas Inspirationspause Tip Tinsp
-104716;Beatmung ES Pallas Tinsp
-104717;Beatmung ES Pallas PS
-104718;Beatmung ES Pallas Frequenz
-104719;Beatmung ES Pallas Vt
-104720;Beatmung MS Pallas Ppeak
-104721;Beatmung MS Pallas Pplat
-104722;Beatmung MS Pallas PEEP
-104723;Beatmung MS Pallas etCO2
-104724;Beatmung MS Pallas inCO2
-104725;Beatmung MS Pallas MV
-104726;Beatmung MS Pallas Vt
-104727;Beatmung MS Pallas Frequenz
-104728;Beatmung MS Pallas MV Leck
-104729;Beatmung MS Pallas Cpat
-104730;Beatmung MS Pallas O2 insp
-104731;Beatmung MS Pallas O2 exsp
-104732;Beatmung MS Pallas MAC exsp
-104733;Beatmung MS Pallas Halothan insp
-104734;Beatmung MS Pallas Halothan exsp
-104735;Beatmung MS Pallas Enfluran insp
-104736;Beatmung MS Pallas Enfluran exsp
-104737;Beatmung MS Pallas Isofluran insp
-104738;Beatmung MS Pallas Isofluran exsp
-104739;Beatmung MS Pallas Desfluran insp
-104740;Beatmung MS Pallas Desfluran exsp
-104741;Beatmung MS Pallas Sevofluran insp
-104742;Beatmung MS Pallas Sevofluran exsp
-104743;Beatmung MS Pallas Frischgas Flow gesamt
-104745;Beatmung ES Pallas Frischgas O2
-104746;Beatmung ES Pallas Frischgas Air
-104747;Beatmung ES Pallas Pinsp
-104748;Beatmung ES Pallas Frequenz Min
-104749;Beatmung ES Pallas IzuE
-104751;Untersuchung Kontrolle Laufraten
-104752;Beatmung ES G5 Vt Backup
-104753;Beatmung ES G5 Frequenz Backup
-104754;Beatmung ES G5 Apnoezeit Backup
-104756;Beatmung ES G5 Pkontrol Backup
-104757;Beatmung ES G5 IEVerhältnis Backup
+104678;Spezifitaet 
+104679;Antikoerper 
+104680;Blutggruppe 
+104708;PEEP
+104709;Alter
+104710;Pmax
+104712;Trigger
+104714;T Rampe
+104715;Inspirationspause Tip Tinsp
+104716;Tinsp
+104717;PS
+104718;Frequenz
+104720;MS Ppeak
+104721;MS Pplat
+104722;MS PEEP
+104723;MS etCO2
+104724;MS inCO2
+104725;MS MV
+104727;MS Frequenz
+104728;MS MV Leck
+104729;MS Cpat
+104730;MS O2 insp
+104731;MS O2 
+104732;MS MAC 
+104733;MS Halothan insp
+104734;MS Halothan 
+104735;MS Enfluran insp
+104736;MS Enfluran 
+104737;MS Isofluran insp
+104738;MS Isofluran 
+104739;MS Desfluran insp
+104740;MS Desfluran 
+104741;MS Sevofluran insp
+104742;MS Sevofluran 
+104743;MS Frischgas Flow 
+104745;Frischgas O2
+104746;Frischgas Air
+104747;Pinsp
+104748;Frequenz Min
+104749;IzuE
+104751;Kontrolle Laufraten
+104752;G5 
+104753;G5 Frequenz 
+104754;G5 Apnoezeit 
+104756;G5 Pkontrol 
+104757;G5 Verhältnis 
 104758;Schlagvolumen
 104760;Schlagvolumenindex
 104765;Lagerung ImOP
-104767;Beatmung ES NarkosegasSevofluran
-104770;Beatmung ES Pallas FrischgasFlow
-104771;Beatmung ES Pallas PatGewicht
-104772;Beatmung MS Pallas Pmean
-104773;Beatmung TM Pallas TEST
-104782;Beatmung ES C2 Ti
-104783;Beatmung ES C2 Frequenz
-104784;Beatmung MS C2 Cstat
-104785;Beatmung MS C2 RCexsp
-104786;Beatmung MS C2 Rinsp
-104787;Beatmung MS C2 IEVerhaeltnis
-104788;Beatmung MS C2 TE
-104789;Beatmung MS C2 TI
-104790;Beatmung MS C2 fSpontan
-104791;Beatmung MS C2 fTotal
-104792;Beatmung MS C2 ExspFlow
-104793;Beatmung MS C2 InsFlow
-104794;Beatmung MS C2 VLeckage
-104795;Beatmung MS C2 Pinsp
-104796;Beatmung MS C2 Mvspont
-104797;Beatmung MS C2 ExpMinVol
-104798;Beatmung MS C2 VTE
-104799;Beatmung MS C2 AutoPeep
-104800;Beatmung MS C2 PeepCPAP
-104801;Beatmung MS C2 Pmittel
-104802;Beatmung MS C2 Pplateau
-104803;Beatmung MS C2 Ppeak
-104804;Beatmung MS C2 Sauerstoff
-104805;Beatmung ES C2 Flowtrigger
-104806;Beatmung ES C2 Groeße
-104807;Beatmung ES C2 ProzentVol
-104808;Beatmung ES C2 Sauerstoff
-104809;Beatmung ES C2 ETS
-104810;Beatmung ES C2 Druckrampe
-104811;Beatmung ES C2 Ttief
-104812;Beatmung ES C2 Thoch
-104813;Beatmung ES C2 Timax
-104814;Beatmung ES C2 Pasvlimit
-104815;Beatmung ES C2 Plateau
-104816;Beatmung ES C2 Ptief
-104817;Beatmung ES C2 Phoch
-104818;Beatmung ES C2 Pkontrol
-104819;Beatmung ES C2 Psupport
-104820;Beatmung ES C2 Pinsp
-104821;Beatmung ES C2 PeepCPAP
-104822;Beatmung ES C2 IEVerhaeltnis
-104823;Beatmung ES C2 Vt
-104824;NEV Apherese MS Multi Behandlungs Zeit
-104825;NEV Apherese MS Multi UFRBFRVerhältnis
-104826;NEV Apherese MS Multi PlasmaVolKum
-104827;NEV Apherese MS Multi pFDruck
-104828;NEV Apherese MS Multi TMP
-104829;NEV Apherese MS Multil venDruck
-104830;NEV Apherese MS Multi artDruck
-104831;NEV Apherese ES Multi Temperatur
-104832;NEV Apherese ES Multi Blutfluss
-104833;NEV Apherese ES Multi Plasma
-104834;NEV Apherese ES Multi PlasmaVolumen
-104835;NEV Apherese Doku Spuel Dauer
-104836;NEV Apherese Doku Fuellen Mit
-104837;NEV Apherese Doku SpülloesungAntikoag
-104838;NEV Apherese Doku Bolus Antikoag
-104839;NEV Apherese Doku Antikoagulation
-104840;NEV Apherese Doku Plasmaloesung
-104841;NEV Apherese Doku Filter
-104842;NEV Apherese Doku Zugang
-104844;NEV Apherese VO Multi Temperatur
-104845;NEV Apherese VO Multi BlutflussMax
-104846;NEV Apherese VO Multi Plasma Volumen
-104847;NEV Apherese VO Spuel Dauer
-104848;NEV Apherese VO Fuellen Mit
-104849;NEV Apherese VO SpülloesungAntikoag
-104850;NEV Apherese VO Bolus Antikoag
-104851;NEV Apherese VO Antikoagulation
-104852;NEV Apherese VO Plasmaloesung
-104853;NEV Apherese VO Filter
-104854;NEV Apherese VO Zugang
-104856;NEV HD Doku Abschlussbegründung
-104857;NEV HD Doku Abschlussbeurteilung
-104858;NEV HD MS 4008onl Rest Zeit
-104859;NEV HD MS 4008onl SubBolusVolKum
-104860;NEV HD MS 4008onl SubVolKum
-104861;NEV HD MS 4008onl IsoUFVolKum
-104862;NEV HD MS 4008onl BlutvolKum
-104863;NEV HD MS 4008onl effBlutfluss
-104864;NEV HD MS 4008onl Leitfähigkeit
-104865;NEV HD MS 4008onl SollNa
-104866;NEV HD MS 4008onl TMP
-104867;NEV HD MS 4008onl venDruck
-104868;NEV HD MS 4008onl artDruck
-104869;NEV HD MS 4008HS Rest Zeit
-104870;NEV HD MS 4008HS IsoUFVolKum
-104871;NEV HD MS 4008HS BlutvolKum
-104872;NEV HD MS 4008HS effBlutfluss
-104873;NEV HD MS 4008HS Leitfähigkeit
-104874;NEV HD MS 4008HS SollNa
-104875;NEV HD MS 4008HS TMP
-104876;NEV HD MS 4008HS venDruck
-104877;NEV HD MS 4008HS artDruck
-104878;NEV HD MS 4008 HS onl Ultrafiltratmengekum
-104879;NEV HD ES 4008HS Fluss
-104880;NEV HD ES 4008HS Temperatur
-104881;NEV HD ES 4008HS Bicarbonat
-104882;NEV HD ES 4008HS SollNa
-104883;NEV HD ES 4008HS BasisNa
-104884;NEV HD ES 4008HS StartNa
-104885;NEV HD ES 4008HS NaProfil
-104886;NEV HD ES 4008HS UFProfil
-104887;NEV HD ES 4008HS BlutflussSNPumpe
-104888;NEV HD ES 4008HS Blutfluss
-104889;NEV HD ES 4008HS IsoUF Rate
-104890;NEV HD ES 4008HS IsoUFZeit
-104891;NEV HD ES 4008HS IsoUFZiel
-104892;NEV HD ES 4008HS UFRate
-104893;NEV HD ES 4008HS UFZiel
-104894;NEV HD ES 4008HS Dialysezeit
-104895;NEV HD ES 4008onl Fluss
-104896;NEV HD ES 4008onl Temperatur
-104897;NEV HD ES 4008onl Bicarbonat
-104898;NEV HD ES 4008onl SollNa
-104899;NEV HD ES 4008onl StartNa
-104900;NEV HD ES 4008onl BasisNa
-104901;NEV HD ES 4008onl NaProfil
-104902;NEV HD ES 4008onl UFProfil
-104903;NEV HD ES 4008onl Substituatbolus
-104904;NEV HD ES 4008onl Substituatrate
-104905;NEV HD ES 4008onl Substituat
-104906;NEV HD ES 4008onl BlutflussSNPumpe
-104907;NEV HD ES 4008onll Blutfluss
-104908;NEV HD ES 4008onl UFRate
-104909;NEV HD ES 4008onl IsoUFZiel
-104910;NEV HD ES 4008onl UFZiel
-104911;NEV HD Doku Bolusgabe
-104912;NEV HD Doku FuellenMit
-104913;NEV HD ES 4008onl Dialyse Zeit
-104914;NEV HD Doku SpüllösungAntikoag
-104915;NEV HD Doku Antikoagulation
-104916;NEV HD Doku Konzentrat
-104917;NEV HD Doku Filter
-104918;NEV HD Doku Zugang
-104920;NEV HD VO 4008onl Fluss
-104921;NEV HD VO 4008onl Temperatur
-104922;NEV HD VO 4008onl Bicarbonat
-104923;NEV HD VO 4008onl SollNa
-104924;NEV HD VO 4008onl StartNa
-104925;NEV HD VO 4008onl NaProfil
-104926;NEV HD VO 4008onl UFProfil
-104927;NEV HD VO 4008onl Substituatbolus
-104928;NEV HD VO 4008onl Substituat
-104929;NEV HD VO 4008onl BlutflussSNPumpe
-104930;NEV HD VO 4008onl BlutflussMax
-104931;NEV HD VO 4008onl UFZiel
-104932;NEV HD VO 4008onl Iso UFZeit
-104933;NEV HD VO 4008onl IsoUFZiel
-104934;NEV HD VO 4008onl Dialysezeit
-104935;NEV HD VO 4008HS Fluss
-104936;NEV HD VO 4008HS Temperatur
-104937;NEV HD VO 4008HS Bicarbonat
-104938;NEV HD VO 4008HS Soll Na
-104939;NEV HD VO 4008HS Start Na
-104940;NEV HD VO 4008HS Na Profil
-104941;NEV HD VO 4008HS UF Profil
-104942;NEV HD VO 4008HS Blutfluss SN Pumpe
-104943;NEV HD VO 4008HS Blutfluss Max
-104944;NEV HD VO 4008HS UF Ziel
-104945;NEV HD VO 4008HS IsoUFZiel
-104946;NEV HD VO 4008HS Iso UFZeit
-104947;NEV HD VO 4008HS Dialysezeit
-104948;NEV HD VO FuellenMit
-104949;NEV HD VO SpüllösungAntikoag
-104950;NEV HD VO Bolus
-104951;NEV HD VO Antikoagulation
-104952;NEV HD VO Konzentrat
-104953;NEV HD VO Option
-104954;NEV HD VO Filter
-104955;NEV HD VO Zugang
-104957;NEV CRRT Doku AbschlussUrteil
-104958;NEV CRRT Doku AbschlussBegruendung
-104959;NEV CRRT MS Multi BehandlungszeitAktuell
-104960;NEV HD ES 4008onl IsoUFZeit
-104961;NEV CRRT MS Multi UFR BFRVerhaeltnis
-104962;NEV CRRT MS Multi CalciumVolKum
-104963;NEV CRRT MS Multi CitratvolKum
-104964;NEV CRRT MS Multi SubBolusVolKum
-104965;NEV CRRT MS Multi SubVolKum
-104966;NEV CRRT MS Multi DialysatvolKum
-104967;NEV CRRT MS Multi Bilanz
-104968;NEV CRRT MS Multi Calciumfluss
-104969;NEV CRRT MS Multi Citratfluss
-104970;NEV CRRT MS Multi TMP
-104971;NEV CRRT MS Multi venDruck
-104972;NEV CRRT MS Multi artDruck
-104973;NEV CRRT ES Multi Temperatur
-104974;NEV CRRT ES Multi CalciumFiltrat
-104975;NEV CRRT ES Multi CitratBlut
-104976;NEV CRRT ES Multi SubstituatBolus
-104977;NEV CRRT ES Multi Substituat
-104978;NEV CRRT ES Multi Dialysat
-104979;NEV CRRT ES Multi Ultrafiltration
-104980;NEV CRRT ES Multi Blutfluss
-104981;NEV CRRT Doku Fuellen Mit
-104982;NEV CRRT Doku SpülloesungAntikoag
-104983;NEV CRRT Doku BolusAntikoag
-104984;NEV CRRT Doku Antikoagulation
-104985;NEV CRRT Doku CalciumLoesung
-104986;NEV CRRT Doku CitratLoesung
-104987;NEV CRRT Doku HFLoesung
-104988;NEV CRRT Doku Dialysatloesung
-104989;NEV CRRT Doku Option
-104990;NEV CRRT Doku Spuel Dauer
-104991;NEV CRRT Doku Filter
-104992;NEV CRRT Doku Zugang
-104994;NEV CRRT VO Multi Temperatur
-104995;NEV CRRT VO Multi CalciumFiltrat
-104996;NEV CRRT VO Multi CitratBlut
-104997;NEV CRRT VO Multi SubstituatBolus
-104998;NEV CRRT VO Multi Substituat
-104999;NEV CRRT VO Multi Dialysat
-105000;NEV CRRT VO Multi Ultrafiltration
-105001;NEV CRRT VO Multi BlutflussMax
-105002;NEV CRRT VO Fuellen Mit
-105003;NEV CRRT VO SpülloesungAntikoag
-105004;NEV CRRT VO BolusAntikoag
-105005;NEV CRRT VO Antikoagulation
-105006;NEV CRRT VO CalciumLoesung
-105007;NEV CRRT VO CitratLoesung
-105008;NEV CRRT VO HFLoesung
-105009;NEV CRRT VO Dialysatloesung
-105010;NEV CRRT VO Option
-105011;NEV CRRT VO Filter
-105012;NEV CRRT VO Zugang
+104767;NarkosegasSevofluran
+104770;FrischgasFlow
+104771;PatGewicht
+104772;MS Pmean
+104773;TM TT
+104778;VolatileAnaesthetika
+104779;VolatileAnaesthetika
+104780;AT O2
+104781;AT Air
+104782;C2 Ti
+104783;C2 Frequenz
+104784;MS C2 Cstat
+104785;MS C2 RC
+104786;MS C2 Rinsp
+104787;MS C2 
+104788;MS C2 TE
+104789;MS C2 TI
+104790;MS C2 fSpontan
+104791;MS C2 fTotal
+104792;MS C2 ExspFlow
+104793;MS C2 InsFlow
+104794;MS C2 VLeckage
+104795;MS C2 Pinsp
+104796;MS C2 Mv
+104797;MS C2 ExpMinVol
+104798;MS C2 VTE
+104799;MS C2 
+104800;MS C2 PeepCPAP
+104801;MS C2 Pmittel
+104802;MS C2 Pplateau
+104803;MS C2 Ppeak
+104804;MS C2 Sauerstoff
+104805;C2 Flowtrigger
+104806;C2 Groeße
+104807;C2 ProzentVol
+104808;C2 Sauerstoff
+104809;C2 ETS
+104810;C2 Druckrampe
+104811;C2 Ttief
+104812;C2 Thoch
+104813;C2 Timax
+104814;C2 Pasvlimit
+104815;C2 Plateau
+104816;C2 
+104817;C2 Phoch
+104818;C2 Pkontrol
+104819;C2 Psupport
+104820;C2 Pinsp
+104821;C2 PeepCPAP
+104822;C2 
+104823;C2 
+104824;Apherese MS Behandlungs Zeit
+104825;Apherese MS UFRBFRVerhältnis
+104826;Apherese MS PlasmaVolKum
+104827;Apherese MS pFDruck
+104828;Apherese MS 
+104829;Apherese MS l venDruck
+104830;Apherese MS artDruck
+104831;Apherese Temperatur
+104832;Apherese Blutfluss
+104833;Apherese Plasma
+104834;Apherese Plasma
+104835;Apherese Doku Spuel Dauer
+104836;Apherese Doku Fuellen 
+104837;Apherese Doku 
+104838;Apherese Doku Bolus Antikoag
+104839;Apherese Doku Antikoagulation
+104840;Apherese Doku Plasmaloesung
+104841;Apherese Doku Filter
+104842;Apherese Doku Zugang
+104843;Apherese Doku 
+104844;Apherese Temperatur
+104845;Apherese BlutflussMax
+104846;Apherese Plasma 
+104847;Apherese Spuel Dauer
+104848;Apherese Fuellen 
+104849;Apherese 
+104850;Apherese Bolus Antikoag
+104851;Apherese Antikoagulation
+104852;Apherese Plasmaloesung
+104853;Apherese Filter
+104854;Apherese Zugang
+104855;Apherese 
+104856;Doku Abschlussbegründung
+104857;Doku 
+104858;MS Rest Zeit
+104859;MS SubBolusVolKum
+104860;MS SubVolKum
+104861;MS IsoUFVolKum
+104862;MS BlutvolKum
+104863;MS effBlutfluss
+104864;MS Leitfähigkeit
+104865;MS Na
+104867;MS venDruck
+104868;MS artDruck
+104869;MS Rest Zeit
+104870;MS IsoUFVolKum
+104871;MS BlutvolKum
+104872;MS effBlutfluss
+104873;MS Leitfähigkeit
+104874;MS Na
+104876;MS venDruck
+104877;MS artDruck
+104878;MS HS onl Ultrafiltratmengekum
+104879;Fluss
+104880;Temperatur
+104881;Bicarbonat
+104882;Na
+104883;BasisNa
+104884;StartNa
+104885;NaProfil
+104886;UFProfil
+104888;Blutfluss
+104889;IsoUF Rate
+104890;IsoUFZeit
+104892;UFRate
+104893;UFZiel
+104894;Dialysezeit
+104895;Fluss
+104896;Temperatur
+104897;Bicarbonat
+104898;Na
+104899;StartNa
+104900;BasisNa
+104901;NaProfil
+104902;UFProfil
+104903;Substituatbolus
+104904;Substituatrate
+104905;Substituat
+104907;Blutfluss
+104908;UFRate
+104910;UFZiel
+104911;Doku Bolusgabe
+104912;Doku Fuellen
+104913;Dialyse Zeit
+104914;Doku 
+104915;Doku Antikoagulation
+104916;Doku Konzentrat
+104917;Doku Filter
+104918;Doku Zugang
+104919;Doku 
+104920;Fluss
+104921;Temperatur
+104922;Bicarbonat
+104923;Na
+104924;StartNa
+104925;NaProfil
+104926;UFProfil
+104927;Substituatbolus
+104928;Substituat
+104930;BlutflussMax
+104931;UFZiel
+104932;Iso UFZeit
+104934;Dialysezeit
+104935;Fluss
+104936;Temperatur
+104937;Bicarbonat
+104938;Na
+104939;Start Na
+104940;Na Profil
+104941;UF Profil
+104942;Blutfluss SN Pumpe
+104943;Blutfluss Max
+104944;UF Ziel
+104946;Iso UFZeit
+104947;Dialysezeit
+104948;Fuellen
+104950;Bolus
+104951;Antikoagulation
+104952;Konzentrat
+104954;Filter
+104955;Zugang
+104957;CRRT Doku AbschlussUrteil
+104958;CRRT Doku AbschlussBedung
+104959;CRRT MS 
+104960;IsoUFZeit
+104961;CRRT MS UFR BFR
+104962;CRRT MS CalciumVolKum
+104963;CRRT MS CitratvolKum
+104964;CRRT MS SubBolusVolKum
+104965;CRRT MS SubVolKum
+104966;CRRT MS DialysatvolKum
+104967;CRRT MS Bilanz
+104968;CRRT MS Calciumfluss
+104969;CRRT MS Citratfluss
+104970;CRRT MS 
+104971;CRRT MS venDruck
+104972;CRRT MS artDruck
+104973;CRRT Temperatur
+104974;CRRT CalciumFiltrat
+104975;CRRT CitratBlut
+104976;CRRT SubstituatBolus
+104977;CRRT Substituat
+104978;CRRT Dialysat
+104979;CRRT Ultrafiltration
+104980;CRRT Blutfluss
+104981;CRRT Doku Fuellen 
+104982;CRRT Doku 
+104983;CRRT Doku BolusAntikoag
+104984;CRRT Doku Antikoagulation
+104985;CRRT Doku CalciumLoesung
+104986;CRRT Doku CitratLoesung
+104987;CRRT Doku HFLoesung
+104988;CRRT Doku Dialysatloesung
+104989;CRRT Doku 
+104990;CRRT Doku Spuel Dauer
+104991;CRRT Doku Filter
+104992;CRRT Doku Zugang
+104993;CRRT Doku 
+104994;CRRT Temperatur
+104995;CRRT CalciumFiltrat
+104996;CRRT CitratBlut
+104997;CRRT SubstituatBolus
+104998;CRRT Substituat
+104999;CRRT Dialysat
+105000;CRRT Ultrafiltration
+105001;CRRT BlutflussMax
+105002;CRRT Fuellen 
+105003;CRRT 
+105004;CRRT BolusAntikoag
+105005;CRRT Antikoagulation
+105006;CRRT CalciumLoesung
+105007;CRRT CitratLoesung
+105008;CRRT HFLoesung
+105009;CRRT Dialysatloesung
+105010;CRRT 
+105011;CRRT Filter
+105012;CRRT Zugang
+105013;CRRT 
+105014;Osypka101H Rate
+105015;Osypka101H Sense
+105016;Osypka101H STIM
+105017;Osypka101H Betriebsart
+105018;Osypka101H HighRateSTIM
+105019;Rate
+105020;A Sense
+105021;V Sense
+105022;A STIM
+105023;V STIM
+105024;AV DLY
+105025;Highrate StimRate
+105026;V RapidPacing
+105027;PVARP
+105028;ARP
+105029;VRP
+105030;MTR
+105031;Betriebsart
+105033;A-Sense
+105034;V-Sense
+105035;Betriebsart
 105041;AT O2Flow
+105042;AT volatile AnaesthetikAuswahl
 105043;Hypothermie ArticSun MS Wassertemperatur
 105045;BIS
 105046;BSR
-105049;NEV CRRT ES Multi Temp
-105050;NEV CRRT VO Multi Temp
-105051;NEV Apherese VO Multi Temp
-105052;NEV Apherese ES Multi Temp
-105053;NEV Apherese Doku AbschlussBegruendung
-105054;NEV Apherese Doku AbschlussUrteil
-105061;NEV Apherese MS Cobe PlasmaVolKum
-105062;NEV Apherese MS OctoNova PlasmaVolKum
-105075;Beatmung ES C2 Body Wt
-105076;Beatmung ES C2 Drucktrigger
-105077;Beatmung ES C2 Pmax
-105078;Beatmung ES C2 PEEP CPAP Ptief
-105079;Beatmung ES C2 Pkontrol Phoch
-105080;Beatmung ES C2 F CMV
-105081;Beatmung ES C2 F SIMV
-105082;Beatmung ES G5 Body Wt
-105083;Beatmung ES G5 F CMV
-105084;Beatmung ES G5 F SIMV
-105085;Beatmung ES G5 PEEP CPAP Ptief
-105086;Beatmung ES G5 Pkontrol Phoch
-105088;Fall Wertsachen ausgehaendigt komplett
-105090;Fall Wertsachen Wertgegenstaende
-105092;Fall Wertsachen Prothese
-105093;Fall Wertsachen Pflegeuntensilien Ort
-105094;Fall Wertsachen Pflegeuntensilien
-105095;Fall Wertsachen Prothese Ort
-105096;Fall Wertsachen Kleidungsstuecke
-105097;Fall Wertsachen Kleidungsstuecke Ort
-105098;Fall Wertsachen Papiere
-105099;Fall Wertsachen Papiere Ort
-105100;Fall Wertsachen Wertgegenstaende Ort
+105049;CRRT Temp
+105050;CRRT Temp
+105051;Apherese Temp
+105052;Apherese Temp
+105053;Apherese Doku AbschlussBedung
+105054;Apherese Doku AbschlussUrteil
+105061;Apherese MS Cobe PlasmaVolKum
+105062;Apherese MS OctoNova PlasmaVolKum
+105075;C2 Body Wt
+105076;C2 Drucktrigger
+105077;C2 Pmax
+105078;C2 PEEP CPAP 
+105079;C2 Pkontrol Phoch
+105080;C2 F CMV
+105081;C2 F SIMV
+105082;G5 Body Wt
+105083;G5 F CMV
+105084;G5 F SIMV
+105085;G5 PEEP CPAP 
+105086;G5 Pkontrol Phoch
+105092;Prothese
+105095;Prothese 
 105103;Sauerstoff RespirationBarValue
-105104;Patient Befunde
-105203;F Untersuchung
-105212;F Untersuchung PreviousDataSet
-105222;Score NRS Verlauf
-105223;Score BPS Verlauf
+105122;F Dekanuelierungsplan
+105222;Score NRS
+105223;Score BPS
 105228;F MedDoku OperationRevisionEingriff
 105241;F MedDoku Vormedikation
 105271;MikrobiologieAntibiogramm
-106280;Beatmung ES C2 Pkontrol Backup
-106281;Beatmung ES C2 Apnoezeit Backup
-106282;Beatmung ES C2 Frequenz Backup
-106283;Beatmung ES C2 IEVerhaeltnis Backup
-106284;Lungenersatzverfahren Doku ILAactivve Membranvent
-106285;Lungenersatzverfahren MS ILAactivve Temp1
-106286;Lungenersatzverfahren MS ILAactivve Temp2
-106287;Lungenersatzverfahren ES ILAactivve Fluss
-106288;Lungenersatzverfahren MS ILAactivve Drehzahl
-106289;Lungenersatzverfahren MS ILAactivve P1
-106290;Lungenersatzverfahren MS ILAactivve P2
-106291;Lungenersatzverfahren MS ILAactivve P3
-106293;Lungenersatzverfahren MS ILAactivve P4
-106294;Lungenersatzverfahren ES ILAactivve Frequenz
-106295;Lungenersatzverfahren ES ILAactivve Systole
-106296;Lungenersatzverfahren VO ILAactivve Membranvent
-106297;Lungenersatzverfahren VO ILAactivve Fluss
-106298;Lungenersatzverfahren VO ILAactivve Frequenz
-106299;Lungenersatzverfahren VO ILAactivve Systole
-106300;Lungenersatzverfahren ES ILAactivve Blutfluss
-106301;Lungenersatzverfahren Doku ILAactivve Flushen
-106302;Lungenersatzverfahren Doku ILAactivve Flussreg
-106303;Lungenersatzverfahren Doku ILAactivve Nullabgleich
-106307;Lungenersatzverfahren Doku ILAactivve KontrSchlsys
-106308;Lungenersatzverfahren Doku KontrAlarmg
-106309;Lungenersatzverfahren Doku ILAactivve Nullfluss
-106310;Lungenersatzverfahren Doku ILAactivve Flussregel
-106311;Lungenersatzverfahren Doku ILAactivve Null Fluss
-106312;Lungenersatzverfahren MS ILAactivve DeltaP
-106313;Lungenersatzverfahren Doku KontrSchlsys
-106318;Patient MikrobiologieAntibiogramm
+106280;C2 Pkontrol 
+106281;C2 Apnoezeit 
+106282;C2 Frequenz 
+106283;C2 
+106284;Doku ILAactivve Membranvent
+106285;MS ILAactivve Temp1
+106286;MS ILAactivve Temp2
+106287;ILAactivve Fluss
+106288;MS ILAactivve Drehzahl
+106289;MS ILAactivve P1
+106290;MS ILAactivve P2
+106291;MS ILAactivve P3
+106293;MS ILAactivve P4
+106294;ILAactivve Frequenz
+106295;ILAactivve Systole
+106296;ILAactivve Membranvent
+106297;ILAactivve Fluss
+106298;ILAactivve Frequenz
+106299;ILAactivve Systole
+106300;ILAactivve Blutfluss
+106301;Doku ILAactivve Flushen
+106302;Doku ILAactivve Flussreg
+106303;Doku ILAactivve 
+106307;Doku ILAactivve KontrSchlsys
+106308;Doku KontrAlarmg
+106309;Doku ILAactivve fluss
+106310;Doku ILAactivve Flussregel
+106311;Doku ILAactivve Fluss
+106312;MS ILAactivve DeltaP
+106313;Doku KontrSchlsys
+106318;MikrobiologieAntibiogramm
 106323;Extrakorporaleverfahren DOKU Heizung
-106324;CardioHelpMaquet DOKU InitialisierenVenoeseProbe
-106325;CardioHelpMaquet DOKU Antikoagulation
-106326;CardioHelpMaquet DOKU Flushen
-106327;CardioHelpMaquet MS TemperaturIst
-106328;CardioHelpMaquet MS SvO2
-106329;CardioHelpMaquet MS DeltaP
-106330;CardioHelpMaquet MS DruckVenoes
-106331;CardioHelpMaquet MS DruckArteriell
-106332;CardioHelpMaquet MS Blutfluss
-106333;CardioHelpMaquet ES TemperaturSoll
-106334;CardioHelpMaquet ES Pumpendrehzahl
-106335;CardioHelpMaquet ES Gasfluss
-106336;CardioHelpMaquet ES FiO2
-106337;CardioHelpMaquet VO TemperaturSoll
-106338;CardioHelpMaquet VO Pumpendrehzahl
-106339;CardioHelpMaquet VO Blutfluss
-106340;CardioHelpMaquet VO Gasfluss
-106341;CardioHelpMaquet VO FiO2
-106342;NEV CRRT MS DCMFETTotal
-106343;NEV Apherese MS Multi FiltratDruck
-106344;NEV CRRT MS DCMFBTgesamt
-106345;CardioHelpMaquet DOKU KalibrierenVenoesenMesskopf
-106346;CardioHelpMaquet DOKU HFAnsaetzeAspirierenSpuelen
-106347;CardioHelpMaquet VO Antikoagulation
-106348;CardioHelpMaquet VO Oxygenator
-106349;CardioHelpMaquet DOKU Oxygenator
-106351;CardioHelpMaquet DOKU HCT
-106352;CardioHelpMaquet DOKU HB
-106353;CardioHelpMaquet DOKU OxygenatorTest
-106354;Beatmung MS G5 ProzentMinVol
-106355;Beatmung ES G5 Peep Grenzwert
-106356;Beatmung ES G5 HLI
-106357;Beatmung ES G5 Kein Recruitment
-106358;Beatmung ES G5 passiver Patient
-106359;Beatmung ES G5 Quick Wean
-106360;Beatmung ES G5 SHT
-106361;Beatmung ES G5 ARDS
-106362;Beatmung ES G5 Chron Hyperkapnie
-106363;Beatmung ES G5 Oxygen Target Shift
-106364;Beatmung ES G5 CO2Elim Target Shift
-106365;Beatmung ES G5 SBT Zeitraum bevor
-106366;Beatmung ES G5 SBT Zeitraum nach
-106367;Beatmung ES G5 SBT Support min
-106368;Beatmung ES G5 SBT Frrequenz
-106369;Beatmung ES G5 SBT Psupp max
-106370;Beatmung ES G5 Zeit zw2 SBT
-106371;Beatmung ES G5 ZeitStartSBT
-106378;Hemolung MS Blutfluss
-106379;Hemolung ES Pumpendrehzahl
-106380;Hemolung ES Gasfluss
-106381;Hemolung VO Blutfluss
-106382;Hemolung VO Pumpendrehzahl
-106383;Hemolung VO Gasfluss
-106384;NEV Apherese MS Multi Behandlungs Zeit min
-106385;NEV HD MS 4008onl Rest Zeit min
-106386;NEV HD MS 4008onl SubBolusVolKum ml
-106387;NEV HD MS 4008onl SubVolKum ml
-106388;NEV HD MS 4008onl IsoUFVolKum ml
-106389;NEV HD MS 4008onl BlutvolKum ml
-106390;NEV HD MS 4008HS Rest Zeit min
-106391;NEV HD MS 4008HS IsoUFVolKum ml
-106392;NEV HD MS 4008HS BlutvolKum ml
-106393;NEV CRRT MS Multi Behandlungszeit Aktuell  min
-106394;NEV CRRT MS Multi SubBolusVolKum ml
-106395;NEV CRRT MS Multi SubVolKum ml
-106396;NEV CRRT MS Multi DialysatvolKum ml
-106397;NEV CRRT MS Multi UltrafiltrationlKum ml
-106398;NEV Apherese MS OctoNova PlasmaVolKum ml
-106399;NEV Apherese MS Cobe PlasmaVolKum ml
-106400;NEV Apherese MS Multi PlasmaVolKum ml
-106401;NEV HD MS 4008 HS onl Ultrafiltratmengekum ml
-106402;NEV CRRT MS Multi Bilanz ml
+106324;DOKU InitialisierenVenoeseProbe
+106325;DOKU Antikoagulation
+106326;DOKU Flushen
+106327;MS TemperaturIst
+106328;MS SvO2
+106329;MS DeltaP
+106330;MS DruckVenoes
+106331;MS DruckArteriell
+106332;MS Blutfluss
+106333;Temperatur
+106334;Pumpendrehzahl
+106335;Gasfluss
+106336;FiO2
+106337;Temperatur
+106338;Pumpendrehzahl
+106339;Blutfluss
+106340;Gasfluss
+106341;FiO2
+106342;CRRT MS DCMFETTotal
+106343;Apherese MS FiltratDruck
+106344;CRRT MS DCMFBT
+106345;DOKU 
+106346;DOKU 
+106347;Antikoagulation
+106348;Oxygenator
+106349;DOKU Oxygenator
+106351;DOKU HCT
+106352;DOKU HB
+106353;DOKU OxygenatorTest
+106354;MS G5 ProzentMinVol
+106355;G5 Peep Grenzwert
+106356;G5 HLI
+106357;G5 Kein Recruitment
+106358;G5 passiver 
+106359;G5 Quick Wean
+106360;G5 SHT
+106361;G5 ARDS
+106362;G5 Chron Hyperkapnie
+106363;G5 Oxygen Target Shift
+106364;G5 CO2Elim Target Shift
+106365;G5 SBT Zeitraum 
+106366;G5 SBT Zeitraum 
+106367;G5 SBT Support min
+106368;G5 SBT Frrequenz
+106369;G5 SBT Psupp max
+106370;G5 Zeit zw2 SBT
+106371;G5 ZeitStartSBT
+106378;MS Blutfluss
+106379;Pumpendrehzahl
+106380;Gasfluss
+106381;Blutfluss
+106382;Pumpendrehzahl
+106383;Gasfluss
+106384;Apherese MS Behandlungs Zeit min
+106385;MS Rest Zeit min
+106386;MS SubBolusVolKum 
+106387;MS SubVolKum 
+106388;MS IsoUFVolKum 
+106389;MS BlutvolKum 
+106390;MS Rest Zeit min
+106391;MS IsoUFVolKum 
+106392;MS BlutvolKum 
+106393;CRRT MS Behandlungszeit min
+106394;CRRT MS SubBolusVolKum 
+106395;CRRT MS SubVolKum 
+106396;CRRT MS DialysatvolKum 
+106397;CRRT MS UltrafiltrationlKum 
+106398;Apherese MS OctoNova PlasmaVolKum 
+106399;Apherese MS Cobe PlasmaVolKum 
+106400;Apherese MS PlasmaVolKum 
+106401;MS HS onl Ultrafiltratmengekum 
+106402;CRRT MS Bilanz 
 106403;Hypothermie ArticSun MS Wasserstand
 106404;Hypothermie ArticSun MS Hoechstwassertemp
 106405;Hypothermie ArticSun MS Mindestwassertemp
 106406;Hypothermie ArticSun MS Flussrate
 106407;Hypothermie ArticSun MS Zieltemperatur
-106408;Hypothermie ArticSun ES Wasserziel
-106409;Hypothermie ArticSun ES Hoechsttwassertemp
-106410;Hypothermie ArticSun ES Mindestwassertemp
-106412;Beatmung MS G5 petCO2
-106413;Beatmung MS G5 SpO2
-106414;Beatmung MS G5 VCO2
-106415;Beatmung MS G5 VT IBW
-106468;IABP CARDIOSAVE MS Systole Mittel Diastole
-106469;IABP CARDIOSAVE ES IABPAufblasen
-106470;IABP CARDIOSAVE ES EKG Ableitung
-106471;IABP CARDIOSAVE ES Unterstuetzungsdruck
-106472;IABP CARDIOSAVE ES IABP Frequenz
-106473;IABP CARDIOSAVE ES Triggerauswahl EKG RR Pacer
-106474;IABP CARDIOSAVE ES IABPLeersaugen
-106475;EinweisenderArzt Email
-106476;EinweisenderArzt Fax
-106478;EinweisenderArzt Land
-106479;EinweisenderArzt Ort
-106480;EinweisenderArzt PLZ
-106481;EinweisenderArzt Strasse
-106484;EinweisenderArzt Titel
-106486;Hausarzt Titel
-106517;Waermesysteme BairHugger Doku Temperatur
-106518;Waermesysteme BairHugger Doku Geblaese
-106521;Fall Anamnese Auslandsaufenthalt Nein
-106522;Fall Anamnese Auslandsaufenthalt Ja
-106523;Fall Anamnese Tetanusschutz Nein
-106524;Fall Anamnese Tetanusschutz unbekannt
-106525;Fall Anamnese Tetanusschutz Ja
-106526;Fall Anamnese Schwangerschaft unbekannt
-106527;Fall Anamnese Schwangerschaft Nein
-106528;Fall Anamnese Schwangerschaft Ja
+106408;Hypothermie ArticSun Wasserziel
+106409;Hypothermie ArticSun Hoechsttwassertemp
+106410;Hypothermie ArticSun Mindestwassertemp
+106412;MS G5 petCO2
+106413;MS G5 SpO2
+106414;MS G5 VCO2
+106415;MS G5 VT IBW
+106468;IABP CARDIOSAVE MS Systole tel Diastole
+106469;IABP CARDIOSAVE
+106470;IABP CARDIOSAVE EKG Ableitung
+106471;IABP CARDIOSAVE Unterstuetzungsdruck
+106472;IABP CARDIOSAVE IABP Frequenz
+106473;IABP CARDIOSAVE Triggerauswahl EKG RR Pacer
+106474;IABP CARDIOSAVE IABPLeersaugen
+106496;Verwandtschaftsgrad
+106506;Verwandtschaftsgrad
+106507;Aufgabenkreis
+106508;Aufgabenkreis
+106517;BairHugger Doku Temperatur
+106518;BairHugger Doku Geblaese
+106521;Anamnese Nein
+106522;Anamnese Ja
+106523;Anamnese Tetanusschutz Nein
+106524;Anamnese Tetanusschutz 
+106525;Anamnese Tetanusschutz Ja
+106526;Anamnese Schwangerschaft 
+106527;Anamnese Schwangerschaft Nein
+106528;Anamnese Schwangerschaft Ja
 106592;F MedDoku Entlassmedikation
-106596;Fall Vormedikation Nicht Erfasst
-106597;Fall Vormedikation Keine Vorhanden
-106624;Beatmung ES T1 Apnoezeit Backup
-106625;Beatmung ES T1 ARDS
-106626;Beatmung ES T1 Body Wt
-106627;Beatmung ES T1 Chron Hyperkapnie
-106629;Beatmung ES T1 CO2Elim Target Shift
-106630;Beatmung ES T1 Druckrampe
-106632;Beatmung ES T1 Drucktrigger
-106633;Beatmung ES T1 ETS
-106634;Beatmung ES T1 F CMV
-106635;Beatmung ES T1 F SIMV
-106636;Beatmung ES T1 PEEP CPAP Ptief
-106637;Beatmung ES T1 Psupport
-106638;Beatmung ES T1 Pkontrol Phoch
-106639;Beatmung ES T1 Plateau
-106640;Beatmung ES T1 Ti
-106641;Beatmung ES T1 Sauerstoff
-106646;Pat Allergie vorhanden ActiveX
-106647;Fall Allergie unbekannt
-106648;Fall Allergie nichtErhoben
-106649;Fall Anamnese Auslandsaufenthalt unbekannt
-106650;Patient PeaklowMessung
+106597;Vormedikation 
+106624;T1 Apnoezeit 
+106625;T1 ARDS
+106626;T1 Body Wt
+106627;T1 Chron Hyperkapnie
+106629;T1 CO2Elim Target Shift
+106630;T1 Druckrampe
+106632;T1 Drucktrigger
+106633;T1 ETS
+106634;T1 F CMV
+106635;T1 F SIMV
+106636;T1 PEEP CPAP 
+106637;T1 Psupport
+106638;T1 Pkontrol Phoch
+106639;T1 Plateau
+106640;T1 Ti
+106641;T1 Sauerstoff
+106646;Pat ActiveX
+106649;Anamnese 
+106650;Peaklow
 106651;Score UStix
-106665;Fall Schwangerschaftstest durchgefuehrt
+106665;Schwangerschaftstest durchgefuehrt
 106667;HeartWare Watt Doku
 106668;HeartWare RPM Doku
 106669;HeartWare Blutfluss Doku
 106698;ECMO Kanuelen
-106739;CO Bericht Arztbrief2
-106749;Fall UStix
-106776;ABP1 Messung Ort
-106777;ABP2 Messung Ort
-106779;SpO2 Messung Ort Paediatrie
-106780;SpO2 Messung Ort2 Paediatrie
-106781;LEV Geraeteauswahl
-106783;Beatmung ES Optiflow O2Konzentration
-106784;Beatmung ES Optiflow O2Flow
-106785;Beatmung ES Optiflow PEEP
-107783;NEV PD Doku Einlaufzeit
-107784;NEV PD Doku Auslaufhoehe
-107785;NEV PD Doku Auslaufmenge
-107786;NEV PD Doku Auslaufzeit
-107787;NEV PD Doku Aussehen Dialysat
-107788;NEV PD Doku Bemerkung
-107789;NEV PD Doku Bilanz
-107792;NEV PD Doku Einlaufhoehe
-107793;NEV PD Doku Einlaufmenge
-107794;NEV PD Doku Mischung Lsg1 Lsg2
-107795;NEV PD Doku Schlauchheizung
-107796;NEV PD Doku Verweildauer
-107797;NEV PD Doku Zugang
-107799;NEV PD Doku Zykluszeit
-107800;NEV PD VO Auslaufmenge
-107801;NEV PD VO Auslaufzeit
-107804;NEV PD VO Einlaufhoehe
-107805;NEV PD VO Einlaufmenge
-107806;NEV PD VO Einlaufzeit
-107807;NEV PD VO Mischung Lsg1 Lsg2
-107808;NEV PD VO Verweildauer
-107810;NEV PD VO Zykluszeit
-107811;Beatmung ES Leoni Sauerstoff
-107812;Beatmung ES Leoni Apnoezeit
-107813;Beatmung ES Leoni Pinsp
-107814;Beatmung ES Leoni Psupport
-107815;Beatmung ES Leoni PEEP
-107816;Beatmung ES Leoni FlowInsp
-107817;Beatmung ES Leoni TriggerVol
-107818;Beatmung ES Leoni Frequenz
-107819;Beatmung ES Leoni TInsp
-107820;Beatmung ES Leoni Backup
-107821;Beatmung ES Leoni Flow
-107822;Beatmung ES Leoni CPAP
-107823;Beatmung ES Leoni TApnoe
-107824;Beatmung ES Leoni HFFrequenz
-107825;Beatmung ES Leoni HFAmplitude
-107826;Beatmung ES Leoni IEVerhaeltnis
-107828;Beatmung ES Leoni IRec
-107829;Beatmung ES Leoni Frequenz Rec
-107830;Beatmung ES Leoni PRec
-107831;Beatmung ES Leoni P man
-107832;Beatmung ES Leoni Flush
-107833;Beatmung MS Leoni O2
-107834;Beatmung MS Leoni Ppeak
-107835;Beatmung MS Leoni Pmean
-107836;Beatmung MS Leoni Peep CPAP
-107837;Beatmung MS Leoni Frequenz
-107838;Beatmung MS Leoni MV
-107839;Beatmung MS Leoni Vti
-107840;Beatmung MS Leoni Vte
-107841;Beatmung MS Leoni Freq Spontan
-107842;Beatmung MS Leoni Spont
-107843;Beatmung MS Leoni Leck
-107844;Beatmung MS Leoni Cdyn
-107845;Beatmung MS Leoni Texp
-107846;Beatmung MS Leoni BaseFlow
-107847;Beatmung MS Leoni HFAmp
-107848;Beatmung MS Leoni FreqHZ
-107849;Beatmung MS Leoni DCO2
-107850;Beatmung MS Leoni VTHF
-107851;Beatmung MS Leoni C20C
-107853;Therapiebetten Doku Giraffe ES Luftfeuchtigkeit
-107854;Therapiebetten Doku Giraffe ES Lufttemperatur
-107855;Therapiebetten Doku Giraffe ES O2
-107856;Therapiebetten Doku Giraffe MS Luftfeuchtigkeit
-107857;Therapiebetten Doku Giraffe MS Lufttemperatur
-107858;Therapiebetten Doku Giraffe MS O2
-107859;Therapiebetten VO Giraffe ES Luftfeuchtigkeit
-107860;Therapiebetten VO Giraffe ES Lufttemperatur
-107861;Therapiebetten VO Giraffe ES O2 Konzentration
-107862;Therapiebetten Doku Atom ES Luftfeuchtigkeit
-107863;Therapiebetten Doku Atom ES Lufttemperatur
-107864;Therapiebetten Doku Atom ES O2 Konzentration
-107865;Therapiebetten VO Atom ES Luftfeuchtigkeit
-107866;Therapiebetten VO Atom ES Lufttemperatur
-107867;Therapiebetten VO Atom ES O2 Konzentration
-107868;Beatmung ES T1 Ttief
-107869;Beatmung ES T1 Vt
-107870;Beatmung MS T1 AutoPeep
-107871;Beatmung MS T1 Cstat
-107872;Beatmung MS T1 ExpMinVol
-107873;Beatmung MS T1 ExspFlow
-107874;Beatmung MS T1 fSpontan
-107875;Beatmung MS T1 fTotal
-107876;Beatmung MS T1 IEVerhaeltnis
-107877;Beatmung MS T1 Mvspont
-107878;Beatmung MS T1 InspFlow
-107879;Beatmung MS T1 O2VolProzent
-107880;Beatmung MS T1 P01
-107881;Beatmung MS T1 PeepCPAP
-107882;Beatmung MS T1 petCO2
-107883;Beatmung MS T1 Pinsp
-107884;Beatmung MS T1 Pmittel
-107885;Beatmung MS T1 Pmin
-107886;Beatmung MS T1 Pplateau
-107887;Beatmung MS T1 PTP
-107888;Beatmung MS T1 Rinsp
-107889;Beatmung MS T1 RSB
-107890;Beatmung MS T1 SpO2
-107891;Beatmung MS T1 TI
-107892;Beatmung MS T1 VLeckage
-107893;Beatmung MS T1 VTE
-107894;Beatmung MS T1 Vti
-107895;Beatmung ES T1 IEVerhaeltnis
-107897;Beatmung ES T1 Timaxi
-107898;Beatmung ES T1 Pinsp
-107899;Beatmung ES T1 Flowtrigger
-107900;Beatmung ES T1 PeepCPAP
-107901;Beatmung ES T1 ProzentMinVol
-107902;Beatmung ES T1 Pasvlimit
-107903;Beatmung ES T1 Phoch
-107904;Beatmung ES T1 Ptief
-107905;Beatmung MS T1 VT IBW
-107906;Beatmung MS T1 VCO2
-107907;Beatmung ES Heimbeatmung Frequenz
-107908;Beatmung MS Heimbeatmung MV
-107909;Beatmung MS Heimbeatmung Ppeak
-107910;Beatmung MS Heimbeatmung Pmittel
-107911;Beatmung MS Heimbeatmung VTe
-107912;Beatmung MS Heimbeatmung VTi
-107913;Beatmung ES Heimbeatmung Drucktrigger
-107914;Beatmung ES Heimbeatmung Flowtrigger
-107915;NEV PD VO Zugang
-107927;NEV PD VO Einlaufh
-107928;P ADVOS Doku AbschlussBegruendung
-107929;P ADVOS Doku AbschlussUrteil
-107930;P ADVOS MS ADVOS Ultrafiltratmengekum ml
-107931;P ADVOS MS ADVOS venDruck
-107932;P ADVOS MS ADVOS PreDialysatorDruck
-107933;P ADVOS MS ADVOS artDruck
-107934;P ADVOS MS ADVOS Calcium postFilter
-107935;P ADVOS MS ADVOS Calcium preFilter
-107936;P ADVOS ES ADVOS CalciumFluss
-107937;P ADVOS ES ADVOS CitratFluss
-107938;P ADVOS ES ADVOS UltrafiltratRate
-107939;P ADVOS ES ADVOS Systemtemperatur
-107940;P ADVOS ES ADVOS Blutfluss
-107943;P ADVOS Doku SpuelloesungAntikoag1
-107949;P ADVOS VO ADVOS Systemtemperatur
-107950;P ADVOS VO ADVOS CalciumFluss
-107951;P ADVOS VO ADVOS CitratFluss
-107952;P ADVOS VO ADVOS UFRateMax
-107953;P ADVOS VO ADVOS BlutflussMax
-107954;P ADVOS VO SpuelloesungAntikoag
-107955;P ADVOS VO Antikoagulation
-107956;P ADVOS VO CalciumLoesung
-107957;P ADVOS VO CitratLoesung
-107958;P ADVOS VO Dialysatloesung
-107959;P ADVOS VO Zugang
-107960;P ADVOS VO Filter
-107962;P ADVOS Doku CitratLoesung
-107963;P ADVOS Doku CalciumLoesung
-107964;P ADVOS Doku SpuelloesungAntikoag
-107965;P ADVOS Doku Antikoagulanz
-107966;P ADVOS Doku Dialysatloesung
-107967;P ADVOS Doku Filter
-107968;P ADVOS Doku Zugang11
+106739;CO Bericht
+106749;UStix
+106776;ABP1
+106777;ABP2
+106778;Fototherapie
+106779;SpO2 Paediatrie
+106780;SpO2 2 Paediatrie
+106781;LEV auswahl
+106783;Optiflow O2Konzentration
+106784;Optiflow O2Flow
+106785;Optiflow PEEP
+107783;Doku Einlaufzeit
+107784;Doku Auslaufhoehe
+107785;Doku Auslaufmenge
+107786;Doku Auslaufzeit
+107787;Doku Aussehen Dialysat
+107788;Doku 
+107789;Doku Bilanz
+107790;Doku Dialysat1 
+107791;Doku Dialysat2 
+107792;Doku Einlaufhoehe
+107793;Doku Einlaufmenge
+107794;Doku Mischung Lsg1 Lsg2
+107795;Doku Schlauchheizung
+107796;Doku Verweildauer
+107797;Doku Zugang
+107798;Doku Zugang 
+107799;Doku Zykluszeit
+107800;Auslaufmenge
+107801;Auslaufzeit
+107802;Dialysat1 
+107803;Dialysat2 
+107804;Einlaufhoehe
+107805;Einlaufmenge
+107806;Einlaufzeit
+107807;Mischung Lsg1 Lsg2
+107808;Verweildauer
+107809;Zugang 
+107810;Zykluszeit
+107811;Sauerstoff
+107812;Apnoezeit
+107813;Pinsp
+107814;Psupport
+107815;PEEP
+107816;FlowInsp
+107817;TriggerVol
+107818;Frequenz
+107819;TInsp
+107821;Flow
+107822;CPAP
+107823;TApnoe
+107824;HFFrequenz
+107825;HFAmplitude
+107828;IRec
+107829;Frequenz Rec
+107830;PRec
+107831;P man
+107832;Flush
+107833;MS O2
+107834;MS Ppeak
+107835;MS Pmean
+107836;MS Peep CPAP
+107837;MS Frequenz
+107838;MS MV
+107839;MS i
+107841;MS Freq Spontan
+107842;MS Spont
+107843;MS Leck
+107844;MS Cdyn
+107845;MS Texp
+107846;MS BaseFlow
+107847;MS HFAmp
+107848;MS FreqHZ
+107849;MS DCO2
+107850;MS VTHF
+107851;MS C20C
+107852;Bewegen Bewegungen LagerungKinderklinik
+107853;Doku Luftfeuchtigkeit
+107854;Doku Lufttemperatur
+107855;Doku O2
+107856;Doku MS Luftfeuchtigkeit
+107857;Doku MS Lufttemperatur
+107858;Doku MS O2
+107859;Luftfeuchtigkeit
+107860;Lufttemperatur
+107861;O2 Konzentration
+107862;Doku Atom Luftfeuchtigkeit
+107863;Doku Atom Lufttemperatur
+107864;Doku Atom O2 Konzentration
+107865;Atom Luftfeuchtigkeit
+107866;Atom Lufttemperatur
+107867;Atom O2 Konzentration
+107868;T1 Ttief
+107869;T1 
+107870;MS T1 
+107871;MS T1 Cstat
+107872;MS T1 ExpMinVol
+107873;MS T1 ExspFlow
+107874;MS T1 fSpontan
+107875;MS T1 fTotal
+107876;MS T1 
+107877;MS T1 Mv
+107878;MS T1 InspFlow
+107879;MS T1 O2VolProzent
+107880;MS T1 P01
+107881;MS T1 PeepCPAP
+107882;MS T1 petCO2
+107883;MS T1 Pinsp
+107884;MS T1 Pmittel
+107885;MS T1 Pmin
+107886;MS T1 Pplateau
+107887;MS T1 PTP
+107888;MS T1 Rinsp
+107889;MS T1 RSB
+107890;MS T1 SpO2
+107891;MS T1 TI
+107892;MS T1 VLeckage
+107893;MS T1 VTE
+107894;MS T1 i
+107895;T1 
+107897;T1 Timaxi
+107898;T1 Pinsp
+107899;T1 Flowtrigger
+107900;T1 PeepCPAP
+107901;T1 ProzentMinVol
+107902;T1 Pasvlimit
+107903;T1 Phoch
+107904;T1 
+107905;MS T1 VT IBW
+107906;MS T1 VCO2
+107907;Heimbeatmung Frequenz
+107908;MS Heimbeatmung MV
+107909;MS Heimbeatmung Ppeak
+107910;MS Heimbeatmung Pmittel
+107911;MS Heimbeatmung VTe
+107912;MS Heimbeatmung VTi
+107913;Heimbeatmung Drucktrigger
+107914;Heimbeatmung Flowtrigger
+107915;Zugang
+107927;Einlaufh
+107928;P ADS Doku AbschlussBedung
+107929;P ADS Doku AbschlussUrteil
+107930;P ADS MS ADS Ultrafiltratmengekum
+107931;P ADS MS ADS venDruck
+107932;P ADS MS ADS PreDialysatorDruck
+107933;P ADS MS ADS artDruck
+107934;P ADS MS ADS Calcium postFilter
+107935;P ADS MS ADS Calcium preFilter
+107936;P ADS ADS CalciumFluss
+107937;P ADS ADS CitratFluss
+107938;P ADS ADS UltrafiltratRate
+107939;P ADS ADS Systemtemperatur
+107940;P ADS ADS Blutfluss
+107943;P ADS Doku SpuelloesungAntikoag1
+107948;P ADS ADS Doku
+107949;P ADS ADS Systemtemperatur
+107950;P ADS ADS CalciumFluss
+107951;P ADS ADS CitratFluss
+107952;P ADS ADS UFRateMax
+107953;P ADS ADS BlutflussMax
+107954;P ADS SpuelloesungAntikoag
+107955;P ADS Antikoagulation
+107956;P ADS CalciumLoesung
+107957;P ADS CitratLoesung
+107958;P ADS Dialysatloesung
+107959;P ADS Zugang
+107960;P ADS Filter
+107961;P ADS ADS
+107962;P ADS Doku CitratLoesung
+107963;P ADS Doku CalciumLoesung
+107964;P ADS Doku SpuelloesungAntikoag
+107965;P ADS Doku Antikoagulanz
+107966;P ADS Doku Dialysatloesung
+107967;P ADS Doku Filter
+107968;P ADS Doku Zugang11
 107969;Score Ramsay
-107974;P ADVOS Doku Zugang
-107975;P Beatmung ES C3 Groesse
-107976;P Beatmung ES C3 Body Wt
-107977;P Beatmung ES C3 Druckrampe
-107978;P Beatmung ES C3 Tubuskompensation
-107979;P Beatmung ES C3 Tubusgroesse
-107980;P Beatmung ES C3 Sauerstoff
-107981;P Beatmung ES C3 PEEP CPAP Ptief
-107982;P Beatmung ES C3 ProzentMinVol
-107983;P Beatmung ES C3 Pasvlimit
-107984;P Beatmung ES C3 Pkontrol Phoch
-107985;P Beatmung ES C3 Vt
-107986;P Beatmung ES C3 Pinsp
-107987;P Beatmung ES C3 Plateau
-107988;P Beatmung ES C3 F CMV
-107989;P Beatmung ES C3 F SIMV
-107990;P Beatmung ES C3 Thoch
-107991;P Beatmung ES C3 Ti
-107992;P Beatmung ES C3 Ptief
-107993;P Beatmung ES C3 Timax
-107994;P Beatmung ES C3 Ttief
-107995;P Beatmung ES C3 Psupport
-107996;P Beatmung ES C3 Flowtrigger
-107997;P Beatmung ES C3 ETS
-107998;P Beatmung ES C3 Flow
-107999;P Beatmung ES C3 Oxygen Target Shift
-108000;P Beatmung ES C3 passiver Patient
-108001;P Beatmung ES C3 Kein Recruitment
-108002;P Beatmung ES C3 HLI
-108004;P Beatmung ES C3 Peep GrenzwertMin
-108005;P Beatmung ES C3 Peep GrenzwertMax
-108006;P Beatmung ES C3 Quick Wean
-108007;P Beatmung ES C3 Zeit zw2 SBT
-108008;P Beatmung ES C3 Frequenz Backup
-108009;P Beatmung ES C3 Pkontrol Backup
-108010;P Beatmung ES C3 Backup Vt
-108011;P Beatmung ES C3 Backup Ti
-108012;P Beatmung MS C3 Sauerstoff
-108013;P Beatmung MS C3 VLeckage
-108014;P Beatmung MS C3 VTE
-108015;P Beatmung MS C3 VTi
-108016;P Beatmung MS C3 ExspMinVol
-108017;P Beatmung MS C3 MVspn
-108018;P Beatmung MS C3 fSpontan
-108019;P Beatmung MS C3 fTotal
-108020;P Beatmung MS C3 VCO2
-108021;P Beatmung MS C3 petCO2
-108022;P Beatmung MS C3 Ppeak
-108023;P Beatmung MS C3 Pplateau
-108024;P Beatmung MS C3 Pinsp
-108025;P Beatmung MS C3 Pmittel
-108026;P Beatmung MS C3 PeepCPAP
-108027;P Beatmung MS C3 Pmin
-108028;P Beatmung MS C3 AutoPeep
-108029;P Beatmung MS C3 TE
-108030;P Beatmung MS C3 TI
-108031;P Beatmung MS C3 IEVerhaeltnis
-108032;P Beatmung MS C3 ExspFlow
-108033;P Beatmung MS C3 InspFlow
-108034;P Beatmung MS C3 RCexsp
-108035;P Beatmung MS C3 Rinsp
-108036;P Beatmung MS C3 Cstat
-108037;P Beatmung MS C3 PTP
-108038;P Beatmung MS C3 P01
-108039;P Beatmung MS C3 RSB
-108040;P Beatmung MS C3 WOBimp
-108041;P Beatmung MS C3 Leckage
+107974;P ADS Doku Zugang
+107975;P C3 Groesse
+107976;P C3 Body Wt
+107977;P C3 Druckrampe
+107978;P C3 Tubuskompensation
+107979;P C3 Tubusgroesse
+107980;P C3 Sauerstoff
+107981;P C3 PEEP CPAP
+107982;P C3 ProzentMinVol
+107983;P C3 Pasvlimit
+107984;P C3 Pkontrol Phoch
+107985;P C3
+107986;P C3 Pinsp
+107987;P C3 Plateau
+107988;P C3 F CMV
+107989;P C3 F SIMV
+107990;P C3 Thoch
+107991;P C3 Ti
+107992;P C3
+107993;P C3 Timax
+107994;P C3 Ttief
+107995;P C3 Psupport
+107996;P C3 Flowtrigger
+107997;P C3 ETS
+107998;P C3 Flow
+107999;P C3 Oxygen Target Shift
+108000;P C3 passiver
+108001;P C3 Kein Recruitment
+108002;P C3 HLI
+108004;P C3 Peep GrenzwertMin
+108005;P C3 Peep GrenzwertMax
+108006;P C3 Quick Wean
+108007;P C3 Zeit zw2 SBT
+108008;P C3 Frequenz
+108009;P C3 Pkontrol
+108010;P C3
+108011;P C3 Ti
+108012;P MS C3 Sauerstoff
+108013;P MS C3 VLeckage
+108014;P MS C3 VTE
+108015;P MS C3 VTi
+108016;P MS C3 ExspMinVol
+108017;P MS C3 MVspn
+108018;P MS C3 fSpontan
+108019;P MS C3 fTotal
+108020;P MS C3 VCO2
+108021;P MS C3 petCO2
+108022;P MS C3 Ppeak
+108023;P MS C3 Pplateau
+108024;P MS C3 Pinsp
+108025;P MS C3 Pmittel
+108026;P MS C3 PeepCPAP
+108027;P MS C3 Pmin
+108028;P MS C3
+108029;P MS C3 TE
+108030;P MS C3 TI
+108031;P MS C3
+108032;P MS C3 ExspFlow
+108033;P MS C3 InspFlow
+108034;P MS C3 RC
+108035;P MS C3 Rinsp
+108036;P MS C3 Cstat
+108037;P MS C3 PTP
+108038;P MS C3 P01
+108039;P MS C3 RSB
+108040;P MS C3 WOBimp
+108041;P MS C3 Leckage
 108042;P EctSta
 108043;P RhySta
-108100;Fall Para
-108101;Fall Gravida
-108102;Patient konsanguin nein
-108103;Patient konsanguin ja
-108106;Aufnahme Herkunftsland Mutter
-108111;Aufnahme huefte neg
-108112;Aufnahme huefte pos
+108098;Mutter nein
+108099;Mutter ja
+108100;Para
+108101;Gravida
+108102;konsanguin nein
+108103;konsanguin ja
+108106;Herkunftsland Mutter
+108111;huefte neg
+108112;huefte pos
 108113;Blutgruppe Mutter
-108128;P Aufnahme Schwangerschaft sonstigeString
-108129;Aufnahme Schwangerschaft sonstige
-108130;Aufnahme Schwangerschaft ICSI
-108131;Aufnahme Schwangerschaft IVF
-108132;Aufnahme Schwangerschaft spontan
+108128;P Schwangerschaft String
+108129;Schwangerschaft 
+108130;Schwangerschaft ICSI
+108131;Schwangerschaft IVF
+108132;Schwangerschaft an
 108151;Mutter Geburtsdatum
-108153;Aufnahme Alkohol ja
-108154;Aufnahme Alkohol nein
-108155;Aufnahme Nikotin ja
-108156;Aufnahme Nikotin nein
-108157;Aufnahme Insulin ja
-108158;Aufnahme Insulin nein
-108159;Aufnahme GDM ja
-108160;Aufnahme GDM nein
-108161;Aufnahme Medikamente Schwangerschaft Text
-108162;Aufnahme Probleme Schwangerschaft Text
+108152;Mutter
+108153;Alkohol ja
+108154;Alkohol nein
+108155;Nikotin ja
+108156;Nikotin nein
+108157;Insulin ja
+108158;Insulin nein
+108159;GDM ja
+108160;GDM nein
+108161;Medikamente Schwangerschaft Text
+108162;Probleme Schwangerschaft Text
 108163;Doku Eltern Erkrankungen
 108164;Doku Familienanamnese
-108168;Aufnahme Geburtslage becken
-108169;Aufnahme Geburt Komplikation ja
-108170;Aufnahme Geburtslage schaedel
-108171;Aufnahme Geburt Komplikation nein
+108168;Geburtslage becken
+108169;Geburt Komplikation ja
+108170;Geburtslage schaedel
+108171;Geburt Komplikation nein
 108233;Score Petrussa
-108242;Aufnahme IndikationSectio Text
-108243;Aufnahme Geburt spontan
-108244;Aufnahme Geburt VE
-108245;Aufnahme Sectio Notsectio
-108246;Aufnahme Sectio sekundaer
-108247;Aufnahme Sectio primaer
-108252;Patient Kopfumfang Aufnahme
+108242;IndikationSectio Text
+108243;Geburt an
+108244;Geburt VE
+108245;Sectio Notsectio
+108246;Sectio sekundaer
+108247;Sectio primaer
+108252;Kopfumfang 
 108253;P Apgar Wert10
 108254;P Apgar Wert5
 108255;P Apgar Wert1
-108256;F Sozialanamnese Betreuung Schule Klasse
-108257;F Sozialanamnese Betreuung Schule
-108258;F Sozialanamnese Betreuung Kindergarten
-108259;F Sozialanamnese Betreuung zuhause
-108260;F Sozialanamnese Betreuung Sonstiges
-108274;B Aufnahme Husten ja
-108276;Aufnahme Erstversorgung Text
-108277;Aufnahme Geburtslage andere text
-108278;Aufnahme Geburt Komplikation Text
-108279;Aufnahme Fruchtwasser blutig
-108280;Aufnahme Fruchtwasser erbsbrei
-108281;Aufnahme Fruchtwasser gruen
-108282;Aufnahme Fruchtwasser klar
+108256;F Sozialanamnese Klasse
+108257;F Sozialanamnese
+108258;F Sozialanamnese
+108259;F Sozialanamnese
+108260;F Sozialanamnese Sonstiges
+108274;B Husten ja
+108276;Erstversorgung Text
+108277;Geburtslage text
+108278;Geburt Komplikation Text
+108279;Fruchtwasser blutig
+108280;Fruchtwasser erbsbrei
+108281;Fruchtwasser 
+108282;Fruchtwasser klar
 108283;Komplexbehandlung Kind
 108309;Bezugsperson Pflegekraft
 108377;Score BradenQ
@@ -2244,216 +2317,214 @@
 108410;Score NPASS Sedierung
 108424;Score PRISMIII
 108441;Score SOS
-108458;Score SOS PD
-108478;Pflegekategorie
-108479;Betreuungsverhaeltnis Neonatologie
+108458;Score SOS
+108479;sverhaeltnis Neonatologie
 108483;Score Thompson
 108484;Score Finnigan
-108499;Waermesysteme Waermepaddel Doku Temperatur
+108499;Waermepaddel Doku Temperatur
 108500;Hypothermie Kuehlmatte Doku Temperatur
-108501;Fontanelle Beurteilung
-108502;Patient Kopfumfang bit
+108501;Fontanelle
+108502;Kopfumfang bit
 108503;P NBP liBein
 108504;P NBP reBein
 108505;P NBP liArm
 108506;P NBP reArm
-108507;NBP1 Messung Ort1
+108507;NBP1 1
 108508;tcpO2
 108509;SpO2 2
 108510;Atmung Stimulation
-108521;IstBesucherregelung
-108522;IstSoziale Besonderheit
-108525;Beatmung ES G5 Flow
+108521;Ist
+108522;Besonderheit
+108525;G5 Flow
 108529;Elternanleitung
-108623;P Therapiebetten Doku Lifetherm ES Strahler
-108624;P Therapiebetten VO Lifetherm Temperatur
-108625;P Therapiebetten Doku Lifetherm ES Neigung
-108626;P Therapiebetten VO Lifetherm Neigung
-108627;P Temperaturregulation Variotherm VO Temp
+108623;P Doku Lifetherm Strahler
+108624;P Lifetherm Temperatur
+108625;P Doku Lifetherm Neigung
+108626;P Lifetherm Neigung
+108627;P Temperaturregulation Variotherm Temp
 108628;P Temperaturregulation Variotherm Doku Temp
-108629;P Therapiebetten VO Lifetherm Strahler
-108630;P Therapiebetten Doku Lifetherm ES Temperatur
-108631;Waermesysteme BairHugger VO Geblaese
-108632;Waermesysteme BairHugger VO Temperatur
-108633;P Waermesysteme BarkeyWaermepaddels VO Temperatur
-108634;P Waermesysteme BarkeyWaermepaddels Doku Temp
-108635;P Waermesysteme InfantWarmer Doku Power
-108636;P Waermesysteme InfantWarmer VO Power
-108637;P Waermesysteme InfantWarmer Doku SkinTemp
-108638;P Waermesysteme InfantWarmer VO SkinTemp
+108629;P Lifetherm Strahler
+108630;P Doku Lifetherm Temperatur
+108631;BairHugger Geblaese
+108632;BairHugger Temperatur
+108633;P BarkeyWaermepaddels Temperatur
+108634;P BarkeyWaermepaddels Doku Temp
+108635;P Doku Power
+108636;P Power
+108637;P Doku SkinTemp
+108638;P SkinTemp
 108639;P Temperaturregulation Blankettrol Doku Temp
-108640;P Temperaturregulation Blankettrol VO Temp
+108640;P Temperaturregulation Blankettrol Temp
 108641;Score Finnegan
-108664;P Waermesysteme FisherPaykel VO Prozent
-108665;P Waermesysteme FisherPaykel Doku Prozent
+108664;P FisherPaykel Prozent
+108665;P FisherPaykel Doku Prozent
+108666;P Intervention
 108675;P Antikoerper Mutter
 108676;P Spezifitaet Mutter
 108680;Score NACA
 108684;Score ISS
 108716;P CSF MS LiquoGuard Liquorfluss
-108717;P CSF MS LiqouGuard Pcsf
-108718;P CSF MS LiqouGuard ICP
-108719;P CSF ES LiquoGuard Pset
-108721;P Beatmung MS AnaConDa inspGaskonz
-108722;P Beatmung MS AnaConDa etGaskonz
-108723;P Beatmung MS AnaConDa AF
-108724;P Beatmung MS AnaConDa etCo2
-108725;P Beatmung Doku AnaConDa System
-108726;P Beatmung Doku AnaConDa volAnaesthetika
-108727;P Impella Impella MS LVDruck
-108728;P Impella Impella ES Leistungsstufe
-108729;P Impella Impella MS Flow
-108730;P Impella Impella MS PurgeFlow
-108731;P Impella Impella Spuelloesung
-108732;P Impella Impella Doku Verschlusssystem
-108733;P Impella Impella Doku Ort
-108734;P Impella Impella Doku Zugang
+108717;P CSF MS Pcsf
+108718;P CSF MS ICP
+108719;P CSF LiquoGuard Pset
+108720;P CSF Doku
+108721;P MS inspGaskonz
+108722;P MS etGaskonz
+108723;P MS AF
+108724;P MS etCo2
+108725;P Doku System
+108726;P Doku volAnaesthetika
+108727;P MS LVDruck
+108728;P Leistungsstufe
+108729;P MS Flow
+108730;P MS PurgeFlow
+108731;P Spuelloesung
+108732;P Doku Verschlusssystem
+108733;P Doku
+108734;P Doku Zugang
+108735;P Doku
 108738;P Celestangabe
 108742;P Temperatur DeltaT
 109749;Score ComfortB beatmet Skala
-110743;Score ComfortB spontan Skala
-110752;P Therapiebetten VO DraegerBabytherm Strahler
-110753;P Therapiebetten VO DraegerBabytherm Temperatur
-110754;P Therapiebetten Doku DraegerBabytherm ES Temp
-110755;P Therapiebetten Doku DraegerBabytherm ES Strahler
+110743;Score ComfortB an Skala
+110752;P Strahler
+110753;P Temperatur
+110754;P Doku Temp
+110755;P Doku Strahler
 110757;F Therapieeinschraenkung
-110758;P Beatmung ES Anfeuchtung Temperatur
-110767;F Reakarte Dokumentationszeitpunkt
+110758;P Anfeuchtung Temperatur
+110767;F Reakarte
 110768;F Reakarte VerantwortlicherArzt
-110769;Aufnahme Geburtslage andere
+110769;Geburtslage 
 110770;F Reakarte VerantwortlichePflegekraft
-110771;F Reakarte VerantwortlicherMitarbeiter
-110772;P NEV HD MS 5008onl Rest Zeit min
-110773;P NEV HD MS 5008onl SubBolusVolKum
-110774;P NEV HD MS 5008onl SubVolKum
-110775;P NEV HD MS 5008onl IsoUFVolKum
-110776;P NEV HD MS 5008onl BlutvolKum
-110777;P NEV HD MS 5008onl effBlutfluss
-110778;P NEV HD MS 5008onl Leitfaehigkeit
-110779;P NEV HD MS 5008onl SollNa
-110780;P NEV HD MS 5008onl TMP
-110781;P NEV HD MS 5008onl venDruck
-110782;P NEV HD MS 5008onl artDruck
-110783;P NEV HD MS 5008 onl Ultrafiltratmengekum ml
-110784;P NEV HD ES 5008onl Fluss
-110785;P NEV HD ES 5008onl Temperatur
-110786;P NEV HD ES 5008onl Bicarbonat
-110787;P NEV HD ES 5008onl SollNa
-110788;P NEV HD ES 5008onl StartNa
-110789;P NEV HD ES 5008onl BasisNa
-110790;P NEV HD ES 5008onl NaProfil
-110791;P NEV HD ES 5008onl UFProfil
-110792;P NEV HD ES 5008onl Substituatbolus
-110793;P NEV HD ES 5008onl Substituatrate
-110794;P NEV HD ES 5008onl Substituat
-110795;P NEV HD ES 5008onl BlutflussSNPumpe
-110796;P NEV HD ES 5008onl Blutfluss
-110797;P NEV HD ES 5008onl IsoUFRate
-110798;P NEV HD ES 5008onl IsoUFZeit
-110799;P NEV HD ES 5008onl IsoUFZiel
-110800;P NEV HD ES 5008onl UFRate
-110801;P NEV HD ES 5008onl UFZiel
-110802;P NEV HD ES 5008onl Dialyse Zeit
-110803;NEV HD ES 4008onl IsoUFRate
-110804;P NEV HD VO 5008onl Fluss
-110805;P NEV HD VO 5008onl Temperatur
-110806;P NEV HD VO 5008onl Bicarbonat
-110807;P NEV HD VO 5008onl SollNa
-110808;P NEV HD VO 5008onl StartNa
-110809;P NEV HD VO 5008onl NaProfil
-110810;P NEV HD VO 5008onl UFProfil
-110811;P NEV HD VO 5008onl Substituatbolus
-110812;P NEV HD VO 5008onl Substituatrate
-110813;P NEV HD VO 5008onl BlutflussSNPumpe
-110814;P NEV HD VO 5008onl BlutflussMax
-110815;P NEV HD VO 5008onl IsoUFZiel
-110816;P NEV HD VO 5008onl IsoUFZeit
-110817;P NEV HD VO 5008onl UFZiel
-110818;P NEV HD VO 5008onl Dialyse Zeit
-110820;P Beatmung ES C3 PEEP CPAP
-110821;P Beatmung ES C3 ProzentVol
-110822;P Beatmung ES C3 Pkontrol
-110823;P Beatmung ES C3 Phoch
-110824;P Beatmung ES C3 Pmax
-110826;P Beatmung ES C3 Freq
-110827;Beatmung ES C3 F SIMV
-110828;P Beatmung ES C3 IEVerhaeltnis
-110829;P Beatmung ES C3 Drucktrigger
-110830;P Beatmung ES C3 Apnoezeit Backup
-110831;P Beatmung ES C3 IEVerhaeltnis Backup
-110832;P Beatmung Atemgas
-110833;P Beatmung ES 3100A BiasFlow
-110834;P Beatmung ES 3100A Frequenz
-110835;P Beatmung ES 3100A Inspirationszeit
-110836;P Beatmung ES 3100A Leistung
-110837;P Beatmung ES 3100A Mitteldruck
-110838;P Beatmung ES 3100A O2Konzentration
-110839;P Beatmung MS 3100A Amplitude
-110840;P Beatmung MS 3100A O2Konzentration
-110841;P Beatmung ES CoughAssist Verschreibung
-110842;P Beatmung ES CoughAssist CoughTrak
-110843;P Beatmung ES CoughAssist Einatmungsdruck
-110844;P Beatmung ES CoughAssist Einatmungsflow
-110845;P Beatmung ES CoughAssist Einatmungszeit
-110846;P Beatmung ES CoughAssist Ausatemdruck
-110847;P Beatmung ES CoughAssist Ausatemzeit
-110848;P Beatmung ES CoughAssist Pausendauer
-110849;P Beatmung ES CoughAssist Oszillation
-110850;P Beatmung ES CoughAssist Frequenz
-110851;P Beatmung ES CoughAssist Amplitude
-110852;P Beatmung ES RTX FrequencyVibratin
-110853;P Beatmung ES RTX InspPressure
-110854;P Beatmung ES RTX Time
-110855;P Beatmung ES RTX FrequencyCough
-110856;P Beatmung ES RTX ExpPressure
-110857;P Beatmung ES RTX IE
-110858;P Beatmung ES RTX TimeCough
-110859;P Beatmung ES RTX RepeatCount
-110860;P Beatmung ES RTX MinBackup
-110861;P Beatmung ES RTX TriggerSource
-110862;P Beatmung ES RTX Sensitivity
-110863;P Beatmung ES RTX Frequenz
-110864;P Beatmung ES RTX NegativePressure
-110865;Beatmung Doku Heimbeatmung Beatmungsmodus
-110866;Beatmung ES Heimbeatmung Sauerstoff
-110867;Beatmung ES Heimbeatmung Psupport
-110868;Beatmung ES Heimbeatmung Pcontrol
-110869;Beatmung ES T1 Thoch
-110870;Beatmung ES T1 Frequenz Backup
-110871;Beatmung ES T1 passiver Patient
-110872;Beatmung ES T1 Oxygen Target Shift
-110873;Beatmung ES T1 Kein Recruitment
-110874;Beatmung ES T1 HLI
-110875;Beatmung ES T1 Quick Wean
-110876;Beatmung ES T1 Zeit zw2 SBT
-110877;Beatmung ES T1 ZeitStartSBT
-110878;Beatmung ES T1 Peep Grenzwert
-110879;Beatmung ES T1 Pmax
-110880;Beatmung ES Heimbeatmung Vt
-110881;Beatmung ES Heimbeatmung Ti
-110882;Beatmung ES Heimbeatmung Timax
-110883;Beatmung ES Heimbeatmung Frequenz Backup
-110884;Beatmung ES Heimbeatmung Ti Backup
-110885;Beatmung ES Heimbeatmung Pkontrol Backup
-110886;P Patient Gewicht WaageBezeichnung
-110890;P Beatmung ES C3 SHT
-110891;P Beatmung ES C3 ARDS
-110892;P Beatmung ES C3 chronHyperkapnie
-110893;P Beatmung ES C3 CO2Elim Target Shift
-110894;P Beatmung ES C3 Peep Grenzwert
-110895;P Beatmung ES C3 ZeitStartSBT
-110896;P Beatmung ES C3 SBT Frequenz
-110897;P Beatmung ES C3 SBT Support min
-110898;P Beatmung ES C3 SBT Psupp max
-110899;P Beatmung ES C3 SBT Zeitraum bevor
-110900;P Beatmung ES C3 SBT Zeitraum nach
-110901;P Beatmung MS C3 ProzentMinVol
-110904;P Patient Gewicht Differenz
-110913;Beatmung ES Servoi Psupport
-110914;Beatmung ES Servoi Pkontrol Backup
-110915;Beatmung MS Servoi I E
-110916;Beatmung ES Servoi Pkontrol Phoch
-110917;Beatmung MS Servoi Ti Tges
+110771;F Reakarte
+110772;P MS Rest Zeit min
+110773;P MS SubBolusVolKum
+110774;P MS SubVolKum
+110775;P MS IsoUFVolKum
+110776;P MS BlutvolKum
+110777;P MS effBlutfluss
+110778;P MS Leitfaehigkeit
+110779;P MS Na
+110780;P MS
+110781;P MS venDruck
+110782;P MS artDruck
+110783;P MS onl Ultrafiltratmengekum
+110784;P Fluss
+110785;P Temperatur
+110786;P Bicarbonat
+110787;P Na
+110788;P StartNa
+110789;P BasisNa
+110790;P NaProfil
+110791;P UFProfil
+110792;P Substituatbolus
+110793;P Substituatrate
+110794;P Substituat
+110796;P Blutfluss
+110797;P IsoUFRate
+110798;P IsoUFZeit
+110800;P UFRate
+110801;P UFZiel
+110802;P Dialyse Zeit
+110803;IsoUFRate
+110804;P Fluss
+110805;P Temperatur
+110806;P Bicarbonat
+110807;P Na
+110808;P StartNa
+110809;P NaProfil
+110810;P UFProfil
+110811;P Substituatbolus
+110812;P Substituatrate
+110814;P BlutflussMax
+110816;P IsoUFZeit
+110817;P UFZiel
+110818;P Dialyse Zeit
+110820;P C3 PEEP CPAP
+110821;P C3 ProzentVol
+110822;P C3 Pkontrol
+110823;P C3 Phoch
+110824;P C3 Pmax
+110826;P C3 Freq
+110827;C3 F SIMV
+110828;P C3
+110829;P C3 Drucktrigger
+110830;P C3 Apnoezeit
+110831;P C3
+110832;P Atemgas
+110833;P BiasFlow
+110834;P Frequenz
+110835;P Inspirationszeit
+110836;P Leistung
+110837;P teldruck
+110838;P O2Konzentration
+110839;P MS Amplitude
+110840;P MS O2Konzentration
+110841;P CoughAssist Verschreibung
+110842;P CoughAssist CoughTrak
+110843;P CoughAssist Einatmungsdruck
+110844;P CoughAssist Einatmungsflow
+110845;P CoughAssist Einatmungszeit
+110846;P CoughAssist Ausatemdruck
+110847;P CoughAssist Ausatemzeit
+110848;P CoughAssist Pausendauer
+110849;P CoughAssist Oszillation
+110850;P CoughAssist Frequenz
+110851;P CoughAssist Amplitude
+110852;P RTX FrequencyVibratin
+110853;P RTX InspPressure
+110854;P RTX Time
+110855;P RTX FrequencyCough
+110856;P RTX ExpPressure
+110857;P RTX
+110858;P RTX TimeCough
+110859;P RTX RepeatCount
+110860;P RTX Min
+110861;P RTX TriggerSource
+110862;P RTX Sensitivity
+110863;P RTX Frequenz
+110864;P RTX NegativePressure
+110865;Doku Heimbeatmung smodus
+110866;Heimbeatmung Sauerstoff
+110867;Heimbeatmung Psupport
+110868;Heimbeatmung Pcontrol
+110869;T1 Thoch
+110870;T1 Frequenz 
+110871;T1 passiver 
+110872;T1 Oxygen Target Shift
+110873;T1 Kein Recruitment
+110874;T1 HLI
+110875;T1 Quick Wean
+110876;T1 Zeit zw2 SBT
+110877;T1 ZeitStartSBT
+110878;T1 Peep Grenzwert
+110879;T1 Pmax
+110880;Heimbeatmung 
+110881;Heimbeatmung Ti
+110882;Heimbeatmung Timax
+110883;Heimbeatmung Frequenz 
+110884;Heimbeatmung Ti 
+110885;Heimbeatmung Pkontrol 
+110886;P Gewicht WaageBezeichnung
+110890;P C3 SHT
+110891;P C3 ARDS
+110892;P C3 chronHyperkapnie
+110893;P C3 CO2Elim Target Shift
+110894;P C3 Peep Grenzwert
+110895;P C3 ZeitStartSBT
+110896;P C3 SBT Frequenz
+110897;P C3 SBT Support min
+110898;P C3 SBT Psupp max
+110899;P C3 SBT Zeitraum
+110900;P C3 SBT Zeitraum
+110901;P MS C3 ProzentMinVol
+110904;P Gewicht
+110913;Servoi Psupport
+110914;Servoi Pkontrol 
+110915;MS Servoi I E
+110916;Servoi Pkontrol Phoch
+110917;MS Servoi Ti Tges
 110919;LAP1
 110920;RCWI
 110921;RAP1
@@ -2466,77 +2537,78 @@
 110928;P Temperatur Oesophagial
 110929;P Temperatur Tympanal
 110930;P Temperatur Rektal
-110931;P Temperatur Messung OrtAllg
+110931;P Temperatur Allg
 110932;TempDelta
 110933;P Temperatur Kern
 110934;P Temperatur generic
 110935;ART
-110936;P Temperatur Messung OrtKern
-110937;P Beatmung MS AnaConDa MAC
-110938;P Beatmung MS NO2
-110939;P Beatmung ES NO
+110936;P Temperatur Kern
+110937;P MS MAC
+110938;P MS NO2
+110939;P NO
 110940;P CSF MS LiquoGuard Fuellstand
-110941;P CSF ES LiquoGuard Vset
+110941;P CSF LiquoGuard Vset
 110970;F Doku Mutter Erkrankungen
 110971;F Doku Vater Erkrankungen
 110976;Score FOUR
-112006;P INVOS Doku rSO2 links
-112007;P INVOS Doku rSO2 rechts
-112008;P VO Indikation cerebraleOxySyst
-112010;F spezGew Refraktometer
-112014;P Beatmung ES Option intelli
+112004;P CerebraleOxymetrie Doku
+112005;P CerebraleOxymetrie
+112006;P INS Doku rSO2 links
+112007;P INS Doku rSO2
+112008;P Indikation cerebraleOxySyst
+112010;F spezGew Refrmeter
+112014;P intelli
 112017;P SEF
 112018;P SEF1
 112019;P SEF2
 112020;P TP1
 112021;P TP2
-112042;P AssistenzBeiPflegerischenMassnahmen
 113045;P EEG Monitoring
-113046;Beatmung ES T1 Flow
-113047;NEV CRRT ES Multi praeF
-113048;NEV CRRT VO Multi praeF
-114052;NEV CRRT MS Multi praeF
-115052;P Betreuungsverhaeltnis
-117068;Patient Risikofaktoren
-117069;Patient schwierigerAtemweg
+113046;T1 Flow
+113047;CRRT praeF
+113048;CRRT praeF
+114052;CRRT MS praeF
+115052;P sverhaeltnis
+117068;Risikofren
+117069;schwierigerAtemweg
 117126;Score CAM ICU Punktwert GesamtAktualisierung2020
 117131;DIVI Visite
-117140;Beatmung ES Servoi Flow
-117151;Patient SpO2po
-117152;Patient SpO2pr
-117153;Patient SpO2r
-117154;Patient SpO2 l
-117155;P NEV HD MS Genius UF Time
-117156;P NEV HD MS Genius Leitfaehigkeit
-117157;P NEV HD MS Genius TemperaturIst
-117158;P NEV HD MS Genius Systempressure
-117159;P NEV HD MS Genius Ultrafiltratmengekum
-117160;P NEV HD ES Genius UFGoal
-117161;P NEV HD ES Genius TemperaturZiel
-117162;P NEV HD ES Genius UFRate
-117163;P NEV HD ES Genius Blutfluss
-117164;P HD Doku Genius Geraetenummer
-117165;P NEV HD Doku Genius DSKonzentrat
-117166;P NEV HD Doku Genius HCKonzentrat
-117167;P Beatmung ES O2Flow
-117168;P Beatmung ES O2Konzentration
-117169;P Beatmung ES PeepCPAPPtief
-117170;Datenuebernahme TestvariableDec
+117140;Servoi Flow
+117151;SpO2po
+117152;SpO2pr
+117153;SpO2r
+117154;SpO2 l
+117155;P MS UF Time
+117156;P MS Leitfaehigkeit
+117157;P MS TemperaturIst
+117158;P MS Systempressure
+117159;P MS Ultrafiltratmengekum
+117160;P UFGoal
+117161;P TemperaturZiel
+117162;P UFRate
+117163;P Blutfluss
+117164;P Doku nummer
+117165;P Doku DSKonzentrat
+117166;P Doku HCKonzentrat
+117167;P O2Flow
+117168;P O2Konzentration
+117169;P PeepCPAP
+117170;Datennahme
 117176;P Weaning Abbruchgrund
 117177;P Weaning
 117178;P Spontanatemtest
-117179;P SpontanatemtestVoraussetzung
 117180;F Weaning
-117217;Datenuebernahme TestvariableBarVal
-117218;Beatmung ES G5 Body Weight
-117221;Score Rankin
+117217;Datennahme TestvariableBarVal
+117218;G5 Body Weight
+117219;ICU IMC
+117221;Score
 117225;Score Race
-117232;P LEV ES BFQ1
-117233;P LEV ES BFQ2
-117234;P LEV ES BFQ3
+117232;P LEV BFQ1
+117233;P LEV BFQ2
+117234;P LEV BFQ3
 117235;P LEV Doku LokalisationBFQ1
 117236;P LEV Doku LokalisationBFQ2
 117237;P LEV Doku LokalisationBFQ3
 117238;F BildstudienCheck Temp
-117241;P PtiO2 Decimal
-117242;NEV CRRT ES Multi FilterO2Flow
+117241;P PtiO2
+117242;CRRT FilterO2Flow
