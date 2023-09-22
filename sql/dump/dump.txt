@@ -1,0 +1,1 @@
+pg_dump -U her11a_admin -d staging_test --schema=loinc_copra > dump_copra_loinc.sql
