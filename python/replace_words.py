@@ -10,11 +10,20 @@ def replace(filePath, to_delete, subs, flags=0):
     file.write(file_contents)
 
 file_path = "/home/ahodelin/git_repos/copra_loinc/csv/test_delete_words/loinc_long_common_name.csv"
-to_delete_1path=r"\[.+\]"
 
-to_delete_2path=r"(\s|\W+)(Abgegebene|ähnlicher|ähnliches|aktuell|aktuelle|aktuellen|aktueller|alle|allen|Alter|am|an|and|andere|Andere|anderer|Anderes|Angabe|angepasst|Anhang|auf|Aufbaus|aufgenommen|Aufnahme|bei|bestimmten|dem|der|des|die|einem|einer|eines|Einheiten|Einsatz|Fall|for|für|gesamt|Gesamt|hoch|Hoechst|hohe|Hohe|hoher|im|in|ist|klein|Klein|kleine|kleines|Kleines|Klinische|Letzte|letzten|Liste|mg|mit|New|ng|nicht|Nicht|Ob|oberem|oder|of|os|Patient|Patienten|Patientin|per|sp|sv|über|Überwachung|Uhr|unbekannter|unbestimmtem|und|unter|unteren|unterer|Untersuchung|Untersuchungen|voller|Volumen|vom|von|vor|während|wegen|werden|zu|Zu|zum|zur|µg|Dokumentation|ohne|XXX|nach)(\s|\W)"
+to_delete_1path=r"\[.+\]| \d+|--\d+"
+
+to_delete_2path=r"(\b)(Abgegebene|ähnlicher|ähnliches|aktuell|aktuelle|aktuellen|aktueller|alle|allen|Alter|am|an|and|andere|Andere|anderer|Anderes|Angabe|angepasst|Anhang|auf|Aufbaus|aufgenommen|Aufnahme|bei|bestimmten|dem|der|des|die|einem|einer|eines|Einheiten|Einsatz|Fall|for|für|gesamt|Gesamt|hoch|Hoechst|hohe|Hohe|hoher|im|in|ist|klein|Klein|kleine|kleines|Kleines|Klinische|Letzte|letzten|Liste|mg|mit|New|ng|nicht|Nicht|Ob|oberem|oder|of|os|Patient|Patienten|Patientin|per|sp|sv|über|Überwachung|Uhr|unbekannter|unbestimmtem|und|unter|unteren|unterer|Untersuchung|Untersuchungen|voller|Volumen|vom|von|vor|während|wegen|werden|zu|Zu|zum|zur|µg|Dokumentation|ohne|XXX|nach)(\b)"
+
+to_delete_whiteSpace = r"  +"
+
 subs=" "
 
+for firstPath in range(2):
+  replace(file_path, to_delete_1path, subs)
 
-replace(file_path, to_delete_1path, subs)
-replace(file_path, to_delete_2path, subs)
+for secondPath in range(10):
+  replace(file_path, to_delete_2path, subs)
+
+replace(file_path, to_delete_whiteSpace, subs)
+

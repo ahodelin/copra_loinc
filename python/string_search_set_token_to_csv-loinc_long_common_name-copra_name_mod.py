@@ -30,6 +30,6 @@ for loincElement in loincFile.index:
   for copraElement in copraFile.index:
     accuracy=fuzz.token_set_ratio(loincFile['loincPar'][loincElement], copraFile['copraPar'][copraElement])
     #print(accuracy, type(accuracy))
-    if accuracy >= 50:
+    if accuracy >= 60:
       print(f'{loincElement};{copraElement};{loincFile["loincPar"][loincElement]};{copraFile["copraPar"][copraElement]};{accuracy}')
       # print(loincElement, ';', copraElement, ';', loincFile['loincPar'][loincElement], ';', copraFile['copraPar'][copraElement], ';', accuracy)

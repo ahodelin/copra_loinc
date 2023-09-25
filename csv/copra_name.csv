@@ -422,8 +422,6 @@
 102156;Atemform
 102157;Wasserhaushalt
 102158;Koerpertemperatur
-102159;Urin
-102160;Stuhl
 102161;IABP
 102162;PICCO ABP
 102163;PICCO ZVD
@@ -607,7 +605,6 @@
 102688;SubBolus
 102689;SpueloesungAntikoagulanz
 102690;Dialysatloesung
-102691;Plasma
 102692;UFProfil
 102695;Dialysekonzentrat
 102696;Abnahme
@@ -635,7 +632,6 @@
 102737;Doku SpueloesungAntikoagulan
 102738;Mess Leitfähigkeit
 102739;SubstituatRate
-102740;Plasma
 102741;Spueldauer
 102742;CitratLoesung
 102743;Calcium
@@ -838,9 +834,7 @@
 103063;Plasmavolumen
 103064;BM25 Plasmavolumen
 103065;Plasmavolumen
-103066;Plasma
 103067;BM25 Plasmavolumen
-103068;BM25 Plasma
 103069;ADM Plasmavolumen
 103070;ADM PlasmaAustausch
 103071;MS PlasmavolumenKumulativ

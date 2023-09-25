@@ -1,6 +1,7 @@
 drop schema if exists loinc_copra cascade;
 create schema if not exists loinc_copra;
 
+
 create table if not exists loinc_copra.from_script(
   loinc_num varchar,
   copra_id bigint,
@@ -12,6 +13,8 @@ create table if not exists loinc_copra.from_script(
 copy loinc_copra.from_script 
 from '/home/ahodelin/git_repos/copra_loinc/csv/results/loinc_long_common_name-copra_name.csv'
 csv delimiter E';' quote '"';
+
+drop table loinc_copra.loinc_long_common_name_copra_name;
 
 select loinc_num, copra_id, loinc_entity loinc_long_common_name, copra_entity copra_name, accuracy, false is_match
 into loinc_copra.loinc_long_common_name_copra_name
@@ -25,6 +28,7 @@ truncate loinc_copra.from_script;
 copy loinc_copra.from_script 
 from '/home/ahodelin/git_repos/copra_loinc/csv/results/loinc_long_common_name-copra_description.csv'
 csv delimiter E';' quote '"';
+
 
 
 select loinc_num, copra_id, loinc_entity loinc_long_common_name, copra_entity copra_description, accuracy
