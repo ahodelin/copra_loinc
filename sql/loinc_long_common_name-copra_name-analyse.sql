@@ -1,208 +1,280 @@
--- Analyse by loinc_long_common_name & copra_name 
+select * from loinc_copra.loinc_long_common_name_copra_name;
 
--- Diagnostik
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnostik';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnostik';
+select 
+  l."LOINC_NUM", 
+  c.id,
+  l."LONG_COMMON_NAME",
+  c.name,
+  m.accuracy,
+  m.is_match
+from loinc_copra.loinc_long_common_name_copra_name m
+join loinc.loinc_german_translation l
+  on l."LOINC_NUM" = m.loinc_num 
+join copra.co6_config_variables c
+  on c.id = m.copra_id 
+order by c.name;
 
--- Fall
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Fall';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Fall';
+update loinc_copra.loinc_long_common_name_copra_name m
+set loinc_long_common_name = l."LONG_COMMON_NAME"
+from loinc.loinc_german_translation l
+where l."LOINC_NUM" = m.loinc_num
 
--- Diagnose
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'Diagnose';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
-where copra_name = 'Diagnose' 
-and loinc_num not in ('29308-4', '29548-5');
-
--- SV
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SV';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SV';
-
-
--- SM Empfindlichkeit
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SM Empfindlichkeit';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name = 'SM Empfindlichkeit';
-
--- ABP1, ABP2
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name like 'ABP%';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_id in (106777, 106776);
-
--- Allergie
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name like 'Allergie';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_id = 100065;
-
--- ...
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
-where copra_id in (102792, 102795, 108100, 102575, 104757, 106283, 108155, 108156, 108157, 108158, 108106, 108112, 108111, 108242, 100243, 102539, 108171, 108169, 108282, 108281, 108280, 102057, 110935, 103751, 100132, 108510, 105041, 108153, 108154, 108276, 108279, 108159, 108160, 108247, 103408);
-
--- Aufnahme Geburt
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp 
-where copra_name like 'Aufnahme Geburt%';
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where copra_name like 'Aufnahme Geburt%'
-
--- akt. Schwangerschaftwoche
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp 
-where copra_id = 100037 and loinc_num not in ('82810-3', '90767-5')
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where accuracy < 61;
-
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp order by accuracy ;
-----------------------------------
-
-alter table loinc_copra.loinc_long_common_name_copra_name
-add column is_match boolean default false;
-
-select * from loinc_copra.loinc_long_common_name_copra_name
-where copra_id in (select copra_id from loinc_copra.loinc_long_common_name_copra_description_tmp) 
-and loinc_num in (select loinc_num from loinc_copra.loinc_long_common_name_copra_description_tmp)
-order by copra_name ;
-
---select * from loinc_copra.loinc_long_common_name_copra_name_tmp where loinc_long_common_name = 'Anamnese' and loinc_num <> '35090-0';
+update loinc_copra.loinc_long_common_name_copra_name m
+set copra_name = c.name
+from copra.co6_config_variables c
+where c.id = m.copra_id;
 
 
-select count(accuracy), accuracy
-from loinc_copra.loinc_long_common_name_copra_name_tmp
-group by accuracy
-order by accuracy desc;
+select * into loinc_copra.loinc_long_common_name_copra_name_analyse from loinc_copra.loinc_long_common_name_copra_name order by copra_name ;
+
+select * from loinc_copra.loinc_long_common_name_copra_name_analyse;
+
+alter table loinc_copra.loinc_long_common_name_copra_name_analyse
+add column id serial not null;
 
 
-
--- ^ABP1, ABP2
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name like 'ABP%'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name like 'ABP%';
-
-
--- ^AICD
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name like 'AICD%'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name like 'AICD%';
-
--- ^Allergie
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name like 'Allergie%'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name like 'Allergie%';
-
--- ^Anfeuchtung, ^Angehoerige, ^Arztbriefunterstuetzung
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Anfeuchtung|^Angehoerige|^Arztbriefunterstuetzung'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Anfeuchtung|^Angehoerige|^Arztbriefunterstuetzung'
-;
-
--- ^Assistenz
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Assistenz'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Assistenz'
-;
-
--- ^AT+space
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^AT '
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^AT '
-;
-
--- ^Atemwege
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Atemwege'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Atemwege'
-;
-
--- ^AtmenKreislaufTemp, ^AtmenKreislTemp
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^AtmenKreislaufTemp|^AtmenKreislTemp'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^AtmenKreislaufTemp|^AtmenKreislTemp'
-;
-
--- ^Atmung
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Atmung' --and loinc_long_common_name ~* 'atmung'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Atmung'
-;
-
--- ^Aufnahme Viruslast
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme Viruslast'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme Viruslast'
+update loinc_copra.loinc_long_common_name_copra_name
+set is_match = true
+where accuracy = 100
+and loinc_num = '35090-0'
+and copra_id = 106649
+and not is_match
 ;
 
 
--- ^Aufnahme Schwangerschaft
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme Schwangerschaft'
+
+update loinc_copra.loinc_long_common_name_copra_name
+set is_match = true
+where accuracy = 100
+and loinc_num in ('39156-5', '59574-4')
+and copra_id = 101473
+and not is_match
 ;
 
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme Schwangerschaft' and loinc_long_common_name !~ 'Schwangerschaftsstatus'
-;
-
--- ^Aufnahme Abdomen
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme Abdomen'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme Abdomen'
-;
-
-
--- ^Aufnahme AKS
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme AKS'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme AKS'
-;
-
--- ^Aufnahme Alkohol
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme Alkohol'
-;
-
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme Alkohol'
+update loinc_copra.loinc_long_common_name_copra_name
+set is_match = true
+where accuracy = 100
+and loinc_num in ('12457-8')
+and copra_id in (103124,103045 )
+and not is_match
 ;
 
 
--- ^Aufnahme allgemein
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme allgemein'
-;
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2;
 
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp
-where copra_name ~ '^Aufnahme allgemein'
-;
---------------------------
-select * from loinc_copra.loinc_long_common_name_copra_name_tmp order by copra_name;
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 656;
 
-delete from loinc_copra.loinc_long_common_name_copra_name_tmp where accuracy < 50;
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 657;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 669;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 671;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 674;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 675;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 736;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1069;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1102;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1118;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1121;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1124;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1125;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1129;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1131;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1145;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1191;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1300;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 1302;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2443;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2449;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2478;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2528;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2781;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2819;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2839;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 2857;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3031;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3059;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3273;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3289;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3326;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3350;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3490;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3729;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3744;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3745;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id between 3746 and 3747;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3771;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3773
+or id = 3776;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3944;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 3993;
+
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 4084;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id in (4093, 4094, 4100, 4101, 4106, 4107, 4109, 4207);
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 4210;
+
+update loinc_copra.loinc_long_common_name_copra_name_analyse
+set is_match = true 
+where id = 4958;
+
+
+
+select loinc_long_common_name, copra_name, accuracy, is_match, id 
+from loinc_copra.loinc_long_common_name_copra_name_analyse
+where not is_match
+and id > 4958
+order by id;
+
+select * from loinc_copra.loinc_long_common_name_copra_name_analyse where is_match;
+
