@@ -22884,7 +22884,6 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 30121-8	103224	Kolonienanzahl [#/Volumen] in Dialysat	Nierenverfahren_VO_4008onl_Dialysekonzentrat	60	f	3347
 6683-7	103218	Reptilasezeit	Nierenverfahren_VO_4008onl_Dialysezeit	67	f	3348
 12457-8	103218	Volumen von Dialysat	Nierenverfahren_VO_4008onl_Dialysezeit	74	f	3349
-47842-0	103218	Sammelzeitraum von Dialysat	Nierenverfahren_VO_4008onl_Dialysezeit	65	f	3350
 15207-4	103228	Natrium [Mol/Volumen] in Stuhl	Nierenverfahren_VO_4008onl_NatriumProfil	62	f	3351
 14055-8	103228	Natrium [Mol/Masse] in Stuhl	Nierenverfahren_VO_4008onl_NatriumProfil	62	f	3352
 39787-7	103228	Natrium [Mol/Volumen] in Peritonealdialysat	Nierenverfahren_VO_4008onl_NatriumProfil	62	f	3353
@@ -23024,7 +23023,6 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 19072-8	103054	Calcium.ionisiert [Mol/Volumen] angepasst an pH 7,4 in Serum oder Plasma	Nierenverfahren_VO_Multi_Calcium	100	f	3487
 41645-3	103054	Calcium.ionisiert [Mol/Volumen] in venösem Blut	Nierenverfahren_VO_Multi_Calcium	100	f	3488
 1996-8	103054	Calcium [Mol/Volumen] in Blut	Nierenverfahren_VO_Multi_Calcium	100	f	3489
-46093-1	103054	Calcium.ionisiert [Mol/Volumen] in Dialysat	Nierenverfahren_VO_Multi_Calcium	100	f	3490
 2004-0	103054	Calcium [Mol/Volumen] in Urin	Nierenverfahren_VO_Multi_Calcium	100	f	3491
 16519-1	103054	Calcium [Mol/Volumen] in Serum oder Plasma --10 Minuten nach XXX Stimulation	Nierenverfahren_VO_Multi_Calcium	100	f	3492
 2000-8	103054	Calcium [Mol/Volumen] in Serum oder Plasma	Nierenverfahren_VO_Multi_Calcium	100	f	3493
@@ -23263,7 +23261,6 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 33771-7	104679	Pl-12 Antikörper [Nachweis] in Serum	Patient_Antikoerper_Liste	62	f	3726
 33772-5	104679	Pl-7 Antikörper [Nachweis] in Serum	Patient_Antikoerper_Liste	65	f	3727
 18484-6	104679	Ku Antikörper [Nachweis] in Serum	Patient_Antikoerper_Liste	62	f	3728
-29463-7	101322	Körpergewicht	Patient_AufnGewicht	61	f	3729
 15074-8	104680	Glucose [Mol/Volumen] in Blut	Patient_Blutggruppe_Liste	61	f	3730
 2339-0	104680	Glucose [Masse/Volumen] in Blut	Patient_Blutggruppe_Liste	61	f	3731
 47100-3	104680	Kupfer [Mol/Volumen] in Blut	Patient_Blutggruppe_Liste	64	f	3732
@@ -23278,10 +23275,6 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 59574-4	101473	Body Mass Index (BMI) [Perzentil]	Patient_BMI	100	t	3741
 18864-9	101461	Ampicillin [Empfindlichkeit]	Patient_Familienst	60	f	3742
 18974-6	101461	Rifampicin [Empfindlichkeit]	Patient_Familienst	60	f	3743
-21112-8	4	Geburtsdatum	Patient_Geburtsdatum	100	f	3744
-76689-9	5	Geschlecht, zugewiesen bei Geburt	Patient_Geschlecht	100	f	3745
-21840-4	5	Geschlecht [North American Association of Central Cancer Register Standard Version 11]	Patient_Geschlecht	100	f	3746
-29463-7	6	Körpergewicht	Patient_Gewicht	74	f	3747
 5811-5	6	Spezifisches Gewicht von Urin mit Teststreifen	Patient_Gewicht	100	f	3748
 17608-1	6	Gewicht [Masse/Zeit] von 48-Stunden-Stuhl	Patient_Gewicht	100	f	3749
 17609-9	6	Gewicht [Masse/Zeit] von 72-Stunden-Stuhl	Patient_Gewicht	100	f	3750
@@ -23305,12 +23298,9 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 52953-7	108102	Kokain [Mol/Volumen] in Urin	Patient_konsanguin_nein	62	f	3768
 3397-7	108102	Kokain [Nachweis] in Urin	Patient_konsanguin_nein	62	f	3769
 3398-5	108102	Kokain [Masse/Volumen] in Urin	Patient_konsanguin_nein	62	f	3770
-9843-4	101763	Kopfumfang okzipital-frontal	Patient_Kopfumfang	100	f	3771
 8289-1	101763	Kopfumfang okzipital-frontal Perzentil	Patient_Kopfumfang	100	f	3772
-9843-4	108252	Kopfumfang okzipital-frontal	Patient_Kopfumfang_Aufnahme	100	f	3773
 8289-1	108252	Kopfumfang okzipital-frontal Perzentil	Patient_Kopfumfang_Aufnahme	100	f	3774
 8289-1	108502	Kopfumfang okzipital-frontal Perzentil	Patient_Kopfumfang_bit	83	f	3775
-9843-4	108502	Kopfumfang okzipital-frontal	Patient_Kopfumfang_bit	83	f	3776
 93851-4	101327	Delamanid [Empfindlichkeit]	Patient_Land	62	f	3777
 94651-7	101327	Reiseland [Ort]	Patient_Land	62	f	3778
 18725-2	106318	Mikrobiologie	Patient_MikrobiologieAntibiogramm	68	f	3779
@@ -23337,6 +23327,10 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 43575-0	108010	Komplement C3 [Masse/Volumen] in Perikardflüssigkeit	P_Beatmung_ES_C3_Backup_Vt	67	f	3800
 15164-7	108010	Komplement C3 [Masse/Volumen] in Synovialflüssigkeit	P_Beatmung_ES_C3_Backup_Vt	67	f	3801
 43579-2	108010	Komplement C3 [Masse/Volumen] in Pleuraflüssigkeit	P_Beatmung_ES_C3_Backup_Vt	67	f	3802
+21840-4	5	Geschlecht [North American Association of Central Cancer Register Standard Version 11]	Patient_Geschlecht	100	t	3746
+9843-4	101763	Kopfumfang okzipital-frontal	Patient_Kopfumfang	100	t	3771
+9843-4	108252	Kopfumfang okzipital-frontal	Patient_Kopfumfang_Aufnahme	100	t	3773
+9843-4	108502	Kopfumfang okzipital-frontal	Patient_Kopfumfang_bit	83	t	3776
 43578-4	108010	Komplement C3 [Masse/Volumen] in Peritonealflüssigkeit	P_Beatmung_ES_C3_Backup_Vt	67	f	3803
 6801-5	108010	Komplement C3 [Masse/Volumen] in Körperflüssigkeit	P_Beatmung_ES_C3_Backup_Vt	67	f	3804
 13086-4	108010	C3 nephritischer Faktor [Masse/Volumen] in Serum oder Plasma	P_Beatmung_ES_C3_Backup_Vt	67	f	3805
@@ -23478,7 +23472,6 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 19230-2	110786	Bicarbonat [Mol/Volumen] Standard in arteriellem Blut	P_NEV_HD_ES_5008onl_Bicarbonat	91	f	3941
 19232-8	110786	Bicarbonat [Mol/Volumen] Standard in venösem Blut	P_NEV_HD_ES_5008onl_Bicarbonat	91	f	3942
 1963-8	110786	Bicarbonat [Mol/Volumen] in Serum oder Plasma	P_NEV_HD_ES_5008onl_Bicarbonat	91	f	3943
-12514-6	110786	Bicarbonat [Mol/Volumen] in Dialysat	P_NEV_HD_ES_5008onl_Bicarbonat	91	f	3944
 1964-6	110786	Bicarbonat [Mol/Volumen] in Urin	P_NEV_HD_ES_5008onl_Bicarbonat	91	f	3945
 14151-5	110786	Bicarbonat [Mol/Volumen] in Nabelschnurblut	P_NEV_HD_ES_5008onl_Bicarbonat	91	f	3946
 1961-2	110786	Bicarbonat [Mol/Volumen] in Kapillarblut	P_NEV_HD_ES_5008onl_Bicarbonat	91	f	3947
@@ -23527,7 +23520,6 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 14627-4	110806	Bicarbonat [Mol/Volumen] in venösem Blut	P_NEV_HD_VO_5008onl_Bicarbonat	91	f	3990
 1961-2	110806	Bicarbonat [Mol/Volumen] in Kapillarblut	P_NEV_HD_VO_5008onl_Bicarbonat	91	f	3991
 1963-8	110806	Bicarbonat [Mol/Volumen] in Serum oder Plasma	P_NEV_HD_VO_5008onl_Bicarbonat	91	f	3992
-12514-6	110806	Bicarbonat [Mol/Volumen] in Dialysat	P_NEV_HD_VO_5008onl_Bicarbonat	91	f	3993
 19230-2	110806	Bicarbonat [Mol/Volumen] Standard in arteriellem Blut	P_NEV_HD_VO_5008onl_Bicarbonat	91	f	3994
 1959-6	110806	Bicarbonat [Mol/Volumen] in Blut	P_NEV_HD_VO_5008onl_Bicarbonat	91	f	3995
 11065-0	110818	Harnstoff-Stickstoff [Masse/Volumen] in Serum oder Plasma --vor Dialyse	P_NEV_HD_VO_5008onl_Dialyse_Zeit	67	f	3996
@@ -23618,7 +23610,6 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 39485-8	108742	pH von Kapillarblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	P_Temperatur_DeltaT	60	f	4081
 8330-3	108742	Körpertemperatur - Intravaskulär	P_Temperatur_DeltaT	60	f	4082
 8334-5	108742	Körpertemperatur - Harnblase	P_Temperatur_DeltaT	64	f	4083
-8310-5	110934	Körpertemperatur	P_Temperatur_generic	69	f	4084
 8334-5	110934	Körpertemperatur - Harnblase	P_Temperatur_generic	62	f	4085
 39485-8	110926	pH von Kapillarblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	P_Temperatur_Haut	62	f	4086
 39486-6	110926	pH von venösem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	P_Temperatur_Haut	60	f	4087
@@ -23627,23 +23618,16 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 8330-3	110926	Körpertemperatur - Intravaskulär	P_Temperatur_Haut	62	f	4090
 8334-5	110933	Körpertemperatur - Harnblase	P_Temperatur_Kern	67	f	4091
 8330-3	110933	Körpertemperatur - Intravaskulär	P_Temperatur_Kern	62	f	4092
-8310-5	110933	Körpertemperatur	P_Temperatur_Kern	81	f	4093
-8310-5	110931	Körpertemperatur	P_Temperatur_Messung_OrtAllg	69	f	4094
 8330-3	110931	Körpertemperatur - Intravaskulär	P_Temperatur_Messung_OrtAllg	62	f	4095
 39485-8	110931	pH von Kapillarblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	P_Temperatur_Messung_OrtAllg	62	f	4096
 8334-5	110931	Körpertemperatur - Harnblase	P_Temperatur_Messung_OrtAllg	67	f	4097
 8330-3	110936	Körpertemperatur - Intravaskulär	P_Temperatur_Messung_OrtKern	62	f	4098
 8334-5	110936	Körpertemperatur - Harnblase	P_Temperatur_Messung_OrtKern	67	f	4099
-8310-5	110936	Körpertemperatur	P_Temperatur_Messung_OrtKern	81	f	4100
-8310-5	110927	Körpertemperatur	P_Temperatur_Naso	69	f	4101
 8330-3	110927	Körpertemperatur - Intravaskulär	P_Temperatur_Naso	67	f	4102
 8334-5	110927	Körpertemperatur - Harnblase	P_Temperatur_Naso	71	f	4103
 8334-5	110928	Körpertemperatur - Harnblase	P_Temperatur_Oesophagial	61	f	4104
 8330-3	110930	Körpertemperatur - Intravaskulär	P_Temperatur_Rektal	60	f	4105
-8310-5	110930	Körpertemperatur	P_Temperatur_Rektal	71	f	4106
-8310-5	110929	Körpertemperatur	P_Temperatur_Tympanal	61	f	4107
 39486-6	110924	pH von venösem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	P_Temperatur_Venoes	65	f	4108
-8310-5	110924	Körpertemperatur	P_Temperatur_Venoes	65	f	4109
 8310-5	108630	Körpertemperatur	P_Therapiebetten_Doku_Lifetherm_ES_Temperatur	62	f	4110
 2755-7	110752	pH von Stuhl	P_Therapiebetten_VO_DraegerBabytherm_Strahler	67	f	4111
 8310-5	110753	Körpertemperatur	P_Therapiebetten_VO_DraegerBabytherm_Temperatur	81	f	4112
@@ -23741,10 +23725,8 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 88859-4	102785	Bewertung des Erkrankungsstadiums für Risikokalkulation (Score)	Score_AIS	71	f	4204
 96790-1	102785	Sepsis-related Organ Failure Assessment (SOFA) Score	Score_AIS	71	f	4205
 9274-2	102787	5-min-Apgar-Score	Score_APACHE2	60	f	4206
-9271-8	102788	10-min-Apgar-Score	Score_Apgar	100	f	4207
 96790-1	102788	Sepsis-related Organ Failure Assessment (SOFA) Score	Score_Apgar	62	f	4208
 44760-7	102788	Klassifikationsmodell für Lebererkrankungen im Endstadium (Score)	Score_Apgar	62	f	4209
-9274-2	102788	5-min-Apgar-Score	Score_Apgar	100	f	4210
 88859-4	102788	Bewertung des Erkrankungsstadiums für Risikokalkulation (Score)	Score_Apgar	62	f	4211
 9274-2	102764	5-min-Apgar-Score	Score_ARDS	67	f	4212
 96790-1	102764	Sepsis-related Organ Failure Assessment (SOFA) Score	Score_ARDS	67	f	4213
@@ -23752,6 +23734,8 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 9271-8	102764	10-min-Apgar-Score	Score_ARDS	67	f	4215
 88859-4	102764	Bewertung des Erkrankungsstadiums für Risikokalkulation (Score)	Score_ARDS	67	f	4216
 96790-1	102791	Sepsis-related Organ Failure Assessment (SOFA) Score	Score_BPS	71	f	4217
+9271-8	102788	10-min-Apgar-Score	Score_Apgar	100	t	4207
+9274-2	102788	5-min-Apgar-Score	Score_Apgar	100	t	4210
 88859-4	102791	Bewertung des Erkrankungsstadiums für Risikokalkulation (Score)	Score_BPS	71	f	4218
 44760-7	102791	Klassifikationsmodell für Lebererkrankungen im Endstadium (Score)	Score_BPS	71	f	4219
 9271-8	102791	10-min-Apgar-Score	Score_BPS	71	f	4220
@@ -24492,7 +24476,6 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 9279-1	102156	Atemfrequenz	Untersuchung_Status_Atemform	60	f	4955
 30304-0	102156	Adefovir [Empfindlichkeit]	Untersuchung_Status_Atemform	62	f	4956
 19254-2	102158	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Untersuchung_Status_Koerpertemperatur	62	f	4957
-8310-5	102158	Körpertemperatur	Untersuchung_Status_Koerpertemperatur	94	f	4958
 8330-3	102158	Körpertemperatur - Intravaskulär	Untersuchung_Status_Koerpertemperatur	67	f	4959
 39485-8	102158	pH von Kapillarblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Untersuchung_Status_Koerpertemperatur	62	f	4960
 34705-4	102158	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Untersuchung_Status_Koerpertemperatur	62	f	4961
@@ -24575,6 +24558,23 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 1998-4	102763	Calcium [Mol/Volumen] in Dialysat	Nierenersatzverfahren_VO_CalciumLoesung	60	t	2857
 12514-6	103160	Bicarbonat [Mol/Volumen] in Dialysat	Nierenverfahren_ES_4008HS_Bicarbonat	100	t	3031
 12514-6	103243	Bicarbonat [Mol/Volumen] in Dialysat	Nierenverfahren_VO_4008HS_Bicarbonat	100	t	3273
+47842-0	103218	Sammelzeitraum von Dialysat	Nierenverfahren_VO_4008onl_Dialysezeit	65	t	3350
+46093-1	103054	Calcium.ionisiert [Mol/Volumen] in Dialysat	Nierenverfahren_VO_Multi_Calcium	100	t	3490
+29463-7	101322	Körpergewicht	Patient_AufnGewicht	61	t	3729
+21112-8	4	Geburtsdatum	Patient_Geburtsdatum	100	t	3744
+76689-9	5	Geschlecht, zugewiesen bei Geburt	Patient_Geschlecht	100	t	3745
+29463-7	6	Körpergewicht	Patient_Gewicht	74	t	3747
+12514-6	110786	Bicarbonat [Mol/Volumen] in Dialysat	P_NEV_HD_ES_5008onl_Bicarbonat	91	t	3944
+12514-6	110806	Bicarbonat [Mol/Volumen] in Dialysat	P_NEV_HD_VO_5008onl_Bicarbonat	91	t	3993
+8310-5	110934	Körpertemperatur	P_Temperatur_generic	69	t	4084
+8310-5	110933	Körpertemperatur	P_Temperatur_Kern	81	t	4093
+8310-5	110931	Körpertemperatur	P_Temperatur_Messung_OrtAllg	69	t	4094
+8310-5	110936	Körpertemperatur	P_Temperatur_Messung_OrtKern	81	t	4100
+8310-5	110927	Körpertemperatur	P_Temperatur_Naso	69	t	4101
+8310-5	110930	Körpertemperatur	P_Temperatur_Rektal	71	t	4106
+8310-5	110929	Körpertemperatur	P_Temperatur_Tympanal	61	t	4107
+8310-5	110924	Körpertemperatur	P_Temperatur_Venoes	65	t	4109
+8310-5	102158	Körpertemperatur	Untersuchung_Status_Koerpertemperatur	94	t	4958
 \.
 
 
