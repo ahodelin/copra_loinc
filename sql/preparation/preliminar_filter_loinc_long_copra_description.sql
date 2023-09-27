@@ -463,7 +463,6 @@ set relevant = true
 where not relevant 
 and id between 517 and 518;
 
-
 update loinc_copra.copra_description_only_words
 set relevant = true 
 where not relevant 
@@ -473,10 +472,71 @@ update loinc_copra.copra_description_only_words
 set relevant = true 
 where not relevant 
 and id between 524 and 529;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 531 and 533;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 549 and 551;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 571 and 578;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 581 and 581;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 585 and 586;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 593 and 594;
+
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 598 and 598;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 612 and 623;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 650 and 651;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 654 and 655;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 670 and 670;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 670 and 670;
 
 select * 
 from loinc_copra.copra_description_only_words
 where not relevant
-and id > 529
+and id > 670
 order by id
 ;
