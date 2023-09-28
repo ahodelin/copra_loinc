@@ -1235,11 +1235,6 @@ körperlicher	t	1195
 Körperoberfläche	t	1196
 Körperpflege	t	1197
 Körpertemperatur	t	1198
-Kozentration	f	1201
-Krampfanfälle	f	1202
-Krampfleiden	f	1203
-Kreislauf	f	1204
-Kriterien	f	1205
 kumulativ	f	1206
 Kumulativ	f	1207
 Kumulativer	f	1208
@@ -1252,14 +1247,8 @@ Labor	f	1214
 Lage	f	1215
 Lagerung	f	1216
 Lagerungsmaßnahmen	f	1217
-Land	f	1218
 Langbezeichung	f	1219
-LAP	f	1220
 Laufende	f	1221
-Leberersatztherapie	f	1222
-Leckage	f	1223
-Leckagevolumen	f	1224
-Leersaugens	f	1225
 Left	f	1226
 Leistung	f	1227
 Leistungsanforderungsobjekt	f	1228
@@ -1272,8 +1261,6 @@ Leistungstyp	f	1234
 letzte	f	1235
 letzten	f	1236
 letzter	f	1237
-Leukozyten	f	1238
-Lichtreaktion	f	1239
 liegt	f	1240
 Link	f	1241
 linken	f	1242
@@ -1406,6 +1393,14 @@ Modus	f	1368
 moeglich	f	1369
 möglich	f	1370
 Möglichkeit	f	1371
+Land	t	1218
+LAP	t	1220
+Leberersatztherapie	t	1222
+Leckage	t	1223
+Leckagevolumen	t	1224
+Leersaugens	t	1225
+Leukozyten	t	1238
+Lichtreaktion	t	1239
 Monaten	f	1372
 Monitoring	f	1373
 Monitoringdatenübernahme	f	1374
@@ -2342,6 +2337,11 @@ Inspiratorischer	t	1091
 inspiratorisches	t	1092
 inspiratory	t	1093
 Insulinapplikation	t	1094
+Kozentration	t	1201
+Krampfanfälle	t	1202
+Krampfleiden	t	1203
+Kreislauf	t	1204
+Kriterien	t	1205
 \.
 
 
