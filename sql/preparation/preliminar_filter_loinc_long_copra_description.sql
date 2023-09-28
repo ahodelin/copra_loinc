@@ -900,12 +900,22 @@ and id between 1238 and 1239;
 update loinc_copra.copra_description_only_words
 set relevant = true 
 where not relevant 
-and id between 1247 and 12;
+and id between 1247 and 1252;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 1265 and 1273;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 1275 and 1284;
 
 select * 
 from loinc_copra.copra_description_only_words
 where not relevant
-and id > 1240
+and id > 1284
 order by id
 ;
 
