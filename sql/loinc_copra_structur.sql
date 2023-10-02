@@ -1,4 +1,4 @@
-drop schema if exists loinc_copra cascade;
+--drop schema if exists loinc_copra cascade;
 create schema if not exists loinc_copra;
 
 
@@ -30,15 +30,17 @@ from '/home/ahodelin/git_repos/copra_loinc/csv/results/loinc_long_common_name-co
 csv delimiter E';' quote '"';
 
 
-
-select loinc_num, copra_id, loinc_entity loinc_long_common_name, copra_entity copra_description, accuracy
+--drop table loinc_copra.loinc_long_common_name_copra_description;
+select distinct loinc_num, copra_id, lgt."LONG_COMMON_NAME" loinc_long_common_name, ccv.description copra_description, accuracy, false to_match
 into loinc_copra.loinc_long_common_name_copra_description
-from loinc_copra.from_script
-order by accuracy desc;
+from loinc_copra.from_script fsc
+join copra.co6_config_variables ccv 
+  on ccv.id = fsc.copra_id 
+join loinc.loinc_german_translation lgt 
+  on lgt."LOINC_NUM" = fsc.loinc_num 
+order by copra_description;
 
-select loinc_num, loinc_entity loinc_long_common_name, copra_id, copra_entity copra_description, accuracy
-into loinc_copra.loinc_long_common_name_copra_description_tmp
-from loinc_copra.from_script
-order by accuracy desc;
+alter table loinc_copra.loinc_long_common_name_copra_description
+add column id serial not null;
 
 truncate loinc_copra.from_script;

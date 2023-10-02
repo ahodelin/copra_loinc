@@ -1372,10 +1372,158 @@ set relevant = true
 where not relevant 
 and id between 2006 and 2006;
 
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2009 and 2010;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2012 and 2012;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2026 and 2026;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2012 and 2012;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2031 and 2031;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2026 and 2026;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2037 and 2039;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2042 and 2046;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2049 and 2052;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2058 and 2058;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2061 and 2061;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2063 and 2063;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2065 and 2065;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2070 and 2070;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2073 and 2077;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2082 and 2083;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2085 and 2085;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2096 and 2097;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2099 and 2099;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2104 and 2104;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2109 and 2110;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2114 and 2117;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2120 and 2121;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2124 and 2135;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2138 and 2145;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2147 and 2147;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2161 and 2161;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2166 and 2169;
+
+update loinc_copra.copra_description_only_words
+set relevant = true 
+where not relevant 
+and id between 2174 and 2174;
+
 select * 
 from loinc_copra.copra_description_only_words
 where not relevant
-and id > 2006
+and id > 2170
 order by id
 ;
 
+copy(
+  select copra_description_words from loinc_copra.copra_description_only_words where not relevant
+) to '/home/ahodelin/git_repos/copra_loinc/csv/test_delete_words/copra_to_delete_words.csv' delimiter E';' csv;

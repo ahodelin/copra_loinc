@@ -1,0 +1,867 @@
+4;Geburtsdatum des Patienten
+5;Geschlecht des Patienten
+6;Gewicht des Patienten
+7;Größe des Patienten
+8;Identifikation des Patiente
+9;Schwangerschaftswoche zum Zeitpunkt der Geburt in ganzen Tagen
+10;errechneter Geburtstermin
+11;Kopfumfang des Patienten in Zentimetern
+12;Zuletzt selektierter Perzentilendatensatz des Patienten
+13;Bezugsgewicht des Patienten in kg
+14;Geburtsgewicht des Patienten in Kilogramm
+20;Fall
+21;Aufnahmezeitpunkt für den Fall
+22;Entlassungszeitpunkt für den Fall
+23;Identifikationsnummer des Falles
+30;Behandlung
+60;Medikamentenmischung
+90;Verordnung von Serien
+144;Information über gestellte Medikamente pro Tag
+1266;Herzfrequenz
+1267;Atemfrequenz
+1268;Puls
+1269;Zentralvenöser Druck
+1270;Körpertemperatur
+1271;Körpertemperatur Messkanal 2
+1272;Sauerstoffsättigung
+1273;arterielle Sauerstoffsättigung
+1274;venöse Sauerstoffsättigung
+1275;nichtinvasiver Blutdruck
+1276;arterielle Blutdruck
+1278;Diagnosen des Patienten
+1316;NYHA-Kalassifikation für Anaesthesie
+100023;Adresse des Patienten: Strasse + Hausnummer
+100024;Nationalität des Patienten
+100027;Patientenverfügung
+100028;Besucherverinbarung für den Patienten
+100037;aktuelle Schwangerschaftswoche des Babys
+100038;Schwangerschaftswoche, in welcher das Baby geboren wurde
+100066;OP-Tag
+100067;Auswahl der Kliniken
+100068;Extravasales Lungenwasser
+100069;Intrathorakales Blutvolumen
+100070;Schlagvolumenabweichung 
+100072;Herzindex
+100073;Index des systemischen Gefäßwiderstandes 
+100074;Systemischer Gefäßwiderstand
+100086;Zerebraler Perfusionsdruck
+100088;Intrakranialer Druck
+100089;zweiter arterieller Blutdruck
+100090;zweiter nichtinvasiver Blutdruck 
+100091;Linksatrial  Mitteldruck
+100093;arterieller Blutdruck 1
+100094;nichtinvasiver Blutdruck 1
+100095;Herzrhythmus
+100096;VTe / ex. Atemzugvolumen (Tidal Volumen expir.)
+100097;Mindest Volumen sp
+100098;Mindest Volumen tot.
+100099;Frequenz tot.
+100100;FiO2
+100101;Atemzugvolumen/Atemhubvolumen [Tidal volume] (VT)
+100102;Positiver endexspiratorischer Druck (PEEP)
+100103;Atemzeitverhältnis (I:E)
+100104;Inspiratorische Flowrate
+100105;O²- Konzentration im Inspirationsgemisch (FiO2)
+100106;Inspiratorische Druckunterstützung [inspiratory pressure support] (IPS) bzw. assisted spontaneuous breathig (ASB)
+100107;Atemminutenvolumen (AMV)
+100108;Beatmungsfrequenz (f/AF)
+100240;Oberer Druckniveau
+100250;HFOV Frequenz
+100254;Inspirationszeit in %
+100257;Inspiratorische Pause (I:E)
+100258;Interm PEEP
+100262;HFOV Mitteldruck
+100264;Pmax, Maximaldruck
+100265;HFOV Powereinstellung
+100270;Respiratory Rate (spontan)
+100271;Respiratory Minute Volume
+100273;Respiratory Rate (Volume/Flow)
+100300;Peak Airway Pressure
+100303;Apnea Duration
+100418;beinhaltet Ruhen und Schlafen, Befinden, Krampfanfälle, Sedierung, Schmerzdiagnose
+100905;Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit
+101317;Alter des Patienten in Jahren
+101322;Aufnahmegewicht (fallbezogen)
+101323;Größe Patient (fallbezogen)
+101324;Körperoberfläche des Patienten (fallbezogen)
+101325;Patientenadresse: PLZ
+101326;Patientenadresse: Ort
+101327;Patientenadresse: Land
+101422;Körperoberfläche des Patienten ohne Fallbezug
+101433;Compliance
+101434;CO2-Production
+101435;Resistance
+101436;Spont Minute Volume
+101441;Mean Airway Pressure
+101442;Breathing Frequency
+101443;Minimum Airway Pressure
+101444;Intrinsic PEEP
+101447;Plateau Druck
+101448;Patient_Verlusst_ExtrakorporaleAbnahme
+101449;Patient_Blutverlusst
+101461;Familienstand des Patienten
+101468;Arbeitgeber des Patienten
+101472;Blutgruppe des Patienten
+101595;Verordnung Ziel-Atemfrequenz
+101596;Angeordnete Ziel-Atemfrequenz für Pflege
+101609;Score-Variablen zur Erfassung des Braden-Scores zu einem beliebigen Zeitpunkt in der Zeitachse
+101763;Kopfumfang des Patienten (Kinder)
+102004;Temperatur 1a
+102005;Temperatur 1b
+102006;Temperatur 2a
+102007;Temperatur 2b
+102008;Temperatur 3a
+102009;Temperatur 3b
+102010;Sauerstoffsättigung Pulsoxymetrie
+102011;Pulsrate errechnet aus der SpO2 Messung
+102012;End-tidales CO2
+102016;Rechtsatrial Mitteldruck
+102018;Pulmunaler Wedgedruck
+102019;Mittlerer pulmonale arterieller Druck
+102021;Herzleistung
+102022;Linksseitiger Herzkranzperfusionsdruck 
+102023;Linksventrikulärer Schlagarbeit 
+102024;Linksventrikulärer Schlagarbeitsindex 
+102025;Pulmunaler Gefäßwiderstand 
+102026;Pulmunaler Gefäßwiderstandsindex 
+102027;Rate-/Druck-Produkt 
+102028;Rechtsvetrikulärer Schlagarbeit 
+102029;Rechtsvetrikulärer Schlagarbeitsindex 
+102030;Schlagvolumen 
+102032;Pulmonaler Gesamtgefäßwiderstand 
+102033;Gesamtgefäßwiderstand 
+102034;Pulskontur-Herzzeitvolumen 
+102035;Herzindex (kontinuirlich) 
+102036;Schlagvolumenindex  (PICCO Modul Dräger Monitoring)
+102037;Systemischer Gefäßwiderstand (PICCO Modul Dräger Monitoring) 
+102038;Index des systemischen Gefäßwiderstandes (PICCO Modul Dräger Monitoring)  
+102039;Index der linken Ventrikelkontraktilität  
+102040;Herzzeitvolumen (PICCO Modul Dräger Monitoring) 
+102041;Globales enddiastolisches Volumen 
+102042;Index des enddiastolisches Volumen 
+102043;Extravaskuläres Lungenwasser 
+102044;Extravaskuläres Lungenwasserindex 
+102045;Globale Auswurffraktion 
+102046;Index des extravaskulären Thermovolumens 
+102047;Pulmonalvaskuläer Permeabilitätsindex 
+102050;Pulmunalarterieller Druck
+102051;Herzzeitvolumen
+102053;Pulmonalkapillardruck
+102055;Linksventrikulärer Mitteldruck
+102056;Rechtsventrikulärer Mitteldruck
+102057;Arrhythmie Drägermonitoring, VES/min
+102060;Inspirationszeit I:E
+102075;GCS Erwachsene
+102081;GCS Kinder
+102119;TransmembranDruck
+102162;Arterieller Druck
+102163;Zentraler Venendruck
+102164;Systemic vascular resistance
+102165;Systemic vascular resistance index
+102166;Pulmonalkapillardruck
+102167;HerzindexHerzindex
+102168;HerzfrequenzHerzfrequenz
+102169;Schlagvolumen-Variation
+102170;Intrathorakales Blutvolumen
+102171;Intrathorakaler Blutvolumenindex
+102173;Herzzeitvolumen
+102178;Cardiac output / -index
+102179;SchlagvolumenindexSchlagvolumenindex
+102180;Systemic vascular resistance
+102181;Systemic vascular resistance index
+102184;Herzzeitvolumen
+102185;Herzindex
+102186;Schlagvolumen
+102187;Schlagvolumenindex
+102188;Schlagvolumen Variation
+102189;Systemischer Gefäßwiderstand
+102190;Systemischer Gefäßwiderstandsindex
+102191;Pulmonaler vasculärer Widerstand
+102192;Pulmonaler vasculärer Widerstandsindex
+102193;Intrathorakales Blutvolumen
+102194;Extravasales Lungenwasser
+102408;Schlagvolumen
+102491;Oxidationswasser in ml (einfuhrrelevant)
+102493;Perspiratio Insensibilis in ml (Ausfuhrrelevant in der Bilanz)
+102494;Perspiratio Sensibilis in ml (ausfuhrrelevant in der Bilanz)
+102529;I:E Inspiration
+102530;I:E Exspiration
+102532;Pulsdruckabweichung
+102533;Herzfunktionsindex
+102535;Herzindex
+102536;Index des intrathorakalen Blutvolumens
+102570;Pkontrol (mbar/frequenz/AZ/min)
+102657;Exspiratorische Triggersensibilität
+102658;Amplitude bei HFOV
+102744;angeordnete Citratdosis
+102763;Bezeichnug der Calcium Lösung
+102858;CPAP Einstellung in der Maßeinheit cm H2O, Verwendung bei F120 und CF 800
+102859;Isolierte Ultrafiltration/Bergström
+102860;gemessener CPAP in der Maßeinheit cm H2O
+102861;Pimax (Maximaler inspiratorischer Atemwegsdruck)  
+102862;gemeesener IPAP (Inspiratorisch Positiver Atemwegsdruck) 
+102863; gemessener EPAP (=Expiratorisch Positiver Atemwegsdruck)  
+102864;Ti/Ttot (Inspirationszeit/Dauer des ganzen Zyklus) 
+102865;Patientenleck - Die Leckage die aufgrund Masken- bzw. Helmleckage unabhängig der Sollleckage gemessen wird  
+102866;Die gemessene Gesamtleckage inclusive der bestehenden Sollleckage
+102867;Pat.Trig (Prozentsatz der vom Patienten ausgelösten Atemzüge) 
+102868; eingestellter IPAP Wert
+102869; eingestellter EPAP Wert
+102870;IPAP-Anstiegszeit in Sekunden eingestellt 
+102872;Oszillationsfrequenz Gerät: Alpha Vision Modus: HFO
+102873;Mittlerer Atemwegsdruck (MAP)
+102874;Schlagvolumen (SV) in engl. (cycle volume)
+102876;Basis Continousflow
+102877;Druckeinstellung für manuell ausgelösten Atemhub
+102878;gemessener Mittlerer Atemwegsdruck unter HFO bei Alpha Vision
+102880;Dauer des manuell durchgeführten Atemhubs
+102881;gemessener Basis Continousflow
+102882;Verordnung Schlauchsystem
+102883;Pressure Support, Alpha Vision
+102884;Anstiegszeit (Rampenzeit) Alpha Vision
+102885;positiv inspiratorischer Druck
+102886;eingestellte maximale Inspirationszeit beim G5 im Modus NIV
+102887;Einstelungswert für die Inspirationszeit
+102888;Einstellwert: Zeiteinstellung des oberes Druckniveau beim G 5 im Modus DuoPAP
+102889;prozentualer Anteil der Inspiration, der Plateauphase bestimmt wird
+102890;Einstellwert oberes Druckniveau im beim G 5 im Modus DuoPAP
+102891;Einstellwert oberes Druckniveau beim G 5 im Modus P SIMV
+102892;Einstellwert: Druckunterstützung beim G 5  bei Spontanatemzügen
+102893;Einstellwert: Peep bzw. CPAP Niveau in verschiedenen Modi beim G 5
+102894;Einstellwert: Zeiteinstellung für das untere Druckniveau beim G5 im Modus APRV
+102895;Einstellwert: unteres Druckniveau beim G 5 im Modus APRV
+102897;appliziertes Dialysat für Multifiltrate
+102898;Einstellwert: I:E Verhältnis
+102899;Messwert: Beatmungsspitzendruck
+102900;Messwert: Beatmungsmitteldruck
+102901;Messwert: Beatmungsdruck Peep / CPAP
+102902;Messwert, exspiratorisches Tidalvolumen Einheit: ml
+102903;Inspiratorischer Peakflow, ein Monitoring-Parameter
+102904;Inspirationszeit in Sekunden, Monitoring-Parameter
+102905;Inspiratorische Flow-Resistance, ein Monitoring-Parameter
+102906;Exspiratorische Flow-Resistance, ein Monitoring-Parameter
+102907;Statische Compliance, ein Monitoringwert
+102908;Inspiratorische Zeitkonstante, ein Monitoring Parameter
+102909;Exspiratorische Zeitkonstante, ein Monitoring-Parameter
+102910;Index für schnelle Flachatmung (Rapid Shallow Breathing Index), Monitoring Parameter
+102911;Zusätzlich auferlegte Atemarbeit, ein Monitoring Parameter
+102912;Unerwarteter positiver endexspiratorischer Druck, ein Monitoring-Parameter
+102913;Druck Zeit Produkt (Pressure Time Product), ein Monitoring Parameter
+102914;Leckagevolumen, ein Monitoring-Parameter
+102915;Exspiratorischer Peakflow, ein Monitoring-Parameter
+102916;Exspirationzeit, ein Monitoring-Parameter
+102921;Dialysekonzentrat Verordnung String
+102922;Sauerstoffeinstellung in der Maßeinheit Vol %
+102923;Messwert des Sauerstoffgehalt in der Maßeinheit Vol %
+102926;gemessenes I:E Verhältnis
+102927;VO Gefäßzugang extracorporale Verfahren
+102928;Filter  für extrakorporale Verfahren
+102929;Hämofiltrationslösung extrakorporale Verfahren
+102930;Predilution Postdilution extrakorporale Verfahren
+102931;Exspiratorische Triggersensitivität, eine Parametereinstellung
+102932;Antikoagulation Medikament
+102933;Spüllösung zum Vorbereiten des extrakorporalen Verfahrens
+102935;Eine Parametereinstellung. Anstiegszeit des Drucks bei druckkontrollierten und druckunterstützten Atemzyklus.
+102937;max Blutpumpengeschwindigkeit VO
+102938;Anzahl der Atemzyklen pro Minute, Parametereinstellung
+102939;Ultrafiltrationsrate
+102940;Substituat in ml/h
+102941;Substituatbolus in ml
+102942;Sauerstoffeinstellung
+102943;Temperatur in Celsius
+102944;Przentsatz des Minutenvolumens, eine Parametereinstellung im ASV Modus
+102946;Eine Parametereinstellung im ASV Modus. Sie wird zur Berechnnug des idealen Körpergewichts (IBW) des Patienten verwendet
+102953;Blutpumpengeschwindigkeit
+102954;Ultrafiltrationsrate
+102955;Umsatz ml/h
+102956;Temperatur in Celsius
+102965;Blutpumpengeschwindigkeit
+102966;Entzugsrate ml/h
+102967;Umsatz, Austausch, Substituat ml/h
+102968;Temperatur Celcius
+102976;Blutpumpengeschwindigkeit ml/min
+102977;Ultrafiltrationsrate ml/h
+102978;Umsatz, Austausch Substituat ml/h
+102979;Substituatbolus ml
+102990;Blutpumpengeschwindigkeit
+102991;Ultrafiltrationsrate
+102992;Austausch, Substituat, ml/h
+102993;Temperatur Celcius
+103004;Blutpumpengeschwindigkeit
+103005;Entzugsrate, Ultrafiltrationsrate
+103006;Umsatz, Substituat
+103010;arterieller Druck
+103011;venöser Druck
+103012;Transmembrandruck
+103032;Plateau-Atemwegsdruck, ein Monitoring-Parameter
+103033;Minimaler Atemwegsdruck, ein Monitoring Parameter
+103034;Exspiratorisches Minutenvolumen, Monitoring-Parameter 
+103035;Gesamtatemfrequenz, ein Monitoring Parameter
+103036;Spontane Atemfrequenz
+103037;Sauerstoffkonzentration des abgegebenen Gasgemisches
+103040;Inspiratorischer Druck, mit Pinsp wird der Zieldruck (zusätzlich zu PEEP/CPAP) bezeichnet, der im Modus ASV während der Inspirationsphase abgegeben wird
+103041;Atemweg-Okklusionsdruck, ein Monitoring-Parameter
+103042;Dialysatlösung, Beutel
+103043;Dialysatrate
+103045;Gialysatrate
+103051;Citratbeutel
+103052;Calciumbeutel
+103053;Dosierung
+103054;Ca-rate
+103055;Beutel
+103056;Beutel
+103057;Citratrate
+103058;Calciumrate
+103061;Citratrate
+103062;Calciumrate
+103066;Plasmarate
+103068;Plasmarate
+103070;Plasmarate
+103077;Eingestellte Sauerstoffzufuhr
+103078;gemessene Druckdifferenz im HFOV Modus
+103079;gemessene Sauerstoffgehalt des Gasgemisches
+103080;Einstellgrösse: Druck bzw. Flowtrigger
+103081;Exspirationserkennung 10 - 45% des Peak Flow
+103082;Messwert: Anzahl der gemessenen spontanen Atemzüge
+103083;gemessenes spontanes Atemminutenvolumen
+103084;gemessenes Tidalvolumen
+103086;Eingestelltes CPAP Niveau
+103087;Einstellwert: Größe des Gasflusses beim F 120
+103088;Einstellparameter: Sauerstoffgehalt des Gasgemisches
+103091;Einstellgröße Gasfluss Sauerstoff
+103092;Einstellgröße: Gasfluss Druckluft
+103093;Sauerstoffgehalt des eingestellten Gasgemisches CF 800
+103094;eingestelltes CPAP Niveau
+103095;Dialysatlösung
+103097;Spülung zur Vorbereitung
+103098;Druck vor Filter Hämoperfusion
+103108;Filter
+103109;HFLösung
+103110;Option
+103114;Spüldauer
+103115;Füllen des Systems
+103116;Variable wird verwendet für Multifiltrate und ADM 08
+103121;Calciumlösung
+103122;Citratlösung
+103125;Einstellparameter CPAP im Modus CPAP
+103126;Einstellparameter: O2 Konzentration des Gasgemisches
+103127;Messparameter: gemessene Atemfrequenz
+103128;Messwert: gemessenes CPAP Niveau
+103129;Messwert: gemessenes AMV
+103130;Messwert: gemessene O2 Konzentration des Gasgemisches
+103132;Messwert: gemessenes Tidalvolumen
+103133;Einstellwert: Zeiteinstellung für die Inspirationszeit
+103134;Einstellwert: eingestellte Mindestatemfrequenz im ST Moodus
+103135;Medikament
+103136;Medikament
+103139;Einstellwert: eingestelltes Peep bzw. CPAP Niveau
+103142;Messwert: gemessener positiver endexspiratorischer Druck
+103147;Ultrafiltrationsziel
+103148;Ultrafiltrationsrate
+103150;Isolierte Ultrafiltration
+103151;Isolierte Ultrafiltration
+103154;Auswahl für die Applikationsform von NIV Anwendungen
+103209;Einstellwert: eingestellter Basisfluss im Beatmungssystem
+103210;Einstellwert: eingestellte Oszillationsfrequenz 
+103211;Einstellwert: prozentualer Anteil der Inspirationszeit bezogen auf den gesamtem Atemzyklus
+103212;Einstellwert: prozentuale Kolbenauslenkung
+103213;Einstellwert: eingestellter mittlerer Atemwegsdruck
+103214;Einstellwert: O2 Konzentration des Gasgemisches
+103215;Messwert: gemessene Druckamplitude
+103216;Messwert: gemessene O2 Konzentration des Gasgemisches
+103224;Dialysekonzentrat 6 liter gesamt
+103250;Dialyskonzentratbehälter
+103255;Einstellwert: eingestelltes Tidalvolumen
+103256;Einstellwert: eingestellter Spitzenfluss
+103257;Einstellwert: eingestellte Atemfrequenz
+103258;Einstellwert: eingestellte Apnoefrequenz
+103259;Einstellwert: Plateauphase in Sekunden
+103260;Einstellwert: Inspirationszeit in Sekunden
+103261;Einstellwert: eingestellte Druckdifferenz
+103262;Messwert: gemessener Plateaudruck
+103264;Messwert: gemessenes Atemminutenvolumen
+103265;Messwert: gemessene Atemfrequenz
+103266;Messwert: gemessenes I:E Verhältnis
+103267;eingestellte O2 Konzentration des Gases
+103268;eingestellter Inspirationfluss
+103269;eingestellt mandatorische Atemfrquenz
+103270;eingestelltes Verhältnis zwischen Inspiration und Exspiration
+103271;eingestellte Zeit für den Anstieg zwischen unterem und oberen Druckniveau
+103272;eingestelltes Tidalvolumen
+103273;eingestellte Druckbegrenzung
+103274;einstellte IMV Frequenz im SIMV Modus
+103275;eingestelltes PEEP Niveau
+103276;eingestelltes CPAP Niveau
+103277;eingestellte Druckunterstüzung
+103278;eingestelltes oberes Druckniveau
+103279;eingestellte Triggerschwelle (Flowtrigger)
+103280;gemessenes Atemminutenvolumen
+103281;gemessene O2 Konzentration im Inspirationsgas
+103282;gemessener Beatmungsspitzendruck
+103283;gemessener Plateaudruck (inspiratorischer Beatmungsdruck)
+103284;gemessener positer endexspiratorischer Druck
+103285;gemessener Beatmungsmitteldruck
+103286;gemessenes exspiratorisches Tidalvolumen
+103287;gemessene Atemfrequenz
+103288;gemessener Atemwegswiderstand
+103289;gemessene Lungencompliance
+103290;gemessenes spontanes Atemminutenvolumen
+103291;gemessene spontane Atemfrequenz
+103292;gemessenes CPAP Niveau
+103293;kleinster gemessener Beatmungsdruck während des Atemzyklus 
+103294;Ergebnis eines Messmanövers im Modus IPPV, IPPV assist
+103295;Messergebnis eines Messmanövers im ASB Spontan Modus 
+103296;eingestellte O2 Konzentration des Frischgases
+103297;eingestellte absolute Inspirationszeit
+103298;eingestellte Atemfrequenz
+103299;eingestellte Anstiegszeit vom unteren zum oberen Druckniveau
+103300;eingestelltes oberes Druckniveau
+103301;eingestelltes PEEP Niveau
+103302;eingestellte Druckunterstützung
+103303;Einstellgröße des Flowtriggers
+103304;Einstellgröße für das Tidalvolumen
+103305;Einstellgröße für das Tidalvolumen in der Apnoeeinstellung
+103306;eingestellte Atemfrequenz in der Apnoeventilation
+103307;Einstellgröße für die Tubuskompensation
+103308;Einstellgröße für den Flowassist im Modus PPS
+103309;Einstellgröße für den VolAssist im PPS Modus
+103310;Zeiteinstellung für das obere Druckniveau im APRV Modus
+103311;Zeiteinstellung für das untere Druckniveau im APRV Modus
+103312;Druckeinstellung für das obere Druckniveau im APRV Modus
+103313;Druckeinstellung für das untere Druckniveau im APRV Modus
+103314;gemessene O2 Konzentration des inspiratorischen Atemgasgemisches
+103315;gemessener Atemwegsspitzendruck
+103316;gemessener Plataeudruck wähend der Inspiration
+103317;gemessener Atemwegsmitteldruck
+103318;gemessener positiver endexspiratorischer Druck
+103319;gemessener minimaler Atemwegsdruck während des Atemzyklus
+103320;gemessenes Atemminutenvolumen
+103321;gemessenes spontanes Atemminutenvolumen
+103322;gemessenes Leckagevolumen pro Minute
+103323;gemessene Gesamtatemfrequenz
+103324;gemessene spontane Atemfrequenz
+103325;gemessene mandatorische Atemfrequenz
+103326;gemessenes exspiratorisches Tidalvolumen
+103327;gemessenes inspiratorisches Tidalvolumen
+103328;gemessener Atemwegswiderstand
+103329;gemessene Lungencompliance
+103330;gemessener Intrinsic Peep nach Meßmanöver
+103331;gemessenes getrapptes Luftvolumen nach Meßmanöver
+103332;gemessener P0.1 Druck nach Meßmanöver
+103333;Einstellwert: Tidalvolumen
+103334;Hochdruckalarmgrenze im 'ASV Modus
+103336;Desinfektionsprogramme Gerät 
+103339;Kathetertyp
+103403;Inspiratorische Bemühung des Patienten, die das Beatmungsgerät veranlasst, einen Atemhub abzugeben
+103404;Die inspiratorische Bemühung des Patienten ( Flow),  die das Beatmungsgerät veranlässt, einen Atemhub abzugeben
+103407;eingestellte mandatorische AF
+103408;eingestelltes Tidalvolumen
+103409;eingestellter Spitzengasfluss
+103410;Zeiteinstellung für die Plateauphase im Modus CMV und SIMV
+103411;eingestelltes PEEP Niveau
+103412;eingestellter Flowtrigger: Schwellenwertt für die inspiratorische Bemühung des Patienten um die Druckunterstützung auszulösen
+103413;eingestellte Sauerstoffkonzentration des inspiratorischen Atemgases
+103414;eingestelltes oberes Druckniveau im Modus P-CMV und P-SIMV
+103415;eingestellte Inspirationszeit eines Atemzuges
+103416;eingestellte Druckunterstützung bei dem Gerät Avea
+103417;Zeiteinstellung des oberen Druckniveaus im Modus APRV / BiPhasisch
+103418;Zeiteinstellung für das untere Druckniveau im Modus APRV / BiPhasisch
+103419;eingestelltes oberes Druckniveau im Modus APRV / BiPhasisch
+103420;eingestelltes unteres Druckniveau im Modus APRV / BiPhasisch
+103421;gemessenes Tidalvolumen
+103422;gemessener Atemwegsspitzendruck
+103423;gemessenes exspiratorisches Volumen
+103424;gemessene Inspirationszeit
+103425;gemessenes PEEP Niveau
+103426;gemessenes I zu E Verhältnis
+103427;gemessene Exspirationszeit
+103428;errechneter Quotient zwischen Frequenz und Tidalvolumen
+103429;gemessener Atemwegsmitteldruck
+103430;gemessene Atemfrequenz
+103431;gemessenes mandatorisches Tidalvolumen
+103432;gemessenes spontanes Tidalvolumen
+103433;gemessenes inspiratorisches Tidalvolumen
+103434;gemessenes spontanes Atemminutenvolumen
+103435;gemessene spontane Atemfrequenz
+103436;gemessene mandatorische Atemfrequenz
+103438;gemessener Plateaudruck
+103439;gemessene Sauerstoffkonzentration im Atemgas
+103440;gemessene statische Compliance
+103443;gemessener AutoPEEP
+103587;Gefäßdefinition
+103588;Katheterart
+103589;Bezeichnung
+103590;Bezeichnung
+103622;Gefäßzugang
+103623;Schlauchsystembeschichtung relevant
+103624;Kathetertyp
+103630;Gerätetyp
+103636;Hypothermiebehandlung
+103637;Hypothermiebehandlung
+103689;Hypothermiebehandlung
+103690;Hypothermiebehandlung
+103692;Gerät auswählen
+103715;Temperatur bei der PICCO Messung
+103716;Bluttemperatur bei der HZV Messung
+103731;Dokumentation der eingestellten Temperatur am ECMO Gerät
+103734;Eingestellter Temperaturwert an der ECMO (Gerät)
+103735;Dokumentation der Tätigkeit Flushen bei Einsatz eines ECMO Verfahrens
+103736;Dokumentation der Tätigkeit Flushen bei Einsatz eines ILA Verfahrens
+103748;Dokumentation der eingestellten Tubuskompensation
+103751;Dokumentierte Dauer der pflegerischen Assistenz bei therapeutischen, diagnostischen und oder operativen Interventionen.
+103752;Dokumentation durchgeführter diagnostischer Maßnahmen.
+103807;Über eine Messsonde transcutan gemessener Prozentwert
+103808;Über eine Sonde gemessener regionaler cerebraler Blutfluss.
+103809;transcutan gemessener pCO2 Wert.
+103817;Gemessener Sauerstoffpartialdruck im Parenchym
+103818;Über eine Messsonde transcutan gemessener Prozentwert
+103826;Dokumentation der Applikationsform bei Atemtherapie mittels EzPAP
+103827;Messung des PAP unter der Atemtherapie EzPAP
+103837;Rotationswinkel
+103838;Rotationswinkel
+103841;Rotationszeit/Haltezeit
+103842;Haltedauer
+103844;Schläge /sek
+103859;Einstellung der Lage
+104032;Messung des Horowitz-Indexes
+104033;Einstellwert des NO bei NO Beatmung
+104034;Messwert der  NO Konzentration bei NO Beatmung
+104035;Messwert der NO2 Konzentration bei NO Beatmung
+104147;Temperatureinstellung am Gerät Airvo
+104149;Einstellunggröße  des Flows am Gerät
+104150;Dokumentation des eingestellten O2 Flusses, welcher am Gerät Airvo angeschlossen ist.
+104151;Dokumentation der O2 Konzentration in Abhängigkeit der Einstellgrößen FlowSetting und O2 Flow.
+104152;Beschreibung der Schnittstelle vom Gerät zum Patienten
+104226;Edi-Mindestwert 
+104227;Edi-Spitzenwert 
+104228;Shallow Breathing Index (Index für flache Atmung) 
+104229;P0.1 
+104230;Elastanz 
+104231;Atemarbeit, Patient 
+104232;Atemarbeit, Ventilator 
+104233;Exstiratorische Resistenz 
+104234;Inspiratorische Resistenz 
+104235;Statische Compliance 
+104236;Dynamische Charakteristika 
+104237;Gemessene Sauerstoffkonzentration 
+104238;Endexspiratorischer Flow 
+104239;Exsp. Tidalvolumen 
+104240;Insp. Tidalvolumen 
+104241;Leckage in % 
+104242;MVe [l/min] 
+104243;Insp. Minutenvolumen 
+104244;Spontanes exsp. Minutenvolumen 
+104245;Atemfrequenz 
+104246;Spontane Atemzüge pro Minute 
+104247;Continuous Positive Airway Pressure 
+104248;Positiver Endexsp. Druck 
+104249;Mittlerer Atemwegsdruck 
+104250;Atemwegsdruck Pause 
+104251;Atemdruck Spitze 
+104252;Backup Ti [s] 
+104253;Backup I:E [Einstellung] 
+104254;Backup DK über PEEP [cmH2O] 
+104255;Backup Frequenz [n/min] 
+104256;Backup Vt [ml] 
+104257;Automode Triggerfenster (s) 
+104258;Gewicht (kg) 
+104259;EDI Trigger 
+104260;Nava Pegel 
+104261;Sauerstoffkonzentration 
+104262;zeit unteres Druckniveau (tniedrig) 
+104263;zeit oberes Druckniveau (thoch) 
+104264;PEEP 
+104265;Druckunterstüzung hoch (cmH2O) 
+104266;Phoch (cmH2O) 
+104267;Phoch (cmH2O) 
+104268;DU über PEEP 
+104269;DK über PEEP 
+104270;Drucktrigger 
+104271;Flowtrigger 
+104272;TPause (%) 
+104273;TPause (s) 
+104274;I:E [Einstellung] 
+104275;End. Insp. Zyklusende (% des Spitzenflows) 
+104276;Insp.-Anstiegszeit (%) 
+104277;Insp.-Anstiegszeit (s) 
+104278;Pausendauer [s] 
+104279;Pausendauer 
+104280;Ti (s) 
+104281;CMV Frequenz 
+104282;SIMV Frequenz 
+104283;Atemfrequenz 
+104284;Tidalvolumen 
+104345;Dokumentation des prozentualen Anteil des Aufblasens des Ballons.
+104347;Dokumentation des prozentualen Anteils des Leersaugens des Ballons.
+104349;Dokumentation des Unterstützungsdruckes.
+104351;Dokumentation des verwendeten Ballonkatheters.
+104352;Dokumentation des Ballonvolumens.
+104353;Dokumentation der gewählten EG Ableitung für den IABP Einsatz.
+104354;Dokumentation der IABP Frequenz.
+104355;Dokumentation des ausgewählten Triggers der IABP.
+104356;Dokumentation des gemessenen Blutdruckes unter IABP.
+104403;Inhalte der Prämedikation
+104708;Dokumentation des eingestellten PEEP.
+104709;Dokumentation des Alters des Patienten.
+104710;Dokumentation des eingestellten Pmax.
+104712;Dokumentation des eingestellten Triggers.
+104714;Dokumentation der eingestellten Rampenzeit.
+104715;Dokumentation der Inspirationszeit. Verhältnis zwischen Tip und Tinsp. 0 bis 60 %.
+104716;Dokumentation der Inspirationszeit.
+104717;Dokumentation des eingestellten Pressure Support.
+104718;Dokumentation der eingestellten Frequenz.
+104719;Dokumentation ders eingestellten Vt.
+104720;Dokumentation des gemessenen Beatmungsspitzendruck.
+104721;Dokumentation des gemessenen Plateaudruckes.
+104722;Dokumentation des gemessenen PEEPs.
+104723;Dokumention des gemessenen endtidalen
+104724;Inspiratorisch gemessenes CO2.
+104725;Gemessenes Atemminutenvolumen.
+104726;Gemessenes Tidalvolumen.
+104727;Gemessene Atemfrequenz.
+104728;Gemessene Leckage.
+104729;Die gemessene Gesamtcompliance abzüglich der im Selbsttest ermittelten System- und Schlauchcompliance ergibt die Lungencompliance.
+104730;Gemessene inspiratorische O2 Konzentration.
+104731;Gemessene exspiratorische O2 Konzentration.
+104732;Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)
+104733;Inspiratorisch gemessene Halothan Konzentration. 
+104734;Exspiratorisch gemessene Halothankonzentration.
+104735;Inspiratorisch gemessene Enfluran Konzentration.
+104736;Exspiratorisch gemessene Enfluran Kozentration.
+104737;Inspiratorisch gemessene Isofluran.
+104738;Exspiratorisch gemessene Isofluran Konzentration.
+104739;Inspiratorisch gemessene Desfluran Konzentration.
+104740;Exspiratorisch gemessene Desfluran Konzentration.
+104741;Inspiratorisch gemessene Sevofluran Konzentration.
+104742;Exspiratorisch gemessene Sevofluran Konzentration.
+104743;Gemessener Frischgas Flow.
+104745;An der Flowröhre eingestellter O2 Frischgasflow.
+104746;An der Flowröhre eingestellter Frischgas Flow für Air.
+104747;Eingestellter Inspiration Druck.
+104748;Eingestellte Mindestfrequenz (Apnoeventilation) in dme Modus Pressure Support.
+104749;Dokumentation des eingestellten I : E.
+104751;Arztdoku S. 10
+104752;Vt in der Backupeinstellung
+104753;Frequenzeinstellung inder Backupeinstellung.
+104754;Apnoezeiteinstellung in der Backupeinstellung.
+104758;gemessenes Schlagvolumen
+104760;Wert des gemessenen Schlagvolumenindex.
+104770;Gesamt Frischgasfluss (Summe aus O2 + AIR)
+104771;Eingestelter Patientengewicht am Pallas
+104772;Gemesener Atemwegsmitteldruck
+104773;Test
+104813;Inspirationszeit maximal
+105043;kontrollierte Wassertemperatur, gemessener Wert
+105045;Der Bispectral Index (BIS) ist ein verarbeiteter EEG Parameter und zeigt die Auswirkungen der Sedierung auf das Gehirn an.
+105046;entspricht der SR Anzeige am Gerät. Burst Supression Ratio
+105049;neu angelegt am 18.05.2012
+105050;Neuanlage 18.05.2012 String
+105051;Anlage 18.05.2012 String
+105052;Anlage 18.05.2012
+105075;Eingestelltes Körpergewicht beim respirator C2.
+105076;Inspiratorische Bemühung des Patienten, die das Beatmungsgerät veranlasst, einen Atemhub abzugeben.
+105077;Eingestellte Alarmhochdruckgrenze. Einstellung erfolgtdirekt über die Alarmeinstellung aber auch indirekt über die Einstellung Pasvlimit. Die Alarmhochdruckgrenze liegt automatisch 10 mbar über der Pasvlimit Einstellung.
+105078;Eingestellter PEEP, CPAP oder Ptief am C2.
+105079;Eingestellter Pkontrol oder Phoch am C2.
+105080;Eingestellte CMV Frequenz bei dem Respirator C2  in den Beatmungsmodi DUOPAP, APVcmv, Pcmv, 
+105081;Eingestellt SIMV Frequenz bei dne Respiratoren C2 5 in den Beatmungsmodi APVsimv, Psimv.
+105082;Eingestelltes Körpergewicht.
+105083;Eingestellte CMV Frequenz bei dem Respirator G5 in den Beatmungsmodi DUOPAP, APVcmv, Pcmv, 
+105084;Eingestellt SIMV Frequenz bei dem Respirator G5 in den Beatmungsmodi APVsimv, Psimv.
+105085;Eingestelltes unteres Druckniveau bei den Respirator G5 in verschiedenen Beatmungsmodis.
+105086;Eingestelltes oberes Druckniveau bei dem Respirator  G5 in verschiedenen Beatmungsmodi.
+105088;Ob alle Wertsachen vollständig ausgehändigt wurden (Ja/Nein)
+105203;Objekt für die Tabelle der körperlichen Untersuchung der ärztlichen Dokumentation
+105212;Transientes Objekt für die temporäre Aufnahme der Vorwerte für die medizinische Dokumentation Untersuchung körperlicher Status
+105271;Objektstruktur für die Aufnahme von strukturierten Antibiogrammen
+106295;%Systole Verhältnis Systolendauer zur Diastolendauer
+106299;Verhältnis Systole zur Diastolendauer
+106312;Delta P2/P3
+106318;Antibiogrammobjekt für die MiBi-Befunde
+106354;Messung nur unter ASV Intellivent
+106355;Negativ Wert/positiv Wert
+106363;Bereich Decimal - bis +
+106364;Bereich Decimal - bis +
+106366;Uhrzeit
+106370;Zeit zwishen 2 SBT
+106371;Zeit bis zum Start STB
+106384;Anpassung für automatische Gerätedataenübernahme mit IBUS
+106385;Anpassung für IBUS Anbindung
+106386;Anpassung IBUS Anbindung
+106387;Anpassung für IBUS Anbindung
+106388;Anpassung für IBUS Anbindung
+106389;Anpassung für IBUS
+106390;Anpassung für IBUS Anbindung
+106391;Anpassung für IBUS Anbindung
+106392;Anpassung aufgrund IBUS Anbindung
+106393;Anpassung für die automatische Datenübermnahme IBUS
+106394;Anpassung für die automatische Datenübernahme IBUS
+106395;Änderung für die automatische Datenübernahme IBUS
+106396;Anpassung für automatische Datenübernahme IBUS
+106397;Neuanlage im Zuge der IBUS Anbindung
+106398;Anpassung im Zuge der automatischen Geräteanbindung über IBUS. Änderung in ml
+106399;Anpassung analog zu Geräten mit automatischer Datenübernahme Änderung in ml 
+106400;automatische Datenübernahme IBUS
+106401;Anpassung im Zuge der automatischen Datenübernahme IBUS
+106402;neue Variable für automatische Datenübernahme IBUS
+106403;Texteintrag
+106404;Anlage für IBUS Datenübermittlung
+106405;Anlage für IBUS Datenübermittlung
+106407;Messwert im Verlaufbis zum erreichen der eingestellten Zieltemperatur
+106408;manueller Modus
+106413;Wert gemessen am Ventilator
+106415;VT/IBW
+106468;Dokumentation des gemessenen Blutdruckes unter IABP
+106469;Dokumentation des prozentualen Anteils des Aufblasens des Ballons
+106470;Dokumentation der gewählten EKG Ableitung für den IABP Einsatz
+106471;Dokumentation des Unterstützungdruckes
+106472;Dokumentation der IABP Frequenz
+106473;Dokumentation des ausgewählten Triggers der IABP
+106474;Dokumentation des prozentualen Anteils des Leersaugens des Ballons
+106521;Auslandsaufenthalt in den letzten 6 Monaten?
+106522;Auslandsaufenthalt in den letzten 6 Monaten?
+106626;Eingestelltes Körpergewicht
+106630;Inspiratorische Bemühung des Patienten, die das Beatmungsgerät veranlasst, einen Atemhub abzugeben
+106633;Exspiratorische Triggersensitivität, eine Parametereinstellung
+106634;Eingestellte CMV Frequenz bei dem Respirator G5 in den Beatmungsmodi DUOPAP, APVcmv, Pcmv, 
+106635;Eingestellt SIMV Frequenz bei dem Respirator T1 in den Beatmungsmodi APVsimv, Psimv.
+106636;Eingestelltes unteres Druckniveau bei den Respirator G5 in verschiedenen Beatmungsmodis.
+106637;Beatmung_ES_T1_Psupport
+106638;Eingestelltes oberes Druckniveau bei dem Respirator  G5 in verschiedenen Beatmungsmodi
+106639;prozentualer Anteil der Inspiration, der Plateauphase bestimmt wird
+106640;Einstelungswert für die Inspirationszeit
+106641;Sauerstoffeinstellung
+106646;Implementierung für anamnestische Erhebung des Status innerhalb d. Active X Anwendung
+106647;Allergiestatus unbekannt fallbezogen - Active X Plugin
+106648;Fall_Allergie_nichtErhoben - Active X Plugin
+106649;Status nicht bekannt
+106650;Peaklfowmeter Messung in % mit Definition <> Messung exspirat. Spitzenfluss
+106776;Ort der Messung ABP1
+106777;Ort der Messung ABP2
+107800;Pertionealdialyse Auslaufmenge in ml
+107801;Auslaufzeit
+107804;Einlaufhöhe in cm
+107805;Peritonealdialyse Einlaufmenge in ml
+107812;Apnoezeit
+107853;Einstellung der Luftfeuchtigkeit im Inkubator
+107854;Einstellung der Luftemperatur
+107855;Einstellung der O2-Konzentration im Inkubator
+107856;Messung der Luftfeuchtigkeit im Inkubator
+107857;Messung der Luftemperatur im Inkubator
+107858;Messung der O2-Konzentration im Inkubator
+107868;Einstellwert: Zeiteinstellung für das untere Druckniveau
+107869;Einstellwert: Tidalvolumen
+107870;Unerwarteter positiver endexspiratorischer Druck
+107871;Statische Compliance
+107872;Exspiratorisches Minutenvolumen
+107873;Exspiratorischer Peakflow
+107874;Spontane Atemfrequenz
+107875;Gesamtfrequenz
+107876;gemessenes I:E Verhältnis
+107878;Inspiratorischer Peakflow
+107879;Sauerstoffkonzentration des abgegebenen Gasgemisches
+107880;Atemweg-Okklusionsdruck, ein Monitoring-Parameter
+107881;Messwert: Beatmungsdruck Peep/CPAP
+107883;Inspiratorischer Druck, mit Pinsp wird der Zieldruck (zusätzlich zu PEEP/CPAP) bezeichnet, der im Modus ASV während der Inspirationsphase abgegeben wird
+107884;Messwert: Beatmungsmitteldruck
+107885;Minimaler Atemwegsdruck, ein Monitoring Parameter
+107886;Plateau-Atemwegsdruck
+107887;Druck Zeit Produkt (Pressure Time Product)
+107888;Inspiratorische Flow-Resistance
+107889;Index für schnelle Flachatmung (Rapid Shallow Breathing Index)
+107890;Wert gemessen am Ventilator
+107891;Inspirationszeit in Sekunden
+107892;Leckagevolumen
+107893;Messwert, exspiratorisches Tidalvolumen
+107897;eingestellte maximale Inspirationszeit im Modus NIV
+107901;Prozentsatz des Minutenvolumens, eine Parametereinstellung im ASV Modus
+107903;Einstellwert oberes Druckniveau im Modus DuoPAP
+107904;Einstellwert: unteres Druckniveau im Modus APRV
+107927;Peritonealdialyse - Einlaufhöhe in cm
+107976;eingestelltes Körpergewicht
+107981;Eingestellter PEEP, CPAP oder Ptief
+107986;Inspiratorischer Druck
+107988;Eingestellte CMV Frequenz
+107989;Eingestellte SIMV Frequenz
+107993;Inspirationszeit max
+108016;Exspiratorisches Minutenvolumen
+108017;spontanes Atemminutenvolumen
+108018;Spontane Atemfrequenz
+108019;Gesamtatemfrequenz
+108021;Endtidaler CO2-Partialdruck
+108023;Plateau- oder endinspiratorischer Druck
+108024;Inspiratorischer Druck
+108028;AutoPEEP oder intrinsischer PEEP
+108031;Verhältnis Inspirationszeit:Exspirationszeit
+108032;Exspiratorischer Peakflow
+108033;Inspiratorischer Peakflow
+108034;Exspiratorische Zeitkonstante
+108035;Inspiratorische Flow-Resistance
+108036;Statische Compliance
+108038;Atemwegs-Okklusionsdruck
+108039;Index für schnelle Flachatmung („Rapid Shallow Breathing Index“) 
+108042;Ectopic Status Label
+108043;Arrhytmia Rhytm Status label
+108106;Herkunftsland der Mutter
+108151;Geburtsdatum der Mutter
+108153;Alkoholgebrauch während der Schwangerschaft
+108154;Alkoholgebrauch während der Schwangerschaft
+108155;Nikotingebrauch während der Schwangerschaft
+108156;Nikotingebrauch während der Schwangerschaft
+108157;Insulinapplikation während der Schwangerschaft
+108158;Insulinapplikation während der Schwangerschaft
+108479;Betreuung nach AWMF bei Kindern mit Geb. Gew. unter 1500g 
+108502;Kopfumfang bit cm
+108503;Nichtinvaiver Blutdruck linkes Bein
+108504;Nichtinvasiver Blutdruck rechtes Bein
+108505;Nichtinvasiver Blutdruck linker Arm
+108506;Nichtinvasiver Blutdruck rechter Arm
+108507;Ort der Messung NBP1
+108508;transcutan gemessener pO2 Wert.
+108522;Soziale_Besonderheiten, z.B. Familiensituation
+108525;Parameter im Modus Highflow - ab 08.06.2017
+108529;Elternanleitung
+108625;Einstellung des Neigungswinkels
+108626;Verordnung des Neigungswinkels
+108676;Blutgruppenspezifität der Mutter
+108716;automatisch berechnet aus Pset ml/h 
+108742;Delta Temperatur zentral/Temperatur peripher
+110768;Die/Der verantwortliche Arzt/Ärztin der/die die Reakarte freigibt.
+110770;Der/Die verantwortliche Pflegekraft der/die die Reakarte freigibt
+110790;Auswahl von nummerisch einzugebenden Profilen
+110832;Gabe von Atemgasen
+110833;Eingestellter Basisfluss im Beatmungssystem
+110834;Eingestellte Oszillationsfrequenz
+110835;Prozentualer Anteil der Insp.Zeit bezogen auf den gesamten Atemzyklus
+110836;Prozentuale Kolbenauslenkung
+110837;Eingestellter mittlerer Atemwegsdruck
+110838;O2 Konzentration des Gasgemisches
+110839;gemessene Druckamplitude
+110840;Gemessene O2 Konzentration
+110876;Zeit zwischen 2 SBT
+110877;Zeit bis zum Start SBT
+110880;Einstellung Tidalvolumen
+110882;eingestellte maximale Inspirationszeit 
+110886;Die Nummer der Waage, mit der das Gewicht ermittelt wurde.
+110904;Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags
+110915;I:E Verhältnis (Messung)
+110919;linksartrialer Druck
+110921;rechtsartrialer Druck
+110922;Left Cardiac Work Index 
+110923;intracranieller Druck
+110931;Temperatur iat keinem spezieelnMessort über das Monitoring zugeordnet.
+110976;Score FOUR = Full Outline of UnResponsiveness.
+112006;cerebrale Sauerstoffsättigung links
+112007;cerbebrale Sauerstoffsättigung rechts
+112010;spezifische Gewicht Refraktometer
+112017;Spectral Edge Frequency
+112018;EEG - Spectral Edge Frequency Channel 1
+112019;EEG - Spectral Edge Frequency Channel 2
+112020;EEG - Total Power - Channel 1
+112021;EEG - Total Power - Channel 2
+112042;Dokumentierte Dauer der pflegerischen Assistenz bei pflegerischen Maßnahmen - Interventionen mit Zeitaufwand
+113046;Einstellung Sauerstoff Flow
+117140;Parameter im Modus Highflow
+117178;Dokumentation ob der Spontanatemtest bestanden wurde.
+117232;Zusatzgerät bei einer ECMO Therapie
+117242;Filter - O2Flow zur Ausspülung CO2

@@ -94,6 +94,45 @@ CREATE TABLE loinc_copra.from_script (
 ALTER TABLE loinc_copra.from_script OWNER TO clinicuser;
 
 --
+-- Name: loinc_long_common_name_copra_description; Type: TABLE; Schema: loinc_copra; Owner: clinicuser
+--
+
+CREATE TABLE loinc_copra.loinc_long_common_name_copra_description (
+    loinc_num character varying,
+    copra_id bigint,
+    loinc_long_common_name character varying(300),
+    copra_description character varying,
+    accuracy integer,
+    is_match boolean,
+    id integer NOT NULL
+);
+
+
+ALTER TABLE loinc_copra.loinc_long_common_name_copra_description OWNER TO clinicuser;
+
+--
+-- Name: loinc_long_common_name_copra_description_id_seq; Type: SEQUENCE; Schema: loinc_copra; Owner: clinicuser
+--
+
+CREATE SEQUENCE loinc_copra.loinc_long_common_name_copra_description_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE loinc_copra.loinc_long_common_name_copra_description_id_seq OWNER TO clinicuser;
+
+--
+-- Name: loinc_long_common_name_copra_description_id_seq; Type: SEQUENCE OWNED BY; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER SEQUENCE loinc_copra.loinc_long_common_name_copra_description_id_seq OWNED BY loinc_copra.loinc_long_common_name_copra_description.id;
+
+
+--
 -- Name: loinc_long_common_name_copra_name; Type: TABLE; Schema: loinc_copra; Owner: clinicuser
 --
 
@@ -153,6 +192,13 @@ ALTER SEQUENCE loinc_copra.loinc_long_common_name_copra_name_analyse_id_seq OWNE
 --
 
 ALTER TABLE ONLY loinc_copra.copra_description_only_words ALTER COLUMN id SET DEFAULT nextval('loinc_copra.copra_description_only_words_id_seq'::regclass);
+
+
+--
+-- Name: loinc_long_common_name_copra_description id; Type: DEFAULT; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER TABLE ONLY loinc_copra.loinc_long_common_name_copra_description ALTER COLUMN id SET DEFAULT nextval('loinc_copra.loinc_long_common_name_copra_description_id_seq'::regclass);
 
 
 --
@@ -1864,10 +1910,7 @@ Verbesserung	f	2001
 Verfahrensparameter	f	2005
 Verknüpfung	f	2007
 Verlaufbis	f	2008
-Verlaufdokumentation	f	2009
-Verlaufsdokumentation	f	2010
 Verlaufseintrag	f	2011
-Verlaufsgewicht	f	2012
 verlegt	f	2013
 Verlegung	f	2014
 Verlegungsbericht	f	2015
@@ -1881,33 +1924,19 @@ Verordnungen	f	2022
 Verordnungsanforderungen	f	2023
 Verordnungsliste	f	2024
 Verordung	f	2025
-verrechnet	f	2026
 verschiedenen	f	2027
 versorgt	f	2028
 Versorgung	f	2029
 Versorgungsvollmacht	f	2030
-verstorbener	f	2031
 Vertretung	f	2032
 Verweis	f	2033
 verwendet	f	2034
 verwendeten	f	2035
 Verwendung	f	2036
-VES	f	2037
-Viro	f	2038
-Virologie	f	2039
 visiert	f	2040
 Vision	f	2041
-Vitalparameter	f	2042
-Vitium	f	2043
-Vitlaparameter	f	2044
-VO	f	2045
-Vol	f	2046
 VolAssist	f	2047
 vollständig	f	2048
-volume	f	2049
-Volume	f	2050
-Volumen	f	2051
-Volumenrate	f	2052
 vom	f	2053
 von	f	2054
 Von	f	2055
@@ -1963,34 +1992,38 @@ Verbindung	t	2002
 Verfahren	t	2003
 Verfahrens	t	2004
 Verhältnis	t	2006
-Vorbehandlungen	f	2058
+Verlaufdokumentation	t	2009
+Verlaufsdokumentation	t	2010
+Verlaufsgewicht	t	2012
+verrechnet	t	2026
+verstorbener	t	2031
+VES	t	2037
+Viro	t	2038
+Virologie	t	2039
+Vitalparameter	t	2042
+Vitium	t	2043
+Vitlaparameter	t	2044
+VO	t	2045
+Vol	t	2046
+volume	t	2049
+Volume	t	2050
+Volumen	t	2051
+Volumenrate	t	2052
 Vorbereiten	f	2059
 Vorbereitung	f	2060
-Vorerkrankungen	f	2061
 vorfüllen	f	2062
-Vorgeschichte	f	2063
 vorhanden	f	2064
-Vorhof	f	2065
 vorläufigen	f	2066
 vorliegenden	f	2067
 vorliegt	f	2068
 Vormedikation	f	2069
-Vorname	f	2070
 Vorwerte	f	2071
 Vrlegung	f	2072
-Vt	f	2073
-VT	f	2074
-VTe	f	2075
-Waage	f	2076
-Wachheit	f	2077
 wähend	f	2078
 Wahleingriff	f	2079
 während	f	2080
 was	f	2081
-Wasserhaushalt	f	2082
-Wassertemperatur	f	2083
 Wechsels	f	2084
-Wedgedruck	f	2085
 welche	f	2086
 welchen	f	2087
 welcher	f	2088
@@ -2001,58 +2034,25 @@ werden	f	2092
 Wert	f	2093
 Wertes	f	2094
 Wertsachen	f	2095
-Widerstand	f	2096
-Widerstandsindex	f	2097
 wie	f	2098
-Wiederholung	f	2099
 Wiederholungen	f	2100
 Wiedervorstellung	f	2101
 Windel	f	2102
 Windelgewicht	f	2103
-Winkel	f	2104
 wird	f	2105
 Wird	f	2106
 wirdals	f	2107
 Wirkstoffbezeichnung	f	2108
-Wirkstoffes	f	2109
-Wirkstoffsensibilität	f	2110
 wohin	f	2111
 Work	f	2112
 Workstation	f	2113
-Wunddokumentation	f	2114
-Wunde	f	2115
-Wunden	f	2116
-Wundtiefe	f	2117
 wurde	f	2118
 wurden	f	2119
-Years	f	2120
-Zahnstatus	f	2121
 zeigt	f	2122
 Zeile	f	2123
-zeit	f	2124
-Zeit	f	2125
-Zeitachse	f	2126
-Zeitaufwand	f	2127
-Zeiteinstellung	f	2128
-Zeiten	f	2129
-Zeitkonstante	f	2130
-zeitlichen	f	2131
-zeitpunkt	f	2132
-Zeitpunkt	f	2133
-Zeitpunkte	f	2134
-Zeitraum	f	2135
 Zeitvorgabe	f	2136
 Zentimetern	f	2137
-zentral	f	2138
-Zentraler	f	2139
-zentralvenöser	f	2140
-Zentralvenöser	f	2141
-Zerebraler	f	2142
-Ziel	f	2143
-Zieldruck	f	2144
-Zieltemperatur	f	2145
 Zielvorgabe	f	2146
-Zielwert	f	2147
 zu	f	2148
 Zugang	f	2149
 Zugangswegs	f	2150
@@ -2066,20 +2066,14 @@ zuordnen	f	2157
 Zuordnung	f	2158
 zur	f	2159
 Zusammenführung	f	2160
-Zusatzgerät	f	2161
 zusätzl	f	2162
 zusätzlich	f	2163
 Zusätzlich	f	2164
 zusätzlichen	f	2165
-Zusatzoption	f	2166
-Zusatzrisikos	f	2167
-ZVD	f	2168
-ZVK	f	2169
 zweiter	f	2170
 zwischen	f	2171
 Zwischenspeicherfür	f	2172
 zwishen	f	2173
-Zyklus	f	2174
 Zyklusende	f	2175
 Abhängigkeit	t	13
 ABP1	t	17
@@ -2135,6 +2129,46 @@ Burst	t	410
 BZ	t	411
 Diagnose	t	517
 Diagnosen	t	518
+Vorgeschichte	t	2063
+Vorhof	t	2065
+Vorname	t	2070
+Vt	t	2073
+VT	t	2074
+Wasserhaushalt	t	2082
+Wassertemperatur	t	2083
+Wedgedruck	t	2085
+Widerstand	t	2096
+Widerstandsindex	t	2097
+Wiederholung	t	2099
+Winkel	t	2104
+Wirkstoffes	t	2109
+Wirkstoffsensibilität	t	2110
+Wunddokumentation	t	2114
+Wunde	t	2115
+Wunden	t	2116
+Years	t	2120
+Zahnstatus	t	2121
+zeit	t	2124
+Zeit	t	2125
+Zeitachse	t	2126
+Zeitaufwand	t	2127
+Zeiteinstellung	t	2128
+zeitlichen	t	2131
+zeitpunkt	t	2132
+Zeitpunkt	t	2133
+Zeitpunkte	t	2134
+Zeitraum	t	2135
+zentral	t	2138
+Zentraler	t	2139
+zentralvenöser	t	2140
+Zentralvenöser	t	2141
+Zielwert	t	2147
+Zusatzgerät	t	2161
+Zusatzoption	t	2166
+Zusatzrisikos	t	2167
+ZVD	t	2168
+ZVK	t	2169
+Zyklus	t	2174
 Dialysatrate	t	526
 Dialysatvol	t	527
 Dialyse	t	528
@@ -2342,6 +2376,18 @@ Ventilator	t	1989
 Ventrikel	t	1990
 Ventrikelkontraktilität	t	1991
 ventrikuläre	t	1992
+Vorbehandlungen	t	2058
+Vorerkrankungen	t	2061
+VTe	t	2075
+Waage	t	2076
+Wachheit	t	2077
+Wundtiefe	t	2117
+Zeiten	t	2129
+Zeitkonstante	t	2130
+Zerebraler	t	2142
+Ziel	t	2143
+Zieldruck	t	2144
+Zieltemperatur	t	2145
 \.
 
 
@@ -9475,5034 +9521,2473 @@ COPY loinc_copra.copra_description_words (id, copra_description_words, descripti
 --
 
 COPY loinc_copra.from_script (loinc_num, copra_id, loinc_entity, copra_entity, accuracy) FROM stdin;
-96766-1	117164	GISAID sequence accession-Nummer	P Doku nummer	63
-18265-9	102107	Paracetamol Körperflüssigkeit	PatFluessigkeitRate	61
-423-4	107861	Pyrazinamid minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-423-4	107864	Pyrazinamid minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-423-4	107867	Pyrazinamid minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2595-7	102106	Magnesium Dialysat	Dialysatfluß	62
-2595-7	102114	Magnesium Dialysat	Mess Dialysatfluß	71
-2595-7	102631	Magnesium Dialysat	Mess Dialysatvolumen	63
-2595-7	102665	Magnesium Dialysat	Mess Dialysekonzentrat	60
-2595-7	102666	Magnesium Dialysat	Mess DialyseZeit	65
-2595-7	102690	Magnesium Dialysat	Dialysatloesung	67
-2595-7	102755	Magnesium Dialysat	Dialysat	100
-2595-7	103042	Magnesium Dialysat	Dialysatlösung	65
-2595-7	103043	Magnesium Dialysat	Dialysat	100
-2595-7	103045	Magnesium Dialysat	BM25 Dialysat	76
-2595-7	103123	Magnesium Dialysat	Dialysat	100
-2595-7	103124	Magnesium Dialysat	BM25 Dialysat	76
-2595-7	104913	Magnesium Dialysat	Dialyse Zeit	60
-2595-7	104978	Magnesium Dialysat	CRRT Dialysat	76
-2595-7	104999	Magnesium Dialysat	CRRT Dialysat	76
-2595-7	107787	Magnesium Dialysat	Doku Aussehen Dialysat	62
-2595-7	107790	Magnesium Dialysat	Doku Dialysat1	62
-2595-7	107791	Magnesium Dialysat	Doku Dialysat2	62
-56589-5	108510	Dehydroepiandrosteron (DHEA) Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-16723-9	108510	Dehydroepiandrosteron-Sulfat (DHEA-S) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-25387-2	103069	Cyanid Serum Plasma	ADM Plasmavolumen	61
-25387-2	103085	Cyanid Serum Plasma	ADM Plasmavolumen	61
-8838-5	102624	Beobachtungszeitraum	Mess BehandlungsZeit	60
-8838-5	103018	Beobachtungszeitraum	MS Behandlungszeit	63
-12940-3	108510	Thyreotropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-12941-1	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-14639-9	104833	Carbamazepin Serum Plasma	Apherese Plasma	60
-14639-9	104834	Carbamazepin Serum Plasma	Apherese Plasma	60
-14639-9	104846	Carbamazepin Serum Plasma	Apherese Plasma	60
-479-6	107861	Talampicillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-479-6	107864	Talampicillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-479-6	107867	Talampicillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14874-2	104833	Phenobarbital Serum Plasma	Apherese Plasma	63
-14874-2	104834	Phenobarbital Serum Plasma	Apherese Plasma	63
-14874-2	104846	Phenobarbital Serum Plasma	Apherese Plasma	63
-25527-3	104833	Silber Serum Plasma	Apherese Plasma	65
-25527-3	104834	Silber Serum Plasma	Apherese Plasma	65
-25527-3	104846	Silber Serum Plasma	Apherese Plasma	65
-53087-3	102721	Calcium.ionisiert pH ,4 -biologischer Flüssigkeit	Calcium	100
-53087-3	102743	Calcium.ionisiert pH ,4 -biologischer Flüssigkeit	Calcium	100
-53087-3	103054	Calcium.ionisiert pH ,4 -biologischer Flüssigkeit	Calcium	100
-39480-9	102108	Glucose venösem Blut	Mess Blutfluss	61
-32354-3	110925	Hämatokrit arteriellem Blut	P Temperatur Arteriell	62
-354-1	107861	Neomycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-354-1	107864	Neomycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-354-1	107867	Neomycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-52914-9	103145	Bor Serum Plasma	Doku Plasmalösung	62
-52914-9	104833	Bor Serum Plasma	Apherese Plasma	65
-52914-9	104834	Bor Serum Plasma	Apherese Plasma	65
-52914-9	104846	Bor Serum Plasma	Apherese Plasma	65
-471-3	107861	Sulfisoxazol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-471-3	107864	Sulfisoxazol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-471-3	107867	Sulfisoxazol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-10162-6	106521	Anamnese früherer Schwangerschaften - Freitext	Anamnese Nein	76
-10162-6	106522	Anamnese früherer Schwangerschaften - Freitext	Anamnese Ja	84
-10162-6	106526	Anamnese früherer Schwangerschaften - Freitext	Anamnese Schwangerschaft	72
-10162-6	106527	Anamnese früherer Schwangerschaften - Freitext	Anamnese Schwangerschaft Nein	75
-10162-6	106528	Anamnese früherer Schwangerschaften - Freitext	Anamnese Schwangerschaft Ja	71
-10162-6	106649	Anamnese früherer Schwangerschaften - Freitext	Anamnese	100
-10162-6	108161	Anamnese früherer Schwangerschaften - Freitext	Medikamente Schwangerschaft Text	61
-50762-4	104833	A-IgM-Antikörper Serum Plasma	Apherese Plasma	60
-50762-4	104834	A-IgM-Antikörper Serum Plasma	Apherese Plasma	60
-50762-4	104846	A-IgM-Antikörper Serum Plasma	Apherese Plasma	60
-39156-5	101473	Body Mass Index (BMI)	BMI	100
-50504-0	108157	Insulin Serum Plasma . Probenmaterial	Insulin ja	82
-50504-0	108158	Insulin Serum Plasma . Probenmaterial	Insulin nein	74
-12731-6	104833	Interferon alpha Serum Plasma	Apherese Plasma	68
-12731-6	104834	Interferon alpha Serum Plasma	Apherese Plasma	68
-12731-6	104846	Interferon alpha Serum Plasma	Apherese Plasma	68
-10888-6	103915	Triacylglycerid-Lipase Urin	Triadyne liPause	60
-5279-5	108675	Plasmodium Antikörper Serum	P Antikoerper Mutter	61
-13454-4	102721	Calcium-Phosphat-Produkt Serum Plasma	Calcium	100
-13454-4	102743	Calcium-Phosphat-Produkt Serum Plasma	Calcium	100
-13454-4	103054	Calcium-Phosphat-Produkt Serum Plasma	Calcium	100
-76487-8	103069	IgA Serum Plasma	ADM Plasmavolumen	61
-76487-8	103085	IgA Serum Plasma	ADM Plasmavolumen	61
-76487-8	104833	IgA Serum Plasma	Apherese Plasma	65
-76487-8	104834	IgA Serum Plasma	Apherese Plasma	65
-76487-8	104846	IgA Serum Plasma	Apherese Plasma	65
-3084-1	104833	Harnsäure Serum Plasma	Apherese Plasma	67
-3084-1	104834	Harnsäure Serum Plasma	Apherese Plasma	67
-3084-1	104846	Harnsäure Serum Plasma	Apherese Plasma	67
-3084-1	104852	Harnsäure Serum Plasma	Apherese Plasmaloesung	60
-1884-6	104833	ApolipoproteinSerum Plasma	Apherese Plasma	63
-1884-6	104834	ApolipoproteinSerum Plasma	Apherese Plasma	63
-1884-6	104846	ApolipoproteinSerum Plasma	Apherese Plasma	63
-8149-7	104833	Amphetamine Serum Plasma Screening	Apherese Plasma	61
-8149-7	104834	Amphetamine Serum Plasma Screening	Apherese Plasma	61
-8149-7	104846	Amphetamine Serum Plasma Screening	Apherese Plasma	61
-47164-9	108510	Noradrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2703-7	100808	Sauerstoff arteriellem Blut	Sauerstoff	100
-2703-7	101481	Sauerstoff arteriellem Blut	Sauerstoff	100
-2703-7	102942	Sauerstoff arteriellem Blut	G5 Sauerstoff	87
-2703-7	104804	Sauerstoff arteriellem Blut	MS C2 Sauerstoff	77
-2703-7	104808	Sauerstoff arteriellem Blut	C2 Sauerstoff	87
-2703-7	105103	Sauerstoff arteriellem Blut	Sauerstoff RespirationBarValue	63
-2703-7	106641	Sauerstoff arteriellem Blut	T1 Sauerstoff	87
-2703-7	107811	Sauerstoff arteriellem Blut	Sauerstoff	100
-2703-7	107980	Sauerstoff arteriellem Blut	P C3 Sauerstoff	80
-2703-7	108012	Sauerstoff arteriellem Blut	P MS C3 Sauerstoff	71
-2703-7	110866	Sauerstoff arteriellem Blut	Heimbeatmung Sauerstoff	64
-30400-6	103688	Hypochromie Blut	Hypothermie Coolgard	61
-30400-6	103692	Hypochromie Blut	Hypothermie	67
-30400-6	103701	Hypochromie Blut	Hypothermie Doku	69
-30400-6	103804	Hypochromie Blut	Hypothermie ArticSun	61
-41652-9	102108	Glucose venösem Blut	Mess Blutfluss	61
-29349-8	104913	Kalium Serum Plasma -- Dialyse	Dialyse Zeit	74
-29349-8	110802	Kalium Serum Plasma -- Dialyse	P Dialyse Zeit	67
-29349-8	110818	Kalium Serum Plasma -- Dialyse	P Dialyse Zeit	67
-6896-5	104833	Clozapin Serum Plasma	Apherese Plasma	61
-6896-5	104834	Clozapin Serum Plasma	Apherese Plasma	61
-6896-5	104846	Clozapin Serum Plasma	Apherese Plasma	61
-59284-0	101406	Einwilligung - Dokument	Dokumentation HFLoesung	64
-59284-0	107793	Einwilligung - Dokument	Doku Einlaufmenge	63
-25215-5	108100	Para-Aminosalicylat /mL Methode langsam wachsende Mykobakterien	Para	100
-1886-1	104833	ApolipoproteinSerum Plasma	Apherese Plasma	63
-1886-1	104834	ApolipoproteinSerum Plasma	Apherese Plasma	63
-1886-1	104846	ApolipoproteinSerum Plasma	Apherese Plasma	63
-25759-2	108157	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-25759-2	108158	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-25759-2	108510	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2906-6	110925	Pyruvat arteriellem Blut	P Temperatur Arteriell	65
-12458-6	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-32149-7	104968	Harnsäure/ Calculus (Stein)	CRRT MS Calciumfluss	60
-39787-7	102596	Natrium Peritonealdialysat	Natrium	100
-39787-7	102638	Natrium Peritonealdialysat	Mess Natrium	74
-39787-7	102660	Natrium Peritonealdialysat	NatriumProfil	62
-39787-7	102676	Natrium Peritonealdialysat	Natrium	100
-39787-7	102680	Natrium Peritonealdialysat	NatriumProfil	62
-39787-7	103167	Natrium Peritonealdialysat	MS Natrium	82
-39787-7	103226	Natrium Peritonealdialysat	Natrium	100
-39787-7	103228	Natrium Peritonealdialysat	NatriumProfil	62
-39787-7	103242	Natrium Peritonealdialysat	Natrium	100
-25655-2	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3150-0	103126	Inhalierte Sauerstoffkonzentration	BiPAPV O2Konzentration	61
-3150-0	103130	Inhalierte Sauerstoffkonzentration	MS BiPAPV O2Konzentration	61
-3150-0	104151	Inhalierte Sauerstoffkonzentration	Airvo O2Konzentration	65
-14836-1	104833	Methotrexat Serum Plasma	Apherese Plasma	62
-14836-1	104834	Methotrexat Serum Plasma	Apherese Plasma	62
-14836-1	104846	Methotrexat Serum Plasma	Apherese Plasma	62
-16518-3	102721	Calcium -Stunden-Urin	Calcium	100
-16518-3	102743	Calcium -Stunden-Urin	Calcium	100
-16518-3	103054	Calcium -Stunden-Urin	Calcium	100
-16518-3	105006	Calcium -Stunden-Urin	CRRT CalciumLoesung	62
-12287-9	144	Medikamente identifiziert Magenflüssigkeit Screening	Medikamente gestellt	71
-5583-0	104832	Arsen Blut	Apherese Blutfluss	64
-5583-0	108243	Arsen Blut	Geburt an	63
-38356-2	108675	Thyroxin (T4) Antikörper Serum	P Antikoerper Mutter	60
-43579-2	107985	Komplement C3 Pleuraflüssigkeit	P C3	67
-43579-2	107992	Komplement C3 Pleuraflüssigkeit	P C3	67
-43579-2	108010	Komplement C3 Pleuraflüssigkeit	P C3	67
-43579-2	110828	Komplement C3 Pleuraflüssigkeit	P C3	67
-43579-2	110831	Komplement C3 Pleuraflüssigkeit	P C3	67
-31590-3	108675	Ribosomaler Antikörper Serum	P Antikoerper Mutter	60
-3367-0	104833	Atropin Serum Plasma	Apherese Plasma	63
-3367-0	104834	Atropin Serum Plasma	Apherese Plasma	63
-3367-0	104846	Atropin Serum Plasma	Apherese Plasma	63
-19817-6	100008	Komplikationen	Vormedikation	67
-19817-6	101433	Komplikationen	Compliance	67
-19817-6	102152	Komplikationen	Makrozirkulation	60
-19817-6	102153	Komplikationen	Mikrozirkulation	60
-19817-6	104153	Komplikationen	Airvo Applikationsweg	63
-19817-6	106597	Komplikationen	Vormedikation	67
-19817-6	108169	Komplikationen	Geburt Komplikation ja	67
-19817-6	108171	Komplikationen	Geburt Komplikation nein	74
-19817-6	108278	Komplikationen	Geburt Komplikation Text	68
-12514-6	102597	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	102639	Bicarbonat Dialysat	Mess Bicarbonat	80
-12514-6	102677	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	102755	Bicarbonat Dialysat	Dialysat	100
-12514-6	103043	Bicarbonat Dialysat	Dialysat	100
-12514-6	103045	Bicarbonat Dialysat	BM25 Dialysat	76
-12514-6	103123	Bicarbonat Dialysat	Dialysat	100
-12514-6	103124	Bicarbonat Dialysat	BM25 Dialysat	76
-12514-6	103160	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	103191	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	103227	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	103243	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	104881	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	104897	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	104922	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	104937	Bicarbonat Dialysat	Bicarbonat	100
-12514-6	104978	Bicarbonat Dialysat	CRRT Dialysat	76
-12514-6	104999	Bicarbonat Dialysat	CRRT Dialysat	76
-12514-6	105009	Bicarbonat Dialysat	CRRT Dialysatloesung	62
-12514-6	110786	Bicarbonat Dialysat	P Bicarbonat	91
-12514-6	110806	Bicarbonat Dialysat	P Bicarbonat	91
-12506-2	108510	Calcitonin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-1705-3	104833	Acetoacetat Serum Plasma	Apherese Plasma	62
-1705-3	104834	Acetoacetat Serum Plasma	Apherese Plasma	62
-1705-3	104846	Acetoacetat Serum Plasma	Apherese Plasma	62
-12493-3	104833	Hexobarbital Serum Plasma	Apherese Plasma	60
-12493-3	104834	Hexobarbital Serum Plasma	Apherese Plasma	60
-12493-3	104846	Hexobarbital Serum Plasma	Apherese Plasma	60
-12908-0	102596	Natrium Glaskörperflüssigkeit	Natrium	100
-12908-0	102638	Natrium Glaskörperflüssigkeit	Mess Natrium	74
-12908-0	102676	Natrium Glaskörperflüssigkeit	Natrium	100
-12908-0	103167	Natrium Glaskörperflüssigkeit	MS Natrium	82
-12908-0	103226	Natrium Glaskörperflüssigkeit	Natrium	100
-12908-0	103242	Natrium Glaskörperflüssigkeit	Natrium	100
-5572-3	102755	Aluminium Dialysat	Dialysat	100
-5572-3	103043	Aluminium Dialysat	Dialysat	100
-5572-3	103045	Aluminium Dialysat	BM25 Dialysat	76
-5572-3	103123	Aluminium Dialysat	Dialysat	100
-5572-3	103124	Aluminium Dialysat	BM25 Dialysat	76
-5572-3	103835	Aluminium Dialysat	ILA GasflussMin	61
-5572-3	104978	Aluminium Dialysat	CRRT Dialysat	76
-5572-3	104999	Aluminium Dialysat	CRRT Dialysat	76
-5572-3	107787	Aluminium Dialysat	Doku Aussehen Dialysat	65
-27834-1	108157	Insulin Serum Plasma ,5 StundenGlucose	Insulin ja	82
-27834-1	108158	Insulin Serum Plasma ,5 StundenGlucose	Insulin nein	74
-12464-4	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-29638-4	6	Gewicht Gewebe	Gewicht	100
-29638-4	13	Gewicht Gewebe	Bezugsgewicht	67
-29638-4	14	Gewicht Gewebe	Geburtsgewicht	71
-29638-4	104258	Gewicht Gewebe	Servoi Gewicht	67
-29638-4	110886	Gewicht Gewebe	P Gewicht WaageBezeichnung	67
-29638-4	110904	Gewicht Gewebe	P Gewicht	88
-9481-3	106358	pH Wasser	G5 passiver	60
-9481-3	108000	pH Wasser	P C3 passiver	64
-9481-3	108281	pH Wasser	Fruchtwasser	67
-9481-3	108636	pH Wasser	P Power	62
-9481-3	110871	pH Wasser	T1 passiver	60
-14825-4	104833	Maprotilin Serum Plasma	Apherese Plasma	63
-14825-4	104834	Maprotilin Serum Plasma	Apherese Plasma	63
-14825-4	104846	Maprotilin Serum Plasma	Apherese Plasma	63
-42857-3	102721	Calcium venösem Blut	Calcium	100
-42857-3	102743	Calcium venösem Blut	Calcium	100
-42857-3	103054	Calcium venösem Blut	Calcium	100
-9470-6	108281	Kupfer Wasser	Fruchtwasser	64
-1451-4	108157	Cortisol Serum Plasma -- Dosis Insulin intravenös	Insulin ja	82
-1451-4	108158	Cortisol Serum Plasma -- Dosis Insulin intravenös	Insulin nein	74
-12904-9	108510	Renin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-17574-5	102107	Selen Körperflüssigkeit	PatFluessigkeitRate	60
-407-7	107861	Piperacillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-407-7	107864	Piperacillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-407-7	107867	Piperacillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-30231-5	102107	Rheumafaktor Körperflüssigkeit	PatFluessigkeitRate	60
-25589-3	104833	Citalopram Serum Plasma	Apherese Plasma	63
-25589-3	104834	Citalopram Serum Plasma	Apherese Plasma	63
-25589-3	104846	Citalopram Serum Plasma	Apherese Plasma	63
-115-6	107861	Cefoxitin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-115-6	107864	Cefoxitin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-115-6	107867	Cefoxitin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-30121-8	102672	Kolonienanzahl Dialysat	DialysekonzentratALT	65
-30121-8	102690	Kolonienanzahl Dialysat	Dialysatloesung	63
-30121-8	102695	Kolonienanzahl Dialysat	Dialysekonzentrat	60
-30121-8	102755	Kolonienanzahl Dialysat	Dialysat	100
-30121-8	102921	Kolonienanzahl Dialysat	Dialysekonzentrat	60
-30121-8	103043	Kolonienanzahl Dialysat	Dialysat	100
-30121-8	103045	Kolonienanzahl Dialysat	BM25 Dialysat	76
-30121-8	103123	Kolonienanzahl Dialysat	Dialysat	100
-30121-8	103124	Kolonienanzahl Dialysat	BM25 Dialysat	76
-30121-8	103224	Kolonienanzahl Dialysat	Dialysekonzentrat	60
-30121-8	103250	Kolonienanzahl Dialysat	Dialysekonzentrat	60
-30121-8	104978	Kolonienanzahl Dialysat	CRRT Dialysat	76
-30121-8	104999	Kolonienanzahl Dialysat	CRRT Dialysat	76
-16295-8	108510	11-Desoxycortisol Serum Plasma -- Stimulation	Atmung Stimulation	76
-12946-0	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2986-8	104833	Testosteron Serum Plasma	Apherese Plasma	62
-2986-8	104834	Testosteron Serum Plasma	Apherese Plasma	62
-2986-8	104846	Testosteron Serum Plasma	Apherese Plasma	62
-35632-9	104833	Phenytoin Serum Plasma Screening	Apherese Plasma	60
-35632-9	104834	Phenytoin Serum Plasma Screening	Apherese Plasma	60
-35632-9	104846	Phenytoin Serum Plasma Screening	Apherese Plasma	60
-15794-1	108157	Porcines Insulin IgE-Antikörper-RAST-Klasse Serum	Insulin ja	82
-15794-1	108158	Porcines Insulin IgE-Antikörper-RAST-Klasse Serum	Insulin nein	74
-45204-5	108510	Glucose Urin Teststreifen . Probenmaterial Stimulation	Atmung Stimulation	76
-15114-2	104832	Arsen Blut	Apherese Blutfluss	64
-15114-2	108243	Arsen Blut	Geburt an	63
-176-8	107861	Chlortetracyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-176-8	107864	Chlortetracyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-176-8	107867	Chlortetracyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-10574-2	108281	Fructose Sperma	Fruchtwasser	67
-10574-2	108282	Fructose Sperma	Fruchtwasser klar	62
-50508-1	108157	Insulin Serum Plasma . Probenmaterial	Insulin ja	82
-50508-1	108158	Insulin Serum Plasma . Probenmaterial	Insulin nein	74
-15401-3	144	Medikamente identifiziert Blut Screening	Medikamente gestellt	71
-302-0	107861	Lomefloxacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-302-0	107864	Lomefloxacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-302-0	107867	Lomefloxacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-25359-1	103069	Cadmium Serum Plasma	ADM Plasmavolumen	65
-25359-1	103070	Cadmium Serum Plasma	ADM PlasmaAustausch	62
-25359-1	103085	Cadmium Serum Plasma	ADM Plasmavolumen	65
-25359-1	103145	Cadmium Serum Plasma	Doku Plasmalösung	61
-48341-2	108510	17-Hydroxyprogesteron Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-47759-6	108157	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-47759-6	108158	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-56760-2	102139	Leber-Nieren-Mikrosomen Antikörper Serum Immunoblot	Abdomen Nieren	60
-10700-3	102128	Orthopoxvirus Haut Elektronenmikroskopie	Kopf Haut	62
-10700-3	102142	Orthopoxvirus Haut Elektronenmikroskopie	Haut	100
-27875-4	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-27875-4	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-27875-4	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3846-3	104833	Naproxen Serum Plasma	Apherese Plasma	72
-3846-3	104834	Naproxen Serum Plasma	Apherese Plasma	72
-3846-3	104846	Naproxen Serum Plasma	Apherese Plasma	72
-3846-3	104852	Naproxen Serum Plasma	Apherese Plasmaloesung	60
-40267-7	108510	Creatinin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-2713-6	100808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	Sauerstoff	100
-2713-6	101481	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	Sauerstoff	100
-2713-6	102942	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	G5 Sauerstoff	87
-2713-6	104804	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	MS C2 Sauerstoff	77
-2713-6	104808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	C2 Sauerstoff	87
-2713-6	106641	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	T1 Sauerstoff	87
-2713-6	107811	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	Sauerstoff	100
-2713-6	107980	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	P C3 Sauerstoff	80
-2713-6	108012	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	P MS C3 Sauerstoff	71
-2713-6	110866	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Blut	Heimbeatmung Sauerstoff	61
-34397-0	104833	Amisulprid Serum Plasma	Apherese Plasma	63
-34397-0	104834	Amisulprid Serum Plasma	Apherese Plasma	63
-34397-0	104846	Amisulprid Serum Plasma	Apherese Plasma	63
-224-6	107861	Doxycyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-224-6	107864	Doxycyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-224-6	107867	Doxycyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14698-5	103145	Digoxin Serum Plasma	Doku Plasmalösung	61
-56496-3	108510	Prolaktin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-56519-2	108510	11-Desoxycortisol Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-14905-4	102581	Retinol Serum Plasma	Plasmavolumen	61
-14905-4	102585	Retinol Serum Plasma	Plasmarate	60
-14905-4	103063	Retinol Serum Plasma	Plasmavolumen	61
-14905-4	103065	Retinol Serum Plasma	Plasmavolumen	61
-14905-4	104833	Retinol Serum Plasma	Apherese Plasma	63
-14905-4	104834	Retinol Serum Plasma	Apherese Plasma	63
-14905-4	104846	Retinol Serum Plasma	Apherese Plasma	63
-14627-4	102597	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	102639	Bicarbonat venösem Blut	Mess Bicarbonat	80
-14627-4	102677	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	103160	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	103191	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	103227	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	103243	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	104881	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	104897	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	104922	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	104937	Bicarbonat venösem Blut	Bicarbonat	100
-14627-4	110786	Bicarbonat venösem Blut	P Bicarbonat	91
-14627-4	110806	Bicarbonat venösem Blut	P Bicarbonat	91
-13423-9	108510	Adrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-11556-8	100802	Sauerstoff Blut	SauerstoffFlow	69
-11556-8	100808	Sauerstoff Blut	Sauerstoff	100
-11556-8	101439	Sauerstoff Blut	SauerstoffFlow	69
-11556-8	101481	Sauerstoff Blut	Sauerstoff	100
-11556-8	102074	Sauerstoff Blut	SauerstoffFlow	69
-11556-8	102922	Sauerstoff Blut	SauerstoffVolG5	67
-11556-8	102942	Sauerstoff Blut	G5 Sauerstoff	87
-11556-8	103091	Sauerstoff Blut	CF800 SauerstoffFlow	63
-11556-8	104804	Sauerstoff Blut	MS C2 Sauerstoff	80
-11556-8	104808	Sauerstoff Blut	C2 Sauerstoff	87
-11556-8	105103	Sauerstoff Blut	Sauerstoff RespirationBarValue	80
-11556-8	106641	Sauerstoff Blut	T1 Sauerstoff	87
-11556-8	107811	Sauerstoff Blut	Sauerstoff	100
-11556-8	107980	Sauerstoff Blut	P C3 Sauerstoff	80
-11556-8	108012	Sauerstoff Blut	P MS C3 Sauerstoff	80
-11556-8	110866	Sauerstoff Blut	Heimbeatmung Sauerstoff	80
-2071-9	102755	Chlorid Dialysat	Dialysat	100
-2071-9	103043	Chlorid Dialysat	Dialysat	100
-2071-9	103045	Chlorid Dialysat	BM25 Dialysat	76
-2071-9	103123	Chlorid Dialysat	Dialysat	100
-2071-9	103124	Chlorid Dialysat	BM25 Dialysat	76
-2071-9	104978	Chlorid Dialysat	CRRT Dialysat	76
-2071-9	104999	Chlorid Dialysat	CRRT Dialysat	76
-2071-9	105009	Chlorid Dialysat	CRRT Dialysatloesung	61
-2071-9	107787	Chlorid Dialysat	Doku Aussehen Dialysat	67
-2071-9	107802	Chlorid Dialysat	Dialysat1	64
-2071-9	107803	Chlorid Dialysat	Dialysat2	64
-55-4	107861	Capreomycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-55-4	107864	Capreomycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-55-4	107867	Capreomycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-41644-6	102721	Calcium.ionisiert Kapillarblut	Calcium	100
-41644-6	102743	Calcium.ionisiert Kapillarblut	Calcium	100
-41644-6	103054	Calcium.ionisiert Kapillarblut	Calcium	100
-2635-1	104833	Mianserin Serum Plasma	Apherese Plasma	65
-2635-1	104834	Mianserin Serum Plasma	Apherese Plasma	65
-2635-1	104846	Mianserin Serum Plasma	Apherese Plasma	65
-81324-6	106526	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Anamnese Schwangerschaft	77
-81324-6	106527	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Anamnese Schwangerschaft Nein	68
-81324-6	106528	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Anamnese Schwangerschaft Ja	71
-81324-6	108128	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	P Schwangerschaft String	77
-81324-6	108129	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Schwangerschaft	100
-81324-6	108130	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Schwangerschaft ICSI	86
-81324-6	108131	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Schwangerschaft IVF	88
-81324-6	108132	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Schwangerschaft an	91
-81324-6	108161	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Medikamente Schwangerschaft Text	64
-81324-6	108162	Glucose-Toleranz Stunden Schwangerschaft ( ) - Serum Plasma	Probleme Schwangerschaft Text	68
-14723-1	104833	Ferritin Serum Plasma	Apherese Plasma	61
-14723-1	104834	Ferritin Serum Plasma	Apherese Plasma	61
-14723-1	104846	Ferritin Serum Plasma	Apherese Plasma	61
-15110-0	104833	Morphium Serum Plasma	Apherese Plasma	61
-15110-0	104834	Morphium Serum Plasma	Apherese Plasma	61
-15110-0	104846	Morphium Serum Plasma	Apherese Plasma	61
-306-1	107861	Loracarbef minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-306-1	107864	Loracarbef minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-306-1	107867	Loracarbef minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-12619-3	108510	Glucose Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-212-1	107861	Cycloserin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-212-1	107864	Cycloserin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-212-1	107867	Cycloserin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-57840-1	102755	Eosinophile/100 Leukozyten Dialysat manueller Zählung	Dialysat	100
-57840-1	103043	Eosinophile/100 Leukozyten Dialysat manueller Zählung	Dialysat	100
-57840-1	103045	Eosinophile/100 Leukozyten Dialysat manueller Zählung	BM25 Dialysat	76
-57840-1	103123	Eosinophile/100 Leukozyten Dialysat manueller Zählung	Dialysat	100
-57840-1	103124	Eosinophile/100 Leukozyten Dialysat manueller Zählung	BM25 Dialysat	76
-57840-1	104978	Eosinophile/100 Leukozyten Dialysat manueller Zählung	CRRT Dialysat	76
-57840-1	104999	Eosinophile/100 Leukozyten Dialysat manueller Zählung	CRRT Dialysat	76
-30304-0	100813	Adefovir	Atemform	62
-30304-0	102156	Adefovir	Atemform	62
-25659-4	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-17029-0	108158	Isoleucin Urin	Insulin nein	62
-19072-8	102721	Calcium.ionisiert pH ,4 Serum Plasma	Calcium	100
-19072-8	102743	Calcium.ionisiert pH ,4 Serum Plasma	Calcium	100
-19072-8	103054	Calcium.ionisiert pH ,4 Serum Plasma	Calcium	100
-48685-2	108100	Para-Aminosalicylat /mL Methode langsam wachsende Mykobakterien	Para	100
-2791-2	108279	Phosphofructokinase Blut	Fruchtwasser blutig	60
-2636-9	108158	Mianserin Urin	Insulin nein	62
-228-7	107861	Enoxacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-228-7	107864	Enoxacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-228-7	107867	Enoxacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-68929-9	102107	Zytokeratin Perikardflüssigkeit	PatFluessigkeitRate	61
-14586-2	104833	Aldosteron Serum Plasma	Apherese Plasma	63
-14586-2	104834	Aldosteron Serum Plasma	Apherese Plasma	63
-14586-2	104846	Aldosteron Serum Plasma	Apherese Plasma	63
-34601-5	144	Medikamente identifiziert Körperflüssigkeit	Medikamente gestellt	71
-74117-3	103069	Adalimumab Serum Plasma	ADM Plasmavolumen	60
-74117-3	103085	Adalimumab Serum Plasma	ADM Plasmavolumen	60
-40254-5	108510	Creatinin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-56700-8	104276	Naproxen IgE-Antikörper Serum	Servoi Insp Anstiegszeit Prozent	60
-50753-3	108157	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-50753-3	108158	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-25578-6	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-4222-6	101483	Digoxin Dosis	Diagnostik	61
-4222-6	103752	Digoxin Dosis	Diagnostik	61
-18484-6	103707	Ku Antikörper Serum	Antikoerper	62
-18484-6	104679	Ku Antikörper Serum	Antikoerper	62
-18484-6	108675	Ku Antikörper Serum	P Antikoerper Mutter	68
-87-7	107861	Cefmetazol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-87-7	107864	Cefmetazol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-87-7	107867	Cefmetazol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-9700-6	102585	Procain Serum Plasma	Plasmarate	60
-9700-6	104833	Procain Serum Plasma	Apherese Plasma	63
-9700-6	104834	Procain Serum Plasma	Apherese Plasma	63
-9700-6	104846	Procain Serum Plasma	Apherese Plasma	63
-15181-1	102699	IgA Körperflüssigkeit	Dialysierfluessigke	63
-168-5	107861	Cephradin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-168-5	107864	Cephradin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-168-5	107867	Cephradin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-47762-0	108157	Somatotropin Serum Plasma Stunde Dosis Insulin intravenös	Insulin ja	82
-47762-0	108158	Somatotropin Serum Plasma Stunde Dosis Insulin intravenös	Insulin nein	74
-2828-2	101389	Kalium Urin	KaliumZiel	67
-2828-2	102481	Kalium Urin	KaliumZiel	67
-2828-2	102482	Kalium Urin	KaliumZiel	67
-17813-7	106365	Alpha-2-Globulin/Protein. Elektrophorese Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-17813-7	106366	Alpha-2-Globulin/Protein. Elektrophorese Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-17813-7	110899	Alpha-2-Globulin/Protein. Elektrophorese Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-17813-7	110900	Alpha-2-Globulin/Protein. Elektrophorese Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-2591-6	104833	Makroamylase Serum Plasma	Apherese Plasma	60
-2591-6	104834	Makroamylase Serum Plasma	Apherese Plasma	60
-2591-6	104846	Makroamylase Serum Plasma	Apherese Plasma	60
-82752-7	102652	Reisestartdatum	StartNatrium	67
-82752-7	102681	Reisestartdatum	StartNatrium	67
-82752-7	102726	Reisestartdatum	Mess StartNatrium	69
-82752-7	103222	Reisestartdatum	StartNatrium	67
-82752-7	103241	Reisestartdatum	StartNatrium	67
-82752-7	103253	Reisestartdatum	StartNatrium	67
-22440-2	108675	Pasteurella multocida Antikörper Serum	P Antikoerper Mutter	60
-8075-4	108157	Porcines Insulin Antikörper Serum	Insulin ja	82
-8075-4	108158	Porcines Insulin Antikörper Serum	Insulin nein	74
-20638-3	104833	Aspargin Serum Plasma	Apherese Plasma	67
-20638-3	104834	Aspargin Serum Plasma	Apherese Plasma	67
-20638-3	104846	Aspargin Serum Plasma	Apherese Plasma	67
-19230-2	102597	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	102639	Bicarbonat Standard arteriellem Blut	Mess Bicarbonat	80
-19230-2	102677	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	103160	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	103191	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	103227	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	103243	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	104881	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	104897	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	104922	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	104937	Bicarbonat Standard arteriellem Blut	Bicarbonat	100
-19230-2	110786	Bicarbonat Standard arteriellem Blut	P Bicarbonat	91
-19230-2	110806	Bicarbonat Standard arteriellem Blut	P Bicarbonat	91
-59470-5	102721	Calcium.ionisiert arteriellem Blut	Calcium	100
-59470-5	102743	Calcium.ionisiert arteriellem Blut	Calcium	100
-59470-5	103054	Calcium.ionisiert arteriellem Blut	Calcium	100
-25793-1	108510	Thyroxin (T4) frei Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-57663-7	108510	Noradrenalin Plasma -- Stimulation	Atmung Stimulation	76
-56504-4	108510	Corticotropin Plasma Minuten Stimulation	Atmung Stimulation	76
-19211-2	100808	Sauerstoff gemischt-venösem Blut	Sauerstoff	100
-19211-2	101481	Sauerstoff gemischt-venösem Blut	Sauerstoff	100
-19211-2	102942	Sauerstoff gemischt-venösem Blut	G5 Sauerstoff	87
-19211-2	104804	Sauerstoff gemischt-venösem Blut	MS C2 Sauerstoff	77
-19211-2	104808	Sauerstoff gemischt-venösem Blut	C2 Sauerstoff	87
-19211-2	106641	Sauerstoff gemischt-venösem Blut	T1 Sauerstoff	87
-19211-2	107811	Sauerstoff gemischt-venösem Blut	Sauerstoff	100
-19211-2	107980	Sauerstoff gemischt-venösem Blut	P C3 Sauerstoff	80
-19211-2	108012	Sauerstoff gemischt-venösem Blut	P MS C3 Sauerstoff	71
-19211-2	110866	Sauerstoff gemischt-venösem Blut	Heimbeatmung Sauerstoff	61
-34916-7	103064	Plasmazellenvorläufer Blut	BM25 Plasmavolumen	60
-34916-7	103067	Plasmazellenvorläufer Blut	BM25 Plasmavolumen	60
-25721-2	104833	Mianserin Serum Plasma	Apherese Plasma	65
-25721-2	104834	Mianserin Serum Plasma	Apherese Plasma	65
-25721-2	104846	Mianserin Serum Plasma	Apherese Plasma	65
-16911-0	108510	Glucose Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-11558-4	110796	pH Blut	P Blutfluss	67
-11558-4	117163	pH Blut	P Blutfluss	67
-5964-2	100203	Prothrombinzeit (PT) Blut Gerinnungstest	PT	100
-5964-2	100676	Prothrombinzeit (PT) Blut Gerinnungstest	PT	100
-19176-7	104833	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-19176-7	104834	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-19176-7	104846	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-41726-1	106777	ABT492	ABP2	60
-6035-0	108675	Musa spp IgE-Antikörper Serum	P Antikoerper Mutter	67
-25576-0	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-14620-9	102113	Aussehen Pleuraflüssigkeit	Mess PatFluessigkeitRate	61
-50502-4	108157	Insulin Serum Plasma . Probenmaterial	Insulin ja	82
-50502-4	108158	Insulin Serum Plasma . Probenmaterial	Insulin nein	74
-18221-2	108510	Adrenalin Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-25619-8	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12937-9	108510	Thyreotropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-79-4	107861	Cefixim minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-79-4	107864	Cefixim minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-79-4	107867	Cefixim minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-1704-6	104833	Acetoacetat Serum Plasma	Apherese Plasma	62
-1704-6	104834	Acetoacetat Serum Plasma	Apherese Plasma	62
-1704-6	104846	Acetoacetat Serum Plasma	Apherese Plasma	62
-44016-4	102699	Galle Körperflüssigkeit	Dialysierfluessigke	60
-2277-2	108281	Ferrochelatase Serum	Fruchtwasser	62
-12821-5	108510	Progesteron Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-51834-0	104273	Tryptase Serum Plasma	Servoi Tpause s	61
-51834-0	104833	Tryptase Serum Plasma	Apherese Plasma	61
-51834-0	104834	Tryptase Serum Plasma	Apherese Plasma	61
-51834-0	104846	Tryptase Serum Plasma	Apherese Plasma	61
-35664-2	106365	Ethanol Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-35664-2	106366	Ethanol Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-35664-2	110899	Ethanol Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-35664-2	110900	Ethanol Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-12902-3	108510	Renin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-1996-8	102721	Calcium Blut	Calcium	100
-1996-8	102743	Calcium Blut	Calcium	100
-1996-8	103054	Calcium Blut	Calcium	100
-1996-8	107934	Calcium Blut	P ADS MS ADS Calcium postFilter	74
-1996-8	107935	Calcium Blut	P ADS MS ADS Calcium preFilter	74
-17845-9	104833	Lipoprotein.alpha Serum Plasma	Apherese Plasma	62
-17845-9	104834	Lipoprotein.alpha Serum Plasma	Apherese Plasma	62
-17845-9	104846	Lipoprotein.alpha Serum Plasma	Apherese Plasma	62
-32125-7	104833	Propoxyphen Serum Plasma	Apherese Plasma	62
-32125-7	104834	Propoxyphen Serum Plasma	Apherese Plasma	62
-32125-7	104846	Propoxyphen Serum Plasma	Apherese Plasma	62
-257-6	107861	Framycetin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-257-6	107864	Framycetin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-257-6	107867	Framycetin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2284-8	104833	Folat Serum Plasma	Apherese Plasma	61
-2284-8	104834	Folat Serum Plasma	Apherese Plasma	61
-2284-8	104846	Folat Serum Plasma	Apherese Plasma	61
-55561-5	104833	Oxprenolol Serum Plasma	Apherese Plasma	63
-55561-5	104834	Oxprenolol Serum Plasma	Apherese Plasma	63
-55561-5	104846	Oxprenolol Serum Plasma	Apherese Plasma	63
-32222-2	102699	Alanin Körperflüssigkeit	Dialysierfluessigke	63
-22671-2	104833	Phytanat Serum Plasma	Apherese Plasma	61
-22671-2	104834	Phytanat Serum Plasma	Apherese Plasma	61
-22671-2	104846	Phytanat Serum Plasma	Apherese Plasma	61
-14165-5	102107	Lactat Körperflüssigkeit	PatFluessigkeitRate	63
-507-4	107861	Tobramycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-507-4	107864	Tobramycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-507-4	107867	Tobramycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-57645-4	108510	C-Peptid Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-54368-6	104833	Katalase Plasma	Apherese Plasma	67
-54368-6	104834	Katalase Plasma	Apherese Plasma	67
-54368-6	104846	Katalase Plasma	Apherese Plasma	67
-14642-3	104833	Carotin Serum Plasma	Apherese Plasma	63
-14642-3	104834	Carotin Serum Plasma	Apherese Plasma	63
-14642-3	104846	Carotin Serum Plasma	Apherese Plasma	63
-54366-0	102721	Calcium.ionisiert pH ,4 Nabelschnurblut	Calcium	100
-54366-0	102743	Calcium.ionisiert pH ,4 Nabelschnurblut	Calcium	100
-54366-0	103054	Calcium.ionisiert pH ,4 Nabelschnurblut	Calcium	100
-41609-9	108510	Prolaktin Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-25570-3	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2106-3	106665	Choriongonadotropin (Schwangerschaftstest) Urin	Schwangerschaftstest durchgefuehrt	74
-2106-3	108128	Choriongonadotropin (Schwangerschaftstest) Urin	P Schwangerschaft String	64
-172-7	107861	Chloramphenicol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-172-7	107864	Chloramphenicol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-172-7	107867	Chloramphenicol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-13057-5	102690	Thrombozyten Dialysat	Dialysatloesung	61
-13057-5	102755	Thrombozyten Dialysat	Dialysat	100
-13057-5	102897	Thrombozyten Dialysat	Dialysatfiltrate	65
-13057-5	103043	Thrombozyten Dialysat	Dialysat	100
-13057-5	103045	Thrombozyten Dialysat	BM25 Dialysat	76
-13057-5	103123	Thrombozyten Dialysat	Dialysat	100
-13057-5	103124	Thrombozyten Dialysat	BM25 Dialysat	76
-13057-5	104978	Thrombozyten Dialysat	CRRT Dialysat	76
-13057-5	104999	Thrombozyten Dialysat	CRRT Dialysat	76
-17575-2	104252	Serin Urin	Servoi Ti	63
-17575-2	104280	Serin Urin	Servoi Ti	63
-29246-6	102107	Lactat Körperflüssigkeit	PatFluessigkeitRate	63
-56556-4	108510	11-Desoxycorticosteron Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-29553-5	106739	- Berechnet	CO Bericht	63
-13092-2	108675	Endomysium Antikörper Serum	P Antikoerper Mutter	61
-51617-9	102106	Farbe Dialysat	Dialysatfluß	72
-51617-9	102114	Farbe Dialysat	Mess Dialysatfluß	67
-51617-9	102666	Farbe Dialysat	Mess DialyseZeit	60
-51617-9	102690	Farbe Dialysat	Dialysatloesung	62
-51617-9	102755	Farbe Dialysat	Dialysat	100
-51617-9	102897	Farbe Dialysat	Dialysatfiltrate	73
-51617-9	103043	Farbe Dialysat	Dialysat	100
-51617-9	103045	Farbe Dialysat	BM25 Dialysat	76
-51617-9	103123	Farbe Dialysat	Dialysat	100
-51617-9	103124	Farbe Dialysat	BM25 Dialysat	76
-51617-9	104913	Farbe Dialysat	Dialyse Zeit	62
-51617-9	104978	Farbe Dialysat	CRRT Dialysat	76
-51617-9	104999	Farbe Dialysat	CRRT Dialysat	76
-51617-9	107787	Farbe Dialysat	Doku Aussehen Dialysat	73
-51617-9	107790	Farbe Dialysat	Doku Dialysat1	64
-51617-9	107791	Farbe Dialysat	Doku Dialysat2	64
-51617-9	107802	Farbe Dialysat	Dialysat1	70
-51617-9	107803	Farbe Dialysat	Dialysat2	70
-33311-2	104833	Porphyrine Serum Plasma	Apherese Plasma	68
-33311-2	104834	Porphyrine Serum Plasma	Apherese Plasma	68
-33311-2	104846	Porphyrine Serum Plasma	Apherese Plasma	68
-18376-4	102596	Natrium -Stunden-Urin	Natrium	100
-18376-4	102638	Natrium -Stunden-Urin	Mess Natrium	74
-18376-4	102676	Natrium -Stunden-Urin	Natrium	100
-18376-4	103167	Natrium -Stunden-Urin	MS Natrium	82
-18376-4	103226	Natrium -Stunden-Urin	Natrium	100
-18376-4	103242	Natrium -Stunden-Urin	Natrium	100
-15113-4	102755	Aluminium Dialysat	Dialysat	100
-15113-4	103043	Aluminium Dialysat	Dialysat	100
-15113-4	103045	Aluminium Dialysat	BM25 Dialysat	76
-15113-4	103123	Aluminium Dialysat	Dialysat	100
-15113-4	103124	Aluminium Dialysat	BM25 Dialysat	76
-15113-4	103835	Aluminium Dialysat	ILA GasflussMin	61
-15113-4	104978	Aluminium Dialysat	CRRT Dialysat	76
-15113-4	104999	Aluminium Dialysat	CRRT Dialysat	76
-15113-4	107787	Aluminium Dialysat	Doku Aussehen Dialysat	65
-30359-4	108675	Histon Antikörper Serum	P Antikoerper Mutter	62
-2148-5	104833	Creatin Serum Plasma	Apherese Plasma	63
-2148-5	104834	Creatin Serum Plasma	Apherese Plasma	63
-2148-5	104846	Creatin Serum Plasma	Apherese Plasma	63
-18997-7	102884	Trimethoprim	RiseTime	60
-32050-7	104833	Barbital Serum Plasma	Apherese Plasma	61
-32050-7	104834	Barbital Serum Plasma	Apherese Plasma	61
-32050-7	104846	Barbital Serum Plasma	Apherese Plasma	61
-44582-5	102128	IgA Haut Immunfluoreszenztest	Kopf Haut	62
-44582-5	102142	IgA Haut Immunfluoreszenztest	Haut	100
-15164-7	107985	Komplement C3 Synovialflüssigkeit	P C3	67
-15164-7	107992	Komplement C3 Synovialflüssigkeit	P C3	67
-15164-7	108010	Komplement C3 Synovialflüssigkeit	P C3	67
-15164-7	110828	Komplement C3 Synovialflüssigkeit	P C3	67
-15164-7	110831	Komplement C3 Synovialflüssigkeit	P C3	67
-47263-9	108510	Adenosinmonophosphat.zyklisch Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-34163-6	100802	Sauerstoffgehalt Blut	SauerstoffFlow	63
-34163-6	100808	Sauerstoffgehalt Blut	Sauerstoff	65
-34163-6	101439	Sauerstoffgehalt Blut	SauerstoffFlow	63
-34163-6	101481	Sauerstoffgehalt Blut	Sauerstoff	65
-34163-6	102074	Sauerstoffgehalt Blut	SauerstoffFlow	63
-34163-6	102922	Sauerstoffgehalt Blut	SauerstoffVolG5	61
-34163-6	102942	Sauerstoffgehalt Blut	G5 Sauerstoff	65
-34163-6	104808	Sauerstoffgehalt Blut	C2 Sauerstoff	65
-34163-6	106641	Sauerstoffgehalt Blut	T1 Sauerstoff	65
-34163-6	107811	Sauerstoffgehalt Blut	Sauerstoff	65
-34163-6	107980	Sauerstoffgehalt Blut	P C3 Sauerstoff	61
-10535-3	103145	Digoxin Serum Plasma	Doku Plasmalösung	61
-33818-6	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33818-6	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33818-6	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3952-9	104833	Phenothiazine Serum Plasma	Apherese Plasma	63
-3952-9	104834	Phenothiazine Serum Plasma	Apherese Plasma	63
-3952-9	104846	Phenothiazine Serum Plasma	Apherese Plasma	63
-47862-8	108157	Insulin Serum Plasma --postprandial	Insulin ja	82
-47862-8	108158	Insulin Serum Plasma --postprandial	Insulin nein	74
-47-1	107861	Bacampicillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-47-1	107864	Bacampicillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-47-1	107867	Bacampicillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-41645-3	102721	Calcium.ionisiert venösem Blut	Calcium	100
-41645-3	102743	Calcium.ionisiert venösem Blut	Calcium	100
-41645-3	103054	Calcium.ionisiert venösem Blut	Calcium	100
-50209-6	106365	Albumin Urin gesammelt Zeitraum --liegend	G5 SBT Zeitraum	70
-50209-6	106366	Albumin Urin gesammelt Zeitraum --liegend	G5 SBT Zeitraum	70
-50209-6	110899	Albumin Urin gesammelt Zeitraum --liegend	P C3 SBT Zeitraum	64
-50209-6	110900	Albumin Urin gesammelt Zeitraum --liegend	P C3 SBT Zeitraum	64
-24032-5	102585	Rifabutin Serum Plasma	Plasmarate	62
-27968-7	108510	Pyruvat Blut Stunden Stimulation	Atmung Stimulation	76
-32347-7	104833	Xylose Serum Plasma	Apherese Plasma	65
-32347-7	104834	Xylose Serum Plasma	Apherese Plasma	65
-32347-7	104846	Xylose Serum Plasma	Apherese Plasma	65
-29762-2	108256	Sozialanamnese - Freitext	F Sozialanamnese Klasse	76
-29762-2	108257	Sozialanamnese - Freitext	F Sozialanamnese	93
-29762-2	108258	Sozialanamnese - Freitext	F Sozialanamnese	93
-29762-2	108259	Sozialanamnese - Freitext	F Sozialanamnese	93
-29762-2	108260	Sozialanamnese - Freitext	F Sozialanamnese Sonstiges	76
-3734-1	104833	Maprotilin Serum Plasma	Apherese Plasma	63
-3734-1	104834	Maprotilin Serum Plasma	Apherese Plasma	63
-3734-1	104846	Maprotilin Serum Plasma	Apherese Plasma	63
-44-8	107867	Aztreonam minimaler Hemmkonzentration (MHK)	Atom O2 Konzentration	61
-57587-8	108510	Aldosteron Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-15072-2	104833	Gastrin Serum Plasma	Apherese Plasma	63
-15072-2	104834	Gastrin Serum Plasma	Apherese Plasma	63
-15072-2	104846	Gastrin Serum Plasma	Apherese Plasma	63
-107-3	107861	Cefotaxim minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-107-3	107864	Cefotaxim minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-107-3	107867	Cefotaxim minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-49765-1	102721	Calcium Blut	Calcium	100
-49765-1	102743	Calcium Blut	Calcium	100
-49765-1	103054	Calcium Blut	Calcium	100
-49765-1	107934	Calcium Blut	P ADS MS ADS Calcium postFilter	74
-49765-1	107935	Calcium Blut	P ADS MS ADS Calcium preFilter	74
-25658-6	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-18724-5	1278	HLA-Diagnostik	Diagnose	64
-18724-5	101483	HLA-Diagnostik	Diagnostik	100
-18724-5	103751	HLA-Diagnostik	Assistenz bei Eingriffen Diagnostik	83
-18724-5	103752	HLA-Diagnostik	Diagnostik	100
-451-5	107861	Spectinomycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-451-5	107864	Spectinomycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-451-5	107867	Spectinomycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-12722-5	108157	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma	Insulin ja	82
-12722-5	108158	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma	Insulin nein	74
-40380-8	102107	Meprobamat Magenflüssigkeit	PatFluessigkeitRate	62
-40380-8	102113	Meprobamat Magenflüssigkeit	Mess PatFluessigkeitRate	60
-95366-1	104329	Datum ersten Entnahme positivem Probenmaterial	Datum	100
-95366-1	117217	Datum ersten Entnahme positivem Probenmaterial	Datennahme TestvariableBarVal	61
-32377-4	16	Cefetamet	CO MergeTarget	61
-32377-4	25	Cefetamet	CO MergeTarget	61
-32377-4	103708	Cefetamet	Spezifitaet	60
-32377-4	104678	Cefetamet	Spezifitaet	60
-25530-7	6	Gewicht -Stunden-Stuhl	Gewicht	100
-25530-7	104258	Gewicht -Stunden-Stuhl	Servoi Gewicht	67
-25530-7	110904	Gewicht -Stunden-Stuhl	P Gewicht	88
-18900-1	104734	Cephalothin	MS Halothan	64
-29308-4	1278	Diagnose	Diagnose	100
-29308-4	101483	Diagnose	Diagnostik	78
-29308-4	102377	Diagnose	ICUDiagnosen	80
-29308-4	103305	Diagnose	Apnoe	62
-29308-4	103752	Diagnose	Diagnostik	78
-71-1	107861	Cefatrizin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-71-1	107864	Cefatrizin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-71-1	107867	Cefatrizin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14391-7	102113	Amylase Magenflüssigkeit	Mess PatFluessigkeitRate	60
-47791-9	104833	Tocopherole Serum Plasma	Apherese Plasma	62
-47791-9	104834	Tocopherole Serum Plasma	Apherese Plasma	62
-47791-9	104846	Tocopherole Serum Plasma	Apherese Plasma	62
-38250-7	102721	Calcium Probenmaterial	Calcium	100
-38250-7	102743	Calcium Probenmaterial	Calcium	100
-38250-7	103054	Calcium Probenmaterial	Calcium	100
-5232-4	108157	Insulin Antikörper Serum Radioimmunoassay	Insulin ja	82
-5232-4	108158	Insulin Antikörper Serum Radioimmunoassay	Insulin nein	74
-12944-5	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-6801-5	107985	Komplement C3 Körperflüssigkeit	P C3	67
-6801-5	107992	Komplement C3 Körperflüssigkeit	P C3	67
-6801-5	108010	Komplement C3 Körperflüssigkeit	P C3	67
-6801-5	110828	Komplement C3 Körperflüssigkeit	P C3	67
-6801-5	110831	Komplement C3 Körperflüssigkeit	P C3	67
-99-2	107861	Cefoperazon minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-99-2	107864	Cefoperazon minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-99-2	107867	Cefoperazon minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-27885-3	108510	Lutropin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-40147-1	108510	Creatinin Urin Tag Stimulation	Atmung Stimulation	76
-29385-2	102107	Nordiazepam Magenflüssigkeit	PatFluessigkeitRate	61
-75756-7	103433	Bakterien identifiziert Isolat MS.MALDI-TOF	MS i	67
-75756-7	107839	Bakterien identifiziert Isolat MS.MALDI-TOF	MS i	67
-75756-7	110780	Bakterien identifiziert Isolat MS.MALDI-TOF	P MS	67
-52953-7	108102	Kokain Urin	konsanguin nein	62
-17861-6	102721	Calcium Serum Plasma	Calcium	100
-17861-6	102743	Calcium Serum Plasma	Calcium	100
-17861-6	103054	Calcium Serum Plasma	Calcium	100
-17861-6	103062	Calcium Serum Plasma	MS Calciumfluss	63
-17861-6	104968	Calcium Serum Plasma	CRRT MS Calciumfluss	60
-17861-6	107934	Calcium Serum Plasma	P ADS MS ADS Calcium postFilter	64
-17861-6	107935	Calcium Serum Plasma	P ADS MS ADS Calcium preFilter	61
-8339-4	14	Geburtsgewicht, gemessen	Geburtsgewicht	100
-8339-4	108170	Geburtsgewicht, gemessen	Geburtslage schaedel	60
-68938-0	102107	Zytokeratin Pleuraflüssigkeit	PatFluessigkeitRate	64
-68938-0	102503	Zytokeratin Pleuraflüssigkeit	Dokumentation BlutflussEinst	61
-44760-7	101973	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score SAPS2	62
-44760-7	101992	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score SOFA	67
-44760-7	102764	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score ARDS	67
-44760-7	102784	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score RASS	67
-44760-7	102785	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score AIS	71
-44760-7	102788	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score Apgar	62
-44760-7	102791	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score BPS	71
-44760-7	102792	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score CIWA	67
-44760-7	102795	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score CRIB	67
-44760-7	102796	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DRS	71
-44760-7	102798	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score GDS	71
-44760-7	102800	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score Kuss	67
-44760-7	102801	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score MAAS	67
-44760-7	102802	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score MMS	71
-44760-7	102803	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score MOF	71
-44760-7	102804	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score mRS	71
-44760-7	102806	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score NIHSS	62
-44760-7	102807	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score NIPS	67
-44760-7	102810	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score RSS	71
-44760-7	102811	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score RTS	71
-44760-7	102812	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score SAS	71
-44760-7	102813	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score Lachs	62
-44760-7	102815	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score VICS	67
-44760-7	103444	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103458	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103506	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103507	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103509	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103510	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103511	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103512	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103518	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103523	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103527	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103536	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103538	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103540	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103543	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103544	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103545	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103550	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103551	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103554	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103556	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103557	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103558	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103559	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103560	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	103562	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score DGAI	67
-44760-7	105222	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score NRS	71
-44760-7	105223	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score BPS	71
-44760-7	106651	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score UStix	62
-44760-7	108395	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score FLACC	62
-44760-7	108441	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score SOS	71
-44760-7	108458	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score SOS	71
-44760-7	108680	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score NACA	67
-44760-7	108684	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score ISS	71
-44760-7	110976	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score FOUR	67
-44760-7	117221	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score	100
-44760-7	117225	Klassifikationsmodell Lebererkrankungen Endstadium (Score)	Score Race	67
-148-7	107861	Cephalexin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-148-7	107864	Cephalexin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-148-7	107867	Cephalexin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-25568-7	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2333-3	104833	Gastrin Serum Plasma	Apherese Plasma	63
-2333-3	104834	Gastrin Serum Plasma	Apherese Plasma	63
-2333-3	104846	Gastrin Serum Plasma	Apherese Plasma	63
-358-2	107861	Netilmicin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-358-2	107864	Netilmicin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-358-2	107867	Netilmicin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-39986-5	108510	Creatinin Urin Stunden Stimulation	Atmung Stimulation	76
-20394-3	104833	Probe lipämisch Serum Plasma	Apherese Plasma	62
-20394-3	104834	Probe lipämisch Serum Plasma	Apherese Plasma	62
-20394-3	104846	Probe lipämisch Serum Plasma	Apherese Plasma	62
-34581-9	102721	Calcium.ionisiert arteriellem Blut	Calcium	100
-34581-9	102743	Calcium.ionisiert arteriellem Blut	Calcium	100
-34581-9	103054	Calcium.ionisiert arteriellem Blut	Calcium	100
-2484-4	108157	Insulin- WachstumsfaktorSerum Plasma	Insulin ja	82
-2484-4	108158	Insulin- WachstumsfaktorSerum Plasma	Insulin nein	74
-18377-2	102596	Natrium -Stunden-Urin	Natrium	100
-18377-2	102638	Natrium -Stunden-Urin	Mess Natrium	74
-18377-2	102676	Natrium -Stunden-Urin	Natrium	100
-18377-2	103167	Natrium -Stunden-Urin	MS Natrium	82
-18377-2	103226	Natrium -Stunden-Urin	Natrium	100
-18377-2	103242	Natrium -Stunden-Urin	Natrium	100
-1798-8	104833	Amylase Serum Plasma	Apherese Plasma	63
-1798-8	104834	Amylase Serum Plasma	Apherese Plasma	63
-1798-8	104846	Amylase Serum Plasma	Apherese Plasma	63
-46404-0	108157	Somatotropin Serum Plasma Stunden Dosis Insulin intravenös	Insulin ja	82
-46404-0	108158	Somatotropin Serum Plasma Stunden Dosis Insulin intravenös	Insulin nein	74
-46264-8	106521	Anamnese Medizinprodukten	Anamnese Nein	76
-46264-8	106522	Anamnese Medizinprodukten	Anamnese Ja	84
-46264-8	106649	Anamnese Medizinprodukten	Anamnese	100
-8071-3	108675	Histon Antikörper Serum	P Antikoerper Mutter	62
-1964-6	102597	Bicarbonat Urin	Bicarbonat	100
-1964-6	102639	Bicarbonat Urin	Mess Bicarbonat	80
-1964-6	102677	Bicarbonat Urin	Bicarbonat	100
-1964-6	103160	Bicarbonat Urin	Bicarbonat	100
-1964-6	103191	Bicarbonat Urin	Bicarbonat	100
-1964-6	103227	Bicarbonat Urin	Bicarbonat	100
-1964-6	103243	Bicarbonat Urin	Bicarbonat	100
-1964-6	104881	Bicarbonat Urin	Bicarbonat	100
-1964-6	104897	Bicarbonat Urin	Bicarbonat	100
-1964-6	104922	Bicarbonat Urin	Bicarbonat	100
-1964-6	104937	Bicarbonat Urin	Bicarbonat	100
-1964-6	110786	Bicarbonat Urin	P Bicarbonat	91
-1964-6	110806	Bicarbonat Urin	P Bicarbonat	91
-1631-1	108157	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-1631-1	108158	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-32245-3	102699	Glycin Körperflüssigkeit	Dialysierfluessigke	63
-17819-4	106365	Albumin/Protein. Elektrophorese Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-17819-4	106366	Albumin/Protein. Elektrophorese Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-17819-4	110899	Albumin/Protein. Elektrophorese Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-17819-4	110900	Albumin/Protein. Elektrophorese Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-411-9	107861	Piperacillin+Tazobactam minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-411-9	107864	Piperacillin+Tazobactam minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-411-9	107867	Piperacillin+Tazobactam minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-42669-2	102113	Fettsäuren Pleuraflüssigkeit	Mess PatFluessigkeitRate	60
-38426-3	108510	C-Peptid Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-1743-4	103592	Alanin-Aminotransferase Serum Plasma Zusatz P-5'-P	Zusatz	100
-12730-8	104833	Interferon beta Serum Plasma	Apherese Plasma	60
-12730-8	104834	Interferon beta Serum Plasma	Apherese Plasma	60
-12730-8	104846	Interferon beta Serum Plasma	Apherese Plasma	60
-286-5	107861	Isoniazid minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-286-5	107864	Isoniazid minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-286-5	107867	Isoniazid minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-43270-8	107861	Ceftobiprol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-43270-8	107864	Ceftobiprol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-43270-8	107867	Ceftobiprol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-13436-1	108510	Dopamin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-58922-6	108510	Vasopressin Plasma Stunden Stimulation	Atmung Stimulation	76
-54369-4	104913	Chlorid Serum Plasma -- Dialyse	Dialyse Zeit	74
-54369-4	110802	Chlorid Serum Plasma -- Dialyse	P Dialyse Zeit	67
-54369-4	110818	Chlorid Serum Plasma -- Dialyse	P Dialyse Zeit	67
-33254-4	107866	pH arteriellem Blut Körpertemperatur	Atom Lufttemperatur	63
-33254-4	110925	pH arteriellem Blut Körpertemperatur	P Temperatur Arteriell	74
-2118-8	106665	Choriongonadotropin (Schwangerschaftstest) Serum Plasma	Schwangerschaftstest durchgefuehrt	74
-33874-9	106365	Adrenalin/Creatinin Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-33874-9	106366	Adrenalin/Creatinin Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-33874-9	110899	Adrenalin/Creatinin Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-33874-9	110900	Adrenalin/Creatinin Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-6176-2	108675	Mimosa spp IgE-Antikörper Serum	P Antikoerper Mutter	60
-12567-4	108510	Cortisol Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-26965-4	108158	Isoleucin Urin	Insulin nein	62
-20448-7	108157	Insulin Serum Plasma	Insulin ja	82
-20448-7	108158	Insulin Serum Plasma	Insulin nein	74
-16633-0	108169	Kokain Blut	Geburt Komplikation ja	61
-56558-0	108510	Aldosteron Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-9274-2	101973	5-min-Apgar-Score	Score SAPS2	62
-9274-2	101992	5-min-Apgar-Score	Score SOFA	67
-9274-2	102764	5-min-Apgar-Score	Score ARDS	67
-9274-2	102784	5-min-Apgar-Score	Score RASS	67
-9274-2	102785	5-min-Apgar-Score	Score AIS	71
-9274-2	102787	5-min-Apgar-Score	Score APACHE2	60
-9274-2	102788	5-min-Apgar-Score	Score Apgar	100
-9274-2	102791	5-min-Apgar-Score	Score BPS	71
-9274-2	102792	5-min-Apgar-Score	Score CIWA	67
-9274-2	102795	5-min-Apgar-Score	Score CRIB	67
-9274-2	102796	5-min-Apgar-Score	Score DRS	71
-9274-2	102798	5-min-Apgar-Score	Score GDS	71
-9274-2	102800	5-min-Apgar-Score	Score Kuss	67
-9274-2	102801	5-min-Apgar-Score	Score MAAS	67
-9274-2	102802	5-min-Apgar-Score	Score MMS	71
-9274-2	102803	5-min-Apgar-Score	Score MOF	71
-9274-2	102804	5-min-Apgar-Score	Score mRS	71
-9274-2	102806	5-min-Apgar-Score	Score NIHSS	62
-9274-2	102807	5-min-Apgar-Score	Score NIPS	67
-9274-2	102810	5-min-Apgar-Score	Score RSS	71
-9274-2	102811	5-min-Apgar-Score	Score RTS	71
-9274-2	102812	5-min-Apgar-Score	Score SAS	71
-9274-2	102813	5-min-Apgar-Score	Score Lachs	62
-9274-2	102815	5-min-Apgar-Score	Score VICS	67
-9274-2	103444	5-min-Apgar-Score	Score DGAI	67
-9274-2	103458	5-min-Apgar-Score	Score DGAI	67
-9274-2	103506	5-min-Apgar-Score	Score DGAI	67
-9274-2	103507	5-min-Apgar-Score	Score DGAI	67
-9274-2	103509	5-min-Apgar-Score	Score DGAI	67
-9274-2	103510	5-min-Apgar-Score	Score DGAI	67
-9274-2	103511	5-min-Apgar-Score	Score DGAI	67
-9274-2	103512	5-min-Apgar-Score	Score DGAI	67
-9274-2	103517	5-min-Apgar-Score	Score DGAI AufnVonOPAWR	60
-9274-2	103518	5-min-Apgar-Score	Score DGAI	67
-9274-2	103523	5-min-Apgar-Score	Score DGAI	67
-9274-2	103527	5-min-Apgar-Score	Score DGAI	67
-9274-2	103536	5-min-Apgar-Score	Score DGAI	67
-9274-2	103538	5-min-Apgar-Score	Score DGAI	67
-9274-2	103540	5-min-Apgar-Score	Score DGAI	67
-9274-2	103543	5-min-Apgar-Score	Score DGAI	67
-9274-2	103544	5-min-Apgar-Score	Score DGAI	67
-9274-2	103545	5-min-Apgar-Score	Score DGAI	67
-9274-2	103550	5-min-Apgar-Score	Score DGAI	67
-9274-2	103551	5-min-Apgar-Score	Score DGAI	67
-9274-2	103554	5-min-Apgar-Score	Score DGAI	67
-9274-2	103556	5-min-Apgar-Score	Score DGAI	67
-9274-2	103557	5-min-Apgar-Score	Score DGAI	67
-9274-2	103558	5-min-Apgar-Score	Score DGAI	67
-9274-2	103559	5-min-Apgar-Score	Score DGAI	67
-9274-2	103560	5-min-Apgar-Score	Score DGAI	67
-9274-2	103562	5-min-Apgar-Score	Score DGAI	67
-9274-2	105222	5-min-Apgar-Score	Score NRS	71
-9274-2	105223	5-min-Apgar-Score	Score BPS	71
-9274-2	106651	5-min-Apgar-Score	Score UStix	62
-9274-2	108395	5-min-Apgar-Score	Score FLACC	62
-9274-2	108424	5-min-Apgar-Score	Score PRISMIII	65
-9274-2	108441	5-min-Apgar-Score	Score SOS	71
-9274-2	108458	5-min-Apgar-Score	Score SOS	71
-9274-2	108680	5-min-Apgar-Score	Score NACA	67
-9274-2	108684	5-min-Apgar-Score	Score ISS	71
-9274-2	110976	5-min-Apgar-Score	Score FOUR	67
-9274-2	117221	5-min-Apgar-Score	Score	100
-9274-2	117225	5-min-Apgar-Score	Score Race	67
-18718-7	101483	Zellmarkerdiagnostik	Diagnostik	67
-18718-7	103752	Zellmarkerdiagnostik	Diagnostik	67
-13086-4	107985	C3 nephritischer Faktor Serum Plasma	P C3	67
-13086-4	107992	C3 nephritischer Faktor Serum Plasma	P C3	67
-13086-4	108010	C3 nephritischer Faktor Serum Plasma	P C3	67
-13086-4	110828	C3 nephritischer Faktor Serum Plasma	P C3	67
-13086-4	110831	C3 nephritischer Faktor Serum Plasma	P C3	67
-17003-5	104252	Serotonin Urin	Servoi Ti	61
-17003-5	104280	Serotonin Urin	Servoi Ti	61
-12180-6	102721	Calcium.ionisiert Serum Plasma ionenselektiver Membranelektrode (ISE)	Calcium	100
-12180-6	102743	Calcium.ionisiert Serum Plasma ionenselektiver Membranelektrode (ISE)	Calcium	100
-12180-6	103054	Calcium.ionisiert Serum Plasma ionenselektiver Membranelektrode (ISE)	Calcium	100
-32316-2	108510	Follitropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-12827-2	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2777-1	104833	Phosphat Serum Plasma	Apherese Plasma	61
-2777-1	104834	Phosphat Serum Plasma	Apherese Plasma	61
-2777-1	104846	Phosphat Serum Plasma	Apherese Plasma	61
-2601-3	102615	Magnesium Serum Plasma	Mess Plasmavolumen	60
-3449-6	103069	Ceftazidim Serum Plasma	ADM Plasmavolumen	60
-3449-6	103085	Ceftazidim Serum Plasma	ADM Plasmavolumen	60
-18914-2	102165	Cycloserin	PICCO SVRI	60
-3170-8	100133	-Stunden-Probenmaterial	Enteralesonden	67
-3170-8	104272	-Stunden-Probenmaterial	Servoi Tpause Prozent	60
-17604-0	108246	-Stunden-Schweiß	Sectio sekundaer	60
-32338-6	102585	Pyruvat Serum Plasma	Plasmarate	67
-32338-6	104833	Pyruvat Serum Plasma	Apherese Plasma	63
-32338-6	104834	Pyruvat Serum Plasma	Apherese Plasma	63
-32338-6	104846	Pyruvat Serum Plasma	Apherese Plasma	63
-12592-2	108510	Dehydroepiandrosteron (DHEA) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-33812-9	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33812-9	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33812-9	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12824-9	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-9463-1	105020	Arsen Wasser	A Sense	63
-9463-1	105033	Arsen Wasser	A-Sense	63
-9463-1	108280	Arsen Wasser	Fruchtwasser erbsbrei	61
-14147-3	108510	Somatotropin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-35090-0	102380	Anamnese	AnamneseVor	84
-35090-0	102696	Anamnese	Abnahme	67
-35090-0	102727	Anamnese	Mess Abnahme	60
-35090-0	106521	Anamnese	Anamnese Nein	100
-35090-0	106522	Anamnese	Anamnese Ja	100
-35090-0	106523	Anamnese	Anamnese Tetanusschutz Nein	100
-35090-0	106524	Anamnese	Anamnese Tetanusschutz	100
-35090-0	106525	Anamnese	Anamnese Tetanusschutz Ja	100
-35090-0	106526	Anamnese	Anamnese Schwangerschaft	100
-35090-0	106527	Anamnese	Anamnese Schwangerschaft Nein	100
-35090-0	106528	Anamnese	Anamnese Schwangerschaft Ja	100
-35090-0	106649	Anamnese	Anamnese	100
-35090-0	108257	Anamnese	F Sozialanamnese	67
-35090-0	108258	Anamnese	F Sozialanamnese	67
-35090-0	108259	Anamnese	F Sozialanamnese	67
-25654-5	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-140-4	107861	Ceftriaxon minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-140-4	107864	Ceftriaxon minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-140-4	107867	Ceftriaxon minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-20656-5	104833	Serin Serum Plasma	Apherese Plasma	67
-20656-5	104834	Serin Serum Plasma	Apherese Plasma	67
-20656-5	104846	Serin Serum Plasma	Apherese Plasma	67
-266-7	107861	Gentamicin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-266-7	107864	Gentamicin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-266-7	107867	Gentamicin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-49929-3	102107	Protein Pleuraflüssigkeit/Protein Serum	PatFluessigkeitRate	61
-14955-9	102581	Zink Serum Plasma	Plasmavolumen	60
-14955-9	103063	Zink Serum Plasma	Plasmavolumen	60
-14955-9	103065	Zink Serum Plasma	Plasmavolumen	60
-14955-9	103143	Zink Serum Plasma	Plasmaloesung	60
-20389-3	101642	Mupirocin	Proc	62
-27838-2	108510	Somatotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-17243-7	108510	Prolaktin Serum Plasma -- Stimulation	Atmung Stimulation	76
-1618-8	108157	Prolaktin Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-1618-8	108158	Prolaktin Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-5645-7	30	Ethanol Urin	Behandlung	64
-25501-8	102107	Phosphat Körperflüssigkeit	PatFluessigkeitRate	60
-455-6	107861	Spiramycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-455-6	107864	Spiramycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-455-6	107867	Spiramycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2128-7	102729	Citrat Urin	Citrat	100
-2128-7	102742	Citrat Urin	CitratLoesung	67
-2128-7	102744	Citrat Urin	CitratDosis	64
-2128-7	102748	Citrat Urin	CitratLoesung	67
-2128-7	103051	Citrat Urin	Citratloesung	67
-2128-7	103053	Citrat Urin	Citrat	100
-2128-7	103056	Citrat Urin	Citratloesung	67
-2128-7	103057	Citrat Urin	CitratBlut	67
-2128-7	104975	Citrat Urin	CRRT CitratBlut	62
-2128-7	104996	Citrat Urin	CRRT CitratBlut	62
-49764-4	102721	Calcium Amnionflüssigkeit	Calcium	100
-49764-4	102743	Calcium Amnionflüssigkeit	Calcium	100
-49764-4	103054	Calcium Amnionflüssigkeit	Calcium	100
-26656-9	108675	HTLV Antikörper Serum	P Antikoerper Mutter	65
-366-5	107861	Norfloxacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-366-5	107864	Norfloxacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-366-5	107867	Norfloxacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14619-1	104833	Aussehen Plasma	Apherese Plasma	67
-14619-1	104834	Aussehen Plasma	Apherese Plasma	67
-14619-1	104846	Aussehen Plasma	Apherese Plasma	67
-14619-1	107787	Aussehen Plasma	Doku Aussehen Dialysat	70
-47140-9	108510	Adrenalin Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-15347-8	108510	Somatotropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-220-4	107861	Dicloxacillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-220-4	107864	Dicloxacillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-220-4	107867	Dicloxacillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2750-8	102107	pH Pleuraflüssigkeit	PatFluessigkeitRate	63
-2750-8	102113	pH Pleuraflüssigkeit	Mess PatFluessigkeitRate	60
-196-6	107861	Cloxacillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-196-6	107864	Cloxacillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-196-6	107867	Cloxacillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-55472-5	108510	Cortisol Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-60591-5	101391	Patientenkurzakte - Dokument	Dokumentation	62
-60591-5	101400	Patientenkurzakte - Dokument	Dokumentation Filtratdruck	62
-60591-5	101405	Patientenkurzakte - Dokument	Dokumentation	62
-60591-5	101417	Patientenkurzakte - Dokument	Dokumentation	62
-60591-5	103884	Patientenkurzakte - Dokument	Doku Staerke Pulsation	62
-18927-4	101384	Fusidat	Umsatz	62
-18927-4	101393	Fusidat	Umsatz	62
-18927-4	102495	Fusidat	Umsatz	62
-18927-4	102500	Fusidat	Umsatz	62
-18927-4	103592	Fusidat	Zusatz	62
-8303-0	100085	Körpergröße	Pacergeräte	67
-8303-0	100356	Körpergröße	Koerperpflege	67
-53750-6	108510	Wasserstoff/Ausatemluft Exhalat Minuten Stimulation	Atmung Stimulation	76
-17582-8	102106	Silber Dialysat	Dialysatfluß	69
-17582-8	102114	Silber Dialysat	Mess Dialysatfluß	65
-17582-8	102690	Silber Dialysat	Dialysatloesung	67
-17582-8	102755	Silber Dialysat	Dialysat	100
-17582-8	102897	Silber Dialysat	Dialysatfiltrate	71
-17582-8	103042	Silber Dialysat	Dialysatlösung	64
-17582-8	103043	Silber Dialysat	Dialysat	100
-17582-8	103045	Silber Dialysat	BM25 Dialysat	76
-17582-8	103123	Silber Dialysat	Dialysat	100
-17582-8	103124	Silber Dialysat	BM25 Dialysat	76
-17582-8	104978	Silber Dialysat	CRRT Dialysat	76
-17582-8	104999	Silber Dialysat	CRRT Dialysat	76
-17582-8	107787	Silber Dialysat	Doku Aussehen Dialysat	70
-17582-8	107790	Silber Dialysat	Doku Dialysat1	62
-17582-8	107791	Silber Dialysat	Doku Dialysat2	62
-17582-8	107802	Silber Dialysat	Dialysat1	67
-17582-8	107803	Silber Dialysat	Dialysat2	67
-2842-3	102585	Prolaktin Serum Plasma	Plasmarate	62
-5894-1	100203	Prothrombinzeit (PT) /normal	PT	100
-5894-1	100676	Prothrombinzeit (PT) /normal	PT	100
-8654-6	104403	Krankenhausentlassmedikation	Praemedikation	62
-8654-6	106592	Krankenhausentlassmedikation	F MedDoku Entlassmedikation	62
-11042-9	104913	Creatinin Serum Plasma -- Dialyse	Dialyse Zeit	74
-11042-9	110802	Creatinin Serum Plasma -- Dialyse	P Dialyse Zeit	67
-11042-9	110818	Creatinin Serum Plasma -- Dialyse	P Dialyse Zeit	67
-23210-8	108675	Listeria Antikörper Serum	P Antikoerper Mutter	64
-20977-5	101387	Harnstoff Blut	HarnstoffZiel	67
-20977-5	102477	Harnstoff Blut	HarnstoffZiel	67
-20977-5	102478	Harnstoff Blut	HarnstoffZiel	67
-18220-4	108510	Adrenalin Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-18905-0	102178	Cinoxacin	COCI	62
-9278-3	103397	Atemfrequenz spezielle Umstände	Siemens Frequenz	61
-89269-5	108243	Körperlänge, gemessen -- Geburt	Geburt an	80
-89269-5	108244	Körperlänge, gemessen -- Geburt	Geburt VE	80
-51489-3	108510	Cortisol Speichel . Probenmaterial Stimulation	Atmung Stimulation	76
-24339-4	102108	Blutgasanalyse ( ) - Venöses Blut	Mess Blutfluss	60
-25582-8	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-47663-0	108157	Insulin Serum Plasma Minuten Dosis Glucose	Insulin ja	82
-47663-0	108158	Insulin Serum Plasma Minuten Dosis Glucose	Insulin nein	74
-1959-6	102597	Bicarbonat Blut	Bicarbonat	100
-1959-6	102639	Bicarbonat Blut	Mess Bicarbonat	80
-1959-6	102677	Bicarbonat Blut	Bicarbonat	100
-1959-6	103057	Bicarbonat Blut	CitratBlut	64
-1959-6	103160	Bicarbonat Blut	Bicarbonat	100
-1959-6	103191	Bicarbonat Blut	Bicarbonat	100
-1959-6	103227	Bicarbonat Blut	Bicarbonat	100
-1959-6	103243	Bicarbonat Blut	Bicarbonat	100
-1959-6	104881	Bicarbonat Blut	Bicarbonat	100
-1959-6	104897	Bicarbonat Blut	Bicarbonat	100
-1959-6	104922	Bicarbonat Blut	Bicarbonat	100
-1959-6	104937	Bicarbonat Blut	Bicarbonat	100
-1959-6	110786	Bicarbonat Blut	P Bicarbonat	91
-1959-6	110806	Bicarbonat Blut	P Bicarbonat	91
-1621-2	108157	Prolaktin Serum Plasma -- Dosis Insulin intravenös	Insulin ja	82
-1621-2	108158	Prolaktin Serum Plasma -- Dosis Insulin intravenös	Insulin nein	74
-12461-0	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-5920-4	102114	Protein Dialysat	Mess Dialysatfluß	62
-5920-4	102631	Protein Dialysat	Mess Dialysatvolumen	61
-5920-4	102690	Protein Dialysat	Dialysatloesung	71
-5920-4	102755	Protein Dialysat	Dialysat	100
-5920-4	102897	Protein Dialysat	Dialysatfiltrate	69
-5920-4	103042	Protein Dialysat	Dialysatlösung	62
-5920-4	103043	Protein Dialysat	Dialysat	100
-5920-4	103045	Protein Dialysat	BM25 Dialysat	76
-5920-4	103123	Protein Dialysat	Dialysat	100
-5920-4	103124	Protein Dialysat	BM25 Dialysat	76
-5920-4	104913	Protein Dialysat	Dialyse Zeit	64
-5920-4	104978	Protein Dialysat	CRRT Dialysat	76
-5920-4	104999	Protein Dialysat	CRRT Dialysat	76
-5920-4	105009	Protein Dialysat	CRRT Dialysatloesung	61
-5920-4	107787	Protein Dialysat	Doku Aussehen Dialysat	67
-5920-4	107790	Protein Dialysat	Doku Dialysat1	67
-5920-4	107791	Protein Dialysat	Doku Dialysat2	67
-5920-4	107802	Protein Dialysat	Dialysat1	64
-5920-4	107803	Protein Dialysat	Dialysat2	64
-5920-4	110802	Protein Dialysat	P Dialyse Zeit	67
-5920-4	110818	Protein Dialysat	P Dialyse Zeit	67
-50752-5	108157	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-50752-5	108158	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-12525-2	108510	Noradrenalin Plasma Stunde Stimulation	Atmung Stimulation	76
-975-3	104833	D-Antikörper Serum Plasma	Apherese Plasma	67
-975-3	104834	D-Antikörper Serum Plasma	Apherese Plasma	67
-975-3	104846	D-Antikörper Serum Plasma	Apherese Plasma	67
-6188-7	108675	Muskat IgE-Antikörper Serum	P Antikoerper Mutter	65
-26741-9	104252	Serin Urin	Servoi Ti	63
-26741-9	104280	Serin Urin	Servoi Ti	63
-47106-0	104833	Ephedrin Serum Plasma	Apherese Plasma	72
-47106-0	104834	Ephedrin Serum Plasma	Apherese Plasma	72
-47106-0	104846	Ephedrin Serum Plasma	Apherese Plasma	72
-47106-0	104852	Ephedrin Serum Plasma	Apherese Plasmaloesung	60
-19123-9	102615	Magnesium Serum Plasma	Mess Plasmavolumen	60
-8073-9	108157	Bovines Insulin Antikörper Serum	Insulin ja	82
-8073-9	108158	Bovines Insulin Antikörper Serum	Insulin nein	74
-39998-0	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-3793-7	104833	Methotrexat Serum Plasma	Apherese Plasma	62
-3793-7	104834	Methotrexat Serum Plasma	Apherese Plasma	62
-3793-7	104846	Methotrexat Serum Plasma	Apherese Plasma	62
-14711-6	104833	Adrenalin Plasma	Apherese Plasma	65
-14711-6	104834	Adrenalin Plasma	Apherese Plasma	65
-14711-6	104846	Adrenalin Plasma	Apherese Plasma	65
-57347-7	102106	Kupfer Dialysat	Dialysatfluß	69
-57347-7	102114	Kupfer Dialysat	Mess Dialysatfluß	65
-57347-7	102690	Kupfer Dialysat	Dialysatloesung	60
-57347-7	102755	Kupfer Dialysat	Dialysat	100
-57347-7	102897	Kupfer Dialysat	Dialysatfiltrate	65
-57347-7	103042	Kupfer Dialysat	Dialysatlösung	64
-57347-7	103043	Kupfer Dialysat	Dialysat	100
-57347-7	103045	Kupfer Dialysat	BM25 Dialysat	76
-57347-7	103095	Kupfer Dialysat	Doku Dialysatlösung	67
-57347-7	103123	Kupfer Dialysat	Dialysat	100
-57347-7	103124	Kupfer Dialysat	BM25 Dialysat	76
-57347-7	104978	Kupfer Dialysat	CRRT Dialysat	76
-57347-7	104999	Kupfer Dialysat	CRRT Dialysat	76
-57347-7	107787	Kupfer Dialysat	Doku Aussehen Dialysat	70
-57347-7	107790	Kupfer Dialysat	Doku Dialysat1	76
-57347-7	107791	Kupfer Dialysat	Doku Dialysat2	76
-57347-7	107802	Kupfer Dialysat	Dialysat1	67
-57347-7	107803	Kupfer Dialysat	Dialysat2	67
-57347-7	110802	Kupfer Dialysat	P Dialyse Zeit	62
-57347-7	110818	Kupfer Dialysat	P Dialyse Zeit	62
-27869-7	108510	Follitropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12834-8	108510	Prolaktin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-57358-4	108510	Lactat Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-16294-1	108510	11-Desoxycorticosteron Serum Plasma -- Stimulation	Atmung Stimulation	76
-294-9	107861	Ketoconazol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-294-9	107864	Ketoconazol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-294-9	107867	Ketoconazol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-50761-6	104833	A-IgG-Antikörper Serum Plasma	Apherese Plasma	60
-50761-6	104834	A-IgG-Antikörper Serum Plasma	Apherese Plasma	60
-50761-6	104846	A-IgG-Antikörper Serum Plasma	Apherese Plasma	60
-13428-8	108510	Noradrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-33815-2	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33815-2	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33815-2	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-47191-2	108510	Trijodthyronin (T3) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3297-9	104833	Paracetamol Serum Plasma	Apherese Plasma	62
-3297-9	104834	Paracetamol Serum Plasma	Apherese Plasma	62
-3297-9	104846	Paracetamol Serum Plasma	Apherese Plasma	62
-32312-1	108510	Cortisol Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-12798-5	108510	Oxalat Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-50751-7	108157	Glucose Serum Plasma Minuten ,1 U/kg Insulin	Insulin ja	82
-50751-7	108158	Glucose Serum Plasma Minuten ,1 U/kg Insulin	Insulin nein	74
-39090-6	108675	Ruditapes spp IgE-Antikörper/ -IgE Serum	P Antikoerper Mutter	60
-1573-5	108157	Insulin Serum Plasma -- Stunden Nahrungskarenz	Insulin ja	82
-1573-5	108158	Insulin Serum Plasma -- Stunden Nahrungskarenz	Insulin nein	74
-57594-4	108510	Aldosteron Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-30458-4	102581	Plasmazellen Blut	Plasmavolumen	60
-30458-4	103063	Plasmazellen Blut	Plasmavolumen	60
-30458-4	103064	Plasmazellen Blut	BM25 Plasmavolumen	63
-30458-4	103065	Plasmazellen Blut	Plasmavolumen	60
-30458-4	103067	Plasmazellen Blut	BM25 Plasmavolumen	63
-30458-4	103143	Plasmazellen Blut	Plasmaloesung	60
-30458-4	103145	Plasmazellen Blut	Doku Plasmalösung	61
-10734-2	102128	Varicella-Zoster-Virus identifiziert Haut Elektronenmikroskopie	Kopf Haut	62
-10734-2	102142	Varicella-Zoster-Virus identifiziert Haut Elektronenmikroskopie	Haut	100
-47318-1	102139	Leber-Nieren-Mikrosomen-1 IgG-Antikörper Serum Immunoassay	Abdomen Nieren	60
-391-3	107861	Penicillinminimaler letaler Konzentration (MLK)	O2 Konzentration	90
-391-3	107864	Penicillinminimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-391-3	107867	Penicillinminimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-39105-2	102128	Aussehen Haut	Kopf Haut	62
-39105-2	102137	Aussehen Haut	Abdomen Haut	64
-39105-2	102142	Aussehen Haut	Haut	100
-39105-2	107787	Aussehen Haut	Doku Aussehen Dialysat	76
-12594-8	108510	Dehydroepiandrosteron (DHEA) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-27348-2	108510	Dopamin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-25618-0	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3148-4	100802	Sauerstoff Gas	SauerstoffFlow	71
-3148-4	100808	Sauerstoff Gas	Sauerstoff	100
-3148-4	101439	Sauerstoff Gas	SauerstoffFlow	71
-3148-4	101481	Sauerstoff Gas	Sauerstoff	100
-3148-4	102074	Sauerstoff Gas	SauerstoffFlow	71
-3148-4	102922	Sauerstoff Gas	SauerstoffVolG5	69
-3148-4	102942	Sauerstoff Gas	G5 Sauerstoff	89
-3148-4	103091	Sauerstoff Gas	CF800 SauerstoffFlow	65
-3148-4	104804	Sauerstoff Gas	MS C2 Sauerstoff	83
-3148-4	104808	Sauerstoff Gas	C2 Sauerstoff	87
-3148-4	105103	Sauerstoff Gas	Sauerstoff RespirationBarValue	83
-3148-4	106641	Sauerstoff Gas	T1 Sauerstoff	87
-3148-4	107811	Sauerstoff Gas	Sauerstoff	100
-3148-4	107980	Sauerstoff Gas	P C3 Sauerstoff	83
-3148-4	108012	Sauerstoff Gas	P MS C3 Sauerstoff	83
-3148-4	110866	Sauerstoff Gas	Heimbeatmung Sauerstoff	83
-8334-5	102158	Körpertemperatur - Harnblase	Koerpertemperatur	71
-8334-5	102622	Körpertemperatur - Harnblase	Mess Temperatur	60
-8334-5	102623	Körpertemperatur - Harnblase	Mess Temperatur	60
-8334-5	102956	Körpertemperatur - Harnblase	BM25 Temperatur	60
-8334-5	102968	Körpertemperatur - Harnblase	ADM Temperatur	62
-8334-5	102993	Körpertemperatur - Harnblase	BM25 Temperatur	60
-8334-5	103007	Körpertemperatur - Harnblase	ADM Temperatur	62
-8334-5	104107	Körpertemperatur - Harnblase	Temperatur 1a	63
-8334-5	104108	Körpertemperatur - Harnblase	Temperatur 2a	63
-8334-5	104109	Körpertemperatur - Harnblase	Temperatur 2b	63
-8334-5	104110	Körpertemperatur - Harnblase	Temperatur 1b	63
-8334-5	104111	Körpertemperatur - Harnblase	Temperatur 3a	63
-8334-5	104112	Körpertemperatur - Harnblase	Temperatur 3b	63
-8334-5	104147	Körpertemperatur - Harnblase	Airvo Temperatur	63
-8334-5	104831	Körpertemperatur - Harnblase	Apherese Temperatur	68
-8334-5	104844	Körpertemperatur - Harnblase	Apherese Temperatur	68
-8334-5	104973	Körpertemperatur - Harnblase	CRRT Temperatur	60
-8334-5	104994	Körpertemperatur - Harnblase	CRRT Temperatur	60
-8334-5	107939	Körpertemperatur - Harnblase	P ADS ADS Systemtemperatur	64
-8334-5	107949	Körpertemperatur - Harnblase	P ADS ADS Systemtemperatur	64
-8334-5	108624	Körpertemperatur - Harnblase	P Lifetherm Temperatur	60
-8334-5	108632	Körpertemperatur - Harnblase	BairHugger Temperatur	65
-8334-5	108633	Körpertemperatur - Harnblase	P BarkeyWaermepaddels Temperatur	60
-8334-5	108742	Körpertemperatur - Harnblase	P Temperatur DeltaT	64
-8334-5	110758	Körpertemperatur - Harnblase	P Anfeuchtung Temperatur	61
-8334-5	110925	Körpertemperatur - Harnblase	P Temperatur Arteriell	64
-8334-5	110926	Körpertemperatur - Harnblase	P Temperatur Haut	67
-8334-5	110927	Körpertemperatur - Harnblase	P Temperatur Naso	71
-8334-5	110928	Körpertemperatur - Harnblase	P Temperatur Oesophagial	61
-8334-5	110931	Körpertemperatur - Harnblase	P Temperatur Allg	67
-8334-5	110933	Körpertemperatur - Harnblase	P Temperatur Kern	67
-8334-5	110934	Körpertemperatur - Harnblase	P Temperatur generic	62
-8334-5	110936	Körpertemperatur - Harnblase	P Temperatur Kern	67
-8334-5	117157	Körpertemperatur - Harnblase	P MS TemperaturIst	60
-16785-8	108510	Dopamin Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-14638-1	107936	Calculus-Analyse Calculus (Stein)	P ADS ADS CalciumFluss	60
-14638-1	107950	Calculus-Analyse Calculus (Stein)	P ADS ADS CalciumFluss	60
-16735-3	108510	Dehydroepiandrosteron (DHEA) Serum Plasma -- Stimulation	Atmung Stimulation	76
-57833-6	110841	Arzneimittelverschreibung	P CoughAssist Verschreibung	62
-39777-8	104913	Harnstoff Serum Plasma -- Dialyse	Dialyse Zeit	74
-39777-8	110802	Harnstoff Serum Plasma -- Dialyse	P Dialyse Zeit	67
-39777-8	110818	Harnstoff Serum Plasma -- Dialyse	P Dialyse Zeit	67
-53502-1	102721	Calcium Probenmaterial	Calcium	100
-53502-1	102743	Calcium Probenmaterial	Calcium	100
-53502-1	103054	Calcium Probenmaterial	Calcium	100
-15792-5	108157	Bovines Insulin IgE-Antikörper-RAST-Klasse Serum	Insulin ja	82
-15792-5	108158	Bovines Insulin IgE-Antikörper-RAST-Klasse Serum	Insulin nein	74
-487-9	107861	Temafloxacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-487-9	107864	Temafloxacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-487-9	107867	Temafloxacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-21309-0	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-447-3	107861	Sisomicin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-447-3	107864	Sisomicin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-447-3	107867	Sisomicin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-25647-9	108510	Follitropin Serum Plasma . International Reference Preparation . Probenmaterial Stimulation	Atmung Stimulation	76
-14774-4	104833	Haloperidol Serum Plasma	Apherese Plasma	67
-14774-4	104834	Haloperidol Serum Plasma	Apherese Plasma	67
-14774-4	104846	Haloperidol Serum Plasma	Apherese Plasma	67
-38230-9	102721	Calcium.ionisiert Blut	Calcium	100
-38230-9	102743	Calcium.ionisiert Blut	Calcium	100
-38230-9	103054	Calcium.ionisiert Blut	Calcium	100
-33809-5	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33809-5	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33809-5	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-15074-8	101472	Glucose Blut	Blutgruppe	64
-15074-8	102102	Glucose Blut	Blutfluss	67
-15074-8	102108	Glucose Blut	Mess Blutfluss	62
-15074-8	102976	Glucose Blut	Blutfluss	67
-15074-8	103152	Glucose Blut	Blutfluss	67
-15074-8	103180	Glucose Blut	Blutfluss	67
-15074-8	103220	Glucose Blut	Blutfluss	67
-15074-8	104680	Glucose Blut	Blutggruppe	61
-15074-8	104888	Glucose Blut	Blutfluss	67
-15074-8	104907	Glucose Blut	Blutfluss	67
-15074-8	106339	Glucose Blut	Blutfluss	67
-15074-8	106381	Glucose Blut	Blutfluss	67
-15074-8	110796	Glucose Blut	P Blutfluss	61
-15074-8	117163	Glucose Blut	P Blutfluss	61
-33772-5	103707	Pl-7 Antikörper Serum	Antikoerper	65
-33772-5	104679	Pl-7 Antikörper Serum	Antikoerper	65
-33772-5	108675	Pl-7 Antikörper Serum	P Antikoerper Mutter	60
-5902-2	100203	Prothrombinzeit (PT)	PT	100
-5902-2	100676	Prothrombinzeit (PT)	PT	100
-5902-2	110835	Prothrombinzeit (PT)	P Inspirationszeit	61
-16662-9	108510	Corticotropin Plasma Radioimmunoassay Minuten Stimulation	Atmung Stimulation	76
-29247-4	101449	Sirolimus Blut	Blutverlusst	62
-29247-4	102102	Sirolimus Blut	Blutfluss	61
-29247-4	102976	Sirolimus Blut	Blutfluss	61
-29247-4	103152	Sirolimus Blut	Blutfluss	61
-29247-4	103180	Sirolimus Blut	Blutfluss	61
-29247-4	103220	Sirolimus Blut	Blutfluss	61
-29247-4	104888	Sirolimus Blut	Blutfluss	61
-29247-4	104907	Sirolimus Blut	Blutfluss	61
-29247-4	106339	Sirolimus Blut	Blutfluss	61
-29247-4	106381	Sirolimus Blut	Blutfluss	61
-2458-8	103069	IgA Serum Plasma	ADM Plasmavolumen	61
-2458-8	103085	IgA Serum Plasma	ADM Plasmavolumen	61
-2458-8	104833	IgA Serum Plasma	Apherese Plasma	65
-2458-8	104834	IgA Serum Plasma	Apherese Plasma	65
-2458-8	104846	IgA Serum Plasma	Apherese Plasma	65
-88859-4	101973	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score SAPS2	62
-88859-4	101992	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score SOFA	67
-88859-4	102764	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score ARDS	67
-88859-4	102784	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score RASS	67
-88859-4	102785	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score AIS	71
-88859-4	102788	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score Apgar	62
-88859-4	102791	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score BPS	71
-88859-4	102792	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score CIWA	67
-88859-4	102795	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score CRIB	67
-88859-4	102796	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DRS	71
-88859-4	102798	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score GDS	71
-88859-4	102800	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score Kuss	67
-88859-4	102801	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score MAAS	67
-88859-4	102802	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score MMS	71
-88859-4	102803	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score MOF	71
-88859-4	102804	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score mRS	71
-88859-4	102806	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score NIHSS	62
-88859-4	102807	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score NIPS	67
-88859-4	102810	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score RSS	71
-88859-4	102811	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score RTS	71
-88859-4	102812	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score SAS	71
-88859-4	102813	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score Lachs	62
-88859-4	102815	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score VICS	67
-88859-4	103444	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103458	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103506	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103507	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103509	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103510	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103511	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103512	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103518	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103523	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103527	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103536	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103538	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103540	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103543	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103544	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103545	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103550	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103551	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103554	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103556	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103557	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103558	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103559	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103560	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	103562	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score DGAI	67
-88859-4	105222	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score NRS	71
-88859-4	105223	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score BPS	71
-88859-4	106651	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score UStix	62
-88859-4	108395	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score FLACC	62
-88859-4	108441	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score SOS	71
-88859-4	108458	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score SOS	71
-88859-4	108680	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score NACA	67
-88859-4	108684	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score ISS	71
-88859-4	110976	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score FOUR	67
-88859-4	117221	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score	100
-88859-4	117225	Bewertung Erkrankungsstadiums Risikokalkulation (Score)	Score Race	67
-23-2	107861	Amphotericinminimaler letaler Konzentration (MLK)	O2 Konzentration	90
-23-2	107864	Amphotericinminimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-23-2	107867	Amphotericinminimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-103-2	107861	Ceforanid minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-103-2	107864	Ceforanid minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-103-2	107867	Ceforanid minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2923-1	102581	Retinol Serum Plasma	Plasmavolumen	61
-2923-1	102585	Retinol Serum Plasma	Plasmarate	60
-2923-1	103063	Retinol Serum Plasma	Plasmavolumen	61
-2923-1	103065	Retinol Serum Plasma	Plasmavolumen	61
-2923-1	104833	Retinol Serum Plasma	Apherese Plasma	63
-2923-1	104834	Retinol Serum Plasma	Apherese Plasma	63
-2923-1	104846	Retinol Serum Plasma	Apherese Plasma	63
-54349-6	102755	Ammoniak Dialysat	Dialysat	100
-54349-6	103043	Ammoniak Dialysat	Dialysat	100
-54349-6	103045	Ammoniak Dialysat	BM25 Dialysat	76
-54349-6	103123	Ammoniak Dialysat	Dialysat	100
-54349-6	103124	Ammoniak Dialysat	BM25 Dialysat	76
-54349-6	104978	Ammoniak Dialysat	CRRT Dialysat	76
-54349-6	104999	Ammoniak Dialysat	CRRT Dialysat	76
-54349-6	107787	Ammoniak Dialysat	Doku Aussehen Dialysat	64
-54349-6	107802	Ammoniak Dialysat	Dialysat1	62
-54349-6	107803	Ammoniak Dialysat	Dialysat2	62
-27874-7	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-27874-7	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-27874-7	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-378-0	107861	Oleandomycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-378-0	107864	Oleandomycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-378-0	107867	Oleandomycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-32717-1	102596	Natrium arteriellem Blut	Natrium	100
-32717-1	102638	Natrium arteriellem Blut	Mess Natrium	74
-32717-1	102676	Natrium arteriellem Blut	Natrium	100
-32717-1	103167	Natrium arteriellem Blut	MS Natrium	82
-32717-1	103226	Natrium arteriellem Blut	Natrium	100
-32717-1	103242	Natrium arteriellem Blut	Natrium	100
-32717-1	110925	Natrium arteriellem Blut	P Temperatur Arteriell	61
-18727-8	101607	Serologie	Neurologie	84
-18727-8	104256	Serologie	Servoi	67
-18727-8	104284	Serologie	Servoi	67
-14348-7	6	Spezifisches Gewicht Peritonealflüssigkeit Refraktometrie	Gewicht	100
-14348-7	104258	Spezifisches Gewicht Peritonealflüssigkeit Refraktometrie	Servoi Gewicht	67
-14348-7	110904	Spezifisches Gewicht Peritonealflüssigkeit Refraktometrie	P Gewicht	88
-39792-7	102596	Natrium Kapillarblut	Natrium	100
-39792-7	102638	Natrium Kapillarblut	Mess Natrium	74
-39792-7	102652	Natrium Kapillarblut	StartNatrium	62
-39792-7	102676	Natrium Kapillarblut	Natrium	100
-39792-7	102681	Natrium Kapillarblut	StartNatrium	62
-39792-7	103167	Natrium Kapillarblut	MS Natrium	82
-39792-7	103222	Natrium Kapillarblut	StartNatrium	62
-39792-7	103226	Natrium Kapillarblut	Natrium	100
-39792-7	103241	Natrium Kapillarblut	StartNatrium	62
-39792-7	103242	Natrium Kapillarblut	Natrium	100
-39792-7	103253	Natrium Kapillarblut	StartNatrium	62
-40849-2	108510	Glucose Urin Teststreifen . Probenmaterial Stimulation	Atmung Stimulation	76
-30376-8	102123	Blasten Blut	IABP Aufblasen	62
-25628-9	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-32095-2	30	Methanol Urin	Behandlung	61
-2093-3	104833	Cholesterol Serum Plasma	Apherese Plasma	62
-2093-3	104834	Cholesterol Serum Plasma	Apherese Plasma	62
-2093-3	104846	Cholesterol Serum Plasma	Apherese Plasma	62
-17817-8	106365	Gamma-Globulin/Protein. Elektrophorese Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-17817-8	106366	Gamma-Globulin/Protein. Elektrophorese Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-17817-8	110899	Gamma-Globulin/Protein. Elektrophorese Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-17817-8	110900	Gamma-Globulin/Protein. Elektrophorese Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-2573-4	104833	Lipoprotein.alpha Serum Plasma	Apherese Plasma	62
-2573-4	104834	Lipoprotein.alpha Serum Plasma	Apherese Plasma	62
-2573-4	104846	Lipoprotein.alpha Serum Plasma	Apherese Plasma	62
-27832-5	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-27832-5	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-27832-5	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12828-0	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-26606-4	104833	Carnosin Serum Plasma	Apherese Plasma	61
-26606-4	104834	Carnosin Serum Plasma	Apherese Plasma	61
-26606-4	104846	Carnosin Serum Plasma	Apherese Plasma	61
-16895-5	108510	Gastrin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-2947-0	102596	Natrium Blut	Natrium	100
-2947-0	102638	Natrium Blut	Mess Natrium	74
-2947-0	102652	Natrium Blut	StartNatrium	67
-2947-0	102676	Natrium Blut	Natrium	100
-2947-0	102681	Natrium Blut	StartNatrium	67
-2947-0	102682	Natrium Blut	BasisNatrium	67
-2947-0	102697	Natrium Blut	BasisNatrium	67
-2947-0	103167	Natrium Blut	MS Natrium	82
-2947-0	103222	Natrium Blut	StartNatrium	67
-2947-0	103226	Natrium Blut	Natrium	100
-2947-0	103241	Natrium Blut	StartNatrium	67
-2947-0	103242	Natrium Blut	Natrium	100
-2947-0	103253	Natrium Blut	StartNatrium	67
-2947-0	103710	Natrium Blut	BlutKreuzbe Datum	62
-2815-9	104833	Porphyrine Serum Plasma	Apherese Plasma	68
-2815-9	104834	Porphyrine Serum Plasma	Apherese Plasma	68
-2815-9	104846	Porphyrine Serum Plasma	Apherese Plasma	68
-11087-4	108157	Insulin Antikörper Serum	Insulin ja	82
-11087-4	108158	Insulin Antikörper Serum	Insulin nein	74
-11087-4	108675	Insulin Antikörper Serum	P Antikoerper Mutter	60
-41657-8	102596	Natrium gemischt-venösem Blut	Natrium	100
-41657-8	102638	Natrium gemischt-venösem Blut	Mess Natrium	74
-41657-8	102676	Natrium gemischt-venösem Blut	Natrium	100
-41657-8	103167	Natrium gemischt-venösem Blut	MS Natrium	82
-41657-8	103226	Natrium gemischt-venösem Blut	Natrium	100
-41657-8	103242	Natrium gemischt-venösem Blut	Natrium	100
-16725-4	108510	Dehydroepiandrosteron-Sulfat (DHEA-S) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-16891-4	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-59574-4	101473	Body Mass Index (BMI)	BMI	100
-2075-0	104833	Chlorid Serum Plasma	Apherese Plasma	63
-2075-0	104834	Chlorid Serum Plasma	Apherese Plasma	63
-2075-0	104846	Chlorid Serum Plasma	Apherese Plasma	63
-4121-0	103264	Amobarbital Dosis	MS AMotal	62
-53501-3	108280	Eisen Wasser	Fruchtwasser erbsbrei	61
-32549-8	106365	Noradrenalin/Creatinin Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-32549-8	106366	Noradrenalin/Creatinin Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-32549-8	110899	Noradrenalin/Creatinin Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-32549-8	110900	Noradrenalin/Creatinin Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-82746-9	100999	Varicella-Zoster-Virus-Stamm Isolat	Stamm	100
-57357-6	108510	Lactat Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-4681-3	102585	Streptokinase Plasma	Plasmarate	60
-4681-3	104833	Streptokinase Plasma	Apherese Plasma	63
-4681-3	104834	Streptokinase Plasma	Apherese Plasma	63
-4681-3	104846	Streptokinase Plasma	Apherese Plasma	63
-8691-8	101435	Reiseanamnese	Resistance	61
-8691-8	102380	Reiseanamnese	AnamneseVor	67
-8691-8	106521	Reiseanamnese	Anamnese Nein	62
-8691-8	106522	Reiseanamnese	Anamnese Ja	67
-8691-8	106649	Reiseanamnese	Anamnese	76
-8691-8	108257	Reiseanamnese	F Sozialanamnese	62
-8691-8	108258	Reiseanamnese	F Sozialanamnese	62
-8691-8	108259	Reiseanamnese	F Sozialanamnese	62
-56520-0	108510	11-Desoxycortisol Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-44916-5	108510	Cortisol Serum Plasma -- Stimulation	Atmung Stimulation	76
-39-8	107861	Azlocillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-39-8	107864	Azlocillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-39-8	107867	Azlocillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-6905-4	104833	Propafenon Serum Plasma	Apherese Plasma	63
-6905-4	104834	Propafenon Serum Plasma	Apherese Plasma	63
-6905-4	104846	Propafenon Serum Plasma	Apherese Plasma	63
-48163-0	102107	Zytokeratin Körperflüssigkeit	PatFluessigkeitRate	61
-156-0	107861	Cephaloridin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-156-0	107864	Cephaloridin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-156-0	107867	Cephaloridin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-33808-7	108157	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma	Insulin ja	82
-33808-7	108158	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma	Insulin nein	74
-53135-0	102755	Cholesterol HDL Dialysat	Dialysat	100
-53135-0	103043	Cholesterol HDL Dialysat	Dialysat	100
-53135-0	103045	Cholesterol HDL Dialysat	BM25 Dialysat	76
-53135-0	103123	Cholesterol HDL Dialysat	Dialysat	100
-53135-0	103124	Cholesterol HDL Dialysat	BM25 Dialysat	76
-53135-0	104978	Cholesterol HDL Dialysat	CRRT Dialysat	76
-53135-0	104999	Cholesterol HDL Dialysat	CRRT Dialysat	76
-3695-4	108157	Insulin Serum Plasma	Insulin ja	82
-3695-4	108158	Insulin Serum Plasma	Insulin nein	74
-5631-7	103145	Kupfer Serum Plasma	Doku Plasmalösung	63
-5631-7	104833	Kupfer Serum Plasma	Apherese Plasma	71
-5631-7	104834	Kupfer Serum Plasma	Apherese Plasma	71
-5631-7	104846	Kupfer Serum Plasma	Apherese Plasma	71
-8478-0	108113	Mittlerer Blutdruck	Blutgruppe Mutter	67
-12646-6	108510	Glucose Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-11610-3	108675	Heterophile Antikörper Serum	P Antikoerper Mutter	60
-16513-4	102721	Calcium.ionisiert Serum Plasma . Probenmaterial Stimulation	Calcium	100
-16513-4	102743	Calcium.ionisiert Serum Plasma . Probenmaterial Stimulation	Calcium	100
-16513-4	103054	Calcium.ionisiert Serum Plasma . Probenmaterial Stimulation	Calcium	100
-16513-4	108510	Calcium.ionisiert Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-6148-1	108157	Humanes Insulin IgE-Antikörper Serum	Insulin ja	82
-6148-1	108158	Humanes Insulin IgE-Antikörper Serum	Insulin nein	74
-33824-4	104253	Eisen Urin	Servoi I E	60
-33824-4	104274	Eisen Urin	Servoi I E	60
-4107-9	102744	Aciclovir Dosis	CitratDosis	62
-25489-6	104833	Normetanephrin Serum Plasma	Apherese Plasma	62
-25489-6	104834	Normetanephrin Serum Plasma	Apherese Plasma	62
-25489-6	104846	Normetanephrin Serum Plasma	Apherese Plasma	62
-18726-0	101607	Radiologie	Neurologie	70
-53576-5	106739	Bericht aus persönlichem Gesundheitsmonitoring - Dokument	CO Bericht	82
-18729-4	1278	Urindiagnostik	Diagnose	64
-18729-4	101483	Urindiagnostik	Diagnostik	83
-18729-4	102377	Urindiagnostik	ICUDiagnosen	62
-18729-4	103752	Urindiagnostik	Diagnostik	83
-17019-1	108157	Insulin- WachstumsfaktorSerum Plasma Stunden Stimulation	Insulin ja	82
-17019-1	108158	Insulin- WachstumsfaktorSerum Plasma Stunden Stimulation	Insulin nein	74
-17019-1	108510	Insulin- WachstumsfaktorSerum Plasma Stunden Stimulation	Atmung Stimulation	76
-41270-0	144	Medikamente identifiziert Urin	Medikamente gestellt	71
-12717-5	108510	17-Hydroxyprogesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3735-8	104833	Maprotilin Serum Plasma	Apherese Plasma	63
-3735-8	104834	Maprotilin Serum Plasma	Apherese Plasma	63
-3735-8	104846	Maprotilin Serum Plasma	Apherese Plasma	63
-20509-6	10	Hämoglobin Blut, berechnet	errechneter Geburtstermin	61
-16271-9	102721	Calcium Serum Plasma Minuten Stimulation	Calcium	100
-16271-9	102743	Calcium Serum Plasma Minuten Stimulation	Calcium	100
-16271-9	103054	Calcium Serum Plasma Minuten Stimulation	Calcium	100
-16271-9	108510	Calcium Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-18342-6	108510	Glucose Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-9366-6	104279	Arsen Probenmaterial	Servoi Pausendauer Prozent	61
-12741-5	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-12741-5	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-12741-5	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-32313-9	108510	Cortisol Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-54019-5	108675	Lysozym Antikörper Serum	P Antikoerper Mutter	60
-2821-7	102699	Kalium Körperflüssigkeit	Dialysierfluessigke	63
-12610-2	108510	Glucose Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-49894-9	108510	Somatotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-47773-7	108157	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-47773-7	108158	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-12829-8	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2948-8	102596	Natrium Zerebrospinalflüssigkeit	Natrium	100
-2948-8	102638	Natrium Zerebrospinalflüssigkeit	Mess Natrium	74
-2948-8	102676	Natrium Zerebrospinalflüssigkeit	Natrium	100
-2948-8	103167	Natrium Zerebrospinalflüssigkeit	MS Natrium	82
-2948-8	103226	Natrium Zerebrospinalflüssigkeit	Natrium	100
-2948-8	103242	Natrium Zerebrospinalflüssigkeit	Natrium	100
-35662-6	106365	Glucose Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-35662-6	106366	Glucose Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-35662-6	110899	Glucose Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-35662-6	110900	Glucose Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-1363-1	108157	Corticotropin Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-1363-1	108158	Corticotropin Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-19153-6	106365	Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-19153-6	106366	Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-19153-6	110899	Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-19153-6	110900	Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-13033-6	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-43815-0	104279	Arsen Probenmaterial	Servoi Pausendauer Prozent	61
-3453-8	104833	Cephalexin Serum Plasma	Apherese Plasma	63
-3453-8	104834	Cephalexin Serum Plasma	Apherese Plasma	63
-3453-8	104846	Cephalexin Serum Plasma	Apherese Plasma	63
-3934-7	104833	Phencyclidin Serum Plasma	Apherese Plasma	60
-3934-7	104834	Phencyclidin Serum Plasma	Apherese Plasma	60
-3934-7	104846	Phencyclidin Serum Plasma	Apherese Plasma	60
-2276-4	104833	Ferritin Serum Plasma	Apherese Plasma	61
-2276-4	104834	Ferritin Serum Plasma	Apherese Plasma	61
-2276-4	104846	Ferritin Serum Plasma	Apherese Plasma	61
-14697-7	104833	Diazepam Serum Plasma	Apherese Plasma	61
-14697-7	104834	Diazepam Serum Plasma	Apherese Plasma	61
-14697-7	104846	Diazepam Serum Plasma	Apherese Plasma	61
-38388-5	107985	Komplement C3 Serum Plasma	P C3	67
-38388-5	107992	Komplement C3 Serum Plasma	P C3	67
-38388-5	108010	Komplement C3 Serum Plasma	P C3	67
-38388-5	110828	Komplement C3 Serum Plasma	P C3	67
-38388-5	110831	Komplement C3 Serum Plasma	P C3	67
-38387-7	107985	C3 nephritischer Faktor Serum Plasma	P C3	67
-38387-7	107992	C3 nephritischer Faktor Serum Plasma	P C3	67
-38387-7	108010	C3 nephritischer Faktor Serum Plasma	P C3	67
-38387-7	110828	C3 nephritischer Faktor Serum Plasma	P C3	67
-38387-7	110831	C3 nephritischer Faktor Serum Plasma	P C3	67
-76491-0	103069	IgM Serum Plasma	ADM Plasmavolumen	61
-76491-0	103085	IgM Serum Plasma	ADM Plasmavolumen	61
-15081-3	102585	Prolaktin Serum Plasma	Plasmarate	62
-8336-0	6	Körpergewicht pro	Gewicht	61
-8336-0	14	Körpergewicht pro	Geburtsgewicht	60
-8336-0	100251	Körpergewicht pro	idealesKoerpergewicht	65
-8336-0	103749	Körpergewicht pro	GewichtGroeße	64
-8336-0	104258	Körpergewicht pro	Servoi Gewicht	67
-8336-0	104771	Körpergewicht pro	PatGewicht	62
-8336-0	106739	Körpergewicht pro	CO Bericht	62
-8336-0	110904	Körpergewicht pro	P Gewicht	72
-12181-4	102699	Calcium Körperflüssigkeit	Dialysierfluessigke	62
-12181-4	102721	Calcium Körperflüssigkeit	Calcium	100
-12181-4	102743	Calcium Körperflüssigkeit	Calcium	100
-12181-4	102753	Calcium Körperflüssigkeit	Mess CalciumFluss	60
-12181-4	103054	Calcium Körperflüssigkeit	Calcium	100
-25697-4	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-25697-4	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-25697-4	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-52760-6	100203	Prothrombinzeit (PT) PIVKA sensitiv /normal Kapillarblut Gerinnungstest	PT	100
-52760-6	100676	Prothrombinzeit (PT) PIVKA sensitiv /normal Kapillarblut Gerinnungstest	PT	100
-53146-7	108510	Follitropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-12830-6	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-39997-2	108510	Glucose Serum Plasma -- Stimulation	Atmung Stimulation	76
-55572-2	102585	Procain Serum Plasma	Plasmarate	60
-55572-2	104833	Procain Serum Plasma	Apherese Plasma	63
-55572-2	104834	Procain Serum Plasma	Apherese Plasma	63
-55572-2	104846	Procain Serum Plasma	Apherese Plasma	63
-14796-7	108157	Insulin Serum Plasma	Insulin ja	82
-14796-7	108158	Insulin Serum Plasma	Insulin nein	74
-39977-4	108510	Creatinin Urin -- Stimulation	Atmung Stimulation	76
-56574-7	108510	Renin Plasma Stunde Stimulation	Atmung Stimulation	76
-119-8	107861	Cefpodoxim minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-119-8	107864	Cefpodoxim minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-119-8	107867	Cefpodoxim minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-21525-1	102596	Natrium -Stunden-Urin	Natrium	100
-21525-1	102638	Natrium -Stunden-Urin	Mess Natrium	74
-21525-1	102676	Natrium -Stunden-Urin	Natrium	100
-21525-1	103167	Natrium -Stunden-Urin	MS Natrium	82
-21525-1	103226	Natrium -Stunden-Urin	Natrium	100
-21525-1	103242	Natrium -Stunden-Urin	Natrium	100
-53145-9	108510	Lutropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-18864-9	101461	Ampicillin	Familienst	60
-34324-4	103568	Lactat Urin	IABP ACAT	60
-11067-6	102624	Blutungszeit	Mess BehandlungsZeit	62
-11067-6	103018	Blutungszeit	MS Behandlungszeit	67
-11067-6	107810	Blutungszeit	Zykluszeit	64
-67-9	107861	Cefamandol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-67-9	107864	Cefamandol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-67-9	107867	Cefamandol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-33820-2	104833	Interferon alpha Serum Plasma	Apherese Plasma	68
-33820-2	104834	Interferon alpha Serum Plasma	Apherese Plasma	68
-33820-2	104846	Interferon alpha Serum Plasma	Apherese Plasma	68
-40295-8	108510	Trijodthyronin (T3) frei Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-511-6	107861	Trimethoprim minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-511-6	107864	Trimethoprim minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-511-6	107867	Trimethoprim minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-1998-4	102721	Calcium Dialysat	Calcium	100
-1998-4	102743	Calcium Dialysat	Calcium	100
-1998-4	102749	Calcium Dialysat	CalciumLoesung	60
-1998-4	102755	Calcium Dialysat	Dialysat	100
-1998-4	102763	Calcium Dialysat	CalciumLoesung	60
-1998-4	103043	Calcium Dialysat	Dialysat	100
-1998-4	103045	Calcium Dialysat	BM25 Dialysat	76
-1998-4	103054	Calcium Dialysat	Calcium	100
-1998-4	103058	Calcium Dialysat	CalciumFiltrat	73
-1998-4	103123	Calcium Dialysat	Dialysat	100
-1998-4	103124	Calcium Dialysat	BM25 Dialysat	76
-1998-4	104974	Calcium Dialysat	CRRT CalciumFiltrat	63
-1998-4	104978	Calcium Dialysat	CRRT Dialysat	76
-1998-4	104995	Calcium Dialysat	CRRT CalciumFiltrat	63
-1998-4	104999	Calcium Dialysat	CRRT Dialysat	76
-1998-4	107787	Calcium Dialysat	Doku Aussehen Dialysat	67
-1998-4	107802	Calcium Dialysat	Dialysat1	64
-1998-4	107803	Calcium Dialysat	Dialysat2	64
-1998-4	107934	Calcium Dialysat	P ADS MS ADS Calcium postFilter	61
-1998-4	107935	Calcium Dialysat	P ADS MS ADS Calcium preFilter	61
-32327-9	108510	Lutropin Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-19232-8	102597	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	102639	Bicarbonat Standard venösem Blut	Mess Bicarbonat	80
-19232-8	102677	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	103160	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	103191	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	103227	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	103243	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	104881	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	104897	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	104922	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	104937	Bicarbonat Standard venösem Blut	Bicarbonat	100
-19232-8	110786	Bicarbonat Standard venösem Blut	P Bicarbonat	91
-19232-8	110806	Bicarbonat Standard venösem Blut	P Bicarbonat	91
-51731-8	100808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	Sauerstoff	100
-51731-8	101481	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	Sauerstoff	100
-51731-8	102942	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	G5 Sauerstoff	87
-51731-8	104804	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	MS C2 Sauerstoff	77
-51731-8	104808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	C2 Sauerstoff	87
-51731-8	106641	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	T1 Sauerstoff	87
-51731-8	107811	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	Sauerstoff	100
-51731-8	107980	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	P C3 Sauerstoff	80
-51731-8	108012	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	P MS C3 Sauerstoff	71
-51731-8	110866	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck venösem Blut	Heimbeatmung Sauerstoff	61
-18860-7	104403	Amikacin	Praemedikation	64
-2156-8	102107	Creatinkinase Amnionflüssigkeit	PatFluessigkeitRate	61
-24518-3	102721	Calcium/Creatinin Urin	Calcium	100
-24518-3	102743	Calcium/Creatinin Urin	Calcium	100
-24518-3	103054	Calcium/Creatinin Urin	Calcium	100
-2282-2	101383	Folat Blut	BlutflussMax	64
-2282-2	102102	Folat Blut	Blutfluss	63
-2282-2	102496	Folat Blut	BlutflussMax	64
-2282-2	102499	Folat Blut	BlutflussMax	64
-2282-2	102937	Folat Blut	BlutflussMax	64
-2282-2	102976	Folat Blut	Blutfluss	63
-2282-2	103152	Folat Blut	Blutfluss	63
-2282-2	103180	Folat Blut	Blutfluss	63
-2282-2	103220	Folat Blut	Blutfluss	63
-2282-2	103238	Folat Blut	BlutflussMax	64
-2282-2	104888	Folat Blut	Blutfluss	63
-2282-2	104907	Folat Blut	Blutfluss	63
-2282-2	104930	Folat Blut	BlutflussMax	64
-2282-2	104943	Folat Blut	Blutfluss Max	61
-2282-2	106339	Folat Blut	Blutfluss	63
-2282-2	106381	Folat Blut	Blutfluss	63
-16670-2	108510	Cortisol Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-23905-3	104833	Mycophenolat Serum Plasma	Apherese Plasma	60
-23905-3	104834	Mycophenolat Serum Plasma	Apherese Plasma	60
-23905-3	104846	Mycophenolat Serum Plasma	Apherese Plasma	60
-73600-9	103306	Faropenem	fApnoe	67
-73600-9	103443	Faropenem	MS AutoPEEP	60
-14703-3	103145	Dopamin Serum Plasma	Doku Plasmalösung	61
-3141-9	100251	Körpergewicht, gemessen	idealesKoerpergewicht	71
-35788-9	107867	Daptomycin minimaler Hemmkonzentration (MHK)	Atom O2 Konzentration	60
-12955-1	108510	Trijodthyronin (T3) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-54018-7	108675	Lactoferrin Antikörper Serum	P Antikoerper Mutter	60
-2126-1	102729	Citrat Sperma	Citrat	100
-2126-1	103053	Citrat Sperma	Citrat	100
-2126-1	113047	Citrat Sperma	CRRT praeF	61
-2126-1	113048	Citrat Sperma	CRRT praeF	61
-2126-1	114052	Citrat Sperma	CRRT MS praeF	62
-8867-4	100078	Herzfrequenz	SM Frequenz	70
-8867-4	100099	Herzfrequenz	Frequenz	80
-8867-4	100250	Herzfrequenz	FrequenzHFOV	67
-8867-4	100253	Herzfrequenz	IMVFrequenz	70
-8867-4	100259	Herzfrequenz	IPPVFrequenz	67
-8867-4	100288	Herzfrequenz	IMVFrequenz	70
-8867-4	100293	Herzfrequenz	IPPVFrequenz	67
-8867-4	102121	Herzfrequenz	IABP Frequenz	64
-8867-4	102617	Herzfrequenz	FrequenzHFOV	67
-8867-4	102938	Herzfrequenz	G5 Frequenz	70
-8867-4	103210	Herzfrequenz	Frequenz	80
-8867-4	103257	Herzfrequenz	Frequenz	80
-8867-4	103269	Herzfrequenz	Frequenz	80
-8867-4	103274	Herzfrequenz	Frequenzimv	70
-8867-4	103287	Herzfrequenz	MS frequenz	70
-8867-4	103298	Herzfrequenz	frequenz	80
-8867-4	103323	Herzfrequenz	MS frequenz	70
-8867-4	103380	Herzfrequenz	Eins RAPFrequenz	71
-8867-4	103381	Herzfrequenz	Eins Frequenz	72
-8867-4	103386	Herzfrequenz	Frequenz	80
-8867-4	103389	Herzfrequenz	Basisfrequenz	64
-8867-4	103390	Herzfrequenz	FrequenzMax	70
-8867-4	103399	Herzfrequenz	Defi Frequenz	72
-8867-4	103407	Herzfrequenz	Frequenz	80
-8867-4	103430	Herzfrequenz	MS Frequenz	70
-8867-4	104354	Herzfrequenz	IABP IABP Frequenz	64
-8867-4	104718	Herzfrequenz	Frequenz	80
-8867-4	104727	Herzfrequenz	MS Frequenz	70
-8867-4	104748	Herzfrequenz	Frequenz Min	67
-8867-4	104753	Herzfrequenz	G5 Frequenz	70
-8867-4	104783	Herzfrequenz	C2 Frequenz	70
-8867-4	106282	Herzfrequenz	C2 Frequenz	70
-8867-4	107818	Herzfrequenz	Frequenz	80
-8867-4	107824	Herzfrequenz	HFFrequenz	82
-8867-4	107829	Herzfrequenz	Frequenz Rec	67
-8867-4	107837	Herzfrequenz	MS Frequenz	70
-8867-4	108008	Herzfrequenz	P C3 Frequenz	64
-8867-4	110834	Herzfrequenz	P Frequenz	73
-8867-4	110863	Herzfrequenz	P RTX Frequenz	62
-8867-4	110870	Herzfrequenz	T1 Frequenz	70
-50506-5	108157	Insulin Serum Plasma . Probenmaterial	Insulin ja	82
-50506-5	108158	Insulin Serum Plasma . Probenmaterial	Insulin nein	74
-26812-8	108510	Xylose Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12825-6	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-33814-5	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33814-5	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33814-5	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3889-3	104833	Oxprenolol Serum Plasma	Apherese Plasma	63
-3889-3	104834	Oxprenolol Serum Plasma	Apherese Plasma	63
-3889-3	104846	Oxprenolol Serum Plasma	Apherese Plasma	63
-16459-0	102597	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	102639	Bicarbonat Körperflüssigkeit	Mess Bicarbonat	80
-16459-0	102677	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	103160	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	103191	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	103227	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	103243	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	104881	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	104897	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	104922	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	104937	Bicarbonat Körperflüssigkeit	Bicarbonat	100
-16459-0	110786	Bicarbonat Körperflüssigkeit	P Bicarbonat	91
-16459-0	110806	Bicarbonat Körperflüssigkeit	P Bicarbonat	91
-26726-0	104941	Prolin Urin	UF Profil	60
-40131-5	108510	Creatinin Urin Stunde Stimulation	Atmung Stimulation	76
-29217-7	102699	Disopyramid Körperflüssigkeit	Dialysierfluessigke	61
-35-6	107861	Azithromycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-35-6	107864	Azithromycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-35-6	107867	Azithromycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-57338-6	102729	Citrat -Stunden-Urin	Citrat	100
-57338-6	103053	Citrat -Stunden-Urin	Citrat	100
-2704-5	100808	Sauerstoff Kapillarblut	Sauerstoff	100
-2704-5	101481	Sauerstoff Kapillarblut	Sauerstoff	100
-2704-5	102942	Sauerstoff Kapillarblut	G5 Sauerstoff	87
-2704-5	104804	Sauerstoff Kapillarblut	MS C2 Sauerstoff	77
-2704-5	104808	Sauerstoff Kapillarblut	C2 Sauerstoff	87
-2704-5	105103	Sauerstoff Kapillarblut	Sauerstoff RespirationBarValue	64
-2704-5	106641	Sauerstoff Kapillarblut	T1 Sauerstoff	87
-2704-5	107811	Sauerstoff Kapillarblut	Sauerstoff	100
-2704-5	107980	Sauerstoff Kapillarblut	P C3 Sauerstoff	80
-2704-5	108012	Sauerstoff Kapillarblut	P MS C3 Sauerstoff	71
-2704-5	110866	Sauerstoff Kapillarblut	Heimbeatmung Sauerstoff	61
-12289-5	144	Medikamente identifiziert Glaskörperflüssigkeit Screening	Medikamente gestellt	71
-56533-3	108157	Insulin IgG-Antikörper Serum	Insulin ja	82
-56533-3	108158	Insulin IgG-Antikörper Serum	Insulin nein	74
-19840-8	107841	Atemfrequenz.spontan mechanisch -- Beatmungsgerät	MS Freq Spontan	64
-14420-4	102755	Bilirubin. Dialysat	Dialysat	100
-14420-4	103043	Bilirubin. Dialysat	Dialysat	100
-14420-4	103045	Bilirubin. Dialysat	BM25 Dialysat	76
-14420-4	103123	Bilirubin. Dialysat	Dialysat	100
-14420-4	103124	Bilirubin. Dialysat	BM25 Dialysat	76
-14420-4	104978	Bilirubin. Dialysat	CRRT Dialysat	76
-14420-4	104999	Bilirubin. Dialysat	CRRT Dialysat	76
-14420-4	107787	Bilirubin. Dialysat	Doku Aussehen Dialysat	62
-25511-7	104833	Propafenon Serum Plasma	Apherese Plasma	63
-25511-7	104834	Propafenon Serum Plasma	Apherese Plasma	63
-25511-7	104846	Propafenon Serum Plasma	Apherese Plasma	63
-25415-1	101383	Folat Blut	BlutflussMax	64
-25415-1	102102	Folat Blut	Blutfluss	63
-25415-1	102496	Folat Blut	BlutflussMax	64
-25415-1	102499	Folat Blut	BlutflussMax	64
-25415-1	102937	Folat Blut	BlutflussMax	64
-25415-1	102976	Folat Blut	Blutfluss	63
-25415-1	103152	Folat Blut	Blutfluss	63
-25415-1	103180	Folat Blut	Blutfluss	63
-25415-1	103220	Folat Blut	Blutfluss	63
-25415-1	103238	Folat Blut	BlutflussMax	64
-25415-1	104888	Folat Blut	Blutfluss	63
-25415-1	104907	Folat Blut	Blutfluss	63
-25415-1	104930	Folat Blut	BlutflussMax	64
-25415-1	104943	Folat Blut	Blutfluss Max	61
-25415-1	106339	Folat Blut	Blutfluss	63
-25415-1	106381	Folat Blut	Blutfluss	63
-2752-4	108506	pH Sperma	P NBP reArm	60
-2752-4	108636	pH Sperma	P Power	62
-53754-8	108510	Wasserstoff/Ausatemluft Exhalat Minuten Stimulation	Atmung Stimulation	76
-47151-6	108510	Adrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-60593-1	101391	Medikation.erweitert - Dokument	Dokumentation	62
-60593-1	101405	Medikation.erweitert - Dokument	Dokumentation	62
-60593-1	101417	Medikation.erweitert - Dokument	Dokumentation	62
-60593-1	105241	Medikation.erweitert - Dokument	F MedDoku Vormedikation	62
-12559-1	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-15793-3	108157	Humanes Insulin IgE-Antikörper-RAST-Klasse Serum	Insulin ja	82
-15793-3	108158	Humanes Insulin IgE-Antikörper-RAST-Klasse Serum	Insulin nein	74
-9843-4	11	Kopfumfang okzipital-frontal	Kopfumfang	100
-9843-4	101763	Kopfumfang okzipital-frontal	Kopfumfang	100
-9843-4	108252	Kopfumfang okzipital-frontal	Kopfumfang	100
-9843-4	108502	Kopfumfang okzipital-frontal	Kopfumfang bit	83
-19258-3	100808	Sauerstoff Körpertemperatur venösem Blut	Sauerstoff	100
-19258-3	101481	Sauerstoff Körpertemperatur venösem Blut	Sauerstoff	100
-19258-3	102942	Sauerstoff Körpertemperatur venösem Blut	G5 Sauerstoff	87
-19258-3	104804	Sauerstoff Körpertemperatur venösem Blut	MS C2 Sauerstoff	77
-19258-3	104808	Sauerstoff Körpertemperatur venösem Blut	C2 Sauerstoff	87
-19258-3	106641	Sauerstoff Körpertemperatur venösem Blut	T1 Sauerstoff	87
-19258-3	107811	Sauerstoff Körpertemperatur venösem Blut	Sauerstoff	100
-19258-3	107980	Sauerstoff Körpertemperatur venösem Blut	P C3 Sauerstoff	80
-19258-3	108012	Sauerstoff Körpertemperatur venösem Blut	P MS C3 Sauerstoff	71
-19258-3	110866	Sauerstoff Körpertemperatur venösem Blut	Heimbeatmung Sauerstoff	61
-24351-9	104852	Protein-Elektrophorese ( ) - Serum Plasma	Apherese Plasmaloesung	60
-8072-1	108157	Insulin Antikörper Serum	Insulin ja	82
-8072-1	108158	Insulin Antikörper Serum	Insulin nein	74
-8072-1	108675	Insulin Antikörper Serum	P Antikoerper Mutter	60
-7691-9	108675	Pecten spp IgE-Antikörper Serum	P Antikoerper Mutter	60
-34266-7	102729	Citrat Urin	Citrat	100
-34266-7	102742	Citrat Urin	CitratLoesung	67
-34266-7	102744	Citrat Urin	CitratDosis	64
-34266-7	102748	Citrat Urin	CitratLoesung	67
-34266-7	103051	Citrat Urin	Citratloesung	67
-34266-7	103053	Citrat Urin	Citrat	100
-34266-7	103056	Citrat Urin	Citratloesung	67
-34266-7	103057	Citrat Urin	CitratBlut	67
-34266-7	104975	Citrat Urin	CRRT CitratBlut	62
-34266-7	104996	Citrat Urin	CRRT CitratBlut	62
-50546-1	100079	Bakterielle Empfindlichkeit ( ) Agardiffusion	SM Empfindlichkeit	91
-50546-1	103383	Bakterielle Empfindlichkeit ( ) Agardiffusion	Eins Empfindlichkeit	86
-50546-1	103388	Bakterielle Empfindlichkeit ( ) Agardiffusion	Empfindlichkeit	100
-50546-1	103398	Bakterielle Empfindlichkeit ( ) Agardiffusion	Siemens Empfindlichkeit	79
-50546-1	103400	Bakterielle Empfindlichkeit ( ) Agardiffusion	Defi Empfindlichkeit	86
-12176-4	104833	Aminosäuren Serum Plasma	Apherese Plasma	63
-12176-4	104834	Aminosäuren Serum Plasma	Apherese Plasma	63
-12176-4	104846	Aminosäuren Serum Plasma	Apherese Plasma	63
-74896-2	103440	Lactat Stuhl	MS Cstat	60
-74896-2	107871	Lactat Stuhl	MS T1 Cstat	61
-338-4	107861	Miocamycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-338-4	107864	Miocamycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-338-4	107867	Miocamycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-12562-5	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-16905-2	108510	Glucose Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-22700-9	101387	Harnstoff Urin	HarnstoffZiel	74
-22700-9	102477	Harnstoff Urin	HarnstoffZiel	74
-22700-9	102478	Harnstoff Urin	HarnstoffZiel	74
-11-7	107861	Amikacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-11-7	107864	Amikacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-11-7	107867	Amikacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-52761-4	100203	Prothrombinzeit (PT) PIVKA sensitiv /normal thrombozytenarmem Plasma Gerinnungstest	PT	100
-52761-4	100676	Prothrombinzeit (PT) PIVKA sensitiv /normal thrombozytenarmem Plasma Gerinnungstest	PT	100
-50503-2	108157	Insulin Serum Plasma . Probenmaterial	Insulin ja	82
-50503-2	108158	Insulin Serum Plasma . Probenmaterial	Insulin nein	74
-50505-7	108157	Insulin Serum Plasma . Probenmaterial	Insulin ja	82
-50505-7	108158	Insulin Serum Plasma . Probenmaterial	Insulin nein	74
-25624-8	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-27369-8	108510	Somatotropin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-1570-1	108157	Insulin Serum Plasma --Basislinie	Insulin ja	82
-1570-1	108158	Insulin Serum Plasma --Basislinie	Insulin nein	74
-9271-8	101973	10-min-Apgar-Score	Score SAPS2	62
-9271-8	101992	10-min-Apgar-Score	Score SOFA	67
-9271-8	102764	10-min-Apgar-Score	Score ARDS	67
-9271-8	102784	10-min-Apgar-Score	Score RASS	67
-9271-8	102785	10-min-Apgar-Score	Score AIS	71
-9271-8	102788	10-min-Apgar-Score	Score Apgar	100
-9271-8	102791	10-min-Apgar-Score	Score BPS	71
-9271-8	102792	10-min-Apgar-Score	Score CIWA	67
-9271-8	102795	10-min-Apgar-Score	Score CRIB	67
-9271-8	102796	10-min-Apgar-Score	Score DRS	71
-9271-8	102798	10-min-Apgar-Score	Score GDS	71
-9271-8	102800	10-min-Apgar-Score	Score Kuss	67
-9271-8	102801	10-min-Apgar-Score	Score MAAS	67
-9271-8	102802	10-min-Apgar-Score	Score MMS	71
-9271-8	102803	10-min-Apgar-Score	Score MOF	71
-9271-8	102804	10-min-Apgar-Score	Score mRS	71
-9271-8	102806	10-min-Apgar-Score	Score NIHSS	62
-9271-8	102807	10-min-Apgar-Score	Score NIPS	67
-9271-8	102810	10-min-Apgar-Score	Score RSS	71
-9271-8	102811	10-min-Apgar-Score	Score RTS	71
-9271-8	102812	10-min-Apgar-Score	Score SAS	71
-9271-8	102813	10-min-Apgar-Score	Score Lachs	62
-9271-8	102815	10-min-Apgar-Score	Score VICS	67
-9271-8	103444	10-min-Apgar-Score	Score DGAI	67
-9271-8	103458	10-min-Apgar-Score	Score DGAI	67
-9271-8	103506	10-min-Apgar-Score	Score DGAI	67
-9271-8	103507	10-min-Apgar-Score	Score DGAI	67
-9271-8	103509	10-min-Apgar-Score	Score DGAI	67
-9271-8	103510	10-min-Apgar-Score	Score DGAI	67
-9271-8	103511	10-min-Apgar-Score	Score DGAI	67
-9271-8	103512	10-min-Apgar-Score	Score DGAI	67
-9271-8	103518	10-min-Apgar-Score	Score DGAI	67
-9271-8	103523	10-min-Apgar-Score	Score DGAI	67
-9271-8	103527	10-min-Apgar-Score	Score DGAI	67
-9271-8	103536	10-min-Apgar-Score	Score DGAI	67
-9271-8	103538	10-min-Apgar-Score	Score DGAI	67
-9271-8	103540	10-min-Apgar-Score	Score DGAI	67
-9271-8	103543	10-min-Apgar-Score	Score DGAI	67
-9271-8	103544	10-min-Apgar-Score	Score DGAI	67
-9271-8	103545	10-min-Apgar-Score	Score DGAI	67
-9271-8	103550	10-min-Apgar-Score	Score DGAI	67
-9271-8	103551	10-min-Apgar-Score	Score DGAI	67
-9271-8	103554	10-min-Apgar-Score	Score DGAI	67
-9271-8	103556	10-min-Apgar-Score	Score DGAI	67
-9271-8	103557	10-min-Apgar-Score	Score DGAI	67
-9271-8	103558	10-min-Apgar-Score	Score DGAI	67
-9271-8	103559	10-min-Apgar-Score	Score DGAI	67
-9271-8	103560	10-min-Apgar-Score	Score DGAI	67
-9271-8	103562	10-min-Apgar-Score	Score DGAI	67
-9271-8	105222	10-min-Apgar-Score	Score NRS	71
-9271-8	105223	10-min-Apgar-Score	Score BPS	71
-9271-8	106651	10-min-Apgar-Score	Score UStix	62
-9271-8	108395	10-min-Apgar-Score	Score FLACC	62
-9271-8	108424	10-min-Apgar-Score	Score PRISMIII	62
-9271-8	108441	10-min-Apgar-Score	Score SOS	71
-9271-8	108458	10-min-Apgar-Score	Score SOS	71
-9271-8	108680	10-min-Apgar-Score	Score NACA	67
-9271-8	108684	10-min-Apgar-Score	Score ISS	71
-9271-8	110976	10-min-Apgar-Score	Score FOUR	67
-9271-8	117221	10-min-Apgar-Score	Score	100
-9271-8	117225	10-min-Apgar-Score	Score Race	67
-3397-7	108102	Kokain Urin	konsanguin nein	62
-29275-5	102378	Körpermessungen	Verletzungen	62
-8008-5	108675	Rickettsia typhi IgM-Antikörper Serum	P Antikoerper Mutter	61
-40116-6	108510	Creatinin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-15202-5	101389	Kalium Stuhl	KaliumZiel	64
-15202-5	102481	Kalium Stuhl	KaliumZiel	64
-15202-5	102482	Kalium Stuhl	KaliumZiel	64
-3092-4	101387	Harnstoff Urin	HarnstoffZiel	74
-3092-4	102477	Harnstoff Urin	HarnstoffZiel	74
-3092-4	102478	Harnstoff Urin	HarnstoffZiel	74
-6076-4	108675	Ruditapes spp IgE-Antikörper Serum	P Antikoerper Mutter	60
-35802-8	100239	Ertapenem	TApnoe	67
-35802-8	100303	Ertapenem	TApnoe	67
-35802-8	107823	Ertapenem	TApnoe	67
-30201-8	104833	B-Antikörper Serum Plasma	Apherese Plasma	67
-30201-8	104834	B-Antikörper Serum Plasma	Apherese Plasma	67
-30201-8	104846	B-Antikörper Serum Plasma	Apherese Plasma	67
-15100-1	104833	Barbiturate Serum Plasma	Apherese Plasma	62
-15100-1	104834	Barbiturate Serum Plasma	Apherese Plasma	62
-15100-1	104846	Barbiturate Serum Plasma	Apherese Plasma	62
-32539-9	108510	17-Hydroxyprogesteron Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-25473-0	104833	Metanephrin Serum Plasma	Apherese Plasma	67
-25473-0	104834	Metanephrin Serum Plasma	Apherese Plasma	67
-25473-0	104846	Metanephrin Serum Plasma	Apherese Plasma	67
-2885-2	102585	Protein Serum Plasma	Plasmarate	60
-2885-2	103143	Protein Serum Plasma	Plasmaloesung	61
-2885-2	104279	Protein Serum Plasma	Servoi Pausendauer Prozent	61
-2885-2	104833	Protein Serum Plasma	Apherese Plasma	69
-2885-2	104834	Protein Serum Plasma	Apherese Plasma	69
-2885-2	104846	Protein Serum Plasma	Apherese Plasma	69
-25579-4	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-16517-5	102721	Calcium.ionisiert Serum Plasma . Probenmaterial Stimulation	Calcium	100
-16517-5	102743	Calcium.ionisiert Serum Plasma . Probenmaterial Stimulation	Calcium	100
-16517-5	103054	Calcium.ionisiert Serum Plasma . Probenmaterial Stimulation	Calcium	100
-16517-5	108510	Calcium.ionisiert Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-18870-6	102729	Bacitracin	Citrat	62
-18870-6	103053	Bacitracin	Citrat	62
-42346-7	144	Medikation - Freitext	Medikamente gestellt	62
-42346-7	100008	Medikation - Freitext	Vormedikation	69
-42346-7	102419	Medikation - Freitext	Bedarfsmedikation	61
-42346-7	103750	Medikation - Freitext	Reanimation	60
-42346-7	104403	Medikation - Freitext	Praemedikation	73
-42346-7	105241	Medikation - Freitext	F MedDoku Vormedikation	62
-42346-7	106597	Medikation - Freitext	Vormedikation	69
-25946-5	108510	Lutropin Serum Plasma . International Reference Preparation . Probenmaterial Stimulation	Atmung Stimulation	76
-60463-7	108157	Insulin Antikörper Serum	Insulin ja	82
-60463-7	108158	Insulin Antikörper Serum	Insulin nein	74
-60463-7	108675	Insulin Antikörper Serum	P Antikoerper Mutter	60
-39776-0	104913	Harnstoff Serum Plasma -- Dialyse	Dialyse Zeit	74
-39776-0	110802	Harnstoff Serum Plasma -- Dialyse	P Dialyse Zeit	67
-39776-0	110818	Harnstoff Serum Plasma -- Dialyse	P Dialyse Zeit	67
-43713-7	102699	Albumin Körperflüssigkeit	Dialysierfluessigke	62
-17010-0	104833	Imipenem Serum Plasma	Apherese Plasma	67
-17010-0	104834	Imipenem Serum Plasma	Apherese Plasma	67
-17010-0	104846	Imipenem Serum Plasma	Apherese Plasma	67
-278-2	107861	Imipenem minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-278-2	107864	Imipenem minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-278-2	107867	Imipenem minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-21381-9	108510	Prolaktin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-50442-3	108157	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-50442-3	108158	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-29284-7	102102	Leucin Blut	Blutfluss	60
-29284-7	102976	Leucin Blut	Blutfluss	60
-29284-7	103152	Leucin Blut	Blutfluss	60
-29284-7	103180	Leucin Blut	Blutfluss	60
-29284-7	103220	Leucin Blut	Blutfluss	60
-29284-7	104888	Leucin Blut	Blutfluss	60
-29284-7	104907	Leucin Blut	Blutfluss	60
-29284-7	106339	Leucin Blut	Blutfluss	60
-29284-7	106381	Leucin Blut	Blutfluss	60
-18723-7	101607	Hämatologie	Neurologie	60
-18880-5	102533	Cefixim	CFI	60
-2955-3	102596	Natrium Urin	Natrium	100
-2955-3	102638	Natrium Urin	Mess Natrium	74
-2955-3	102660	Natrium Urin	NatriumProfil	72
-2955-3	102669	Natrium Urin	Mess esNatrium	62
-2955-3	102676	Natrium Urin	Natrium	100
-2955-3	102680	Natrium Urin	NatriumProfil	72
-2955-3	103167	Natrium Urin	MS Natrium	82
-2955-3	103226	Natrium Urin	Natrium	100
-2955-3	103228	Natrium Urin	NatriumProfil	72
-2955-3	103242	Natrium Urin	Natrium	100
-88112-8	103592	Aspartat-Aminotransferase Serum Plasma Zusatz P-5'-P	Zusatz	100
-43897-8	104833	Baclofen Serum Plasma	Apherese Plasma	61
-43897-8	104834	Baclofen Serum Plasma	Apherese Plasma	61
-43897-8	104846	Baclofen Serum Plasma	Apherese Plasma	61
-56614-1	108510	17-Hydroxyprogesteron Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-290-7	107861	Kanamycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-290-7	107864	Kanamycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-290-7	107867	Kanamycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-53517-9	102755	Erythrozyten Dialysat manueller Zählung	Dialysat	100
-53517-9	103043	Erythrozyten Dialysat manueller Zählung	Dialysat	100
-53517-9	103045	Erythrozyten Dialysat manueller Zählung	BM25 Dialysat	76
-53517-9	103123	Erythrozyten Dialysat manueller Zählung	Dialysat	100
-53517-9	103124	Erythrozyten Dialysat manueller Zählung	BM25 Dialysat	76
-53517-9	104978	Erythrozyten Dialysat manueller Zählung	CRRT Dialysat	76
-53517-9	104999	Erythrozyten Dialysat manueller Zählung	CRRT Dialysat	76
-51676-5	108510	17-Hydroxypregnenolon Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-6147-3	108157	Bovines Insulin IgE-Antikörper Serum	Insulin ja	82
-6147-3	108158	Bovines Insulin IgE-Antikörper Serum	Insulin nein	74
-34308-7	108281	Fructose Urin	Fruchtwasser	64
-34308-7	108282	Fructose Urin	Fruchtwasser klar	60
-14142-4	108510	Somatotropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-17864-0	102721	Calcium.ionisiert Serum Plasma ionenselektiver Membranelektrode (ISE)	Calcium	100
-17864-0	102743	Calcium.ionisiert Serum Plasma ionenselektiver Membranelektrode (ISE)	Calcium	100
-17864-0	103054	Calcium.ionisiert Serum Plasma ionenselektiver Membranelektrode (ISE)	Calcium	100
-25674-3	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-33037-3	104833	Anionenlücke Serum Plasma	Apherese Plasma	62
-33037-3	104834	Anionenlücke Serum Plasma	Apherese Plasma	62
-33037-3	104846	Anionenlücke Serum Plasma	Apherese Plasma	62
-17608-1	6	Gewicht -Stunden-Stuhl	Gewicht	100
-17608-1	104258	Gewicht -Stunden-Stuhl	Servoi Gewicht	67
-17608-1	110904	Gewicht -Stunden-Stuhl	P Gewicht	88
-1995-0	102721	Calcium.ionisiert Serum Plasma	Calcium	100
-1995-0	102743	Calcium.ionisiert Serum Plasma	Calcium	100
-1995-0	103054	Calcium.ionisiert Serum Plasma	Calcium	100
-12449-5	108510	Ketone Urin Teststreifen Stunde Stimulation	Atmung Stimulation	76
-27864-8	108510	Follitropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-17461-5	104833	Phosphoserin Serum Plasma	Apherese Plasma	65
-17461-5	104834	Phosphoserin Serum Plasma	Apherese Plasma	65
-17461-5	104846	Phosphoserin Serum Plasma	Apherese Plasma	65
-5848-7	102128	Herpes-simplex-Virus Typ Antigen Haut Immunfluoreszenztest	Kopf Haut	62
-5848-7	102142	Herpes-simplex-Virus Typ Antigen Haut Immunfluoreszenztest	Haut	100
-15185-2	102113	IgM Körperflüssigkeit	Mess PatFluessigkeitRate	60
-132-1	107861	Ceftazidim minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-132-1	107864	Ceftazidim minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-132-1	107867	Ceftazidim minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2937-1	104252	Serin Urin	Servoi Ti	63
-2937-1	104280	Serin Urin	Servoi Ti	63
-56611-7	108510	11-Desoxycorticosteron Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-20654-0	104833	Phosphoserin Serum Plasma	Apherese Plasma	65
-20654-0	104834	Phosphoserin Serum Plasma	Apherese Plasma	65
-20654-0	104846	Phosphoserin Serum Plasma	Apherese Plasma	65
-12901-5	108510	Renin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-386-3	107861	Oxytetracyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-386-3	107864	Oxytetracyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-386-3	107867	Oxytetracyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14407-1	102107	Phosphat Magenflüssigkeit	PatFluessigkeitRate	60
-3542-8	104833	Propoxyphen Serum Plasma	Apherese Plasma	62
-3542-8	104834	Propoxyphen Serum Plasma	Apherese Plasma	62
-3542-8	104846	Propoxyphen Serum Plasma	Apherese Plasma	62
-50501-6	108157	Insulin Serum Plasma . Probenmaterial	Insulin ja	82
-50501-6	108158	Insulin Serum Plasma . Probenmaterial	Insulin nein	74
-15121-7	104833	Lipoprotein.alpha/ -Lipoprotein Serum Plasma	Apherese Plasma	62
-15121-7	104834	Lipoprotein.alpha/ -Lipoprotein Serum Plasma	Apherese Plasma	62
-15121-7	104846	Lipoprotein.alpha/ -Lipoprotein Serum Plasma	Apherese Plasma	62
-40230-5	102721	Calcium Serum Plasma ,5 Stunden Stimulation	Calcium	100
-40230-5	102743	Calcium Serum Plasma ,5 Stunden Stimulation	Calcium	100
-40230-5	103054	Calcium Serum Plasma ,5 Stunden Stimulation	Calcium	100
-40230-5	108510	Calcium Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-15050-8	102107	Creatinin Amnionflüssigkeit	PatFluessigkeitRate	62
-240-2	107861	Ethambutol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-240-2	107864	Ethambutol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-240-2	107867	Ethambutol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-3341-5	104833	Amoxapin Serum Plasma	Apherese Plasma	61
-3341-5	104834	Amoxapin Serum Plasma	Apherese Plasma	61
-3341-5	104846	Amoxapin Serum Plasma	Apherese Plasma	61
-12942-9	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-8716-3	103258	Vitalparameter	ApneaRate	61
-14146-5	108510	Somatotropin Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-2915-7	102581	Renin Plasma	Plasmavolumen	64
-2915-7	102585	Renin Plasma	Plasmarate	73
-2915-7	103063	Renin Plasma	Plasmavolumen	64
-2915-7	103065	Renin Plasma	Plasmavolumen	64
-2915-7	103143	Renin Plasma	Plasmaloesung	64
-2915-7	104833	Renin Plasma	Apherese Plasma	67
-2915-7	104834	Renin Plasma	Apherese Plasma	67
-2915-7	104846	Renin Plasma	Apherese Plasma	67
-27432-4	108510	Glucose Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-515-7	107861	Trimethoprim+Sulfamethoxazol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-515-7	107864	Trimethoprim+Sulfamethoxazol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-515-7	107867	Trimethoprim+Sulfamethoxazol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-346-7	107861	Nafcillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-346-7	107864	Nafcillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-346-7	107867	Nafcillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-330-1	107861	Mezlocillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-330-1	107864	Mezlocillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-330-1	107867	Mezlocillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-314-5	107861	Meclocyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-314-5	107864	Meclocyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-314-5	107867	Meclocyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2045-3	104833	Carnitin Serum Plasma	Apherese Plasma	61
-2045-3	104834	Carnitin Serum Plasma	Apherese Plasma	61
-2045-3	104846	Carnitin Serum Plasma	Apherese Plasma	61
-14332-1	108100	Para-Aminosalicylat minimaler Hemmkonzentration (MHK)	Para	100
-40150-5	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-31985-5	102128	Vesikuläre-Stomatitis-Virus Antigen Haut	Kopf Haut	62
-31985-5	102142	Vesikuläre-Stomatitis-Virus Antigen Haut	Haut	100
-21840-4	5	Geschlecht	Geschlecht	100
-25686-7	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-25686-7	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-25686-7	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-31503-6	108675	Mumps-Virus Antikörper Serum	P Antikoerper Mutter	64
-18722-9	101483	Fertilitätsdiagnostik	Diagnostik	67
-18722-9	103752	Fertilitätsdiagnostik	Diagnostik	67
-7112-6	108675	Musa spp IgG-Antikörper Serum	P Antikoerper Mutter	67
-14890-8	104833	Progesteron Serum Plasma	Apherese Plasma	62
-14890-8	104834	Progesteron Serum Plasma	Apherese Plasma	62
-14890-8	104846	Progesteron Serum Plasma	Apherese Plasma	62
-51501-5	108510	Estradiol (E2) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-7667-9	108675	Rheum spp IgE-Antikörper Serum	P Antikoerper Mutter	61
-57362-6	108510	Lactat Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-72166-2	101007	Raucherstatus	Temperaturstatus	69
-72166-2	102582	Raucherstatus	Austausch	64
-72166-2	102754	Raucherstatus	Austausch	64
-39984-0	108510	Creatinin Urin Stunde Stimulation	Atmung Stimulation	76
-14656-3	104833	Clozapin Serum Plasma	Apherese Plasma	61
-14656-3	104834	Clozapin Serum Plasma	Apherese Plasma	61
-14656-3	104846	Clozapin Serum Plasma	Apherese Plasma	61
-2918-1	102585	Renin Plasma --stehend	Plasmarate	60
-2918-1	104833	Renin Plasma --stehend	Apherese Plasma	63
-2918-1	104834	Renin Plasma --stehend	Apherese Plasma	63
-2918-1	104846	Renin Plasma --stehend	Apherese Plasma	63
-483-8	107861	Teicoplanin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-483-8	107864	Teicoplanin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-483-8	107867	Teicoplanin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-31418-7	108675	Heterophile Antikörper Serum	P Antikoerper Mutter	60
-51622-9	102755	Mesothelzellen/100 Leukozyten Dialysat manueller Zählung	Dialysat	100
-51622-9	103043	Mesothelzellen/100 Leukozyten Dialysat manueller Zählung	Dialysat	100
-51622-9	103045	Mesothelzellen/100 Leukozyten Dialysat manueller Zählung	BM25 Dialysat	76
-51622-9	103123	Mesothelzellen/100 Leukozyten Dialysat manueller Zählung	Dialysat	100
-51622-9	103124	Mesothelzellen/100 Leukozyten Dialysat manueller Zählung	BM25 Dialysat	76
-51622-9	104978	Mesothelzellen/100 Leukozyten Dialysat manueller Zählung	CRRT Dialysat	76
-51622-9	104999	Mesothelzellen/100 Leukozyten Dialysat manueller Zählung	CRRT Dialysat	76
-9469-8	108281	Chrom Wasser	Fruchtwasser	67
-43583-4	104833	LipoproteinSerum Plasma	Apherese Plasma	63
-43583-4	104834	LipoproteinSerum Plasma	Apherese Plasma	63
-43583-4	104846	LipoproteinSerum Plasma	Apherese Plasma	63
-25792-3	108510	Thyroxin (T4) frei Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-5592-1	104833	Benzen Serum Plasma	Apherese Plasma	65
-5592-1	104834	Benzen Serum Plasma	Apherese Plasma	65
-5592-1	104846	Benzen Serum Plasma	Apherese Plasma	65
-26724-5	108103	Sarkosin Urin	konsanguin ja	62
-32023-4	108157	Insulin- WachstumsfaktorBlut	Insulin ja	82
-32023-4	108158	Insulin- WachstumsfaktorBlut	Insulin nein	74
-20639-1	104833	Aspartat Serum Plasma	Apherese Plasma	67
-20639-1	104834	Aspartat Serum Plasma	Apherese Plasma	67
-20639-1	104846	Aspartat Serum Plasma	Apherese Plasma	67
-12947-8	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3354-8	104826	AmphotericinSerum Plasma	Apherese MS PlasmaVolKum	62
-3354-8	104833	AmphotericinSerum Plasma	Apherese Plasma	72
-3354-8	104834	AmphotericinSerum Plasma	Apherese Plasma	72
-3354-8	104846	AmphotericinSerum Plasma	Apherese Plasma	72
-3354-8	104852	AmphotericinSerum Plasma	Apherese Plasmaloesung	61
-3354-8	106400	AmphotericinSerum Plasma	Apherese MS PlasmaVolKum	62
-1903-4	104833	Ascorbat Serum Plasma	Apherese Plasma	61
-1903-4	104834	Ascorbat Serum Plasma	Apherese Plasma	61
-1903-4	104846	Ascorbat Serum Plasma	Apherese Plasma	61
-14288-5	104833	Carnitin Serum Plasma	Apherese Plasma	61
-14288-5	104834	Carnitin Serum Plasma	Apherese Plasma	61
-14288-5	104846	Carnitin Serum Plasma	Apherese Plasma	61
-5763-8	102581	Zink Serum Plasma	Plasmavolumen	60
-5763-8	103063	Zink Serum Plasma	Plasmavolumen	60
-5763-8	103065	Zink Serum Plasma	Plasmavolumen	60
-5763-8	103143	Zink Serum Plasma	Plasmaloesung	60
-33022-5	101423	Kohlenstoffdioxid Kapillarblut transkutanem CO2-Monitoring	CO2	100
-33022-5	101434	Kohlenstoffdioxid Kapillarblut transkutanem CO2-Monitoring	CO2	100
-33022-5	113045	Kohlenstoffdioxid Kapillarblut transkutanem CO2-Monitoring	P EEG Monitoring	77
-50002-5	108510	Wasserstoff/Ausatemluft Exhalat ,5 Stunden Stimulation	Atmung Stimulation	76
-2823-3	103069	Kalium Serum Plasma	ADM Plasmavolumen	61
-2823-3	103085	Kalium Serum Plasma	ADM Plasmavolumen	61
-2823-3	103145	Kalium Serum Plasma	Doku Plasmalösung	63
-2954-6	102596	Natrium Schweiß	Natrium	100
-2954-6	102638	Natrium Schweiß	Mess Natrium	74
-2954-6	102669	Natrium Schweiß	Mess esNatrium	64
-2954-6	102676	Natrium Schweiß	Natrium	100
-2954-6	103167	Natrium Schweiß	MS Natrium	82
-2954-6	103226	Natrium Schweiß	Natrium	100
-2954-6	103242	Natrium Schweiß	Natrium	100
-20948-6	102944	Retinol Gewebe	G5 ProzentMinVol	60
-12817-3	108510	Progesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-91-9	107861	Cefodizim minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-91-9	107864	Cefodizim minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-91-9	107867	Cefodizim minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2481-0	108157	Insulin Antikörper Serum	Insulin ja	82
-2481-0	108158	Insulin Antikörper Serum	Insulin nein	74
-2481-0	108675	Insulin Antikörper Serum	P Antikoerper Mutter	60
-33455-7	107787	Aussehen Sputum	Doku Aussehen Dialysat	70
-5161-5	108675	Erythrozyt Antikörper Serum	P Antikoerper Mutter	61
-54393-4	108510	Glucose Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-25665-1	108510	Glucose Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-188-3	107861	Clarithromycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-188-3	107864	Clarithromycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-188-3	107867	Clarithromycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-15075-5	102106	Glucose Dialysat	Dialysatfluß	74
-15075-5	102114	Glucose Dialysat	Mess Dialysatfluß	69
-15075-5	102631	Glucose Dialysat	Mess Dialysatvolumen	61
-15075-5	102690	Glucose Dialysat	Dialysatloesung	71
-15075-5	102755	Glucose Dialysat	Dialysat	100
-15075-5	102897	Glucose Dialysat	Dialysatfiltrate	62
-15075-5	103042	Glucose Dialysat	Dialysatlösung	69
-15075-5	103043	Glucose Dialysat	Dialysat	100
-15075-5	103045	Glucose Dialysat	BM25 Dialysat	76
-15075-5	103095	Glucose Dialysat	Doku Dialysatlösung	65
-15075-5	103123	Glucose Dialysat	Dialysat	100
-15075-5	103124	Glucose Dialysat	BM25 Dialysat	76
-15075-5	104978	Glucose Dialysat	CRRT Dialysat	76
-15075-5	104999	Glucose Dialysat	CRRT Dialysat	76
-15075-5	105009	Glucose Dialysat	CRRT Dialysatloesung	61
-15075-5	107787	Glucose Dialysat	Doku Aussehen Dialysat	67
-15075-5	107790	Glucose Dialysat	Doku Dialysat1	67
-15075-5	107791	Glucose Dialysat	Doku Dialysat2	67
-15075-5	107802	Glucose Dialysat	Dialysat1	64
-15075-5	107803	Glucose Dialysat	Dialysat2	64
-2956-1	102596	Natrium -Stunden-Urin	Natrium	100
-2956-1	102638	Natrium -Stunden-Urin	Mess Natrium	74
-2956-1	102676	Natrium -Stunden-Urin	Natrium	100
-2956-1	103167	Natrium -Stunden-Urin	MS Natrium	82
-2956-1	103226	Natrium -Stunden-Urin	Natrium	100
-2956-1	103242	Natrium -Stunden-Urin	Natrium	100
-326-9	107861	Metronidazol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-326-9	107864	Metronidazol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-326-9	107867	Metronidazol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-47275-3	102721	S100 Calcium-bindendes ProteinSerum	Calcium	100
-47275-3	102743	S100 Calcium-bindendes ProteinSerum	Calcium	100
-47275-3	103054	S100 Calcium-bindendes ProteinSerum	Calcium	100
-2472-9	103069	IgM Serum Plasma	ADM Plasmavolumen	61
-2472-9	103085	IgM Serum Plasma	ADM Plasmavolumen	61
-2110-5	106665	Choriongonadotropin.beta-Untereinheit (Schwangerschaftstest) Serum Plasma	Schwangerschaftstest durchgefuehrt	74
-2705-2	100808	Sauerstoff venösem Blut	Sauerstoff	100
-2705-2	101481	Sauerstoff venösem Blut	Sauerstoff	100
-2705-2	102942	Sauerstoff venösem Blut	G5 Sauerstoff	87
-2705-2	104804	Sauerstoff venösem Blut	MS C2 Sauerstoff	77
-2705-2	104808	Sauerstoff venösem Blut	C2 Sauerstoff	87
-2705-2	105103	Sauerstoff venösem Blut	Sauerstoff RespirationBarValue	62
-2705-2	106641	Sauerstoff venösem Blut	T1 Sauerstoff	87
-2705-2	107811	Sauerstoff venösem Blut	Sauerstoff	100
-2705-2	107980	Sauerstoff venösem Blut	P C3 Sauerstoff	80
-2705-2	108012	Sauerstoff venösem Blut	P MS C3 Sauerstoff	71
-2705-2	110866	Sauerstoff venösem Blut	Heimbeatmung Sauerstoff	62
-25569-5	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-17486-2	108510	Progesteron Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-27088-4	101383	Folat Blut	BlutflussMax	64
-27088-4	102102	Folat Blut	Blutfluss	63
-27088-4	102496	Folat Blut	BlutflussMax	64
-27088-4	102499	Folat Blut	BlutflussMax	64
-27088-4	102937	Folat Blut	BlutflussMax	64
-27088-4	102976	Folat Blut	Blutfluss	63
-27088-4	103152	Folat Blut	Blutfluss	63
-27088-4	103180	Folat Blut	Blutfluss	63
-27088-4	103220	Folat Blut	Blutfluss	63
-27088-4	103238	Folat Blut	BlutflussMax	64
-27088-4	104888	Folat Blut	Blutfluss	63
-27088-4	104907	Folat Blut	Blutfluss	63
-27088-4	104930	Folat Blut	BlutflussMax	64
-27088-4	104943	Folat Blut	Blutfluss Max	61
-27088-4	106339	Folat Blut	Blutfluss	63
-27088-4	106381	Folat Blut	Blutfluss	63
-23557-2	102128	Vesikuläre-Stomatitis-Virus Antigen Haut Immunoassay	Kopf Haut	62
-23557-2	102142	Vesikuläre-Stomatitis-Virus Antigen Haut Immunoassay	Haut	100
-9425-0	108243	Aceton Blut	Geburt an	60
-32246-1	102699	Histidin Körperflüssigkeit	Dialysierfluessigke	60
-32326-1	108510	Lutropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-25679-2	108510	Glucose Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-27883-8	108510	Lutropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-40083-8	102721	Calcium Serum Plasma Tag Stimulation	Calcium	100
-40083-8	102743	Calcium Serum Plasma Tag Stimulation	Calcium	100
-40083-8	103054	Calcium Serum Plasma Tag Stimulation	Calcium	100
-40083-8	108510	Calcium Serum Plasma Tag Stimulation	Atmung Stimulation	76
-20865-2	102140	Jod Leber	Abdomen Leber	71
-22741-3	110914	Serin Probenmaterial	Servoi Pkontrol	63
-3432-2	104833	Carbamazepin Serum Plasma	Apherese Plasma	60
-3432-2	104834	Carbamazepin Serum Plasma	Apherese Plasma	60
-3432-2	104846	Carbamazepin Serum Plasma	Apherese Plasma	60
-25656-0	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-8013-5	108675	Röteln-Virus Antikörper Serum	P Antikoerper Mutter	60
-1524-8	108157	Glucose Serum Plasma Minuten ,1 U/kg Insulin	Insulin ja	82
-1524-8	108158	Glucose Serum Plasma Minuten ,1 U/kg Insulin	Insulin nein	74
-43223-7	102596	Natrium/Creatinin Urin	Natrium	100
-43223-7	102638	Natrium/Creatinin Urin	Mess Natrium	74
-43223-7	102676	Natrium/Creatinin Urin	Natrium	100
-43223-7	103167	Natrium/Creatinin Urin	MS Natrium	82
-43223-7	103226	Natrium/Creatinin Urin	Natrium	100
-43223-7	103242	Natrium/Creatinin Urin	Natrium	100
-32374-1	104791	Cefotiam	MS C2 fTotal	60
-33882-2	104329	Probennahme-Datum Probenmaterials	Datum	100
-18972-0	100800	Polymyxin	O2Lmin	67
-18972-0	101443	Polymyxin	Pmin	62
-25575-2	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2387-9	104833	Glycerol Serum Plasma	Apherese Plasma	61
-2387-9	104834	Glycerol Serum Plasma	Apherese Plasma	61
-2387-9	104846	Glycerol Serum Plasma	Apherese Plasma	61
-4484-2	104816	Komplement C2 Serum Plasma	C2	100
-4484-2	104822	Komplement C2 Serum Plasma	C2	100
-4484-2	104823	Komplement C2 Serum Plasma	C2	100
-4484-2	106283	Komplement C2 Serum Plasma	C2	100
-73561-3	108157	Insulin- WachstumsfaktorSerum Plasma	Insulin ja	82
-73561-3	108158	Insulin- WachstumsfaktorSerum Plasma	Insulin nein	74
-16906-0	108510	Glucose Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-25690-9	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-25690-9	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-25690-9	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-17484-7	108510	Progesteron Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-1424-1	108157	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-1424-1	108158	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-34938-1	102114	Phosphat Dialysat	Mess Dialysatfluß	61
-34938-1	102690	Phosphat Dialysat	Dialysatloesung	62
-34938-1	102755	Phosphat Dialysat	Dialysat	100
-34938-1	102897	Phosphat Dialysat	Dialysatfiltrate	61
-34938-1	103042	Phosphat Dialysat	Dialysatlösung	60
-34938-1	103043	Phosphat Dialysat	Dialysat	100
-34938-1	103045	Phosphat Dialysat	BM25 Dialysat	76
-34938-1	103123	Phosphat Dialysat	Dialysat	100
-34938-1	103124	Phosphat Dialysat	BM25 Dialysat	76
-34938-1	104978	Phosphat Dialysat	CRRT Dialysat	76
-34938-1	104999	Phosphat Dialysat	CRRT Dialysat	76
-34938-1	107787	Phosphat Dialysat	Doku Aussehen Dialysat	64
-34938-1	107790	Phosphat Dialysat	Doku Dialysat1	65
-34938-1	107791	Phosphat Dialysat	Doku Dialysat2	65
-34938-1	107802	Phosphat Dialysat	Dialysat1	62
-34938-1	107803	Phosphat Dialysat	Dialysat2	62
-56578-8	108510	Aldosteron Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-25760-0	108157	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-25760-0	108158	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-25760-0	108510	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-34157-8	103707	Antikörper Serum Plasma	Antikoerper	61
-34157-8	104679	Antikörper Serum Plasma	Antikoerper	61
-34157-8	104833	Antikörper Serum Plasma	Apherese Plasma	70
-34157-8	104834	Antikörper Serum Plasma	Apherese Plasma	70
-34157-8	104846	Antikörper Serum Plasma	Apherese Plasma	70
-34157-8	108675	Antikörper Serum Plasma	P Antikoerper Mutter	62
-52753-1	100203	Prothrombinzeit (PT) PIVKA insensitiv /normal thrombozytenarmem Plasma Gerinnungstest	PT	100
-52753-1	100676	Prothrombinzeit (PT) PIVKA insensitiv /normal thrombozytenarmem Plasma Gerinnungstest	PT	100
-55805-6	103433	Cyclosporin Blut LC/MS/MS	MS i	67
-55805-6	107839	Cyclosporin Blut LC/MS/MS	MS i	67
-55805-6	110780	Cyclosporin Blut LC/MS/MS	P MS	67
-12718-3	108510	17-Hydroxyprogesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-51497-6	108510	Estradiol (E2) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-56593-7	108510	Follitropin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-2884-5	104324	Protein Sperma	Prothese	64
-2884-5	104332	Protein Sperma	Prothese	64
-2884-5	105092	Protein Sperma	Prothese	64
-2884-5	105095	Protein Sperma	Prothese	64
-12831-4	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-54267-0	108157	Glucose Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin ja	82
-54267-0	108158	Glucose Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin nein	74
-91560-3	104329	Datum Abreise Reiseziel	Datum	100
-91560-3	104847	Datum Abreise Reiseziel	Apherese Spuel Dauer	60
-57364-2	108510	Lactat Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-29293-8	102102	Leucin Blut	Blutfluss	60
-29293-8	102976	Leucin Blut	Blutfluss	60
-29293-8	103152	Leucin Blut	Blutfluss	60
-29293-8	103180	Leucin Blut	Blutfluss	60
-29293-8	103220	Leucin Blut	Blutfluss	60
-29293-8	104888	Leucin Blut	Blutfluss	60
-29293-8	104907	Leucin Blut	Blutfluss	60
-29293-8	106339	Leucin Blut	Blutfluss	60
-29293-8	106381	Leucin Blut	Blutfluss	60
-13896-6	108157	Insulin- WachstumsfaktorBlut	Insulin ja	82
-13896-6	108158	Insulin- WachstumsfaktorBlut	Insulin nein	74
-5748-9	102581	Zinn Serum Plasma	Plasmavolumen	60
-5748-9	103063	Zinn Serum Plasma	Plasmavolumen	60
-5748-9	103065	Zinn Serum Plasma	Plasmavolumen	60
-5748-9	103143	Zinn Serum Plasma	Plasmaloesung	60
-2453-9	103692	Hypoxanthin Serum	Hypothermie	64
-53519-5	102755	Monozyten/100 Leukozyten Dialysat	Dialysat	100
-53519-5	103043	Monozyten/100 Leukozyten Dialysat	Dialysat	100
-53519-5	103045	Monozyten/100 Leukozyten Dialysat	BM25 Dialysat	76
-53519-5	103123	Monozyten/100 Leukozyten Dialysat	Dialysat	100
-53519-5	103124	Monozyten/100 Leukozyten Dialysat	BM25 Dialysat	76
-53519-5	104978	Monozyten/100 Leukozyten Dialysat	CRRT Dialysat	76
-53519-5	104999	Monozyten/100 Leukozyten Dialysat	CRRT Dialysat	76
-25323-7	104826	Arsen Serum Plasma	Apherese MS PlasmaVolKum	62
-25323-7	104833	Arsen Serum Plasma	Apherese Plasma	73
-25323-7	104834	Arsen Serum Plasma	Apherese Plasma	73
-25323-7	104846	Arsen Serum Plasma	Apherese Plasma	73
-25323-7	104852	Arsen Serum Plasma	Apherese Plasmaloesung	65
-25323-7	106400	Arsen Serum Plasma	Apherese MS PlasmaVolKum	62
-21112-8	4	Geburtsdatum	Geburtsdatum	100
-21112-8	14	Geburtsdatum	Geburtsgewicht	62
-21112-8	108151	Geburtsdatum	Mutter Geburtsdatum	100
-21112-8	108277	Geburtsdatum	Geburtslage text	64
-21112-8	110769	Geburtsdatum	Geburtslage	70
-73589-4	103750	Rifaximin	Reanimation	60
-32240-4	108281	Fructose Urin	Fruchtwasser	64
-32240-4	108282	Fructose Urin	Fruchtwasser klar	60
-56979-8	102596	Natrium Speichel	Natrium	100
-56979-8	102638	Natrium Speichel	Mess Natrium	74
-56979-8	102660	Natrium Speichel	NatriumProfil	69
-56979-8	102669	Natrium Speichel	Mess esNatrium	60
-56979-8	102676	Natrium Speichel	Natrium	100
-56979-8	102680	Natrium Speichel	NatriumProfil	69
-56979-8	103167	Natrium Speichel	MS Natrium	82
-56979-8	103226	Natrium Speichel	Natrium	100
-56979-8	103228	Natrium Speichel	NatriumProfil	69
-56979-8	103242	Natrium Speichel	Natrium	100
-33819-4	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33819-4	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33819-4	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12757-1	108157	Insulin Serum Plasma Minuten Stimulation	Insulin ja	82
-12757-1	108158	Insulin Serum Plasma Minuten Stimulation	Insulin nein	74
-12757-1	108510	Insulin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-80391-6	670	Pflegegrad	Pflege	75
-80391-6	100199	Pflegegrad	Pflege	75
-80391-6	104340	Pflegegrad	Pflegekraft	76
-40431-9	104751	Osmotische Resistenz Erythrozyten aus Kontrolle --frisch	Kontrolle Laufraten	64
-57668-6	108157	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma Minuten Stimulation	Insulin ja	82
-57668-6	108158	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma Minuten Stimulation	Insulin nein	74
-57668-6	108510	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-382-2	107861	Oxacillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-382-2	107864	Oxacillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-382-2	107867	Oxacillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-40129-9	108510	Creatinin Urin -- Stimulation	Atmung Stimulation	76
-11065-0	104913	Harnstoff-Stickstoff Serum Plasma -- Dialyse	Dialyse Zeit	74
-11065-0	110802	Harnstoff-Stickstoff Serum Plasma -- Dialyse	P Dialyse Zeit	67
-11065-0	110818	Harnstoff-Stickstoff Serum Plasma -- Dialyse	P Dialyse Zeit	67
-40151-3	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-1761-6	104833	Aldolase Serum Plasma	Apherese Plasma	61
-1761-6	104834	Aldolase Serum Plasma	Apherese Plasma	61
-1761-6	104846	Aldolase Serum Plasma	Apherese Plasma	61
-39564-0	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-27873-9	108157	Insulin Serum Plasma -- Nahrungskarenz	Insulin ja	82
-27873-9	108158	Insulin Serum Plasma -- Nahrungskarenz	Insulin nein	74
-1627-9	108157	Somatotropin Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin ja	82
-1627-9	108158	Somatotropin Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin nein	74
-50721-0	108510	11-Desoxycortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12639-1	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-310-3	107861	Lymecyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-310-3	107864	Lymecyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-310-3	107867	Lymecyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14864-3	100808	Sauerstoff Nabelschnurblut	Sauerstoff	100
-14864-3	101481	Sauerstoff Nabelschnurblut	Sauerstoff	100
-14864-3	102942	Sauerstoff Nabelschnurblut	G5 Sauerstoff	87
-14864-3	104804	Sauerstoff Nabelschnurblut	MS C2 Sauerstoff	77
-14864-3	104808	Sauerstoff Nabelschnurblut	C2 Sauerstoff	87
-14864-3	105103	Sauerstoff Nabelschnurblut	Sauerstoff RespirationBarValue	61
-14864-3	106641	Sauerstoff Nabelschnurblut	T1 Sauerstoff	87
-14864-3	107811	Sauerstoff Nabelschnurblut	Sauerstoff	100
-14864-3	107980	Sauerstoff Nabelschnurblut	P C3 Sauerstoff	80
-14864-3	108012	Sauerstoff Nabelschnurblut	P MS C3 Sauerstoff	71
-14864-3	110866	Sauerstoff Nabelschnurblut	Heimbeatmung Sauerstoff	61
-9822-8	102755	Bakterien identifiziert Dialysat Kultur	Dialysat	100
-9822-8	103043	Bakterien identifiziert Dialysat Kultur	Dialysat	100
-9822-8	103045	Bakterien identifiziert Dialysat Kultur	BM25 Dialysat	76
-9822-8	103123	Bakterien identifiziert Dialysat Kultur	Dialysat	100
-9822-8	103124	Bakterien identifiziert Dialysat Kultur	BM25 Dialysat	76
-9822-8	104978	Bakterien identifiziert Dialysat Kultur	CRRT Dialysat	76
-9822-8	104999	Bakterien identifiziert Dialysat Kultur	CRRT Dialysat	76
-33951-5	102596	Natrium/Creatinin Urin	Natrium	100
-33951-5	102638	Natrium/Creatinin Urin	Mess Natrium	74
-33951-5	102676	Natrium/Creatinin Urin	Natrium	100
-33951-5	103167	Natrium/Creatinin Urin	MS Natrium	82
-33951-5	103226	Natrium/Creatinin Urin	Natrium	100
-33951-5	103242	Natrium/Creatinin Urin	Natrium	100
-12934-6	108510	Thyreotropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-12462-8	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-66746-9	104272	Probenmaterial-Typ	Servoi Tpause Prozent	62
-24461-6	104833	Fettsäuren Serum Plasma	Apherese Plasma	65
-24461-6	104834	Fettsäuren Serum Plasma	Apherese Plasma	65
-24461-6	104846	Fettsäuren Serum Plasma	Apherese Plasma	65
-5853-7	102128	Herpes-simplex-Virus Antigen Haut Immunfluoreszenztest	Kopf Haut	62
-5853-7	102142	Herpes-simplex-Virus Antigen Haut Immunfluoreszenztest	Haut	100
-47181-3	108510	Progesteron Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-25943-2	108510	Lutropin Serum Plasma . International Reference Preparation . Probenmaterial Stimulation	Atmung Stimulation	76
-29396-9	108510	Gastrin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-499-4	107861	Ticarcillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-499-4	107864	Ticarcillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-499-4	107867	Ticarcillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-3178-1	102503	Blutungszeit Duke-Methode	Dokumentation BlutflussEinst	60
-18974-6	101461	Rifampicin	Familienst	60
-18974-6	105026	Rifampicin	V RapidPacing	61
-40356-8	102755	Creatinin -Stunden-Dialysat	Dialysat	100
-40356-8	103043	Creatinin -Stunden-Dialysat	Dialysat	100
-40356-8	103045	Creatinin -Stunden-Dialysat	BM25 Dialysat	76
-40356-8	103123	Creatinin -Stunden-Dialysat	Dialysat	100
-40356-8	103124	Creatinin -Stunden-Dialysat	BM25 Dialysat	76
-40356-8	104978	Creatinin -Stunden-Dialysat	CRRT Dialysat	76
-40356-8	104988	Creatinin -Stunden-Dialysat	CRRT Doku Dialysatloesung	63
-40356-8	104999	Creatinin -Stunden-Dialysat	CRRT Dialysat	76
-40356-8	105009	Creatinin -Stunden-Dialysat	CRRT Dialysatloesung	65
-12945-2	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-75940-7	101383	Kalium Blut	BlutflussMax	61
-75940-7	102102	Kalium Blut	Blutfluss	60
-75940-7	102496	Kalium Blut	BlutflussMax	61
-75940-7	102499	Kalium Blut	BlutflussMax	61
-75940-7	102937	Kalium Blut	BlutflussMax	61
-75940-7	102976	Kalium Blut	Blutfluss	60
-75940-7	103152	Kalium Blut	Blutfluss	60
-75940-7	103180	Kalium Blut	Blutfluss	60
-75940-7	103220	Kalium Blut	Blutfluss	60
-75940-7	103238	Kalium Blut	BlutflussMax	61
-75940-7	103335	Kalium Blut	ZielKalium	67
-75940-7	104888	Kalium Blut	Blutfluss	60
-75940-7	104907	Kalium Blut	Blutfluss	60
-75940-7	104930	Kalium Blut	BlutflussMax	61
-75940-7	106332	Kalium Blut	MS Blutfluss	61
-75940-7	106339	Kalium Blut	Blutfluss	60
-75940-7	106378	Kalium Blut	MS Blutfluss	61
-75940-7	106381	Kalium Blut	Blutfluss	60
-1863-0	104833	Anionenlücke Serum Plasma	Apherese Plasma	62
-1863-0	104834	Anionenlücke Serum Plasma	Apherese Plasma	62
-1863-0	104846	Anionenlücke Serum Plasma	Apherese Plasma	62
-3579-0	103145	Doxepin Serum Plasma	Doku Plasmalösung	61
-18868-0	117170	Aztreonam	Datennahme	63
-33928-3	104833	Efavirenz Serum Plasma	Apherese Plasma	65
-33928-3	104834	Efavirenz Serum Plasma	Apherese Plasma	65
-33928-3	104846	Efavirenz Serum Plasma	Apherese Plasma	65
-18234-5	108157	Insulin Substanz	Insulin ja	82
-18234-5	108158	Insulin Substanz	Insulin nein	74
-33771-7	103707	Pl-12 Antikörper Serum	Antikoerper	62
-33771-7	104679	Pl-12 Antikörper Serum	Antikoerper	62
-47596-2	102721	Calcium.ionisiert Blut ionenselektiver Membranelektrode (ISE)	Calcium	100
-47596-2	102743	Calcium.ionisiert Blut ionenselektiver Membranelektrode (ISE)	Calcium	100
-47596-2	103054	Calcium.ionisiert Blut ionenselektiver Membranelektrode (ISE)	Calcium	100
-18219-6	108510	Adrenalin Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-3827-3	104833	Morphium Serum Plasma	Apherese Plasma	61
-3827-3	104834	Morphium Serum Plasma	Apherese Plasma	61
-3827-3	104846	Morphium Serum Plasma	Apherese Plasma	61
-25736-0	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-25447-4	108157	Insulin frei Serum Plasma	Insulin ja	82
-25447-4	108158	Insulin frei Serum Plasma	Insulin nein	74
-54024-5	108675	SP100 Antikörper Serum	P Antikoerper Mutter	68
-100059-5	103598	Rifapentin	Infektion	63
-2756-5	102038	pH Urin	p-SVRI	62
-204-8	107861	Colistin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-204-8	107864	Colistin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-204-8	107867	Colistin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-5734-9	104833	Silber Serum Plasma	Apherese Plasma	65
-5734-9	104834	Silber Serum Plasma	Apherese Plasma	65
-5734-9	104846	Silber Serum Plasma	Apherese Plasma	65
-17085-2	104833	Lipoproteine Serum Plasma	Apherese Plasma	60
-17085-2	104834	Lipoproteine Serum Plasma	Apherese Plasma	60
-17085-2	104846	Lipoproteine Serum Plasma	Apherese Plasma	60
-86502-2	100999	Varicella-Zoster-Virus-Stamm DNA Probenmaterial Nukleinsäureamplifikation Sondendetektion	Stamm	100
-51492-7	108510	Cortisol Speichel . Probenmaterial Stimulation	Atmung Stimulation	76
-30930-2	106365	Zink Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30930-2	106366	Zink Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30930-2	110899	Zink Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-30930-2	110900	Zink Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-8289-1	11	Kopfumfang okzipital-frontal Perzentil	Kopfumfang	100
-8289-1	101763	Kopfumfang okzipital-frontal Perzentil	Kopfumfang	100
-8289-1	108252	Kopfumfang okzipital-frontal Perzentil	Kopfumfang	100
-8289-1	108502	Kopfumfang okzipital-frontal Perzentil	Kopfumfang bit	83
-19994-3	100808	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	Sauerstoff	100
-19994-3	101481	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	Sauerstoff	100
-19994-3	102942	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	G5 Sauerstoff	87
-19994-3	104804	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	MS C2 Sauerstoff	77
-19994-3	104808	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	C2 Sauerstoff	87
-19994-3	106641	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	T1 Sauerstoff	87
-19994-3	107811	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	Sauerstoff	100
-19994-3	107980	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	P C3 Sauerstoff	80
-19994-3	108012	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	P MS C3 Sauerstoff	71
-19994-3	110866	Sauerstoff/Gesamtgas-Einstellung Beatmungsgeräts	Heimbeatmung Sauerstoff	61
-53432-1	102755	Gamma-Glutamyl-Transferase Dialysat	Dialysat	100
-53432-1	103043	Gamma-Glutamyl-Transferase Dialysat	Dialysat	100
-53432-1	103045	Gamma-Glutamyl-Transferase Dialysat	BM25 Dialysat	76
-53432-1	103123	Gamma-Glutamyl-Transferase Dialysat	Dialysat	100
-53432-1	103124	Gamma-Glutamyl-Transferase Dialysat	BM25 Dialysat	76
-53432-1	104978	Gamma-Glutamyl-Transferase Dialysat	CRRT Dialysat	76
-53432-1	104999	Gamma-Glutamyl-Transferase Dialysat	CRRT Dialysat	76
-3968-5	104833	Phenytoin Serum Plasma	Apherese Plasma	65
-3968-5	104834	Phenytoin Serum Plasma	Apherese Plasma	65
-3968-5	104846	Phenytoin Serum Plasma	Apherese Plasma	65
-18912-6	100261	Colistin	Leistung	62
-18912-6	100294	Colistin	Leistung	62
-18912-6	103212	Colistin	Leistung	62
-14772-8	103145	Gold Serum Plasma	Doku Plasmalösung	61
-25506-7	101389	Kalium Stuhl	KaliumZiel	64
-25506-7	102481	Kalium Stuhl	KaliumZiel	64
-25506-7	102482	Kalium Stuhl	KaliumZiel	64
-21582-2	104273	Tryptase Serum Plasma	Servoi Tpause s	61
-21582-2	104833	Tryptase Serum Plasma	Apherese Plasma	61
-21582-2	104834	Tryptase Serum Plasma	Apherese Plasma	61
-21582-2	104846	Tryptase Serum Plasma	Apherese Plasma	61
-11572-5	104833	Rheumafaktor Serum Plasma	Apherese Plasma	60
-11572-5	104834	Rheumafaktor Serum Plasma	Apherese Plasma	60
-11572-5	104846	Rheumafaktor Serum Plasma	Apherese Plasma	60
-21612-7	6	- Berichtet	Gewicht	62
-21612-7	105031	- Berichtet	Betriebsart	60
-21612-7	105035	- Berichtet	Betriebsart	60
-21612-7	106739	- Berichtet	CO Bericht	74
-495-2	107861	Tetracyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-495-2	107864	Tetracyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-495-2	107867	Tetracyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-32187-7	102128	Mikroskopische Beobachtung Haut Tzanck-Abstrich	Kopf Haut	62
-32187-7	102142	Mikroskopische Beobachtung Haut Tzanck-Abstrich	Haut	100
-2827-4	101389	Kalium Schweiß	KaliumZiel	61
-2827-4	102481	Kalium Schweiß	KaliumZiel	61
-2827-4	102482	Kalium Schweiß	KaliumZiel	61
-35083-5	104833	Aminosäuren ( ) - Serum Plasma	Apherese Plasma	63
-35083-5	104834	Aminosäuren ( ) - Serum Plasma	Apherese Plasma	63
-35083-5	104846	Aminosäuren ( ) - Serum Plasma	Apherese Plasma	63
-39980-8	108510	Creatinin Urin Stunde Stimulation	Atmung Stimulation	76
-10985-0	104833	Doxapram Serum Plasma	Apherese Plasma	67
-10985-0	104834	Doxapram Serum Plasma	Apherese Plasma	67
-10985-0	104846	Doxapram Serum Plasma	Apherese Plasma	67
-34705-4	102158	Kohlenstoffdioxid Körpertemperatur Blut	Koerpertemperatur	62
-27037-1	102721	Calcium/Creatinin -Stunden-Urin	Calcium	100
-27037-1	102743	Calcium/Creatinin -Stunden-Urin	Calcium	100
-27037-1	103054	Calcium/Creatinin -Stunden-Urin	Calcium	100
-29576-6	100079	Bakterielle Empfindlichkeit ( )	SM Empfindlichkeit	91
-29576-6	103383	Bakterielle Empfindlichkeit ( )	Eins Empfindlichkeit	86
-29576-6	103388	Bakterielle Empfindlichkeit ( )	Empfindlichkeit	100
-29576-6	103393	Bakterielle Empfindlichkeit ( )	EmpfindlichkeitA	70
-29576-6	103394	Bakterielle Empfindlichkeit ( )	EmpfindlichkeitV	70
-29576-6	103398	Bakterielle Empfindlichkeit ( )	Siemens Empfindlichkeit	79
-29576-6	103400	Bakterielle Empfindlichkeit ( )	Defi Empfindlichkeit	86
-18351-7	108510	11-Desoxycortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12744-9	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-12744-9	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-12744-9	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12463-6	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-57828-6	102378	Verschreibungen	Verletzungen	67
-57828-6	110841	Verschreibungen	P CoughAssist Verschreibung	62
-48497-2	104833	Pro-Hepcidin Serum Plasma	Apherese Plasma	60
-48497-2	104834	Pro-Hepcidin Serum Plasma	Apherese Plasma	60
-48497-2	104846	Pro-Hepcidin Serum Plasma	Apherese Plasma	60
-16666-0	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-30921-1	106365	Quecksilber Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30921-1	106366	Quecksilber Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30921-1	110899	Quecksilber Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-30921-1	110900	Quecksilber Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-12286-1	144	Medikamente identifiziert Urin Screening	Medikamente gestellt	71
-29747-3	104833	Tocopherole Serum Plasma	Apherese Plasma	62
-29747-3	104834	Tocopherole Serum Plasma	Apherese Plasma	62
-29747-3	104846	Tocopherole Serum Plasma	Apherese Plasma	62
-26619-7	108675	Campylobacter Antikörper Serum	P Antikoerper Mutter	61
-27218-7	108158	Chinin Urin	Insulin nein	61
-25216-3	108100	Para-Aminosalicylat /mL Methode langsam wachsende Mykobakterien	Para	100
-63-8	107861	Cefadroxil minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-63-8	107864	Cefadroxil minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-63-8	107867	Cefadroxil minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-6901-3	108157	Insulin frei Serum Plasma	Insulin ja	82
-6901-3	108158	Insulin frei Serum Plasma	Insulin nein	74
-2504-9	104253	Eisen Urin	Servoi I E	60
-2504-9	104274	Eisen Urin	Servoi I E	60
-2343-2	102106	Glucose Dialysat	Dialysatfluß	74
-2343-2	102114	Glucose Dialysat	Mess Dialysatfluß	69
-2343-2	102631	Glucose Dialysat	Mess Dialysatvolumen	61
-2343-2	102690	Glucose Dialysat	Dialysatloesung	71
-2343-2	102755	Glucose Dialysat	Dialysat	100
-2343-2	102897	Glucose Dialysat	Dialysatfiltrate	62
-2343-2	103042	Glucose Dialysat	Dialysatlösung	69
-2343-2	103043	Glucose Dialysat	Dialysat	100
-2343-2	103045	Glucose Dialysat	BM25 Dialysat	76
-2343-2	103095	Glucose Dialysat	Doku Dialysatlösung	65
-2343-2	103123	Glucose Dialysat	Dialysat	100
-2343-2	103124	Glucose Dialysat	BM25 Dialysat	76
-2343-2	104978	Glucose Dialysat	CRRT Dialysat	76
-2343-2	104999	Glucose Dialysat	CRRT Dialysat	76
-2343-2	105009	Glucose Dialysat	CRRT Dialysatloesung	61
-2343-2	107787	Glucose Dialysat	Doku Aussehen Dialysat	67
-2343-2	107790	Glucose Dialysat	Doku Dialysat1	67
-2343-2	107791	Glucose Dialysat	Doku Dialysat2	67
-2343-2	107802	Glucose Dialysat	Dialysat1	64
-2343-2	107803	Glucose Dialysat	Dialysat2	64
-3033-8	102509	Transcortin Serum	Transport	62
-5644-0	30	Ethanol Urin	Behandlung	64
-11348-0	106521	Anamnese früherer Krankheiten - Freitext	Anamnese Nein	76
-11348-0	106522	Anamnese früherer Krankheiten - Freitext	Anamnese Ja	84
-11348-0	106649	Anamnese früherer Krankheiten - Freitext	Anamnese	100
-56605-9	108510	11-Desoxycorticosteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2098-2	104833	Cholinesterase Serum Plasma	Apherese Plasma	62
-2098-2	104834	Cholinesterase Serum Plasma	Apherese Plasma	62
-2098-2	104846	Cholinesterase Serum Plasma	Apherese Plasma	62
-11041-1	104913	Creatinin Serum Plasma -- Dialyse	Dialyse Zeit	74
-11041-1	110802	Creatinin Serum Plasma -- Dialyse	P Dialyse Zeit	67
-11041-1	110818	Creatinin Serum Plasma -- Dialyse	P Dialyse Zeit	67
-12637-5	108510	Glucose Peritonealdialysat . Probenmaterial Stimulation	Atmung Stimulation	76
-30300-8	1278	Didanosin	Diagnose	71
-30300-8	101483	Didanosin	Diagnostik	74
-30300-8	102094	Didanosin	ILAAnalogIn	60
-30300-8	102377	Didanosin	ICUDiagnosen	67
-30300-8	103752	Didanosin	Diagnostik	74
-439-0	107861	Rosoxacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-439-0	107864	Rosoxacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-439-0	107867	Rosoxacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-29999-0	104833	Xylose Serum Plasma	Apherese Plasma	65
-29999-0	104834	Xylose Serum Plasma	Apherese Plasma	65
-29999-0	104846	Xylose Serum Plasma	Apherese Plasma	65
-79607-8	104833	Saccharopin Serum Plasma	Apherese Plasma	62
-79607-8	104834	Saccharopin Serum Plasma	Apherese Plasma	62
-79607-8	104846	Saccharopin Serum Plasma	Apherese Plasma	62
-70867-7	100999	Rabies-Virus-Stamm identifiziert Probenmaterial Sequenzierung	Stamm	100
-46403-2	108157	Cortisol Serum Plasma Stunden Dosis Insulin intravenös	Insulin ja	82
-46403-2	108158	Cortisol Serum Plasma Stunden Dosis Insulin intravenös	Insulin nein	74
-395-4	107861	Penicillinminimaler letaler Konzentration (MLK)	O2 Konzentration	90
-395-4	107864	Penicillinminimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-395-4	107867	Penicillinminimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14875-9	104833	Phenylalanin Serum Plasma	Apherese Plasma	60
-14875-9	104834	Phenylalanin Serum Plasma	Apherese Plasma	60
-14875-9	104846	Phenylalanin Serum Plasma	Apherese Plasma	60
-8302-2	100085	Körpergröße	Pacergeräte	67
-8302-2	100356	Körpergröße	Koerperpflege	67
-43578-4	107985	Komplement C3 Peritonealflüssigkeit	P C3	67
-43578-4	107992	Komplement C3 Peritonealflüssigkeit	P C3	67
-43578-4	108010	Komplement C3 Peritonealflüssigkeit	P C3	67
-43578-4	110828	Komplement C3 Peritonealflüssigkeit	P C3	67
-43578-4	110831	Komplement C3 Peritonealflüssigkeit	P C3	67
-17560-4	102107	Salicylate Magenflüssigkeit	PatFluessigkeitRate	62
-17560-4	102113	Salicylate Magenflüssigkeit	Mess PatFluessigkeitRate	60
-40747-8	104816	Komplement C2 Serum Plasma	C2	100
-40747-8	104822	Komplement C2 Serum Plasma	C2	100
-40747-8	104823	Komplement C2 Serum Plasma	C2	100
-40747-8	106283	Komplement C2 Serum Plasma	C2	100
-34133-9	102624	Zusammenfassung Behandlungsepisode - Notiz	Mess BehandlungsZeit	63
-49009-4	108510	Noradrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2669-0	104833	Normetanephrin Serum Plasma	Apherese Plasma	62
-2669-0	104834	Normetanephrin Serum Plasma	Apherese Plasma	62
-2669-0	104846	Normetanephrin Serum Plasma	Apherese Plasma	62
-51680-7	108510	17-Hydroxyprogesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-54917-0	102699	Lysozym Pleuraflüssigkeit	Dialysierfluessigke	60
-9353-4	104833	Baclofen Serum Plasma	Apherese Plasma	61
-9353-4	104834	Baclofen Serum Plasma	Apherese Plasma	61
-9353-4	104846	Baclofen Serum Plasma	Apherese Plasma	61
-30931-0	106365	Blei Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30931-0	106366	Blei Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30931-0	110899	Blei Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-30931-0	110900	Blei Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-270-9	107861	Gramicidinminimaler letaler Konzentration (MLK)	O2 Konzentration	90
-270-9	107864	Gramicidinminimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-270-9	107867	Gramicidinminimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-56522-6	108510	17-Hydroxypregnenolon Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-27828-3	108157	Insulin Serum Plasma Stunden Stimulation	Insulin ja	82
-27828-3	108158	Insulin Serum Plasma Stunden Stimulation	Insulin nein	74
-27828-3	108510	Insulin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-57335-2	102721	Calcium -Stunden-Urin	Calcium	100
-57335-2	102743	Calcium -Stunden-Urin	Calcium	100
-57335-2	103054	Calcium -Stunden-Urin	Calcium	100
-57335-2	105006	Calcium -Stunden-Urin	CRRT CalciumLoesung	62
-3151-8	100808	Inhalierter Sauerstoff - Flussrate	Sauerstoff	100
-3151-8	101481	Inhalierter Sauerstoff - Flussrate	Sauerstoff	100
-3151-8	102942	Inhalierter Sauerstoff - Flussrate	G5 Sauerstoff	87
-3151-8	104804	Inhalierter Sauerstoff - Flussrate	MS C2 Sauerstoff	77
-3151-8	104808	Inhalierter Sauerstoff - Flussrate	C2 Sauerstoff	87
-3151-8	105103	Inhalierter Sauerstoff - Flussrate	Sauerstoff RespirationBarValue	65
-3151-8	106641	Inhalierter Sauerstoff - Flussrate	T1 Sauerstoff	87
-3151-8	107811	Inhalierter Sauerstoff - Flussrate	Sauerstoff	100
-3151-8	107980	Inhalierter Sauerstoff - Flussrate	P C3 Sauerstoff	80
-3151-8	108012	Inhalierter Sauerstoff - Flussrate	P MS C3 Sauerstoff	71
-3151-8	110866	Inhalierter Sauerstoff - Flussrate	Heimbeatmung Sauerstoff	61
-15280-1	108675	Muskatblüte IgE-Antikörper Serum	P Antikoerper Mutter	64
-6149-9	108157	Porcines Insulin IgE-Antikörper Serum	Insulin ja	82
-6149-9	108158	Porcines Insulin IgE-Antikörper Serum	Insulin nein	74
-12716-7	108510	17-Hydroxyprogesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-1744-2	103592	Alanin-Aminotransferase Serum Plasma Zusatz P-5'-P	Zusatz	100
-47172-2	108510	Noradrenalin Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-47923-8	108510	Somatotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-475-4	107861	Sulfonamid minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-475-4	107864	Sulfonamid minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-475-4	107867	Sulfonamid minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-29684-8	108675	Rickettsia typhi Antikörper Serum	P Antikoerper Mutter	62
-1609-7	108157	Prolaktin Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin ja	82
-1609-7	108158	Prolaktin Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin nein	74
-57434-3	102139	Leber-Nieren-Mikrosomen-1 Antikörper Serum Immunfluoreszenztest	Abdomen Nieren	60
-32559-7	104272	Tau-Protein Serum	Servoi Tpause Prozent	68
-12654-0	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-4649-0	103646	Interferon Serum	internerPacer	62
-4649-0	108666	Interferon Serum	P Intervention	60
-46417-2	100203	Prothrombinzeit (PT) Kapillarblut Gerinnungstest	PT	100
-46417-2	100676	Prothrombinzeit (PT) Kapillarblut Gerinnungstest	PT	100
-18387-1	104833	Diamorphin Serum Plasma	Apherese Plasma	63
-18387-1	104834	Diamorphin Serum Plasma	Apherese Plasma	63
-18387-1	104846	Diamorphin Serum Plasma	Apherese Plasma	63
-16109-1	108510	Prolaktin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-25574-5	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12982-5	108510	Vasopressin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-16656-1	108510	Corticotropin Plasma Radioimmunoassay Minuten Stimulation	Atmung Stimulation	76
-3687-1	104833	Ibuprofen Serum Plasma	Apherese Plasma	65
-3687-1	104834	Ibuprofen Serum Plasma	Apherese Plasma	65
-3687-1	104846	Ibuprofen Serum Plasma	Apherese Plasma	65
-57533-2	108510	17-Hydroxyprogesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-1398-7	108157	Cortisol Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin ja	82
-1398-7	108158	Cortisol Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin nein	74
-16526-6	102721	Calcium/Protein Serum Plasma	Calcium	100
-16526-6	102743	Calcium/Protein Serum Plasma	Calcium	100
-16526-6	103054	Calcium/Protein Serum Plasma	Calcium	100
-16526-6	104833	Calcium/Protein Serum Plasma	Apherese Plasma	60
-16526-6	104834	Calcium/Protein Serum Plasma	Apherese Plasma	60
-16526-6	104846	Calcium/Protein Serum Plasma	Apherese Plasma	60
-16526-6	107934	Calcium/Protein Serum Plasma	P ADS MS ADS Calcium postFilter	65
-16526-6	107935	Calcium/Protein Serum Plasma	P ADS MS ADS Calcium preFilter	67
-620-5	102128	Bakterien identifiziert Haut aerober Kultur	Kopf Haut	62
-620-5	102142	Bakterien identifiziert Haut aerober Kultur	Haut	100
-48786-8	108510	Renin Plasma Minuten Stimulation	Atmung Stimulation	76
-5659-8	103145	Gold Serum Plasma	Doku Plasmalösung	61
-16157-0	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-14637-3	102721	Calcium -Stunden-Urin	Calcium	100
-14637-3	102743	Calcium -Stunden-Urin	Calcium	100
-14637-3	103054	Calcium -Stunden-Urin	Calcium	100
-14637-3	105006	Calcium -Stunden-Urin	CRRT CalciumLoesung	62
-29265-6	102721	Calcium Albumin-korrigiert Serum Plasma	Calcium	100
-29265-6	102743	Calcium Albumin-korrigiert Serum Plasma	Calcium	100
-29265-6	103054	Calcium Albumin-korrigiert Serum Plasma	Calcium	100
-2964-5	6	Spezifisches Gewicht Körperflüssigkeit	Gewicht	100
-2964-5	104258	Spezifisches Gewicht Körperflüssigkeit	Servoi Gewicht	67
-2964-5	110904	Spezifisches Gewicht Körperflüssigkeit	P Gewicht	88
-1747-5	102699	Albumin Körperflüssigkeit	Dialysierfluessigke	62
-14665-4	103145	Kupfer Serum Plasma	Doku Plasmalösung	63
-14665-4	104833	Kupfer Serum Plasma	Apherese Plasma	71
-14665-4	104834	Kupfer Serum Plasma	Apherese Plasma	71
-14665-4	104846	Kupfer Serum Plasma	Apherese Plasma	71
-26438-2	101607	Zytologie	Neurologie	63
-9471-4	102491	Fluorid Wasser	Oxidationswasser	60
-9471-4	108279	Fluorid Wasser	Fruchtwasser blutig	61
-9471-4	108281	Fluorid Wasser	Fruchtwasser	62
-12521-1	108510	Katecholamine Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-27256-7	102107	Aspartat Amnionflüssigkeit	PatFluessigkeitRate	64
-8217-2	104833	Opiate Serum Plasma	Apherese Plasma	65
-8217-2	104834	Opiate Serum Plasma	Apherese Plasma	65
-8217-2	104846	Opiate Serum Plasma	Apherese Plasma	65
-18776-5	30	Behandlungsplan - Notiz	Behandlung	65
-18776-5	103018	Behandlungsplan - Notiz	MS Behandlungszeit	62
-18776-5	105122	Behandlungsplan - Notiz	F Dekanuelierungsplan	62
-9389-8	104833	Pseudoephedrin Serum Plasma	Apherese Plasma	62
-9389-8	104834	Pseudoephedrin Serum Plasma	Apherese Plasma	62
-9389-8	104846	Pseudoephedrin Serum Plasma	Apherese Plasma	62
-19242-7	108510	Corticotropin Plasma -- Stimulation	Atmung Stimulation	76
-1612-1	108157	Prolaktin Serum Plasma Stunde Dosis Insulin intravenös	Insulin ja	82
-1612-1	108158	Prolaktin Serum Plasma Stunde Dosis Insulin intravenös	Insulin nein	74
-27837-4	108510	Somatotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-15207-4	100081	Natrium Stuhl	SM Output Atrium	62
-15207-4	102596	Natrium Stuhl	Natrium	100
-15207-4	102638	Natrium Stuhl	Mess Natrium	74
-15207-4	102660	Natrium Stuhl	NatriumProfil	62
-15207-4	102669	Natrium Stuhl	Mess esNatrium	67
-15207-4	102670	Natrium Stuhl	Mess BasisNatrium	60
-15207-4	102676	Natrium Stuhl	Natrium	100
-15207-4	102680	Natrium Stuhl	NatriumProfil	62
-15207-4	103167	Natrium Stuhl	MS Natrium	82
-15207-4	103226	Natrium Stuhl	Natrium	100
-15207-4	103228	Natrium Stuhl	NatriumProfil	62
-15207-4	103242	Natrium Stuhl	Natrium	100
-63895-7	102941	Stillstatus	SubstituatBolus	62
-63895-7	102979	Stillstatus	SubstituatBolus	62
-63895-7	103183	Stillstatus	Substituatbolus	62
-63895-7	103232	Stillstatus	Substituatbolus	62
-63895-7	104903	Stillstatus	Substituatbolus	62
-63895-7	104927	Stillstatus	Substituatbolus	62
-40250-3	108510	Creatinin Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-25459-9	104833	Blei Serum Plasma	Apherese Plasma	62
-25459-9	104834	Blei Serum Plasma	Apherese Plasma	62
-25459-9	104846	Blei Serum Plasma	Apherese Plasma	62
-32311-3	108510	Cortisol Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-12826-4	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12459-4	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-18485-3	108675	Mi-2 Antikörper Serum	P Antikoerper Mutter	65
-5622-6	104833	Chrom Serum Plasma	Apherese Plasma	67
-5622-6	104834	Chrom Serum Plasma	Apherese Plasma	67
-5622-6	104846	Chrom Serum Plasma	Apherese Plasma	67
-57835-1	102755	Aussehen Dialysat	Dialysat	100
-57835-1	103043	Aussehen Dialysat	Dialysat	100
-57835-1	103045	Aussehen Dialysat	BM25 Dialysat	76
-57835-1	103123	Aussehen Dialysat	Dialysat	100
-57835-1	103124	Aussehen Dialysat	BM25 Dialysat	76
-57835-1	104978	Aussehen Dialysat	CRRT Dialysat	76
-57835-1	104999	Aussehen Dialysat	CRRT Dialysat	76
-57835-1	107787	Aussehen Dialysat	Doku Aussehen Dialysat	100
-57835-1	107802	Aussehen Dialysat	Dialysat1	62
-57835-1	107803	Aussehen Dialysat	Dialysat2	62
-16892-2	108510	Gastrin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-14272-9	102139	Leber-Nieren-Mikrosomen Antikörper Serum	Abdomen Nieren	60
-25668-5	108510	Glucose Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-56613-3	108510	11-Desoxycorticosteron Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-10164-2	106521	Anamnese Krankheit - Freitext	Anamnese Nein	76
-10164-2	106522	Anamnese Krankheit - Freitext	Anamnese Ja	84
-10164-2	106523	Anamnese Krankheit - Freitext	Anamnese Tetanusschutz Nein	67
-10164-2	106524	Anamnese Krankheit - Freitext	Anamnese Tetanusschutz	65
-10164-2	106525	Anamnese Krankheit - Freitext	Anamnese Tetanusschutz Ja	62
-10164-2	106649	Anamnese Krankheit - Freitext	Anamnese	100
-3977-6	104833	Prazepam Serum Plasma	Apherese Plasma	67
-3977-6	104834	Prazepam Serum Plasma	Apherese Plasma	67
-3977-6	104846	Prazepam Serum Plasma	Apherese Plasma	67
-2483-6	108157	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma	Insulin ja	82
-2483-6	108158	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma	Insulin nein	74
-14633-2	104833	C-Peptid Serum Plasma	Apherese Plasma	61
-14633-2	104834	C-Peptid Serum Plasma	Apherese Plasma	61
-14633-2	104846	C-Peptid Serum Plasma	Apherese Plasma	61
-11064-3	104913	Harnstoff-Stickstoff Serum Plasma -- Dialyse	Dialyse Zeit	74
-11064-3	110802	Harnstoff-Stickstoff Serum Plasma -- Dialyse	P Dialyse Zeit	67
-11064-3	110818	Harnstoff-Stickstoff Serum Plasma -- Dialyse	P Dialyse Zeit	67
-29239-1	104913	Trijodthyronin (T3) frei Serum Plasma Dialyse	Dialyse Zeit	74
-29239-1	110802	Trijodthyronin (T3) frei Serum Plasma Dialyse	P Dialyse Zeit	67
-29239-1	110818	Trijodthyronin (T3) frei Serum Plasma Dialyse	P Dialyse Zeit	67
-10567-6	102729	Citrat Sperma	Citrat	100
-10567-6	103053	Citrat Sperma	Citrat	100
-10567-6	113047	Citrat Sperma	CRRT praeF	61
-10567-6	113048	Citrat Sperma	CRRT praeF	61
-10567-6	114052	Citrat Sperma	CRRT MS praeF	62
-32133-1	104833	Lactat venösem Plasma	Apherese Plasma	63
-32133-1	104834	Lactat venösem Plasma	Apherese Plasma	63
-32133-1	104846	Lactat venösem Plasma	Apherese Plasma	63
-44464-6	102128	Herpes-simplex-Virus Typ Haut erregerspezifischer Kultur	Kopf Haut	62
-44464-6	102142	Herpes-simplex-Virus Typ Haut erregerspezifischer Kultur	Haut	100
-463-0	107861	Sulfadiazin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-463-0	107864	Sulfadiazin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-463-0	107867	Sulfadiazin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-19149-4	103750	Rifabutin	Reanimation	60
-40101-8	108510	aPTT thrombozytenarmem Plasma Gerinnungstest Minuten Stimulation	Atmung Stimulation	76
-54398-3	108510	Glucose Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-25808-7	108510	Trijodthyronin (T3) frei Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-22760-3	103069	Kalium Serum Plasma	ADM Plasmavolumen	61
-22760-3	103085	Kalium Serum Plasma	ADM Plasmavolumen	61
-22760-3	103145	Kalium Serum Plasma	Doku Plasmalösung	63
-25646-1	108510	Follitropin Serum Plasma . International Reference Preparation . Probenmaterial Stimulation	Atmung Stimulation	76
-25425-0	104833	Gabapentin Serum Plasma	Apherese Plasma	63
-25425-0	104834	Gabapentin Serum Plasma	Apherese Plasma	63
-25425-0	104846	Gabapentin Serum Plasma	Apherese Plasma	63
-2216-0	103145	Dopamin Serum Plasma	Doku Plasmalösung	61
-5171-4	108675	Neutrophiler Antikörper Serum	P Antikoerper Mutter	62
-25794-9	108510	Thyroxin (T4) frei Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-43575-0	107985	Komplement C3 Perikardflüssigkeit	P C3	67
-43575-0	107992	Komplement C3 Perikardflüssigkeit	P C3	67
-43575-0	108010	Komplement C3 Perikardflüssigkeit	P C3	67
-43575-0	110828	Komplement C3 Perikardflüssigkeit	P C3	67
-43575-0	110831	Komplement C3 Perikardflüssigkeit	P C3	67
-41646-1	102721	Calcium.ionisiert gemischt-venösem Blut	Calcium	100
-41646-1	102743	Calcium.ionisiert gemischt-venösem Blut	Calcium	100
-41646-1	103054	Calcium.ionisiert gemischt-venösem Blut	Calcium	100
-3395-1	103145	Kokain Serum Plasma	Doku Plasmalösung	63
-39486-6	102158	pH venösem Blut Körpertemperatur	Koerpertemperatur	64
-39486-6	110924	pH venösem Blut Körpertemperatur	P Temperatur Venoes	65
-39486-6	110926	pH venösem Blut Körpertemperatur	P Temperatur Haut	60
-82810-3	9	Schwangerschaftsstatus	Schwangerschaftswoche	74
-82810-3	100037	Schwangerschaftsstatus	Schwangerschaftwoche	71
-82810-3	100038	Schwangerschaftsstatus	Schwangerschaftswoche	74
-82810-3	106526	Schwangerschaftsstatus	Anamnese Schwangerschaft	65
-82810-3	106528	Schwangerschaftsstatus	Anamnese Schwangerschaft Ja	61
-82810-3	106665	Schwangerschaftsstatus	Schwangerschaftstest durchgefuehrt	64
-82810-3	108128	Schwangerschaftsstatus	P Schwangerschaft String	74
-82810-3	108129	Schwangerschaftsstatus	Schwangerschaft	81
-82810-3	108130	Schwangerschaftsstatus	Schwangerschaft ICSI	71
-82810-3	108131	Schwangerschaftsstatus	Schwangerschaft IVF	73
-82810-3	108132	Schwangerschaftsstatus	Schwangerschaft an	75
-82810-3	108161	Schwangerschaftsstatus	Medikamente Schwangerschaft Text	63
-82810-3	108162	Schwangerschaftsstatus	Probleme Schwangerschaft Text	67
-19183-3	102107	Zytokeratin Pleuraflüssigkeit	PatFluessigkeitRate	64
-19183-3	102503	Zytokeratin Pleuraflüssigkeit	Dokumentation BlutflussEinst	61
-39981-6	108510	Creatinin Urin Minuten Stimulation	Atmung Stimulation	76
-29953-7	108675	Nukleärer Antikörper Serum	P Antikoerper Mutter	64
-14591-2	104833	Alprazolam Serum Plasma	Apherese Plasma	63
-14591-2	104834	Alprazolam Serum Plasma	Apherese Plasma	63
-14591-2	104846	Alprazolam Serum Plasma	Apherese Plasma	63
-13426-2	108510	Noradrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-4485-9	107985	Komplement C3 Serum Plasma	P C3	67
-4485-9	107992	Komplement C3 Serum Plasma	P C3	67
-4485-9	108010	Komplement C3 Serum Plasma	P C3	67
-4485-9	110828	Komplement C3 Serum Plasma	P C3	67
-4485-9	110831	Komplement C3 Serum Plasma	P C3	67
-80384-1	106665	Choriongonadotropin (Schwangerschaftstest) Urin Immunoassay-Schnelltest	Schwangerschaftstest durchgefuehrt	74
-39791-9	102596	Natrium venösem Blut	Natrium	100
-39791-9	102638	Natrium venösem Blut	Mess Natrium	74
-39791-9	102669	Natrium venösem Blut	Mess esNatrium	61
-39791-9	102670	Natrium venösem Blut	Mess BasisNatrium	61
-39791-9	102676	Natrium venösem Blut	Natrium	100
-39791-9	103167	Natrium venösem Blut	MS Natrium	82
-39791-9	103226	Natrium venösem Blut	Natrium	100
-39791-9	103242	Natrium venösem Blut	Natrium	100
-13427-0	108510	Noradrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-49332-0	108510	Vasopressin Plasma Minuten Stimulation	Atmung Stimulation	76
-16153-9	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-81650-4	100999	West-Nil-Virus, Kunjin-Stamm RNA Probenmaterial Nukleinsäureamplifikation Sondendetektion	Stamm	100
-49071-4	104913	Harnstoff-Stickstoff Serum Plasma -- Dialyse/ Dialyse	Dialyse Zeit	74
-49071-4	110802	Harnstoff-Stickstoff Serum Plasma -- Dialyse/ Dialyse	P Dialyse Zeit	67
-49071-4	110818	Harnstoff-Stickstoff Serum Plasma -- Dialyse/ Dialyse	P Dialyse Zeit	67
-3978-4	104833	Primidon Serum Plasma	Apherese Plasma	61
-3978-4	104834	Primidon Serum Plasma	Apherese Plasma	61
-3978-4	104846	Primidon Serum Plasma	Apherese Plasma	61
-56591-1	108510	Dehydroepiandrosteron-Sulfat (DHEA-S) Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-26680-9	101460	Aspartat Urin	Station	60
-26680-9	102652	Aspartat Urin	StartNatrium	64
-26680-9	102681	Aspartat Urin	StartNatrium	64
-26680-9	103222	Aspartat Urin	StartNatrium	64
-26680-9	103241	Aspartat Urin	StartNatrium	64
-26680-9	103253	Aspartat Urin	StartNatrium	64
-25521-6	103143	Selen Serum Plasma	Plasmaloesung	65
-25521-6	104833	Selen Serum Plasma	Apherese Plasma	67
-25521-6	104834	Selen Serum Plasma	Apherese Plasma	67
-25521-6	104846	Selen Serum Plasma	Apherese Plasma	67
-12795-1	108510	Oxalat Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-25768-3	108157	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-25768-3	108158	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-25768-3	108510	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-57365-9	108510	Lactat Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-23533-3	108675	Trypanosoma Antikörper Serum	P Antikoerper Mutter	60
-2965-2	6	Spezifisches Gewicht Urin	Gewicht	100
-2965-2	104258	Spezifisches Gewicht Urin	Servoi Gewicht	67
-2965-2	110886	Spezifisches Gewicht Urin	P Gewicht WaageBezeichnung	63
-2965-2	110904	Spezifisches Gewicht Urin	P Gewicht	88
-29577-4	100079	Fungale Empfindlichkeit ( )	SM Empfindlichkeit	91
-29577-4	103383	Fungale Empfindlichkeit ( )	Eins Empfindlichkeit	86
-29577-4	103388	Fungale Empfindlichkeit ( )	Empfindlichkeit	100
-29577-4	103393	Fungale Empfindlichkeit ( )	EmpfindlichkeitA	82
-29577-4	103394	Fungale Empfindlichkeit ( )	EmpfindlichkeitV	77
-29577-4	103398	Fungale Empfindlichkeit ( )	Siemens Empfindlichkeit	79
-29577-4	103400	Fungale Empfindlichkeit ( )	Defi Empfindlichkeit	86
-57337-8	102729	Citrat -Stunden-Urin	Citrat	100
-57337-8	103053	Citrat -Stunden-Urin	Citrat	100
-33816-0	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33816-0	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33816-0	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-25798-0	108510	Thyroxin (T4) frei Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-14611-8	108675	Nukleäres Antikörpermuster Serum	P Antikoerper Mutter	60
-92888-7	102128	Varicella-Zoster-Virus DNA Haut Nukleinsäureamplifikation Sondendetektion	Kopf Haut	62
-92888-7	102142	Varicella-Zoster-Virus DNA Haut Nukleinsäureamplifikation Sondendetektion	Haut	100
-30927-8	106365	Selen Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30927-8	106366	Selen Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30927-8	110899	Selen Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-30927-8	110900	Selen Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-38386-9	102107	Farbe Amnionflüssigkeit	PatFluessigkeitRate	63
-31589-5	108675	Ribosomaler Antikörper Serum	P Antikoerper Mutter	60
-40263-6	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-59-6	107861	Carbenicillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-59-6	107864	Carbenicillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-59-6	107867	Carbenicillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-47119-3	102107	Meprobamat Magenflüssigkeit	PatFluessigkeitRate	62
-47119-3	102113	Meprobamat Magenflüssigkeit	Mess PatFluessigkeitRate	60
-2409-1	104833	Hexokinase Plasma	Apherese Plasma	69
-2409-1	104834	Hexokinase Plasma	Apherese Plasma	69
-2409-1	104846	Hexokinase Plasma	Apherese Plasma	69
-48617-5	104913	Phosphat Serum Plasma -- Dialyse	Dialyse Zeit	74
-48617-5	110802	Phosphat Serum Plasma -- Dialyse	P Dialyse Zeit	67
-48617-5	110818	Phosphat Serum Plasma -- Dialyse	P Dialyse Zeit	67
-38363-8	104833	Cefepim Serum Plasma	Apherese Plasma	63
-38363-8	104834	Cefepim Serum Plasma	Apherese Plasma	63
-38363-8	104846	Cefepim Serum Plasma	Apherese Plasma	63
-13120-1	108675	Ovar Antikörper Serum	P Antikoerper Mutter	60
-14055-8	100081	Natrium Stuhl	SM Output Atrium	62
-14055-8	102596	Natrium Stuhl	Natrium	100
-14055-8	102638	Natrium Stuhl	Mess Natrium	74
-14055-8	102660	Natrium Stuhl	NatriumProfil	62
-14055-8	102669	Natrium Stuhl	Mess esNatrium	67
-14055-8	102670	Natrium Stuhl	Mess BasisNatrium	60
-14055-8	102676	Natrium Stuhl	Natrium	100
-14055-8	102680	Natrium Stuhl	NatriumProfil	62
-14055-8	103167	Natrium Stuhl	MS Natrium	82
-14055-8	103226	Natrium Stuhl	Natrium	100
-14055-8	103228	Natrium Stuhl	NatriumProfil	62
-14055-8	103242	Natrium Stuhl	Natrium	100
-3778-8	104833	Methamphetamin Serum Plasma	Apherese Plasma	62
-3778-8	104834	Methamphetamin Serum Plasma	Apherese Plasma	62
-3778-8	104846	Methamphetamin Serum Plasma	Apherese Plasma	62
-34599-1	102107	Methotrexat Körperflüssigkeit	PatFluessigkeitRate	61
-30078-0	6	Gewicht Stuhl	Gewicht	100
-30078-0	104258	Gewicht Stuhl	Servoi Gewicht	70
-30078-0	104771	Gewicht Stuhl	PatGewicht	61
-30078-0	110886	Gewicht Stuhl	P Gewicht WaageBezeichnung	70
-30078-0	110904	Gewicht Stuhl	P Gewicht	88
-44717-7	104833	Lipoprotein.beta/Lipoprotein.alpha Serum Plasma	Apherese Plasma	60
-44717-7	104834	Lipoprotein.beta/Lipoprotein.alpha Serum Plasma	Apherese Plasma	60
-44717-7	104846	Lipoprotein.beta/Lipoprotein.alpha Serum Plasma	Apherese Plasma	60
-14913-8	104833	Testosteron Serum Plasma	Apherese Plasma	62
-14913-8	104834	Testosteron Serum Plasma	Apherese Plasma	62
-14913-8	104846	Testosteron Serum Plasma	Apherese Plasma	62
-13959-2	102721	Calcium.ionisiert Serum Plasma, berechnet	Calcium	100
-13959-2	102743	Calcium.ionisiert Serum Plasma, berechnet	Calcium	100
-13959-2	103054	Calcium.ionisiert Serum Plasma, berechnet	Calcium	100
-29141-9	104833	Metanephrin Serum Plasma	Apherese Plasma	67
-29141-9	104834	Metanephrin Serum Plasma	Apherese Plasma	67
-29141-9	104846	Metanephrin Serum Plasma	Apherese Plasma	67
-6683-7	101437	Reptilasezeit	Expirationszeit	64
-6683-7	102061	Reptilasezeit	Expirationszeit	64
-6683-7	102651	Reptilasezeit	DialyseZeit	67
-6683-7	102675	Reptilasezeit	DialyseZeit	67
-6683-7	103146	Reptilasezeit	DialyseZeit	67
-6683-7	103205	Reptilasezeit	Dialysezeit	67
-6683-7	103218	Reptilasezeit	Dialysezeit	67
-6683-7	103254	Reptilasezeit	Dialysezeit	67
-6683-7	104894	Reptilasezeit	Dialysezeit	67
-6683-7	104913	Reptilasezeit	Dialyse Zeit	64
-6683-7	104934	Reptilasezeit	Dialysezeit	67
-6683-7	104947	Reptilasezeit	Dialysezeit	67
-6683-7	107806	Reptilasezeit	Einlaufzeit	67
-50717-8	108510	11-Desoxycortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-8147-1	104833	Amphetamine Serum Plasma	Apherese Plasma	72
-8147-1	104834	Amphetamine Serum Plasma	Apherese Plasma	72
-8147-1	104846	Amphetamine Serum Plasma	Apherese Plasma	72
-8147-1	104852	Amphetamine Serum Plasma	Apherese Plasmaloesung	61
-14650-6	102729	Citrat -Stunden-Urin	Citrat	100
-14650-6	103053	Citrat -Stunden-Urin	Citrat	100
-14151-5	102597	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	102639	Bicarbonat Nabelschnurblut	Mess Bicarbonat	80
-14151-5	102677	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	103160	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	103191	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	103227	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	103243	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	104881	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	104897	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	104922	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	104937	Bicarbonat Nabelschnurblut	Bicarbonat	100
-14151-5	110786	Bicarbonat Nabelschnurblut	P Bicarbonat	91
-14151-5	110806	Bicarbonat Nabelschnurblut	P Bicarbonat	91
-1963-8	102597	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	102639	Bicarbonat Serum Plasma	Mess Bicarbonat	80
-1963-8	102677	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	103160	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	103191	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	103227	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	103243	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	104881	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	104897	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	104922	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	104937	Bicarbonat Serum Plasma	Bicarbonat	100
-1963-8	110786	Bicarbonat Serum Plasma	P Bicarbonat	91
-1963-8	110806	Bicarbonat Serum Plasma	P Bicarbonat	91
-12186-3	102557	Kolloid-onkotischer Druck Plasma	Druck	100
-12186-3	103012	Kolloid-onkotischer Druck Plasma	MS Druck	77
-27989-3	108510	Thyroxin (T4) frei Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-817-7	104833	A-Antikörper Serum Plasma	Apherese Plasma	67
-817-7	104834	A-Antikörper Serum Plasma	Apherese Plasma	67
-817-7	104846	A-Antikörper Serum Plasma	Apherese Plasma	67
-27867-1	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-27867-1	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-27867-1	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-26599-1	104833	Anserin Serum Plasma	Apherese Plasma	69
-26599-1	104834	Anserin Serum Plasma	Apherese Plasma	69
-26599-1	104846	Anserin Serum Plasma	Apherese Plasma	69
-40051-5	108510	Albumin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-35867-1	104833	Acetoacetat Serum Plasma	Apherese Plasma	62
-35867-1	104834	Acetoacetat Serum Plasma	Apherese Plasma	62
-35867-1	104846	Acetoacetat Serum Plasma	Apherese Plasma	62
-1834-1	104833	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-1834-1	104834	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-1834-1	104846	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-50441-5	108157	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-50441-5	108158	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-60590-7	100008	Medikation.kurz - Dokument	Vormedikation	65
-60590-7	100189	Medikation.kurz - Dokument	Wunddokumentation	63
-60590-7	101391	Medikation.kurz - Dokument	Dokumentation	70
-60590-7	101405	Medikation.kurz - Dokument	Dokumentation	70
-60590-7	101417	Medikation.kurz - Dokument	Dokumentation	70
-60590-7	105241	Medikation.kurz - Dokument	F MedDoku Vormedikation	68
-60590-7	106597	Medikation.kurz - Dokument	Vormedikation	65
-10338-2	104833	Barbiturate Serum Plasma	Apherese Plasma	62
-10338-2	104834	Barbiturate Serum Plasma	Apherese Plasma	62
-10338-2	104846	Barbiturate Serum Plasma	Apherese Plasma	62
-16160-4	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-48037-6	102107	pH Vaginalflüssigkeit	PatFluessigkeitRate	62
-18720-3	101483	Gerinnungsdiagnostik	Diagnostik	67
-18720-3	103752	Gerinnungsdiagnostik	Diagnostik	67
-14628-2	104833	Gallensäure Serum Plasma	Apherese Plasma	68
-14628-2	104834	Gallensäure Serum Plasma	Apherese Plasma	68
-14628-2	104846	Gallensäure Serum Plasma	Apherese Plasma	68
-12460-2	108510	Corticotropin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-47770-3	108157	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-47770-3	108158	Somatotropin Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-12948-6	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-23611-7	108100	Para-Aminosalicylat Methode langsam wachsende Mykobakterien	Para	100
-18883-9	102178	Cefonicid	COCI	62
-48340-4	108510	17-Hydroxyprogesteron Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-180-0	107861	Cinoxacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-180-0	107864	Cinoxacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-180-0	107867	Cinoxacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-5901-4	100203	Prothrombinzeit (PT) thrombozytenarmem Kontroll-Plasma Gerinnungstest	PT	100
-5901-4	100676	Prothrombinzeit (PT) thrombozytenarmem Kontroll-Plasma Gerinnungstest	PT	100
-41608-1	108510	Prolaktin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-5858-6	102128	Herpes-simplex-Virus identifiziert Haut erregerspezifischer Kultur	Kopf Haut	62
-5858-6	102142	Herpes-simplex-Virus identifiziert Haut erregerspezifischer Kultur	Haut	100
-443-2	107861	Roxithromycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-443-2	107864	Roxithromycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-443-2	107867	Roxithromycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-123-0	107861	Cefprozil minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-123-0	107864	Cefprozil minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-123-0	107867	Cefprozil minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-25671-9	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-14879-1	104833	Phosphat Serum Plasma	Apherese Plasma	61
-14879-1	104834	Phosphat Serum Plasma	Apherese Plasma	61
-14879-1	104846	Phosphat Serum Plasma	Apherese Plasma	61
-19254-2	100808	Sauerstoff Körpertemperatur Blut	Sauerstoff	100
-19254-2	101007	Sauerstoff Körpertemperatur Blut	Temperaturstatus	60
-19254-2	101481	Sauerstoff Körpertemperatur Blut	Sauerstoff	100
-19254-2	102158	Sauerstoff Körpertemperatur Blut	Koerpertemperatur	62
-19254-2	102942	Sauerstoff Körpertemperatur Blut	G5 Sauerstoff	87
-19254-2	103829	Sauerstoff Körpertemperatur Blut	Warmtouch Doku Temperatur	61
-19254-2	104804	Sauerstoff Körpertemperatur Blut	MS C2 Sauerstoff	77
-19254-2	104808	Sauerstoff Körpertemperatur Blut	C2 Sauerstoff	87
-19254-2	106641	Sauerstoff Körpertemperatur Blut	T1 Sauerstoff	87
-19254-2	107811	Sauerstoff Körpertemperatur Blut	Sauerstoff	100
-19254-2	107980	Sauerstoff Körpertemperatur Blut	P C3 Sauerstoff	80
-19254-2	108012	Sauerstoff Körpertemperatur Blut	P MS C3 Sauerstoff	71
-19254-2	110866	Sauerstoff Körpertemperatur Blut	Heimbeatmung Sauerstoff	63
-1748-3	102699	Albumin Pleuraflüssigkeit	Dialysierfluessigke	60
-334-3	107861	Minocyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-334-3	107864	Minocyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-334-3	107867	Minocyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-13432-0	108510	Dopamin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-57588-6	108510	Aldosteron Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-12922-1	108510	Testosteron Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-27850-7	108510	Somatotropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-33817-8	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33817-8	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33817-8	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-35036-3	102107	Makrophagen Körperflüssigkeit	PatFluessigkeitRate	61
-14949-2	102581	Vasopressin Plasma	Plasmavolumen	65
-14949-2	103063	Vasopressin Plasma	Plasmavolumen	65
-14949-2	103065	Vasopressin Plasma	Plasmavolumen	65
-14949-2	103143	Vasopressin Plasma	Plasmaloesung	65
-14949-2	104833	Vasopressin Plasma	Apherese Plasma	73
-14949-2	104834	Vasopressin Plasma	Apherese Plasma	73
-14949-2	104846	Vasopressin Plasma	Apherese Plasma	73
-2159-2	102107	Creatinin Amnionflüssigkeit	PatFluessigkeitRate	62
-5767-9	107787	Aussehen Urin	Doku Aussehen Dialysat	76
-6125-9	108675	Gluten IgE-Antikörper Serum	P Antikoerper Mutter	61
-2951-2	100081	Natrium Serum Plasma	SM Output Atrium	61
-2951-2	102596	Natrium Serum Plasma	Natrium	100
-2951-2	102638	Natrium Serum Plasma	Mess Natrium	74
-2951-2	102676	Natrium Serum Plasma	Natrium	100
-2951-2	103167	Natrium Serum Plasma	MS Natrium	82
-2951-2	103226	Natrium Serum Plasma	Natrium	100
-2951-2	103242	Natrium Serum Plasma	Natrium	100
-2951-2	104833	Natrium Serum Plasma	Apherese Plasma	63
-2951-2	104834	Natrium Serum Plasma	Apherese Plasma	63
-2951-2	104846	Natrium Serum Plasma	Apherese Plasma	63
-5604-4	102409	Bor Blut	Labor	62
-75218-8	106739	Fallbericht	CO Bericht	67
-14414-7	102755	Aspartat-Aminotransferase Dialysat	Dialysat	100
-14414-7	103043	Aspartat-Aminotransferase Dialysat	Dialysat	100
-14414-7	103045	Aspartat-Aminotransferase Dialysat	BM25 Dialysat	76
-14414-7	103123	Aspartat-Aminotransferase Dialysat	Dialysat	100
-14414-7	103124	Aspartat-Aminotransferase Dialysat	BM25 Dialysat	76
-14414-7	104978	Aspartat-Aminotransferase Dialysat	CRRT Dialysat	76
-14414-7	104999	Aspartat-Aminotransferase Dialysat	CRRT Dialysat	76
-15101-9	104833	Chloramphenicol Serum Plasma	Apherese Plasma	60
-15101-9	104834	Chloramphenicol Serum Plasma	Apherese Plasma	60
-15101-9	104846	Chloramphenicol Serum Plasma	Apherese Plasma	60
-29636-8	107787	Aussehen Stuhl	Doku Aussehen Dialysat	73
-17025-8	108280	Eisen Wasser	Fruchtwasser erbsbrei	61
-8274-3	107861	Cefpirom minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-8274-3	107864	Cefpirom minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-8274-3	107867	Cefpirom minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-236-0	107861	Erythromycin+Sulfisoxazol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-236-0	107864	Erythromycin+Sulfisoxazol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-236-0	107867	Erythromycin+Sulfisoxazol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2753-2	104833	pH Serum Plasma	Apherese Plasma	73
-2753-2	104834	pH Serum Plasma	Apherese Plasma	73
-2753-2	104846	pH Serum Plasma	Apherese Plasma	73
-48630-8	104913	Creatinin Peritonealflüssigkeit -- Dialyse	Dialyse Zeit	74
-48630-8	110802	Creatinin Peritonealflüssigkeit -- Dialyse	P Dialyse Zeit	67
-48630-8	110818	Creatinin Peritonealflüssigkeit -- Dialyse	P Dialyse Zeit	67
-13038-5	108510	C-Peptid Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-2839-9	104833	Progesteron Serum Plasma	Apherese Plasma	62
-2839-9	104834	Progesteron Serum Plasma	Apherese Plasma	62
-2839-9	104846	Progesteron Serum Plasma	Apherese Plasma	62
-459-8	107861	Streptomycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-459-8	107864	Streptomycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-459-8	107867	Streptomycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-33873-1	106365	Dopamin/Creatinin Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-33873-1	106366	Dopamin/Creatinin Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-33873-1	110899	Dopamin/Creatinin Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-33873-1	110900	Dopamin/Creatinin Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-13429-6	108510	Noradrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-27881-2	108510	Somatotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-6892-4	104913	Thyroxin (T4) frei Serum Plasma Dialyse	Dialyse Zeit	74
-6892-4	110802	Thyroxin (T4) frei Serum Plasma Dialyse	P Dialyse Zeit	67
-6892-4	110818	Thyroxin (T4) frei Serum Plasma Dialyse	P Dialyse Zeit	67
-503-3	107861	Ticarcillin+Clavulanat minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-503-3	107864	Ticarcillin+Clavulanat minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-503-3	107867	Ticarcillin+Clavulanat minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-18969-6	103753	Piperacillin	Pupillen	60
-20655-7	102581	Prolin Serum Plasma	Plasmavolumen	62
-20655-7	103063	Prolin Serum Plasma	Plasmavolumen	62
-20655-7	103065	Prolin Serum Plasma	Plasmavolumen	62
-20655-7	104833	Prolin Serum Plasma	Apherese Plasma	65
-20655-7	104834	Prolin Serum Plasma	Apherese Plasma	65
-20655-7	104846	Prolin Serum Plasma	Apherese Plasma	65
-47152-4	108510	Adrenalin Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-12791-0	108510	Oxalat Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-216-2	107861	Demeclocyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-216-2	107864	Demeclocyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-216-2	107867	Demeclocyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-523-1	107861	Vancomycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-523-1	107864	Vancomycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-523-1	107867	Vancomycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-31533-3	108675	Neuronaler Antikörper Serum	P Antikoerper Mutter	61
-9637-0	102102	Toluol Blut	Blutfluss	60
-9637-0	102976	Toluol Blut	Blutfluss	60
-9637-0	103152	Toluol Blut	Blutfluss	60
-9637-0	103180	Toluol Blut	Blutfluss	60
-9637-0	103220	Toluol Blut	Blutfluss	60
-9637-0	104888	Toluol Blut	Blutfluss	60
-9637-0	104907	Toluol Blut	Blutfluss	60
-9637-0	106339	Toluol Blut	Blutfluss	60
-9637-0	106381	Toluol Blut	Blutfluss	60
-40155-4	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-54498-1	108510	Glucose Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-26961-3	100779	Valin Urin	Inhalation	60
-54358-7	102755	Beta-Globulin/Protein. Dialysat Elektrophorese	Dialysat	100
-54358-7	103043	Beta-Globulin/Protein. Dialysat Elektrophorese	Dialysat	100
-54358-7	103045	Beta-Globulin/Protein. Dialysat Elektrophorese	BM25 Dialysat	76
-54358-7	103123	Beta-Globulin/Protein. Dialysat Elektrophorese	Dialysat	100
-54358-7	103124	Beta-Globulin/Protein. Dialysat Elektrophorese	BM25 Dialysat	76
-54358-7	104978	Beta-Globulin/Protein. Dialysat Elektrophorese	CRRT Dialysat	76
-54358-7	104999	Beta-Globulin/Protein. Dialysat Elektrophorese	CRRT Dialysat	76
-15045-8	104833	Creatin Serum Plasma	Apherese Plasma	63
-15045-8	104834	Creatin Serum Plasma	Apherese Plasma	63
-15045-8	104846	Creatin Serum Plasma	Apherese Plasma	63
-3398-5	108102	Kokain Urin	konsanguin nein	62
-2518-9	110925	Lactat arteriellem Blut	P Temperatur Arteriell	62
-4269-7	102797	Glucose. Dosis	Score Dubois	64
-46243-2	102755	Harnstoff Dialysat -- Nacht	Dialysat	100
-46243-2	103043	Harnstoff Dialysat -- Nacht	Dialysat	100
-46243-2	103045	Harnstoff Dialysat -- Nacht	BM25 Dialysat	76
-46243-2	103123	Harnstoff Dialysat -- Nacht	Dialysat	100
-46243-2	103124	Harnstoff Dialysat -- Nacht	BM25 Dialysat	76
-46243-2	104978	Harnstoff Dialysat -- Nacht	CRRT Dialysat	76
-46243-2	104999	Harnstoff Dialysat -- Nacht	CRRT Dialysat	76
-12457-8	102106	Dialysat	Dialysatfluß	84
-12457-8	102114	Dialysat	Mess Dialysatfluß	67
-12457-8	102651	Dialysat	DialyseZeit	74
-12457-8	102675	Dialysat	DialyseZeit	74
-12457-8	102690	Dialysat	Dialysatloesung	70
-12457-8	102695	Dialysat	Dialysekonzentrat	64
-12457-8	102755	Dialysat	Dialysat	100
-12457-8	102897	Dialysat	Dialysatfiltrate	67
-12457-8	102921	Dialysat	Dialysekonzentrat	64
-12457-8	103042	Dialysat	Dialysatlösung	76
-12457-8	103043	Dialysat	Dialysat	100
-12457-8	103045	Dialysat	BM25 Dialysat	100
-12457-8	103095	Dialysat	Doku Dialysatlösung	62
-12457-8	103123	Dialysat	Dialysat	100
-12457-8	103124	Dialysat	BM25 Dialysat	100
-12457-8	103146	Dialysat	DialyseZeit	74
-12457-8	103205	Dialysat	Dialysezeit	74
-12457-8	103218	Dialysat	Dialysezeit	74
-12457-8	103224	Dialysat	Dialysekonzentrat	64
-12457-8	103250	Dialysat	Dialysekonzentrat	64
-12457-8	103254	Dialysat	Dialysezeit	74
-12457-8	104894	Dialysat	Dialysezeit	74
-12457-8	104913	Dialysat	Dialyse Zeit	70
-12457-8	104934	Dialysat	Dialysezeit	74
-12457-8	104947	Dialysat	Dialysezeit	74
-12457-8	104978	Dialysat	CRRT Dialysat	100
-12457-8	104999	Dialysat	CRRT Dialysat	100
-12457-8	107787	Dialysat	Doku Aussehen Dialysat	100
-12457-8	107790	Dialysat	Doku Dialysat1	73
-12457-8	107791	Dialysat	Doku Dialysat2	73
-12457-8	107802	Dialysat	Dialysat1	94
-12457-8	107803	Dialysat	Dialysat2	94
-12457-8	110802	Dialysat	P Dialyse Zeit	64
-12457-8	110818	Dialysat	P Dialyse Zeit	64
-17609-9	6	Gewicht -Stunden-Stuhl	Gewicht	100
-17609-9	104258	Gewicht -Stunden-Stuhl	Servoi Gewicht	67
-17609-9	110904	Gewicht -Stunden-Stuhl	P Gewicht	88
-29548-5	1278	Diagnose - Freitext	Diagnose	100
-29548-5	104913	Diagnose - Freitext	Dialyse Zeit	62
-25726-1	104833	Oxcarbazepin Serum Plasma	Apherese Plasma	60
-25726-1	104834	Oxcarbazepin Serum Plasma	Apherese Plasma	60
-25726-1	104846	Oxcarbazepin Serum Plasma	Apherese Plasma	60
-50544-6	101449	Everolimus Blut	Blutverlusst	74
-50544-6	103170	Everolimus Blut	MS BlutvolumenKum	62
-50544-6	104862	Everolimus Blut	MS BlutvolKum	64
-50544-6	104871	Everolimus Blut	MS BlutvolKum	64
-50544-6	106389	Everolimus Blut	MS BlutvolKum	64
-50544-6	106392	Everolimus Blut	MS BlutvolKum	64
-50544-6	110776	Everolimus Blut	P MS BlutvolKum	60
-2004-0	102721	Calcium Urin	Calcium	100
-2004-0	102743	Calcium Urin	Calcium	100
-2004-0	102749	Calcium Urin	CalciumLoesung	69
-2004-0	102763	Calcium Urin	CalciumLoesung	69
-2004-0	103052	Calcium Urin	Calciuoesung	67
-2004-0	103054	Calcium Urin	Calcium	100
-2004-0	103055	Calcium Urin	Calciuoesung	67
-2004-0	103058	Calcium Urin	CalciumFiltrat	62
-2004-0	107934	Calcium Urin	P ADS MS ADS Calcium postFilter	74
-2004-0	107935	Calcium Urin	P ADS MS ADS Calcium preFilter	74
-35570-1	102581	Renin Plasma	Plasmavolumen	64
-35570-1	102585	Renin Plasma	Plasmarate	73
-35570-1	103063	Renin Plasma	Plasmavolumen	64
-35570-1	103065	Renin Plasma	Plasmavolumen	64
-35570-1	103143	Renin Plasma	Plasmaloesung	64
-35570-1	104833	Renin Plasma	Apherese Plasma	67
-35570-1	104834	Renin Plasma	Apherese Plasma	67
-35570-1	104846	Renin Plasma	Apherese Plasma	67
-22497-2	108675	Röteln-Virus Antikörper Serum	P Antikoerper Mutter	60
-6643-1	107861	Cefepim minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-6643-1	107864	Cefepim minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-6643-1	107867	Cefepim minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-33847-5	108510	Parathormon.intakt Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-8074-7	108157	Humanes Insulin Antikörper Serum	Insulin ja	82
-8074-7	108158	Humanes Insulin Antikörper Serum	Insulin nein	74
-16519-1	102721	Calcium Serum Plasma Minuten Stimulation	Calcium	100
-16519-1	102743	Calcium Serum Plasma Minuten Stimulation	Calcium	100
-16519-1	103054	Calcium Serum Plasma Minuten Stimulation	Calcium	100
-16519-1	108510	Calcium Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-56446-8	102503	Übersicht Termine - Dokument	Dokumentation BlutflussEinst	60
-56446-8	102504	Übersicht Termine - Dokument	Dokumentation Abschluss	67
-56446-8	103805	Übersicht Termine - Dokument	Hypothermie ArticSun Doku	60
-1715-2	104833	Saure Phosphatase Serum Plasma	Apherese Plasma	62
-1715-2	104834	Saure Phosphatase Serum Plasma	Apherese Plasma	62
-1715-2	104846	Saure Phosphatase Serum Plasma	Apherese Plasma	62
-70866-9	100999	Rabies-Virus-Stamm identifiziert Probenmaterial Immunfluoreszenztest	Stamm	100
-51994-2	106365	Homovanillat/Creatinin Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-51994-2	106366	Homovanillat/Creatinin Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-51994-2	110899	Homovanillat/Creatinin Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-51994-2	110900	Homovanillat/Creatinin Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-28649-2	100808	Sauerstoff venösem Nabelschnurblut	Sauerstoff	100
-28649-2	101481	Sauerstoff venösem Nabelschnurblut	Sauerstoff	100
-28649-2	102942	Sauerstoff venösem Nabelschnurblut	G5 Sauerstoff	87
-28649-2	104804	Sauerstoff venösem Nabelschnurblut	MS C2 Sauerstoff	77
-28649-2	104808	Sauerstoff venösem Nabelschnurblut	C2 Sauerstoff	87
-28649-2	106641	Sauerstoff venösem Nabelschnurblut	T1 Sauerstoff	87
-28649-2	107811	Sauerstoff venösem Nabelschnurblut	Sauerstoff	100
-28649-2	107980	Sauerstoff venösem Nabelschnurblut	P C3 Sauerstoff	80
-28649-2	108012	Sauerstoff venösem Nabelschnurblut	P MS C3 Sauerstoff	71
-28649-2	110866	Sauerstoff venösem Nabelschnurblut	Heimbeatmung Sauerstoff	61
-25580-2	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-20564-1	100808	Sauerstoffsättigung Blut	Sauerstoff	61
-20564-1	101481	Sauerstoffsättigung Blut	Sauerstoff	61
-20564-1	102942	Sauerstoffsättigung Blut	G5 Sauerstoff	61
-20564-1	104808	Sauerstoffsättigung Blut	C2 Sauerstoff	61
-20564-1	106641	Sauerstoffsättigung Blut	T1 Sauerstoff	61
-20564-1	107811	Sauerstoffsättigung Blut	Sauerstoff	61
-20637-5	104833	Arginin Serum Plasma	Apherese Plasma	63
-20637-5	104834	Arginin Serum Plasma	Apherese Plasma	63
-20637-5	104846	Arginin Serum Plasma	Apherese Plasma	63
-55128-3	22	Entlassanordnung	Entlassung	77
-415-0	107861	Pivampicillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-415-0	107864	Pivampicillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-415-0	107867	Pivampicillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-21412-2	108675	Myokard Antikörpermuster Serum	P Antikoerper Mutter	61
-30239-8	103592	Aspartat-Aminotransferase Serum Plasma Zusatz P-5'-P	Zusatz	100
-42593-4	102721	Calcium Kapillarblut	Calcium	100
-42593-4	102743	Calcium Kapillarblut	Calcium	100
-42593-4	103054	Calcium Kapillarblut	Calcium	100
-42593-4	103058	Calcium Kapillarblut	CalciumFiltrat	65
-42593-4	104974	Calcium Kapillarblut	CRRT CalciumFiltrat	62
-42593-4	104995	Calcium Kapillarblut	CRRT CalciumFiltrat	62
-14581-3	104833	Paracetamol Serum Plasma	Apherese Plasma	62
-14581-3	104834	Paracetamol Serum Plasma	Apherese Plasma	62
-14581-3	104846	Paracetamol Serum Plasma	Apherese Plasma	62
-374-9	107861	Ofloxacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-374-9	107864	Ofloxacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-374-9	107867	Ofloxacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-93390-3	101435	Carbapenem-Resistance blaOXA-23-like+blaOXA-48- Gene Isolat Probenmaterial, molekulargenetisch	Resistance	100
-93390-3	103288	Carbapenem-Resistance blaOXA-23-like+blaOXA-48- Gene Isolat Probenmaterial, molekulargenetisch	MS Resistance	87
-93390-3	103328	Carbapenem-Resistance blaOXA-23-like+blaOXA-48- Gene Isolat Probenmaterial, molekulargenetisch	MS Resistance	87
-18725-2	101607	Mikrobiologie	Neurologie	61
-18725-2	101696	Mikrobiologie	Mikrobio	76
-18725-2	105271	Mikrobiologie	MikrobiologieAntibiogramm	68
-18725-2	106318	Mikrobiologie	MikrobiologieAntibiogramm	68
-18769-0	100079	Mikrobielle Empfindlichkeitstests	SM Empfindlichkeit	67
-18769-0	103388	Mikrobielle Empfindlichkeitstests	Empfindlichkeit	62
-18769-0	103393	Mikrobielle Empfindlichkeitstests	EmpfindlichkeitA	61
-18769-0	103394	Mikrobielle Empfindlichkeitstests	EmpfindlichkeitV	61
-18769-0	103398	Mikrobielle Empfindlichkeitstests	Siemens Empfindlichkeit	68
-76689-9	5	Geschlecht, zugewiesen Geburt	Geschlecht	100
-76689-9	108243	Geschlecht, zugewiesen Geburt	Geburt an	80
-76689-9	108244	Geschlecht, zugewiesen Geburt	Geburt VE	80
-22745-4	30	Ethanol Urin	Behandlung	64
-12956-9	108510	Trijodthyronin (T3) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12794-4	108510	Oxalat Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-47927-9	108510	Somatotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-25649-5	108510	Follitropin Serum Plasma . International Reference Preparation . Probenmaterial Stimulation	Atmung Stimulation	76
-25448-2	103069	Jod Serum Plasma	ADM Plasmavolumen	61
-25448-2	103085	Jod Serum Plasma	ADM Plasmavolumen	61
-25448-2	103145	Jod Serum Plasma	Doku Plasmalösung	62
-27880-4	108510	Follitropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-19-0	107861	Amoxicillin+Clavulanat minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-19-0	107864	Amoxicillin+Clavulanat minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-19-0	107867	Amoxicillin+Clavulanat minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-49005-2	102721	Calcium Peritonealdialysat	Calcium	100
-49005-2	102743	Calcium Peritonealdialysat	Calcium	100
-49005-2	103054	Calcium Peritonealdialysat	Calcium	100
-14877-5	104833	Phenytoin Serum Plasma	Apherese Plasma	65
-14877-5	104834	Phenytoin Serum Plasma	Apherese Plasma	65
-14877-5	104846	Phenytoin Serum Plasma	Apherese Plasma	65
-98981-4	101472	Harnsäure Blut	Blutgruppe	61
-42638-7	100203	Prothrombinzeit (PT) thrombozytenarmem Plasma Gerinnung :1 Kochsalzlösung ,9%	PT	100
-42638-7	100676	Prothrombinzeit (PT) thrombozytenarmem Plasma Gerinnung :1 Kochsalzlösung ,9%	PT	100
-5591-3	104833	Benzen Serum Plasma	Apherese Plasma	65
-5591-3	104834	Benzen Serum Plasma	Apherese Plasma	65
-5591-3	104846	Benzen Serum Plasma	Apherese Plasma	65
-4199-6	102744	Codein Dosis	CitratDosis	61
-17087-8	104833	Loperamid Serum Plasma	Apherese Plasma	65
-17087-8	104834	Loperamid Serum Plasma	Apherese Plasma	65
-17087-8	104846	Loperamid Serum Plasma	Apherese Plasma	65
-10912-4	104833	Blei Serum Plasma	Apherese Plasma	62
-10912-4	104834	Blei Serum Plasma	Apherese Plasma	62
-10912-4	104846	Blei Serum Plasma	Apherese Plasma	62
-318-6	107861	Methacyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-318-6	107864	Methacyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-318-6	107867	Methacyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-1360-7	108157	Corticotropin Plasma Stunde Dosis Insulin intravenös	Insulin ja	82
-1360-7	108158	Corticotropin Plasma Stunde Dosis Insulin intravenös	Insulin nein	74
-8310-5	100694	Körpertemperatur	PT Koerperstruktur	61
-8310-5	101007	Körpertemperatur	Temperaturstatus	65
-8310-5	102158	Körpertemperatur	Koerpertemperatur	94
-8310-5	102583	Körpertemperatur	Temperatur	80
-8310-5	102610	Körpertemperatur	Temperatur	80
-8310-5	102622	Körpertemperatur	Mess Temperatur	73
-8310-5	102623	Körpertemperatur	Mess Temperatur	73
-8310-5	102678	Körpertemperatur	Temperatur	80
-8310-5	102943	Körpertemperatur	Temperatur	80
-8310-5	102956	Körpertemperatur	BM25 Temperatur	67
-8310-5	102968	Körpertemperatur	ADM Temperatur	69
-8310-5	102980	Körpertemperatur	Temperatur	80
-8310-5	102993	Körpertemperatur	BM25 Temperatur	67
-8310-5	103007	Körpertemperatur	ADM Temperatur	69
-8310-5	103161	Körpertemperatur	Temperatur	80
-8310-5	103192	Körpertemperatur	Temperatur	80
-8310-5	103229	Körpertemperatur	Temperatur	80
-8310-5	103244	Körpertemperatur	Temperatur	80
-8310-5	103731	Körpertemperatur	Doku Temperatur	73
-8310-5	103734	Körpertemperatur	Doku ECMOTemperatur	71
-8310-5	103737	Körpertemperatur	ECMOTemperatur	76
-8310-5	103992	Körpertemperatur	Doku FluidAirPlus Temperatur	60
-8310-5	104101	Körpertemperatur	Temperatur1a	74
-8310-5	104102	Körpertemperatur	Temperatur1b	74
-8310-5	104103	Körpertemperatur	Temperatur2a	74
-8310-5	104104	Körpertemperatur	Temperatur2b	74
-8310-5	104105	Körpertemperatur	Temperatur3a	74
-8310-5	104106	Körpertemperatur	Temperatur3b	74
-8310-5	104107	Körpertemperatur	Temperatur 1a	71
-8310-5	104108	Körpertemperatur	Temperatur 2a	71
-8310-5	104109	Körpertemperatur	Temperatur 2b	71
-8310-5	104110	Körpertemperatur	Temperatur 1b	71
-8310-5	104111	Körpertemperatur	Temperatur 3a	71
-8310-5	104112	Körpertemperatur	Temperatur 3b	71
-8310-5	104147	Körpertemperatur	Airvo Temperatur	71
-8310-5	104831	Körpertemperatur	Apherese Temperatur	76
-8310-5	104844	Körpertemperatur	Apherese Temperatur	76
-8310-5	104880	Körpertemperatur	Temperatur	80
-8310-5	104896	Körpertemperatur	Temperatur	80
-8310-5	104921	Körpertemperatur	Temperatur	80
-8310-5	104936	Körpertemperatur	Temperatur	80
-8310-5	104973	Körpertemperatur	CRRT Temperatur	80
-8310-5	104994	Körpertemperatur	CRRT Temperatur	80
-8310-5	106327	Körpertemperatur	MS TemperaturIst	65
-8310-5	106333	Körpertemperatur	Temperatur	80
-8310-5	106337	Körpertemperatur	Temperatur	80
-8310-5	106517	Körpertemperatur	BairHugger Doku Temperatur	63
-8310-5	107854	Körpertemperatur	Doku Lufttemperatur	65
-8310-5	107860	Körpertemperatur	Lufttemperatur	69
-8310-5	107939	Körpertemperatur	P ADS ADS Systemtemperatur	65
-8310-5	107949	Körpertemperatur	P ADS ADS Systemtemperatur	65
-8310-5	108624	Körpertemperatur	P Lifetherm Temperatur	65
-8310-5	108630	Körpertemperatur	P Doku Lifetherm Temperatur	62
-8310-5	108632	Körpertemperatur	BairHugger Temperatur	72
-8310-5	108633	Körpertemperatur	P BarkeyWaermepaddels Temperatur	60
-8310-5	108742	Körpertemperatur	P Temperatur DeltaT	65
-8310-5	110753	Körpertemperatur	P Temperatur	81
-8310-5	110785	Körpertemperatur	P Temperatur	81
-8310-5	110805	Körpertemperatur	P Temperatur	81
-8310-5	110924	Körpertemperatur	P Temperatur Venoes	65
-8310-5	110925	Körpertemperatur	P Temperatur Arteriell	70
-8310-5	110926	Körpertemperatur	P Temperatur Haut	69
-8310-5	110927	Körpertemperatur	P Temperatur Naso	69
-8310-5	110929	Körpertemperatur	P Temperatur Tympanal	61
-8310-5	110930	Körpertemperatur	P Temperatur Rektal	71
-8310-5	110931	Körpertemperatur	P Temperatur Allg	69
-8310-5	110933	Körpertemperatur	P Temperatur Kern	81
-8310-5	110934	Körpertemperatur	P Temperatur generic	69
-8310-5	110936	Körpertemperatur	P Temperatur Kern	81
-8310-5	117157	Körpertemperatur	P MS TemperaturIst	67
-8310-5	117161	Körpertemperatur	P TemperaturZiel	71
-1827-5	103433	Alpha-1-Antitrypsin MS Serum Plasma	MS i	67
-1827-5	107839	Alpha-1-Antitrypsin MS Serum Plasma	MS i	67
-1827-5	110780	Alpha-1-Antitrypsin MS Serum Plasma	P MS	67
-40110-9	108510	aPTT thrombozytenarmem Plasma Gerinnungstest Tag Stimulation	Atmung Stimulation	76
-41395-5	104329	Probennahme-Datum Urin	Datum	100
-41395-5	117170	Probennahme-Datum Urin	Datennahme	62
-1629-5	108157	Somatotropin Serum Plasma Stunde Dosis Insulin intravenös	Insulin ja	82
-1629-5	108158	Somatotropin Serum Plasma Stunde Dosis Insulin intravenös	Insulin nein	74
-435-8	107861	Rolitetracyclin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-435-8	107864	Rolitetracyclin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-435-8	107867	Rolitetracyclin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-74097-7	103433	Tacrolimus Blut LC/MS/MS	MS i	67
-74097-7	106332	Tacrolimus Blut LC/MS/MS	MS Blutfluss	61
-74097-7	106378	Tacrolimus Blut LC/MS/MS	MS Blutfluss	61
-74097-7	107839	Tacrolimus Blut LC/MS/MS	MS i	67
-74097-7	110780	Tacrolimus Blut LC/MS/MS	P MS	67
-14640-7	102755	Kohlenstoffdioxid, Dialysat	Dialysat	100
-14640-7	103043	Kohlenstoffdioxid, Dialysat	Dialysat	100
-14640-7	103045	Kohlenstoffdioxid, Dialysat	BM25 Dialysat	76
-14640-7	103123	Kohlenstoffdioxid, Dialysat	Dialysat	100
-14640-7	103124	Kohlenstoffdioxid, Dialysat	BM25 Dialysat	76
-14640-7	104978	Kohlenstoffdioxid, Dialysat	CRRT Dialysat	76
-14640-7	104999	Kohlenstoffdioxid, Dialysat	CRRT Dialysat	76
-27172-6	102721	Calcium -Stunden-Stuhl	Calcium	100
-27172-6	102743	Calcium -Stunden-Stuhl	Calcium	100
-27172-6	102749	Calcium -Stunden-Stuhl	CalciumLoesung	63
-27172-6	102763	Calcium -Stunden-Stuhl	CalciumLoesung	63
-27172-6	103054	Calcium -Stunden-Stuhl	Calcium	100
-72903-8	101387	Harnstoff Blut	HarnstoffZiel	67
-72903-8	102477	Harnstoff Blut	HarnstoffZiel	67
-72903-8	102478	Harnstoff Blut	HarnstoffZiel	67
-9740-2	104833	Neopterin Serum Plasma	Apherese Plasma	65
-9740-2	104834	Neopterin Serum Plasma	Apherese Plasma	65
-9740-2	104846	Neopterin Serum Plasma	Apherese Plasma	65
-7502-8	108675	Motte IgE-Antikörper Serum	P Antikoerper Mutter	67
-47198-7	108510	Vasopressin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-100342-5	103433	Flüchtige organische Verbindungen assoziiert SARS-CoV-2-Infektion Exhalat GC-MS	MS i	67
-100342-5	103598	Flüchtige organische Verbindungen assoziiert SARS-CoV-2-Infektion Exhalat GC-MS	Infektion	100
-100342-5	107839	Flüchtige organische Verbindungen assoziiert SARS-CoV-2-Infektion Exhalat GC-MS	MS i	67
-100342-5	110780	Flüchtige organische Verbindungen assoziiert SARS-CoV-2-Infektion Exhalat GC-MS	P MS	67
-7232-2	108675	Ruditapes spp IgG-Antikörper Serum	P Antikoerper Mutter	60
-16561-3	108510	Katecholamine Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-23559-8	102128	Vesikuläre-Stomatitis-Virus Antigen Haut Komplementbindungsreaktion	Kopf Haut	62
-23559-8	102142	Vesikuläre-Stomatitis-Virus Antigen Haut Komplementbindungsreaktion	Haut	100
-26013-3	108510	17-Hydroxycorticosteroide -Stunden-Urin Tage Stimulation	Atmung Stimulation	76
-51694-8	102597	Carumonam	Bicarbonat	63
-51694-8	102677	Carumonam	Bicarbonat	63
-51694-8	103160	Carumonam	Bicarbonat	63
-51694-8	103191	Carumonam	Bicarbonat	63
-51694-8	103227	Carumonam	Bicarbonat	63
-51694-8	103243	Carumonam	Bicarbonat	63
-51694-8	104881	Carumonam	Bicarbonat	63
-51694-8	104897	Carumonam	Bicarbonat	63
-51694-8	104922	Carumonam	Bicarbonat	63
-51694-8	104937	Carumonam	Bicarbonat	63
-56546-5	108157	Insulin Antikörper Serum Immunoassay	Insulin ja	82
-56546-5	108158	Insulin Antikörper Serum Immunoassay	Insulin nein	74
-11158-3	107787	Aussehen Serum	Doku Aussehen Dialysat	73
-427-5	107861	Rifampicin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-427-5	107864	Rifampicin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-427-5	107867	Rifampicin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-6298-4	101383	Kalium Blut	BlutflussMax	61
-6298-4	102102	Kalium Blut	Blutfluss	60
-6298-4	102496	Kalium Blut	BlutflussMax	61
-6298-4	102499	Kalium Blut	BlutflussMax	61
-6298-4	102937	Kalium Blut	BlutflussMax	61
-6298-4	102976	Kalium Blut	Blutfluss	60
-6298-4	103152	Kalium Blut	Blutfluss	60
-6298-4	103180	Kalium Blut	Blutfluss	60
-6298-4	103220	Kalium Blut	Blutfluss	60
-6298-4	103238	Kalium Blut	BlutflussMax	61
-6298-4	103335	Kalium Blut	ZielKalium	67
-6298-4	104888	Kalium Blut	Blutfluss	60
-6298-4	104907	Kalium Blut	Blutfluss	60
-6298-4	104930	Kalium Blut	BlutflussMax	61
-6298-4	106332	Kalium Blut	MS Blutfluss	61
-6298-4	106339	Kalium Blut	Blutfluss	60
-6298-4	106378	Kalium Blut	MS Blutfluss	61
-6298-4	106381	Kalium Blut	Blutfluss	60
-16659-5	108510	Corticotropin Plasma Radioimmunoassay ,5 Stunden Stimulation	Atmung Stimulation	76
-30242-2	110925	Lactat arteriellem Blut	P Temperatur Arteriell	62
-35331-8	104833	Oxcarbazepin Serum Plasma	Apherese Plasma	60
-35331-8	104834	Oxcarbazepin Serum Plasma	Apherese Plasma	60
-35331-8	104846	Oxcarbazepin Serum Plasma	Apherese Plasma	60
-26787-2	102107	Anserin Amnionflüssigkeit	PatFluessigkeitRate	60
-40809-6	108510	11-Desoxycortisol Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-93851-4	101327	Delamanid	Land	62
-77599-9	12	Ergänzende	Perzentile	63
-50615-4	108510	Wasserstoff/Ausatemluft Exhalat Stunden Stimulation	Atmung Stimulation	76
-38425-5	108510	C-Peptid Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-10835-7	104833	LipoproteinSerum Plasma	Apherese Plasma	63
-10835-7	104834	LipoproteinSerum Plasma	Apherese Plasma	63
-10835-7	104846	LipoproteinSerum Plasma	Apherese Plasma	63
-34373-1	104252	Serotonin Urin	Servoi Ti	61
-34373-1	104280	Serotonin Urin	Servoi Ti	61
-2482-8	108157	Insulin Antikörper Serum	Insulin ja	82
-2482-8	108158	Insulin Antikörper Serum	Insulin nein	74
-2482-8	108675	Insulin Antikörper Serum	P Antikoerper Mutter	60
-3396-9	103145	Kokain Serum Plasma	Doku Plasmalösung	63
-25508-3	108510	Progesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-33811-1	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33811-1	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33811-1	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-25657-8	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-144-6	107861	Cefuroxim parenteral minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-144-6	107864	Cefuroxim parenteral minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-144-6	107867	Cefuroxim parenteral minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-5881-8	102128	Varicella-Zoster-Virus Antigen Haut Immunfluoreszenztest	Kopf Haut	62
-5881-8	102142	Varicella-Zoster-Virus Antigen Haut Immunfluoreszenztest	Haut	100
-136-2	107861	Ceftizoxim minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-136-2	107864	Ceftizoxim minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-136-2	107867	Ceftizoxim minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-56494-8	108510	Lutropin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-51500-7	108510	Estradiol (E2) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-51490-1	108510	Cortisol Speichel . Probenmaterial Stimulation	Atmung Stimulation	76
-12526-0	108510	Noradrenalin Plasma Stunden Stimulation	Atmung Stimulation	76
-3158-3	102107	-Stunden-Körperflüssigkeit	PatFluessigkeitRate	62
-43-0	107861	Aztreonam minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-43-0	107864	Aztreonam minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-43-0	107867	Aztreonam minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-54182-1	108100	Para-Aminosalicylat Agardiffusion	Para	100
-40252-9	108510	Creatinin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-2000-8	102721	Calcium Serum Plasma	Calcium	100
-2000-8	102743	Calcium Serum Plasma	Calcium	100
-2000-8	103054	Calcium Serum Plasma	Calcium	100
-2000-8	103062	Calcium Serum Plasma	MS Calciumfluss	63
-2000-8	104968	Calcium Serum Plasma	CRRT MS Calciumfluss	60
-2000-8	107934	Calcium Serum Plasma	P ADS MS ADS Calcium postFilter	64
-2000-8	107935	Calcium Serum Plasma	P ADS MS ADS Calcium preFilter	61
-18879-7	102533	Cefepim	CFI	60
-19113-0	104833	IgE Serum Plasma	Apherese Plasma	65
-19113-0	104834	IgE Serum Plasma	Apherese Plasma	65
-19113-0	104846	IgE Serum Plasma	Apherese Plasma	65
-92726-9	103433	17-Hydroxyprogesteron Trockenblut LC/MS/MS	MS i	67
-92726-9	107839	17-Hydroxyprogesteron Trockenblut LC/MS/MS	MS i	67
-92726-9	110780	17-Hydroxyprogesteron Trockenblut LC/MS/MS	P MS	67
-111-5	107861	Cefotetan minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-111-5	107864	Cefotetan minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-111-5	107867	Cefotetan minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-25101-7	103750	Fumarat/Creatinin Urin	Reanimation	61
-30895-7	102581	Renin Plasma	Plasmavolumen	64
-30895-7	102585	Renin Plasma	Plasmarate	73
-30895-7	103063	Renin Plasma	Plasmavolumen	64
-30895-7	103065	Renin Plasma	Plasmavolumen	64
-30895-7	103143	Renin Plasma	Plasmaloesung	64
-30895-7	104833	Renin Plasma	Apherese Plasma	67
-30895-7	104834	Renin Plasma	Apherese Plasma	67
-30895-7	104846	Renin Plasma	Apherese Plasma	67
-22761-1	102585	Pristanat Serum Plasma	Plasmarate	62
-7994-7	108675	Rickettsia Antikörper Serum	P Antikoerper Mutter	61
-12625-0	108510	Glucose Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3296-1	104833	Acepromazin Serum Plasma	Apherese Plasma	62
-3296-1	104834	Acepromazin Serum Plasma	Apherese Plasma	62
-3296-1	104846	Acepromazin Serum Plasma	Apherese Plasma	62
-14903-9	101383	Folat Blut	BlutflussMax	64
-14903-9	102102	Folat Blut	Blutfluss	63
-14903-9	102496	Folat Blut	BlutflussMax	64
-14903-9	102499	Folat Blut	BlutflussMax	64
-14903-9	102937	Folat Blut	BlutflussMax	64
-14903-9	102976	Folat Blut	Blutfluss	63
-14903-9	103152	Folat Blut	Blutfluss	63
-14903-9	103180	Folat Blut	Blutfluss	63
-14903-9	103220	Folat Blut	Blutfluss	63
-14903-9	103238	Folat Blut	BlutflussMax	64
-14903-9	104888	Folat Blut	Blutfluss	63
-14903-9	104907	Folat Blut	Blutfluss	63
-14903-9	104930	Folat Blut	BlutflussMax	64
-14903-9	104943	Folat Blut	Blutfluss Max	61
-14903-9	106339	Folat Blut	Blutfluss	63
-14903-9	106381	Folat Blut	Blutfluss	63
-3886-9	104833	Oxazepam Serum Plasma	Apherese Plasma	61
-3886-9	104834	Oxazepam Serum Plasma	Apherese Plasma	61
-3886-9	104846	Oxazepam Serum Plasma	Apherese Plasma	61
-33247-8	6	Gewicht Schweiß	Gewicht	100
-33247-8	103749	Gewicht Schweiß	GewichtGroeße	62
-33247-8	104258	Gewicht Schweiß	Servoi Gewicht	79
-33247-8	110886	Gewicht Schweiß	P Gewicht WaageBezeichnung	67
-33247-8	110904	Gewicht Schweiß	P Gewicht	88
-17241-1	108510	Prolaktin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-11502-2	100	Laborbericht	Laborwert	76
-11502-2	106739	Laborbericht	CO Bericht	64
-5919-6	102755	Creatinin Dialysat	Dialysat	100
-5919-6	103043	Creatinin Dialysat	Dialysat	100
-5919-6	103045	Creatinin Dialysat	BM25 Dialysat	76
-5919-6	103123	Creatinin Dialysat	Dialysat	100
-5919-6	103124	Creatinin Dialysat	BM25 Dialysat	76
-5919-6	104966	Creatinin Dialysat	CRRT MS DialysatvolKum	60
-5919-6	104978	Creatinin Dialysat	CRRT Dialysat	77
-5919-6	104999	Creatinin Dialysat	CRRT Dialysat	77
-5919-6	105009	Creatinin Dialysat	CRRT Dialysatloesung	63
-5919-6	106396	Creatinin Dialysat	CRRT MS DialysatvolKum	60
-5919-6	107787	Creatinin Dialysat	Doku Aussehen Dialysat	62
-95-0	107861	Cefonicid minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-95-0	107864	Cefonicid minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-95-0	107867	Cefonicid minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-40161-2	108510	Glucose Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-26435-8	101607	Molekularpathologie	Neurologie	62
-25374-0	104833	Chrom Serum Plasma	Apherese Plasma	67
-25374-0	104834	Chrom Serum Plasma	Apherese Plasma	67
-25374-0	104846	Chrom Serum Plasma	Apherese Plasma	67
-81096-0	100999	West-Nil-Virus, Kunjin-Stamm IgM-Antikörper Serum	Stamm	100
-18866-4	100268	Azithromycin	ZeitHoch	60
-18866-4	100305	Azithromycin	ZeitHoch	60
-18866-4	103417	Azithromycin	ZeitHoch	60
-40112-5	108510	Creatinin Serum Plasma -- Stimulation	Atmung Stimulation	76
-2755-7	110752	pH Stuhl	P Strahler	67
-5811-5	6	Spezifisches Gewicht Urin Teststreifen	Gewicht	100
-5811-5	104258	Spezifisches Gewicht Urin Teststreifen	Servoi Gewicht	67
-5811-5	110904	Spezifisches Gewicht Urin Teststreifen	P Gewicht	88
-14390-9	102755	Amylase Dialysat	Dialysat	100
-14390-9	103043	Amylase Dialysat	Dialysat	100
-14390-9	103045	Amylase Dialysat	BM25 Dialysat	76
-14390-9	103123	Amylase Dialysat	Dialysat	100
-14390-9	103124	Amylase Dialysat	BM25 Dialysat	76
-14390-9	104978	Amylase Dialysat	CRRT Dialysat	76
-14390-9	104999	Amylase Dialysat	CRRT Dialysat	76
-14390-9	107787	Amylase Dialysat	Doku Aussehen Dialysat	67
-14390-9	107802	Amylase Dialysat	Dialysat1	64
-14390-9	107803	Amylase Dialysat	Dialysat2	64
-16793-2	144	Medikamente identifiziert Substanz Screening	Medikamente gestellt	71
-2820-9	102106	Kalium Dialysat	Dialysatfluß	77
-2820-9	102114	Kalium Dialysat	Mess Dialysatfluß	71
-2820-9	102631	Kalium Dialysat	Mess Dialysatvolumen	63
-2820-9	102690	Kalium Dialysat	Dialysatloesung	67
-2820-9	102755	Kalium Dialysat	Dialysat	100
-2820-9	103042	Kalium Dialysat	Dialysatlösung	71
-2820-9	103043	Kalium Dialysat	Dialysat	100
-2820-9	103045	Kalium Dialysat	BM25 Dialysat	76
-2820-9	103095	Kalium Dialysat	Doku Dialysatlösung	67
-2820-9	103123	Kalium Dialysat	Dialysat	100
-2820-9	103124	Kalium Dialysat	BM25 Dialysat	76
-2820-9	103335	Kalium Dialysat	ZielKalium	64
-2820-9	104978	Kalium Dialysat	CRRT Dialysat	76
-2820-9	104999	Kalium Dialysat	CRRT Dialysat	76
-2820-9	107787	Kalium Dialysat	Doku Aussehen Dialysat	70
-2820-9	107790	Kalium Dialysat	Doku Dialysat1	76
-2820-9	107791	Kalium Dialysat	Doku Dialysat2	76
-2820-9	107802	Kalium Dialysat	Dialysat1	67
-2820-9	107803	Kalium Dialysat	Dialysat2	67
-56523-4	108157	Insulin- WachstumsfaktorSerum Plasma Minuten Stimulation	Insulin ja	82
-56523-4	108158	Insulin- WachstumsfaktorSerum Plasma Minuten Stimulation	Insulin nein	74
-56523-4	108510	Insulin- WachstumsfaktorSerum Plasma Minuten Stimulation	Atmung Stimulation	76
-10834-0	10	Globulin Serum, berechnet	errechneter Geburtstermin	65
-76482-9	104833	ApolipoproteinSerum Plasma	Apherese Plasma	63
-76482-9	104834	ApolipoproteinSerum Plasma	Apherese Plasma	63
-76482-9	104846	ApolipoproteinSerum Plasma	Apherese Plasma	63
-14933-6	104833	Harnsäure Serum Plasma	Apherese Plasma	67
-14933-6	104834	Harnsäure Serum Plasma	Apherese Plasma	67
-14933-6	104846	Harnsäure Serum Plasma	Apherese Plasma	67
-14933-6	104852	Harnsäure Serum Plasma	Apherese Plasmaloesung	60
-27890-3	108510	Somatotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-2513-0	104833	Ketone Serum Plasma	Apherese Plasma	65
-2513-0	104834	Ketone Serum Plasma	Apherese Plasma	65
-2513-0	104846	Ketone Serum Plasma	Apherese Plasma	65
-3126-0	104833	Vasopressin Serum Plasma	Apherese Plasma	62
-3126-0	104834	Vasopressin Serum Plasma	Apherese Plasma	62
-3126-0	104846	Vasopressin Serum Plasma	Apherese Plasma	62
-9699-0	104833	Paroxetin Serum Plasma	Apherese Plasma	65
-9699-0	104834	Paroxetin Serum Plasma	Apherese Plasma	65
-9699-0	104846	Paroxetin Serum Plasma	Apherese Plasma	65
-59833-4	107861	Antibiotikum minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-59833-4	107864	Antibiotikum minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-59833-4	107867	Antibiotikum minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-21279-5	108510	Follitropin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-27946-3	108510	Lactat Blut Stunde Stimulation	Atmung Stimulation	76
-47753-9	108157	Somatotropin Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin ja	82
-47753-9	108158	Somatotropin Serum Plasma ,5 Stunden Dosis Insulin intravenös	Insulin nein	74
-3157-5	101381	Blut	Bolus	67
-3157-5	102102	Blut	Blutfluss	62
-3157-5	102464	Blut	Bolus	67
-3157-5	102465	Blut	Bolus	67
-3157-5	102976	Blut	Blutfluss	62
-3157-5	103135	Blut	Bolus	67
-3157-5	103152	Blut	Blutfluss	62
-3157-5	103180	Blut	Blutfluss	62
-3157-5	103220	Blut	Blutfluss	62
-3157-5	104888	Blut	Blutfluss	62
-3157-5	104907	Blut	Blutfluss	62
-3157-5	104950	Blut	Bolus	67
-3157-5	106339	Blut	Blutfluss	62
-3157-5	106381	Blut	Blutfluss	62
-491-1	107861	Temocillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-491-1	107864	Temocillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-491-1	107867	Temocillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-33821-0	104833	Interleukin-1 Alpha Serum Plasma	Apherese Plasma	64
-33821-0	104834	Interleukin-1 Alpha Serum Plasma	Apherese Plasma	64
-33821-0	104846	Interleukin-1 Alpha Serum Plasma	Apherese Plasma	64
-21276-1	108510	Follitropin Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-14867-6	104833	Paroxetin Serum Plasma	Apherese Plasma	65
-14867-6	104834	Paroxetin Serum Plasma	Apherese Plasma	65
-14867-6	104846	Paroxetin Serum Plasma	Apherese Plasma	65
-13041-9	108510	C-Peptid Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-47157-3	108510	Noradrenalin Plasma Stunde Stimulation	Atmung Stimulation	76
-13495-7	102106	-Stunden-Dialysat	Dialysatfluß	67
-13495-7	102114	-Stunden-Dialysat	Mess Dialysatfluß	62
-13495-7	102631	-Stunden-Dialysat	Mess Dialysatvolumen	61
-13495-7	102690	-Stunden-Dialysat	Dialysatloesung	71
-13495-7	102755	-Stunden-Dialysat	Dialysat	100
-13495-7	102897	-Stunden-Dialysat	Dialysatfiltrate	62
-13495-7	103042	-Stunden-Dialysat	Dialysatlösung	76
-13495-7	103043	-Stunden-Dialysat	Dialysat	100
-13495-7	103045	-Stunden-Dialysat	BM25 Dialysat	76
-13495-7	103095	-Stunden-Dialysat	Doku Dialysatlösung	71
-13495-7	103123	-Stunden-Dialysat	Dialysat	100
-13495-7	103124	-Stunden-Dialysat	BM25 Dialysat	76
-13495-7	104978	-Stunden-Dialysat	CRRT Dialysat	76
-13495-7	104999	-Stunden-Dialysat	CRRT Dialysat	76
-13495-7	105009	-Stunden-Dialysat	CRRT Dialysatloesung	61
-13495-7	107787	-Stunden-Dialysat	Doku Aussehen Dialysat	67
-13495-7	107790	-Stunden-Dialysat	Doku Dialysat1	67
-13495-7	107791	-Stunden-Dialysat	Doku Dialysat2	67
-13495-7	107802	-Stunden-Dialysat	Dialysat1	64
-13495-7	107803	-Stunden-Dialysat	Dialysat2	64
-13494-0	102106	-Stunden-Dialysat	Dialysatfluß	67
-13494-0	102114	-Stunden-Dialysat	Mess Dialysatfluß	62
-13494-0	102631	-Stunden-Dialysat	Mess Dialysatvolumen	61
-13494-0	102690	-Stunden-Dialysat	Dialysatloesung	71
-13494-0	102755	-Stunden-Dialysat	Dialysat	100
-13494-0	102897	-Stunden-Dialysat	Dialysatfiltrate	62
-13494-0	103042	-Stunden-Dialysat	Dialysatlösung	76
-13494-0	103043	-Stunden-Dialysat	Dialysat	100
-13494-0	103045	-Stunden-Dialysat	BM25 Dialysat	76
-13494-0	103095	-Stunden-Dialysat	Doku Dialysatlösung	71
-13494-0	103123	-Stunden-Dialysat	Dialysat	100
-13494-0	103124	-Stunden-Dialysat	BM25 Dialysat	76
-13494-0	104978	-Stunden-Dialysat	CRRT Dialysat	76
-13494-0	104999	-Stunden-Dialysat	CRRT Dialysat	76
-13494-0	105009	-Stunden-Dialysat	CRRT Dialysatloesung	61
-13494-0	107787	-Stunden-Dialysat	Doku Aussehen Dialysat	67
-13494-0	107790	-Stunden-Dialysat	Doku Dialysat1	67
-13494-0	107791	-Stunden-Dialysat	Doku Dialysat2	67
-13494-0	107802	-Stunden-Dialysat	Dialysat1	64
-13494-0	107803	-Stunden-Dialysat	Dialysat2	64
-48983-1	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-39467-6	104978	Chlorid Peritonealdialysat	CRRT Dialysat	62
-39467-6	104999	Chlorid Peritonealdialysat	CRRT Dialysat	62
-55389-1	108157	Insulin Serum Plasma Stunden Stimulation	Insulin ja	82
-55389-1	108158	Insulin Serum Plasma Stunden Stimulation	Insulin nein	74
-55389-1	108510	Insulin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-14887-4	104833	Primidon Serum Plasma	Apherese Plasma	61
-14887-4	104834	Primidon Serum Plasma	Apherese Plasma	61
-14887-4	104846	Primidon Serum Plasma	Apherese Plasma	61
-50507-3	108157	Insulin Serum Plasma . Probenmaterial	Insulin ja	82
-50507-3	108158	Insulin Serum Plasma . Probenmaterial	Insulin nein	74
-261-8	107861	Fusidat minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-261-8	107864	Fusidat minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-261-8	107867	Fusidat minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14415-4	102721	Calcium Amnionflüssigkeit	Calcium	100
-14415-4	102743	Calcium Amnionflüssigkeit	Calcium	100
-14415-4	103054	Calcium Amnionflüssigkeit	Calcium	100
-9736-0	104833	Allopurinol Serum Plasma	Apherese Plasma	62
-9736-0	104834	Allopurinol Serum Plasma	Apherese Plasma	62
-9736-0	104846	Allopurinol Serum Plasma	Apherese Plasma	62
-19256-7	100808	Sauerstoff Körpertemperatur Kapillarblut	Sauerstoff	100
-19256-7	101481	Sauerstoff Körpertemperatur Kapillarblut	Sauerstoff	100
-19256-7	102942	Sauerstoff Körpertemperatur Kapillarblut	G5 Sauerstoff	87
-19256-7	104804	Sauerstoff Körpertemperatur Kapillarblut	MS C2 Sauerstoff	77
-19256-7	104808	Sauerstoff Körpertemperatur Kapillarblut	C2 Sauerstoff	87
-19256-7	106641	Sauerstoff Körpertemperatur Kapillarblut	T1 Sauerstoff	87
-19256-7	107811	Sauerstoff Körpertemperatur Kapillarblut	Sauerstoff	100
-19256-7	107980	Sauerstoff Körpertemperatur Kapillarblut	P C3 Sauerstoff	80
-19256-7	108012	Sauerstoff Körpertemperatur Kapillarblut	P MS C3 Sauerstoff	71
-19256-7	110866	Sauerstoff Körpertemperatur Kapillarblut	Heimbeatmung Sauerstoff	61
-1637-8	108157	Somatotropin Serum Plasma -- Dosis Insulin intravenös	Insulin ja	82
-1637-8	108158	Somatotropin Serum Plasma -- Dosis Insulin intravenös	Insulin nein	74
-30535-9	102139	Leber-Nieren-Mikrosomen-1 Antikörper Serum	Abdomen Nieren	60
-29775-4	108157	Insulin- WachstumsfaktorSerum Plasma	Insulin ja	82
-29775-4	108158	Insulin- WachstumsfaktorSerum Plasma	Insulin nein	74
-30926-0	106365	Aluminium Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30926-0	106366	Aluminium Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30926-0	110899	Aluminium Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-30926-0	110900	Aluminium Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-17373-2	108510	Noradrenalin Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-2498-4	102615	Eisen Serum Plasma	Mess Plasmavolumen	61
-2498-4	104833	Eisen Serum Plasma	Apherese Plasma	67
-2498-4	104834	Eisen Serum Plasma	Apherese Plasma	67
-2498-4	104846	Eisen Serum Plasma	Apherese Plasma	67
-2498-4	104852	Eisen Serum Plasma	Apherese Plasmaloesung	60
-14582-1	104833	Aceton Serum Plasma	Apherese Plasma	65
-14582-1	104834	Aceton Serum Plasma	Apherese Plasma	65
-14582-1	104846	Aceton Serum Plasma	Apherese Plasma	65
-30923-7	106365	Chrom Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30923-7	106366	Chrom Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30923-7	110899	Chrom Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-30923-7	110900	Chrom Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-47519-4	106521	Anamnese Maßnahmen - Dokument	Anamnese Nein	76
-47519-4	106522	Anamnese Maßnahmen - Dokument	Anamnese Ja	84
-47519-4	106649	Anamnese Maßnahmen - Dokument	Anamnese	100
-33437-5	100807	Sauerstoff Kapillarblut transkutanem O2-Monitoring	O2	100
-33437-5	100808	Sauerstoff Kapillarblut transkutanem O2-Monitoring	Sauerstoff	100
-33437-5	101481	Sauerstoff Kapillarblut transkutanem O2-Monitoring	Sauerstoff	100
-33437-5	101624	Sauerstoff Kapillarblut transkutanem O2-Monitoring	O2	100
-33437-5	102198	Sauerstoff Kapillarblut transkutanem O2-Monitoring	O2	100
-33437-5	102942	Sauerstoff Kapillarblut transkutanem O2-Monitoring	G5 Sauerstoff	87
-33437-5	104804	Sauerstoff Kapillarblut transkutanem O2-Monitoring	MS C2 Sauerstoff	77
-33437-5	104808	Sauerstoff Kapillarblut transkutanem O2-Monitoring	C2 Sauerstoff	87
-33437-5	106641	Sauerstoff Kapillarblut transkutanem O2-Monitoring	T1 Sauerstoff	87
-33437-5	107811	Sauerstoff Kapillarblut transkutanem O2-Monitoring	Sauerstoff	100
-33437-5	107980	Sauerstoff Kapillarblut transkutanem O2-Monitoring	P C3 Sauerstoff	80
-33437-5	108012	Sauerstoff Kapillarblut transkutanem O2-Monitoring	P MS C3 Sauerstoff	71
-33437-5	110866	Sauerstoff Kapillarblut transkutanem O2-Monitoring	Heimbeatmung Sauerstoff	61
-33437-5	113045	Sauerstoff Kapillarblut transkutanem O2-Monitoring	P EEG Monitoring	77
-56927-7	104816	Hepatitis-C-Virus c2 Antikörper Serum Immunoblot	C2	100
-56927-7	104822	Hepatitis-C-Virus c2 Antikörper Serum Immunoblot	C2	100
-56927-7	104823	Hepatitis-C-Virus c2 Antikörper Serum Immunoblot	C2	100
-56927-7	106283	Hepatitis-C-Virus c2 Antikörper Serum Immunoblot	C2	100
-39799-2	104833	Risperidon Serum Plasma	Apherese Plasma	63
-39799-2	104834	Risperidon Serum Plasma	Apherese Plasma	63
-39799-2	104846	Risperidon Serum Plasma	Apherese Plasma	63
-19177-5	104833	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-19177-5	104834	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-19177-5	104846	Alpha-1-Fetoprotein Serum Plasma	Apherese Plasma	64
-29389-4	102107	Paracetamol Magenflüssigkeit	PatFluessigkeitRate	61
-30362-8	108157	Insulin Serum Plasma MinutenGlucose	Insulin ja	82
-30362-8	108158	Insulin Serum Plasma MinutenGlucose	Insulin nein	74
-27066-0	108510	Ketone Urin Stunden Stimulation	Atmung Stimulation	76
-1795-4	102113	Amylase Körperflüssigkeit	Mess PatFluessigkeitRate	60
-1795-4	102699	Amylase Körperflüssigkeit	Dialysierfluessigke	62
-3777-0	104833	Methamphetamin Serum Plasma	Apherese Plasma	62
-3777-0	104834	Methamphetamin Serum Plasma	Apherese Plasma	62
-3777-0	104846	Methamphetamin Serum Plasma	Apherese Plasma	62
-17488-8	108510	Progesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-7965-7	108675	Mumps-Virus Antikörper Serum	P Antikoerper Mutter	64
-33813-7	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33813-7	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33813-7	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-40290-9	108157	Insulin Serum Plasma ,5 Stunden Stimulation	Insulin ja	82
-40290-9	108158	Insulin Serum Plasma ,5 Stunden Stimulation	Insulin nein	74
-40290-9	108510	Insulin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-1553-7	108157	Glucose Serum Plasma -- Dosis Insulin intravenös	Insulin ja	82
-1553-7	108158	Glucose Serum Plasma -- Dosis Insulin intravenös	Insulin nein	74
-56445-0	101391	Medikationsübersicht - Dokument	Dokumentation	63
-56445-0	101405	Medikationsübersicht - Dokument	Dokumentation	63
-56445-0	101417	Medikationsübersicht - Dokument	Dokumentation	63
-56268-6	108675	Gluten IgG4-Antikörper Serum	P Antikoerper Mutter	60
-26613-0	104833	Sarkosin Serum Plasma	Apherese Plasma	61
-26613-0	104834	Sarkosin Serum Plasma	Apherese Plasma	61
-26613-0	104846	Sarkosin Serum Plasma	Apherese Plasma	61
-45302-7	102106	Harnstoff Dialysat	Dialysatfluß	62
-45302-7	102755	Harnstoff Dialysat	Dialysat	100
-45302-7	103043	Harnstoff Dialysat	Dialysat	100
-45302-7	103045	Harnstoff Dialysat	BM25 Dialysat	76
-45302-7	103123	Harnstoff Dialysat	Dialysat	100
-45302-7	103124	Harnstoff Dialysat	BM25 Dialysat	76
-45302-7	104978	Harnstoff Dialysat	CRRT Dialysat	76
-45302-7	104999	Harnstoff Dialysat	CRRT Dialysat	76
-45302-7	107787	Harnstoff Dialysat	Doku Aussehen Dialysat	62
-45302-7	107790	Harnstoff Dialysat	Doku Dialysat1	62
-45302-7	107791	Harnstoff Dialysat	Doku Dialysat2	62
-70217-5	104913	Thyroxin (T4) frei Serum Plasma Dialyse	Dialyse Zeit	74
-70217-5	110802	Thyroxin (T4) frei Serum Plasma Dialyse	P Dialyse Zeit	67
-70217-5	110818	Thyroxin (T4) frei Serum Plasma Dialyse	P Dialyse Zeit	67
-25627-1	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-41651-1	104832	Glucose arteriellem Blut	Apherese Blutfluss	62
-96826-3	108725	Kardiovaskuläres System Sepsis-related Organ Failure Assessment (SOFA)	P Doku System	63
-29527-9	102729	Citrat/Creatinin Urin	Citrat	100
-29527-9	103053	Citrat/Creatinin Urin	Citrat	100
-43942-2	108157	Insulin frei Serum Plasma	Insulin ja	82
-43942-2	108158	Insulin frei Serum Plasma	Insulin nein	74
-18186-7	102721	Calcium -Stunden-Urin	Calcium	100
-18186-7	102743	Calcium -Stunden-Urin	Calcium	100
-18186-7	103054	Calcium -Stunden-Urin	Calcium	100
-18186-7	105006	Calcium -Stunden-Urin	CRRT CalciumLoesung	62
-39996-4	108510	Creatinin Urin Tag Stimulation	Atmung Stimulation	76
-10163-4	106521	Anamnese früherer Schwangerschaften	Anamnese Nein	76
-10163-4	106522	Anamnese früherer Schwangerschaften	Anamnese Ja	84
-10163-4	106526	Anamnese früherer Schwangerschaften	Anamnese Schwangerschaft	83
-10163-4	106527	Anamnese früherer Schwangerschaften	Anamnese Schwangerschaft Nein	83
-10163-4	106528	Anamnese früherer Schwangerschaften	Anamnese Schwangerschaft Ja	82
-10163-4	106649	Anamnese früherer Schwangerschaften	Anamnese	100
-10163-4	106665	Anamnese früherer Schwangerschaften	Schwangerschaftstest durchgefuehrt	65
-10163-4	108129	Anamnese früherer Schwangerschaften	Schwangerschaft	61
-10163-4	108130	Anamnese früherer Schwangerschaften	Schwangerschaft ICSI	63
-10163-4	108131	Anamnese früherer Schwangerschaften	Schwangerschaft IVF	64
-10163-4	108132	Anamnese früherer Schwangerschaften	Schwangerschaft an	69
-10163-4	108161	Anamnese früherer Schwangerschaften	Medikamente Schwangerschaft Text	64
-10163-4	108162	Anamnese früherer Schwangerschaften	Probleme Schwangerschaft Text	63
-5810-7	6	Spezifisches Gewicht Urin Refraktometrie	Gewicht	100
-5810-7	104258	Spezifisches Gewicht Urin Refraktometrie	Servoi Gewicht	67
-5810-7	110904	Spezifisches Gewicht Urin Refraktometrie	P Gewicht	88
-14798-3	102615	Eisen Serum Plasma	Mess Plasmavolumen	61
-14798-3	104833	Eisen Serum Plasma	Apherese Plasma	67
-14798-3	104834	Eisen Serum Plasma	Apherese Plasma	67
-14798-3	104846	Eisen Serum Plasma	Apherese Plasma	67
-14798-3	104852	Eisen Serum Plasma	Apherese Plasmaloesung	60
-160-2	107861	Cephalothin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-160-2	107864	Cephalothin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-160-2	107867	Cephalothin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-51673-2	108510	17-Hydroxypregnenolon Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-47930-3	108510	Somatotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-5724-0	103143	Selen Serum Plasma	Plasmaloesung	65
-5724-0	104833	Selen Serum Plasma	Apherese Plasma	67
-5724-0	104834	Selen Serum Plasma	Apherese Plasma	67
-5724-0	104846	Selen Serum Plasma	Apherese Plasma	67
-1994-3	102721	Calcium.ionisiert Blut	Calcium	100
-1994-3	102743	Calcium.ionisiert Blut	Calcium	100
-1994-3	103054	Calcium.ionisiert Blut	Calcium	100
-27955-4	108510	Lactat Blut Stunden Stimulation	Atmung Stimulation	76
-298-0	107861	Lincomycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-298-0	107864	Lincomycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-298-0	107867	Lincomycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-14622-5	104833	Ascorbat Serum Plasma	Apherese Plasma	61
-14622-5	104834	Ascorbat Serum Plasma	Apherese Plasma	61
-14622-5	104846	Ascorbat Serum Plasma	Apherese Plasma	61
-4671-4	104032	ProteinPlasma	MS HorowitzINPULS	60
-4671-4	104833	ProteinPlasma	Apherese Plasma	64
-4671-4	104834	ProteinPlasma	Apherese Plasma	64
-4671-4	104846	ProteinPlasma	Apherese Plasma	64
-29655-8	104833	Oxazepam Serum Plasma	Apherese Plasma	61
-29655-8	104834	Oxazepam Serum Plasma	Apherese Plasma	61
-29655-8	104846	Oxazepam Serum Plasma	Apherese Plasma	61
-2005-7	102721	Calcium -Stunden-Urin -- Stunden Nahrungskarenz	Calcium	100
-2005-7	102743	Calcium -Stunden-Urin -- Stunden Nahrungskarenz	Calcium	100
-2005-7	103054	Calcium -Stunden-Urin -- Stunden Nahrungskarenz	Calcium	100
-2001-6	102721	Calcium -Stunden-Stuhl	Calcium	100
-2001-6	102743	Calcium -Stunden-Stuhl	Calcium	100
-2001-6	102749	Calcium -Stunden-Stuhl	CalciumLoesung	63
-2001-6	102763	Calcium -Stunden-Stuhl	CalciumLoesung	63
-2001-6	103054	Calcium -Stunden-Stuhl	Calcium	100
-11566-7	102139	Leber-Nieren-Mikrosomen Antikörper Serum	Abdomen Nieren	60
-12557-5	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-9580-2	108675	Thyroxin (T4) Antikörper Serum	P Antikoerper Mutter	60
-25577-8	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-15051-6	102755	Creatinin Dialysat	Dialysat	100
-15051-6	103043	Creatinin Dialysat	Dialysat	100
-15051-6	103045	Creatinin Dialysat	BM25 Dialysat	76
-15051-6	103123	Creatinin Dialysat	Dialysat	100
-15051-6	103124	Creatinin Dialysat	BM25 Dialysat	76
-15051-6	104966	Creatinin Dialysat	CRRT MS DialysatvolKum	60
-15051-6	104978	Creatinin Dialysat	CRRT Dialysat	77
-15051-6	104999	Creatinin Dialysat	CRRT Dialysat	77
-15051-6	105009	Creatinin Dialysat	CRRT Dialysatloesung	63
-15051-6	106396	Creatinin Dialysat	CRRT MS DialysatvolKum	60
-15051-6	107787	Creatinin Dialysat	Doku Aussehen Dialysat	62
-9279-1	100078	Atemfrequenz	SM Frequenz	70
-9279-1	100099	Atemfrequenz	Frequenz	80
-9279-1	100132	Atemfrequenz	Atemwege	60
-9279-1	100250	Atemfrequenz	FrequenzHFOV	67
-9279-1	100253	Atemfrequenz	IMVFrequenz	78
-9279-1	100259	Atemfrequenz	IPPVFrequenz	67
-9279-1	100288	Atemfrequenz	IMVFrequenz	78
-9279-1	100293	Atemfrequenz	IPPVFrequenz	67
-9279-1	100813	Atemfrequenz	Atemform	60
-9279-1	102121	Atemfrequenz	IABP Frequenz	64
-9279-1	102156	Atemfrequenz	Atemform	60
-9279-1	102617	Atemfrequenz	FrequenzHFOV	67
-9279-1	102872	Atemfrequenz	Oszillationsfrequenz	62
-9279-1	102938	Atemfrequenz	G5 Frequenz	70
-9279-1	103210	Atemfrequenz	Frequenz	80
-9279-1	103257	Atemfrequenz	Frequenz	80
-9279-1	103269	Atemfrequenz	Frequenz	80
-9279-1	103274	Atemfrequenz	Frequenzimv	70
-9279-1	103287	Atemfrequenz	MS frequenz	70
-9279-1	103298	Atemfrequenz	frequenz	80
-9279-1	103323	Atemfrequenz	MS frequenz	70
-9279-1	103380	Atemfrequenz	Eins RAPFrequenz	64
-9279-1	103381	Atemfrequenz	Eins Frequenz	72
-9279-1	103386	Atemfrequenz	Frequenz	80
-9279-1	103389	Atemfrequenz	Basisfrequenz	72
-9279-1	103390	Atemfrequenz	FrequenzMax	70
-9279-1	103399	Atemfrequenz	Defi Frequenz	72
-9279-1	103407	Atemfrequenz	Frequenz	80
-9279-1	103430	Atemfrequenz	MS Frequenz	70
-9279-1	103718	Atemfrequenz	IABP IABPFrequenz	62
-9279-1	104354	Atemfrequenz	IABP IABP Frequenz	64
-9279-1	104718	Atemfrequenz	Frequenz	80
-9279-1	104727	Atemfrequenz	MS Frequenz	70
-9279-1	104748	Atemfrequenz	Frequenz Min	67
-9279-1	104753	Atemfrequenz	G5 Frequenz	70
-9279-1	104783	Atemfrequenz	C2 Frequenz	70
-9279-1	106282	Atemfrequenz	C2 Frequenz	70
-9279-1	107818	Atemfrequenz	Frequenz	80
-9279-1	107824	Atemfrequenz	HFFrequenz	73
-9279-1	107829	Atemfrequenz	Frequenz Rec	67
-9279-1	107837	Atemfrequenz	MS Frequenz	70
-9279-1	108008	Atemfrequenz	P C3 Frequenz	64
-9279-1	110834	Atemfrequenz	P Frequenz	73
-9279-1	110863	Atemfrequenz	P RTX Frequenz	62
-9279-1	110870	Atemfrequenz	T1 Frequenz	70
-51732-6	100808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	Sauerstoff	100
-51732-6	101481	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	Sauerstoff	100
-51732-6	102942	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	G5 Sauerstoff	87
-51732-6	104804	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	MS C2 Sauerstoff	77
-51732-6	104808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	C2 Sauerstoff	87
-51732-6	106641	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	T1 Sauerstoff	87
-51732-6	107811	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	Sauerstoff	100
-51732-6	107980	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	P C3 Sauerstoff	80
-51732-6	108012	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	P MS C3 Sauerstoff	71
-51732-6	110866	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck Kapillarblut	Heimbeatmung Sauerstoff	61
-47100-3	101472	Kupfer Blut	Blutgruppe	67
-47100-3	102128	Kupfer Blut	Kopf Haut	60
-47100-3	104680	Kupfer Blut	Blutggruppe	64
-39485-8	102158	pH Kapillarblut Körpertemperatur	Koerpertemperatur	62
-39485-8	104147	pH Kapillarblut Körpertemperatur	Airvo Temperatur	60
-39485-8	108632	pH Kapillarblut Körpertemperatur	BairHugger Temperatur	62
-39485-8	108742	pH Kapillarblut Körpertemperatur	P Temperatur DeltaT	60
-39485-8	110925	pH Kapillarblut Körpertemperatur	P Temperatur Arteriell	60
-39485-8	110926	pH Kapillarblut Körpertemperatur	P Temperatur Haut	62
-39485-8	110931	pH Kapillarblut Körpertemperatur	P Temperatur Allg	62
-1961-2	102597	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	102639	Bicarbonat Kapillarblut	Mess Bicarbonat	80
-1961-2	102677	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	103160	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	103191	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	103227	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	103243	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	104881	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	104897	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	104922	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	104937	Bicarbonat Kapillarblut	Bicarbonat	100
-1961-2	110786	Bicarbonat Kapillarblut	P Bicarbonat	91
-1961-2	110806	Bicarbonat Kapillarblut	P Bicarbonat	91
-2881-1	102107	Protein Körperflüssigkeit	PatFluessigkeitRate	67
-2881-1	102113	Protein Körperflüssigkeit	Mess PatFluessigkeitRate	60
-54160-7	103707	Ki Antikörper Serum	Antikoerper	62
-54160-7	104679	Ki Antikörper Serum	Antikoerper	62
-54160-7	108675	Ki Antikörper Serum	P Antikoerper Mutter	63
-2775-5	102114	Phosphat Dialysat	Mess Dialysatfluß	61
-2775-5	102690	Phosphat Dialysat	Dialysatloesung	62
-2775-5	102755	Phosphat Dialysat	Dialysat	100
-2775-5	102897	Phosphat Dialysat	Dialysatfiltrate	61
-2775-5	103042	Phosphat Dialysat	Dialysatlösung	60
-2775-5	103043	Phosphat Dialysat	Dialysat	100
-2775-5	103045	Phosphat Dialysat	BM25 Dialysat	76
-2775-5	103123	Phosphat Dialysat	Dialysat	100
-2775-5	103124	Phosphat Dialysat	BM25 Dialysat	76
-2775-5	104978	Phosphat Dialysat	CRRT Dialysat	76
-2775-5	104999	Phosphat Dialysat	CRRT Dialysat	76
-2775-5	107787	Phosphat Dialysat	Doku Aussehen Dialysat	64
-2775-5	107790	Phosphat Dialysat	Doku Dialysat1	65
-2775-5	107791	Phosphat Dialysat	Doku Dialysat2	65
-2775-5	107802	Phosphat Dialysat	Dialysat1	62
-2775-5	107803	Phosphat Dialysat	Dialysat2	62
-56946-7	108157	Insulin Serum Plasma Tage Stimulation	Insulin ja	82
-56946-7	108158	Insulin Serum Plasma Tage Stimulation	Insulin nein	74
-56946-7	108510	Insulin Serum Plasma Tage Stimulation	Atmung Stimulation	76
-40162-0	108510	Glucose Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-1419-1	108157	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin ja	82
-1419-1	108158	Cortisol Serum Plasma Minuten Dosis Insulin intravenös	Insulin nein	74
-18833-4	14	Erstes Körpergewicht	Geburtsgewicht	67
-18833-4	100251	Erstes Körpergewicht	idealesKoerpergewicht	75
-39481-7	104832	Glucose arteriellem Blut	Apherese Blutfluss	62
-274-1	107861	Hetacillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-274-1	107864	Hetacillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-274-1	107867	Hetacillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-40048-1	108510	Albumin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-25623-0	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-40003-6	108510	Glucose Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-77739-1	108098	Hepatitis-B-Virus-Oberflächenantigen-Status Mutter	Mutter nein	71
-77739-1	108099	Hepatitis-B-Virus-Oberflächenantigen-Status Mutter	Mutter ja	80
-77739-1	108152	Hepatitis-B-Virus-Oberflächenantigen-Status Mutter	Mutter	100
-44933-0	6	Spezifisches Gewicht -Stunden-Urin Refraktometrie	Gewicht	100
-44933-0	104258	Spezifisches Gewicht -Stunden-Urin Refraktometrie	Servoi Gewicht	67
-44933-0	110904	Spezifisches Gewicht -Stunden-Urin Refraktometrie	P Gewicht	88
-419-2	107861	Polymyxinminimaler letaler Konzentration (MLK)	O2 Konzentration	90
-419-2	107864	Polymyxinminimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-419-2	107867	Polymyxinminimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-399-6	107861	Phenethicillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-399-6	107864	Phenethicillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-399-6	107867	Phenethicillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-94651-7	101327	Reiseland	Land	62
-94651-7	101435	Reiseland	Resistance	63
-3878-6	104833	Opiate Serum Plasma	Apherese Plasma	65
-3878-6	104834	Opiate Serum Plasma	Apherese Plasma	65
-3878-6	104846	Opiate Serum Plasma	Apherese Plasma	65
-9477-1	108279	Blei Wasser	Fruchtwasser blutig	67
-9477-1	108280	Blei Wasser	Fruchtwasser erbsbrei	62
-192-5	107861	Clindamycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-192-5	107864	Clindamycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-192-5	107867	Clindamycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-27868-9	108510	Follitropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-1763-2	104833	Aldosteron Serum Plasma	Apherese Plasma	63
-1763-2	104834	Aldosteron Serum Plasma	Apherese Plasma	63
-1763-2	104846	Aldosteron Serum Plasma	Apherese Plasma	63
-50719-4	108510	11-Desoxycortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-46220-0	102755	Creatinin Dialysat -- Nacht	Dialysat	100
-46220-0	103043	Creatinin Dialysat -- Nacht	Dialysat	100
-46220-0	103045	Creatinin Dialysat -- Nacht	BM25 Dialysat	76
-46220-0	103123	Creatinin Dialysat -- Nacht	Dialysat	100
-46220-0	103124	Creatinin Dialysat -- Nacht	BM25 Dialysat	76
-46220-0	104978	Creatinin Dialysat -- Nacht	CRRT Dialysat	76
-46220-0	104999	Creatinin Dialysat -- Nacht	CRRT Dialysat	76
-164-4	107861	Cephapirin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-164-4	107864	Cephapirin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-164-4	107867	Cephapirin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-29463-7	6	Körpergewicht	Gewicht	74
-29463-7	13	Körpergewicht	Bezugsgewicht	64
-29463-7	14	Körpergewicht	Geburtsgewicht	69
-29463-7	100251	Körpergewicht	idealesKoerpergewicht	73
-29463-7	101322	Körpergewicht	AufnGewicht	61
-29463-7	104771	Körpergewicht	PatGewicht	73
-29463-7	110904	Körpergewicht	P Gewicht	67
-100055-3	102569	Optochin	Phoch	62
-100055-3	102571	Optochin	Thoch	62
-100055-3	103310	Optochin	Thoch	62
-100055-3	103312	Optochin	Phoch	62
-17862-4	102721	Calcium Urin	Calcium	100
-17862-4	102743	Calcium Urin	Calcium	100
-17862-4	102749	Calcium Urin	CalciumLoesung	69
-17862-4	102763	Calcium Urin	CalciumLoesung	69
-17862-4	103052	Calcium Urin	Calciuoesung	67
-17862-4	103054	Calcium Urin	Calcium	100
-17862-4	103055	Calcium Urin	Calciuoesung	67
-17862-4	103058	Calcium Urin	CalciumFiltrat	62
-17862-4	107934	Calcium Urin	P ADS MS ADS Calcium postFilter	74
-17862-4	107935	Calcium Urin	P ADS MS ADS Calcium preFilter	74
-44052-9	108279	Phosphofructokinase Blut	Fruchtwasser blutig	60
-2339-0	101472	Glucose Blut	Blutgruppe	64
-2339-0	102102	Glucose Blut	Blutfluss	67
-2339-0	102108	Glucose Blut	Mess Blutfluss	62
-2339-0	102976	Glucose Blut	Blutfluss	67
-2339-0	103152	Glucose Blut	Blutfluss	67
-2339-0	103180	Glucose Blut	Blutfluss	67
-2339-0	103220	Glucose Blut	Blutfluss	67
-2339-0	104680	Glucose Blut	Blutggruppe	61
-2339-0	104888	Glucose Blut	Blutfluss	67
-2339-0	104907	Glucose Blut	Blutfluss	67
-2339-0	106339	Glucose Blut	Blutfluss	67
-2339-0	106381	Glucose Blut	Blutfluss	67
-2339-0	110796	Glucose Blut	P Blutfluss	61
-2339-0	117163	Glucose Blut	P Blutfluss	61
-31028-4	104833	Amprenavir Serum Plasma	Apherese Plasma	68
-31028-4	104834	Amprenavir Serum Plasma	Apherese Plasma	68
-31028-4	104846	Amprenavir Serum Plasma	Apherese Plasma	68
-52752-3	100203	Prothrombinzeit (PT) PIVKA insensitiv /normal Kapillarblut Gerinnungstest	PT	100
-52752-3	100676	Prothrombinzeit (PT) PIVKA insensitiv /normal Kapillarblut Gerinnungstest	PT	100
-29358-9	108510	Cortisol Serum Plasma -- Stimulation	Atmung Stimulation	76
-40222-2	108510	Glucose Serum Plasma Tage Stimulation	Atmung Stimulation	76
-8330-3	102158	Körpertemperatur - Intravaskulär	Koerpertemperatur	67
-8330-3	103731	Körpertemperatur - Intravaskulär	Doku Temperatur	60
-8330-3	103734	Körpertemperatur - Intravaskulär	Doku ECMOTemperatur	60
-8330-3	104147	Körpertemperatur - Intravaskulär	Airvo Temperatur	64
-8330-3	104831	Körpertemperatur - Intravaskulär	Apherese Temperatur	60
-8330-3	104844	Körpertemperatur - Intravaskulär	Apherese Temperatur	60
-8330-3	104973	Körpertemperatur - Intravaskulär	CRRT Temperatur	60
-8330-3	104994	Körpertemperatur - Intravaskulär	CRRT Temperatur	60
-8330-3	107939	Körpertemperatur - Intravaskulär	P ADS ADS Systemtemperatur	60
-8330-3	107949	Körpertemperatur - Intravaskulär	P ADS ADS Systemtemperatur	60
-8330-3	108624	Körpertemperatur - Intravaskulär	P Lifetherm Temperatur	60
-8330-3	108632	Körpertemperatur - Intravaskulär	BairHugger Temperatur	61
-8330-3	108742	Körpertemperatur - Intravaskulär	P Temperatur DeltaT	60
-8330-3	110925	Körpertemperatur - Intravaskulär	P Temperatur Arteriell	60
-8330-3	110926	Körpertemperatur - Intravaskulär	P Temperatur Haut	62
-8330-3	110927	Körpertemperatur - Intravaskulär	P Temperatur Naso	67
-8330-3	110930	Körpertemperatur - Intravaskulär	P Temperatur Rektal	60
-8330-3	110931	Körpertemperatur - Intravaskulär	P Temperatur Allg	62
-8330-3	110933	Körpertemperatur - Intravaskulär	P Temperatur Kern	62
-8330-3	110936	Körpertemperatur - Intravaskulär	P Temperatur Kern	62
-2053-7	104833	Carotin Serum Plasma	Apherese Plasma	63
-2053-7	104834	Carotin Serum Plasma	Apherese Plasma	63
-2053-7	104846	Carotin Serum Plasma	Apherese Plasma	63
-33845-9	108510	Parathormon.intakt Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-42221-2	103382	Mangan Urin	Eins Ausgang	61
-17839-2	104832	Alpha-Fucosidase Blut	Apherese Blutfluss	62
-4186-3	102744	Ciprofloxacin Dosis	CitratDosis	60
-16657-9	108510	Corticotropin Plasma Radioimmunoassay Stunde Stimulation	Atmung Stimulation	76
-16654-6	108510	Corticotropin Plasma Radioimmunoassay ,5 Stunden Stimulation	Atmung Stimulation	76
-56527-5	108510	Vasopressin Plasma Stunde Stimulation	Atmung Stimulation	76
-27830-9	108157	Insulin Serum Plasma StundeGlucose	Insulin ja	82
-27830-9	108158	Insulin Serum Plasma StundeGlucose	Insulin nein	74
-32082-0	104833	Ibuprofen Serum Plasma	Apherese Plasma	65
-32082-0	104834	Ibuprofen Serum Plasma	Apherese Plasma	65
-32082-0	104846	Ibuprofen Serum Plasma	Apherese Plasma	65
-20786-0	144	Medikamente identifiziert Gewebe Screening	Medikamente gestellt	71
-47146-6	108510	Adrenalin Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-26436-6	100781	Laboruntersuchungen	Anfeuchtung	60
-26436-6	100809	Laboruntersuchungen	Anfeuchtung	60
-26436-6	101482	Laboruntersuchungen	Anfeuchtung	60
-26436-6	102122	Laboruntersuchungen	IABP Unterstützung	61
-57078-8	108529	Pränatale Testung - Freitext	Elternanleitung	60
-12566-6	108510	Cortisol Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-15038-3	102729	Citrat Serum Plasma	Citrat	100
-15038-3	103053	Citrat Serum Plasma	Citrat	100
-15038-3	103061	Citrat Serum Plasma	MS Citratfluss	61
-55107-7	100189	- Dokument	Wunddokumentation	64
-55107-7	101391	- Dokument	Dokumentation	76
-55107-7	101405	- Dokument	Dokumentation	76
-55107-7	101417	- Dokument	Dokumentation	76
-55107-7	101419	- Dokument	Doku	67
-55107-7	102088	- Dokument	Doku ECMOATZ	60
-55107-7	102137	- Dokument	Abdomen Haut	60
-55107-7	102553	- Dokument	Doku	67
-55107-7	102712	- Dokument	Doku	67
-55107-7	102716	- Dokument	Doku	67
-55107-7	103110	- Dokument	Doku	67
-55107-7	103115	- Dokument	Doku Füllen	67
-55107-7	103117	- Dokument	Doku	67
-55107-7	103731	- Dokument	Doku Temperatur	61
-55107-7	103861	- Dokument	Doku	67
-55107-7	103880	- Dokument	Doku	67
-55107-7	104857	- Dokument	Doku	67
-55107-7	104912	- Dokument	Doku Fuellen	60
-55107-7	104914	- Dokument	Doku	67
-55107-7	104916	- Dokument	Doku Konzentrat	61
-55107-7	104919	- Dokument	Doku	67
-55107-7	106326	- Dokument	DOKU Flushen	60
-55107-7	106345	- Dokument	DOKU	67
-55107-7	106346	- Dokument	DOKU	67
-55107-7	106349	- Dokument	DOKU Oxygenator	61
-55107-7	106351	- Dokument	DOKU HCT	62
-55107-7	107788	- Dokument	Doku	67
-51499-2	108510	Estradiol (E2) Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-96790-1	101973	Sepsis-related Organ Failure Assessment (SOFA) Score	Score SAPS2	62
-96790-1	101992	Sepsis-related Organ Failure Assessment (SOFA) Score	Score SOFA	100
-96790-1	102764	Sepsis-related Organ Failure Assessment (SOFA) Score	Score ARDS	67
-96790-1	102784	Sepsis-related Organ Failure Assessment (SOFA) Score	Score RASS	67
-96790-1	102785	Sepsis-related Organ Failure Assessment (SOFA) Score	Score AIS	71
-96790-1	102788	Sepsis-related Organ Failure Assessment (SOFA) Score	Score Apgar	62
-96790-1	102791	Sepsis-related Organ Failure Assessment (SOFA) Score	Score BPS	71
-96790-1	102792	Sepsis-related Organ Failure Assessment (SOFA) Score	Score CIWA	67
-96790-1	102795	Sepsis-related Organ Failure Assessment (SOFA) Score	Score CRIB	67
-96790-1	102796	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DRS	71
-96790-1	102798	Sepsis-related Organ Failure Assessment (SOFA) Score	Score GDS	71
-96790-1	102800	Sepsis-related Organ Failure Assessment (SOFA) Score	Score Kuss	67
-96790-1	102801	Sepsis-related Organ Failure Assessment (SOFA) Score	Score MAAS	67
-96790-1	102802	Sepsis-related Organ Failure Assessment (SOFA) Score	Score MMS	71
-96790-1	102803	Sepsis-related Organ Failure Assessment (SOFA) Score	Score MOF	71
-96790-1	102804	Sepsis-related Organ Failure Assessment (SOFA) Score	Score mRS	71
-96790-1	102806	Sepsis-related Organ Failure Assessment (SOFA) Score	Score NIHSS	62
-96790-1	102807	Sepsis-related Organ Failure Assessment (SOFA) Score	Score NIPS	67
-96790-1	102810	Sepsis-related Organ Failure Assessment (SOFA) Score	Score RSS	71
-96790-1	102811	Sepsis-related Organ Failure Assessment (SOFA) Score	Score RTS	71
-96790-1	102812	Sepsis-related Organ Failure Assessment (SOFA) Score	Score SAS	71
-96790-1	102813	Sepsis-related Organ Failure Assessment (SOFA) Score	Score Lachs	62
-96790-1	102815	Sepsis-related Organ Failure Assessment (SOFA) Score	Score VICS	67
-96790-1	103444	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103458	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103506	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103507	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103509	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103510	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103511	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103512	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103518	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103523	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103527	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103536	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103538	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103540	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103543	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103544	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103545	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103550	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103551	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103554	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103556	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103557	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103558	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103559	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103560	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	103562	Sepsis-related Organ Failure Assessment (SOFA) Score	Score DGAI	67
-96790-1	105222	Sepsis-related Organ Failure Assessment (SOFA) Score	Score NRS	71
-96790-1	105223	Sepsis-related Organ Failure Assessment (SOFA) Score	Score BPS	71
-96790-1	106651	Sepsis-related Organ Failure Assessment (SOFA) Score	Score UStix	62
-96790-1	108395	Sepsis-related Organ Failure Assessment (SOFA) Score	Score FLACC	62
-96790-1	108441	Sepsis-related Organ Failure Assessment (SOFA) Score	Score SOS	71
-96790-1	108458	Sepsis-related Organ Failure Assessment (SOFA) Score	Score SOS	71
-96790-1	108680	Sepsis-related Organ Failure Assessment (SOFA) Score	Score NACA	67
-96790-1	108684	Sepsis-related Organ Failure Assessment (SOFA) Score	Score ISS	71
-96790-1	110976	Sepsis-related Organ Failure Assessment (SOFA) Score	Score FOUR	67
-96790-1	117221	Sepsis-related Organ Failure Assessment (SOFA) Score	Score	100
-96790-1	117225	Sepsis-related Organ Failure Assessment (SOFA) Score	Score Race	67
-467-1	107861	Sulfamethoxazol minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-467-1	107864	Sulfamethoxazol minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-467-1	107867	Sulfamethoxazol minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-25581-0	108510	C-Peptid Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-22496-4	108675	Röteln-Virus Antikörper Serum	P Antikoerper Mutter	60
-33790-7	102721	Calcium Urin . Probenmaterial Stimulation	Calcium	100
-33790-7	102743	Calcium Urin . Probenmaterial Stimulation	Calcium	100
-33790-7	103054	Calcium Urin . Probenmaterial Stimulation	Calcium	100
-33790-7	108510	Calcium Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-12523-7	108510	Katecholamine Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-17009-2	104240	IgM Serum	MS Servoi i	60
-33654-5	108157	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma Stunde Stimulation	Insulin ja	82
-33654-5	108158	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma Stunde Stimulation	Insulin nein	74
-33654-5	108510	Insulin- Wachstumsfaktor Bindungsprotein Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-25625-5	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-14417-0	102721	Calcium Peritonealflüssigkeit	Calcium	100
-14417-0	102743	Calcium Peritonealflüssigkeit	Calcium	100
-14417-0	103054	Calcium Peritonealflüssigkeit	Calcium	100
-25362-5	102721	Calcium -Stunden-Urin	Calcium	100
-25362-5	102743	Calcium -Stunden-Urin	Calcium	100
-25362-5	103054	Calcium -Stunden-Urin	Calcium	100
-25362-5	105006	Calcium -Stunden-Urin	CRRT CalciumLoesung	62
-16389-9	104833	Antidrepressiva Serum Plasma	Apherese Plasma	60
-16389-9	104834	Antidrepressiva Serum Plasma	Apherese Plasma	60
-16389-9	104846	Antidrepressiva Serum Plasma	Apherese Plasma	60
-19255-9	100808	Sauerstoff Körpertemperatur arteriellem Blut	Sauerstoff	100
-19255-9	101481	Sauerstoff Körpertemperatur arteriellem Blut	Sauerstoff	100
-19255-9	102942	Sauerstoff Körpertemperatur arteriellem Blut	G5 Sauerstoff	87
-19255-9	104804	Sauerstoff Körpertemperatur arteriellem Blut	MS C2 Sauerstoff	77
-19255-9	104808	Sauerstoff Körpertemperatur arteriellem Blut	C2 Sauerstoff	87
-19255-9	106641	Sauerstoff Körpertemperatur arteriellem Blut	T1 Sauerstoff	87
-19255-9	107811	Sauerstoff Körpertemperatur arteriellem Blut	Sauerstoff	100
-19255-9	107980	Sauerstoff Körpertemperatur arteriellem Blut	P C3 Sauerstoff	80
-19255-9	108012	Sauerstoff Körpertemperatur arteriellem Blut	P MS C3 Sauerstoff	71
-19255-9	110866	Sauerstoff Körpertemperatur arteriellem Blut	Heimbeatmung Sauerstoff	61
-19255-9	110925	Sauerstoff Körpertemperatur arteriellem Blut	P Temperatur Arteriell	65
-40148-9	108510	Glucose Serum Plasma -- Stimulation	Atmung Stimulation	76
-27961-2	108510	Lactat Blut Stunden Stimulation	Atmung Stimulation	76
-12739-9	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-12739-9	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-12739-9	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-39801-6	102107	Triglycerid Pleuraflüssigkeit	PatFluessigkeitRate	60
-33829-3	108510	Lutropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-57028-3	102140	Eisen Leber	Abdomen Leber	67
-41728-7	103305	Biapenem	Apnoe	62
-5845-3	102128	Herpes-simplex-Virus Typ Antigen Haut Immunfluoreszenztest	Kopf Haut	62
-5845-3	102142	Herpes-simplex-Virus Typ Antigen Haut Immunfluoreszenztest	Haut	100
-3298-7	104833	Paracetamol Serum Plasma	Apherese Plasma	62
-3298-7	104834	Paracetamol Serum Plasma	Apherese Plasma	62
-3298-7	104846	Paracetamol Serum Plasma	Apherese Plasma	62
-40194-3	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-34978-7	102107	Peritonealflüssigkeit	PatFluessigkeitRate	62
-33514-1	100032	Schweiß	Sprache	62
-33514-1	102195	Schweiß	LCWI	60
-33514-1	102196	Schweiß	RCWI	60
-33514-1	110920	Schweiß	RCWI	60
-33514-1	110922	Schweiß	LCWI	60
-22362-8	108675	HTLV +2 Antikörper Serum	P Antikoerper Mutter	62
-25595-0	102089	Econazol	ECMOATZ	67
-32138-0	103062	Cystin/ Calculus (Stein)	MS Calciumfluss	61
-32138-0	104968	Cystin/ Calculus (Stein)	CRRT MS Calciumfluss	63
-3591-5	104833	Ephedrin Serum Plasma	Apherese Plasma	72
-3591-5	104834	Ephedrin Serum Plasma	Apherese Plasma	72
-3591-5	104846	Ephedrin Serum Plasma	Apherese Plasma	72
-3591-5	104852	Ephedrin Serum Plasma	Apherese Plasmaloesung	60
-27852-3	108157	Insulin Serum Plasma Stunden Stimulation	Insulin ja	82
-27852-3	108158	Insulin Serum Plasma Stunden Stimulation	Insulin nein	74
-27852-3	108510	Insulin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-10838-1	104833	Phosphoserin Serum Plasma	Apherese Plasma	65
-10838-1	104834	Phosphoserin Serum Plasma	Apherese Plasma	65
-10838-1	104846	Phosphoserin Serum Plasma	Apherese Plasma	65
-56575-4	108510	17-Hydroxyprogesteron Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-27-3	107861	Ampicillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-27-3	107864	Ampicillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-27-3	107867	Ampicillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-18891-2	102659	Cefprozil	UFProfil	71
-18891-2	102692	Cefprozil	UFProfil	71
-18891-2	103159	Cefprozil	UFProfil	71
-18891-2	103185	Cefprozil	UFProfil	71
-18891-2	103221	Cefprozil	UFProfil	71
-18891-2	103239	Cefprozil	UFProfil	71
-18891-2	104886	Cefprozil	UFProfil	71
-18891-2	104902	Cefprozil	UFProfil	71
-18891-2	104926	Cefprozil	UFProfil	71
-18891-2	110791	Cefprozil	P UFProfil	63
-18891-2	110810	Cefprozil	P UFProfil	63
-27056-1	108158	Citrullin Urin	Insulin nein	62
-14732-2	104833	Folat Serum Plasma	Apherese Plasma	61
-14732-2	104834	Folat Serum Plasma	Apherese Plasma	61
-14732-2	104846	Folat Serum Plasma	Apherese Plasma	61
-46093-1	102721	Calcium.ionisiert Dialysat	Calcium	100
-46093-1	102743	Calcium.ionisiert Dialysat	Calcium	100
-46093-1	102755	Calcium.ionisiert Dialysat	Dialysat	100
-46093-1	103043	Calcium.ionisiert Dialysat	Dialysat	100
-46093-1	103045	Calcium.ionisiert Dialysat	BM25 Dialysat	76
-46093-1	103054	Calcium.ionisiert Dialysat	Calcium	100
-46093-1	103058	Calcium.ionisiert Dialysat	CalciumFiltrat	60
-46093-1	103123	Calcium.ionisiert Dialysat	Dialysat	100
-46093-1	103124	Calcium.ionisiert Dialysat	BM25 Dialysat	76
-46093-1	104974	Calcium.ionisiert Dialysat	CRRT CalciumFiltrat	62
-46093-1	104978	Calcium.ionisiert Dialysat	CRRT Dialysat	76
-46093-1	104995	Calcium.ionisiert Dialysat	CRRT CalciumFiltrat	62
-46093-1	104999	Calcium.ionisiert Dialysat	CRRT Dialysat	76
-46093-1	107934	Calcium.ionisiert Dialysat	P ADS MS ADS Calcium postFilter	60
-25876-4	102729	Citrat -Stunden-Urin	Citrat	100
-25876-4	103053	Citrat -Stunden-Urin	Citrat	100
-27860-6	108157	Insulin Serum Plasma StundenGlucose	Insulin ja	82
-27860-6	108158	Insulin Serum Plasma StundenGlucose	Insulin nein	74
-35706-1	104833	Albumin/Protein. Serum Plasma	Apherese Plasma	60
-35706-1	104834	Albumin/Protein. Serum Plasma	Apherese Plasma	60
-35706-1	104846	Albumin/Protein. Serum Plasma	Apherese Plasma	60
-25621-4	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-3413-2	104833	Buprenorphin Serum Plasma	Apherese Plasma	60
-3413-2	104834	Buprenorphin Serum Plasma	Apherese Plasma	60
-3413-2	104846	Buprenorphin Serum Plasma	Apherese Plasma	60
-31-5	107861	Ampicillin+Sulbactam minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-31-5	107864	Ampicillin+Sulbactam minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-31-5	107867	Ampicillin+Sulbactam minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-13577-2	104833	Paroxetin Serum Plasma	Apherese Plasma	65
-13577-2	104834	Paroxetin Serum Plasma	Apherese Plasma	65
-13577-2	104846	Paroxetin Serum Plasma	Apherese Plasma	65
-15-8	107861	Amoxicillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-15-8	107864	Amoxicillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-15-8	107867	Amoxicillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-3370-4	104833	Barbital Serum Plasma	Apherese Plasma	61
-3370-4	104834	Barbital Serum Plasma	Apherese Plasma	61
-3370-4	104846	Barbital Serum Plasma	Apherese Plasma	61
-50836-6	102721	Calcium Haar	Calcium	100
-50836-6	102743	Calcium Haar	Calcium	100
-50836-6	103054	Calcium Haar	Calcium	100
-50836-6	103058	Calcium Haar	CalciumFiltrat	62
-50836-6	107934	Calcium Haar	P ADS MS ADS Calcium postFilter	74
-50836-6	107935	Calcium Haar	P ADS MS ADS Calcium preFilter	74
-29383-7	102107	Warfarin Magenflüssigkeit	PatFluessigkeitRate	60
-12560-9	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-27034-8	144	Medikamente identifiziert Haar Screening	Medikamente gestellt	71
-33787-3	108510	Calcitonin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-25660-2	108510	Gastrin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-51619-5	104913	Creatinin Serum Plasma -- Dialyse	Dialyse Zeit	74
-51619-5	110802	Creatinin Serum Plasma -- Dialyse	P Dialyse Zeit	67
-51619-5	110818	Creatinin Serum Plasma -- Dialyse	P Dialyse Zeit	67
-16384-0	108510	Androstendion Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-27826-7	108157	Insulin Serum Plasma Stunden Stimulation	Insulin ja	82
-27826-7	108158	Insulin Serum Plasma Stunden Stimulation	Insulin nein	74
-27826-7	108510	Insulin Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-17034-0	104833	Ketoprofen Serum Plasma	Apherese Plasma	63
-17034-0	104834	Ketoprofen Serum Plasma	Apherese Plasma	63
-17034-0	104846	Ketoprofen Serum Plasma	Apherese Plasma	63
-26035-6	102585	Serotonin Plasma	Plasmarate	62
-26035-6	104247	Serotonin Plasma	MS Servoi CPAP	60
-25113-2	103750	Malat/Creatinin Urin	Reanimation	65
-51733-4	100808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	Sauerstoff	100
-51733-4	101481	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	Sauerstoff	100
-51733-4	102942	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	G5 Sauerstoff	87
-51733-4	104804	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	MS C2 Sauerstoff	77
-51733-4	104808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	C2 Sauerstoff	87
-51733-4	106641	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	T1 Sauerstoff	87
-51733-4	107811	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	Sauerstoff	100
-51733-4	107980	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	P C3 Sauerstoff	80
-51733-4	108012	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	P MS C3 Sauerstoff	71
-51733-4	110866	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck arteriellem Blut	Heimbeatmung Sauerstoff	61
-27887-9	108510	Follitropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-5921-2	102755	Lactatdehydrogenase Dialysat	Dialysat	100
-5921-2	103043	Lactatdehydrogenase Dialysat	Dialysat	100
-5921-2	103045	Lactatdehydrogenase Dialysat	BM25 Dialysat	76
-5921-2	103123	Lactatdehydrogenase Dialysat	Dialysat	100
-5921-2	103124	Lactatdehydrogenase Dialysat	BM25 Dialysat	76
-5921-2	104978	Lactatdehydrogenase Dialysat	CRRT Dialysat	76
-5921-2	104999	Lactatdehydrogenase Dialysat	CRRT Dialysat	76
-12793-6	108510	Oxalat Urin . Probenmaterial Stimulation	Atmung Stimulation	76
-29304-3	60	Medikation	Medikamentenmischung	60
-29304-3	100008	Medikation	Vormedikation	87
-29304-3	100779	Medikation	Inhalation	60
-29304-3	101391	Medikation	Dokumentation	61
-29304-3	101405	Medikation	Dokumentation	61
-29304-3	101417	Medikation	Dokumentation	61
-29304-3	102152	Medikation	Makrozirkulation	62
-29304-3	102153	Medikation	Mikrozirkulation	62
-29304-3	102155	Medikation	Ventilation	67
-29304-3	102419	Medikation	Bedarfsmedikation	74
-29304-3	103336	Medikation	eDesinfektion	70
-29304-3	103598	Medikation	Infektion	63
-29304-3	103750	Medikation	Reanimation	67
-29304-3	104403	Medikation	Praemedikation	83
-29304-3	105241	Medikation	F MedDoku Vormedikation	61
-29304-3	106597	Medikation	Vormedikation	87
-23629-9	108100	Para-Aminosalicylat	Para	100
-9838-4	102139	Leber-Nieren-Mikrosomen Antikörper Serum Immunfluoreszenztest	Abdomen Nieren	60
-1404-3	108157	Cortisol Serum Plasma Stunde Dosis Insulin intravenös	Insulin ja	82
-1404-3	108158	Cortisol Serum Plasma Stunde Dosis Insulin intravenös	Insulin nein	74
-11050-2	104833	Kappa-Leichtketten Serum Plasma	Apherese Plasma	61
-11050-2	104834	Kappa-Leichtketten Serum Plasma	Apherese Plasma	61
-11050-2	104846	Kappa-Leichtketten Serum Plasma	Apherese Plasma	61
-40192-7	108510	Glucose Serum Plasma Tag Stimulation	Atmung Stimulation	76
-42326-9	144	Medikamente identifiziert Muttermilch Screening	Medikamente gestellt	71
-51610-4	102721	Calcium -Stunden-Urin	Calcium	100
-51610-4	102743	Calcium -Stunden-Urin	Calcium	100
-51610-4	103054	Calcium -Stunden-Urin	Calcium	100
-51610-4	105006	Calcium -Stunden-Urin	CRRT CalciumLoesung	62
-2825-8	101389	Kalium Speichel	KaliumZiel	72
-2825-8	102481	Kalium Speichel	KaliumZiel	72
-2825-8	102482	Kalium Speichel	KaliumZiel	72
-6651-4	107861	Meropenem minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-6651-4	107864	Meropenem minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-6651-4	107867	Meropenem minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-30933-6	106365	Nickel Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30933-6	106366	Nickel Urin gesammelt Zeitraum	G5 SBT Zeitraum	70
-30933-6	110899	Nickel Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-30933-6	110900	Nickel Urin gesammelt Zeitraum	P C3 SBT Zeitraum	64
-12819-9	108510	Progesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-47989-9	108510	Progesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-519-9	107861	Troleandomycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-519-9	107864	Troleandomycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-519-9	107867	Troleandomycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-19728-5	108675	Rübe IgE-Antikörper Serum	P Antikoerper Mutter	60
-47842-0	102651	Sammelzeitraum Dialysat	DialyseZeit	65
-47842-0	102666	Sammelzeitraum Dialysat	Mess DialyseZeit	62
-47842-0	102675	Sammelzeitraum Dialysat	DialyseZeit	65
-47842-0	102695	Sammelzeitraum Dialysat	Dialysekonzentrat	60
-47842-0	102755	Sammelzeitraum Dialysat	Dialysat	100
-47842-0	102897	Sammelzeitraum Dialysat	Dialysatfiltrate	62
-47842-0	102921	Sammelzeitraum Dialysat	Dialysekonzentrat	60
-47842-0	103043	Sammelzeitraum Dialysat	Dialysat	100
-47842-0	103045	Sammelzeitraum Dialysat	BM25 Dialysat	76
-47842-0	103123	Sammelzeitraum Dialysat	Dialysat	100
-47842-0	103124	Sammelzeitraum Dialysat	BM25 Dialysat	76
-47842-0	103146	Sammelzeitraum Dialysat	DialyseZeit	65
-47842-0	103205	Sammelzeitraum Dialysat	Dialysezeit	65
-47842-0	103218	Sammelzeitraum Dialysat	Dialysezeit	65
-47842-0	103224	Sammelzeitraum Dialysat	Dialysekonzentrat	60
-47842-0	103250	Sammelzeitraum Dialysat	Dialysekonzentrat	60
-47842-0	103254	Sammelzeitraum Dialysat	Dialysezeit	65
-47842-0	104894	Sammelzeitraum Dialysat	Dialysezeit	65
-47842-0	104913	Sammelzeitraum Dialysat	Dialyse Zeit	63
-47842-0	104934	Sammelzeitraum Dialysat	Dialysezeit	65
-47842-0	104947	Sammelzeitraum Dialysat	Dialysezeit	65
-47842-0	104978	Sammelzeitraum Dialysat	CRRT Dialysat	76
-47842-0	104999	Sammelzeitraum Dialysat	CRRT Dialysat	76
-17255-1	102114	Quecksilber Dialysat	Mess Dialysatfluß	61
-17255-1	102755	Quecksilber Dialysat	Dialysat	100
-17255-1	102897	Quecksilber Dialysat	Dialysatfiltrate	61
-17255-1	103043	Quecksilber Dialysat	Dialysat	100
-17255-1	103045	Quecksilber Dialysat	BM25 Dialysat	76
-17255-1	103123	Quecksilber Dialysat	Dialysat	100
-17255-1	103124	Quecksilber Dialysat	BM25 Dialysat	76
-17255-1	104978	Quecksilber Dialysat	CRRT Dialysat	76
-17255-1	104999	Quecksilber Dialysat	CRRT Dialysat	76
-53030-3	102139	Leber-Nieren-Mikrosomen Antikörper Serum Immunfluoreszenztest	Abdomen Nieren	60
-83-6	107861	Cefaclor minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-83-6	107864	Cefaclor minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-83-6	107867	Cefaclor minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-32232-1	102107	Aspartat Körperflüssigkeit	PatFluessigkeitRate	60
-2950-4	102107	Natrium Körperflüssigkeit	PatFluessigkeitRate	62
-2950-4	102596	Natrium Körperflüssigkeit	Natrium	100
-2950-4	102638	Natrium Körperflüssigkeit	Mess Natrium	74
-2950-4	102676	Natrium Körperflüssigkeit	Natrium	100
-2950-4	103167	Natrium Körperflüssigkeit	MS Natrium	82
-2950-4	103226	Natrium Körperflüssigkeit	Natrium	100
-2950-4	103242	Natrium Körperflüssigkeit	Natrium	100
-34602-3	104833	E-Antikörper Serum Plasma	Apherese Plasma	72
-34602-3	104834	E-Antikörper Serum Plasma	Apherese Plasma	72
-34602-3	104846	E-Antikörper Serum Plasma	Apherese Plasma	72
-34602-3	104852	E-Antikörper Serum Plasma	Apherese Plasmaloesung	61
-90767-5	106526	Übersicht Schwangerschaft - Dokument	Anamnese Schwangerschaft	77
-90767-5	106527	Übersicht Schwangerschaft - Dokument	Anamnese Schwangerschaft Nein	68
-90767-5	106528	Übersicht Schwangerschaft - Dokument	Anamnese Schwangerschaft Ja	71
-90767-5	106665	Übersicht Schwangerschaft - Dokument	Schwangerschaftstest durchgefuehrt	66
-90767-5	108128	Übersicht Schwangerschaft - Dokument	P Schwangerschaft String	77
-90767-5	108129	Übersicht Schwangerschaft - Dokument	Schwangerschaft	100
-90767-5	108130	Übersicht Schwangerschaft - Dokument	Schwangerschaft ICSI	86
-90767-5	108131	Übersicht Schwangerschaft - Dokument	Schwangerschaft IVF	88
-90767-5	108132	Übersicht Schwangerschaft - Dokument	Schwangerschaft an	91
-90767-5	108161	Übersicht Schwangerschaft - Dokument	Medikamente Schwangerschaft Text	71
-90767-5	108162	Übersicht Schwangerschaft - Dokument	Probleme Schwangerschaft Text	68
-19229-4	102597	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	102639	Bicarbonat gemischt-venösem Blut	Mess Bicarbonat	80
-19229-4	102677	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	103160	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	103191	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	103227	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	103243	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	104881	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	104897	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	104922	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	104937	Bicarbonat gemischt-venösem Blut	Bicarbonat	100
-19229-4	110786	Bicarbonat gemischt-venösem Blut	P Bicarbonat	91
-19229-4	110806	Bicarbonat gemischt-venösem Blut	P Bicarbonat	91
-21418-9	108675	Neutrophiler Antikörper Serum	P Antikoerper Mutter	62
-75-2	107861	Cefazolin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-75-2	107864	Cefazolin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-75-2	107867	Cefazolin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-184-2	107861	Ciprofloxacin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-184-2	107864	Ciprofloxacin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-184-2	107867	Ciprofloxacin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-127-1	107861	Cefsulodin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-127-1	107864	Cefsulodin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-127-1	107867	Cefsulodin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-33810-3	108157	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-33810-3	108158	Insulin Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-33810-3	108510	Insulin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-1960-4	102597	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	102639	Bicarbonat arteriellem Blut	Mess Bicarbonat	80
-1960-4	102677	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	103160	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	103191	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	103227	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	103243	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	104881	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	104897	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	104922	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	104937	Bicarbonat arteriellem Blut	Bicarbonat	100
-1960-4	110786	Bicarbonat arteriellem Blut	P Bicarbonat	91
-1960-4	110806	Bicarbonat arteriellem Blut	P Bicarbonat	91
-1960-4	110925	Bicarbonat arteriellem Blut	P Temperatur Arteriell	61
-12651-6	108510	Glucose Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-322-8	107861	Methicillin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-322-8	107864	Methicillin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-322-8	107867	Methicillin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-47128-4	102107	Salicylate Magenflüssigkeit	PatFluessigkeitRate	62
-47128-4	102113	Salicylate Magenflüssigkeit	Mess PatFluessigkeitRate	60
-362-4	107861	Nitrofurantoin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-362-4	107864	Nitrofurantoin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-362-4	107867	Nitrofurantoin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-2230-1	104833	Adrenalin Plasma	Apherese Plasma	65
-2230-1	104834	Adrenalin Plasma	Apherese Plasma	65
-2230-1	104846	Adrenalin Plasma	Apherese Plasma	65
-32538-1	108510	17-Hydroxyprogesteron Serum Plasma Stunden Stimulation	Atmung Stimulation	76
-12823-1	108510	Prolaktin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-33645-3	104833	A2 Antikörper Serum Plasma	Apherese Plasma	65
-33645-3	104834	A2 Antikörper Serum Plasma	Apherese Plasma	65
-33645-3	104846	A2 Antikörper Serum Plasma	Apherese Plasma	65
-2765-6	104833	Phenylalanin Serum Plasma	Apherese Plasma	60
-2765-6	104834	Phenylalanin Serum Plasma	Apherese Plasma	60
-2765-6	104846	Phenylalanin Serum Plasma	Apherese Plasma	60
-58893-9	108510	Vasopressin Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-50562-8	6	Spezifisches Gewicht Urin automatisierter Refraktometrie	Gewicht	100
-50562-8	104258	Spezifisches Gewicht Urin automatisierter Refraktometrie	Servoi Gewicht	67
-50562-8	110904	Spezifisches Gewicht Urin automatisierter Refraktometrie	P Gewicht	88
-26516-5	102581	Thrombozyten Plasma	Plasmavolumen	62
-26516-5	102585	Thrombozyten Plasma	Plasmarate	62
-26516-5	103063	Thrombozyten Plasma	Plasmavolumen	62
-26516-5	103065	Thrombozyten Plasma	Plasmavolumen	62
-74105-8	100808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	Sauerstoff	100
-74105-8	101481	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	Sauerstoff	100
-74105-8	102942	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	G5 Sauerstoff	87
-74105-8	104804	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	MS C2 Sauerstoff	77
-74105-8	104808	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	C2 Sauerstoff	87
-74105-8	106641	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	T1 Sauerstoff	87
-74105-8	107811	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	Sauerstoff	100
-74105-8	107980	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	P C3 Sauerstoff	80
-74105-8	108012	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	P MS C3 Sauerstoff	71
-74105-8	110866	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck gemischt-venösem Blut	Heimbeatmung Sauerstoff	61
-20785-2	144	Medikamente identifiziert Serum Plasma Screening	Medikamente gestellt	71
-3366-2	104833	Atenolol Serum Plasma	Apherese Plasma	61
-3366-2	104834	Atenolol Serum Plasma	Apherese Plasma	61
-3366-2	104846	Atenolol Serum Plasma	Apherese Plasma	61
-46099-8	102721	Calcium Albumin-korrigiert Serum Plasma	Calcium	100
-46099-8	102743	Calcium Albumin-korrigiert Serum Plasma	Calcium	100
-46099-8	103054	Calcium Albumin-korrigiert Serum Plasma	Calcium	100
-53326-5	6	Spezifisches Gewicht Urin automatisiertem Teststreifen	Gewicht	100
-53326-5	104258	Spezifisches Gewicht Urin automatisiertem Teststreifen	Servoi Gewicht	67
-53326-5	110904	Spezifisches Gewicht Urin automatisiertem Teststreifen	P Gewicht	88
-3948-7	104833	Phenobarbital Serum Plasma	Apherese Plasma	63
-3948-7	104834	Phenobarbital Serum Plasma	Apherese Plasma	63
-3948-7	104846	Phenobarbital Serum Plasma	Apherese Plasma	63
-3549-3	104833	Diazepam Serum Plasma	Apherese Plasma	61
-3549-3	104834	Diazepam Serum Plasma	Apherese Plasma	61
-3549-3	104846	Diazepam Serum Plasma	Apherese Plasma	61
-29579-0	100079	Mycobakterielle Empfindlichkeit ( ) Methode langsam wachsende Mykobakterien	SM Empfindlichkeit	91
-29579-0	103383	Mycobakterielle Empfindlichkeit ( ) Methode langsam wachsende Mykobakterien	Eins Empfindlichkeit	86
-29579-0	103388	Mycobakterielle Empfindlichkeit ( ) Methode langsam wachsende Mykobakterien	Empfindlichkeit	100
-29579-0	103398	Mycobakterielle Empfindlichkeit ( ) Methode langsam wachsende Mykobakterien	Siemens Empfindlichkeit	79
-29579-0	103400	Mycobakterielle Empfindlichkeit ( ) Methode langsam wachsende Mykobakterien	Defi Empfindlichkeit	86
-14647-2	104833	Cholesterol Serum Plasma	Apherese Plasma	62
-14647-2	104834	Cholesterol Serum Plasma	Apherese Plasma	62
-14647-2	104846	Cholesterol Serum Plasma	Apherese Plasma	62
-7338-7	108675	Gluten IgG-Antikörper Serum	P Antikoerper Mutter	61
-10466-1	104833	Anionenlücke Serum Plasma	Apherese Plasma	62
-10466-1	104834	Anionenlücke Serum Plasma	Apherese Plasma	62
-10466-1	104846	Anionenlücke Serum Plasma	Apherese Plasma	62
-232-9	107861	Erythromycin minimaler letaler Konzentration (MLK)	O2 Konzentration	90
-232-9	107864	Erythromycin minimaler letaler Konzentration (MLK)	Doku Atom O2 Konzentration	67
-232-9	107867	Erythromycin minimaler letaler Konzentration (MLK)	Atom O2 Konzentration	76
-1986-9	104833	C-Peptid Serum Plasma	Apherese Plasma	61
-1986-9	104834	C-Peptid Serum Plasma	Apherese Plasma	61
-1986-9	104846	C-Peptid Serum Plasma	Apherese Plasma	61
-25766-7	108157	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Insulin ja	82
-25766-7	108158	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Insulin nein	74
-25766-7	108510	Insulin- Wachstumsfaktor Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-49327-0	108510	Androstendion Serum Plasma Stunde Stimulation	Atmung Stimulation	76
-56499-7	108510	Somatotropin Serum Plasma Minuten Stimulation	Atmung Stimulation	76
-25622-2	108510	Cortisol Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-27863-0	108157	Insulin Serum Plasma ,5 Stunden Stimulation	Insulin ja	82
-27863-0	108158	Insulin Serum Plasma ,5 Stunden Stimulation	Insulin nein	74
-27863-0	108510	Insulin Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-30045-9	102755	Mycobacterium identifiziert Dialysat erregerspezifischer Kultur	Dialysat	100
-30045-9	103043	Mycobacterium identifiziert Dialysat erregerspezifischer Kultur	Dialysat	100
-30045-9	103045	Mycobacterium identifiziert Dialysat erregerspezifischer Kultur	BM25 Dialysat	76
-30045-9	103123	Mycobacterium identifiziert Dialysat erregerspezifischer Kultur	Dialysat	100
-30045-9	103124	Mycobacterium identifiziert Dialysat erregerspezifischer Kultur	BM25 Dialysat	76
-30045-9	104978	Mycobacterium identifiziert Dialysat erregerspezifischer Kultur	CRRT Dialysat	76
-30045-9	104999	Mycobacterium identifiziert Dialysat erregerspezifischer Kultur	CRRT Dialysat	76
-2936-3	104833	Serin Serum Plasma	Apherese Plasma	67
-2936-3	104834	Serin Serum Plasma	Apherese Plasma	67
-2936-3	104846	Serin Serum Plasma	Apherese Plasma	67
-17863-2	102721	Calcium.ionisiert Serum Plasma	Calcium	100
-17863-2	102743	Calcium.ionisiert Serum Plasma	Calcium	100
-17863-2	103054	Calcium.ionisiert Serum Plasma	Calcium	100
-25789-9	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-13028-6	108510	Xylose Serum Plasma ,5 Stunden Stimulation	Atmung Stimulation	76
-2949-6	102106	Natrium Dialysat	Dialysatfluß	67
-2949-6	102114	Natrium Dialysat	Mess Dialysatfluß	62
-2949-6	102596	Natrium Dialysat	Natrium	100
-2949-6	102638	Natrium Dialysat	Mess Natrium	74
-2949-6	102652	Natrium Dialysat	StartNatrium	71
-2949-6	102676	Natrium Dialysat	Natrium	100
-2949-6	102681	Natrium Dialysat	StartNatrium	71
-2949-6	102682	Natrium Dialysat	BasisNatrium	64
-2949-6	102697	Natrium Dialysat	BasisNatrium	64
-2949-6	102726	Natrium Dialysat	Mess StartNatrium	61
-2949-6	102755	Natrium Dialysat	Dialysat	100
-2949-6	102897	Natrium Dialysat	Dialysatfiltrate	62
-2949-6	103042	Natrium Dialysat	Dialysatlösung	62
-2949-6	103043	Natrium Dialysat	Dialysat	100
-2949-6	103045	Natrium Dialysat	BM25 Dialysat	76
-2949-6	103049	Natrium Dialysat	MS DialysatvolumenKumulativ	60
-2949-6	103123	Natrium Dialysat	Dialysat	100
-2949-6	103124	Natrium Dialysat	BM25 Dialysat	76
-2949-6	103167	Natrium Dialysat	MS Natrium	82
-2949-6	103222	Natrium Dialysat	StartNatrium	71
-2949-6	103226	Natrium Dialysat	Natrium	100
-2949-6	103241	Natrium Dialysat	StartNatrium	71
-2949-6	103242	Natrium Dialysat	Natrium	100
-2949-6	103253	Natrium Dialysat	StartNatrium	71
-2949-6	104978	Natrium Dialysat	CRRT Dialysat	76
-2949-6	104999	Natrium Dialysat	CRRT Dialysat	76
-2949-6	107787	Natrium Dialysat	Doku Aussehen Dialysat	67
-2949-6	107790	Natrium Dialysat	Doku Dialysat1	67
-2949-6	107791	Natrium Dialysat	Doku Dialysat2	67
-2949-6	107802	Natrium Dialysat	Dialysat1	64
-2949-6	107803	Natrium Dialysat	Dialysat2	64
-33851-7	108510	Progesteron Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
-12943-7	108510	Thyreotropin Serum Plasma . Probenmaterial Stimulation	Atmung Stimulation	76
+\.
+
+
+--
+-- Data for Name: loinc_long_common_name_copra_description; Type: TABLE DATA; Schema: loinc_copra; Owner: clinicuser
+--
+
+COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, loinc_long_common_name, copra_description, accuracy, is_match, id) FROM stdin;
+10163-4	108153	Anamnese früherer Schwangerschaften	Alkoholgebrauch während der Schwangerschaft	62	f	2
+10163-4	108154	Anamnese früherer Schwangerschaften	Alkoholgebrauch während der Schwangerschaft	62	f	3
+81324-6	108153	Glucose-Toleranz über 2 Stunden in der Schwangerschaft (Liste) - Serum oder Plasma	Alkoholgebrauch während der Schwangerschaft	65	f	4
+81324-6	108154	Glucose-Toleranz über 2 Stunden in der Schwangerschaft (Liste) - Serum oder Plasma	Alkoholgebrauch während der Schwangerschaft	65	f	5
+90767-5	108153	Übersicht der Schwangerschaft - Dokument	Alkoholgebrauch während der Schwangerschaft	65	f	6
+90767-5	108154	Übersicht der Schwangerschaft - Dokument	Alkoholgebrauch während der Schwangerschaft	65	f	7
+2128-7	102744	Citrat [Masse/Volumen] in Urin	angeordnete Citratdosis	64	f	8
+34266-7	102744	Citrat [Mol/Volumen] in Urin	angeordnete Citratdosis	64	f	9
+4107-9	102744	Aciclovir [Masse] in Dosis	angeordnete Citratdosis	62	f	10
+4186-3	102744	Ciprofloxacin [Masse] in Dosis	angeordnete Citratdosis	60	f	11
+4199-6	102744	Codein [Masse] in Dosis	angeordnete Citratdosis	61	f	12
+19840-8	101596	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Angeordnete Ziel-Atemfrequenz für Pflege	83	f	13
+8867-4	101596	Herzfrequenz	Angeordnete Ziel-Atemfrequenz für Pflege	62	f	14
+9278-3	101596	Atemfrequenz spezielle Umstände	Angeordnete Ziel-Atemfrequenz für Pflege	83	f	15
+9279-1	101596	Atemfrequenz	Angeordnete Ziel-Atemfrequenz für Pflege	100	f	16
+8716-3	102884	Vitalparameter	Anstiegszeit (Rampenzeit) Alpha Vision	60	f	17
+41728-7	100303	Biapenem [Empfindlichkeit]	Apnea Duration	62	f	18
+12457-8	102897	Volumen von Dialysat	appliziertes Dialysat für Multifiltrate	100	f	19
+12514-6	102897	Bicarbonat [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	63	f	20
+13057-5	102897	Thrombozyten [Einheiten/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	60	f	21
+13494-0	102897	Volumen von 4-Stunden-Dialysat	appliziertes Dialysat für Multifiltrate	67	f	22
+13495-7	102897	Volumen von 24-Stunden-Dialysat	appliziertes Dialysat für Multifiltrate	67	f	23
+14390-9	102897	Amylase [Enzymaktivität/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	68	f	24
+14420-4	102897	Bilirubin.gesamt [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	62	f	25
+15051-6	102897	Creatinin [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	62	f	26
+15075-5	102897	Glucose [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	67	f	27
+15113-4	102897	Aluminium [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	62	f	28
+17255-1	102897	Quecksilber [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	62	f	29
+17582-8	102897	Silber [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	70	f	30
+1998-4	102897	Calcium [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	67	f	31
+2071-9	102897	Chlorid [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	67	f	32
+2343-2	102897	Glucose [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	67	f	33
+2595-7	102897	Magnesium [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	62	f	34
+2775-5	102897	Phosphat [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	64	f	35
+2820-9	102897	Kalium [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	70	f	36
+2949-6	102897	Natrium [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	67	f	37
+34938-1	102897	Phosphat [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	64	f	38
+45302-7	102897	Harnstoff [Mol/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	62	f	39
+46220-0	102897	Creatinin [Mol/Volumen] in Dialysat --über Nacht	appliziertes Dialysat für Multifiltrate	61	f	40
+47842-0	102897	Sammelzeitraum von Dialysat	appliziertes Dialysat für Multifiltrate	67	f	41
+51617-9	102897	Farbe von Dialysat	appliziertes Dialysat für Multifiltrate	73	f	42
+53432-1	102897	Gamma-Glutamyl-Transferase [Enzymaktivität/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	60	f	43
+54349-6	102897	Ammoniak [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	64	f	44
+5572-3	102897	Aluminium [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	62	f	45
+57347-7	102897	Kupfer [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	70	f	46
+57835-1	102897	Aussehen von Dialysat	appliziertes Dialysat für Multifiltrate	64	f	47
+5919-6	102897	Creatinin [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	62	f	48
+5920-4	102897	Protein [Masse/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	67	f	49
+5921-2	102897	Lactatdehydrogenase [Enzymaktivität/Volumen] in Dialysat	appliziertes Dialysat für Multifiltrate	60	f	50
+82754-3	108043	Status der Reise	Arrhytmia Rhytm Status label	67	f	51
+12961-9	1276	Harnstoff-Stickstoff [Masse/Volumen] in arteriellem Blut	arterielle Blutdruck	63	f	52
+19218-7	1276	Sauerstoffgehalt in arteriellem Blut	arterielle Blutdruck	60	f	53
+19230-2	1276	Bicarbonat [Mol/Volumen] Standard in arteriellem Blut	arterielle Blutdruck	61	f	54
+1960-4	1276	Bicarbonat [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	64	f	55
+21232-4	1276	Creatinin [Masse/Volumen] in arteriellem Blut	arterielle Blutdruck	70	f	56
+24336-0	1276	Blutgasanalyse (Liste) - Arterielles Blut	arterielle Blutdruck	63	f	57
+2518-9	1276	Lactat [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	74	f	58
+2703-7	1276	Sauerstoff [Partialdruck] in arteriellem Blut	arterielle Blutdruck	68	f	59
+2708-6	1276	Sauerstoffsättigung in arteriellem Blut	arterielle Blutdruck	62	f	60
+2744-1	1276	pH von arteriellem Blut	arterielle Blutdruck	77	f	61
+28646-8	1276	pH von arteriellem Nabelschnurblut	arterielle Blutdruck	64	f	62
+2906-6	1276	Pyruvat [Masse/Volumen] in arteriellem Blut	arterielle Blutdruck	77	f	63
+30242-2	1276	Lactat [Masse/Volumen] in arteriellem Blut	arterielle Blutdruck	74	f	64
+30313-1	1276	Hämoglobin [Masse/Volumen] in arteriellem Blut	arterielle Blutdruck	65	f	65
+32354-3	1276	Hämatokrit [Volumenfraktion] von arteriellem Blut	arterielle Blutdruck	70	f	66
+32713-0	1276	Kalium [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	74	f	67
+32717-1	1276	Natrium [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	77	f	68
+33254-4	1276	pH von arteriellem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	arterielle Blutdruck	62	f	69
+39481-7	1276	Glucose [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	77	f	70
+41650-3	1276	Chlorid [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	73	f	71
+41651-1	1276	Glucose [Masse/Volumen] in arteriellem Blut	arterielle Blutdruck	77	f	72
+59827-6	1276	Bilirubin.gesamt [Masse/Volumen] in arteriellem Blut	arterielle Blutdruck	65	f	73
+72927-7	1276	Harnstoff [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	70	f	74
+75928-2	1276	Hämoglobin [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	65	f	75
+89872-6	1276	Bilirubin.gesamt [Mol/Volumen] in arteriellem Blut	arterielle Blutdruck	65	f	81
+12961-9	100093	Harnstoff-Stickstoff [Masse/Volumen] in arteriellem Blut	arterieller Blutdruck 1	62	f	82
+19230-2	100093	Bicarbonat [Mol/Volumen] Standard in arteriellem Blut	arterieller Blutdruck 1	63	f	83
+1960-4	100093	Bicarbonat [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	67	f	84
+21232-4	100093	Creatinin [Masse/Volumen] in arteriellem Blut	arterieller Blutdruck 1	68	f	85
+24336-0	100093	Blutgasanalyse (Liste) - Arterielles Blut	arterieller Blutdruck 1	62	f	86
+2518-9	100093	Lactat [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	73	f	87
+2703-7	100093	Sauerstoff [Partialdruck] in arteriellem Blut	arterieller Blutdruck 1	67	f	88
+2708-6	100093	Sauerstoffsättigung in arteriellem Blut	arterieller Blutdruck 1	61	f	89
+2744-1	100093	pH von arteriellem Blut	arterieller Blutdruck 1	75	f	90
+28646-8	100093	pH von arteriellem Nabelschnurblut	arterieller Blutdruck 1	63	f	91
+2906-6	100093	Pyruvat [Masse/Volumen] in arteriellem Blut	arterieller Blutdruck 1	76	f	92
+30242-2	100093	Lactat [Masse/Volumen] in arteriellem Blut	arterieller Blutdruck 1	73	f	93
+30313-1	100093	Hämoglobin [Masse/Volumen] in arteriellem Blut	arterieller Blutdruck 1	64	f	94
+32354-3	100093	Hämatokrit [Volumenfraktion] von arteriellem Blut	arterieller Blutdruck 1	68	f	95
+32713-0	100093	Kalium [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	73	f	96
+32717-1	100093	Natrium [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	76	f	97
+33254-4	100093	pH von arteriellem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	arterieller Blutdruck 1	61	f	98
+39481-7	100093	Glucose [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	76	f	99
+41650-3	100093	Chlorid [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	71	f	100
+41651-1	100093	Glucose [Masse/Volumen] in arteriellem Blut	arterieller Blutdruck 1	76	f	101
+59827-6	100093	Bilirubin.gesamt [Masse/Volumen] in arteriellem Blut	arterieller Blutdruck 1	68	f	102
+72927-7	100093	Harnstoff [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	68	f	103
+75928-2	100093	Hämoglobin [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	64	f	104
+89872-6	100093	Bilirubin.gesamt [Mol/Volumen] in arteriellem Blut	arterieller Blutdruck 1	68	f	110
+21232-4	103010	Creatinin [Masse/Volumen] in arteriellem Blut	arterieller Druck	60	f	111
+2518-9	103010	Lactat [Mol/Volumen] in arteriellem Blut	arterieller Druck	65	f	112
+2744-1	103010	pH von arteriellem Blut	arterieller Druck	67	f	113
+2906-6	103010	Pyruvat [Masse/Volumen] in arteriellem Blut	arterieller Druck	63	f	114
+30242-2	103010	Lactat [Masse/Volumen] in arteriellem Blut	arterieller Druck	65	f	115
+32354-3	103010	Hämatokrit [Volumenfraktion] von arteriellem Blut	arterieller Druck	60	f	116
+32713-0	103010	Kalium [Mol/Volumen] in arteriellem Blut	arterieller Druck	65	f	117
+32717-1	103010	Natrium [Mol/Volumen] in arteriellem Blut	arterieller Druck	63	f	118
+39481-7	103010	Glucose [Mol/Volumen] in arteriellem Blut	arterieller Druck	63	f	119
+41650-3	103010	Chlorid [Mol/Volumen] in arteriellem Blut	arterieller Druck	63	f	120
+41651-1	103010	Glucose [Masse/Volumen] in arteriellem Blut	arterieller Druck	63	f	121
+59827-6	103010	Bilirubin.gesamt [Masse/Volumen] in arteriellem Blut	arterieller Druck	60	f	122
+89872-6	103010	Bilirubin.gesamt [Mol/Volumen] in arteriellem Blut	arterieller Druck	60	f	123
+21232-4	102162	Creatinin [Masse/Volumen] in arteriellem Blut	Arterieller Druck	60	f	124
+2518-9	102162	Lactat [Mol/Volumen] in arteriellem Blut	Arterieller Druck	65	f	125
+2744-1	102162	pH von arteriellem Blut	Arterieller Druck	67	f	126
+2906-6	102162	Pyruvat [Masse/Volumen] in arteriellem Blut	Arterieller Druck	63	f	127
+76213-8	100093	Diastolischer Blutdruck invasiv	arterieller Blutdruck 1	60	t	105
+76215-3	100093	Systolischer Blutdruck invasiv	arterieller Blutdruck 1	60	t	106
+8462-4	100093	Diastolischer Blutdruck	arterieller Blutdruck 1	68	t	107
+8478-0	100093	Mittlerer Blutdruck	arterieller Blutdruck 1	75	t	108
+30242-2	102162	Lactat [Masse/Volumen] in arteriellem Blut	Arterieller Druck	65	f	128
+32354-3	102162	Hämatokrit [Volumenfraktion] von arteriellem Blut	Arterieller Druck	60	f	129
+32713-0	102162	Kalium [Mol/Volumen] in arteriellem Blut	Arterieller Druck	65	f	130
+32717-1	102162	Natrium [Mol/Volumen] in arteriellem Blut	Arterieller Druck	63	f	131
+39481-7	102162	Glucose [Mol/Volumen] in arteriellem Blut	Arterieller Druck	63	f	132
+41650-3	102162	Chlorid [Mol/Volumen] in arteriellem Blut	Arterieller Druck	63	f	133
+41651-1	102162	Glucose [Masse/Volumen] in arteriellem Blut	Arterieller Druck	63	f	134
+59827-6	102162	Bilirubin.gesamt [Masse/Volumen] in arteriellem Blut	Arterieller Druck	60	f	135
+89872-6	102162	Bilirubin.gesamt [Mol/Volumen] in arteriellem Blut	Arterieller Druck	60	f	136
+12961-9	1273	Harnstoff-Stickstoff [Masse/Volumen] in arteriellem Blut	arterielle Sauerstoffsättigung	64	f	137
+19218-7	1273	Sauerstoffgehalt in arteriellem Blut	arterielle Sauerstoffsättigung	71	f	138
+19224-5	1273	Sauerstoffsättigung in gemischt-venösem Blut	arterielle Sauerstoffsättigung	77	f	139
+2019-8	1273	Kohlenstoffdioxid [Partialdruck] in arteriellem Blut	arterielle Sauerstoffsättigung	60	f	140
+2026-3	1273	Kohlenstoffdioxid, gesamt [Mol/Volumen] in arteriellem Blut	arterielle Sauerstoffsättigung	60	f	141
+20564-1	1273	Sauerstoffsättigung in Blut	arterielle Sauerstoffsättigung	88	f	142
+2703-7	1273	Sauerstoff [Partialdruck] in arteriellem Blut	arterielle Sauerstoffsättigung	75	f	143
+2709-4	1273	Sauerstoffsättigung in Kapillarblut	arterielle Sauerstoffsättigung	77	f	145
+2711-0	1273	Sauerstoffsättigung in venösem Blut	arterielle Sauerstoffsättigung	77	f	146
+2713-6	1273	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	arterielle Sauerstoffsättigung	77	f	147
+28642-7	1273	Sauerstoffsättigung in arteriellem Nabelschnurblut	arterielle Sauerstoffsättigung	77	f	148
+28643-5	1273	Sauerstoffsättigung in venösem Nabelschnurblut	arterielle Sauerstoffsättigung	77	f	149
+3150-0	1273	Inhalierte Sauerstoffkonzentration	arterielle Sauerstoffsättigung	60	f	150
+32717-1	1273	Natrium [Mol/Volumen] in arteriellem Blut	arterielle Sauerstoffsättigung	60	f	151
+51731-8	1273	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	arterielle Sauerstoffsättigung	77	f	152
+51732-6	1273	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	arterielle Sauerstoffsättigung	77	f	153
+72927-7	1273	Harnstoff [Mol/Volumen] in arteriellem Blut	arterielle Sauerstoffsättigung	65	f	156
+74105-8	1273	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	arterielle Sauerstoffsättigung	77	f	157
+19840-8	1267	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Atemfrequenz	100	f	158
+8867-4	1267	Herzfrequenz	Atemfrequenz	75	f	159
+9278-3	1267	Atemfrequenz spezielle Umstände	Atemfrequenz	100	f	160
+19840-8	104245	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Atemfrequenz 	100	f	162
+19840-8	104283	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Atemfrequenz 	100	f	163
+8867-4	104245	Herzfrequenz	Atemfrequenz 	75	f	164
+8867-4	104283	Herzfrequenz	Atemfrequenz 	75	f	165
+9278-3	104245	Atemfrequenz spezielle Umstände	Atemfrequenz 	100	f	166
+9278-3	104283	Atemfrequenz spezielle Umstände	Atemfrequenz 	100	f	167
+9279-1	104245	Atemfrequenz	Atemfrequenz 	100	f	168
+9279-1	104283	Atemfrequenz	Atemfrequenz 	100	f	169
+13358-7	21	Probennahme-Zeitpunkt von Sperma	Aufnahmezeitpunkt für den Fall	62	f	170
+29264-9	21	Probennahme-Zeitpunkt von Blut	Aufnahmezeitpunkt für den Fall	70	f	171
+8867-4	104255	Herzfrequenz	Backup Frequenz [n/min] 	80	f	172
+9279-1	104255	Atemfrequenz	Backup Frequenz [n/min] 	80	f	173
+9279-1	100108	Atemfrequenz	Beatmungsfrequenz (f/AF)	65	f	174
+22745-4	30	Ethanol [Mol/Volumen] in Urin	Behandlung	64	f	176
+32095-2	30	Methanol [Mol/Volumen] in Urin	Behandlung	61	f	177
+5644-0	30	Ethanol [Nachweis] in Urin	Behandlung	64	f	178
+5645-7	30	Ethanol [Masse/Volumen] in Urin	Behandlung	64	f	179
+12180-6	102763	Calcium.ionisiert [Mol/Volumen] in Serum oder Plasma mit ionenselektiver Membranelektrode (ISE)	Bezeichnug der Calcium Lösung	70	f	180
+12181-4	102763	Calcium [Mol/Volumen] in Körperflüssigkeit	Bezeichnug der Calcium Lösung	70	f	181
+13454-4	102763	Calcium-Phosphat-Produkt [(Mol/Volumen) hoch 2] in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	182
+13959-2	102763	Calcium.ionisiert [Mol/Volumen] in Serum oder Plasma, berechnet	Bezeichnug der Calcium Lösung	70	f	183
+14415-4	102763	Calcium [Mol/Volumen] in Amnionflüssigkeit	Bezeichnug der Calcium Lösung	70	f	184
+14417-0	102763	Calcium [Mol/Volumen] in Peritonealflüssigkeit	Bezeichnug der Calcium Lösung	70	f	185
+14637-3	102763	Calcium [Mol/Zeit] in 24-Stunden-Urin	Bezeichnug der Calcium Lösung	70	f	186
+15202-5	102763	Kalium [Mol/Volumen] in Stuhl	Bezeichnug der Calcium Lösung	64	f	187
+16271-9	102763	Calcium [Masse/Volumen] in Serum oder Plasma --30 Minuten nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	188
+16513-4	102763	Calcium.ionisiert [Mol/Volumen] in Serum oder Plasma --3. Probenmaterial nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	189
+16517-5	102763	Calcium.ionisiert [Mol/Volumen] in Serum oder Plasma --7. Probenmaterial nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	190
+9279-1	1267	Atemfrequenz	Atemfrequenz	100	t	161
+59408-5	1273	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	arterielle Sauerstoffsättigung	77	t	155
+18776-5	30	Behandlungsplan - Notiz	Behandlung	65	t	175
+16518-3	102763	Calcium [Masse/Zeit] in 2-Stunden-Urin	Bezeichnug der Calcium Lösung	70	f	191
+16519-1	102763	Calcium [Mol/Volumen] in Serum oder Plasma --10 Minuten nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	192
+16526-6	102763	Calcium/Protein [Massenverhältnis] in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	193
+17861-6	102763	Calcium [Masse/Volumen] in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	194
+17862-4	102763	Calcium [Masse/Volumen] in Urin	Bezeichnug der Calcium Lösung	80	f	195
+17863-2	102763	Calcium.ionisiert [Masse/Volumen] in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	196
+17864-0	102763	Calcium.ionisiert [Masse/Volumen] in Serum oder Plasma mit ionenselektiver Membranelektrode (ISE)	Bezeichnug der Calcium Lösung	70	f	197
+18186-7	102763	Calcium [Masse/Zeit] in 12-Stunden-Urin	Bezeichnug der Calcium Lösung	70	f	198
+19072-8	102763	Calcium.ionisiert [Mol/Volumen] angepasst an pH 7,4 in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	199
+1994-3	102763	Calcium.ionisiert [Mol/Volumen] in Blut	Bezeichnug der Calcium Lösung	70	f	200
+1995-0	102763	Calcium.ionisiert [Mol/Volumen] in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	201
+1996-8	102763	Calcium [Mol/Volumen] in Blut	Bezeichnug der Calcium Lösung	80	f	202
+1998-4	102763	Calcium [Mol/Volumen] in Dialysat	Bezeichnug der Calcium Lösung	70	f	203
+2000-8	102763	Calcium [Mol/Volumen] in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	204
+2001-6	102763	Calcium [Mol/Volumen] in 24-Stunden-Stuhl	Bezeichnug der Calcium Lösung	71	f	205
+2004-0	102763	Calcium [Mol/Volumen] in Urin	Bezeichnug der Calcium Lösung	80	f	206
+2005-7	102763	Calcium [Mol/Zeit] in 2-Stunden-Urin --nach 12 Stunden Nahrungskarenz	Bezeichnug der Calcium Lösung	70	f	207
+24518-3	102763	Calcium/Creatinin [Molverhältnis] in Urin	Bezeichnug der Calcium Lösung	70	f	208
+25360-9	102763	Cadmium [Mol/Volumen] in Urin	Bezeichnug der Calcium Lösung	64	f	209
+25362-5	102763	Calcium [Mol/Volumen] in 24-Stunden-Urin	Bezeichnug der Calcium Lösung	70	f	210
+25506-7	102763	Kalium [Mol/Masse] in Stuhl	Bezeichnug der Calcium Lösung	64	f	211
+27037-1	102763	Calcium/Creatinin [Massenverhältnis] in 2-Stunden-Urin	Bezeichnug der Calcium Lösung	70	f	212
+27172-6	102763	Calcium [Masse/Masse] in 24-Stunden-Stuhl	Bezeichnug der Calcium Lösung	71	f	213
+27441-5	102763	Kalium [Mol/Masse] in 24-Stunden-Stuhl	Bezeichnug der Calcium Lösung	61	f	214
+2828-2	102763	Kalium [Mol/Volumen] in Urin	Bezeichnug der Calcium Lösung	67	f	215
+29265-6	102763	Calcium [Mol/Volumen] Albumin-korrigiert in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	216
+33790-7	102763	Calcium [Mol/Volumen] in Urin --1. Probenmaterial nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	217
+34581-9	102763	Calcium.ionisiert [Mol/Volumen] in arteriellem Blut	Bezeichnug der Calcium Lösung	70	f	218
+38230-9	102763	Calcium.ionisiert [Masse/Volumen] in Blut	Bezeichnug der Calcium Lösung	70	f	219
+38250-7	102763	Calcium [Masse/Volumen] in Probenmaterial	Bezeichnug der Calcium Lösung	70	f	220
+40083-8	102763	Calcium [Masse/Volumen] in Serum oder Plasma --1 Tag nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	221
+40230-5	102763	Calcium [Mol/Volumen] in Serum oder Plasma --1,5 Stunden nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	222
+41644-6	102763	Calcium.ionisiert [Mol/Volumen] in Kapillarblut	Bezeichnug der Calcium Lösung	70	f	223
+41645-3	102763	Calcium.ionisiert [Mol/Volumen] in venösem Blut	Bezeichnug der Calcium Lösung	70	f	224
+41646-1	102763	Calcium.ionisiert [Mol/Volumen] in gemischt-venösem Blut	Bezeichnug der Calcium Lösung	70	f	225
+42593-4	102763	Calcium [Mol/Volumen] in Kapillarblut	Bezeichnug der Calcium Lösung	70	f	226
+42857-3	102763	Calcium [Mol/Volumen] in venösem Blut	Bezeichnug der Calcium Lösung	70	f	227
+46093-1	102763	Calcium.ionisiert [Mol/Volumen] in Dialysat	Bezeichnug der Calcium Lösung	70	f	228
+46099-8	102763	Calcium [Masse/Volumen] Albumin-korrigiert in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	229
+47275-3	102763	S100 Calcium-bindendes Protein B [Masse/Volumen] in Serum	Bezeichnug der Calcium Lösung	70	f	230
+47596-2	102763	Calcium.ionisiert [Mol/Volumen] in Blut mit ionenselektiver Membranelektrode (ISE)	Bezeichnug der Calcium Lösung	70	f	231
+49005-2	102763	Calcium [Mol/Volumen] in Peritonealdialysat	Bezeichnug der Calcium Lösung	70	f	232
+49764-4	102763	Calcium [Masse/Volumen] in Amnionflüssigkeit	Bezeichnug der Calcium Lösung	70	f	233
+49765-1	102763	Calcium [Masse/Volumen] in Blut	Bezeichnug der Calcium Lösung	80	f	234
+50836-6	102763	Calcium [Mol/Masse] in Haar	Bezeichnug der Calcium Lösung	74	f	235
+51610-4	102763	Calcium [Mol/Zeit] in 12-Stunden-Urin	Bezeichnug der Calcium Lösung	70	f	236
+53087-3	102763	Calcium.ionisiert [Mol/Volumen] angepasst an pH 7,4 in nicht-biologischer Flüssigkeit	Bezeichnug der Calcium Lösung	70	f	237
+53502-1	102763	Calcium [Mol/Masse] in Probenmaterial	Bezeichnug der Calcium Lösung	70	f	238
+54366-0	102763	Calcium.ionisiert [Mol/Volumen] angepasst an pH 7,4 in Nabelschnurblut	Bezeichnug der Calcium Lösung	70	f	239
+5611-9	102763	Cadmium [Masse/Volumen] in Urin	Bezeichnug der Calcium Lösung	64	f	240
+57335-2	102763	Calcium [Masse/Volumen] in 12-Stunden-Urin	Bezeichnug der Calcium Lösung	70	f	241
+5745-5	102763	Thallium [Masse/Volumen] in Urin	Bezeichnug der Calcium Lösung	62	f	242
+59470-5	102763	Calcium.ionisiert [Masse/Volumen] in arteriellem Blut	Bezeichnug der Calcium Lösung	70	f	243
+15074-8	101472	Glucose [Mol/Volumen] in Blut	Blutgruppe des Patienten	64	f	244
+2339-0	101472	Glucose [Masse/Volumen] in Blut	Blutgruppe des Patienten	64	f	245
+47100-3	101472	Kupfer [Mol/Volumen] in Blut	Blutgruppe des Patienten	67	f	246
+98981-4	101472	Harnsäure [Masse/Volumen] in Blut	Blutgruppe des Patienten	61	f	247
+19254-2	103716	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Bluttemperatur bei der HZV Messung	60	f	248
+39486-6	103716	pH von venösem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Bluttemperatur bei der HZV Messung	68	f	249
+17862-4	103052	Calcium [Masse/Volumen] in Urin	Calciumbeutel	64	f	250
+2004-0	103052	Calcium [Mol/Volumen] in Urin	Calciumbeutel	64	f	251
+38250-7	103052	Calcium [Masse/Volumen] in Probenmaterial	Calciumbeutel	69	f	252
+42593-4	103052	Calcium [Mol/Volumen] in Kapillarblut	Calciumbeutel	61	f	253
+53502-1	103052	Calcium [Mol/Masse] in Probenmaterial	Calciumbeutel	69	f	254
+14637-3	103121	Calcium [Mol/Zeit] in 24-Stunden-Urin	Calciumlösung	62	f	255
+16518-3	103121	Calcium [Masse/Zeit] in 2-Stunden-Urin	Calciumlösung	62	f	256
+17861-6	103121	Calcium [Masse/Volumen] in Serum oder Plasma	Calciumlösung	62	f	257
+17862-4	103121	Calcium [Masse/Volumen] in Urin	Calciumlösung	75	f	258
+18186-7	103121	Calcium [Masse/Zeit] in 12-Stunden-Urin	Calciumlösung	62	f	259
+1998-4	103121	Calcium [Mol/Volumen] in Dialysat	Calciumlösung	64	f	260
+2000-8	103121	Calcium [Mol/Volumen] in Serum oder Plasma	Calciumlösung	62	f	261
+2001-6	103121	Calcium [Mol/Volumen] in 24-Stunden-Stuhl	Calciumlösung	67	f	262
+2004-0	103121	Calcium [Mol/Volumen] in Urin	Calciumlösung	75	f	263
+25362-5	103121	Calcium [Mol/Volumen] in 24-Stunden-Urin	Calciumlösung	62	f	264
+27172-6	103121	Calcium [Masse/Masse] in 24-Stunden-Stuhl	Calciumlösung	67	f	265
+2828-2	103121	Kalium [Mol/Volumen] in Urin	Calciumlösung	61	f	266
+51610-4	103121	Calcium [Mol/Zeit] in 12-Stunden-Urin	Calciumlösung	62	f	267
+57335-2	103121	Calcium [Masse/Volumen] in 12-Stunden-Urin	Calciumlösung	62	f	268
+17862-4	103058	Calcium [Masse/Volumen] in Urin	Calciumrate	70	f	269
+17862-4	103062	Calcium [Masse/Volumen] in Urin	Calciumrate	70	f	270
+1996-8	103058	Calcium [Mol/Volumen] in Blut	Calciumrate	61	f	271
+1996-8	103062	Calcium [Mol/Volumen] in Blut	Calciumrate	61	f	272
+1998-4	103058	Calcium [Mol/Volumen] in Dialysat	Calciumrate	67	f	273
+1998-4	103062	Calcium [Mol/Volumen] in Dialysat	Calciumrate	67	f	274
+2004-0	103058	Calcium [Mol/Volumen] in Urin	Calciumrate	70	f	275
+2004-0	103062	Calcium [Mol/Volumen] in Urin	Calciumrate	70	f	276
+24518-3	103058	Calcium/Creatinin [Molverhältnis] in Urin	Calciumrate	61	f	277
+24518-3	103062	Calcium/Creatinin [Molverhältnis] in Urin	Calciumrate	61	f	278
+38250-7	103058	Calcium [Masse/Volumen] in Probenmaterial	Calciumrate	67	f	279
+38250-7	103062	Calcium [Masse/Volumen] in Probenmaterial	Calciumrate	67	f	280
+49765-1	103058	Calcium [Masse/Volumen] in Blut	Calciumrate	61	f	281
+49765-1	103062	Calcium [Masse/Volumen] in Blut	Calciumrate	61	f	282
+50836-6	103058	Calcium [Mol/Masse] in Haar	Calciumrate	70	f	283
+50836-6	103062	Calcium [Mol/Masse] in Haar	Calciumrate	70	f	284
+53502-1	103058	Calcium [Mol/Masse] in Probenmaterial	Calciumrate	67	f	285
+53502-1	103062	Calcium [Mol/Masse] in Probenmaterial	Calciumrate	67	f	286
+19224-5	112007	Sauerstoffsättigung in gemischt-venösem Blut	cerbebrale Sauerstoffsättigung rechts	77	f	287
+20564-1	112007	Sauerstoffsättigung in Blut	cerbebrale Sauerstoffsättigung rechts	88	f	288
+2708-6	112007	Sauerstoffsättigung in arteriellem Blut	cerbebrale Sauerstoffsättigung rechts	77	f	289
+2709-4	112007	Sauerstoffsättigung in Kapillarblut	cerbebrale Sauerstoffsättigung rechts	77	f	290
+2711-0	112007	Sauerstoffsättigung in venösem Blut	cerbebrale Sauerstoffsättigung rechts	77	f	291
+2713-6	112007	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	cerbebrale Sauerstoffsättigung rechts	77	f	292
+28642-7	112007	Sauerstoffsättigung in arteriellem Nabelschnurblut	cerbebrale Sauerstoffsättigung rechts	77	f	293
+28643-5	112007	Sauerstoffsättigung in venösem Nabelschnurblut	cerbebrale Sauerstoffsättigung rechts	77	f	294
+51731-8	112007	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	cerbebrale Sauerstoffsättigung rechts	77	f	295
+51732-6	112007	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	cerbebrale Sauerstoffsättigung rechts	77	f	296
+51733-4	112007	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	cerbebrale Sauerstoffsättigung rechts	77	f	297
+59408-5	112007	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	cerbebrale Sauerstoffsättigung rechts	77	f	298
+74105-8	112007	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	cerbebrale Sauerstoffsättigung rechts	77	f	299
+11556-8	112006	Sauerstoff [Partialdruck] in Blut	cerebrale Sauerstoffsättigung links	60	f	300
+19224-5	112006	Sauerstoffsättigung in gemischt-venösem Blut	cerebrale Sauerstoffsättigung links	78	f	301
+20564-1	112006	Sauerstoffsättigung in Blut	cerebrale Sauerstoffsättigung links	88	f	302
+2708-6	112006	Sauerstoffsättigung in arteriellem Blut	cerebrale Sauerstoffsättigung links	78	f	303
+2709-4	112006	Sauerstoffsättigung in Kapillarblut	cerebrale Sauerstoffsättigung links	78	f	304
+2711-0	112006	Sauerstoffsättigung in venösem Blut	cerebrale Sauerstoffsättigung links	78	f	305
+2713-6	112006	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	cerebrale Sauerstoffsättigung links	78	f	306
+28642-7	112006	Sauerstoffsättigung in arteriellem Nabelschnurblut	cerebrale Sauerstoffsättigung links	78	f	307
+28643-5	112006	Sauerstoffsättigung in venösem Nabelschnurblut	cerebrale Sauerstoffsättigung links	78	f	308
+51731-8	112006	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	cerebrale Sauerstoffsättigung links	78	f	309
+51732-6	112006	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	cerebrale Sauerstoffsättigung links	78	f	310
+51733-4	112006	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	cerebrale Sauerstoffsättigung links	78	f	311
+59408-5	112006	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	cerebrale Sauerstoffsättigung links	78	f	312
+74105-8	112006	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	cerebrale Sauerstoffsättigung links	78	f	313
+2128-7	103051	Citrat [Masse/Volumen] in Urin	Citratbeutel	61	f	314
+34266-7	103051	Citrat [Mol/Volumen] in Urin	Citratbeutel	61	f	315
+14650-6	103122	Citrat [Mol/Zeit] in 24-Stunden-Urin	Citratlösung	60	f	316
+15038-3	103122	Citrat [Mol/Volumen] in Serum oder Plasma	Citratlösung	60	f	317
+2128-7	103122	Citrat [Masse/Volumen] in Urin	Citratlösung	73	f	318
+25876-4	103122	Citrat [Mol/Volumen] in 24-Stunden-Urin	Citratlösung	60	f	319
+34266-7	103122	Citrat [Mol/Volumen] in Urin	Citratlösung	73	f	320
+57337-8	103122	Citrat [Masse/Volumen] in 12-Stunden-Urin	Citratlösung	60	f	321
+57338-6	103122	Citrat [Masse/Volumen] in 2-Stunden-Urin	Citratlösung	60	f	322
+10567-6	103057	Citrat [Mol/Volumen] in Sperma	Citratrate	70	f	323
+10567-6	103061	Citrat [Mol/Volumen] in Sperma	Citratrate	70	f	324
+2126-1	103057	Citrat [Masse/Volumen] in Sperma	Citratrate	70	f	325
+2126-1	103061	Citrat [Masse/Volumen] in Sperma	Citratrate	70	f	326
+2128-7	103057	Citrat [Masse/Volumen] in Urin	Citratrate	67	f	327
+2128-7	103061	Citrat [Masse/Volumen] in Urin	Citratrate	67	f	328
+34266-7	103057	Citrat [Mol/Volumen] in Urin	Citratrate	67	f	329
+34266-7	103061	Citrat [Mol/Volumen] in Urin	Citratrate	67	f	330
+8867-4	104281	Herzfrequenz	CMV Frequenz 	67	f	331
+9279-1	104281	Atemfrequenz	CMV Frequenz 	75	f	332
+19817-6	101433	Komplikationen	Compliance	67	f	333
+29275-5	104247	Körpermessungen	Continuous Positive Airway Pressure 	64	f	334
+11215-1	106312	Delta-Aminolevulinat [Masse/Volumen] in Urin	Delta P2/P3	62	f	335
+14689-4	106312	Delta-Aminolevulinat [Mol/Zeit] in 24-Stunden-Urin	Delta P2/P3	62	f	336
+1970-3	106312	Bilirubin.Delta [Masse/Volumen] in Serum oder Plasma	Delta P2/P3	62	f	337
+2198-0	106312	Delta-Aminolevulinat [Masse/Volumen] in Plasma	Delta P2/P3	62	f	338
+2199-8	106312	Delta-Aminolevulinat [Masse/Volumen] in Serum	Delta P2/P3	62	f	339
+2200-4	106312	Delta-Aminolevulinat [Masse/Zeit] in 24-Stunden-Urin	Delta P2/P3	62	f	340
+22665-4	106312	Bilirubin.Delta [Mol/Volumen] in Serum oder Plasma	Delta P2/P3	62	f	341
+25896-2	106312	Delta-Aminolevulinat [Mol/Volumen] in 24-Stunden-Urin	Delta P2/P3	62	f	342
+26974-6	106312	Delta-Aminolevulinat [Masse/Volumen] in 24-Stunden-Urin	Delta P2/P3	62	f	343
+34284-0	106312	Delta-Aminolevulinat [Mol/Volumen] in Urin	Delta P2/P3	62	f	344
+39782-8	106312	Delta-Aminolevulinat/Creatinin [Molverhältnis] in Urin	Delta P2/P3	62	f	345
+47088-0	106312	Delta-Aminolevulinat [Mol/Volumen] in Serum	Delta P2/P3	62	f	346
+79646-6	106312	Delta-Aminolevulinat [Mol/Volumen] in Serum oder Plasma	Delta P2/P3	62	f	347
+19254-2	108742	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Delta Temperatur zentral/Temperatur peripher	62	f	348
+39486-6	108742	pH von venösem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Delta Temperatur zentral/Temperatur peripher	63	f	349
+18724-5	1278	HLA-Diagnostik	Diagnosen des Patienten	61	f	350
+18729-4	1278	Urindiagnostik	Diagnosen des Patienten	61	f	351
+30300-8	1278	Didanosin [Empfindlichkeit]	Diagnosen des Patienten	78	f	354
+12457-8	103095	Volumen von Dialysat	Dialysatlösung	76	f	355
+13494-0	103095	Volumen von 4-Stunden-Dialysat	Dialysatlösung	76	f	356
+13495-7	103095	Volumen von 24-Stunden-Dialysat	Dialysatlösung	76	f	357
+15075-5	103095	Glucose [Mol/Volumen] in Dialysat	Dialysatlösung	69	f	358
+17582-8	103095	Silber [Masse/Volumen] in Dialysat	Dialysatlösung	64	f	359
+2343-2	103095	Glucose [Masse/Volumen] in Dialysat	Dialysatlösung	69	f	360
+2595-7	103095	Magnesium [Mol/Volumen] in Dialysat	Dialysatlösung	65	f	361
+2775-5	103095	Phosphat [Masse/Volumen] in Dialysat	Dialysatlösung	60	f	362
+2820-9	103095	Kalium [Mol/Volumen] in Dialysat	Dialysatlösung	71	f	363
+2949-6	103095	Natrium [Mol/Volumen] in Dialysat	Dialysatlösung	62	f	364
+34938-1	103095	Phosphat [Mol/Volumen] in Dialysat	Dialysatlösung	60	f	365
+57347-7	103095	Kupfer [Masse/Volumen] in Dialysat	Dialysatlösung	64	f	366
+5920-4	103095	Protein [Masse/Volumen] in Dialysat	Dialysatlösung	62	f	367
+12457-8	103042	Volumen von Dialysat	Dialysatlösung, Beutel	76	f	368
+13494-0	103042	Volumen von 4-Stunden-Dialysat	Dialysatlösung, Beutel	76	f	369
+13495-7	103042	Volumen von 24-Stunden-Dialysat	Dialysatlösung, Beutel	76	f	370
+15075-5	103042	Glucose [Mol/Volumen] in Dialysat	Dialysatlösung, Beutel	69	f	371
+17582-8	103042	Silber [Masse/Volumen] in Dialysat	Dialysatlösung, Beutel	64	f	372
+2343-2	103042	Glucose [Masse/Volumen] in Dialysat	Dialysatlösung, Beutel	69	f	373
+2595-7	103042	Magnesium [Mol/Volumen] in Dialysat	Dialysatlösung, Beutel	65	f	374
+2775-5	103042	Phosphat [Masse/Volumen] in Dialysat	Dialysatlösung, Beutel	60	f	375
+2820-9	103042	Kalium [Mol/Volumen] in Dialysat	Dialysatlösung, Beutel	71	f	376
+2949-6	103042	Natrium [Mol/Volumen] in Dialysat	Dialysatlösung, Beutel	62	f	377
+34938-1	103042	Phosphat [Mol/Volumen] in Dialysat	Dialysatlösung, Beutel	60	f	378
+57347-7	103042	Kupfer [Masse/Volumen] in Dialysat	Dialysatlösung, Beutel	64	f	379
+5920-4	103042	Protein [Masse/Volumen] in Dialysat	Dialysatlösung, Beutel	62	f	380
+12457-8	103043	Volumen von Dialysat	Dialysatrate	80	f	381
+13057-5	103043	Thrombozyten [Einheiten/Volumen] in Dialysat	Dialysatrate	67	f	382
+13494-0	103043	Volumen von 4-Stunden-Dialysat	Dialysatrate	71	f	383
+13495-7	103043	Volumen von 24-Stunden-Dialysat	Dialysatrate	71	f	384
+29548-5	1278	Diagnose - Freitext	Diagnosen des Patienten	62	t	353
+15075-5	103043	Glucose [Mol/Volumen] in Dialysat	Dialysatrate	64	f	385
+17582-8	103043	Silber [Masse/Volumen] in Dialysat	Dialysatrate	67	f	386
+2343-2	103043	Glucose [Masse/Volumen] in Dialysat	Dialysatrate	64	f	387
+2595-7	103043	Magnesium [Mol/Volumen] in Dialysat	Dialysatrate	67	f	388
+2775-5	103043	Phosphat [Masse/Volumen] in Dialysat	Dialysatrate	69	f	389
+2820-9	103043	Kalium [Mol/Volumen] in Dialysat	Dialysatrate	67	f	390
+2949-6	103043	Natrium [Mol/Volumen] in Dialysat	Dialysatrate	71	f	391
+34938-1	103043	Phosphat [Mol/Volumen] in Dialysat	Dialysatrate	69	f	392
+45302-7	103043	Harnstoff [Mol/Volumen] in Dialysat	Dialysatrate	67	f	393
+46243-2	103043	Harnstoff [Mol/Volumen] in Dialysat --über Nacht	Dialysatrate	61	f	394
+51617-9	103043	Farbe von Dialysat	Dialysatrate	77	f	395
+57347-7	103043	Kupfer [Masse/Volumen] in Dialysat	Dialysatrate	67	f	396
+5920-4	103043	Protein [Masse/Volumen] in Dialysat	Dialysatrate	79	f	397
+8716-3	103043	Vitalparameter	Dialysatrate	62	f	398
+12457-8	103224	Volumen von Dialysat	Dialysekonzentrat 6 liter gesamt	64	f	399
+30121-8	103224	Kolonienanzahl [#/Volumen] in Dialysat	Dialysekonzentrat 6 liter gesamt	60	f	400
+47842-0	103224	Sammelzeitraum von Dialysat	Dialysekonzentrat 6 liter gesamt	60	f	401
+12457-8	102921	Volumen von Dialysat	Dialysekonzentrat Verordnung String	64	f	402
+30121-8	102921	Kolonienanzahl [#/Volumen] in Dialysat	Dialysekonzentrat Verordnung String	60	f	403
+47842-0	102921	Sammelzeitraum von Dialysat	Dialysekonzentrat Verordnung String	60	f	404
+14348-7	110886	Spezifisches Gewicht von Peritonealflüssigkeit mit Refraktometrie	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	405
+17608-1	110886	Gewicht [Masse/Zeit] von 48-Stunden-Stuhl	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	406
+17609-9	110886	Gewicht [Masse/Zeit] von 72-Stunden-Stuhl	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	407
+25530-7	110886	Gewicht [Masse/Zeit] von 24-Stunden-Stuhl	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	408
+29638-4	110886	Gewicht von Gewebe	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	74	f	409
+2964-5	110886	Spezifisches Gewicht von Körperflüssigkeit	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	410
+2965-2	110886	Spezifisches Gewicht von Urin	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	411
+30078-0	110886	Gewicht von Stuhl	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	412
+33247-8	110886	Gewicht von Schweiß	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	74	f	413
+44933-0	110886	Spezifisches Gewicht von 24-Stunden-Urin mit Refraktometrie	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	414
+50562-8	110886	Spezifisches Gewicht von Urin mit automatisierter Refraktometrie	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	415
+53326-5	110886	Spezifisches Gewicht von Urin mit automatisiertem Teststreifen	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	416
+5810-7	110886	Spezifisches Gewicht von Urin mit Refraktometrie	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	417
+5811-5	110886	Spezifisches Gewicht von Urin mit Teststreifen	Die Nummer der Waage, mit der das Gewicht ermittelt wurde.	70	f	418
+14348-7	110904	Spezifisches Gewicht von Peritonealflüssigkeit mit Refraktometrie	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	419
+21612-7	110904	Alter - Berichtet	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	62	f	422
+29638-4	110904	Gewicht von Gewebe	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	425
+2964-5	110904	Spezifisches Gewicht von Körperflüssigkeit	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	426
+2965-2	110904	Spezifisches Gewicht von Urin	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	427
+30078-0	110904	Gewicht von Stuhl	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	428
+33247-8	110904	Gewicht von Schweiß	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	429
+44933-0	110904	Spezifisches Gewicht von 24-Stunden-Urin mit Refraktometrie	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	430
+50562-8	110904	Spezifisches Gewicht von Urin mit automatisierter Refraktometrie	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	431
+53326-5	110904	Spezifisches Gewicht von Urin mit automatisiertem Teststreifen	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	432
+5810-7	110904	Spezifisches Gewicht von Urin mit Refraktometrie	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	433
+5811-5	110904	Spezifisches Gewicht von Urin mit Teststreifen	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	f	434
+8336-0	110904	Körpergewicht [Perzentil] pro Alter	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	61	f	435
+8867-4	104718	Herzfrequenz	Dokumentation der eingestellten Frequenz.	80	f	436
+9279-1	104718	Atemfrequenz	Dokumentation der eingestellten Frequenz.	80	f	437
+100059-5	104714	Rifapentin [Empfindlichkeit]	Dokumentation der eingestellten Rampenzeit.	60	f	438
+30299-2	104714	Amprenavir [Empfindlichkeit]	Dokumentation der eingestellten Rampenzeit.	60	f	439
+3243-3	104714	Thrombinzeit	Dokumentation der eingestellten Rampenzeit.	64	f	440
+35802-8	104714	Ertapenem [Empfindlichkeit]	Dokumentation der eingestellten Rampenzeit.	63	f	441
+6683-7	104714	Reptilasezeit	Dokumentation der eingestellten Rampenzeit.	61	f	442
+88462-7	104714	Carbapenem [Empfindlichkeit]	Dokumentation der eingestellten Rampenzeit.	60	f	443
+8310-5	103731	Körpertemperatur	Dokumentation der eingestellten Temperatur am ECMO Gerät	69	f	444
+8334-5	103731	Körpertemperatur - Harnblase	Dokumentation der eingestellten Temperatur am ECMO Gerät	62	f	445
+8867-4	106472	Herzfrequenz	Dokumentation der IABP Frequenz	64	f	446
+9279-1	106472	Atemfrequenz	Dokumentation der IABP Frequenz	64	f	447
+8867-4	104354	Herzfrequenz	Dokumentation der IABP Frequenz.	64	f	448
+9279-1	104354	Atemfrequenz	Dokumentation der IABP Frequenz.	64	f	449
+29275-5	104717	Körpermessungen	Dokumentation des eingestellten Pressure Support.	64	f	450
+25170-2	106468	Quecksilber [Mol/Volumen] in Blut	Dokumentation des gemessenen Blutdruckes unter IABP	62	f	451
+8462-4	106468	Diastolischer Blutdruck	Dokumentation des gemessenen Blutdruckes unter IABP	62	f	452
+8478-0	106468	Mittlerer Blutdruck	Dokumentation des gemessenen Blutdruckes unter IABP	63	f	453
+25170-2	104356	Quecksilber [Mol/Volumen] in Blut	Dokumentation des gemessenen Blutdruckes unter IABP.	62	f	454
+8462-4	104356	Diastolischer Blutdruck	Dokumentation des gemessenen Blutdruckes unter IABP.	62	f	455
+8478-0	104356	Mittlerer Blutdruck	Dokumentation des gemessenen Blutdruckes unter IABP.	63	f	456
+22741-3	104345	Serin [Mol/Volumen] in Probenmaterial	Dokumentation des prozentualen Anteil des Aufblasens des Ballons.	62	f	457
+23779-2	104345	Selen [Masse/Volumen] in Probenmaterial	Dokumentation des prozentualen Anteil des Aufblasens des Ballons.	62	f	458
+22741-3	106469	Serin [Mol/Volumen] in Probenmaterial	Dokumentation des prozentualen Anteils des Aufblasens des Ballons	62	f	459
+23779-2	106469	Selen [Masse/Volumen] in Probenmaterial	Dokumentation des prozentualen Anteils des Aufblasens des Ballons	62	f	460
+18721-1	103751	Therapeutische Arzneimittelüberwachung	Dokumentierte Dauer der pflegerischen Assistenz bei therapeutischen, diagnostischen und oder operativen Interventionen.	61	f	461
+5735-6	103053	Silber [Masse/Volumen] in Urin	Dosierung	60	f	462
+63895-7	108042	Stillstatus	Ectopic Status Label	64	f	463
+77739-1	108042	Hepatitis-B-Virus-Oberflächenantigen-Status von der Mutter	Ectopic Status Label	60	f	464
+82754-3	108042	Status der Reise	Ectopic Status Label	69	f	465
+19840-8	103298	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	eingestellte Atemfrequenz	100	f	466
+8867-4	103298	Herzfrequenz	eingestellte Atemfrequenz	75	f	467
+9278-3	103298	Atemfrequenz spezielle Umstände	eingestellte Atemfrequenz	100	f	468
+9279-1	103298	Atemfrequenz	eingestellte Atemfrequenz	100	f	469
+9278-3	103306	Atemfrequenz spezielle Umstände	eingestellte Atemfrequenz in der Apnoeventilation	64	f	470
+9279-1	103306	Atemfrequenz	eingestellte Atemfrequenz in der Apnoeventilation	100	f	471
+8867-4	107988	Herzfrequenz	Eingestellte CMV Frequenz	67	f	472
+9279-1	107988	Atemfrequenz	Eingestellte CMV Frequenz	75	f	473
+103-2	103296	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	474
+107-3	103296	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	475
+111-5	103296	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	476
+115-6	103296	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	477
+11-7	103296	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	478
+119-8	103296	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	479
+123-0	103296	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	480
+127-1	103296	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	481
+132-1	103296	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	482
+136-2	103296	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	483
+140-4	103296	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	484
+144-6	103296	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	485
+148-7	103296	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	486
+156-0	103296	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	487
+15-8	103296	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	488
+160-2	103296	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	489
+164-4	103296	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	490
+168-5	103296	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	491
+172-7	103296	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	492
+176-8	103296	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	493
+180-0	103296	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	494
+184-2	103296	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	495
+188-3	103296	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	496
+19-0	103296	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	497
+192-5	103296	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	498
+196-6	103296	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	499
+204-8	103296	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	500
+212-1	103296	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	501
+216-2	103296	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	502
+220-4	103296	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	503
+224-6	103296	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	504
+228-7	103296	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	505
+23-2	103296	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	506
+232-9	103296	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	507
+236-0	103296	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	508
+240-2	103296	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	509
+257-6	103296	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	510
+261-8	103296	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	511
+266-7	103296	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	512
+270-9	103296	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	513
+27-3	103296	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	514
+274-1	103296	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	515
+278-2	103296	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	516
+286-5	103296	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	517
+290-7	103296	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	518
+294-9	103296	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	519
+298-0	103296	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	520
+302-0	103296	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	521
+306-1	103296	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	522
+310-3	103296	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	523
+314-5	103296	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	524
+31-5	103296	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	525
+3150-0	103296	Inhalierte Sauerstoffkonzentration	eingestellte O2 Konzentration des Frischgases	61	f	526
+318-6	103296	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	527
+322-8	103296	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	528
+326-9	103296	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	529
+330-1	103296	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	530
+334-3	103296	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	531
+338-4	103296	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	532
+346-7	103296	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	533
+354-1	103296	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	534
+35-6	103296	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	535
+358-2	103296	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	536
+362-4	103296	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	537
+366-5	103296	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	538
+374-9	103296	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	539
+378-0	103296	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	540
+382-2	103296	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	541
+386-3	103296	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	542
+391-3	103296	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	543
+395-4	103296	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	544
+39-8	103296	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	545
+399-6	103296	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	546
+407-7	103296	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	547
+411-9	103296	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	548
+415-0	103296	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	549
+419-2	103296	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	550
+423-4	103296	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	551
+427-5	103296	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	552
+43-0	103296	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	553
+43270-8	103296	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	554
+435-8	103296	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	555
+439-0	103296	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	556
+443-2	103296	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	557
+447-3	103296	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	558
+451-5	103296	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	559
+455-6	103296	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	560
+459-8	103296	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	561
+463-0	103296	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	562
+467-1	103296	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	563
+47-1	103296	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	564
+471-3	103296	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	565
+475-4	103296	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	566
+479-6	103296	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	567
+483-8	103296	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	568
+487-9	103296	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	569
+491-1	103296	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	570
+495-2	103296	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	571
+499-4	103296	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	572
+503-3	103296	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	573
+507-4	103296	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	574
+511-6	103296	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	575
+515-7	103296	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	576
+519-9	103296	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	577
+523-1	103296	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	578
+55-4	103296	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	579
+59-6	103296	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	580
+59833-4	103296	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	581
+63-8	103296	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	582
+6643-1	103296	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	583
+6651-4	103296	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	584
+67-9	103296	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	585
+71-1	103296	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	586
+75-2	103296	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	587
+79-4	103296	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	588
+8274-3	103296	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	589
+83-6	103296	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	590
+87-7	103296	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	591
+91-9	103296	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	592
+95-0	103296	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	593
+99-2	103296	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Frischgases	63	f	594
+103-2	103267	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	595
+107-3	103267	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	596
+111-5	103267	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	597
+115-6	103267	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	598
+11-7	103267	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	599
+119-8	103267	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	600
+123-0	103267	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	601
+127-1	103267	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	602
+132-1	103267	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	603
+136-2	103267	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	604
+140-4	103267	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	605
+144-6	103267	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	606
+148-7	103267	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	607
+156-0	103267	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	608
+15-8	103267	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	609
+160-2	103267	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	610
+164-4	103267	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	611
+168-5	103267	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	612
+172-7	103267	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	613
+176-8	103267	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	614
+180-0	103267	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	615
+184-2	103267	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	616
+188-3	103267	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	617
+19-0	103267	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	618
+192-5	103267	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	619
+196-6	103267	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	620
+204-8	103267	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	621
+212-1	103267	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	622
+216-2	103267	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	623
+220-4	103267	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	624
+224-6	103267	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	625
+228-7	103267	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	626
+23-2	103267	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	627
+232-9	103267	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	628
+236-0	103267	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	629
+240-2	103267	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	630
+257-6	103267	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	631
+261-8	103267	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	632
+266-7	103267	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	633
+270-9	103267	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	634
+27-3	103267	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	635
+274-1	103267	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	636
+278-2	103267	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	637
+286-5	103267	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	638
+290-7	103267	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	639
+294-9	103267	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	640
+298-0	103267	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	641
+302-0	103267	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	642
+306-1	103267	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	643
+310-3	103267	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	644
+314-5	103267	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	645
+31-5	103267	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	646
+3150-0	103267	Inhalierte Sauerstoffkonzentration	eingestellte O2 Konzentration des Gases	61	f	647
+318-6	103267	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	648
+322-8	103267	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	649
+326-9	103267	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	650
+330-1	103267	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	651
+334-3	103267	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	652
+338-4	103267	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	653
+346-7	103267	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	654
+354-1	103267	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	655
+35-6	103267	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	656
+358-2	103267	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	657
+362-4	103267	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	658
+366-5	103267	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	659
+374-9	103267	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	660
+378-0	103267	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	661
+382-2	103267	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	662
+386-3	103267	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	663
+391-3	103267	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	664
+395-4	103267	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	665
+39-8	103267	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	666
+399-6	103267	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	667
+407-7	103267	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	668
+411-9	103267	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	669
+415-0	103267	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	670
+419-2	103267	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	671
+423-4	103267	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	672
+427-5	103267	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	673
+43-0	103267	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	674
+43270-8	103267	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	675
+435-8	103267	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	676
+439-0	103267	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	677
+443-2	103267	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	678
+447-3	103267	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	679
+451-5	103267	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	680
+455-6	103267	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	681
+459-8	103267	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	682
+463-0	103267	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	683
+467-1	103267	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	684
+47-1	103267	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	685
+471-3	103267	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	686
+475-4	103267	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	687
+479-6	103267	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	688
+483-8	103267	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	689
+487-9	103267	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	690
+491-1	103267	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	691
+495-2	103267	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	692
+499-4	103267	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	693
+503-3	103267	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	694
+507-4	103267	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	695
+511-6	103267	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	696
+515-7	103267	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	697
+519-9	103267	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	698
+523-1	103267	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	699
+55-4	103267	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	700
+59-6	103267	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	701
+59833-4	103267	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	702
+63-8	103267	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	703
+6643-1	103267	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	704
+6651-4	103267	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	705
+67-9	103267	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	706
+71-1	103267	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	707
+75-2	103267	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	708
+79-4	103267	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	709
+8274-3	103267	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	710
+83-6	103267	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	711
+87-7	103267	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	712
+91-9	103267	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	713
+95-0	103267	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	714
+99-2	103267	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	eingestellte O2 Konzentration des Gases	74	f	715
+9279-1	110834	Atemfrequenz	Eingestellte Oszillationsfrequenz	62	f	716
+8478-0	110837	Mittlerer Blutdruck	Eingestellter mittlerer Atemwegsdruck	76	f	717
+8310-5	103734	Körpertemperatur	Eingestellter Temperaturwert an der ECMO (Gerät)	62	f	718
+3150-0	103413	Inhalierte Sauerstoffkonzentration	eingestellte Sauerstoffkonzentration des inspiratorischen Atemgases	81	f	719
+11556-8	103077	Sauerstoff [Partialdruck] in Blut	Eingestellte Sauerstoffzufuhr	65	f	720
+22700-9	103077	Harnstoff [Mol/Volumen] in Urin	Eingestellte Sauerstoffzufuhr	60	f	721
+3092-4	103077	Harnstoff [Masse/Volumen] in Urin	Eingestellte Sauerstoffzufuhr	60	f	722
+3148-4	103077	Sauerstoff [Partialdruck] in Gas	Eingestellte Sauerstoffzufuhr	67	f	723
+8867-4	107989	Herzfrequenz	Eingestellte SIMV Frequenz	64	f	724
+9279-1	107989	Atemfrequenz	Eingestellte SIMV Frequenz	64	f	725
+18833-4	107976	Erstes Körpergewicht	eingestelltes Körpergewicht	100	f	726
+2748-2	107976	pH von Körperflüssigkeit	eingestelltes Körpergewicht	60	f	727
+29463-7	107976	Körpergewicht	eingestelltes Körpergewicht	100	f	728
+29638-4	107976	Gewicht von Gewebe	eingestelltes Körpergewicht	62	f	729
+3141-9	107976	Körpergewicht, gemessen	eingestelltes Körpergewicht	100	f	730
+35654-3	107976	Creatinin/Körpergewicht [Masse/kg/Zeit] in 24-Stunden-Urin	eingestelltes Körpergewicht	100	f	731
+54374-4	107976	Creatinin/Körpergewicht [Mol/kg/Zeit] in 24-Stunden-Urin	eingestelltes Körpergewicht	100	f	732
+8302-2	107976	Körpergröße	eingestelltes Körpergewicht	70	f	733
+8303-0	107976	Körpergröße [Perzentil]	eingestelltes Körpergewicht	70	f	734
+8336-0	107976	Körpergewicht [Perzentil] pro Alter	eingestelltes Körpergewicht	100	f	735
+18833-4	106626	Erstes Körpergewicht	Eingestelltes Körpergewicht	100	f	736
+2748-2	106626	pH von Körperflüssigkeit	Eingestelltes Körpergewicht	60	f	737
+29463-7	106626	Körpergewicht	Eingestelltes Körpergewicht	100	f	738
+29638-4	106626	Gewicht von Gewebe	Eingestelltes Körpergewicht	62	f	739
+3141-9	106626	Körpergewicht, gemessen	Eingestelltes Körpergewicht	100	f	740
+35654-3	106626	Creatinin/Körpergewicht [Masse/kg/Zeit] in 24-Stunden-Urin	Eingestelltes Körpergewicht	100	f	741
+54374-4	106626	Creatinin/Körpergewicht [Mol/kg/Zeit] in 24-Stunden-Urin	Eingestelltes Körpergewicht	100	f	742
+8302-2	106626	Körpergröße	Eingestelltes Körpergewicht	70	f	743
+8303-0	106626	Körpergröße [Perzentil]	Eingestelltes Körpergewicht	70	f	744
+8336-0	106626	Körpergewicht [Perzentil] pro Alter	Eingestelltes Körpergewicht	100	f	745
+18833-4	105082	Erstes Körpergewicht	Eingestelltes Körpergewicht.	100	f	746
+2748-2	105082	pH von Körperflüssigkeit	Eingestelltes Körpergewicht.	60	f	747
+29463-7	105082	Körpergewicht	Eingestelltes Körpergewicht.	100	f	748
+29638-4	105082	Gewicht von Gewebe	Eingestelltes Körpergewicht.	62	f	749
+3141-9	105082	Körpergewicht, gemessen	Eingestelltes Körpergewicht.	100	f	750
+35654-3	105082	Creatinin/Körpergewicht [Masse/kg/Zeit] in 24-Stunden-Urin	Eingestelltes Körpergewicht.	100	f	751
+54374-4	105082	Creatinin/Körpergewicht [Mol/kg/Zeit] in 24-Stunden-Urin	Eingestelltes Körpergewicht.	100	f	752
+8302-2	105082	Körpergröße	Eingestelltes Körpergewicht.	70	f	753
+8303-0	105082	Körpergröße [Perzentil]	Eingestelltes Körpergewicht.	70	f	754
+8336-0	105082	Körpergewicht [Perzentil] pro Alter	Eingestelltes Körpergewicht.	100	f	755
+18833-4	105075	Erstes Körpergewicht	Eingestelltes Körpergewicht beim respirator C2.	77	f	756
+29463-7	105075	Körpergewicht	Eingestelltes Körpergewicht beim respirator C2.	100	f	757
+3141-9	105075	Körpergewicht, gemessen	Eingestelltes Körpergewicht beim respirator C2.	73	f	758
+35654-3	105075	Creatinin/Körpergewicht [Masse/kg/Zeit] in 24-Stunden-Urin	Eingestelltes Körpergewicht beim respirator C2.	63	f	759
+54374-4	105075	Creatinin/Körpergewicht [Mol/kg/Zeit] in 24-Stunden-Urin	Eingestelltes Körpergewicht beim respirator C2.	63	f	760
+8336-0	105075	Körpergewicht [Perzentil] pro Alter	Eingestelltes Körpergewicht beim respirator C2.	86	f	761
+55107-7	103272	Anhang - Dokument	eingestelltes Tidalvolumen	60	f	762
+55107-7	103408	Anhang - Dokument	eingestelltes Tidalvolumen	60	f	763
+41032-4	103271	Uroporphyrin [Masse/Zeit] in Stuhl (unspezifizierte Zeit)	eingestellte Zeit für den Anstieg zwischen unterem und oberen Druckniveau	100	f	764
+48430-3	103271	Carnitin [Mol] in Sperma (unspezifizierte Zeit)	eingestellte Zeit für den Anstieg zwischen unterem und oberen Druckniveau	100	f	765
+93817-5	103271	Laufstrecke (unspezifizierte Zeit)	eingestellte Zeit für den Anstieg zwischen unterem und oberen Druckniveau	100	f	766
+8867-4	103269	Herzfrequenz	eingestellt mandatorische Atemfrquenz	70	f	767
+9279-1	103269	Atemfrequenz	eingestellt mandatorische Atemfrquenz	96	f	768
+55107-7	103304	Anhang - Dokument	Einstellgröße für das Tidalvolumen	60	f	769
+11556-8	103091	Sauerstoff [Partialdruck] in Blut	Einstellgröße Gasfluss Sauerstoff	80	f	770
+14864-3	103091	Sauerstoff [Partialdruck] in Nabelschnurblut	Einstellgröße Gasfluss Sauerstoff	69	f	771
+19211-2	103091	Sauerstoff [Partialdruck] in gemischt-venösem Blut	Einstellgröße Gasfluss Sauerstoff	69	f	772
+19254-2	103091	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Einstellgröße Gasfluss Sauerstoff	69	f	773
+19255-9	103091	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in arteriellem Blut	Einstellgröße Gasfluss Sauerstoff	69	f	774
+19256-7	103091	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Kapillarblut	Einstellgröße Gasfluss Sauerstoff	69	f	775
+19258-3	103091	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in venösem Blut	Einstellgröße Gasfluss Sauerstoff	69	f	776
+19994-3	103091	Sauerstoff/Gesamtgas-Einstellung [Volumenfraktion] des Beatmungsgeräts	Einstellgröße Gasfluss Sauerstoff	69	f	777
+20564-1	103091	Sauerstoffsättigung in Blut	Einstellgröße Gasfluss Sauerstoff	62	f	778
+20977-5	103091	Harnstoff [Masse/Volumen] in Blut	Einstellgröße Gasfluss Sauerstoff	61	f	779
+2703-7	103091	Sauerstoff [Partialdruck] in arteriellem Blut	Einstellgröße Gasfluss Sauerstoff	69	f	780
+2704-5	103091	Sauerstoff [Partialdruck] in Kapillarblut	Einstellgröße Gasfluss Sauerstoff	69	f	781
+2705-2	103091	Sauerstoff [Partialdruck] in venösem Blut	Einstellgröße Gasfluss Sauerstoff	69	f	782
+2713-6	103091	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	Einstellgröße Gasfluss Sauerstoff	69	f	783
+28649-2	103091	Sauerstoff [Partialdruck] in venösem Nabelschnurblut	Einstellgröße Gasfluss Sauerstoff	69	f	784
+3148-4	103091	Sauerstoff [Partialdruck] in Gas	Einstellgröße Gasfluss Sauerstoff	85	f	785
+3151-8	103091	Inhalierter Sauerstoff - Flussrate	Einstellgröße Gasfluss Sauerstoff	69	f	786
+33437-5	103091	Sauerstoff [Partialdruck] in Kapillarblut mit transkutanem O2-Monitoring	Einstellgröße Gasfluss Sauerstoff	69	f	787
+34163-6	103091	Sauerstoffgehalt in Blut	Einstellgröße Gasfluss Sauerstoff	65	f	788
+51731-8	103091	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	Einstellgröße Gasfluss Sauerstoff	69	f	789
+51732-6	103091	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	Einstellgröße Gasfluss Sauerstoff	69	f	790
+51733-4	103091	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	Einstellgröße Gasfluss Sauerstoff	69	f	791
+72903-8	103091	Harnstoff [Mol/Volumen] in Blut	Einstellgröße Gasfluss Sauerstoff	61	f	792
+74105-8	103091	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	Einstellgröße Gasfluss Sauerstoff	69	f	793
+103-2	103126	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	794
+107-3	103126	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	795
+111-5	103126	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	796
+115-6	103126	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	797
+11-7	103126	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	798
+119-8	103126	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	799
+123-0	103126	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	800
+127-1	103126	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	801
+132-1	103126	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	802
+136-2	103126	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	803
+140-4	103126	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	804
+144-6	103126	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	805
+148-7	103126	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	806
+156-0	103126	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	807
+15-8	103126	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	808
+160-2	103126	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	809
+164-4	103126	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	810
+168-5	103126	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	811
+172-7	103126	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	812
+176-8	103126	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	813
+180-0	103126	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	814
+184-2	103126	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	815
+188-3	103126	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	816
+19-0	103126	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	817
+192-5	103126	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	818
+196-6	103126	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	819
+204-8	103126	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	820
+212-1	103126	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	821
+216-2	103126	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	822
+220-4	103126	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	823
+224-6	103126	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	824
+228-7	103126	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	825
+23-2	103126	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	826
+232-9	103126	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	827
+236-0	103126	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	828
+240-2	103126	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	829
+257-6	103126	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	830
+261-8	103126	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	831
+266-7	103126	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	832
+270-9	103126	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	833
+271-7	103126	Gramicidin D [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Einstellparameter: O2 Konzentration des Gasgemisches	60	f	834
+27-3	103126	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	835
+274-1	103126	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	836
+278-2	103126	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	837
+286-5	103126	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	838
+290-7	103126	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	839
+294-9	103126	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	840
+298-0	103126	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	841
+302-0	103126	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	842
+306-1	103126	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	843
+310-3	103126	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	844
+314-5	103126	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	845
+31-5	103126	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	846
+318-6	103126	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	847
+322-8	103126	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	848
+326-9	103126	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	849
+330-1	103126	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	850
+334-3	103126	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	851
+338-4	103126	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	852
+346-7	103126	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	853
+354-1	103126	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	854
+35-6	103126	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	855
+358-2	103126	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	856
+362-4	103126	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	857
+366-5	103126	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	858
+374-9	103126	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	859
+378-0	103126	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	860
+382-2	103126	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	861
+386-3	103126	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	862
+391-3	103126	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	863
+395-4	103126	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	864
+39-8	103126	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	865
+399-6	103126	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	866
+407-7	103126	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	867
+411-9	103126	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	868
+415-0	103126	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	869
+419-2	103126	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	870
+423-4	103126	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	871
+427-5	103126	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	872
+43-0	103126	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	873
+43270-8	103126	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	874
+435-8	103126	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	875
+439-0	103126	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	876
+443-2	103126	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	877
+447-3	103126	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	878
+451-5	103126	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	879
+455-6	103126	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	880
+459-8	103126	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	881
+463-0	103126	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	882
+467-1	103126	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	883
+47-1	103126	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	884
+471-3	103126	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	885
+475-4	103126	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	886
+479-6	103126	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	887
+483-8	103126	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	888
+487-9	103126	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	889
+491-1	103126	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	890
+495-2	103126	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	891
+499-4	103126	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	892
+503-3	103126	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	893
+507-4	103126	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	894
+511-6	103126	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	895
+515-7	103126	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	896
+519-9	103126	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	897
+523-1	103126	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	898
+55-4	103126	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	899
+59-6	103126	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	900
+59833-4	103126	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	901
+63-8	103126	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	902
+6643-1	103126	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	903
+6651-4	103126	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	904
+67-9	103126	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	905
+71-1	103126	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	906
+75-2	103126	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	907
+79-4	103126	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	908
+8274-3	103126	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	909
+83-6	103126	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	910
+87-7	103126	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	911
+91-9	103126	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	912
+95-0	103126	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	913
+99-2	103126	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellparameter: O2 Konzentration des Gasgemisches	62	f	914
+19211-2	103088	Sauerstoff [Partialdruck] in gemischt-venösem Blut	Einstellparameter: Sauerstoffgehalt des Gasgemisches	63	f	915
+19218-7	103088	Sauerstoffgehalt in arteriellem Blut	Einstellparameter: Sauerstoffgehalt des Gasgemisches	71	f	916
+19219-5	103088	Sauerstoffgehalt in Kapillarblut	Einstellparameter: Sauerstoffgehalt des Gasgemisches	71	f	917
+19220-3	103088	Sauerstoffgehalt in venösem Blut	Einstellparameter: Sauerstoffgehalt des Gasgemisches	73	f	918
+3148-4	103088	Sauerstoff [Partialdruck] in Gas	Einstellparameter: Sauerstoffgehalt des Gasgemisches	65	f	919
+34163-6	103088	Sauerstoffgehalt in Blut	Einstellparameter: Sauerstoffgehalt des Gasgemisches	86	f	920
+57800-5	103088	Sauerstoffgehalt in Blut, berechnet	Einstellparameter: Sauerstoffgehalt des Gasgemisches	71	f	921
+30348-7	107854	Glutamat [Mol/Volumen] in Urin	Einstellung der Luftemperatur	62	f	922
+8310-5	107854	Körpertemperatur	Einstellung der Luftemperatur	71	f	923
+103-2	107855	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	924
+107-3	107855	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	925
+111-5	107855	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	926
+115-6	107855	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	927
+11-7	107855	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	928
+119-8	107855	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	929
+123-0	107855	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	930
+127-1	107855	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	931
+132-1	107855	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	932
+136-2	107855	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	933
+140-4	107855	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	934
+144-6	107855	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	935
+148-7	107855	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	936
+156-0	107855	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	937
+15-8	107855	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	938
+160-2	107855	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	939
+164-4	107855	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	940
+168-5	107855	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	941
+172-7	107855	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	942
+176-8	107855	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	943
+180-0	107855	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	944
+184-2	107855	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	945
+188-3	107855	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	946
+19-0	107855	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	947
+192-5	107855	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	948
+196-6	107855	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	949
+204-8	107855	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	950
+212-1	107855	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	951
+216-2	107855	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	952
+220-4	107855	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	953
+224-6	107855	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	954
+228-7	107855	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	955
+23-2	107855	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	956
+232-9	107855	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	957
+236-0	107855	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	958
+240-2	107855	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	959
+257-6	107855	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	960
+261-8	107855	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	961
+266-7	107855	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	962
+270-9	107855	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	963
+27-3	107855	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	964
+274-1	107855	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	965
+278-2	107855	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	966
+286-5	107855	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	967
+290-7	107855	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	968
+294-9	107855	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	969
+298-0	107855	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	970
+302-0	107855	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	971
+306-1	107855	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	972
+310-3	107855	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	973
+314-5	107855	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	974
+31-5	107855	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	975
+3150-0	107855	Inhalierte Sauerstoffkonzentration	Einstellung der O2-Konzentration im Inkubator	60	f	976
+318-6	107855	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	977
+322-8	107855	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	978
+326-9	107855	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	979
+330-1	107855	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	980
+334-3	107855	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	981
+338-4	107855	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	982
+346-7	107855	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	983
+354-1	107855	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	984
+35-6	107855	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	985
+358-2	107855	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	986
+362-4	107855	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	987
+366-5	107855	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	988
+374-9	107855	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	989
+378-0	107855	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	990
+382-2	107855	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	991
+386-3	107855	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	992
+391-3	107855	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	993
+395-4	107855	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	994
+39-8	107855	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	995
+399-6	107855	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	996
+407-7	107855	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	997
+411-9	107855	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	998
+415-0	107855	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	999
+419-2	107855	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1000
+423-4	107855	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1001
+427-5	107855	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1002
+43-0	107855	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1003
+43270-8	107855	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1004
+435-8	107855	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1005
+439-0	107855	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1006
+443-2	107855	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1007
+447-3	107855	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1008
+451-5	107855	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1009
+455-6	107855	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1010
+459-8	107855	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1011
+463-0	107855	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1012
+467-1	107855	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1013
+47-1	107855	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1014
+471-3	107855	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1015
+475-4	107855	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1016
+479-6	107855	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1017
+483-8	107855	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1018
+487-9	107855	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1019
+491-1	107855	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1020
+495-2	107855	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1021
+499-4	107855	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1022
+503-3	107855	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1023
+507-4	107855	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1024
+511-6	107855	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1025
+515-7	107855	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1026
+519-9	107855	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1027
+523-1	107855	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1028
+55-4	107855	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1029
+59-6	107855	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1030
+59833-4	107855	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1031
+63-8	107855	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1032
+6643-1	107855	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1033
+6651-4	107855	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1034
+67-9	107855	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1035
+71-1	107855	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1036
+75-2	107855	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1037
+79-4	107855	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1038
+8274-3	107855	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1039
+83-6	107855	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1040
+87-7	107855	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1041
+91-9	107855	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1042
+95-0	107855	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1043
+99-2	107855	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellung der O2-Konzentration im Inkubator	67	f	1044
+11556-8	113046	Sauerstoff [Partialdruck] in Blut	Einstellung Sauerstoff Flow	80	f	1045
+14864-3	113046	Sauerstoff [Partialdruck] in Nabelschnurblut	Einstellung Sauerstoff Flow	80	f	1046
+19211-2	113046	Sauerstoff [Partialdruck] in gemischt-venösem Blut	Einstellung Sauerstoff Flow	80	f	1047
+19254-2	113046	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Einstellung Sauerstoff Flow	80	f	1048
+19255-9	113046	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in arteriellem Blut	Einstellung Sauerstoff Flow	80	f	1049
+19256-7	113046	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Kapillarblut	Einstellung Sauerstoff Flow	80	f	1050
+19258-3	113046	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in venösem Blut	Einstellung Sauerstoff Flow	80	f	1051
+19994-3	113046	Sauerstoff/Gesamtgas-Einstellung [Volumenfraktion] des Beatmungsgeräts	Einstellung Sauerstoff Flow	80	f	1052
+20564-1	113046	Sauerstoffsättigung in Blut	Einstellung Sauerstoff Flow	63	f	1053
+20977-5	113046	Harnstoff [Masse/Volumen] in Blut	Einstellung Sauerstoff Flow	62	f	1054
+2703-7	113046	Sauerstoff [Partialdruck] in arteriellem Blut	Einstellung Sauerstoff Flow	80	f	1055
+2704-5	113046	Sauerstoff [Partialdruck] in Kapillarblut	Einstellung Sauerstoff Flow	80	f	1056
+2705-2	113046	Sauerstoff [Partialdruck] in venösem Blut	Einstellung Sauerstoff Flow	80	f	1057
+2713-6	113046	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	Einstellung Sauerstoff Flow	80	f	1058
+28649-2	113046	Sauerstoff [Partialdruck] in venösem Nabelschnurblut	Einstellung Sauerstoff Flow	80	f	1059
+3148-4	113046	Sauerstoff [Partialdruck] in Gas	Einstellung Sauerstoff Flow	83	f	1060
+3151-8	113046	Inhalierter Sauerstoff - Flussrate	Einstellung Sauerstoff Flow	80	f	1061
+33437-5	113046	Sauerstoff [Partialdruck] in Kapillarblut mit transkutanem O2-Monitoring	Einstellung Sauerstoff Flow	80	f	1062
+34163-6	113046	Sauerstoffgehalt in Blut	Einstellung Sauerstoff Flow	67	f	1063
+51731-8	113046	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	Einstellung Sauerstoff Flow	80	f	1064
+51732-6	113046	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	Einstellung Sauerstoff Flow	80	f	1065
+51733-4	113046	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	Einstellung Sauerstoff Flow	80	f	1066
+72903-8	113046	Harnstoff [Mol/Volumen] in Blut	Einstellung Sauerstoff Flow	62	f	1067
+74105-8	113046	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	Einstellung Sauerstoff Flow	80	f	1068
+55107-7	110880	Anhang - Dokument	Einstellung Tidalvolumen	60	f	1069
+8867-4	103258	Herzfrequenz	Einstellwert: eingestellte Apnoefrequenz	72	f	1070
+9279-1	103258	Atemfrequenz	Einstellwert: eingestellte Apnoefrequenz	80	f	1071
+19840-8	103257	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Einstellwert: eingestellte Atemfrequenz	100	f	1072
+8867-4	103257	Herzfrequenz	Einstellwert: eingestellte Atemfrequenz	75	f	1073
+9278-3	103257	Atemfrequenz spezielle Umstände	Einstellwert: eingestellte Atemfrequenz	100	f	1074
+9279-1	103257	Atemfrequenz	Einstellwert: eingestellte Atemfrequenz	100	f	1075
+9279-1	103134	Atemfrequenz	Einstellwert: eingestellte Mindestatemfrequenz im ST Moodus	71	f	1076
+9279-1	103210	Atemfrequenz	Einstellwert: eingestellte Oszillationsfrequenz 	62	f	1077
+8478-0	103213	Mittlerer Blutdruck	Einstellwert: eingestellter mittlerer Atemwegsdruck	76	f	1078
+55107-7	103255	Anhang - Dokument	Einstellwert: eingestelltes Tidalvolumen	60	f	1079
+103-2	103214	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1080
+107-3	103214	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1081
+111-5	103214	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1082
+115-6	103214	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1083
+11-7	103214	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1084
+119-8	103214	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1085
+123-0	103214	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1086
+127-1	103214	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1087
+132-1	103214	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1088
+136-2	103214	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1089
+140-4	103214	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1090
+144-6	103214	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1091
+148-7	103214	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1092
+156-0	103214	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1093
+15-8	103214	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1094
+160-2	103214	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1095
+164-4	103214	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1096
+168-5	103214	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1097
+172-7	103214	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1098
+176-8	103214	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1099
+180-0	103214	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1100
+184-2	103214	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1101
+188-3	103214	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1102
+19-0	103214	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1103
+192-5	103214	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1104
+196-6	103214	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1105
+204-8	103214	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1106
+212-1	103214	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1107
+216-2	103214	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1108
+220-4	103214	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1109
+224-6	103214	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1110
+228-7	103214	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1111
+23-2	103214	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1112
+232-9	103214	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1113
+236-0	103214	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1114
+240-2	103214	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1115
+257-6	103214	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1116
+261-8	103214	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1117
+266-7	103214	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1118
+270-9	103214	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1119
+271-7	103214	Gramicidin D [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Einstellwert: O2 Konzentration des Gasgemisches	60	f	1120
+27-3	103214	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1121
+274-1	103214	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1122
+278-2	103214	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1123
+286-5	103214	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1124
+290-7	103214	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1125
+294-9	103214	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1126
+298-0	103214	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1127
+302-0	103214	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1128
+306-1	103214	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1129
+310-3	103214	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1130
+314-5	103214	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1131
+31-5	103214	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1132
+318-6	103214	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1133
+322-8	103214	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1134
+326-9	103214	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1135
+330-1	103214	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1136
+334-3	103214	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1137
+338-4	103214	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1138
+346-7	103214	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1139
+354-1	103214	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1140
+35-6	103214	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1141
+358-2	103214	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1142
+362-4	103214	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1143
+366-5	103214	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1144
+374-9	103214	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1145
+378-0	103214	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1146
+382-2	103214	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1147
+386-3	103214	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1148
+391-3	103214	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1149
+395-4	103214	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1150
+39-8	103214	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1151
+399-6	103214	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1152
+407-7	103214	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1153
+411-9	103214	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1154
+415-0	103214	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1155
+419-2	103214	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1156
+423-4	103214	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1157
+427-5	103214	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1158
+43-0	103214	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1159
+43270-8	103214	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1160
+435-8	103214	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1161
+439-0	103214	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1162
+443-2	103214	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1163
+447-3	103214	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1164
+451-5	103214	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1165
+455-6	103214	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1166
+459-8	103214	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1167
+463-0	103214	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1168
+467-1	103214	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1169
+47-1	103214	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1170
+471-3	103214	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1171
+475-4	103214	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1172
+479-6	103214	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1173
+483-8	103214	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1174
+487-9	103214	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1175
+491-1	103214	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1176
+495-2	103214	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1177
+499-4	103214	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1178
+503-3	103214	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1179
+507-4	103214	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1180
+511-6	103214	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1181
+515-7	103214	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1182
+519-9	103214	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1183
+523-1	103214	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1184
+55-4	103214	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1185
+59-6	103214	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1186
+59833-4	103214	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1187
+63-8	103214	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1188
+6643-1	103214	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1189
+6651-4	103214	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1190
+67-9	103214	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1191
+71-1	103214	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1192
+75-2	103214	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1193
+79-4	103214	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1194
+8274-3	103214	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1195
+83-6	103214	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1196
+87-7	103214	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1197
+91-9	103214	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1198
+95-0	103214	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1199
+99-2	103214	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Einstellwert: O2 Konzentration des Gasgemisches	62	f	1200
+55107-7	103333	Anhang - Dokument	Einstellwert: Tidalvolumen	60	f	1201
+55107-7	107869	Anhang - Dokument	Einstellwert: Tidalvolumen	60	f	1202
+2713-6	108021	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	Endtidaler CO2-Partialdruck	62	f	1203
+51731-8	108021	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	Endtidaler CO2-Partialdruck	62	f	1204
+51732-6	108021	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	Endtidaler CO2-Partialdruck	62	f	1205
+51733-4	108021	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	Endtidaler CO2-Partialdruck	62	f	1206
+74105-8	108021	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	Endtidaler CO2-Partialdruck	62	f	1207
+21612-7	10	Alter - Berichtet	errechneter Geburtstermin	60	f	1208
+29553-5	10	Alter - Berechnet	errechneter Geburtstermin	80	f	1209
+455-6	104740	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Exspiratorisch gemessene Desfluran Konzentration.	60	f	1210
+55107-7	104239	Anhang - Dokument	Exsp. Tidalvolumen 	60	f	1211
+34964-7	104233	Osmotische Resistenz [Interpretation] von Erythrozyten	Exstiratorische Resistenz 	69	f	1212
+4667-2	104233	Osmotische Resistenz von Erythrozyten	Exstiratorische Resistenz 	69	f	1213
+9278-3	104753	Atemfrequenz spezielle Umstände	Frequenzeinstellung inder Backupeinstellung.	61	f	1214
+8867-4	100099	Herzfrequenz	Frequenz tot.	67	f	1215
+9279-1	100099	Atemfrequenz	Frequenz tot.	67	f	1216
+21112-8	108151	Geburtsdatum	Geburtsdatum der Mutter	100	f	1217
+21112-8	14	Geburtsdatum	Geburtsgewicht des Patienten in Kilogramm	62	f	1220
+29463-7	14	Körpergewicht	Geburtsgewicht des Patienten in Kilogramm	69	f	1221
+29638-4	14	Gewicht von Gewebe	Geburtsgewicht des Patienten in Kilogramm	71	f	1222
+8336-0	14	Körpergewicht [Perzentil] pro Alter	Geburtsgewicht des Patienten in Kilogramm	60	f	1223
+29304-3	103587	Abgegebene Medikation	Gefäßdefinition	61	f	1225
+35762-4	103587	Cefditoren [Empfindlichkeit]	Gefäßdefinition	61	f	1226
+19840-8	103287	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	gemessene Atemfrequenz	100	f	1227
+19840-8	103430	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	gemessene Atemfrequenz	100	f	1228
+8867-4	103287	Herzfrequenz	gemessene Atemfrequenz	75	f	1229
+8867-4	103430	Herzfrequenz	gemessene Atemfrequenz	75	f	1230
+9278-3	103287	Atemfrequenz spezielle Umstände	gemessene Atemfrequenz	100	f	1231
+9278-3	103430	Atemfrequenz spezielle Umstände	gemessene Atemfrequenz	100	f	1232
+19840-8	104727	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Gemessene Atemfrequenz.	100	f	1235
+8867-4	104727	Herzfrequenz	Gemessene Atemfrequenz.	75	f	1236
+9278-3	104727	Atemfrequenz spezielle Umstände	Gemessene Atemfrequenz.	100	f	1237
+6683-7	103427	Reptilasezeit	gemessene Exspirationszeit	62	f	1239
+168-5	104731	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene exspiratorische O2 Konzentration.	60	f	1240
+8274-3	104731	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene exspiratorische O2 Konzentration.	61	f	1241
+8867-4	103323	Herzfrequenz	gemessene Gesamtatemfrequenz	60	f	1242
+9279-1	103323	Atemfrequenz	gemessene Gesamtatemfrequenz	80	f	1243
+286-5	104730	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene inspiratorische O2 Konzentration.	60	f	1244
+19840-8	103325	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	gemessene mandatorische Atemfrequenz	100	f	1246
+19840-8	103436	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	gemessene mandatorische Atemfrequenz	100	f	1247
+8867-4	103325	Herzfrequenz	gemessene mandatorische Atemfrequenz	75	f	1248
+8867-4	103436	Herzfrequenz	gemessene mandatorische Atemfrequenz	75	f	1249
+9278-3	103325	Atemfrequenz spezielle Umstände	gemessene mandatorische Atemfrequenz	100	f	1250
+9278-3	103436	Atemfrequenz spezielle Umstände	gemessene mandatorische Atemfrequenz	100	f	1251
+9279-1	103325	Atemfrequenz	gemessene mandatorische Atemfrequenz	100	f	1252
+9279-1	103436	Atemfrequenz	gemessene mandatorische Atemfrequenz	100	f	1253
+103-2	110840	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1254
+107-3	110840	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1255
+111-5	110840	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1256
+115-6	110840	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1257
+11-7	110840	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1258
+119-8	110840	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1259
+123-0	110840	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1260
+127-1	110840	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1261
+132-1	110840	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1262
+136-2	110840	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1263
+18833-4	14	Erstes Körpergewicht	Geburtsgewicht des Patienten in Kilogramm	67	t	1219
+8339-4	14	Geburtsgewicht, gemessen	Geburtsgewicht des Patienten in Kilogramm	100	t	1224
+9279-1	103287	Atemfrequenz	gemessene Atemfrequenz	100	t	1233
+9279-1	103430	Atemfrequenz	gemessene Atemfrequenz	100	t	1234
+9279-1	104727	Atemfrequenz	Gemessene Atemfrequenz.	100	t	1238
+3150-0	104730	Inhalierte Sauerstoffkonzentration	Gemessene inspiratorische O2 Konzentration.	61	t	1245
+140-4	110840	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1264
+144-6	110840	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1265
+148-7	110840	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1266
+156-0	110840	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1267
+15-8	110840	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1268
+160-2	110840	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1269
+164-4	110840	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1270
+168-5	110840	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1271
+172-7	110840	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1272
+176-8	110840	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1273
+180-0	110840	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1274
+184-2	110840	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1275
+188-3	110840	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1276
+19-0	110840	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1277
+192-5	110840	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1278
+196-6	110840	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1279
+204-8	110840	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1280
+212-1	110840	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1281
+216-2	110840	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1282
+220-4	110840	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1283
+224-6	110840	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1284
+228-7	110840	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1285
+23-2	110840	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1286
+232-9	110840	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1287
+236-0	110840	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1288
+240-2	110840	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1289
+257-6	110840	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1290
+261-8	110840	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1291
+266-7	110840	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1292
+270-9	110840	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1293
+27-3	110840	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1294
+274-1	110840	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1295
+278-2	110840	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1296
+286-5	110840	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1297
+290-7	110840	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1298
+294-9	110840	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1299
+298-0	110840	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1300
+302-0	110840	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1301
+306-1	110840	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1302
+310-3	110840	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1303
+314-5	110840	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1304
+31-5	110840	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1305
+318-6	110840	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1306
+322-8	110840	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1307
+326-9	110840	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1308
+330-1	110840	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1309
+334-3	110840	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1310
+338-4	110840	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1311
+346-7	110840	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1312
+354-1	110840	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1313
+35-6	110840	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1314
+358-2	110840	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1315
+362-4	110840	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1316
+366-5	110840	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1317
+374-9	110840	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1318
+378-0	110840	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1319
+382-2	110840	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1320
+386-3	110840	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1321
+391-3	110840	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1322
+395-4	110840	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1323
+39-8	110840	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1324
+399-6	110840	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1325
+407-7	110840	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1326
+411-9	110840	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1327
+415-0	110840	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1328
+419-2	110840	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1329
+423-4	110840	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1330
+427-5	110840	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1331
+43-0	110840	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1332
+43270-8	110840	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1333
+435-8	110840	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1334
+439-0	110840	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1335
+443-2	110840	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1336
+447-3	110840	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1337
+451-5	110840	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1338
+455-6	110840	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1339
+459-8	110840	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1340
+463-0	110840	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1341
+467-1	110840	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1342
+47-1	110840	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1343
+471-3	110840	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1344
+475-4	110840	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1345
+479-6	110840	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1346
+483-8	110840	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1347
+487-9	110840	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1348
+491-1	110840	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1349
+495-2	110840	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1350
+499-4	110840	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1351
+503-3	110840	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1352
+507-4	110840	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1353
+511-6	110840	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1354
+515-7	110840	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1355
+519-9	110840	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1356
+523-1	110840	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1357
+55-4	110840	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1358
+59-6	110840	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1359
+59833-4	110840	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1360
+63-8	110840	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1361
+6643-1	110840	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1362
+6651-4	110840	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1363
+67-9	110840	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1364
+71-1	110840	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1365
+75-2	110840	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1366
+79-4	110840	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1367
+8274-3	110840	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1368
+83-6	110840	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1369
+87-7	110840	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1370
+91-9	110840	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1371
+95-0	110840	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1372
+99-2	110840	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessene O2 Konzentration	90	f	1373
+286-5	103281	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	gemessene O2 Konzentration im Inspirationsgas	60	f	1374
+8838-5	103285	Beobachtungszeitraum	gemessener Beatmungsmitteldruck	60	f	1376
+100-8	104732	Cefoperazon [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1377
+10653-4	104732	Clotrimazol [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1378
+116-4	104732	Cefoxitin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	61	f	1379
+205-5	104732	Colistin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1380
+229-5	104732	Enoxacin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1381
+25411-0	104732	Fleroxacin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1382
+25637-0	104732	Econazol [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1383
+338-4	104732	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1384
+35761-6	104732	Cefditoren [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1385
+35808-5	104732	Florfenicol [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	62	f	1386
+35812-7	104732	Garenoxacin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	62	f	1387
+41687-5	104732	Clavulanat [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1388
+41694-1	104732	Evernimicin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	62	f	1389
+6651-4	104732	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	61	f	1390
+8275-0	104732	Cefpirom [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1391
+84-4	104732	Cefaclor [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Gemessener MAC Wert. (endexspiratorische mittlere alveoläre Konzentration)	60	f	1392
+8478-0	102878	Mittlerer Blutdruck	gemessener Mittlerer Atemwegsdruck unter HFO bei Alpha Vision	65	f	1393
+14691-0	103316	Desipramin [Mol/Volumen] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	60	f	1394
+15107-6	103316	Imipramin [Mol/Volumen] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	61	f	1395
+25700-6	103316	Immunfixation für Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	64	f	1396
+25721-2	103316	Mianserin [Mol/Volumen] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	61	f	1397
+2635-1	103316	Mianserin [Masse/Volumen] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	61	f	1398
+32646-2	103316	Nevirapin [Masse/Volumen] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	61	f	1399
+34342-6	103316	Niacin [Mol/Volumen] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	60	f	1400
+3531-1	103316	Desipramin [Masse/Volumen] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	60	f	1401
+3532-9	103316	Desipramin [Nachweis] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	60	f	1402
+3690-5	103316	Imipramin [Masse/Volumen] in Serum oder Plasma	gemessener Plataeudruck wähend der Inspiration	61	f	1403
+76213-8	103284	Diastolischer Blutdruck invasiv	gemessener positer endexspiratorischer Druck	61	f	1404
+76215-3	103284	Systolischer Blutdruck invasiv	gemessener positer endexspiratorischer Druck	62	f	1405
+8462-4	103284	Diastolischer Blutdruck	gemessener positer endexspiratorischer Druck	71	f	1406
+8480-6	103284	Systolischer Blutdruck	gemessener positer endexspiratorischer Druck	64	f	1407
+76213-8	103318	Diastolischer Blutdruck invasiv	gemessener positiver endexspiratorischer Druck	61	f	1408
+76215-3	103318	Systolischer Blutdruck invasiv	gemessener positiver endexspiratorischer Druck	62	f	1409
+8462-4	103318	Diastolischer Blutdruck	gemessener positiver endexspiratorischer Druck	71	f	1410
+8480-6	103318	Systolischer Blutdruck	gemessener positiver endexspiratorischer Druck	64	f	1411
+19218-7	103079	Sauerstoffgehalt in arteriellem Blut	gemessene Sauerstoffgehalt des Gasgemisches	71	f	1413
+19219-5	103079	Sauerstoffgehalt in Kapillarblut	gemessene Sauerstoffgehalt des Gasgemisches	71	f	1414
+19211-2	103079	Sauerstoff [Partialdruck] in gemischt-venösem Blut	gemessene Sauerstoffgehalt des Gasgemisches	63	t	1412
+19220-3	103079	Sauerstoffgehalt in venösem Blut	gemessene Sauerstoffgehalt des Gasgemisches	73	f	1415
+3148-4	103079	Sauerstoff [Partialdruck] in Gas	gemessene Sauerstoffgehalt des Gasgemisches	65	f	1416
+34163-6	103079	Sauerstoffgehalt in Blut	gemessene Sauerstoffgehalt des Gasgemisches	86	f	1417
+57800-5	103079	Sauerstoffgehalt in Blut, berechnet	gemessene Sauerstoffgehalt des Gasgemisches	71	f	1418
+20564-1	104237	Sauerstoffsättigung in Blut	Gemessene Sauerstoffkonzentration 	61	f	1419
+3150-0	104237	Inhalierte Sauerstoffkonzentration	Gemessene Sauerstoffkonzentration 	100	f	1420
+3150-0	103439	Inhalierte Sauerstoffkonzentration	gemessene Sauerstoffkonzentration im Atemgas	85	f	1422
+33045-6	103327	Respiratorisches Synzytial-Virus Antigen [Nachweis] in Nase	gemessenes inspiratorisches Tidalvolumen	62	f	1423
+33045-6	103433	Respiratorisches Synzytial-Virus Antigen [Nachweis] in Nase	gemessenes inspiratorisches Tidalvolumen	62	f	1424
+55107-7	103431	Anhang - Dokument	gemessenes mandatorisches Tidalvolumen	60	f	1425
+19840-8	103291	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	gemessene spontane Atemfrequenz	73	f	1426
+19840-8	103324	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	gemessene spontane Atemfrequenz	73	f	1427
+19840-8	103435	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	gemessene spontane Atemfrequenz	73	f	1428
+9278-3	103291	Atemfrequenz spezielle Umstände	gemessene spontane Atemfrequenz	73	f	1429
+9278-3	103324	Atemfrequenz spezielle Umstände	gemessene spontane Atemfrequenz	73	f	1430
+9278-3	103435	Atemfrequenz spezielle Umstände	gemessene spontane Atemfrequenz	73	f	1431
+9279-1	103291	Atemfrequenz	gemessene spontane Atemfrequenz	100	f	1432
+9279-1	103324	Atemfrequenz	gemessene spontane Atemfrequenz	100	f	1433
+9279-1	103435	Atemfrequenz	gemessene spontane Atemfrequenz	100	f	1434
+55107-7	103084	Anhang - Dokument	gemessenes Tidalvolumen	60	f	1435
+55107-7	103421	Anhang - Dokument	gemessenes Tidalvolumen	60	f	1436
+55107-7	104726	Anhang - Dokument	Gemessenes Tidalvolumen.	60	f	1437
+8867-4	108019	Herzfrequenz	Gesamtatemfrequenz	60	f	1438
+9279-1	108019	Atemfrequenz	Gesamtatemfrequenz	80	f	1439
+8867-4	103035	Herzfrequenz	Gesamtatemfrequenz, ein Monitoring Parameter	60	f	1440
+9279-1	103035	Atemfrequenz	Gesamtatemfrequenz, ein Monitoring Parameter	80	f	1441
+8867-4	107875	Herzfrequenz	Gesamtfrequenz	69	f	1442
+9279-1	107875	Atemfrequenz	Gesamtfrequenz	77	f	1443
+21840-4	5	Geschlecht [North American Association of Central Cancer Register Standard Version 11]	Geschlecht des Patienten	100	f	1444
+76689-9	5	Geschlecht, zugewiesen bei Geburt	Geschlecht des Patienten	100	f	1445
+14348-7	6	Spezifisches Gewicht von Peritonealflüssigkeit mit Refraktometrie	Gewicht des Patienten	100	f	1446
+17608-1	6	Gewicht [Masse/Zeit] von 48-Stunden-Stuhl	Gewicht des Patienten	100	f	1447
+17609-9	6	Gewicht [Masse/Zeit] von 72-Stunden-Stuhl	Gewicht des Patienten	100	f	1448
+21612-7	6	Alter - Berichtet	Gewicht des Patienten	62	f	1449
+25530-7	6	Gewicht [Masse/Zeit] von 24-Stunden-Stuhl	Gewicht des Patienten	100	f	1450
+29463-7	6	Körpergewicht	Gewicht des Patienten	74	f	1451
+29638-4	6	Gewicht von Gewebe	Gewicht des Patienten	100	f	1452
+2964-5	6	Spezifisches Gewicht von Körperflüssigkeit	Gewicht des Patienten	100	f	1453
+2965-2	6	Spezifisches Gewicht von Urin	Gewicht des Patienten	100	f	1454
+30078-0	6	Gewicht von Stuhl	Gewicht des Patienten	100	f	1455
+33247-8	6	Gewicht von Schweiß	Gewicht des Patienten	100	f	1456
+44933-0	6	Spezifisches Gewicht von 24-Stunden-Urin mit Refraktometrie	Gewicht des Patienten	100	f	1457
+50562-8	6	Spezifisches Gewicht von Urin mit automatisierter Refraktometrie	Gewicht des Patienten	100	f	1458
+53326-5	6	Spezifisches Gewicht von Urin mit automatisiertem Teststreifen	Gewicht des Patienten	100	f	1459
+5810-7	6	Spezifisches Gewicht von Urin mit Refraktometrie	Gewicht des Patienten	100	f	1460
+5811-5	6	Spezifisches Gewicht von Urin mit Teststreifen	Gewicht des Patienten	100	f	1461
+8336-0	6	Körpergewicht [Perzentil] pro Alter	Gewicht des Patienten	61	f	1462
+14348-7	104258	Spezifisches Gewicht von Peritonealflüssigkeit mit Refraktometrie	Gewicht (kg) 	100	f	1463
+17608-1	104258	Gewicht [Masse/Zeit] von 48-Stunden-Stuhl	Gewicht (kg) 	100	f	1464
+17609-9	104258	Gewicht [Masse/Zeit] von 72-Stunden-Stuhl	Gewicht (kg) 	100	f	1465
+21612-7	104258	Alter - Berichtet	Gewicht (kg) 	62	f	1466
+25530-7	104258	Gewicht [Masse/Zeit] von 24-Stunden-Stuhl	Gewicht (kg) 	100	f	1467
+29463-7	104258	Körpergewicht	Gewicht (kg) 	74	f	1468
+29638-4	104258	Gewicht von Gewebe	Gewicht (kg) 	100	f	1469
+2964-5	104258	Spezifisches Gewicht von Körperflüssigkeit	Gewicht (kg) 	100	f	1470
+2965-2	104258	Spezifisches Gewicht von Urin	Gewicht (kg) 	100	f	1471
+30078-0	104258	Gewicht von Stuhl	Gewicht (kg) 	100	f	1472
+33247-8	104258	Gewicht von Schweiß	Gewicht (kg) 	100	f	1473
+44933-0	104258	Spezifisches Gewicht von 24-Stunden-Urin mit Refraktometrie	Gewicht (kg) 	100	f	1474
+50562-8	104258	Spezifisches Gewicht von Urin mit automatisierter Refraktometrie	Gewicht (kg) 	100	f	1475
+53326-5	104258	Spezifisches Gewicht von Urin mit automatisiertem Teststreifen	Gewicht (kg) 	100	f	1476
+5810-7	104258	Spezifisches Gewicht von Urin mit Refraktometrie	Gewicht (kg) 	100	f	1477
+5811-5	104258	Spezifisches Gewicht von Urin mit Teststreifen	Gewicht (kg) 	100	f	1478
+8336-0	104258	Körpergewicht [Perzentil] pro Alter	Gewicht (kg) 	61	f	1479
+12457-8	103045	Volumen von Dialysat	Gialysatrate	70	f	1480
+13057-5	103045	Thrombozyten [Einheiten/Volumen] in Dialysat	Gialysatrate	61	f	1481
+13494-0	103045	Volumen von 4-Stunden-Dialysat	Gialysatrate	64	f	1482
+13495-7	103045	Volumen von 24-Stunden-Dialysat	Gialysatrate	64	f	1483
+2595-7	103045	Magnesium [Mol/Volumen] in Dialysat	Gialysatrate	60	f	1484
+2775-5	103045	Phosphat [Masse/Volumen] in Dialysat	Gialysatrate	62	f	1485
+2949-6	103045	Natrium [Mol/Volumen] in Dialysat	Gialysatrate	64	f	1486
+34938-1	103045	Phosphat [Mol/Volumen] in Dialysat	Gialysatrate	62	f	1487
+45302-7	103045	Harnstoff [Mol/Volumen] in Dialysat	Gialysatrate	60	f	1488
+51617-9	103045	Farbe von Dialysat	Gialysatrate	69	f	1489
+5920-4	103045	Protein [Masse/Volumen] in Dialysat	Gialysatrate	71	f	1490
+8716-3	103045	Vitalparameter	Gialysatrate	62	f	1491
+8867-4	1266	Herzfrequenz	Herzfrequenz	100	f	1492
+9279-1	1266	Atemfrequenz	Herzfrequenz	75	f	1493
+8867-4	102168	Herzfrequenz	HerzfrequenzHerzfrequenz	67	f	1494
+26437-4	102533	Funktionstests	Herzfunktionsindex	62	f	1495
+77599-9	100072	Ergänzende Dokumentation	Herzindex	67	f	1496
+77599-9	102185	Ergänzende Dokumentation	Herzindex	67	f	1497
+77599-9	102535	Ergänzende Dokumentation	Herzindex	67	f	1498
+77599-9	102035	Ergänzende Dokumentation	Herzindex (kontinuirlich) 	67	f	1499
+8867-4	100250	Herzfrequenz	HFOV Frequenz	64	f	1500
+9279-1	100250	Atemfrequenz	HFOV Frequenz	64	f	1501
+12595-5	102530	Estradiol (E2) [Masse/Volumen] in Urin	I:E Exspiration	62	f	1502
+14692-8	102530	Desipramin [Mol/Volumen] in Urin	I:E Exspiration	60	f	1503
+14717-3	102530	Estriol (E3) [Mol/Volumen] in Urin	I:E Exspiration	60	f	1504
+2252-5	102530	Estriol (E3) [Masse/Volumen] in Urin	I:E Exspiration	60	f	1505
+34286-5	102530	Estradiol (E2) [Mol/Volumen] in Urin	I:E Exspiration	62	f	1506
+82754-3	106646	Status der Reise	Implementierung für anamnestische Erhebung des Status innerhalb d. Active X Anwendung	67	f	1507
+12286-1	144	Medikamente identifiziert in Urin mit Screening	Information über gestellte Medikamente pro Tag	100	f	1508
+12287-9	144	Medikamente identifiziert in Magenflüssigkeit mit Screening	Information über gestellte Medikamente pro Tag	100	f	1509
+12289-5	144	Medikamente identifiziert in Glaskörperflüssigkeit mit Screening	Information über gestellte Medikamente pro Tag	100	f	1510
+15401-3	144	Medikamente identifiziert in Blut mit Screening	Information über gestellte Medikamente pro Tag	100	f	1511
+16793-2	144	Medikamente identifiziert in unbekannter Substanz mit Screening	Information über gestellte Medikamente pro Tag	100	f	1512
+20785-2	144	Medikamente identifiziert in Serum oder Plasma mit Screening	Information über gestellte Medikamente pro Tag	100	f	1513
+20786-0	144	Medikamente identifiziert in Gewebe mit Screening	Information über gestellte Medikamente pro Tag	100	f	1514
+27034-8	144	Medikamente identifiziert in Haar mit Screening	Information über gestellte Medikamente pro Tag	100	f	1515
+29304-3	144	Abgegebene Medikation	Information über gestellte Medikamente pro Tag	67	f	1516
+34601-5	144	Medikamente identifiziert in Körperflüssigkeit	Information über gestellte Medikamente pro Tag	100	f	1517
+41270-0	144	Medikamente identifiziert in Urin	Information über gestellte Medikamente pro Tag	100	f	1518
+42326-9	144	Medikamente identifiziert in Muttermilch mit Screening	Information über gestellte Medikamente pro Tag	100	f	1519
+55107-7	144	Anhang - Dokument	Information über gestellte Medikamente pro Tag	63	f	1520
+18860-7	104403	Amikacin [Empfindlichkeit]	Inhalte der Prämedikation	60	f	1521
+19817-6	104403	Komplikationen	Inhalte der Prämedikation	62	f	1522
+29304-3	104403	Abgegebene Medikation	Inhalte der Prämedikation	91	f	1523
+42346-7	104403	Medikation bei Aufnahme - Freitext	Inhalte der Prämedikation	71	f	1524
+60590-7	104403	Abgegebene Medikation.kurz - Dokument	Inhalte der Prämedikation	61	f	1525
+33045-6	100106	Respiratorisches Synzytial-Virus Antigen [Nachweis] in Nase	Inspiratorische Druckunterstützung [inspiratory pressure support] (IPS) bzw. assisted spontaneuous breathig (ASB)	60	f	1526
+76213-8	107986	Diastolischer Blutdruck invasiv	Inspiratorischer Druck	60	f	1527
+76213-8	108024	Diastolischer Blutdruck invasiv	Inspiratorischer Druck	60	f	1528
+76215-3	107986	Systolischer Blutdruck invasiv	Inspiratorischer Druck	69	f	1529
+76215-3	108024	Systolischer Blutdruck invasiv	Inspiratorischer Druck	69	f	1530
+8462-4	107986	Diastolischer Blutdruck	Inspiratorischer Druck	71	f	1531
+8462-4	108024	Diastolischer Blutdruck	Inspiratorischer Druck	71	f	1532
+8480-6	107986	Systolischer Blutdruck	Inspiratorischer Druck	68	f	1533
+8480-6	108024	Systolischer Blutdruck	Inspiratorischer Druck	68	f	1534
+34964-7	104234	Osmotische Resistenz [Interpretation] von Erythrozyten	Inspiratorische Resistenz 	62	f	1535
+4667-2	104234	Osmotische Resistenz von Erythrozyten	Inspiratorische Resistenz 	62	f	1536
+103-2	104739	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1537
+140-4	104739	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1538
+334-3	104739	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1539
+338-4	104739	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1540
+358-2	104739	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1541
+427-5	104739	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1542
+439-0	104739	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1543
+447-3	104739	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	63	f	1544
+455-6	104739	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	62	f	1545
+491-1	104739	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1546
+507-4	104739	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	62	f	1547
+511-6	104739	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1548
+523-1	104739	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1549
+83-6	104739	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	61	f	1550
+103-2	104735	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	61	f	1551
+140-4	104735	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1552
+318-6	104735	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1553
+334-3	104735	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1554
+338-4	104735	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1555
+358-2	104735	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1556
+362-4	104735	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1557
+366-5	104735	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1558
+427-5	104735	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1559
+439-0	104735	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	61	f	1560
+447-3	104735	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	63	f	1561
+455-6	104735	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	63	f	1562
+483-8	104735	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1563
+491-1	104735	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1564
+495-2	104735	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1565
+499-4	104735	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1566
+507-4	104735	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	63	f	1567
+511-6	104735	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	61	f	1568
+523-1	104735	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1569
+6643-1	104735	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1570
+79-4	104735	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1571
+83-6	104735	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	62	f	1572
+99-2	104735	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Enfluran Konzentration.	60	f	1573
+148-7	104733	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1574
+156-0	104733	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	61	f	1575
+160-2	104733	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	64	f	1576
+164-4	104733	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1577
+168-5	104733	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	61	f	1578
+240-2	104733	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1579
+261-8	104733	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1580
+274-1	104733	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1581
+3150-0	104733	Inhalierte Sauerstoffkonzentration	Inspiratorisch gemessene Halothan Konzentration. 	62	f	1582
+318-6	104733	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	62	f	1583
+322-8	104733	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1584
+334-3	104733	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1585
+338-4	104733	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1586
+358-2	104733	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1587
+362-4	104733	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1588
+366-5	104733	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1589
+39-8	104733	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1590
+427-5	104733	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1591
+439-0	104733	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	61	f	1592
+447-3	104733	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	63	f	1593
+455-6	104733	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	63	f	1594
+483-8	104733	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1595
+491-1	104733	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1596
+495-2	104733	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1597
+499-4	104733	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1598
+507-4	104733	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	63	f	1599
+511-6	104733	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	61	f	1600
+523-1	104733	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	60	f	1601
+83-6	104733	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Halothan Konzentration. 	62	f	1602
+374-9	104741	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Sevofluran Konzentration.	60	f	1603
+81324-6	108157	Glucose-Toleranz über 2 Stunden in der Schwangerschaft (Liste) - Serum oder Plasma	Insulinapplikation während der Schwangerschaft	61	f	1604
+81324-6	108158	Glucose-Toleranz über 2 Stunden in der Schwangerschaft (Liste) - Serum oder Plasma	Insulinapplikation während der Schwangerschaft	61	f	1605
+90767-5	108157	Übersicht der Schwangerschaft - Dokument	Insulinapplikation während der Schwangerschaft	63	f	1606
+90767-5	108158	Übersicht der Schwangerschaft - Dokument	Insulinapplikation während der Schwangerschaft	63	f	1607
+11564-2	101444	Intrinsic Factor Antikörper [Einheiten/Volumen] in Serum	Intrinsic PEEP	78	f	1608
+24383-2	101444	Intrinsic Factor Antikörper [Nachweis] in Serum mit Immunoassay	Intrinsic PEEP	78	f	1609
+30530-0	101444	Intrinsic Factor Antikörper [Nachweis] in Serum	Intrinsic PEEP	78	f	1610
+5233-2	101444	Intrinsic Factor Antikörper [Nachweis] in Serum mit Radioimmunoassay	Intrinsic PEEP	78	f	1611
+3150-0	103150	Inhalierte Sauerstoffkonzentration	Isolierte Ultrafiltration	61	f	1612
+3150-0	103151	Inhalierte Sauerstoffkonzentration	Isolierte Ultrafiltration	61	f	1613
+8310-5	105043	Körpertemperatur	kontrollierte Wassertemperatur, gemessener Wert	62	f	1614
+8330-3	105043	Körpertemperatur - Intravaskulär	kontrollierte Wassertemperatur, gemessener Wert	62	f	1615
+8289-1	108502	Kopfumfang okzipital-frontal Perzentil	Kopfumfang bit cm	83	f	1616
+9843-4	108502	Kopfumfang okzipital-frontal	Kopfumfang bit cm	83	f	1617
+8289-1	11	Kopfumfang okzipital-frontal Perzentil	Kopfumfang des Patienten in Zentimetern	100	f	1618
+9843-4	11	Kopfumfang okzipital-frontal	Kopfumfang des Patienten in Zentimetern	100	f	1619
+8289-1	101763	Kopfumfang okzipital-frontal Perzentil	Kopfumfang des Patienten (Kinder)	74	f	1620
+9843-4	101763	Kopfumfang okzipital-frontal	Kopfumfang des Patienten (Kinder)	74	f	1621
+29463-7	101324	Körpergewicht	Körperoberfläche des Patienten (fallbezogen)	62	f	1622
+3140-1	101324	Körperoberfläche abgeleitet aus Formel	Körperoberfläche des Patienten (fallbezogen)	100	f	1623
+55286-9	101324	Körperliche Untersuchung nach Körperbereichen	Körperoberfläche des Patienten (fallbezogen)	62	f	1624
+8278-4	101324	Formel zur Berechnung der Körperoberfläche	Körperoberfläche des Patienten (fallbezogen)	100	f	1625
+8302-2	101324	Körpergröße	Körperoberfläche des Patienten (fallbezogen)	64	f	1626
+8303-0	101324	Körpergröße [Perzentil]	Körperoberfläche des Patienten (fallbezogen)	64	f	1627
+29463-7	101422	Körpergewicht	Körperoberfläche des Patienten ohne Fallbezug	62	f	1628
+3140-1	101422	Körperoberfläche abgeleitet aus Formel	Körperoberfläche des Patienten ohne Fallbezug	100	f	1629
+55286-9	101422	Körperliche Untersuchung nach Körperbereichen	Körperoberfläche des Patienten ohne Fallbezug	62	f	1630
+8278-4	101422	Formel zur Berechnung der Körperoberfläche	Körperoberfläche des Patienten ohne Fallbezug	100	f	1631
+8302-2	101422	Körpergröße	Körperoberfläche des Patienten ohne Fallbezug	64	f	1632
+8303-0	101422	Körpergröße [Perzentil]	Körperoberfläche des Patienten ohne Fallbezug	64	f	1633
+19254-2	1270	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Körpertemperatur	100	f	1634
+19255-9	1270	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in arteriellem Blut	Körpertemperatur	100	f	1635
+19256-7	1270	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Kapillarblut	Körpertemperatur	100	f	1636
+19258-3	1270	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in venösem Blut	Körpertemperatur	100	f	1637
+32771-8	1270	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in arteriellem Blut	Körpertemperatur	100	f	1638
+33254-4	1270	pH von arteriellem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur	100	f	1639
+34705-4	1270	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Körpertemperatur	100	f	1640
+39485-8	1270	pH von Kapillarblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur	100	f	1641
+39486-6	1270	pH von venösem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur	100	f	1642
+40619-9	1270	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in venösem Blut	Körpertemperatur	100	f	1643
+40620-7	1270	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Kapillarblut	Körpertemperatur	100	f	1644
+47720-8	1270	pH von Nabelschnurblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur	100	f	1645
+8310-5	1270	Körpertemperatur	Körpertemperatur	100	f	1646
+8330-3	1270	Körpertemperatur - Intravaskulär	Körpertemperatur	100	f	1647
+8334-5	1270	Körpertemperatur - Harnblase	Körpertemperatur	100	f	1648
+19254-2	1271	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Körpertemperatur Messkanal 2	75	f	1649
+19255-9	1271	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in arteriellem Blut	Körpertemperatur Messkanal 2	75	f	1650
+19256-7	1271	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Kapillarblut	Körpertemperatur Messkanal 2	75	f	1651
+19258-3	1271	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in venösem Blut	Körpertemperatur Messkanal 2	75	f	1652
+32771-8	1271	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in arteriellem Blut	Körpertemperatur Messkanal 2	75	f	1653
+33254-4	1271	pH von arteriellem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur Messkanal 2	75	f	1654
+34705-4	1271	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Körpertemperatur Messkanal 2	75	f	1655
+39485-8	1271	pH von Kapillarblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur Messkanal 2	75	f	1656
+39486-6	1271	pH von venösem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur Messkanal 2	75	f	1657
+40619-9	1271	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in venösem Blut	Körpertemperatur Messkanal 2	75	f	1658
+40620-7	1271	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Kapillarblut	Körpertemperatur Messkanal 2	75	f	1659
+47720-8	1271	pH von Nabelschnurblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur Messkanal 2	75	f	1660
+8310-5	1271	Körpertemperatur	Körpertemperatur Messkanal 2	100	f	1661
+8330-3	1271	Körpertemperatur - Intravaskulär	Körpertemperatur Messkanal 2	75	f	1662
+8334-5	1271	Körpertemperatur - Harnblase	Körpertemperatur Messkanal 2	76	f	1663
+14832-0	101441	Metanephrine [Mol/Volumen] in Urin	Mean Airway Pressure	60	f	1664
+29304-3	103135	Abgegebene Medikation	Medikament	70	f	1665
+29304-3	103136	Abgegebene Medikation	Medikament	70	f	1666
+55107-7	103135	Anhang - Dokument	Medikament	67	f	1667
+55107-7	103136	Anhang - Dokument	Medikament	67	f	1668
+29304-3	60	Abgegebene Medikation	Medikamentenmischung	60	f	1669
+9279-1	103127	Atemfrequenz	Messparameter: gemessene Atemfrequenz	65	f	1670
+48584-7	106354	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumoctanoat per os (Nuklearmedizinisch)	Messung nur unter ASV Intellivent	78	f	1671
+48585-4	106354	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumacetat per os (Nuklearmedizinisch)	Messung nur unter ASV Intellivent	78	f	1672
+103-2	104035	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1673
+107-3	104035	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1674
+111-5	104035	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1675
+115-6	104035	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1676
+11-7	104035	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1677
+119-8	104035	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1678
+123-0	104035	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1679
+127-1	104035	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1680
+132-1	104035	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1681
+136-2	104035	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1682
+140-4	104035	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1683
+144-6	104035	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1684
+148-7	104035	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1685
+156-0	104035	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1686
+15-8	104035	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1687
+160-2	104035	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1688
+164-4	104035	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1689
+168-5	104035	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1690
+172-7	104035	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1691
+176-8	104035	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1692
+180-0	104035	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1693
+184-2	104035	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1694
+188-3	104035	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1695
+19-0	104035	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1696
+192-5	104035	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1697
+196-6	104035	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1698
+204-8	104035	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1699
+212-1	104035	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1700
+216-2	104035	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1701
+220-4	104035	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1702
+224-6	104035	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1703
+228-7	104035	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1704
+23-2	104035	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1705
+232-9	104035	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1706
+236-0	104035	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1707
+240-2	104035	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1708
+257-6	104035	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1709
+261-8	104035	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1710
+266-7	104035	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1711
+270-9	104035	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1712
+27-3	104035	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1713
+274-1	104035	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1714
+278-2	104035	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1715
+286-5	104035	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1716
+290-7	104035	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1717
+294-9	104035	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1718
+298-0	104035	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1719
+302-0	104035	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1720
+306-1	104035	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1721
+310-3	104035	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1722
+314-5	104035	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1723
+31-5	104035	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1724
+318-6	104035	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1725
+322-8	104035	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1726
+326-9	104035	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1727
+330-1	104035	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1728
+334-3	104035	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1729
+338-4	104035	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1730
+346-7	104035	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1731
+354-1	104035	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1732
+355-8	104035	Neomycin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der NO2 Konzentration bei NO Beatmung	61	f	1733
+35-6	104035	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1734
+358-2	104035	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1735
+362-4	104035	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1736
+366-5	104035	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1737
+374-9	104035	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1738
+378-0	104035	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1739
+382-2	104035	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1740
+386-3	104035	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1741
+391-3	104035	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1742
+395-4	104035	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1743
+39-8	104035	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1744
+399-6	104035	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1745
+407-7	104035	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1746
+411-9	104035	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1747
+415-0	104035	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1748
+419-2	104035	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1749
+423-4	104035	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1750
+427-5	104035	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1751
+43-0	104035	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1752
+43270-8	104035	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1753
+435-8	104035	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1754
+439-0	104035	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1755
+443-2	104035	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1756
+447-3	104035	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1757
+451-5	104035	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1758
+455-6	104035	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1759
+459-8	104035	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1760
+463-0	104035	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1761
+467-1	104035	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1762
+47-1	104035	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1763
+471-3	104035	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1764
+475-4	104035	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1765
+479-6	104035	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1766
+483-8	104035	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1767
+487-9	104035	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1768
+491-1	104035	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1769
+495-2	104035	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1770
+499-4	104035	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1771
+503-3	104035	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1772
+507-4	104035	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1773
+511-6	104035	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1774
+515-7	104035	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1775
+519-9	104035	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1776
+523-1	104035	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1777
+55-4	104035	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1778
+55694-4	104035	Ornidazol [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der NO2 Konzentration bei NO Beatmung	60	f	1779
+59-6	104035	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1780
+59833-4	104035	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1781
+63-8	104035	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1782
+6643-1	104035	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1783
+6651-4	104035	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1784
+67-9	104035	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1785
+71-1	104035	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1786
+75-2	104035	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1787
+79-4	104035	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1788
+8274-3	104035	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1789
+83-6	104035	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1790
+87-7	104035	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1791
+91-9	104035	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1792
+95-0	104035	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1793
+99-2	104035	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1794
+103-2	104034	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1795
+107-3	104034	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1796
+111-5	104034	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1797
+115-6	104034	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1798
+11-7	104034	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1799
+119-8	104034	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1800
+123-0	104034	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1801
+127-1	104034	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1802
+132-1	104034	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1803
+136-2	104034	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1804
+140-4	104034	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1805
+144-6	104034	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1806
+148-7	104034	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1807
+156-0	104034	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1808
+15-8	104034	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1809
+160-2	104034	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1810
+164-4	104034	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1811
+168-5	104034	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1812
+172-7	104034	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1813
+176-8	104034	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1814
+180-0	104034	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1815
+184-2	104034	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1816
+188-3	104034	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1817
+19-0	104034	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1818
+192-5	104034	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1819
+196-6	104034	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1820
+204-8	104034	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1821
+212-1	104034	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1822
+216-2	104034	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1823
+220-4	104034	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1824
+224-6	104034	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1825
+228-7	104034	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1826
+23-2	104034	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1827
+232-9	104034	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1828
+236-0	104034	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1829
+240-2	104034	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1830
+25723-8	104034	Nitroxolin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	60	f	1831
+257-6	104034	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1832
+261-8	104034	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1833
+266-7	104034	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1834
+270-9	104034	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1835
+27-3	104034	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1836
+274-1	104034	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1837
+278-2	104034	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1838
+286-5	104034	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1839
+290-7	104034	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1840
+294-9	104034	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1841
+298-0	104034	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1842
+302-0	104034	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1843
+306-1	104034	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1844
+310-3	104034	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1845
+314-5	104034	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1846
+31-5	104034	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1847
+318-6	104034	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1848
+322-8	104034	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1849
+326-9	104034	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1850
+330-1	104034	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1851
+334-3	104034	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1852
+335-0	104034	Minocyclin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	60	f	1853
+338-4	104034	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1854
+346-7	104034	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1855
+354-1	104034	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1856
+355-8	104034	Neomycin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	62	f	1857
+35-6	104034	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1858
+358-2	104034	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1859
+362-4	104034	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1860
+366-5	104034	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1861
+371-5	104034	Novobiocin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	60	f	1862
+374-9	104034	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1863
+378-0	104034	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1864
+382-2	104034	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1865
+386-3	104034	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1866
+391-3	104034	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1867
+395-4	104034	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1868
+39-8	104034	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1869
+399-6	104034	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1870
+407-7	104034	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1871
+411-9	104034	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1872
+415-0	104034	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1873
+419-2	104034	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1874
+423-4	104034	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1875
+427-5	104034	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1876
+43-0	104034	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1877
+432-5	104034	Ristocetin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	60	f	1878
+43270-8	104034	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1879
+435-8	104034	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1880
+439-0	104034	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1881
+443-2	104034	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1882
+447-3	104034	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1883
+451-5	104034	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1884
+452-3	104034	Spectinomycin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	60	f	1885
+455-6	104034	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1886
+459-8	104034	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1887
+463-0	104034	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1888
+467-1	104034	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1889
+47-1	104034	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1890
+471-3	104034	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1891
+475-4	104034	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1892
+479-6	104034	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1893
+483-8	104034	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1894
+487-9	104034	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1895
+491-1	104034	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1896
+495-2	104034	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1897
+499-4	104034	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1898
+503-3	104034	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1899
+507-4	104034	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1900
+511-6	104034	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1901
+515-7	104034	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1902
+519-9	104034	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1903
+523-1	104034	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1904
+524-9	104034	Vancomycin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	60	f	1905
+55-4	104034	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1906
+55694-4	104034	Ornidazol [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	61	f	1907
+55720-7	104034	Tinidazol [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert der  NO Konzentration bei NO Beatmung	61	f	1908
+59-6	104034	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1909
+59833-4	104034	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1910
+63-8	104034	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1911
+6643-1	104034	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1912
+6651-4	104034	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1913
+67-9	104034	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1914
+71-1	104034	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1915
+75-2	104034	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1916
+79-4	104034	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1917
+8274-3	104034	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1918
+83-6	104034	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1919
+87-7	104034	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1920
+91-9	104034	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1921
+95-0	104034	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1922
+99-2	104034	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der  NO Konzentration bei NO Beatmung	68	f	1923
+19218-7	102923	Sauerstoffgehalt in arteriellem Blut	Messwert des Sauerstoffgehalt in der Maßeinheit Vol %	71	f	1924
+19219-5	102923	Sauerstoffgehalt in Kapillarblut	Messwert des Sauerstoffgehalt in der Maßeinheit Vol %	71	f	1925
+19220-3	102923	Sauerstoffgehalt in venösem Blut	Messwert des Sauerstoffgehalt in der Maßeinheit Vol %	73	f	1926
+34163-6	102923	Sauerstoffgehalt in Blut	Messwert des Sauerstoffgehalt in der Maßeinheit Vol %	86	f	1927
+57800-5	102923	Sauerstoffgehalt in Blut, berechnet	Messwert des Sauerstoffgehalt in der Maßeinheit Vol %	73	f	1928
+22466-7	107893	Respiratorisches Synzytial-Virus Antikörper [Titer] in Serum	Messwert; exspiratorisches Tidalvolumen	60	f	1929
+33390-6	107893	Respiratorisches Synzytial-Virus Antikörper [Nachweis] in Serum	Messwert; exspiratorisches Tidalvolumen	60	f	1930
+7990-5	107893	Respiratorisches Synzytial-Virus Antikörper [Einheiten/Volumen] in Serum	Messwert; exspiratorisches Tidalvolumen	60	f	1931
+22466-7	102902	Respiratorisches Synzytial-Virus Antikörper [Titer] in Serum	Messwert; exspiratorisches Tidalvolumen Einheit: ml	60	f	1932
+33390-6	102902	Respiratorisches Synzytial-Virus Antikörper [Nachweis] in Serum	Messwert; exspiratorisches Tidalvolumen Einheit: ml	60	f	1933
+7990-5	102902	Respiratorisches Synzytial-Virus Antikörper [Einheiten/Volumen] in Serum	Messwert; exspiratorisches Tidalvolumen Einheit: ml	60	f	1934
+8867-4	103265	Herzfrequenz	Messwert: gemessene Atemfrequenz	62	f	1935
+9279-1	103265	Atemfrequenz	Messwert: gemessene Atemfrequenz	75	f	1936
+12-5	103130	Amikacin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert: gemessene O2 Konzentration des Gasgemisches	60	f	1937
+12-5	103216	Amikacin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert: gemessene O2 Konzentration des Gasgemisches	60	f	1938
+267-5	103130	Gentamicin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert: gemessene O2 Konzentration des Gasgemisches	61	f	1939
+267-5	103216	Gentamicin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert: gemessene O2 Konzentration des Gasgemisches	61	f	1940
+8462-4	103142	Diastolischer Blutdruck	Messwert: gemessener positiver endexspiratorischer Druck	61	f	1941
+8310-5	106407	Körpertemperatur	Messwert im Verlaufbis zum erreichen der eingestellten Zieltemperatur	63	f	1942
+52915-6	101443	Aluminium [Mol/Volumen] in Urin	Minimum Airway Pressure	60	f	1943
+5577-2	101443	Aluminium [Masse/Volumen] in Urin	Minimum Airway Pressure	60	f	1944
+9462-3	101443	Aluminium [Masse/Volumen] in Wasser	Minimum Airway Pressure	62	f	1945
+8478-0	104249	Mittlerer Blutdruck	Mittlerer Atemwegsdruck 	76	f	1946
+8478-0	102873	Mittlerer Blutdruck	Mittlerer Atemwegsdruck (MAP)	70	f	1947
+8478-0	102019	Mittlerer Blutdruck	Mittlerer pulmonale arterieller Druck	64	f	1948
+76213-8	108503	Diastolischer Blutdruck invasiv	Nichtinvaiver Blutdruck linkes Bein	70	f	1949
+76215-3	108503	Systolischer Blutdruck invasiv	Nichtinvaiver Blutdruck linkes Bein	68	f	1950
+8462-4	108503	Diastolischer Blutdruck	Nichtinvaiver Blutdruck linkes Bein	65	f	1951
+8478-0	108503	Mittlerer Blutdruck	Nichtinvaiver Blutdruck linkes Bein	67	f	1952
+8480-6	108503	Systolischer Blutdruck	Nichtinvaiver Blutdruck linkes Bein	67	f	1953
+76213-8	1275	Diastolischer Blutdruck invasiv	nichtinvasiver Blutdruck	73	f	1954
+76215-3	1275	Systolischer Blutdruck invasiv	nichtinvasiver Blutdruck	70	f	1955
+8462-4	1275	Diastolischer Blutdruck	nichtinvasiver Blutdruck	68	f	1956
+8478-0	1275	Mittlerer Blutdruck	nichtinvasiver Blutdruck	65	f	1957
+8480-6	1275	Systolischer Blutdruck	nichtinvasiver Blutdruck	65	f	1958
+76213-8	100094	Diastolischer Blutdruck invasiv	nichtinvasiver Blutdruck 1	73	f	1959
+76215-3	100094	Systolischer Blutdruck invasiv	nichtinvasiver Blutdruck 1	70	f	1960
+8462-4	100094	Diastolischer Blutdruck	nichtinvasiver Blutdruck 1	68	f	1961
+8478-0	100094	Mittlerer Blutdruck	nichtinvasiver Blutdruck 1	65	f	1962
+8480-6	100094	Systolischer Blutdruck	nichtinvasiver Blutdruck 1	65	f	1963
+76213-8	108505	Diastolischer Blutdruck invasiv	Nichtinvasiver Blutdruck linker Arm	71	f	1964
+76215-3	108505	Systolischer Blutdruck invasiv	Nichtinvasiver Blutdruck linker Arm	66	f	1965
+8462-4	108505	Diastolischer Blutdruck	Nichtinvasiver Blutdruck linker Arm	63	f	1966
+8478-0	108505	Mittlerer Blutdruck	Nichtinvasiver Blutdruck linker Arm	64	f	1967
+8480-6	108505	Systolischer Blutdruck	Nichtinvasiver Blutdruck linker Arm	60	f	1968
+76213-8	108506	Diastolischer Blutdruck invasiv	Nichtinvasiver Blutdruck rechter Arm	71	f	1969
+76215-3	108506	Systolischer Blutdruck invasiv	Nichtinvasiver Blutdruck rechter Arm	66	f	1970
+8462-4	108506	Diastolischer Blutdruck	Nichtinvasiver Blutdruck rechter Arm	63	f	1971
+8478-0	108506	Mittlerer Blutdruck	Nichtinvasiver Blutdruck rechter Arm	64	f	1972
+8480-6	108506	Systolischer Blutdruck	Nichtinvasiver Blutdruck rechter Arm	60	f	1973
+76213-8	108504	Diastolischer Blutdruck invasiv	Nichtinvasiver Blutdruck rechtes Bein	73	f	1974
+76215-3	108504	Systolischer Blutdruck invasiv	Nichtinvasiver Blutdruck rechtes Bein	70	f	1975
+8462-4	108504	Diastolischer Blutdruck	Nichtinvasiver Blutdruck rechtes Bein	68	f	1976
+8478-0	108504	Mittlerer Blutdruck	Nichtinvasiver Blutdruck rechtes Bein	65	f	1977
+8480-6	108504	Systolischer Blutdruck	Nichtinvasiver Blutdruck rechtes Bein	65	f	1978
+10163-4	108155	Anamnese früherer Schwangerschaften	Nikotingebrauch während der Schwangerschaft	65	f	1979
+10163-4	108156	Anamnese früherer Schwangerschaften	Nikotingebrauch während der Schwangerschaft	65	f	1980
+81324-6	108155	Glucose-Toleranz über 2 Stunden in der Schwangerschaft (Liste) - Serum oder Plasma	Nikotingebrauch während der Schwangerschaft	65	f	1981
+81324-6	108156	Glucose-Toleranz über 2 Stunden in der Schwangerschaft (Liste) - Serum oder Plasma	Nikotingebrauch während der Schwangerschaft	65	f	1982
+90767-5	108155	Übersicht der Schwangerschaft - Dokument	Nikotingebrauch während der Schwangerschaft	65	f	1983
+90767-5	108156	Übersicht der Schwangerschaft - Dokument	Nikotingebrauch während der Schwangerschaft	65	f	1984
+103-2	110838	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1985
+107-3	110838	Cefotaxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1986
+111-5	110838	Cefotetan [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1987
+115-6	110838	Cefoxitin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1988
+11-7	110838	Amikacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1989
+119-8	110838	Cefpodoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1990
+123-0	110838	Cefprozil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1991
+127-1	110838	Cefsulodin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1992
+132-1	110838	Ceftazidim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1993
+136-2	110838	Ceftizoxim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1994
+140-4	110838	Ceftriaxon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1995
+144-6	110838	Cefuroxim parenteral [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1996
+148-7	110838	Cephalexin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1997
+156-0	110838	Cephaloridin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1998
+15-8	110838	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	1999
+160-2	110838	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2000
+164-4	110838	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2001
+168-5	110838	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2002
+172-7	110838	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2003
+176-8	110838	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2004
+180-0	110838	Cinoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2005
+184-2	110838	Ciprofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2006
+188-3	110838	Clarithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2007
+19-0	110838	Amoxicillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2008
+192-5	110838	Clindamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2009
+196-6	110838	Cloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2010
+204-8	110838	Colistin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2011
+212-1	110838	Cycloserin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2012
+216-2	110838	Demeclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2013
+220-4	110838	Dicloxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2014
+224-6	110838	Doxycyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2015
+228-7	110838	Enoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2016
+23-2	110838	Amphotericin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2017
+232-9	110838	Erythromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2018
+236-0	110838	Erythromycin+Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2019
+240-2	110838	Ethambutol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2020
+257-6	110838	Framycetin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2021
+261-8	110838	Fusidat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2022
+266-7	110838	Gentamicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2023
+270-9	110838	Gramicidin D [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2024
+271-7	110838	Gramicidin D [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	O2 Konzentration des Gasgemisches	60	f	2025
+27-3	110838	Ampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2026
+274-1	110838	Hetacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2027
+278-2	110838	Imipenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2028
+286-5	110838	Isoniazid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2029
+290-7	110838	Kanamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2030
+294-9	110838	Ketoconazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2031
+298-0	110838	Lincomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2032
+302-0	110838	Lomefloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2033
+306-1	110838	Loracarbef [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2034
+310-3	110838	Lymecyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2035
+314-5	110838	Meclocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2036
+31-5	110838	Ampicillin+Sulbactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2037
+318-6	110838	Methacyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2038
+322-8	110838	Methicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2039
+326-9	110838	Metronidazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2040
+330-1	110838	Mezlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2041
+334-3	110838	Minocyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2042
+338-4	110838	Miocamycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2043
+346-7	110838	Nafcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2044
+354-1	110838	Neomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2045
+35-6	110838	Azithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2046
+358-2	110838	Netilmicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2047
+362-4	110838	Nitrofurantoin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2048
+366-5	110838	Norfloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2049
+374-9	110838	Ofloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2050
+378-0	110838	Oleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2051
+382-2	110838	Oxacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2052
+386-3	110838	Oxytetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2053
+391-3	110838	Penicillin G [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2054
+395-4	110838	Penicillin V [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2055
+39-8	110838	Azlocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2056
+399-6	110838	Phenethicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2057
+407-7	110838	Piperacillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2058
+411-9	110838	Piperacillin+Tazobactam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2059
+415-0	110838	Pivampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2060
+419-2	110838	Polymyxin B [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2061
+423-4	110838	Pyrazinamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2062
+427-5	110838	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2063
+43-0	110838	Aztreonam [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2064
+43270-8	110838	Ceftobiprol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2065
+435-8	110838	Rolitetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2066
+439-0	110838	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2067
+443-2	110838	Roxithromycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2068
+447-3	110838	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2069
+451-5	110838	Spectinomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2070
+455-6	110838	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2071
+459-8	110838	Streptomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2072
+463-0	110838	Sulfadiazin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2073
+467-1	110838	Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2074
+47-1	110838	Bacampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2075
+471-3	110838	Sulfisoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2076
+475-4	110838	Sulfonamid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2077
+479-6	110838	Talampicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2078
+483-8	110838	Teicoplanin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2079
+487-9	110838	Temafloxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2080
+491-1	110838	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2081
+495-2	110838	Tetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2082
+499-4	110838	Ticarcillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2083
+503-3	110838	Ticarcillin+Clavulanat [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2084
+507-4	110838	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2085
+511-6	110838	Trimethoprim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2086
+515-7	110838	Trimethoprim+Sulfamethoxazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2087
+519-9	110838	Troleandomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2088
+523-1	110838	Vancomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2089
+55-4	110838	Capreomycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2090
+59-6	110838	Carbenicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2091
+59833-4	110838	Anderes Antibiotikum [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2092
+63-8	110838	Cefadroxil [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2093
+6643-1	110838	Cefepim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2094
+6651-4	110838	Meropenem [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2095
+67-9	110838	Cefamandol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2096
+71-1	110838	Cefatrizin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2097
+75-2	110838	Cefazolin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2098
+79-4	110838	Cefixim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2099
+8274-3	110838	Cefpirom [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2100
+83-6	110838	Cefaclor [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2101
+87-7	110838	Cefmetazol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2102
+91-9	110838	Cefodizim [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2103
+95-0	110838	Cefonicid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2104
+99-2	110838	Cefoperazon [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	O2 Konzentration des Gasgemisches	62	f	2105
+10184-0	105203	Krankenhausentlassbefund der körperlichen Untersuchungen - Freitext	Objekt für die Tabelle der körperlichen Untersuchung der ärztlichen Dokumentation	63	f	2106
+26436-6	105203	Laboruntersuchungen	Objekt für die Tabelle der körperlichen Untersuchung der ärztlichen Dokumentation	60	f	2107
+55286-9	105203	Körperliche Untersuchung nach Körperbereichen	Objekt für die Tabelle der körperlichen Untersuchung der ärztlichen Dokumentation	61	f	2108
+23658-8	105271	Anderes Antibiotikum [Empfindlichkeit]	Objektstruktur für die Aufnahme von strukturierten Antibiogrammen	62	f	2109
+29275-5	106776	Körpermessungen	Ort der Messung ABP1	62	f	2110
+48584-7	106776	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumoctanoat per os (Nuklearmedizinisch)	Ort der Messung ABP1	74	f	2111
+48585-4	106776	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumacetat per os (Nuklearmedizinisch)	Ort der Messung ABP1	74	f	2112
+29275-5	106777	Körpermessungen	Ort der Messung ABP2	62	f	2113
+48584-7	106777	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumoctanoat per os (Nuklearmedizinisch)	Ort der Messung ABP2	74	f	2114
+48585-4	106777	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumacetat per os (Nuklearmedizinisch)	Ort der Messung ABP2	74	f	2115
+29275-5	108507	Körpermessungen	Ort der Messung NBP1	62	f	2116
+48584-7	108507	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumoctanoat per os (Nuklearmedizinisch)	Ort der Messung NBP1	74	f	2117
+48585-4	108507	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumacetat per os (Nuklearmedizinisch)	Ort der Messung NBP1	74	f	2118
+9471-4	102491	Fluorid [Masse/Volumen] in Wasser	Oxidationswasser in ml (einfuhrrelevant)	60	f	2119
+93851-4	101327	Delamanid [Empfindlichkeit]	Patientenadresse: Land	62	f	2120
+94651-7	101327	Reiseland [Ort]	Patientenadresse: Land	62	f	2121
+12218-4	107927	Glucose [Masse/Volumen] in Peritonealflüssigkeit --2 Stunden nach Peritonealdialyse	Peritonealdialyse - Einlaufhöhe in cm	76	f	2122
+12628-4	107927	Glucose [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	74	f	2123
+12632-6	107927	Glucose [Masse/Volumen] in Peritonealdialysat --3. Probenmaterial	Peritonealdialyse - Einlaufhöhe in cm	61	f	2124
+12634-2	107927	Glucose [Masse/Volumen] in Peritonealdialysat --5. Probenmaterial	Peritonealdialyse - Einlaufhöhe in cm	61	f	2125
+12635-9	107927	Glucose [Masse/Volumen] in Peritonealdialysat --6. Probenmaterial	Peritonealdialyse - Einlaufhöhe in cm	61	f	2126
+12843-9	107927	Protein [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	63	f	2127
+14621-7	107927	Aussehen von Peritonealflüssigkeit	Peritonealdialyse - Einlaufhöhe in cm	63	f	2128
+14681-1	107927	Creatinin [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	71	f	2129
+14746-2	107927	Glucose [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	74	f	2130
+14748-8	107927	Glucose [Mol/Volumen] in Peritonealflüssigkeit	Peritonealdialyse - Einlaufhöhe in cm	61	f	2131
+1797-0	107927	Amylase [Enzymaktivität/Volumen] in Peritonealflüssigkeit	Peritonealdialyse - Einlaufhöhe in cm	61	f	2132
+21058-3	107927	Albumin [Masse/Volumen] in Serum oder Plasma --2 Stunden nach Peritonealdialyse	Peritonealdialyse - Einlaufhöhe in cm	76	f	2133
+35061-1	107927	Eosinophile [#/Volumen] in Peritonealflüssigkeit	Peritonealdialyse - Einlaufhöhe in cm	63	f	2134
+39467-6	107927	Chlorid [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	67	f	2135
+39785-1	107927	Kalium [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	72	f	2136
+39787-7	107927	Natrium [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	74	f	2137
+40599-3	107927	Albumin [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	70	f	2138
+49003-7	107927	Harnsäure [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	73	f	2139
+49004-5	107927	Creatinin [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	71	f	2140
+49005-2	107927	Calcium [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	70	f	2141
+49007-8	107927	Magnesium [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	71	f	2142
+49928-5	107927	Leukozyten [#/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	70	f	2143
+54900-6	107927	IgA [Masse/Volumen] in Peritonealflüssigkeit	Peritonealdialyse - Einlaufhöhe in cm	62	f	2144
+57726-2	107927	Creatinin [Masse/Volumen] in 24-Stunden-Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	66	f	2145
+57752-8	107927	Harnstoff [Masse/Volumen] in Peritonealdialysat --über Nacht	Peritonealdialyse - Einlaufhöhe in cm	65	f	2146
+59040-6	107927	Cancer-Antigen 125 [Einheiten/Volumen] in Peritonealdialysat	Peritonealdialyse - Einlaufhöhe in cm	69	f	2147
+12191-3	107805	Creatinin [Masse/Volumen] in Peritonealflüssigkeit	Peritonealdialyse Einlaufmenge in ml	60	f	2148
+12218-4	107805	Glucose [Masse/Volumen] in Peritonealflüssigkeit --2 Stunden nach Peritonealdialyse	Peritonealdialyse Einlaufmenge in ml	72	f	2149
+12579-9	107805	Creatinin [Masse/Volumen] in Peritonealdialysat --4. Probenmaterial	Peritonealdialyse Einlaufmenge in ml	60	f	2150
+12580-7	107805	Creatinin [Masse/Volumen] in Peritonealdialysat --5. Probenmaterial	Peritonealdialyse Einlaufmenge in ml	60	f	2151
+12581-5	107805	Creatinin [Masse/Volumen] in Peritonealdialysat --6. Probenmaterial	Peritonealdialyse Einlaufmenge in ml	60	f	2152
+12582-3	107805	Creatinin [Masse/Volumen] in Peritonealdialysat --7. Probenmaterial	Peritonealdialyse Einlaufmenge in ml	60	f	2153
+12583-1	107805	Creatinin [Masse/Volumen] in Peritonealdialysat --8. Probenmaterial	Peritonealdialyse Einlaufmenge in ml	60	f	2154
+12628-4	107805	Glucose [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	71	f	2155
+12843-9	107805	Protein [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	61	f	2156
+14422-0	107805	Bilirubin.gesamt [Masse/Volumen] in Peritonealflüssigkeit	Peritonealdialyse Einlaufmenge in ml	60	f	2157
+14621-7	107805	Aussehen von Peritonealflüssigkeit	Peritonealdialyse Einlaufmenge in ml	61	f	2158
+14681-1	107805	Creatinin [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	72	f	2159
+14746-2	107805	Glucose [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	71	f	2160
+1749-1	107805	Albumin [Masse/Volumen] in Peritonealflüssigkeit	Peritonealdialyse Einlaufmenge in ml	62	f	2161
+21058-3	107805	Albumin [Masse/Volumen] in Serum oder Plasma --2 Stunden nach Peritonealdialyse	Peritonealdialyse Einlaufmenge in ml	72	f	2162
+35061-1	107805	Eosinophile [#/Volumen] in Peritonealflüssigkeit	Peritonealdialyse Einlaufmenge in ml	61	f	2163
+39461-9	107805	Bilirubin.gesamt [Mol/Volumen] in Peritonealflüssigkeit	Peritonealdialyse Einlaufmenge in ml	60	f	2164
+39467-6	107805	Chlorid [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	64	f	2165
+39474-2	107805	Creatinin [Mol/Volumen] in Peritonealflüssigkeit	Peritonealdialyse Einlaufmenge in ml	60	f	2166
+39785-1	107805	Kalium [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	73	f	2167
+39787-7	107805	Natrium [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	75	f	2168
+40599-3	107805	Albumin [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	75	f	2169
+49003-7	107805	Harnsäure [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	70	f	2170
+49004-5	107805	Creatinin [Masse/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	72	f	2171
+49005-2	107805	Calcium [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	71	f	2172
+49007-8	107805	Magnesium [Mol/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	72	f	2173
+49789-1	107805	Kalium [Mol/Volumen] in Peritonealflüssigkeit	Peritonealdialyse Einlaufmenge in ml	60	f	2174
+49928-5	107805	Leukozyten [#/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	71	f	2175
+57726-2	107805	Creatinin [Masse/Volumen] in 24-Stunden-Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	67	f	2176
+57752-8	107805	Harnstoff [Masse/Volumen] in Peritonealdialysat --über Nacht	Peritonealdialyse Einlaufmenge in ml	62	f	2177
+59040-6	107805	Cancer-Antigen 125 [Einheiten/Volumen] in Peritonealdialysat	Peritonealdialyse Einlaufmenge in ml	70	f	2178
+12628-4	107800	Glucose [Masse/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	70	f	2179
+12843-9	107800	Protein [Masse/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	74	f	2180
+14681-1	107800	Creatinin [Mol/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	67	f	2181
+14746-2	107800	Glucose [Mol/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	70	f	2182
+34978-7	107800	Volumen von Peritonealflüssigkeit	Pertionealdialyse Auslaufmenge in ml	65	f	2183
+39467-6	107800	Chlorid [Mol/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	70	f	2184
+39785-1	107800	Kalium [Mol/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	71	f	2185
+39787-7	107800	Natrium [Mol/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	70	f	2186
+40599-3	107800	Albumin [Masse/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	70	f	2187
+49003-7	107800	Harnsäure [Masse/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	68	f	2188
+49004-5	107800	Creatinin [Masse/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	67	f	2189
+49005-2	107800	Calcium [Mol/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	70	f	2190
+49006-0	107800	Phosphat [Mol/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	68	f	2191
+49007-8	107800	Magnesium [Mol/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	67	f	2192
+49928-5	107800	Leukozyten [#/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	65	f	2193
+57726-2	107800	Creatinin [Masse/Volumen] in 24-Stunden-Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	60	f	2194
+59040-6	107800	Cancer-Antigen 125 [Einheiten/Volumen] in Peritonealdialysat	Pertionealdialyse Auslaufmenge in ml	60	f	2195
+100055-3	104266	Optochin [Empfindlichkeit]	Phoch (cmH2O) 	62	f	2196
+100055-3	104267	Optochin [Empfindlichkeit]	Phoch (cmH2O) 	62	f	2197
+14905-4	103066	Retinol [Mol/Volumen] in Serum oder Plasma	Plasmarate	60	f	2198
+14905-4	103068	Retinol [Mol/Volumen] in Serum oder Plasma	Plasmarate	60	f	2199
+14905-4	103070	Retinol [Mol/Volumen] in Serum oder Plasma	Plasmarate	60	f	2200
+15081-3	103066	Prolaktin [Einheiten/Volumen] in Serum oder Plasma	Plasmarate	62	f	2201
+15081-3	103068	Prolaktin [Einheiten/Volumen] in Serum oder Plasma	Plasmarate	62	f	2202
+15081-3	103070	Prolaktin [Einheiten/Volumen] in Serum oder Plasma	Plasmarate	62	f	2203
+22761-1	103066	Pristanat [Mol/Volumen] in Serum oder Plasma	Plasmarate	62	f	2204
+22761-1	103068	Pristanat [Mol/Volumen] in Serum oder Plasma	Plasmarate	62	f	2205
+22761-1	103070	Pristanat [Mol/Volumen] in Serum oder Plasma	Plasmarate	62	f	2206
+24032-5	103066	Rifabutin [Masse/Volumen] in Serum oder Plasma	Plasmarate	62	f	2207
+24032-5	103068	Rifabutin [Masse/Volumen] in Serum oder Plasma	Plasmarate	62	f	2208
+24032-5	103070	Rifabutin [Masse/Volumen] in Serum oder Plasma	Plasmarate	62	f	2209
+26035-6	103066	Serotonin [Mol/Volumen] in Plasma	Plasmarate	62	f	2210
+26035-6	103068	Serotonin [Mol/Volumen] in Plasma	Plasmarate	62	f	2211
+26035-6	103070	Serotonin [Mol/Volumen] in Plasma	Plasmarate	62	f	2212
+26516-5	103066	Thrombozyten [#/Volumen] in Plasma	Plasmarate	62	f	2213
+26516-5	103068	Thrombozyten [#/Volumen] in Plasma	Plasmarate	62	f	2214
+26516-5	103070	Thrombozyten [#/Volumen] in Plasma	Plasmarate	62	f	2215
+2842-3	103066	Prolaktin [Masse/Volumen] in Serum oder Plasma	Plasmarate	62	f	2216
+2842-3	103068	Prolaktin [Masse/Volumen] in Serum oder Plasma	Plasmarate	62	f	2217
+2842-3	103070	Prolaktin [Masse/Volumen] in Serum oder Plasma	Plasmarate	62	f	2218
+2885-2	103066	Protein [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2219
+2885-2	103068	Protein [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2220
+2885-2	103070	Protein [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2221
+2915-7	103066	Renin [Enzymaktivität/Volumen] in Plasma	Plasmarate	73	f	2222
+2915-7	103068	Renin [Enzymaktivität/Volumen] in Plasma	Plasmarate	73	f	2223
+2915-7	103070	Renin [Enzymaktivität/Volumen] in Plasma	Plasmarate	73	f	2224
+2918-1	103066	Renin [Enzymaktivität/Volumen] in Plasma --stehend	Plasmarate	60	f	2225
+2918-1	103068	Renin [Enzymaktivität/Volumen] in Plasma --stehend	Plasmarate	60	f	2226
+2918-1	103070	Renin [Enzymaktivität/Volumen] in Plasma --stehend	Plasmarate	60	f	2227
+2923-1	103066	Retinol [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2228
+2923-1	103068	Retinol [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2229
+2923-1	103070	Retinol [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2230
+30895-7	103066	Renin [Einheiten/Volumen] in Plasma	Plasmarate	73	f	2231
+30895-7	103068	Renin [Einheiten/Volumen] in Plasma	Plasmarate	73	f	2232
+30895-7	103070	Renin [Einheiten/Volumen] in Plasma	Plasmarate	73	f	2233
+32338-6	103066	Pyruvat [Mol/Volumen] in Serum oder Plasma	Plasmarate	67	f	2234
+32338-6	103068	Pyruvat [Mol/Volumen] in Serum oder Plasma	Plasmarate	67	f	2235
+32338-6	103070	Pyruvat [Mol/Volumen] in Serum oder Plasma	Plasmarate	67	f	2236
+35570-1	103066	Renin [Masse/Volumen] in Plasma	Plasmarate	73	f	2237
+35570-1	103068	Renin [Masse/Volumen] in Plasma	Plasmarate	73	f	2238
+35570-1	103070	Renin [Masse/Volumen] in Plasma	Plasmarate	73	f	2239
+4681-3	103066	Streptokinase [Enzymaktivität/Volumen] in Plasma	Plasmarate	60	f	2240
+4681-3	103068	Streptokinase [Enzymaktivität/Volumen] in Plasma	Plasmarate	60	f	2241
+4681-3	103070	Streptokinase [Enzymaktivität/Volumen] in Plasma	Plasmarate	60	f	2242
+55572-2	103066	Procain [Mol/Volumen] in Serum oder Plasma	Plasmarate	60	f	2243
+55572-2	103068	Procain [Mol/Volumen] in Serum oder Plasma	Plasmarate	60	f	2244
+55572-2	103070	Procain [Mol/Volumen] in Serum oder Plasma	Plasmarate	60	f	2245
+9700-6	103066	Procain [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2246
+9700-6	103068	Procain [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2247
+9700-6	103070	Procain [Masse/Volumen] in Serum oder Plasma	Plasmarate	60	f	2248
+12186-3	108023	Kolloid-onkotischer Druck [Partialdruck] in Plasma	Plateau- oder endinspiratorischer Druck	62	f	2249
+8462-4	108023	Diastolischer Blutdruck	Plateau- oder endinspiratorischer Druck	61	f	2250
+8462-4	100102	Diastolischer Blutdruck	Positiver endexspiratorischer Druck (PEEP)	64	f	2251
+76213-8	102885	Diastolischer Blutdruck invasiv	positiv inspiratorischer Druck	60	f	2252
+76215-3	102885	Systolischer Blutdruck invasiv	positiv inspiratorischer Druck	69	f	2253
+8462-4	102885	Diastolischer Blutdruck	positiv inspiratorischer Druck	71	f	2254
+8480-6	102885	Systolischer Blutdruck	positiv inspiratorischer Druck	68	f	2255
+8691-8	101435	Reiseanamnese	Resistance	61	f	2256
+93390-3	101435	Carbapenem-Resistance blaOXA-23-like+blaOXA-48-ähnliches Gene [Nachweis] in Isolat oder Probenmaterial, molekulargenetisch	Resistance	100	f	2257
+94651-7	101435	Reiseland [Ort]	Resistance	63	f	2258
+74472-2	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) N3-Gen RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2259
+74473-0	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) N2-Gen RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2260
+74474-8	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) upE-Gen RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2261
+74475-5	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Interpretation] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2262
+86578-2	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2263
+86579-0	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2264
+88196-1	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2265
+88197-9	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2266
+88198-7	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Kornea bzw. Konjunktiva mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2267
+88199-5	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Aspirat mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2268
+88889-1	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Detektion ohne Sonde	Respiratory Minute Volume	61	f	2269
+91807-8	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2270
+91830-0	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2271
+92967-9	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Detektion ohne Sonde	Respiratory Minute Volume	61	f	2272
+94501-4	100271	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Minute Volume	61	f	2273
+74472-2	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) N3-Gen RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2274
+74473-0	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) N2-Gen RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2275
+74474-8	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) upE-Gen RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2276
+74475-5	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Interpretation] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2277
+86578-2	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2278
+86579-0	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2279
+88196-1	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2280
+88197-9	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2281
+88198-7	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Kornea bzw. Konjunktiva mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2282
+88199-5	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Aspirat mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2283
+88889-1	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Detektion ohne Sonde	Respiratory Rate (spontan)	63	f	2284
+91807-8	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2285
+91830-0	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2286
+92967-9	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Detektion ohne Sonde	Respiratory Rate (spontan)	63	f	2287
+94501-4	100270	Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion	Respiratory Rate (spontan)	63	f	2288
+20564-1	102942	Sauerstoffsättigung in Blut	Sauerstoffeinstellung	68	f	2289
+20564-1	106641	Sauerstoffsättigung in Blut	Sauerstoffeinstellung	68	f	2290
+2705-2	102942	Sauerstoff [Partialdruck] in venösem Blut	Sauerstoffeinstellung	65	f	2291
+2705-2	106641	Sauerstoff [Partialdruck] in venösem Blut	Sauerstoffeinstellung	65	f	2292
+20564-1	102922	Sauerstoffsättigung in Blut	Sauerstoffeinstellung in der Maßeinheit Vol %	62	f	2293
+2705-2	102922	Sauerstoff [Partialdruck] in venösem Blut	Sauerstoffeinstellung in der Maßeinheit Vol %	60	f	2294
+2711-0	102922	Sauerstoffsättigung in venösem Blut	Sauerstoffeinstellung in der Maßeinheit Vol %	62	f	2295
+19211-2	103093	Sauerstoff [Partialdruck] in gemischt-venösem Blut	Sauerstoffgehalt des eingestellten Gasgemisches CF 800	63	f	2296
+19218-7	103093	Sauerstoffgehalt in arteriellem Blut	Sauerstoffgehalt des eingestellten Gasgemisches CF 800	67	f	2297
+19219-5	103093	Sauerstoffgehalt in Kapillarblut	Sauerstoffgehalt des eingestellten Gasgemisches CF 800	71	f	2298
+19220-3	103093	Sauerstoffgehalt in venösem Blut	Sauerstoffgehalt des eingestellten Gasgemisches CF 800	73	f	2299
+3148-4	103093	Sauerstoff [Partialdruck] in Gas	Sauerstoffgehalt des eingestellten Gasgemisches CF 800	61	f	2300
+34163-6	103093	Sauerstoffgehalt in Blut	Sauerstoffgehalt des eingestellten Gasgemisches CF 800	86	f	2301
+57800-5	103093	Sauerstoffgehalt in Blut, berechnet	Sauerstoffgehalt des eingestellten Gasgemisches CF 800	68	f	2302
+20564-1	104261	Sauerstoffsättigung in Blut	Sauerstoffkonzentration 	61	f	2303
+3150-0	104261	Inhalierte Sauerstoffkonzentration	Sauerstoffkonzentration 	100	f	2304
+19211-2	103037	Sauerstoff [Partialdruck] in gemischt-venösem Blut	Sauerstoffkonzentration des abgegebenen Gasgemisches	60	f	2305
+19211-2	107879	Sauerstoff [Partialdruck] in gemischt-venösem Blut	Sauerstoffkonzentration des abgegebenen Gasgemisches	60	f	2306
+3150-0	103037	Inhalierte Sauerstoffkonzentration	Sauerstoffkonzentration des abgegebenen Gasgemisches	81	f	2307
+3150-0	107879	Inhalierte Sauerstoffkonzentration	Sauerstoffkonzentration des abgegebenen Gasgemisches	81	f	2308
+11556-8	1272	Sauerstoff [Partialdruck] in Blut	Sauerstoffsättigung	61	f	2309
+19224-5	1272	Sauerstoffsättigung in gemischt-venösem Blut	Sauerstoffsättigung	100	f	2310
+20564-1	1272	Sauerstoffsättigung in Blut	Sauerstoffsättigung	100	f	2311
+2708-6	1272	Sauerstoffsättigung in arteriellem Blut	Sauerstoffsättigung	100	f	2312
+2709-4	1272	Sauerstoffsättigung in Kapillarblut	Sauerstoffsättigung	100	f	2313
+2711-0	1272	Sauerstoffsättigung in venösem Blut	Sauerstoffsättigung	100	f	2314
+2713-6	1272	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	Sauerstoffsättigung	100	f	2315
+28642-7	1272	Sauerstoffsättigung in arteriellem Nabelschnurblut	Sauerstoffsättigung	100	f	2316
+28643-5	1272	Sauerstoffsättigung in venösem Nabelschnurblut	Sauerstoffsättigung	100	f	2317
+3148-4	1272	Sauerstoff [Partialdruck] in Gas	Sauerstoffsättigung	62	f	2318
+51731-8	1272	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	Sauerstoffsättigung	100	f	2319
+51732-6	1272	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	Sauerstoffsättigung	100	f	2320
+51733-4	1272	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	Sauerstoffsättigung	100	f	2321
+59408-5	1272	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	Sauerstoffsättigung	100	f	2322
+74105-8	1272	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	Sauerstoffsättigung	100	f	2323
+19224-5	102010	Sauerstoffsättigung in gemischt-venösem Blut	Sauerstoffsättigung Pulsoxymetrie	72	f	2324
+20564-1	102010	Sauerstoffsättigung in Blut	Sauerstoffsättigung Pulsoxymetrie	88	f	2325
+2708-6	102010	Sauerstoffsättigung in arteriellem Blut	Sauerstoffsättigung Pulsoxymetrie	72	f	2326
+2709-4	102010	Sauerstoffsättigung in Kapillarblut	Sauerstoffsättigung Pulsoxymetrie	73	f	2327
+2711-0	102010	Sauerstoffsättigung in venösem Blut	Sauerstoffsättigung Pulsoxymetrie	75	f	2328
+2713-6	102010	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	Sauerstoffsättigung Pulsoxymetrie	72	f	2329
+28642-7	102010	Sauerstoffsättigung in arteriellem Nabelschnurblut	Sauerstoffsättigung Pulsoxymetrie	72	f	2330
+28643-5	102010	Sauerstoffsättigung in venösem Nabelschnurblut	Sauerstoffsättigung Pulsoxymetrie	72	f	2331
+51731-8	102010	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	Sauerstoffsättigung Pulsoxymetrie	72	f	2332
+51732-6	102010	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	Sauerstoffsättigung Pulsoxymetrie	72	f	2333
+51733-4	102010	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	Sauerstoffsättigung Pulsoxymetrie	72	f	2334
+59408-5	102010	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	Sauerstoffsättigung Pulsoxymetrie	77	f	2335
+74105-8	102010	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	Sauerstoffsättigung Pulsoxymetrie	72	f	2336
+21840-4	103844	Geschlecht [North American Association of Central Cancer Register Standard Version 11]	Schläge /sek	62	f	2337
+33514-1	103844	Volumen von Schweiß	Schläge /sek	67	f	2338
+10163-4	100038	Anamnese früherer Schwangerschaften	Schwangerschaftswoche, in welcher das Baby geboren wurde	63	f	2339
+82810-3	100038	Schwangerschaftsstatus	Schwangerschaftswoche, in welcher das Baby geboren wurde	63	f	2340
+90767-5	100038	Übersicht der Schwangerschaft - Dokument	Schwangerschaftswoche, in welcher das Baby geboren wurde	65	f	2341
+82810-3	9	Schwangerschaftsstatus	Schwangerschaftswoche zum Zeitpunkt der Geburt in ganzen Tagen	60	f	2342
+47610-1	104228	Creatinin [Mol/Volumen] in Stuhl	Shallow Breathing Index (Index für flache Atmung) 	63	f	2343
+8867-4	104282	Herzfrequenz	SIMV Frequenz 	64	f	2344
+9279-1	104282	Atemfrequenz	SIMV Frequenz 	64	f	2345
+29638-4	112010	Gewicht von Gewebe	spezifische Gewicht Refraktometer	67	f	2346
+30078-0	112010	Gewicht von Stuhl	spezifische Gewicht Refraktometer	70	f	2347
+33247-8	112010	Gewicht von Schweiß	spezifische Gewicht Refraktometer	67	f	2348
+44933-0	112010	Spezifisches Gewicht von 24-Stunden-Urin mit Refraktometrie	spezifische Gewicht Refraktometer	61	f	2349
+5810-7	112010	Spezifisches Gewicht von Urin mit Refraktometrie	spezifische Gewicht Refraktometer	69	f	2350
+19840-8	103036	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Spontane Atemfrequenz	73	f	2351
+19840-8	107874	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Spontane Atemfrequenz	73	f	2352
+19840-8	108018	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Spontane Atemfrequenz	73	f	2353
+9278-3	103036	Atemfrequenz spezielle Umstände	Spontane Atemfrequenz	73	f	2354
+9278-3	107874	Atemfrequenz spezielle Umstände	Spontane Atemfrequenz	73	f	2355
+9278-3	108018	Atemfrequenz spezielle Umstände	Spontane Atemfrequenz	73	f	2356
+9279-1	103036	Atemfrequenz	Spontane Atemfrequenz	100	f	2357
+9279-1	107874	Atemfrequenz	Spontane Atemfrequenz	100	f	2358
+9279-1	108018	Atemfrequenz	Spontane Atemfrequenz	100	f	2359
+63895-7	106649	Stillstatus	Status nicht bekannt	71	f	2360
+72166-2	106649	Raucherstatus	Status nicht bekannt	63	f	2361
+77739-1	106649	Hepatitis-B-Virus-Oberflächenantigen-Status von der Mutter	Status nicht bekannt	100	f	2362
+82754-3	106649	Status der Reise	Status nicht bekannt	100	f	2363
+63895-7	102941	Stillstatus	Substituatbolus in ml	62	f	2364
+63895-7	102979	Stillstatus	Substituatbolus ml	62	f	2365
+8310-5	102968	Körpertemperatur	Temperatur Celcius	80	f	2366
+8310-5	102993	Körpertemperatur	Temperatur Celcius	80	f	2367
+39485-8	110931	pH von Kapillarblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Temperatur iat keinem spezieelnMessort über das Monitoring zugeordnet.	62	f	2368
+8310-5	110931	Körpertemperatur	Temperatur iat keinem spezieelnMessort über das Monitoring zugeordnet.	69	f	2369
+8330-3	110931	Körpertemperatur - Intravaskulär	Temperatur iat keinem spezieelnMessort über das Monitoring zugeordnet.	62	f	2370
+8334-5	110931	Körpertemperatur - Harnblase	Temperatur iat keinem spezieelnMessort über das Monitoring zugeordnet.	62	f	2371
+8310-5	102943	Körpertemperatur	Temperatur in Celsius	80	f	2372
+8310-5	102956	Körpertemperatur	Temperatur in Celsius	80	f	2373
+55107-7	104284	Anhang - Dokument	Tidalvolumen 	60	f	2374
+82754-3	104273	Status der Reise	TPause (s) 	60	f	2375
+82754-3	105212	Status der Reise	Transientes Objekt für die temporäre Aufnahme der Vorwerte für die medizinische Dokumentation Untersuchung körperlicher Status	67	f	2376
+33255-1	103147	Zell-Fraktionen [Interpretation] in Blut	Ultrafiltrationsziel	60	f	2377
+76213-8	107870	Diastolischer Blutdruck invasiv	Unerwarteter positiver endexspiratorischer Druck	61	f	2378
+76215-3	107870	Systolischer Blutdruck invasiv	Unerwarteter positiver endexspiratorischer Druck	62	f	2379
+8462-4	107870	Diastolischer Blutdruck	Unerwarteter positiver endexspiratorischer Druck	71	f	2380
+8480-6	107870	Systolischer Blutdruck	Unerwarteter positiver endexspiratorischer Druck	64	f	2381
+76213-8	102912	Diastolischer Blutdruck invasiv	Unerwarteter positiver endexspiratorischer Druck, ein Monitoring-Parameter	61	f	2382
+76215-3	102912	Systolischer Blutdruck invasiv	Unerwarteter positiver endexspiratorischer Druck, ein Monitoring-Parameter	62	f	2383
+8462-4	102912	Diastolischer Blutdruck	Unerwarteter positiver endexspiratorischer Druck, ein Monitoring-Parameter	71	f	2384
+8480-6	102912	Systolischer Blutdruck	Unerwarteter positiver endexspiratorischer Druck, ein Monitoring-Parameter	64	f	2385
+19220-3	1274	Sauerstoffgehalt in venösem Blut	venöse Sauerstoffsättigung	65	f	2386
+19224-5	1274	Sauerstoffsättigung in gemischt-venösem Blut	venöse Sauerstoffsättigung	86	f	2387
+20564-1	1274	Sauerstoffsättigung in Blut	venöse Sauerstoffsättigung	88	f	2388
+2705-2	1274	Sauerstoff [Partialdruck] in venösem Blut	venöse Sauerstoffsättigung	70	f	2389
+2708-6	1274	Sauerstoffsättigung in arteriellem Blut	venöse Sauerstoffsättigung	86	f	2390
+2709-4	1274	Sauerstoffsättigung in Kapillarblut	venöse Sauerstoffsättigung	86	f	2391
+2711-0	1274	Sauerstoffsättigung in venösem Blut	venöse Sauerstoffsättigung	89	f	2392
+2713-6	1274	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	venöse Sauerstoffsättigung	86	f	2393
+28642-7	1274	Sauerstoffsättigung in arteriellem Nabelschnurblut	venöse Sauerstoffsättigung	86	f	2394
+28643-5	1274	Sauerstoffsättigung in venösem Nabelschnurblut	venöse Sauerstoffsättigung	86	f	2395
+51731-8	1274	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in venösem Blut	venöse Sauerstoffsättigung	86	f	2396
+51732-6	1274	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Kapillarblut	venöse Sauerstoffsättigung	86	f	2397
+51733-4	1274	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	venöse Sauerstoffsättigung	86	f	2398
+59408-5	1274	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	venöse Sauerstoffsättigung	86	f	2399
+74105-8	1274	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	venöse Sauerstoffsättigung	86	f	2400
+33882-2	100905	Probennahme-Datum des Probenmaterials	Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit	100	f	2401
+41395-5	100905	Probennahme-Datum von Urin	Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit	100	f	2402
+91560-3	100905	Datum der Abreise vom Reiseziel	Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit	100	f	2403
+95366-1	100905	Datum der ersten Entnahme von positivem Probenmaterial	Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit	100	f	2404
+19840-8	101595	Atemfrequenz.spontan und mechanisch --am Beatmungsgerät	Verordnung Ziel-Atemfrequenz	83	f	2405
+8867-4	101595	Herzfrequenz	Verordnung Ziel-Atemfrequenz	62	f	2406
+9278-3	101595	Atemfrequenz spezielle Umstände	Verordnung Ziel-Atemfrequenz	83	f	2407
+9279-1	101595	Atemfrequenz	Verordnung Ziel-Atemfrequenz	100	f	2408
+11067-6	110877	Blutungszeit	Zeit bis zum Start SBT	60	f	2409
+41032-4	110877	Uroporphyrin [Masse/Zeit] in Stuhl (unspezifizierte Zeit)	Zeit bis zum Start SBT	67	f	2410
+48430-3	110877	Carnitin [Mol] in Sperma (unspezifizierte Zeit)	Zeit bis zum Start SBT	67	f	2411
+93817-5	110877	Laufstrecke (unspezifizierte Zeit)	Zeit bis zum Start SBT	67	f	2412
+3243-3	106371	Thrombinzeit	Zeit bis zum Start STB	60	f	2413
+41032-4	106371	Uroporphyrin [Masse/Zeit] in Stuhl (unspezifizierte Zeit)	Zeit bis zum Start STB	67	f	2414
+48430-3	106371	Carnitin [Mol] in Sperma (unspezifizierte Zeit)	Zeit bis zum Start STB	67	f	2415
+93817-5	106371	Laufstrecke (unspezifizierte Zeit)	Zeit bis zum Start STB	67	f	2416
+3243-3	104263	Thrombinzeit	zeit oberes Druckniveau (thoch) 	64	f	2417
+11067-6	110876	Blutungszeit	Zeit zwischen 2 SBT	60	f	2418
+41032-4	110876	Uroporphyrin [Masse/Zeit] in Stuhl (unspezifizierte Zeit)	Zeit zwischen 2 SBT	67	f	2419
+48430-3	110876	Carnitin [Mol] in Sperma (unspezifizierte Zeit)	Zeit zwischen 2 SBT	67	f	2420
+93817-5	110876	Laufstrecke (unspezifizierte Zeit)	Zeit zwischen 2 SBT	67	f	2421
+11067-6	106370	Blutungszeit	Zeit zwishen 2 SBT	60	f	2422
+41032-4	106370	Uroporphyrin [Masse/Zeit] in Stuhl (unspezifizierte Zeit)	Zeit zwishen 2 SBT	67	f	2423
+48430-3	106370	Carnitin [Mol] in Sperma (unspezifizierte Zeit)	Zeit zwishen 2 SBT	67	f	2424
+93817-5	106370	Laufstrecke (unspezifizierte Zeit)	Zeit zwishen 2 SBT	67	f	2425
+12961-9	100089	Harnstoff-Stickstoff [Masse/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	62	f	2426
+19230-2	100089	Bicarbonat [Mol/Volumen] Standard in arteriellem Blut	zweiter arterieller Blutdruck	63	f	2427
+1960-4	100089	Bicarbonat [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	67	f	2428
+21232-4	100089	Creatinin [Masse/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	68	f	2429
+24336-0	100089	Blutgasanalyse (Liste) - Arterielles Blut	zweiter arterieller Blutdruck	62	f	2430
+2518-9	100089	Lactat [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	73	f	2431
+2703-7	100089	Sauerstoff [Partialdruck] in arteriellem Blut	zweiter arterieller Blutdruck	67	f	2432
+2708-6	100089	Sauerstoffsättigung in arteriellem Blut	zweiter arterieller Blutdruck	61	f	2433
+2744-1	100089	pH von arteriellem Blut	zweiter arterieller Blutdruck	75	f	2434
+28646-8	100089	pH von arteriellem Nabelschnurblut	zweiter arterieller Blutdruck	63	f	2435
+2906-6	100089	Pyruvat [Masse/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	76	f	2436
+30242-2	100089	Lactat [Masse/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	73	f	2437
+30313-1	100089	Hämoglobin [Masse/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	64	f	2438
+32354-3	100089	Hämatokrit [Volumenfraktion] von arteriellem Blut	zweiter arterieller Blutdruck	68	f	2439
+32713-0	100089	Kalium [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	73	f	2440
+32717-1	100089	Natrium [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	76	f	2441
+33254-4	100089	pH von arteriellem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	zweiter arterieller Blutdruck	61	f	2442
+39481-7	100089	Glucose [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	76	f	2443
+41650-3	100089	Chlorid [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	71	f	2444
+41651-1	100089	Glucose [Masse/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	76	f	2445
+59827-6	100089	Bilirubin.gesamt [Masse/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	68	f	2446
+72927-7	100089	Harnstoff [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	68	f	2447
+75928-2	100089	Hämoglobin [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	64	f	2448
+76213-8	100089	Diastolischer Blutdruck invasiv	zweiter arterieller Blutdruck	60	f	2449
+76215-3	100089	Systolischer Blutdruck invasiv	zweiter arterieller Blutdruck	60	f	2450
+8462-4	100089	Diastolischer Blutdruck	zweiter arterieller Blutdruck	68	f	2451
+8478-0	100089	Mittlerer Blutdruck	zweiter arterieller Blutdruck	75	f	2452
+8480-6	100089	Systolischer Blutdruck	zweiter arterieller Blutdruck	65	f	2453
+89872-6	100089	Bilirubin.gesamt [Mol/Volumen] in arteriellem Blut	zweiter arterieller Blutdruck	68	f	2454
+76213-8	100090	Diastolischer Blutdruck invasiv	zweiter nichtinvasiver Blutdruck 	73	f	2455
+76215-3	100090	Systolischer Blutdruck invasiv	zweiter nichtinvasiver Blutdruck 	70	f	2456
+8462-4	100090	Diastolischer Blutdruck	zweiter nichtinvasiver Blutdruck 	68	f	2457
+8478-0	100090	Mittlerer Blutdruck	zweiter nichtinvasiver Blutdruck 	65	f	2458
+8480-6	100090	Systolischer Blutdruck	zweiter nichtinvasiver Blutdruck 	65	f	2459
+82810-3	100037	Schwangerschaftsstatus	aktuelle Schwangerschaftswoche des Babys	74	t	1
+76213-8	1276	Diastolischer Blutdruck invasiv	arterielle Blutdruck	62	t	76
+76215-3	1276	Systolischer Blutdruck invasiv	arterielle Blutdruck	62	t	77
+8462-4	1276	Diastolischer Blutdruck	arterielle Blutdruck	65	t	78
+8478-0	1276	Mittlerer Blutdruck	arterielle Blutdruck	72	t	79
+8480-6	1276	Systolischer Blutdruck	arterielle Blutdruck	62	t	80
+8480-6	100093	Systolischer Blutdruck	arterieller Blutdruck 1	65	t	109
+2708-6	1273	Sauerstoffsättigung in arteriellem Blut	arterielle Sauerstoffsättigung	91	t	144
+51733-4	1273	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	arterielle Sauerstoffsättigung	77	t	154
+29308-4	1278	Diagnose	Diagnosen des Patienten	94	t	352
+17608-1	110904	Gewicht [Masse/Zeit] von 48-Stunden-Stuhl	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	t	420
+17609-9	110904	Gewicht [Masse/Zeit] von 72-Stunden-Stuhl	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	t	421
+25530-7	110904	Gewicht [Masse/Zeit] von 24-Stunden-Stuhl	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	t	423
+29463-7	110904	Körpergewicht	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	74	t	424
+21112-8	4	Geburtsdatum	Geburtsdatum des Patienten	100	t	1218
+3150-0	103281	Inhalierte Sauerstoffkonzentration	gemessene O2 Konzentration im Inspirationsgas	64	t	1375
+3148-4	103439	Sauerstoff [Partialdruck] in Gas	gemessene Sauerstoffkonzentration im Atemgas	62	t	1421
 \.
 
 
@@ -24583,6 +22068,13 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 --
 
 SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175, true);
+
+
+--
+-- Name: loinc_long_common_name_copra_description_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
+--
+
+SELECT pg_catalog.setval('loinc_copra.loinc_long_common_name_copra_description_id_seq', 2459, true);
 
 
 --
