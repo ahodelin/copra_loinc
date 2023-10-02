@@ -188,6 +188,45 @@ ALTER SEQUENCE loinc_copra.loinc_long_common_name_copra_name_analyse_id_seq OWNE
 
 
 --
+-- Name: loinc_shortname_copra_name; Type: TABLE; Schema: loinc_copra; Owner: clinicuser
+--
+
+CREATE TABLE loinc_copra.loinc_shortname_copra_name (
+    loinc_num character varying(10),
+    copra_id bigint,
+    loinc_shortname character varying(255),
+    copra_name character varying,
+    accuracy integer,
+    is_match boolean,
+    id integer NOT NULL
+);
+
+
+ALTER TABLE loinc_copra.loinc_shortname_copra_name OWNER TO clinicuser;
+
+--
+-- Name: loinc_shortname_copra_name_id_seq; Type: SEQUENCE; Schema: loinc_copra; Owner: clinicuser
+--
+
+CREATE SEQUENCE loinc_copra.loinc_shortname_copra_name_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE loinc_copra.loinc_shortname_copra_name_id_seq OWNER TO clinicuser;
+
+--
+-- Name: loinc_shortname_copra_name_id_seq; Type: SEQUENCE OWNED BY; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER SEQUENCE loinc_copra.loinc_shortname_copra_name_id_seq OWNED BY loinc_copra.loinc_shortname_copra_name.id;
+
+
+--
 -- Name: copra_description_only_words id; Type: DEFAULT; Schema: loinc_copra; Owner: clinicuser
 --
 
@@ -206,6 +245,13 @@ ALTER TABLE ONLY loinc_copra.loinc_long_common_name_copra_description ALTER COLU
 --
 
 ALTER TABLE ONLY loinc_copra.loinc_long_common_name_copra_name_analyse ALTER COLUMN id SET DEFAULT nextval('loinc_copra.loinc_long_common_name_copra_name_analyse_id_seq'::regclass);
+
+
+--
+-- Name: loinc_shortname_copra_name id; Type: DEFAULT; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER TABLE ONLY loinc_copra.loinc_shortname_copra_name ALTER COLUMN id SET DEFAULT nextval('loinc_copra.loinc_shortname_copra_name_id_seq'::regclass);
 
 
 --
@@ -9521,6 +9567,2511 @@ COPY loinc_copra.copra_description_words (id, copra_description_words, descripti
 --
 
 COPY loinc_copra.from_script (loinc_num, copra_id, loinc_entity, copra_entity, accuracy) FROM stdin;
+2379-6	104785	GST RBC-cCnc	MS C2 RC	60
+52761-4	100203	PT PIVKA sensitive Act/Nor PPP	PT	100
+52761-4	100676	PT PIVKA sensitive Act/Nor PPP	PT	100
+52751-5	103827	aPTT-FS PPP	MS EzPAP PAP	61
+52751-5	107836	aPTT-FS PPP	MS Peep CPAP	61
+29265-6	102721	Calcium Album cor SerPl-sCnc	Calcium	100
+29265-6	102743	Calcium Album cor SerPl-sCnc	Calcium	100
+29265-6	103054	Calcium Album cor SerPl-sCnc	Calcium	100
+2481-0	108157	Insulin Ab Ser Ql	Insulin ja	82
+2481-0	108158	Insulin Ab Ser Ql	Insulin nein	74
+33817-8	108157	Insulin sp3 p chal SerPl-aCnc	Insulin ja	82
+33817-8	108158	Insulin sp3 p chal SerPl-aCnc	Insulin nein	74
+3141-9	117218	Weight Measured	G5 Body Weight	60
+33863-2	104235	Cystatin C SerPl-mCnc	MS Servoi Cstatic	63
+33863-2	104784	Cystatin C SerPl-mCnc	MS C2 Cstat	62
+33863-2	108036	Cystatin C SerPl-mCnc	P MS C3 Cstat	65
+8069-7	104259	Epidis Ab Titr Ser	Servoi EDI Trigger	61
+22441-0	107934	P falciparum Ab Titr Ser	P ADS MS ADS Calcium postFilter	67
+22441-0	107935	P falciparum Ab Titr Ser	P ADS MS ADS Calcium preFilter	64
+19224-5	1273	SaO2 % BldMV	SaO2	100
+19224-5	117154	SaO2 % BldMV	SpO2 l	62
+21112-8	103265	Birth date	MS BreathRate	61
+21112-8	104781	Birth date	AT Air	62
+10898-5	110915	EEEV IgM Titr Ser IF	MS Servoi I E	61
+18900-1	104733	Cephalothin Susc Islt	MS Halothan insp	65
+24446-7	110860	PBG Ur-mCnc	P RTX Min	60
+9513-3	104245	CMV Ab Titr Ser CF	MS Servoi AF	60
+9513-3	104246	CMV Ab Titr Ser CF	MS Servoi Af	60
+42638-7	100203	PT PPP 1:1 saline	PT	100
+42638-7	100676	PT PPP 1:1 saline	PT	100
+2743-3	107831	pH Amn	P man	73
+2743-3	108723	pH Amn	P MS AF	62
+2743-3	110779	pH Amn	P MS Na	62
+2743-3	110780	pH Amn	P MS	60
+2743-3	110787	pH Amn	P Na	60
+2743-3	110807	pH Amn	P Na	60
+2743-3	110939	pH Amn	P NO	60
+48159-8	15	HCV Ab s/co SerPl IA	CO	100
+48159-8	24	HCV Ab s/co SerPl IA	CO	100
+48159-8	102021	HCV Ab s/co SerPl IA	CO	100
+48159-8	102040	HCV Ab s/co SerPl IA	p-CO	67
+48159-8	102489	HCV Ab s/co SerPl IA	CO	100
+93733-4	103265	Creat 5h Ur-mRate	MS BreathRate	60
+93733-4	104973	Creat 5h Ur-mRate	CRRT Temperatur	62
+93733-4	104994	Creat 5h Ur-mRate	CRRT Temperatur	62
+93733-4	110930	Creat 5h Ur-mRate	P Temperatur Rektal	61
+38387-7	107985	C3 NeF SerPl Ql	P C3	67
+38387-7	107992	C3 NeF SerPl Ql	P C3	67
+38387-7	108010	C3 NeF SerPl Ql	P C3	67
+38387-7	110828	C3 NeF SerPl Ql	P C3	67
+38387-7	110831	C3 NeF SerPl Ql	P C3	67
+6812-2	110915	DENV IgM Titr Ser	MS Servoi I E	60
+4222-6	1278	Digoxin Dose	Diagnose	70
+33310-4	102883	PS Ab Ser Ql	PS	100
+33310-4	104717	PS Ab Ser Ql	PS	100
+3695-4	108157	Insulin SerPl-mCnc	Insulin ja	82
+3695-4	108158	Insulin SerPl-mCnc	Insulin nein	74
+2020-6	103809	pCO2 BldC	tcpCO2	67
+2020-6	117154	pCO2 BldC	SpO2 l	67
+27832-5	108157	Insulin sp4 p chal SerPl-aCnc	Insulin ja	82
+27832-5	108158	Insulin sp4 p chal SerPl-aCnc	Insulin nein	74
+57921-9	101423	CO2 BldCoA Calc-sCnc	CO2	100
+57921-9	101434	CO2 BldCoA Calc-sCnc	CO2	100
+54111-0	108504	NB hear screen Pnl	P NBP reBein	60
+28009-9	104249	Specimen vol Ur	MS Servoi Pmean	60
+43578-4	107985	C3 Prt-mCnc	P C3	67
+43578-4	107992	C3 Prt-mCnc	P C3	67
+43578-4	108010	C3 Prt-mCnc	P C3	67
+43578-4	108014	C3 Prt-mCnc	P MS C3 VTE	64
+43578-4	108015	C3 Prt-mCnc	P MS C3 VTi	64
+43578-4	108028	C3 Prt-mCnc	P MS C3	67
+43578-4	108029	C3 Prt-mCnc	P MS C3 TE	67
+43578-4	108030	C3 Prt-mCnc	P MS C3 TI	67
+43578-4	108031	C3 Prt-mCnc	P MS C3	67
+43578-4	108034	C3 Prt-mCnc	P MS C3 RC	67
+43578-4	108037	C3 Prt-mCnc	P MS C3 PTP	64
+43578-4	108039	C3 Prt-mCnc	P MS C3 RSB	64
+43578-4	110828	C3 Prt-mCnc	P C3	67
+43578-4	110831	C3 Prt-mCnc	P C3	67
+43578-4	110860	C3 Prt-mCnc	P RTX Min	60
+2022-2	101602	pCO2 CSF	SpO2	67
+2022-2	102010	pCO2 CSF	SpO2	67
+2022-2	102166	pCO2 CSF	PICCO PC	62
+2022-2	102168	pCO2 CSF	PICCO HF	62
+2022-2	102183	pCO2 CSF	ScvO2	62
+2022-2	103809	pCO2 CSF	tcpCO2	71
+2022-2	104116	pCO2 CSF	SpO2	67
+2022-2	104731	pCO2 CSF	MS O2	62
+2022-2	106412	pCO2 CSF	MS G5 petCO2	60
+2022-2	107833	pCO2 CSF	MS O2	62
+2022-2	107882	pCO2 CSF	MS T1 petCO2	60
+2022-2	108020	pCO2 CSF	P MS C3 VCO2	70
+2022-2	108021	pCO2 CSF	P MS C3 petCO2	64
+2022-2	108508	pCO2 CSF	tcpO2	62
+2022-2	117153	pCO2 CSF	SpO2r	62
+8278-4	100795	BSA formula	sform	62
+16519-1	102721	Calcium 10M p chal SerPl-sCnc	Calcium	100
+16519-1	102743	Calcium 10M p chal SerPl-sCnc	Calcium	100
+16519-1	103054	Calcium 10M p chal SerPl-sCnc	Calcium	100
+16519-1	107934	Calcium 10M p chal SerPl-sCnc	P ADS MS ADS Calcium postFilter	61
+42207-1	108718	IgG CSF/SerPl	P CSF MS ICP	64
+38250-7	102721	Calcium Spec-mCnc	Calcium	100
+38250-7	102743	Calcium Spec-mCnc	Calcium	100
+38250-7	103054	Calcium Spec-mCnc	Calcium	100
+38250-7	103062	Calcium Spec-mCnc	MS Calciumfluss	62
+14584-7	104108	cAMP 24h Ur-sRate	Temperatur 2a	60
+14584-7	104109	cAMP 24h Ur-sRate	Temperatur 2b	60
+32306-3	101423	pCO2 Ur	CO2	60
+32306-3	101434	pCO2 Ur	CO2	60
+32306-3	101600	pCO2 Ur	PzvCO2	62
+32306-3	102164	pCO2 Ur	PICCO SVR	62
+32306-3	103809	pCO2 Ur	tcpCO2	62
+32306-3	117152	pCO2 Ur	SpO2pr	62
+32306-3	117153	pCO2 Ur	SpO2r	67
+27828-3	108157	Insulin 3h p chal SerPl-aCnc	Insulin ja	82
+27828-3	108158	Insulin 3h p chal SerPl-aCnc	Insulin nein	74
+2917-3	104786	Renin sup Plas-mCnc	MS C2 Rinsp	60
+8303-0	117218	Body height Prctl	G5 Body Weight	65
+14905-4	104245	Vit A SerPl-sCnc	MS Servoi AF	64
+14905-4	104246	Vit A SerPl-sCnc	MS Servoi Af	64
+14905-4	104247	Vit A SerPl-sCnc	MS Servoi CPAP	60
+10680-7	108717	HSV CSF EM	P CSF MS Pcsf	61
+25372-4	108243	HCG Ur-aCnc	Geburt an	60
+26787-2	106521	Anserine Amn-sCnc	Anamnese Nein	60
+2381-2	102909	GSS RBC-mCnc	MS G5 RC	60
+8167-9	107990	THC Mec Ql	P C3 Thoch	60
+39781-0	102811	Urea Prt-sCnc	Score RTS	64
+2704-5	108508	pO2 BldC	tcpO2	62
+2704-5	117154	pO2 BldC	SpO2 l	71
+26061-2	110917	TBEV Ab Titr Ser	MS Servoi Ti Tges	61
+59574-4	101473	BMI Prctl	BMI	100
+59574-4	110860	BMI Prctl	P RTX Min	67
+38163-2	110930	Hepta-CP/Creat Ur	P Temperatur Rektal	61
+7992-1	104236	RSV IgM Ser-aCnc	MS Servoi Cdyn	60
+57833-6	100008	Rx for medication	Vormedikation	73
+57833-6	104403	Rx for medication	Praemedikation	65
+57833-6	105241	Rx for medication	F MedDoku Vormedikation	60
+57833-6	106597	Rx for medication	Vormedikation	73
+17051-4	106289	Laxatives Ur	MS ILAactivve P1	64
+17051-4	106290	Laxatives Ur	MS ILAactivve P2	64
+17051-4	106291	Laxatives Ur	MS ILAactivve P3	64
+17051-4	106293	Laxatives Ur	MS ILAactivve P4	64
+3148-4	1272	pO2 Gas	SO2	60
+3148-4	101602	pO2 Gas	SpO2	73
+3148-4	101628	pO2 Gas	Proc ASB	67
+3148-4	102010	pO2 Gas	SpO2	73
+3148-4	104035	pO2 Gas	MS NO2	62
+3148-4	104116	pO2 Gas	SpO2	73
+3148-4	104117	pO2 Gas	MS ILA SpO2	67
+3148-4	104731	pO2 Gas	MS O2	67
+3148-4	104745	pO2 Gas	Frischgas O2	63
+3148-4	104780	pO2 Gas	AT O2	67
+3148-4	106412	pO2 Gas	MS G5 petCO2	63
+3148-4	106413	pO2 Gas	MS G5 SpO2	71
+3148-4	107833	pO2 Gas	MS O2	67
+3148-4	107961	pO2 Gas	P ADS ADS	67
+3148-4	108509	pO2 Gas	SpO2 2	62
+3148-4	110832	pO2 Gas	P Atemgas	62
+3148-4	117151	pO2 Gas	SpO2po	62
+3148-4	117152	pO2 Gas	SpO2pr	62
+3148-4	117153	pO2 Gas	SpO2r	67
+3148-4	117154	pO2 Gas	SpO2 l	62
+57335-2	102721	Calcium 12h Ur-mCnc	Calcium	100
+57335-2	102743	Calcium 12h Ur-mCnc	Calcium	100
+57335-2	103054	Calcium 12h Ur-mCnc	Calcium	100
+34916-7	107830	Plasma cell prec # Bld	PRec	100
+6776-9	104108	Estrone 24h Ur-mRate	Temperatur 2a	61
+6776-9	104109	Estrone 24h Ur-mRate	Temperatur 2b	61
+355-8	108158	Neomycin Islt MIC	Insulin nein	62
+12286-1	102796	Drugs Ur Scn	Score DRS	67
+81112-5	104242	MVEV IgG Titr Ser	MS Servoi MVe	60
+81112-5	104244	MVEV IgG Titr Ser	MS Servoi Mve	60
+6901-3	108157	Insulin Free SerPl-aCnc	Insulin ja	82
+6901-3	108158	Insulin Free SerPl-aCnc	Insulin nein	74
+1834-1	104245	AFP SerPl-mCnc	MS Servoi AF	62
+1834-1	104246	AFP SerPl-mCnc	MS Servoi Af	62
+51656-7	15	HCV Ab s/co Fld	CO	100
+51656-7	24	HCV Ab s/co Fld	CO	100
+51656-7	102021	HCV Ab s/co Fld	CO	100
+51656-7	102040	HCV Ab s/co Fld	p-CO	67
+51656-7	102489	HCV Ab s/co Fld	CO	100
+2713-6	1273	SaO2 % Bld from pO2	SaO2	100
+9574-5	104240	RSV IgM Titr Ser IF	MS Servoi i	60
+2000-8	102721	Calcium SerPl-sCnc	Calcium	100
+2000-8	102743	Calcium SerPl-sCnc	Calcium	100
+2000-8	103054	Calcium SerPl-sCnc	Calcium	100
+2000-8	103062	Calcium SerPl-sCnc	MS Calciumfluss	61
+96823-0	101973	Respiration Score SOFA	Score SAPS2	62
+96823-0	101992	Respiration Score SOFA	Score SOFA	100
+96823-0	102764	Respiration Score SOFA	Score ARDS	67
+96823-0	102784	Respiration Score SOFA	Score RASS	67
+96823-0	102785	Respiration Score SOFA	Score AIS	71
+96823-0	102788	Respiration Score SOFA	Score Apgar	62
+96823-0	102791	Respiration Score SOFA	Score BPS	71
+96823-0	102792	Respiration Score SOFA	Score CIWA	67
+96823-0	102795	Respiration Score SOFA	Score CRIB	67
+96823-0	102796	Respiration Score SOFA	Score DRS	71
+96823-0	102798	Respiration Score SOFA	Score GDS	71
+96823-0	102800	Respiration Score SOFA	Score Kuss	67
+96823-0	102801	Respiration Score SOFA	Score MAAS	67
+96823-0	102802	Respiration Score SOFA	Score MMS	71
+96823-0	102803	Respiration Score SOFA	Score MOF	71
+96823-0	102804	Respiration Score SOFA	Score mRS	71
+96823-0	102806	Respiration Score SOFA	Score NIHSS	62
+96823-0	102807	Respiration Score SOFA	Score NIPS	67
+96823-0	102810	Respiration Score SOFA	Score RSS	71
+96823-0	102811	Respiration Score SOFA	Score RTS	71
+96823-0	102812	Respiration Score SOFA	Score SAS	71
+96823-0	102813	Respiration Score SOFA	Score Lachs	62
+96823-0	102815	Respiration Score SOFA	Score VICS	67
+96823-0	103444	Respiration Score SOFA	Score DGAI	67
+96823-0	103458	Respiration Score SOFA	Score DGAI	67
+96823-0	103506	Respiration Score SOFA	Score DGAI	67
+96823-0	103507	Respiration Score SOFA	Score DGAI	67
+96823-0	103509	Respiration Score SOFA	Score DGAI	67
+96823-0	103510	Respiration Score SOFA	Score DGAI	67
+96823-0	103511	Respiration Score SOFA	Score DGAI	67
+96823-0	103512	Respiration Score SOFA	Score DGAI	67
+96823-0	103513	Respiration Score SOFA	Score DGAI AufnNachOperation	60
+96823-0	103518	Respiration Score SOFA	Score DGAI	67
+96823-0	103523	Respiration Score SOFA	Score DGAI	67
+96823-0	103527	Respiration Score SOFA	Score DGAI	67
+96823-0	103536	Respiration Score SOFA	Score DGAI	67
+96823-0	103538	Respiration Score SOFA	Score DGAI	67
+96823-0	103540	Respiration Score SOFA	Score DGAI	67
+96823-0	103543	Respiration Score SOFA	Score DGAI	67
+96823-0	103544	Respiration Score SOFA	Score DGAI	67
+96823-0	103545	Respiration Score SOFA	Score DGAI	67
+96823-0	103550	Respiration Score SOFA	Score DGAI	67
+96823-0	103551	Respiration Score SOFA	Score DGAI	67
+96823-0	103554	Respiration Score SOFA	Score DGAI	67
+96823-0	103556	Respiration Score SOFA	Score DGAI	67
+96823-0	103557	Respiration Score SOFA	Score DGAI	67
+96823-0	103558	Respiration Score SOFA	Score DGAI	67
+96823-0	103559	Respiration Score SOFA	Score DGAI	67
+96823-0	103560	Respiration Score SOFA	Score DGAI	67
+96823-0	103562	Respiration Score SOFA	Score DGAI	67
+96823-0	105103	Respiration Score SOFA	Sauerstoff RespirationBarValue	65
+96823-0	105222	Respiration Score SOFA	Score NRS	71
+96823-0	105223	Respiration Score SOFA	Score BPS	71
+96823-0	106651	Respiration Score SOFA	Score UStix	62
+96823-0	108395	Respiration Score SOFA	Score FLACC	62
+96823-0	108441	Respiration Score SOFA	Score SOS	71
+96823-0	108458	Respiration Score SOFA	Score SOS	71
+96823-0	108680	Respiration Score SOFA	Score NACA	67
+96823-0	108684	Respiration Score SOFA	Score ISS	71
+96823-0	110835	Respiration Score SOFA	P Inspirationszeit	60
+96823-0	110976	Respiration Score SOFA	Score FOUR	67
+96823-0	117221	Respiration Score SOFA	Score	100
+96823-0	117225	Respiration Score SOFA	Score Race	67
+41461-5	102815	Virus Spec	Score VICS	60
+31533-3	100077	Neuronal Ab Ser Ql	SM AV Intervall	61
+12744-9	108157	Insulin sp7 p chal SerPl-mCnc	Insulin ja	82
+12744-9	108158	Insulin sp7 p chal SerPl-mCnc	Insulin nein	74
+51844-9	102794	Cortis Sal-sCnc	Score ComfortSkala	61
+22420-4	104242	MuV IgM Titr Ser	MS Servoi MVe	62
+22420-4	104243	MuV IgM Titr Ser	MS Servoi MVi	62
+22420-4	104244	MuV IgM Titr Ser	MS Servoi Mve	62
+51731-8	1273	SaO2 % BldV from pO2	SaO2	100
+30089-7	110925	Trans Cells #/area UrnS HPF	P Temperatur Arteriell	60
+52752-3	100203	PT PIVKA insensitive Act/Nor BldC	PT	100
+52752-3	100676	PT PIVKA insensitive Act/Nor BldC	PT	100
+87925-4	105011	RPR CSF-Titr	CRRT Filter	61
+87925-4	107991	RPR CSF-Titr	P C3 Ti	63
+87925-4	108011	RPR CSF-Titr	P C3 Ti	63
+87925-4	108015	RPR CSF-Titr	P MS C3 VTi	61
+87925-4	108030	RPR CSF-Titr	P MS C3 TI	64
+13086-4	107985	C3 NeF SerPl-mCnc	P C3	67
+13086-4	107992	C3 NeF SerPl-mCnc	P C3	67
+13086-4	108010	C3 NeF SerPl-mCnc	P C3	67
+13086-4	110828	C3 NeF SerPl-mCnc	P C3	67
+13086-4	110831	C3 NeF SerPl-mCnc	P C3	67
+51548-6	108626	Parrot Feather IgG Ql	P Lifetherm Neigung	60
+14640-7	101423	CO2 Dial fld-sCnc	CO2	100
+14640-7	101434	CO2 Dial fld-sCnc	CO2	100
+22243-0	107988	CMV IgG CSF-aCnc	P C3 F CMV	62
+10681-5	103424	HSV Tiss EM	MS Ti	62
+35073-6	110789	Basophils # Prt	P BasisNa	64
+27873-9	108157	Insulin p fast SerPl-aCnc	Insulin ja	82
+27873-9	108158	Insulin p fast SerPl-aCnc	Insulin nein	74
+2749-0	107961	pH Gast	P ADS ADS	67
+2749-0	110832	pH Gast	P Atemgas	62
+8336-0	117218	Bdy weight Prctl Per Age	G5 Body Weight	60
+2709-4	1273	SaO2 % BldC	SaO2	100
+2709-4	117154	SaO2 % BldC	SpO2 l	67
+27830-9	108157	Insulin 1h p 75 g Glc PO SerPl-aCnc	Insulin ja	82
+27830-9	108158	Insulin 1h p 75 g Glc PO SerPl-aCnc	Insulin nein	74
+4199-6	1278	Codeine Dose	Diagnose	60
+55805-6	103433	cycloSPORINE Bld LC/MS/MS-mCnc	MS i	67
+55805-6	107839	cycloSPORINE Bld LC/MS/MS-mCnc	MS i	67
+55805-6	110780	cycloSPORINE Bld LC/MS/MS-mCnc	P MS	67
+22411-3	104242	LCMV IgM Titr Ser	MS Servoi MVe	60
+22411-3	104243	LCMV IgM Titr Ser	MS Servoi MVi	60
+22411-3	104244	LCMV IgM Titr Ser	MS Servoi Mve	60
+38388-5	107985	C3 SerPl Ql	P C3	67
+38388-5	107992	C3 SerPl Ql	P C3	67
+38388-5	107998	C3 SerPl Ql	P C3 Flow	60
+38388-5	108002	C3 SerPl Ql	P C3 HLI	63
+38388-5	108010	C3 SerPl Ql	P C3	67
+38388-5	110826	C3 SerPl Ql	P C3 Freq	60
+38388-5	110828	C3 SerPl Ql	P C3	67
+38388-5	110831	C3 SerPl Ql	P C3	67
+40958-1	110890	C parvum Stl	P C3 SHT	60
+18234-5	108157	Insulin Usub Ql	Insulin ja	82
+18234-5	108158	Insulin Usub Ql	Insulin nein	74
+2755-7	102408	pH Stl	p-SV	60
+2755-7	110752	pH Stl	P Strahler	62
+6683-7	102884	Reptilase time	RiseTime	73
+2962-9	103036	GH Amn-mCnc	MS G5 fan	60
+14196-0	102815	Retics #	Score VICS	62
+20706-8	108245	C bot Tox Spec Anim Inoc	Sectio Notsectio	60
+43575-0	107985	C3 Pcar-mCnc	P C3	67
+43575-0	107992	C3 Pcar-mCnc	P C3	67
+43575-0	108010	C3 Pcar-mCnc	P C3	67
+43575-0	108028	C3 Pcar-mCnc	P MS C3	63
+43575-0	108031	C3 Pcar-mCnc	P MS C3	63
+43575-0	108034	C3 Pcar-mCnc	P MS C3 RC	64
+43575-0	108039	C3 Pcar-mCnc	P MS C3 RSB	61
+43575-0	110828	C3 Pcar-mCnc	P C3	67
+43575-0	110831	C3 Pcar-mCnc	P C3	67
+49764-4	102721	Calcium Amn-mCnc	Calcium	100
+49764-4	102743	Calcium Amn-mCnc	Calcium	100
+49764-4	103054	Calcium Amn-mCnc	Calcium	100
+49764-4	107934	Calcium Amn-mCnc	P ADS MS ADS Calcium postFilter	61
+49764-4	107935	Calcium Amn-mCnc	P ADS MS ADS Calcium preFilter	61
+25498-7	104247	cAMP SerPl-sCnc	MS Servoi CPAP	62
+8867-4	103258	Heart rate	ApneaRate	63
+8867-4	103265	Heart rate	MS BreathRate	61
+8867-4	104781	Heart rate	AT Air	62
+8867-4	105019	Heart rate	Rate	100
+8867-4	113047	Heart rate	CRRT praeF	60
+8867-4	113048	Heart rate	CRRT praeF	60
+88859-4	101973	Disease stage score for risk calculation	Score SAPS2	62
+88859-4	101992	Disease stage score for risk calculation	Score SOFA	67
+88859-4	102764	Disease stage score for risk calculation	Score ARDS	67
+88859-4	102784	Disease stage score for risk calculation	Score RASS	67
+88859-4	102785	Disease stage score for risk calculation	Score AIS	71
+88859-4	102788	Disease stage score for risk calculation	Score Apgar	62
+88859-4	102791	Disease stage score for risk calculation	Score BPS	71
+88859-4	102792	Disease stage score for risk calculation	Score CIWA	67
+88859-4	102795	Disease stage score for risk calculation	Score CRIB	67
+88859-4	102796	Disease stage score for risk calculation	Score DRS	71
+88859-4	102798	Disease stage score for risk calculation	Score GDS	71
+88859-4	102800	Disease stage score for risk calculation	Score Kuss	67
+88859-4	102801	Disease stage score for risk calculation	Score MAAS	67
+88859-4	102802	Disease stage score for risk calculation	Score MMS	71
+88859-4	102803	Disease stage score for risk calculation	Score MOF	71
+88859-4	102804	Disease stage score for risk calculation	Score mRS	71
+88859-4	102806	Disease stage score for risk calculation	Score NIHSS	62
+88859-4	102807	Disease stage score for risk calculation	Score NIPS	67
+88859-4	102810	Disease stage score for risk calculation	Score RSS	71
+88859-4	102811	Disease stage score for risk calculation	Score RTS	71
+88859-4	102812	Disease stage score for risk calculation	Score SAS	71
+88859-4	102813	Disease stage score for risk calculation	Score Lachs	62
+88859-4	102815	Disease stage score for risk calculation	Score VICS	67
+88859-4	103444	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103458	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103506	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103507	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103509	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103510	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103511	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103512	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103518	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103523	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103527	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103536	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103538	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103540	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103543	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103544	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103545	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103550	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103551	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103554	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103556	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103557	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103558	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103559	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103560	Disease stage score for risk calculation	Score DGAI	67
+88859-4	103562	Disease stage score for risk calculation	Score DGAI	67
+88859-4	105222	Disease stage score for risk calculation	Score NRS	71
+88859-4	105223	Disease stage score for risk calculation	Score BPS	71
+88859-4	106651	Disease stage score for risk calculation	Score UStix	62
+88859-4	108395	Disease stage score for risk calculation	Score FLACC	62
+88859-4	108441	Disease stage score for risk calculation	Score SOS	71
+88859-4	108458	Disease stage score for risk calculation	Score SOS	71
+88859-4	108680	Disease stage score for risk calculation	Score NACA	67
+88859-4	108684	Disease stage score for risk calculation	Score ISS	71
+88859-4	110976	Disease stage score for risk calculation	Score FOUR	67
+88859-4	117221	Disease stage score for risk calculation	Score	100
+88859-4	117225	Disease stage score for risk calculation	Score Race	67
+14515-1	108720	P jiroveci Ag CSF Ql IF	P CSF Doku	67
+4090-7	104251	Vancomycin Peak SerPl-mCnc	MS Servoi Ppeak	63
+2711-0	1273	SaO2 % BldV	SaO2	100
+2711-0	102023	SaO2 % BldV	LVSA	62
+2711-0	117154	SaO2 % BldV	SpO2 l	67
+162-8	104733	Cephalothin Islt KB	MS Halothan insp	63
+162-8	104734	Cephalothin Islt KB	MS Halothan	60
+53645-8	110890	PV Stl Cult	P C3 SHT	63
+12757-1	108157	Insulin 30M pre chal SerPl-mCnc	Insulin ja	82
+12757-1	108158	Insulin 30M pre chal SerPl-mCnc	Insulin nein	74
+49762-8	108723	AFP Plr-mCnc	P MS AF	63
+34266-7	102742	Citrate Ur-sCnc	CitratLoesung	64
+34266-7	102748	Citrate Ur-sCnc	CitratLoesung	64
+34266-7	103051	Citrate Ur-sCnc	Citratloesung	64
+34266-7	103056	Citrate Ur-sCnc	Citratloesung	64
+34266-7	103122	Citrate Ur-sCnc	Doku Citratloesung	67
+34266-7	104975	Citrate Ur-sCnc	CRRT CitratBlut	60
+34266-7	104986	Citrate Ur-sCnc	CRRT Doku CitratLoesung	63
+34266-7	104996	Citrate Ur-sCnc	CRRT CitratBlut	60
+34266-7	105007	Citrate Ur-sCnc	CRRT CitratLoesung	67
+5155-7	103158	EBV NA IgG Ser Ql IF	Na	100
+5155-7	103190	EBV NA IgG Ser Ql IF	Na	100
+5155-7	104882	EBV NA IgG Ser Ql IF	Na	100
+5155-7	104898	EBV NA IgG Ser Ql IF	Na	100
+5155-7	104923	EBV NA IgG Ser Ql IF	Na	100
+5155-7	104938	EBV NA IgG Ser Ql IF	Na	100
+5155-7	110787	EBV NA IgG Ser Ql IF	P Na	67
+5155-7	110807	EBV NA IgG Ser Ql IF	P Na	67
+22261-2	110915	EEEV IgM Titr Ser	MS Servoi I E	60
+53129-3	103158	Na Urate Cry #/area UrnS HPF	Na	100
+53129-3	103190	Na Urate Cry #/area UrnS HPF	Na	100
+53129-3	104882	Na Urate Cry #/area UrnS HPF	Na	100
+53129-3	104898	Na Urate Cry #/area UrnS HPF	Na	100
+53129-3	104923	Na Urate Cry #/area UrnS HPF	Na	100
+53129-3	104938	Na Urate Cry #/area UrnS HPF	Na	100
+53129-3	110787	Na Urate Cry #/area UrnS HPF	P Na	67
+53129-3	110807	Na Urate Cry #/area UrnS HPF	P Na	67
+22296-8	103158	EBV NA Ab Ser Ql	Na	100
+22296-8	103190	EBV NA Ab Ser Ql	Na	100
+22296-8	104882	EBV NA Ab Ser Ql	Na	100
+22296-8	104898	EBV NA Ab Ser Ql	Na	100
+22296-8	104923	EBV NA Ab Ser Ql	Na	100
+22296-8	104938	EBV NA Ab Ser Ql	Na	100
+22296-8	110787	EBV NA Ab Ser Ql	P Na	67
+22296-8	110807	EBV NA Ab Ser Ql	P Na	67
+50508-1	108157	Insulin sp8 SerPl-aCnc	Insulin ja	82
+50508-1	108158	Insulin sp8 SerPl-aCnc	Insulin nein	74
+33812-9	108157	Insulin sp13 p chal SerPl-aCnc	Insulin ja	82
+33812-9	108158	Insulin sp13 p chal SerPl-aCnc	Insulin nein	74
+53558-3	100081	Bacteria Smn Cult	SM Output Atrium	61
+23831-1	100203	B pert.PT IgG Ser-aCnc	PT	100
+23831-1	100676	B pert.PT IgG Ser-aCnc	PT	100
+56927-7	104816	HCV c2 Ab Ser Ql IB	C2	100
+56927-7	104822	HCV c2 Ab Ser Ql IB	C2	100
+56927-7	104823	HCV c2 Ab Ser Ql IB	C2	100
+56927-7	106283	HCV c2 Ab Ser Ql IB	C2	100
+51865-4	103069	Plasmodium Ag Bld	ADM Plasmavolumen	65
+51865-4	103085	Plasmodium Ag Bld	ADM Plasmavolumen	65
+14003-8	103809	pCO2 BldCo	tcpCO2	62
+14003-8	117154	pCO2 BldCo	SpO2 l	62
+21465-0	107934	P falciparum Ab Titr Ser IF	P ADS MS ADS Calcium postFilter	63
+21465-0	107935	P falciparum Ab Titr Ser IF	P ADS MS ADS Calcium preFilter	60
+93734-2	103265	Creat 5h Ur-sRate	MS BreathRate	60
+53502-1	102721	Calcium Spec-sCnt	Calcium	100
+53502-1	102743	Calcium Spec-sCnt	Calcium	100
+53502-1	103054	Calcium Spec-sCnt	Calcium	100
+53502-1	103062	Calcium Spec-sCnt	MS Calciumfluss	62
+53502-1	104962	Calcium Spec-sCnt	CRRT MS CalciumVolKum	63
+53502-1	104968	Calcium Spec-sCnt	CRRT MS Calciumfluss	65
+53502-1	105006	Calcium Spec-sCnt	CRRT CalciumLoesung	61
+53502-1	107935	Calcium Spec-sCnt	P ADS MS ADS Calcium preFilter	60
+15043-3	102811	Cortis Ur-sCnc	Score RTS	61
+35694-9	104253	CEV IgG Titr Ser	Servoi I E	62
+35694-9	104274	CEV IgG Titr Ser	Servoi I E	62
+97186-1	108100	B para IS1001 DNA L resp Ql NAA+non-prb	Para	100
+426-7	110899	PZA Titr SBT	P C3 SBT Zeitraum	62
+426-7	110900	PZA Titr SBT	P C3 SBT Zeitraum	62
+19212-0	102170	pCO2 BldMV	PICCO ITBV	60
+19212-0	117154	pCO2 BldMV	SpO2 l	62
+16518-3	102721	Calcium 2h Ur-mRate	Calcium	100
+16518-3	102743	Calcium 2h Ur-mRate	Calcium	100
+16518-3	103054	Calcium 2h Ur-mRate	Calcium	100
+16518-3	103058	Calcium 2h Ur-mRate	CalciumFiltrat	61
+16518-3	104974	Calcium 2h Ur-mRate	CRRT CalciumFiltrat	63
+16518-3	104995	Calcium 2h Ur-mRate	CRRT CalciumFiltrat	63
+16518-3	107935	Calcium 2h Ur-mRate	P ADS MS ADS Calcium preFilter	62
+33818-6	108157	Insulin sp8 p chal SerPl-aCnc	Insulin ja	82
+33818-6	108158	Insulin sp8 p chal SerPl-aCnc	Insulin nein	74
+83104-0	104226	MIS SerPl IA-mCnc	MS Servoi Edi min	65
+25697-4	108157	Insulin sp7 p chal SerPl-sCnc	Insulin ja	82
+25697-4	108158	Insulin sp7 p chal SerPl-sCnc	Insulin nein	74
+92245-0	103158	Micro resist mut NA change Islt/Spm	Na	100
+92245-0	103190	Micro resist mut NA change Islt/Spm	Na	100
+92245-0	104882	Micro resist mut NA change Islt/Spm	Na	100
+92245-0	104898	Micro resist mut NA change Islt/Spm	Na	100
+92245-0	104923	Micro resist mut NA change Islt/Spm	Na	100
+92245-0	104938	Micro resist mut NA change Islt/Spm	Na	100
+92245-0	110787	Micro resist mut NA change Islt/Spm	P Na	67
+92245-0	110807	Micro resist mut NA change Islt/Spm	P Na	67
+48164-8	108395	NSE Fld-mCnc	Score FLACC	61
+50832-5	104961	Boron/Creat Ur-sRto	CRRT MS UFR BFR	65
+2019-8	104117	pCO2 BldA	MS ILA SpO2	60
+2019-8	117154	pCO2 BldA	SpO2 l	67
+46099-8	102721	Calcium Album cor SerPl-mCnc	Calcium	100
+46099-8	102743	Calcium Album cor SerPl-mCnc	Calcium	100
+46099-8	103054	Calcium Album cor SerPl-mCnc	Calcium	100
+48037-6	101608	pH Vag	PHzv	60
+48037-6	102408	pH Vag	p-SV	60
+39103-7	103158	FLUAV NA cDNA Spec NAA+probe	Na	100
+39103-7	103190	FLUAV NA cDNA Spec NAA+probe	Na	100
+39103-7	104882	FLUAV NA cDNA Spec NAA+probe	Na	100
+39103-7	104898	FLUAV NA cDNA Spec NAA+probe	Na	100
+39103-7	104923	FLUAV NA cDNA Spec NAA+probe	Na	100
+39103-7	104938	FLUAV NA cDNA Spec NAA+probe	Na	100
+39103-7	110787	FLUAV NA cDNA Spec NAA+probe	P Na	67
+39103-7	110807	FLUAV NA cDNA Spec NAA+probe	P Na	67
+51781-3	101423	CO2 BldC Calc-sCnc	CO2	100
+51781-3	101434	CO2 BldC Calc-sCnc	CO2	100
+14658-9	107991	CA Titr SerPl	P C3 Ti	60
+14658-9	108011	CA Titr SerPl	P C3 Ti	60
+14658-9	108030	CA Titr SerPl	P MS C3 TI	61
+19194-0	110937	NSE Plr-aCnc	P MS MAC	60
+32559-7	104272	Tau Prot Ser-mCnc	Servoi Tpause Prozent	63
+48585-4	103158	NM ExG GE time p 100mg Na acetate PO	Na	100
+48585-4	103190	NM ExG GE time p 100mg Na acetate PO	Na	100
+48585-4	104882	NM ExG GE time p 100mg Na acetate PO	Na	100
+48585-4	104898	NM ExG GE time p 100mg Na acetate PO	Na	100
+48585-4	104923	NM ExG GE time p 100mg Na acetate PO	Na	100
+48585-4	104938	NM ExG GE time p 100mg Na acetate PO	Na	100
+48585-4	110779	NM ExG GE time p 100mg Na acetate PO	P MS Na	73
+48585-4	110787	NM ExG GE time p 100mg Na acetate PO	P Na	100
+48585-4	110807	NM ExG GE time p 100mg Na acetate PO	P Na	100
+48585-4	110854	NM ExG GE time p 100mg Na acetate PO	P RTX Time	75
+48585-4	117155	NM ExG GE time p 100mg Na acetate PO	P MS UF Time	67
+11187-2	102121	P frequentans IgE Qn	IABP Frequenz	61
+11187-2	103397	P frequentans IgE Qn	Siemens Frequenz	61
+11187-2	104354	P frequentans IgE Qn	IABP IABP Frequenz	61
+11187-2	104748	P frequentans IgE Qn	Frequenz Min	62
+11187-2	110834	P frequentans IgE Qn	P Frequenz	60
+3937-0	110860	PCP Ur-mCnc	P RTX Min	60
+16740-3	102140	DENV Ab Ser Ql	Abdomen Leber	67
+3150-0	100807	Inhaled O2 concentration	O2	100
+3150-0	101624	Inhaled O2 concentration	O2	100
+3150-0	102198	Inhaled O2 concentration	O2	100
+3150-0	106783	Inhaled O2 concentration	Optiflow O2Konzentration	62
+3150-0	107861	Inhaled O2 concentration	O2 Konzentration	70
+3150-0	107867	Inhaled O2 concentration	Atom O2 Konzentration	62
+23210-8	100077	Listeria Ab Ser Ql	SM AV Intervall	61
+21612-7	100085	Age - Reported	Pacergeräte	64
+6303-2	102786	Screen dRVVT	Score Aldrete	64
+6303-2	102796	Screen dRVVT	Score DRS	67
+6303-2	102811	Screen dRVVT	Score RTS	67
+8074-7	108157	Insulin Human Ab Ser-aCnc	Insulin ja	82
+8074-7	108158	Insulin Human Ab Ser-aCnc	Insulin nein	74
+2126-1	102742	Citrate Smn-mCnc	CitratLoesung	62
+2126-1	102748	Citrate Smn-mCnc	CitratLoesung	62
+2126-1	103051	Citrate Smn-mCnc	Citratloesung	62
+2126-1	103056	Citrate Smn-mCnc	Citratloesung	62
+2126-1	103061	Citrate Smn-mCnc	MS Citratfluss	60
+55389-1	108157	Insulin 5h p chal SerPl-sCnc	Insulin ja	82
+55389-1	108158	Insulin 5h p chal SerPl-sCnc	Insulin nein	74
+2232-7	104108	Epineph 24h Ur-mRate	Temperatur 2a	61
+2232-7	104109	Epineph 24h Ur-mRate	Temperatur 2b	61
+14619-1	104833	Appearance Plas	Apherese Plasma	67
+14619-1	104834	Appearance Plas	Apherese Plasma	67
+14619-1	104846	Appearance Plas	Apherese Plasma	67
+8480-6	102408	BP sys	p-SV	60
+2460-4	104240	IgD Ser-mCnc	MS Servoi i	61
+56654-7	103925	Nickel/Creat Ur-Rto	Rotorest reRotWinkel	62
+20448-7	108157	Insulin SerPl-aCnc	Insulin ja	82
+20448-7	108158	Insulin SerPl-aCnc	Insulin nein	74
+26606-4	102799	Carnosine SerPl-sCnc	Score KarnofskyIndex	60
+40620-7	103888	pCO2 temp adj BldC	Doku Temp	62
+40620-7	105049	pCO2 temp adj BldC	CRRT Temp	62
+40620-7	105050	pCO2 temp adj BldC	CRRT Temp	62
+14722-3	102140	ENA Ab Ser Ql	Abdomen Leber	62
+14722-3	105020	ENA Ab Ser Ql	A Sense	60
+14722-3	105033	ENA Ab Ser Ql	A-Sense	60
+19177-5	104245	AFP SerPl-sCnc	MS Servoi AF	62
+19177-5	104246	AFP SerPl-sCnc	MS Servoi Af	62
+15792-5	108157	Insulin Bovine IgE RAST Ql	Insulin ja	82
+15792-5	108158	Insulin Bovine IgE RAST Ql	Insulin nein	74
+13069-0	102883	PS IgA Ser-aCnc	PS	100
+13069-0	104717	PS IgA Ser-aCnc	PS	100
+14903-9	107960	Folate Bld-Imp	P ADS Filter	62
+51733-4	1273	SaO2 % BldA from pO2	SaO2	100
+100859-8	105022	CD4 IFNg/CD4 p Stim COVID Sp	A STIM	80
+100859-8	105023	CD4 IFNg/CD4 p Stim COVID Sp	V STIM	80
+16825-2	103158	EBV NA IgG Fld Ql	Na	100
+16825-2	103190	EBV NA IgG Fld Ql	Na	100
+16825-2	104882	EBV NA IgG Fld Ql	Na	100
+16825-2	104898	EBV NA IgG Fld Ql	Na	100
+16825-2	104923	EBV NA IgG Fld Ql	Na	100
+16825-2	104938	EBV NA IgG Fld Ql	Na	100
+16825-2	110787	EBV NA IgG Fld Ql	P Na	67
+16825-2	110807	EBV NA IgG Fld Ql	P Na	67
+16526-6	102721	Calcium/Prot SerPl	Calcium	100
+16526-6	102743	Calcium/Prot SerPl	Calcium	100
+16526-6	103054	Calcium/Prot SerPl	Calcium	100
+16526-6	104962	Calcium/Prot SerPl	CRRT MS CalciumVolKum	62
+16526-6	104968	Calcium/Prot SerPl	CRRT MS Calciumfluss	63
+413-5	102885	Pip+Tazo Islt KB	MS PIP	67
+413-5	103422	Pip+Tazo Islt KB	MS PIP	67
+12588-0	103265	Creat 8h Ur-mRate	MS BreathRate	60
+12588-0	104973	Creat 8h Ur-mRate	CRRT Temperatur	62
+12588-0	104994	Creat 8h Ur-mRate	CRRT Temperatur	62
+12588-0	110930	Creat 8h Ur-mRate	P Temperatur Rektal	61
+50757-4	104972	CK/CK MB Bld-cRto	CRRT MS artDruck	60
+33913-5	107997	pH BldC Fetus	P C3 ETS	67
+52753-1	100203	PT PIVKA insensitive Act/Nor PPP	PT	100
+52753-1	100676	PT PIVKA insensitive Act/Nor PPP	PT	100
+11481-9	112017	HPV Spec	P SEF	62
+29304-3	104403	Medication dispensed	Praemedikation	65
+70266-2	103265	Creat Prt/Ser	MS BreathRate	62
+70266-2	104959	Creat Prt/Ser	CRRT MS	60
+70266-2	104970	Creat Prt/Ser	CRRT MS	60
+70266-2	113047	Creat Prt/Ser	CRRT praeF	61
+70266-2	113048	Creat Prt/Ser	CRRT praeF	61
+20420-6	103292	PACP Ser-mCnc	MS CPAP	60
+48138-2	104234	NSE SerPl RIA-mCnc	MS Servoi Ri	60
+1998-4	102721	Calcium Dial fld-sCnc	Calcium	100
+1998-4	102743	Calcium Dial fld-sCnc	Calcium	100
+1998-4	103054	Calcium Dial fld-sCnc	Calcium	100
+1998-4	103062	Calcium Dial fld-sCnc	MS Calciumfluss	61
+32787-4	108015	p-ANCA Titr Ser	P MS C3 VTi	62
+32787-4	108030	p-ANCA Titr Ser	P MS C3 TI	64
+6801-5	107985	C3 Fld-mCnc	P C3	67
+6801-5	107992	C3 Fld-mCnc	P C3	67
+6801-5	107998	C3 Fld-mCnc	P C3 Flow	60
+6801-5	108010	C3 Fld-mCnc	P C3	67
+6801-5	110827	C3 Fld-mCnc	C3 F SIMV	60
+6801-5	110828	C3 Fld-mCnc	P C3	67
+6801-5	110831	C3 Fld-mCnc	P C3	67
+2887-8	104941	Prot Ur Ql	UF Profil	63
+55601-9	102040	Cyto Pcar	p-CO	62
+648-6	104714	Gram Stn Spt	T Rampe	63
+34782-3	103336	Infectious disease Note	eDesinfektion	61
+28604-7	104973	PETN/Creat Ur-Rto	CRRT Temperatur	62
+28604-7	104994	PETN/Creat Ur-Rto	CRRT Temperatur	62
+34163-6	100807	O2 Ct Bld-sCnc	O2	100
+34163-6	101624	O2 Ct Bld-sCnc	O2	100
+34163-6	102198	O2 Ct Bld-sCnc	O2	100
+46136-8	110925	Trans Cells #/area UrnS LPF	P Temperatur Arteriell	60
+59408-5	1273	SaO2 % BldA PulseOx	SaO2	100
+6095-4	100135	D farinae IgE Qn	Drainagen	64
+17862-4	102721	Calcium Ur-mCnc	Calcium	100
+17862-4	102743	Calcium Ur-mCnc	Calcium	100
+17862-4	103054	Calcium Ur-mCnc	Calcium	100
+17862-4	103062	Calcium Ur-mCnc	MS Calciumfluss	60
+17862-4	107934	Calcium Ur-mCnc	P ADS MS ADS Calcium postFilter	64
+17862-4	107935	Calcium Ur-mCnc	P ADS MS ADS Calcium preFilter	64
+77599-9	100189	Additional documentation	Wunddokumentation	63
+77599-9	101391	Additional documentation	Dokumentation	65
+77599-9	101398	Additional documentation	Dokumentation Blutfluss	64
+77599-9	101404	Additional documentation	Dokumentation Antikoagulatio	73
+77599-9	101405	Additional documentation	Dokumentation	65
+77599-9	101417	Additional documentation	Dokumentation	65
+77599-9	102503	Additional documentation	Dokumentation BlutflussEinst	62
+77599-9	102504	Additional documentation	Dokumentation Abschluss	64
+77599-9	107864	Additional documentation	Doku Atom O2 Konzentration	60
+5250-6	104245	MuV Ab Titr Ser IF	MS Servoi AF	60
+5250-6	104246	MuV Ab Titr Ser IF	MS Servoi Af	60
+9397-1	106651	Color Stl	Score UStix	60
+15794-1	108157	Insulin Porcine IgE RAST Ql	Insulin ja	82
+15794-1	108158	Insulin Porcine IgE RAST Ql	Insulin nein	74
+14796-7	108157	Insulin SerPl-sCnc	Insulin ja	82
+14796-7	108158	Insulin SerPl-sCnc	Insulin nein	74
+42221-2	106521	Manganese Ur-sCnc	Anamnese Nein	60
+13226-6	107988	CMV IgM CSF-aCnc	P C3 F CMV	62
+34705-4	103888	pCO2 temp adj Bld	Doku Temp	62
+34705-4	105049	pCO2 temp adj Bld	CRRT Temp	62
+34705-4	105050	pCO2 temp adj Bld	CRRT Temp	62
+12586-4	103265	Creat 4h Ur-mRate	MS BreathRate	60
+12586-4	104973	Creat 4h Ur-mRate	CRRT Temperatur	62
+12586-4	104994	Creat 4h Ur-mRate	CRRT Temperatur	62
+12586-4	110930	Creat 4h Ur-mRate	P Temperatur Rektal	61
+8073-9	108157	Insulin Bovine Ab Ser-aCnc	Insulin ja	82
+8073-9	108158	Insulin Bovine Ab Ser-aCnc	Insulin nein	74
+28647-6	102040	pH BldCoV	p-CO	62
+32771-8	103888	pCO2 temp adj BldA	Doku Temp	62
+32771-8	105049	pCO2 temp adj BldA	CRRT Temp	62
+32771-8	105050	pCO2 temp adj BldA	CRRT Temp	62
+2382-0	102909	GSH RBC-mCnc	MS G5 RC	60
+25527-3	108000	Silver SerPl-sCnc	P C3 passiver	60
+19728-5	100359	Beet IgE Qn	Bewegen	67
+94478-5	100203	B pert.PT Prmt Low resp Ql NAA+non-probe	PT	100
+94478-5	100676	B pert.PT Prmt Low resp Ql NAA+non-probe	PT	100
+6857-7	103414	Spruce IgE Qn	InspDruck	64
+6301-6	102027	INR PPP	RPP	60
+95420-6	117219	Admitted to ICU for condition	ICU IMC	60
+53120-2	103265	Creat 1h Ur-sRate	MS BreathRate	60
+73561-3	101973	IGF-I Z-score SerPl	Score SAPS2	62
+73561-3	101992	IGF-I Z-score SerPl	Score SOFA	67
+73561-3	102764	IGF-I Z-score SerPl	Score ARDS	67
+73561-3	102784	IGF-I Z-score SerPl	Score RASS	67
+73561-3	102785	IGF-I Z-score SerPl	Score AIS	71
+73561-3	102788	IGF-I Z-score SerPl	Score Apgar	62
+73561-3	102790	IGF-I Z-score SerPl	Score Besinger	61
+73561-3	102791	IGF-I Z-score SerPl	Score BPS	71
+73561-3	102792	IGF-I Z-score SerPl	Score CIWA	67
+73561-3	102795	IGF-I Z-score SerPl	Score CRIB	67
+73561-3	102796	IGF-I Z-score SerPl	Score DRS	71
+73561-3	102798	IGF-I Z-score SerPl	Score GDS	71
+73561-3	102800	IGF-I Z-score SerPl	Score Kuss	67
+73561-3	102801	IGF-I Z-score SerPl	Score MAAS	67
+73561-3	102802	IGF-I Z-score SerPl	Score MMS	71
+73561-3	102803	IGF-I Z-score SerPl	Score MOF	71
+73561-3	102804	IGF-I Z-score SerPl	Score mRS	71
+73561-3	102806	IGF-I Z-score SerPl	Score NIHSS	62
+73561-3	102807	IGF-I Z-score SerPl	Score NIPS	67
+73561-3	102810	IGF-I Z-score SerPl	Score RSS	71
+73561-3	102811	IGF-I Z-score SerPl	Score RTS	71
+73561-3	102812	IGF-I Z-score SerPl	Score SAS	71
+73561-3	102813	IGF-I Z-score SerPl	Score Lachs	62
+73561-3	102815	IGF-I Z-score SerPl	Score VICS	67
+73561-3	103444	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103458	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103506	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103507	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103509	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103510	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103511	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103512	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103518	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103523	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103527	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103536	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103538	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103540	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103543	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103544	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103545	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103550	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103551	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103554	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103556	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103557	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103558	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103559	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103560	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	103562	IGF-I Z-score SerPl	Score DGAI	67
+73561-3	105222	IGF-I Z-score SerPl	Score NRS	71
+73561-3	105223	IGF-I Z-score SerPl	Score BPS	71
+73561-3	106651	IGF-I Z-score SerPl	Score UStix	62
+73561-3	108395	IGF-I Z-score SerPl	Score FLACC	62
+73561-3	108441	IGF-I Z-score SerPl	Score SOS	71
+73561-3	108458	IGF-I Z-score SerPl	Score SOS	71
+73561-3	108680	IGF-I Z-score SerPl	Score NACA	67
+73561-3	108684	IGF-I Z-score SerPl	Score ISS	71
+73561-3	110976	IGF-I Z-score SerPl	Score FOUR	67
+73561-3	117221	IGF-I Z-score SerPl	Score	100
+73561-3	117225	IGF-I Z-score SerPl	Score Race	67
+2890-2	104973	Prot/Creat Ur	CRRT Temperatur	64
+2890-2	104994	Prot/Creat Ur	CRRT Temperatur	64
+6092-1	100135	Crab IgE Qn	Drainagen	60
+564-5	108020	CC Spec VC	P MS C3 VCO2	64
+564-5	108034	CC Spec VC	P MS C3 RC	60
+42593-4	102721	Calcium BldC-sCnc	Calcium	100
+42593-4	102743	Calcium BldC-sCnc	Calcium	100
+42593-4	103054	Calcium BldC-sCnc	Calcium	100
+71711-6	110915	EBOV IgM Titr Ser IA	MS Servoi I E	61
+40133-1	104961	Creat BS Ur-sCnc	CRRT MS UFR BFR	65
+16271-9	102721	Calcium 30M p chal SerPl-mCnc	Calcium	100
+16271-9	102743	Calcium 30M p chal SerPl-mCnc	Calcium	100
+16271-9	103054	Calcium 30M p chal SerPl-mCnc	Calcium	100
+16271-9	107934	Calcium 30M p chal SerPl-mCnc	P ADS MS ADS Calcium postFilter	61
+8339-4	117218	Birth weight Measured	G5 Body Weight	60
+4456-0	103839	Trimipramine Dose	Doku Triadyne	60
+1573-5	108157	Insulin p 12h fast SerPl-mCnc	Insulin ja	82
+1573-5	108158	Insulin p 12h fast SerPl-mCnc	Insulin nein	74
+5964-2	100203	PT Bld	PT	100
+5964-2	100560	PT Bld	PT Allg	62
+5964-2	100676	PT Bld	PT	100
+4216-8	1278	DAM Dose	Diagnose	62
+27826-7	108157	Insulin 2h p chal SerPl-aCnc	Insulin ja	82
+27826-7	108158	Insulin 2h p chal SerPl-aCnc	Insulin nein	74
+1903-4	104236	Vit C SerPl-mCnc	MS Servoi Cdyn	60
+1903-4	104247	Vit C SerPl-mCnc	MS Servoi CPAP	60
+2988-4	102626	Testost Ur-mCnc	Mess UFR	61
+15038-3	105007	Citrate SerPl-sCnc	CRRT CitratLoesung	61
+14611-8	104250	ANA Pat Ser-Imp	MS Servoi Pplat	60
+30500-3	102883	PS IgA Ser Ql	PS	100
+30500-3	104717	PS IgA Ser Ql	PS	100
+9278-3	105019	Breath rate special circumstances	Rate	100
+14712-4	104108	Epineph 24h Ur-sRate	Temperatur 2a	61
+14712-4	104109	Epineph 24h Ur-sRate	Temperatur 2b	61
+414-3	102885	Pip+Tazo Titr SBT	MS PIP	67
+414-3	103422	Pip+Tazo Titr SBT	MS PIP	67
+2366-3	107860	Glutamate 24h Ur-mRate	Lufttemperatur	61
+3186-4	103568	Fact IXa PPP-aCnc	IABP ACAT	62
+17433-4	112017	pH Spec	P SEF	67
+17433-4	112018	pH Spec	P SEF1	62
+17433-4	112019	pH Spec	P SEF2	62
+27037-1	102721	Calcium/Creat 2h Ur	Calcium	100
+27037-1	102743	Calcium/Creat 2h Ur	Calcium	100
+27037-1	103054	Calcium/Creat 2h Ur	Calcium	100
+27037-1	103058	Calcium/Creat 2h Ur	CalciumFiltrat	61
+27037-1	104962	Calcium/Creat 2h Ur	CRRT MS CalciumVolKum	60
+14196-0	103081	Retics #	ETS	67
+27037-1	104968	Calcium/Creat 2h Ur	CRRT MS Calciumfluss	62
+27037-1	104974	Calcium/Creat 2h Ur	CRRT CalciumFiltrat	63
+27037-1	104985	Calcium/Creat 2h Ur	CRRT Doku CalciumLoesung	60
+27037-1	104995	Calcium/Creat 2h Ur	CRRT CalciumFiltrat	63
+18186-7	102721	Calcium 12h Ur-mRate	Calcium	100
+18186-7	102743	Calcium 12h Ur-mRate	Calcium	100
+18186-7	103054	Calcium 12h Ur-mRate	Calcium	100
+18186-7	104974	Calcium 12h Ur-mRate	CRRT CalciumFiltrat	62
+18186-7	104995	Calcium 12h Ur-mRate	CRRT CalciumFiltrat	62
+18186-7	107935	Calcium 12h Ur-mRate	P ADS MS ADS Calcium preFilter	61
+13754-7	103265	Hippurate/Creat Ur	MS BreathRate	65
+13754-7	104973	Hippurate/Creat Ur	CRRT Temperatur	61
+13754-7	104994	Hippurate/Creat Ur	CRRT Temperatur	61
+15184-5	102120	IgG Ser Ql IEP	IABP Trigger	62
+11158-3	103258	Appearance Ser	ApneaRate	61
+11158-3	104849	Appearance Ser	Apherese	64
+11158-3	104855	Appearance Ser	Apherese	64
+33603-2	102120	BPI IgG Ser-aCnc	IABP Trigger	64
+26465-5	108716	WBC # CSF	P CSF MS LiquoGuard Liquorfluss	60
+26465-5	108717	WBC # CSF	P CSF MS Pcsf	60
+26465-5	108718	WBC # CSF	P CSF MS ICP	60
+26465-5	108719	WBC # CSF	P CSF LiquoGuard Pset	60
+26465-5	108720	WBC # CSF	P CSF Doku	60
+26465-5	110940	WBC # CSF	P CSF MS LiquoGuard Fuellstand	60
+26465-5	110941	WBC # CSF	P CSF LiquoGuard Vset	60
+45286-2	105083	CMV IgA Fld Ql	G5 F CMV	64
+8665-2	104939	LMP Start date	Start Na	77
+8665-2	110788	LMP Start date	P StartNa	61
+8665-2	110808	LMP Start date	P StartNa	61
+33813-7	108157	Insulin sp14 p chal SerPl-aCnc	Insulin ja	82
+33813-7	108158	Insulin sp14 p chal SerPl-aCnc	Insulin nein	74
+2027-1	101423	CO2 BldV-sCnc	CO2	100
+2027-1	101434	CO2 BldV-sCnc	CO2	100
+2027-1	107849	CO2 BldV-sCnc	MS DCO2	60
+6148-1	108157	Insulin Human IgE Qn	Insulin ja	82
+6148-1	108158	Insulin Human IgE Qn	Insulin nein	74
+48584-7	103158	NM ExG GE time p 100mg Na octanoate PO	Na	100
+48584-7	103190	NM ExG GE time p 100mg Na octanoate PO	Na	100
+48584-7	104882	NM ExG GE time p 100mg Na octanoate PO	Na	100
+48584-7	104898	NM ExG GE time p 100mg Na octanoate PO	Na	100
+48584-7	104923	NM ExG GE time p 100mg Na octanoate PO	Na	100
+48584-7	104938	NM ExG GE time p 100mg Na octanoate PO	Na	100
+48584-7	110779	NM ExG GE time p 100mg Na octanoate PO	P MS Na	73
+48584-7	110787	NM ExG GE time p 100mg Na octanoate PO	P Na	100
+48584-7	110807	NM ExG GE time p 100mg Na octanoate PO	P Na	100
+48584-7	110854	NM ExG GE time p 100mg Na octanoate PO	P RTX Time	75
+48584-7	117155	NM ExG GE time p 100mg Na octanoate PO	P MS UF Time	67
+411-9	102885	Pip+Tazo Islt MLC	MS PIP	67
+411-9	103422	Pip+Tazo Islt MLC	MS PIP	67
+30362-8	108157	Insulin 30M p 75 g Glc PO SerPl-aCnc	Insulin ja	82
+30362-8	108158	Insulin 30M p 75 g Glc PO SerPl-aCnc	Insulin nein	74
+58998-6	104973	Creat 18h Ur-mRate	CRRT Temperatur	61
+58998-6	104994	Creat 18h Ur-mRate	CRRT Temperatur	61
+1996-8	102721	Calcium Bld-sCnc	Calcium	100
+1996-8	102743	Calcium Bld-sCnc	Calcium	100
+1996-8	102749	Calcium Bld-sCnc	CalciumLoesung	60
+1996-8	102763	Calcium Bld-sCnc	CalciumLoesung	60
+1996-8	103054	Calcium Bld-sCnc	Calcium	100
+1996-8	107934	Calcium Bld-sCnc	P ADS MS ADS Calcium postFilter	61
+1996-8	107935	Calcium Bld-sCnc	P ADS MS ADS Calcium preFilter	61
+1996-8	107956	Calcium Bld-sCnc	P ADS CalciumLoesung	61
+33514-1	104249	Specimen vol Sweat	MS Servoi Pmean	61
+47369-4	103062	Calcit Fld-mCnc	MS Calciumfluss	60
+5673-9	104781	Lead Hair-mCnt	AT Air	60
+5995-6	105078	PA Coll PRP	C2 PEEP CPAP	61
+81113-3	104242	MVEV IgM Ser Ql	MS Servoi MVe	64
+81113-3	104244	MVEV IgM Ser Ql	MS Servoi Mve	64
+14581-3	104247	APAP SerPl-sCnc	MS Servoi CPAP	62
+100342-5	103433	VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS	MS i	67
+100342-5	107839	VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS	MS i	67
+100342-5	110780	VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS	P MS	67
+26455-6	101630	RBC # Fld	Proc Flow	62
+2499-2	104147	Iron 24h Ur-mRate	Airvo Temperatur	61
+26611-4	104108	PETN 24h Ur-sRate	Temperatur 2a	60
+26611-4	104109	PETN 24h Ur-sRate	Temperatur 2b	60
+22240-6	106634	CMV Ab Titr CSF	T1 F CMV	61
+11208-6	108723	ANF Plas-mCnc	P MS AF	60
+3964-4	104250	PPA SerPl-mCnc	MS Servoi Pplat	62
+3964-4	104251	PPA SerPl-mCnc	MS Servoi Ppeak	62
+50836-6	102721	Calcium Hair-sCnt	Calcium	100
+50836-6	102743	Calcium Hair-sCnt	Calcium	100
+50836-6	103054	Calcium Hair-sCnt	Calcium	100
+50836-6	103058	Calcium Hair-sCnt	CalciumFiltrat	65
+50836-6	104974	Calcium Hair-sCnt	CRRT CalciumFiltrat	67
+50836-6	104995	Calcium Hair-sCnt	CRRT CalciumFiltrat	67
+56475-7	101644	Salmonella sp Ag form Islt Aggl	Form	100
+56475-7	101645	Salmonella sp Ag form Islt Aggl	Proc Form	62
+51834-0	104273	Tryptase SerPl-sCnc	Servoi Tpause s	65
+49005-2	102721	Calcium DiafP-sCnc	Calcium	100
+49005-2	102743	Calcium DiafP-sCnc	Calcium	100
+49005-2	103054	Calcium DiafP-sCnc	Calcium	100
+49005-2	103062	Calcium DiafP-sCnc	MS Calciumfluss	61
+5838-8	107988	CMV Spec Ql Cult	P C3 F CMV	62
+7289-2	108625	Duck Feather IgG Qn	P Doku Lifetherm Neigung	65
+2028-9	101423	CO2 SerPl-sCnc	CO2	100
+2028-9	101434	CO2 SerPl-sCnc	CO2	100
+42857-3	102721	Calcium BldV-sCnc	Calcium	100
+42857-3	102743	Calcium BldV-sCnc	Calcium	100
+42857-3	103054	Calcium BldV-sCnc	Calcium	100
+32031-7	102883	PS IgA Ser IA-aCnc	PS	100
+32031-7	104717	PS IgA Ser IA-aCnc	PS	100
+28649-2	117154	pO2 BldCoV	SpO2 l	62
+28642-7	1273	SaO2 % BldCoA	SaO2	100
+96826-3	101973	Cardio Score SOFA	Score SAPS2	62
+96826-3	101992	Cardio Score SOFA	Score SOFA	100
+96826-3	102764	Cardio Score SOFA	Score ARDS	74
+96826-3	102784	Cardio Score SOFA	Score RASS	67
+96826-3	102785	Cardio Score SOFA	Score AIS	71
+96826-3	102788	Cardio Score SOFA	Score Apgar	62
+96826-3	102791	Cardio Score SOFA	Score BPS	71
+96826-3	102792	Cardio Score SOFA	Score CIWA	67
+96826-3	102795	Cardio Score SOFA	Score CRIB	67
+96826-3	102796	Cardio Score SOFA	Score DRS	71
+96826-3	102797	Cardio Score SOFA	Score Dubois	62
+96826-3	102798	Cardio Score SOFA	Score GDS	71
+96826-3	102800	Cardio Score SOFA	Score Kuss	67
+96826-3	102801	Cardio Score SOFA	Score MAAS	67
+96826-3	102802	Cardio Score SOFA	Score MMS	71
+96826-3	102803	Cardio Score SOFA	Score MOF	71
+96826-3	102804	Cardio Score SOFA	Score mRS	71
+96826-3	102806	Cardio Score SOFA	Score NIHSS	62
+96826-3	102807	Cardio Score SOFA	Score NIPS	67
+96826-3	102810	Cardio Score SOFA	Score RSS	71
+96826-3	102811	Cardio Score SOFA	Score RTS	71
+96826-3	102812	Cardio Score SOFA	Score SAS	71
+96826-3	102813	Cardio Score SOFA	Score Lachs	62
+96826-3	102815	Cardio Score SOFA	Score VICS	67
+96826-3	103444	Cardio Score SOFA	Score DGAI	67
+96826-3	103458	Cardio Score SOFA	Score DGAI	67
+96826-3	103506	Cardio Score SOFA	Score DGAI	67
+96826-3	103507	Cardio Score SOFA	Score DGAI	67
+96826-3	103509	Cardio Score SOFA	Score DGAI	67
+96826-3	103510	Cardio Score SOFA	Score DGAI	67
+96826-3	103511	Cardio Score SOFA	Score DGAI	67
+96826-3	103512	Cardio Score SOFA	Score DGAI	67
+96826-3	103518	Cardio Score SOFA	Score DGAI	67
+96826-3	103523	Cardio Score SOFA	Score DGAI	67
+96826-3	103527	Cardio Score SOFA	Score DGAI	67
+96826-3	103536	Cardio Score SOFA	Score DGAI	67
+96826-3	103538	Cardio Score SOFA	Score DGAI	67
+96826-3	103540	Cardio Score SOFA	Score DGAI	67
+96826-3	103543	Cardio Score SOFA	Score DGAI	67
+96826-3	103544	Cardio Score SOFA	Score DGAI	67
+96826-3	103545	Cardio Score SOFA	Score DGAI	67
+96826-3	103550	Cardio Score SOFA	Score DGAI	67
+96826-3	103551	Cardio Score SOFA	Score DGAI	67
+96826-3	103554	Cardio Score SOFA	Score DGAI	67
+96826-3	103556	Cardio Score SOFA	Score DGAI	67
+96826-3	103557	Cardio Score SOFA	Score DGAI	67
+96826-3	103558	Cardio Score SOFA	Score DGAI	67
+96826-3	103559	Cardio Score SOFA	Score DGAI	67
+96826-3	103560	Cardio Score SOFA	Score DGAI	67
+96826-3	103562	Cardio Score SOFA	Score DGAI	67
+96826-3	105222	Cardio Score SOFA	Score NRS	71
+96826-3	105223	Cardio Score SOFA	Score BPS	71
+96826-3	106469	Cardio Score SOFA	IABP CARDIOSAVE	62
+96826-3	106651	Cardio Score SOFA	Score UStix	62
+96826-3	107969	Cardio Score SOFA	Score Ramsay	62
+96826-3	108395	Cardio Score SOFA	Score FLACC	62
+96826-3	108441	Cardio Score SOFA	Score SOS	71
+96826-3	108458	Cardio Score SOFA	Score SOS	71
+96826-3	108680	Cardio Score SOFA	Score NACA	67
+96826-3	108684	Cardio Score SOFA	Score ISS	71
+96826-3	110976	Cardio Score SOFA	Score FOUR	67
+96826-3	117221	Cardio Score SOFA	Score	100
+96826-3	117225	Cardio Score SOFA	Score Race	67
+34571-0	101973	Screen aPTT	Score SAPS2	64
+34571-0	102785	Screen aPTT	Score AIS	60
+34571-0	102788	Screen aPTT	Score Apgar	64
+34571-0	102791	Screen aPTT	Score BPS	60
+34571-0	102811	Screen aPTT	Score RTS	60
+34571-0	102812	Screen aPTT	Score SAS	60
+34571-0	105223	Screen aPTT	Score BPS	60
+2001-6	102721	Calcium 24h Stl-sCnc	Calcium	100
+2001-6	102743	Calcium 24h Stl-sCnc	Calcium	100
+2001-6	103054	Calcium 24h Stl-sCnc	Calcium	100
+2001-6	107934	Calcium 24h Stl-sCnc	P ADS MS ADS Calcium postFilter	60
+13440-3	108624	Interpretation Ur IFE-Imp	P Lifetherm Temperatur	60
+55925-2	110915	IgM Ser Elph-mCnc	MS Servoi I E	60
+19219-5	100807	O2 Ct BldC-sCnc	O2	100
+19219-5	101624	O2 Ct BldC-sCnc	O2	100
+19219-5	102198	O2 Ct BldC-sCnc	O2	100
+96825-5	101973	Liver Score SOFA	Score SAPS2	62
+96825-5	101992	Liver Score SOFA	Score SOFA	100
+96825-5	102764	Liver Score SOFA	Score ARDS	67
+96825-5	102784	Liver Score SOFA	Score RASS	67
+96825-5	102785	Liver Score SOFA	Score AIS	71
+96825-5	102788	Liver Score SOFA	Score Apgar	62
+96825-5	102790	Liver Score SOFA	Score Besinger	60
+96825-5	102791	Liver Score SOFA	Score BPS	71
+96825-5	102792	Liver Score SOFA	Score CIWA	67
+96825-5	102793	Liver Score SOFA	Score Cleveland	65
+96825-5	102795	Liver Score SOFA	Score CRIB	67
+96825-5	102796	Liver Score SOFA	Score DRS	71
+96825-5	102798	Liver Score SOFA	Score GDS	71
+96825-5	102800	Liver Score SOFA	Score Kuss	67
+96825-5	102801	Liver Score SOFA	Score MAAS	67
+96825-5	102802	Liver Score SOFA	Score MMS	71
+96825-5	102803	Liver Score SOFA	Score MOF	71
+96825-5	102804	Liver Score SOFA	Score mRS	71
+96825-5	102806	Liver Score SOFA	Score NIHSS	62
+96825-5	102807	Liver Score SOFA	Score NIPS	67
+96825-5	102810	Liver Score SOFA	Score RSS	71
+96825-5	102811	Liver Score SOFA	Score RTS	71
+96825-5	102812	Liver Score SOFA	Score SAS	71
+96825-5	102813	Liver Score SOFA	Score Lachs	62
+96825-5	102815	Liver Score SOFA	Score VICS	67
+96825-5	102816	Liver Score SOFA	Score Waterlow	60
+96825-5	103444	Liver Score SOFA	Score DGAI	67
+96825-5	103458	Liver Score SOFA	Score DGAI	67
+96825-5	103506	Liver Score SOFA	Score DGAI	67
+96825-5	103507	Liver Score SOFA	Score DGAI	67
+96825-5	103509	Liver Score SOFA	Score DGAI	67
+96825-5	103510	Liver Score SOFA	Score DGAI	67
+96825-5	103511	Liver Score SOFA	Score DGAI	67
+96825-5	103512	Liver Score SOFA	Score DGAI	67
+96825-5	103518	Liver Score SOFA	Score DGAI	67
+96825-5	103523	Liver Score SOFA	Score DGAI	67
+96825-5	103527	Liver Score SOFA	Score DGAI	67
+96825-5	103536	Liver Score SOFA	Score DGAI	67
+96825-5	103538	Liver Score SOFA	Score DGAI	67
+96825-5	103540	Liver Score SOFA	Score DGAI	67
+96825-5	103543	Liver Score SOFA	Score DGAI	67
+96825-5	103544	Liver Score SOFA	Score DGAI	67
+96825-5	103545	Liver Score SOFA	Score DGAI	67
+96825-5	103550	Liver Score SOFA	Score DGAI	67
+96825-5	103551	Liver Score SOFA	Score DGAI	67
+96825-5	103554	Liver Score SOFA	Score DGAI	67
+96825-5	103556	Liver Score SOFA	Score DGAI	67
+96825-5	103557	Liver Score SOFA	Score DGAI	67
+96825-5	103558	Liver Score SOFA	Score DGAI	67
+96825-5	103559	Liver Score SOFA	Score DGAI	67
+96825-5	103560	Liver Score SOFA	Score DGAI	67
+96825-5	103562	Liver Score SOFA	Score DGAI	67
+96825-5	105222	Liver Score SOFA	Score NRS	71
+96825-5	105223	Liver Score SOFA	Score BPS	71
+96825-5	106651	Liver Score SOFA	Score UStix	62
+96825-5	107969	Liver Score SOFA	Score Ramsay	64
+96825-5	108233	Liver Score SOFA	Score Petrussa	67
+96825-5	108395	Liver Score SOFA	Score FLACC	62
+96825-5	108441	Liver Score SOFA	Score SOS	71
+96825-5	108458	Liver Score SOFA	Score SOS	71
+96825-5	108641	Liver Score SOFA	Score Finnegan	60
+96825-5	108680	Liver Score SOFA	Score NACA	67
+96825-5	108684	Liver Score SOFA	Score ISS	71
+96825-5	110976	Liver Score SOFA	Score FOUR	67
+96825-5	117221	Liver Score SOFA	Score	100
+96825-5	117225	Liver Score SOFA	Score Race	67
+44796-1	107976	C bot Tox Spec	P C3 Body Wt	62
+44796-1	108245	C bot Tox Spec	Sectio Notsectio	60
+2021-4	102170	pCO2 BldV	PICCO ITBV	63
+2021-4	102171	pCO2 BldV	PICCO ITBVI	60
+2021-4	117154	pCO2 BldV	SpO2 l	67
+50560-2	110926	pH Ur Strip.auto	P Temperatur Haut	61
+2889-4	104108	Prot 24h Ur-mRate	Temperatur 2a	60
+2889-4	104109	Prot 24h Ur-mRate	Temperatur 2b	60
+14040-0	101423	CO2 Stl-sCnc	CO2	100
+14040-0	101434	CO2 Stl-sCnc	CO2	100
+14040-0	104788	CO2 Stl-sCnc	MS C2 TE	60
+14040-0	104789	CO2 Stl-sCnc	MS C2 TI	60
+55134-1	103158	FLUAV NA RNA Islt NAA+probe	Na	100
+55134-1	103190	FLUAV NA RNA Islt NAA+probe	Na	100
+55134-1	104882	FLUAV NA RNA Islt NAA+probe	Na	100
+55134-1	104898	FLUAV NA RNA Islt NAA+probe	Na	100
+55134-1	104923	FLUAV NA RNA Islt NAA+probe	Na	100
+55134-1	104938	FLUAV NA RNA Islt NAA+probe	Na	100
+55134-1	110787	FLUAV NA RNA Islt NAA+probe	P Na	67
+55134-1	110807	FLUAV NA RNA Islt NAA+probe	P Na	67
+2839-9	107975	Progest SerPl-mCnc	P C3 Groesse	60
+2703-7	104117	pO2 BldA	MS ILA SpO2	63
+2703-7	104780	pO2 BldA	AT O2	62
+2703-7	117154	pO2 BldA	SpO2 l	71
+15793-3	108157	Insulin Human IgE RAST Ql	Insulin ja	82
+15793-3	108158	Insulin Human IgE RAST Ql	Insulin nein	74
+69379-6	104816	van(A+B+C1+C2) genes Islt/Spm	C2	100
+69379-6	104822	van(A+B+C1+C2) genes Islt/Spm	C2	100
+69379-6	104823	van(A+B+C1+C2) genes Islt/Spm	C2	100
+69379-6	106283	van(A+B+C1+C2) genes Islt/Spm	C2	100
+28643-5	1273	SaO2 % BldCoV	SaO2	100
+6179-6	103168	Mouse Epith IgE Qn	MS Leitfähigkeit	61
+6179-6	103199	Mouse Epith IgE Qn	MS Leitfähigkeit	61
+6179-6	104864	Mouse Epith IgE Qn	MS Leitfähigkeit	61
+6179-6	104873	Mouse Epith IgE Qn	MS Leitfähigkeit	61
+82752-7	104939	Travel start date	Start Na	77
+34611-4	110860	PSA Ur-mCnc	P RTX Min	60
+9704-8	108506	Sperm Smn	P NBP reArm	60
+13476-7	105011	Silver/Creat Ur	CRRT Filter	62
+50505-7	108157	Insulin sp5 SerPl-aCnc	Insulin ja	82
+50505-7	108158	Insulin sp5 SerPl-aCnc	Insulin nein	74
+61101-2	103158	FLUAV NA RNA Spec Seq	Na	100
+61101-2	103190	FLUAV NA RNA Spec Seq	Na	100
+61101-2	104882	FLUAV NA RNA Spec Seq	Na	100
+61101-2	104898	FLUAV NA RNA Spec Seq	Na	100
+61101-2	104923	FLUAV NA RNA Spec Seq	Na	100
+61101-2	104938	FLUAV NA RNA Spec Seq	Na	100
+61101-2	110787	FLUAV NA RNA Spec Seq	P Na	67
+61101-2	110807	FLUAV NA RNA Spec Seq	P Na	67
+33815-2	108157	Insulin sp1 p chal SerPl-aCnc	Insulin ja	82
+33815-2	108158	Insulin sp1 p chal SerPl-aCnc	Insulin nein	74
+8056-4	104236	YFV IgM Ser-aCnc	MS Servoi Cdyn	60
+12301-8	104941	Procaine Ur Ql	UF Profil	61
+50502-4	108157	Insulin sp2 SerPl-aCnc	Insulin ja	82
+50502-4	108158	Insulin sp2 SerPl-aCnc	Insulin nein	74
+15687-7	106331	Duck Feather IgE RAST Ql	MS DruckArteriell	63
+30067-3	103925	Proline/Creat Ur-Rto	Rotorest reRotWinkel	60
+1570-1	108157	Insulin BS SerPl-mCnc	Insulin ja	82
+1570-1	108158	Insulin BS SerPl-mCnc	Insulin nein	74
+45062-7	108718	CRP CSF-mCnc	P CSF MS ICP	67
+16689-2	104973	Creat 48h Ur-mRate	CRRT Temperatur	61
+16689-2	104994	Creat 48h Ur-mRate	CRRT Temperatur	61
+11557-6	117154	pCO2 Bld	SpO2 l	71
+43330-0	110915	EEEV IgM Titr Ser IA	MS Servoi I E	61
+28646-8	102040	pH BldCoA	p-CO	62
+6147-3	108157	Insulin Bovine IgE Qn	Insulin ja	82
+6147-3	108158	Insulin Bovine IgE Qn	Insulin nein	74
+14620-9	103258	Appearance Plr	ApneaRate	61
+34728-6	101423	CO2 Bld Calc-sCnc	CO2	100
+34728-6	101434	CO2 Bld Calc-sCnc	CO2	100
+25690-9	108157	Insulin sp15 p chal SerPl-sCnc	Insulin ja	82
+25690-9	108158	Insulin sp15 p chal SerPl-sCnc	Insulin nein	74
+31374-2	103158	EBV NA IgG Ser-aCnc	Na	100
+31374-2	103190	EBV NA IgG Ser-aCnc	Na	100
+31374-2	104882	EBV NA IgG Ser-aCnc	Na	100
+31374-2	104898	EBV NA IgG Ser-aCnc	Na	100
+31374-2	104923	EBV NA IgG Ser-aCnc	Na	100
+31374-2	104938	EBV NA IgG Ser-aCnc	Na	100
+31374-2	110787	EBV NA IgG Ser-aCnc	P Na	67
+31374-2	110807	EBV NA IgG Ser-aCnc	P Na	67
+38476-8	104236	MIS SerPl-mCnc	MS Servoi Cdyn	64
+38476-8	110937	MIS SerPl-mCnc	P MS MAC	64
+46197-0	102140	MeV Ab Ser Ql	Abdomen Leber	62
+25122-3	104973	PETN/Creat Ur-sRto	CRRT Temperatur	61
+25122-3	104994	PETN/Creat Ur-sRto	CRRT Temperatur	61
+39465-0	101423	CO2 BldCoV-sCnc	CO2	100
+39465-0	101434	CO2 BldCoV-sCnc	CO2	100
+55594-6	106331	Duck Feather IgE Ql	MS DruckArteriell	61
+55594-6	108625	Duck Feather IgE Ql	P Doku Lifetherm Neigung	60
+15164-7	107985	C3 Snv-mCnc	P C3	67
+15164-7	107992	C3 Snv-mCnc	P C3	67
+15164-7	108010	C3 Snv-mCnc	P C3	67
+15164-7	110827	C3 Snv-mCnc	C3 F SIMV	60
+15164-7	110828	C3 Snv-mCnc	P C3	67
+15164-7	110831	C3 Snv-mCnc	P C3	67
+6039-2	100359	Beef IgE Qn	Bewegen	67
+6039-2	100418	Beef IgE Qn	Befinden	63
+21232-4	104967	Creat BldA-mCnc	CRRT MS Bilanz	62
+21232-4	106402	Creat BldA-mCnc	CRRT MS Bilanz	62
+50749-1	110753	Prot Ur-Imp	P Temperatur	61
+50749-1	110785	Prot Ur-Imp	P Temperatur	61
+50749-1	110805	Prot Ur-Imp	P Temperatur	61
+160-2	104733	Cephalothin Islt MLC	MS Halothan insp	67
+34520-7	101423	CO2 BldCo-sCnc	CO2	100
+34520-7	101434	CO2 BldCo-sCnc	CO2	100
+31373-4	103158	EBV NA IgG CSF-aCnc	Na	100
+31373-4	103190	EBV NA IgG CSF-aCnc	Na	100
+31373-4	104882	EBV NA IgG CSF-aCnc	Na	100
+31373-4	104898	EBV NA IgG CSF-aCnc	Na	100
+31373-4	104923	EBV NA IgG CSF-aCnc	Na	100
+31373-4	104938	EBV NA IgG CSF-aCnc	Na	100
+31373-4	110787	EBV NA IgG CSF-aCnc	P Na	67
+31373-4	110807	EBV NA IgG CSF-aCnc	P Na	67
+4485-9	107985	C3 SerPl-mCnc	P C3	67
+4485-9	107992	C3 SerPl-mCnc	P C3	67
+4485-9	108010	C3 SerPl-mCnc	P C3	67
+4485-9	108028	C3 SerPl-mCnc	P MS C3	60
+4485-9	108031	C3 SerPl-mCnc	P MS C3	60
+4485-9	110828	C3 SerPl-mCnc	P C3	67
+4485-9	110831	C3 SerPl-mCnc	P C3	67
+8334-5	103888	Bdy temp Bladder	Doku Temp	62
+8334-5	105049	Bdy temp Bladder	CRRT Temp	62
+8334-5	105050	Bdy temp Bladder	CRRT Temp	62
+4484-2	104816	C2 SerPl-mCnc	C2	100
+4484-2	104822	C2 SerPl-mCnc	C2	100
+4484-2	104823	C2 SerPl-mCnc	C2	100
+4484-2	106283	C2 SerPl-mCnc	C2	100
+13538-4	101423	CO2 Ur-sCnc	CO2	100
+13538-4	101434	CO2 Ur-sCnc	CO2	100
+13538-4	104785	CO2 Ur-sCnc	MS C2 RC	63
+33848-3	107830	Plasma cell prec # Bld Manual	PRec	100
+39486-6	103888	pH temp adj BldV	Doku Temp	62
+39486-6	105049	pH temp adj BldV	CRRT Temp	62
+39486-6	105050	pH temp adj BldV	CRRT Temp	62
+26516-5	102585	Platelet # Plas	Plasmarate	61
+26516-5	103262	Platelet # Plas	MS Plateau	61
+14637-3	102721	Calcium 24h Ur-sRate	Calcium	100
+14637-3	102743	Calcium 24h Ur-sRate	Calcium	100
+14637-3	103054	Calcium 24h Ur-sRate	Calcium	100
+14637-3	104974	Calcium 24h Ur-sRate	CRRT CalciumFiltrat	62
+14637-3	104995	Calcium 24h Ur-sRate	CRRT CalciumFiltrat	62
+14637-3	107935	Calcium 24h Ur-sRate	P ADS MS ADS Calcium preFilter	61
+1827-5	103433	A1AT MS SerPl-mCnc	MS i	67
+1827-5	107839	A1AT MS SerPl-mCnc	MS i	67
+1827-5	110780	A1AT MS SerPl-mCnc	P MS	67
+2744-1	100091	pH BldA	LAP	60
+49135-7	103158	Fract excret Na Ur+SerPl-Rto	Na	100
+49135-7	103190	Fract excret Na Ur+SerPl-Rto	Na	100
+49135-7	104882	Fract excret Na Ur+SerPl-Rto	Na	100
+49135-7	104898	Fract excret Na Ur+SerPl-Rto	Na	100
+49135-7	104923	Fract excret Na Ur+SerPl-Rto	Na	100
+49135-7	104938	Fract excret Na Ur+SerPl-Rto	Na	100
+49135-7	110787	Fract excret Na Ur+SerPl-Rto	P Na	67
+49135-7	110807	Fract excret Na Ur+SerPl-Rto	P Na	67
+2436-4	104108	HVA 24h Ur-mRate	Temperatur 2a	62
+29805-9	108718	POWV IgM CSF Ql IF	P CSF MS ICP	60
+664-3	104714	Gram Stn Spec	T Rampe	70
+19211-2	104117	pO2 BldMV	MS ILA SpO2	60
+19211-2	117154	pO2 BldMV	SpO2 l	67
+100860-6	105022	CD4 TNFa/CD4 p Stim COVID Sp	A STIM	80
+100860-6	105023	CD4 TNFa/CD4 p Stim COVID Sp	V STIM	80
+9274-2	101973	5M Apgar Score	Score SAPS2	64
+9274-2	101992	5M Apgar Score	Score SOFA	67
+9274-2	102764	5M Apgar Score	Score ARDS	67
+9274-2	102784	5M Apgar Score	Score RASS	67
+9274-2	102785	5M Apgar Score	Score AIS	71
+9274-2	102787	5M Apgar Score	Score APACHE2	67
+9274-2	102788	5M Apgar Score	Score Apgar	100
+9274-2	102791	5M Apgar Score	Score BPS	71
+9274-2	102792	5M Apgar Score	Score CIWA	67
+9274-2	102795	5M Apgar Score	Score CRIB	67
+9274-2	102796	5M Apgar Score	Score DRS	71
+9274-2	102798	5M Apgar Score	Score GDS	71
+9274-2	102800	5M Apgar Score	Score Kuss	67
+9274-2	102801	5M Apgar Score	Score MAAS	75
+9274-2	102802	5M Apgar Score	Score MMS	71
+9274-2	102803	5M Apgar Score	Score MOF	71
+9274-2	102804	5M Apgar Score	Score mRS	71
+9274-2	102806	5M Apgar Score	Score NIHSS	62
+9274-2	102807	5M Apgar Score	Score NIPS	67
+9274-2	102810	5M Apgar Score	Score RSS	71
+9274-2	102811	5M Apgar Score	Score RTS	71
+9274-2	102812	5M Apgar Score	Score SAS	71
+9274-2	102813	5M Apgar Score	Score Lachs	62
+9274-2	102815	5M Apgar Score	Score VICS	67
+9274-2	103444	5M Apgar Score	Score DGAI	67
+9274-2	103458	5M Apgar Score	Score DGAI	67
+9274-2	103506	5M Apgar Score	Score DGAI	67
+9274-2	103507	5M Apgar Score	Score DGAI	67
+9274-2	103509	5M Apgar Score	Score DGAI	67
+9274-2	103510	5M Apgar Score	Score DGAI	67
+9274-2	103511	5M Apgar Score	Score DGAI	67
+9274-2	103512	5M Apgar Score	Score DGAI	67
+9274-2	103518	5M Apgar Score	Score DGAI	67
+9274-2	103523	5M Apgar Score	Score DGAI	67
+9274-2	103527	5M Apgar Score	Score DGAI	67
+9274-2	103536	5M Apgar Score	Score DGAI	67
+9274-2	103538	5M Apgar Score	Score DGAI	67
+9274-2	103540	5M Apgar Score	Score DGAI	67
+9274-2	103543	5M Apgar Score	Score DGAI	67
+9274-2	103544	5M Apgar Score	Score DGAI	67
+9274-2	103545	5M Apgar Score	Score DGAI	67
+9274-2	103550	5M Apgar Score	Score DGAI	67
+9274-2	103551	5M Apgar Score	Score DGAI	67
+9274-2	103554	5M Apgar Score	Score DGAI	67
+9274-2	103556	5M Apgar Score	Score DGAI	67
+9274-2	103557	5M Apgar Score	Score DGAI	67
+9274-2	103558	5M Apgar Score	Score DGAI	67
+9274-2	103559	5M Apgar Score	Score DGAI	67
+9274-2	103560	5M Apgar Score	Score DGAI	67
+9274-2	103562	5M Apgar Score	Score DGAI	67
+9274-2	105222	5M Apgar Score	Score NRS	71
+9274-2	105223	5M Apgar Score	Score BPS	71
+9274-2	106651	5M Apgar Score	Score UStix	62
+9274-2	107969	5M Apgar Score	Score Ramsay	62
+9274-2	108395	5M Apgar Score	Score FLACC	62
+9274-2	108441	5M Apgar Score	Score SOS	71
+9274-2	108458	5M Apgar Score	Score SOS	71
+9274-2	108680	5M Apgar Score	Score NACA	67
+9274-2	108684	5M Apgar Score	Score ISS	71
+9274-2	110976	5M Apgar Score	Score FOUR	67
+9274-2	117221	5M Apgar Score	Score	100
+9274-2	117225	5M Apgar Score	Score Race	67
+57800-5	100807	O2 Ct VFr Bld Calc	O2	100
+57800-5	101624	O2 Ct VFr Bld Calc	O2	100
+57800-5	102198	O2 Ct VFr Bld Calc	O2	100
+5204-3	104245	HSV Ab Titr Ser CF	MS Servoi AF	60
+5204-3	104246	HSV Ab Titr Ser CF	MS Servoi Af	60
+33816-0	108157	Insulin sp2 p chal SerPl-aCnc	Insulin ja	82
+33816-0	108158	Insulin sp2 p chal SerPl-aCnc	Insulin nein	74
+19994-3	100807	O2/Total gas setting VFr Vent	O2	100
+19994-3	101624	O2/Total gas setting VFr Vent	O2	100
+19994-3	102198	O2/Total gas setting VFr Vent	O2	100
+19255-9	103888	pO2 temp adj BldA	Doku Temp	62
+19255-9	105049	pO2 temp adj BldA	CRRT Temp	62
+19255-9	105050	pO2 temp adj BldA	CRRT Temp	62
+3058-5	104789	TPI Ser-cCnc	MS C2 TI	60
+31083-9	102968	Lead 8h Ur-mRate	ADM Temperatur	60
+31083-9	103007	Lead 8h Ur-mRate	ADM Temperatur	60
+51610-4	102721	Calcium 12h Ur-sRate	Calcium	100
+51610-4	102743	Calcium 12h Ur-sRate	Calcium	100
+51610-4	103054	Calcium 12h Ur-sRate	Calcium	100
+51610-4	104974	Calcium 12h Ur-sRate	CRRT CalciumFiltrat	62
+51610-4	104995	Calcium 12h Ur-sRate	CRRT CalciumFiltrat	62
+51610-4	107935	Calcium 12h Ur-sRate	P ADS MS ADS Calcium preFilter	61
+33254-4	103888	pH temp adj BldA	Doku Temp	62
+33254-4	105049	pH temp adj BldA	CRRT Temp	62
+33254-4	105050	pH temp adj BldA	CRRT Temp	62
+5122-7	107988	CMV Ab SerPl IF-aCnc	P C3 F CMV	60
+40747-8	104816	C2 SerPl Ql	C2	100
+40747-8	104822	C2 SerPl Ql	C2	100
+40747-8	104823	C2 SerPl Ql	C2	100
+40747-8	106283	C2 SerPl Ql	C2	100
+19218-7	100807	O2 Ct BldA-sCnc	O2	100
+19218-7	101624	O2 Ct BldA-sCnc	O2	100
+19218-7	102198	O2 Ct BldA-sCnc	O2	100
+13789-3	104973	PETN/Creat Ur	CRRT Temperatur	64
+13789-3	104994	PETN/Creat Ur	CRRT Temperatur	64
+2708-6	1273	SaO2 % BldA	SaO2	100
+2708-6	104117	SaO2 % BldA	MS ILA SpO2	60
+2708-6	117154	SaO2 % BldA	SpO2 l	67
+5243-1	104245	MeV Ab Titr Ser CF	MS Servoi AF	60
+5243-1	104246	MeV Ab Titr Ser CF	MS Servoi Af	60
+10738-3	103819	Virus Tiss EM	NIRS MS	60
+9481-3	102142	pH Wat	Haut	60
+54244-9	110784	FLUV Spec	P Fluss	62
+54244-9	110804	FLUV Spec	P Fluss	62
+14360-2	104714	Gram Stn Plr	T Rampe	63
+23830-3	100203	B pert.PT IgA Ser-aCnc	PT	100
+23830-3	100676	B pert.PT IgA Ser-aCnc	PT	100
+24461-6	105020	FA SerPl-sCnc	A Sense	60
+24461-6	105033	FA SerPl-sCnc	A-Sense	60
+100858-0	105022	CD4+154/CD4 stim COVID Spike	A STIM	80
+100858-0	105023	CD4+154/CD4 stim COVID Spike	V STIM	80
+30055-8	104973	Phe/Creat Ur-Rto	CRRT Temperatur	65
+30055-8	104994	Phe/Creat Ur-Rto	CRRT Temperatur	65
+75218-8	105003	Case rprt	CRRT	62
+75218-8	105010	Case rprt	CRRT	62
+75218-8	105013	Case rprt	CRRT	62
+24128-1	100203	B pert.PT IgA Ser IA-aCnc	PT	100
+24128-1	100676	B pert.PT IgA Ser IA-aCnc	PT	100
+33814-5	108157	Insulin sp15 p chal SerPl-aCnc	Insulin ja	82
+33814-5	108158	Insulin sp15 p chal SerPl-aCnc	Insulin nein	74
+41131-4	108718	MuV IgM CSF Ql	P CSF MS ICP	62
+50506-5	108157	Insulin sp6 SerPl-aCnc	Insulin ja	82
+50506-5	108158	Insulin sp6 SerPl-aCnc	Insulin nein	74
+6100-2	106331	Duck Feather IgE Qn	MS DruckArteriell	61
+6100-2	108625	Duck Feather IgE Qn	P Doku Lifetherm Neigung	60
+14910-4	104233	Serotonin Ser-sCnc	MS Servoi Re	60
+14910-4	104234	Serotonin Ser-sCnc	MS Servoi Ri	60
+14910-4	104236	Serotonin Ser-sCnc	MS Servoi Cdyn	62
+20874-4	106521	Manganese Tiss-mCnt	Anamnese Nein	62
+32240-4	108281	Fructose Ur Ql	Fruchtwasser	62
+32240-4	108282	Fructose Ur Ql	Fruchtwasser klar	65
+10931-4	100135	Daphnia IgE Qn	Drainagen	61
+51480-2	110926	Bacteria # Ur Auto	P Temperatur Haut	61
+60546-9	108042	PV Islt Cult	P EctSta	60
+2150-1	110930	Creatine 24h Ur-mRate	P Temperatur Rektal	60
+9326-0	102883	PS IgG Ser Ql IA	PS	100
+9326-0	104717	PS IgG Ser Ql IA	PS	100
+87716-7	103158	FLUAV NA gene Islt-Seq	Na	100
+87716-7	103190	FLUAV NA gene Islt-Seq	Na	100
+87716-7	104882	FLUAV NA gene Islt-Seq	Na	100
+87716-7	104898	FLUAV NA gene Islt-Seq	Na	100
+87716-7	104923	FLUAV NA gene Islt-Seq	Na	100
+87716-7	104938	FLUAV NA gene Islt-Seq	Na	100
+87716-7	110787	FLUAV NA gene Islt-Seq	P Na	67
+87716-7	110807	FLUAV NA gene Islt-Seq	P Na	67
+60023-9	108720	LDH CSF P to L-cCnc	P CSF Doku	67
+27860-6	108157	Insulin 2h p 75 g Glc PO SerPl-aCnc	Insulin ja	82
+27860-6	108158	Insulin 2h p 75 g Glc PO SerPl-aCnc	Insulin nein	74
+29554-3	101642	Procedure	Proc	62
+29554-3	102093	Procedure	ILAPressure	60
+2005-7	102721	Calcium p 12h fast 2h Ur-sRate	Calcium	100
+2005-7	102743	Calcium p 12h fast 2h Ur-sRate	Calcium	100
+2005-7	103054	Calcium p 12h fast 2h Ur-sRate	Calcium	100
+2005-7	107934	Calcium p 12h fast 2h Ur-sRate	P ADS MS ADS Calcium postFilter	60
+2005-7	107935	Calcium p 12h fast 2h Ur-sRate	P ADS MS ADS Calcium preFilter	64
+13944-4	100091	LAP WBC Cont Micro-cCnc	LAP	100
+5902-2	110854	Prothrombin time	P RTX Time	62
+47383-5	104260	ANA Ser Ql IA	Servoi Nava Pegel	60
+96827-1	101947	CNS Score SOFA	Score TISS28	62
+96827-1	101973	CNS Score SOFA	Score SAPS2	64
+96827-1	101992	CNS Score SOFA	Score SOFA	100
+96827-1	102764	CNS Score SOFA	Score ARDS	67
+96827-1	102771	CNS Score SOFA	Score TISS10	62
+96827-1	102784	CNS Score SOFA	Score RASS	67
+96827-1	102785	CNS Score SOFA	Score AIS	71
+96827-1	102788	CNS Score SOFA	Score Apgar	62
+96827-1	102791	CNS Score SOFA	Score BPS	71
+96827-1	102792	CNS Score SOFA	Score CIWA	67
+96827-1	102794	CNS Score SOFA	Score ComfortSkala	62
+96827-1	102795	CNS Score SOFA	Score CRIB	67
+96827-1	102796	CNS Score SOFA	Score DRS	71
+96827-1	102798	CNS Score SOFA	Score GDS	71
+96827-1	102800	CNS Score SOFA	Score Kuss	67
+96827-1	102801	CNS Score SOFA	Score MAAS	67
+96827-1	102802	CNS Score SOFA	Score MMS	71
+96827-1	102803	CNS Score SOFA	Score MOF	71
+96827-1	102804	CNS Score SOFA	Score mRS	71
+96827-1	102806	CNS Score SOFA	Score NIHSS	72
+96827-1	102807	CNS Score SOFA	Score NIPS	67
+96827-1	102808	CNS Score SOFA	Score NORTON	62
+96827-1	102810	CNS Score SOFA	Score RSS	71
+96827-1	102811	CNS Score SOFA	Score RTS	71
+96827-1	102812	CNS Score SOFA	Score SAS	71
+96827-1	102813	CNS Score SOFA	Score Lachs	64
+96827-1	102815	CNS Score SOFA	Score VICS	67
+96827-1	103444	CNS Score SOFA	Score DGAI	67
+96827-1	103458	CNS Score SOFA	Score DGAI	67
+96827-1	103506	CNS Score SOFA	Score DGAI	67
+96827-1	103507	CNS Score SOFA	Score DGAI	67
+96827-1	103509	CNS Score SOFA	Score DGAI	67
+96827-1	103510	CNS Score SOFA	Score DGAI	67
+96827-1	103511	CNS Score SOFA	Score DGAI	67
+96827-1	103512	CNS Score SOFA	Score DGAI	67
+96827-1	103518	CNS Score SOFA	Score DGAI	67
+96827-1	103523	CNS Score SOFA	Score DGAI	67
+96827-1	103527	CNS Score SOFA	Score DGAI	67
+96827-1	103536	CNS Score SOFA	Score DGAI	67
+96827-1	103538	CNS Score SOFA	Score DGAI	67
+96827-1	103540	CNS Score SOFA	Score DGAI	67
+96827-1	103543	CNS Score SOFA	Score DGAI	67
+96827-1	103544	CNS Score SOFA	Score DGAI	67
+96827-1	103545	CNS Score SOFA	Score DGAI	67
+96827-1	103550	CNS Score SOFA	Score DGAI	67
+96827-1	103551	CNS Score SOFA	Score DGAI	67
+96827-1	103554	CNS Score SOFA	Score DGAI	67
+96827-1	103556	CNS Score SOFA	Score DGAI	67
+96827-1	103557	CNS Score SOFA	Score DGAI	67
+96827-1	103558	CNS Score SOFA	Score DGAI	67
+96827-1	103559	CNS Score SOFA	Score DGAI	67
+96827-1	103560	CNS Score SOFA	Score DGAI	67
+96827-1	103562	CNS Score SOFA	Score DGAI	67
+96827-1	105222	CNS Score SOFA	Score NRS	71
+96827-1	105223	CNS Score SOFA	Score BPS	71
+96827-1	106651	CNS Score SOFA	Score UStix	62
+96827-1	107969	CNS Score SOFA	Score Ramsay	62
+96827-1	108233	CNS Score SOFA	Score Petrussa	64
+96827-1	108395	CNS Score SOFA	Score FLACC	64
+96827-1	108402	CNS Score SOFA	Score NPASS Schmerz	61
+96827-1	108441	CNS Score SOFA	Score SOS	71
+96827-1	108458	CNS Score SOFA	Score SOS	71
+96827-1	108680	CNS Score SOFA	Score NACA	67
+96827-1	108684	CNS Score SOFA	Score ISS	71
+96827-1	110976	CNS Score SOFA	Score FOUR	67
+96827-1	117221	CNS Score SOFA	Score	100
+96827-1	117225	CNS Score SOFA	Score Race	67
+33810-3	108157	Insulin sp11 p chal SerPl-aCnc	Insulin ja	82
+33810-3	108158	Insulin sp11 p chal SerPl-aCnc	Insulin nein	74
+7883-2	103158	EBV NA IgG Ser Ql	Na	100
+7883-2	103190	EBV NA IgG Ser Ql	Na	100
+7883-2	104882	EBV NA IgG Ser Ql	Na	100
+7883-2	104898	EBV NA IgG Ser Ql	Na	100
+7883-2	104923	EBV NA IgG Ser Ql	Na	100
+7883-2	104938	EBV NA IgG Ser Ql	Na	100
+7883-2	110787	EBV NA IgG Ser Ql	P Na	67
+7883-2	110807	EBV NA IgG Ser Ql	P Na	67
+50504-0	108157	Insulin sp4 SerPl-aCnc	Insulin ja	82
+50504-0	108158	Insulin sp4 SerPl-aCnc	Insulin nein	74
+22616-7	104238	WEEV IgM Titr Ser	MS Servoi Vee	60
+33811-1	108157	Insulin sp12 p chal SerPl-aCnc	Insulin ja	82
+33811-1	108158	Insulin sp12 p chal SerPl-aCnc	Insulin nein	74
+9279-1	100082	Resp rate	SM-Draehte	63
+9279-1	102644	Resp rate	Mess ISOUFRate	61
+9279-1	103686	Resp rate	Hypothermie Coolgard Rate	62
+9279-1	103694	Resp rate	Hypothermie Coolgard Doku-Rate	62
+9279-1	104889	Resp rate	IsoUF Rate	63
+9279-1	105014	Resp rate	Osypka101H Rate	62
+9279-1	105019	Resp rate	Rate	100
+9279-1	110797	Resp rate	P IsoUFRate	60
+9279-1	117225	Resp rate	Score Race	63
+32163-8	108738	Cells # Prt Manual	P Celestangabe	60
+11139-3	104187	Metaneph Ur-mCnc	MS Zephyros Pmean	61
+2752-4	101443	pH Smn	Pmin	60
+2752-4	102408	pH Smn	p-SV	60
+30053-3	104986	Leucine/Creat Ur-Rto	CRRT Doku CitratLoesung	60
+42208-9	108718	IgM CSF/SerPl	P CSF MS ICP	64
+50794-7	104939	OF start NFr RBC	Start Na	77
+39485-8	103888	pH temp adj BldC	Doku Temp	62
+39485-8	105049	pH temp adj BldC	CRRT Temp	62
+39485-8	105050	pH temp adj BldC	CRRT Temp	62
+56946-7	108157	Insulin 2D p chal SerPl-aCnc	Insulin ja	82
+56946-7	108158	Insulin 2D p chal SerPl-aCnc	Insulin nein	74
+29527-9	104969	Citrate/Creat Ur-sRto	CRRT MS Citratfluss	60
+29527-9	104975	Citrate/Creat Ur-sRto	CRRT CitratBlut	61
+29527-9	104986	Citrate/Creat Ur-sRto	CRRT Doku CitratLoesung	64
+29527-9	104996	Citrate/Creat Ur-sRto	CRRT CitratBlut	61
+29527-9	105007	Citrate/Creat Ur-sRto	CRRT CitratLoesung	62
+40230-5	102721	Calcium 1.5h p chal SerPl-sCnc	Calcium	100
+40230-5	102743	Calcium 1.5h p chal SerPl-sCnc	Calcium	100
+40230-5	103054	Calcium 1.5h p chal SerPl-sCnc	Calcium	100
+40230-5	107934	Calcium 1.5h p chal SerPl-sCnc	P ADS MS ADS Calcium postFilter	60
+2965-2	102906	Sp Gr Ur	MS G5 R	67
+2965-2	102909	Sp Gr Ur	MS G5 RC	62
+51641-9	101627	MSCV RBC	Proc AMV	62
+51641-9	102909	MSCV RBC	MS G5 RC	62
+51641-9	104785	MSCV RBC	MS C2 RC	62
+27882-0	108158	Proinsulin SerPl-sCnc	Insulin nein	61
+48766-0	102803	Source of info	Score MOF	61
+48766-0	102808	Source of info	Score NORTON	62
+2705-2	117154	pO2 BldV	SpO2 l	71
+47720-8	103888	pH temp adj BldCo	Doku Temp	62
+47720-8	105049	pH temp adj BldCo	CRRT Temp	62
+47720-8	105050	pH temp adj BldCo	CRRT Temp	62
+47720-8	110754	pH temp adj BldCo	P Doku Temp	64
+38436-2	108014	CC Spec #/mass VC	P MS C3 VTE	62
+38436-2	108015	CC Spec #/mass VC	P MS C3 VTi	62
+38436-2	108020	CC Spec #/mass VC	P MS C3 VCO2	67
+38436-2	108034	CC Spec #/mass VC	P MS C3 RC	64
+29605-3	103258	Appearance Snv	ApneaRate	61
+30083-0	103158	EBV NA IgG Ser IA-aCnc	Na	100
+30083-0	103190	EBV NA IgG Ser IA-aCnc	Na	100
+30083-0	104882	EBV NA IgG Ser IA-aCnc	Na	100
+30083-0	104898	EBV NA IgG Ser IA-aCnc	Na	100
+30083-0	104923	EBV NA IgG Ser IA-aCnc	Na	100
+30083-0	104938	EBV NA IgG Ser IA-aCnc	Na	100
+30083-0	110787	EBV NA IgG Ser IA-aCnc	P Na	67
+30083-0	110807	EBV NA IgG Ser IA-aCnc	P Na	67
+34231-1	102786	Aldost/Creat Ur-sRto	Score Aldrete	61
+22607-6	104238	VEEV Ab Titr Ser	MS Servoi Vee	62
+4659-9	100091	LAP WBC-cCnc	LAP	100
+9327-8	102883	PS IgM Ser Ql IA	PS	100
+9327-8	104717	PS IgM Ser Ql IA	PS	100
+14196-0	102046	Retics #	ETVI	60
+14196-0	102657	Retics #	ETS	67
+14196-0	107828	Retics #	IRec	60
+14196-0	107830	Retics #	PRec	60
+53576-5	113045	PH monitoring report Doc	P EEG Monitoring	77
+70264-7	113047	Creat Plr/Ser	CRRT praeF	61
+70264-7	113048	Creat Plr/Ser	CRRT praeF	61
+49765-1	102721	Calcium Bld-mCnc	Calcium	100
+49765-1	102743	Calcium Bld-mCnc	Calcium	100
+49765-1	103054	Calcium Bld-mCnc	Calcium	100
+49765-1	107934	Calcium Bld-mCnc	P ADS MS ADS Calcium postFilter	61
+49765-1	107935	Calcium Bld-mCnc	P ADS MS ADS Calcium preFilter	61
+18970-4	102885	Pip+Tazo Susc Islt	MS PIP	67
+18970-4	103422	Pip+Tazo Susc Islt	MS PIP	67
+29463-7	6	Weight	Gewicht	62
+29463-7	117218	Weight	G5 Body Weight	100
+42512-4	108243	IgE Ur-aCnc	Geburt an	70
+11502-2	100	Laboratory report	Laborwert	62
+60024-7	108720	LDH CSF L to P-cCnc	P CSF Doku	67
+60590-7	105241	Medication dispensed.brief Doc	F MedDoku Vormedikation	60
+35004-1	102408	Polys # Snv	p-SV	62
+14650-6	105025	Citrate 24h Ur-sRate	Highrate StimRate	65
+31409-6	104236	SNV IgM Ser-aCnc	MS Servoi Cdyn	60
+24518-3	102721	Calcium/Creat Ur-sRto	Calcium	100
+24518-3	102743	Calcium/Creat Ur-sRto	Calcium	100
+24518-3	103054	Calcium/Creat Ur-sRto	Calcium	100
+24518-3	104962	Calcium/Creat Ur-sRto	CRRT MS CalciumVolKum	62
+24518-3	104968	Calcium/Creat Ur-sRto	CRRT MS Calciumfluss	63
+24518-3	104974	Calcium/Creat Ur-sRto	CRRT CalciumFiltrat	65
+24518-3	104985	Calcium/Creat Ur-sRto	CRRT Doku CalciumLoesung	62
+24518-3	104995	Calcium/Creat Ur-sRto	CRRT CalciumFiltrat	65
+24518-3	105006	Calcium/Creat Ur-sRto	CRRT CalciumLoesung	60
+24518-3	107935	Calcium/Creat Ur-sRto	P ADS MS ADS Calcium preFilter	60
+412-7	102885	Pip+Tazo Islt MIC	MS PIP	67
+412-7	103422	Pip+Tazo Islt MIC	MS PIP	67
+2190-7	103431	DHEA-S Amn-mCnc	MS Mande	61
+10737-5	103819	Virus Stl EM	NIRS MS	63
+9780-8	108506	Sperm # Smn	P NBP reArm	60
+5156-5	103158	EBV NA IgG Ser Ql IA	Na	100
+5156-5	103190	EBV NA IgG Ser Ql IA	Na	100
+5156-5	104882	EBV NA IgG Ser Ql IA	Na	100
+5156-5	104898	EBV NA IgG Ser Ql IA	Na	100
+5156-5	104923	EBV NA IgG Ser Ql IA	Na	100
+5156-5	104938	EBV NA IgG Ser Ql IA	Na	100
+5156-5	110787	EBV NA IgG Ser Ql IA	P Na	67
+5156-5	110807	EBV NA IgG Ser Ql IA	P Na	67
+9271-8	101973	10M Apgar Score	Score SAPS2	62
+9271-8	101992	10M Apgar Score	Score SOFA	67
+9271-8	102764	10M Apgar Score	Score ARDS	67
+9271-8	102784	10M Apgar Score	Score RASS	67
+9271-8	102785	10M Apgar Score	Score AIS	71
+9271-8	102787	10M Apgar Score	Score APACHE2	64
+9271-8	102788	10M Apgar Score	Score Apgar	100
+9271-8	102791	10M Apgar Score	Score BPS	71
+9271-8	102792	10M Apgar Score	Score CIWA	67
+9271-8	102795	10M Apgar Score	Score CRIB	67
+9271-8	102796	10M Apgar Score	Score DRS	71
+9271-8	102798	10M Apgar Score	Score GDS	71
+9271-8	102800	10M Apgar Score	Score Kuss	67
+9271-8	102801	10M Apgar Score	Score MAAS	72
+9271-8	102802	10M Apgar Score	Score MMS	71
+9271-8	102803	10M Apgar Score	Score MOF	71
+9271-8	102804	10M Apgar Score	Score mRS	71
+9271-8	102806	10M Apgar Score	Score NIHSS	62
+9271-8	102807	10M Apgar Score	Score NIPS	67
+9271-8	102810	10M Apgar Score	Score RSS	71
+9271-8	102811	10M Apgar Score	Score RTS	71
+9271-8	102812	10M Apgar Score	Score SAS	71
+9271-8	102813	10M Apgar Score	Score Lachs	62
+9271-8	102815	10M Apgar Score	Score VICS	67
+9271-8	103444	10M Apgar Score	Score DGAI	67
+9271-8	103458	10M Apgar Score	Score DGAI	67
+9271-8	103506	10M Apgar Score	Score DGAI	67
+9271-8	103507	10M Apgar Score	Score DGAI	67
+9271-8	103509	10M Apgar Score	Score DGAI	67
+9271-8	103510	10M Apgar Score	Score DGAI	67
+9271-8	103511	10M Apgar Score	Score DGAI	67
+9271-8	103512	10M Apgar Score	Score DGAI	67
+9271-8	103518	10M Apgar Score	Score DGAI	67
+9271-8	103523	10M Apgar Score	Score DGAI	67
+9271-8	103527	10M Apgar Score	Score DGAI	67
+9271-8	103536	10M Apgar Score	Score DGAI	67
+9271-8	103538	10M Apgar Score	Score DGAI	67
+9271-8	103540	10M Apgar Score	Score DGAI	67
+9271-8	103543	10M Apgar Score	Score DGAI	67
+9271-8	103544	10M Apgar Score	Score DGAI	67
+9271-8	103545	10M Apgar Score	Score DGAI	67
+9271-8	103550	10M Apgar Score	Score DGAI	67
+9271-8	103551	10M Apgar Score	Score DGAI	67
+9271-8	103554	10M Apgar Score	Score DGAI	67
+9271-8	103556	10M Apgar Score	Score DGAI	67
+9271-8	103557	10M Apgar Score	Score DGAI	67
+9271-8	103558	10M Apgar Score	Score DGAI	67
+9271-8	103559	10M Apgar Score	Score DGAI	67
+9271-8	103560	10M Apgar Score	Score DGAI	67
+9271-8	103562	10M Apgar Score	Score DGAI	67
+9271-8	105222	10M Apgar Score	Score NRS	71
+9271-8	105223	10M Apgar Score	Score BPS	71
+9271-8	106651	10M Apgar Score	Score UStix	62
+9271-8	108395	10M Apgar Score	Score FLACC	62
+9271-8	108441	10M Apgar Score	Score SOS	71
+9271-8	108458	10M Apgar Score	Score SOS	71
+9271-8	108680	10M Apgar Score	Score NACA	67
+9271-8	108684	10M Apgar Score	Score ISS	71
+9271-8	110976	10M Apgar Score	Score FOUR	67
+9271-8	117221	10M Apgar Score	Score	100
+9271-8	117225	10M Apgar Score	Score Race	67
+25495-3	104108	Phe 24h Ur-sRate	Temperatur 2a	62
+25495-3	104109	Phe 24h Ur-sRate	Temperatur 2b	62
+19840-8	107842	Breaths.spont+mech on vent	MS Spont	77
+32162-0	108738	Cells # Plr Manual	P Celestangabe	60
+40619-9	103888	pCO2 temp adj BldV	Doku Temp	62
+40619-9	105049	pCO2 temp adj BldV	CRRT Temp	62
+40619-9	105050	pCO2 temp adj BldV	CRRT Temp	62
+27875-4	108157	Insulin sp6 p chal SerPl-aCnc	Insulin ja	82
+27875-4	108158	Insulin sp6 p chal SerPl-aCnc	Insulin nein	74
+10333-3	103258	Appearance CSF	ApneaRate	61
+5278-7	107935	P falciparum Ab Ser-aCnc	P ADS MS ADS Calcium preFilter	60
+7884-0	103158	EBV NA IgM Ser Ql	Na	100
+7884-0	103190	EBV NA IgM Ser Ql	Na	100
+7884-0	104882	EBV NA IgM Ser Ql	Na	100
+7884-0	104898	EBV NA IgM Ser Ql	Na	100
+7884-0	104923	EBV NA IgM Ser Ql	Na	100
+7884-0	104938	EBV NA IgM Ser Ql	Na	100
+7884-0	110787	EBV NA IgM Ser Ql	P Na	67
+7884-0	110807	EBV NA IgM Ser Ql	P Na	67
+47663-0	108157	Insulin 30M p Glc SerPl-aCnc	Insulin ja	82
+47663-0	108158	Insulin 30M p Glc SerPl-aCnc	Insulin nein	74
+19256-7	103888	pO2 temp adj BldC	Doku Temp	62
+19256-7	105049	pO2 temp adj BldC	CRRT Temp	62
+19256-7	105050	pO2 temp adj BldC	CRRT Temp	62
+56533-3	108157	Insulin IgG Ser-aCnc	Insulin ja	82
+56533-3	108158	Insulin IgG Ser-aCnc	Insulin nein	74
+33331-0	104232	WNV IgM Titr Ser	MS Servoi WOBv	60
+16713-0	105080	CMV Ab CSF-aCnc	C2 F CMV	61
+32112-5	110752	Sertraline Ur Ql	P Strahler	62
+25686-7	108157	Insulin sp11 p chal SerPl-sCnc	Insulin ja	82
+25686-7	108158	Insulin sp11 p chal SerPl-sCnc	Insulin nein	74
+11087-4	108157	Insulin Ab Titr Ser	Insulin ja	82
+11087-4	108158	Insulin Ab Titr Ser	Insulin nein	74
+56546-5	108157	Insulin Ab Ser IA-aCnc	Insulin ja	82
+56546-5	108158	Insulin Ab Ser IA-aCnc	Insulin nein	74
+12739-9	108157	Insulin sp2 p chal SerPl-mCnc	Insulin ja	82
+12739-9	108158	Insulin sp2 p chal SerPl-mCnc	Insulin nein	74
+43579-2	107985	C3 Plr-mCnc	P C3	67
+43579-2	107992	C3 Plr-mCnc	P C3	67
+43579-2	108010	C3 Plr-mCnc	P C3	67
+43579-2	108028	C3 Plr-mCnc	P MS C3	67
+43579-2	108031	C3 Plr-mCnc	P MS C3	67
+43579-2	108034	C3 Plr-mCnc	P MS C3 RC	67
+43579-2	108039	C3 Plr-mCnc	P MS C3 RSB	64
+43579-2	110828	C3 Plr-mCnc	P C3	67
+43579-2	110831	C3 Plr-mCnc	P C3	67
+19817-6	100008	Complications	Vormedikation	62
+19817-6	101433	Complications	Compliance	70
+19817-6	103289	Complications	MS Compliance	69
+19817-6	103329	Complications	MS Compliance	69
+19817-6	106597	Complications	Vormedikation	62
+31372-6	103158	EBV NA Ab Ser-aCnc	Na	100
+31372-6	103190	EBV NA Ab Ser-aCnc	Na	100
+31372-6	104882	EBV NA Ab Ser-aCnc	Na	100
+31372-6	104898	EBV NA Ab Ser-aCnc	Na	100
+31372-6	104923	EBV NA Ab Ser-aCnc	Na	100
+31372-6	104938	EBV NA Ab Ser-aCnc	Na	100
+31372-6	110787	EBV NA Ab Ser-aCnc	P Na	67
+31372-6	110807	EBV NA Ab Ser-aCnc	P Na	67
+40290-9	108157	Insulin 1.5h p chal SerPl-sCnc	Insulin ja	82
+40290-9	108158	Insulin 1.5h p chal SerPl-sCnc	Insulin nein	74
+56483-1	110890	PBG Stl-mCnt	P C3 SHT	60
+32032-5	102883	PS IgG Ser IA-aCnc	PS	100
+32032-5	104717	PS IgG Ser IA-aCnc	PS	100
+5249-8	104245	MuV Ab Titr Ser CF	MS Servoi AF	60
+5249-8	104246	MuV Ab Titr Ser CF	MS Servoi Af	60
+12587-2	103265	Creat 6h Ur-mRate	MS BreathRate	60
+12587-2	104973	Creat 6h Ur-mRate	CRRT Temperatur	62
+12587-2	104994	Creat 6h Ur-mRate	CRRT Temperatur	62
+12587-2	110930	Creat 6h Ur-mRate	P Temperatur Rektal	61
+2482-8	108157	Insulin Ab Ser-mCnc	Insulin ja	82
+2482-8	108158	Insulin Ab Ser-mCnc	Insulin nein	74
+14873-4	102040	pH BldCo	p-CO	67
+6605-0	100077	L inter Ag Tiss Ql IF	SM AV Intervall	61
+8330-3	103888	Bdy temp IV	Doku Temp	62
+8330-3	105049	Bdy temp IV	CRRT Temp	62
+8330-3	105050	Bdy temp IV	CRRT Temp	62
+8330-3	110754	Bdy temp IV	P Doku Temp	64
+38253-1	101423	CO2 Spec-sCnc	CO2	100
+38253-1	101434	CO2 Spec-sCnc	CO2	100
+38253-1	108724	CO2 Spec-sCnc	P MS etCo2	61
+20657-3	104273	Taurine SerPl-sCnc	Servoi Tpause s	61
+46417-2	100203	PT BldC	PT	100
+46417-2	100676	PT BldC	PT	100
+46417-2	107976	PT BldC	P C3 Body Wt	63
+29953-7	104939	ANA Titr Ser	Start Na	60
+11556-8	108509	pO2 Bld	SpO2 2	62
+11556-8	117154	pO2 Bld	SpO2 l	77
+26801-1	104107	Prot 12h Ur-mRate	Temperatur 1a	60
+26801-1	104108	Prot 12h Ur-mRate	Temperatur 2a	60
+26801-1	104109	Prot 12h Ur-mRate	Temperatur 2b	60
+26801-1	104110	Prot 12h Ur-mRate	Temperatur 1b	60
+17464-9	108626	Pigeon Feather IgE Ql	P Lifetherm Neigung	60
+52760-6	100203	PT PIVKA sensitive Act/Nor BldC	PT	100
+52760-6	100676	PT PIVKA sensitive Act/Nor BldC	PT	100
+4121-0	103264	Amobarbital Dose	MS AMotal	64
+12741-5	108157	Insulin sp4 p chal SerPl-mCnc	Insulin ja	82
+12741-5	108158	Insulin sp4 p chal SerPl-mCnc	Insulin nein	74
+8072-1	108157	Insulin Ab Ser-aCnc	Insulin ja	82
+8072-1	108158	Insulin Ab Ser-aCnc	Insulin nein	74
+44760-7	101609	MELD score	Score Braden	67
+44760-7	101947	MELD score	Score TISS28	67
+44760-7	101973	MELD score	Score SAPS2	67
+44760-7	101992	MELD score	Score SOFA	67
+44760-7	102764	MELD score	Score ARDS	70
+44760-7	102771	MELD score	Score TISS10	67
+44760-7	102784	MELD score	Score RASS	67
+44760-7	102785	MELD score	Score AIS	71
+44760-7	102786	MELD score	Score Aldrete	70
+44760-7	102787	MELD score	Score APACHE2	67
+44760-7	102788	MELD score	Score Apgar	67
+44760-7	102789	MELD score	Score BernerSchmerzscore	67
+44760-7	102790	MELD score	Score Besinger	67
+44760-7	102791	MELD score	Score BPS	71
+44760-7	102792	MELD score	Score CIWA	67
+44760-7	102793	MELD score	Score Cleveland	72
+44760-7	102794	MELD score	Score ComfortSkala	67
+44760-7	102795	MELD score	Score CRIB	67
+44760-7	102796	MELD score	Score DRS	74
+44760-7	102797	MELD score	Score Dubois	67
+44760-7	102798	MELD score	Score GDS	74
+44760-7	102799	MELD score	Score KarnofskyIndex	67
+44760-7	102800	MELD score	Score Kuss	67
+44760-7	102801	MELD score	Score MAAS	70
+44760-7	102802	MELD score	Score MMS	74
+44760-7	102803	MELD score	Score MOF	74
+44760-7	102804	MELD score	Score mRS	74
+44760-7	102805	MELD score	Score MukositisSkala	67
+44760-7	102806	MELD score	Score NIHSS	67
+44760-7	102807	MELD score	Score NIPS	67
+44760-7	102808	MELD score	Score NORTON	67
+44760-7	102810	MELD score	Score RSS	71
+44760-7	102811	MELD score	Score RTS	71
+44760-7	102812	MELD score	Score SAS	71
+44760-7	102813	MELD score	Score Lachs	67
+44760-7	102815	MELD score	Score VICS	67
+44760-7	102816	MELD score	Score Waterlow	67
+44760-7	102832	MELD score	Score Barthel	70
+44760-7	102848	MELD score	Score Braden	67
+44760-7	103444	MELD score	Score DGAI	70
+44760-7	103458	MELD score	Score DGAI	70
+44760-7	103462	MELD score	Score DGAI EntlDatum	67
+44760-7	103463	MELD score	Score DGAI EntlZeit	67
+44760-7	103464	MELD score	Score DGAI EntlArzt	67
+44760-7	103492	MELD score	Score DGAI EntlPostVisiteDatum	67
+44760-7	103504	MELD score	Score DGAI AufnChronischeAS	67
+44760-7	103506	MELD score	Score DGAI	70
+44760-7	103507	MELD score	Score DGAI	70
+44760-7	103508	MELD score	Score DGAI AufnIndikationsfall	67
+44760-7	103509	MELD score	Score DGAI	70
+44760-7	103510	MELD score	Score DGAI	70
+44760-7	103511	MELD score	Score DGAI	70
+44760-7	103512	MELD score	Score DGAI	70
+44760-7	103513	MELD score	Score DGAI AufnNachOperation	67
+44760-7	103514	MELD score	Score DGAI AufnTraumaPolytrauma	67
+44760-7	103515	MELD score	Score DGAI AufnVonExterne	67
+44760-7	103516	MELD score	Score DGAI AufnVonNotaufnahmeNAW	67
+44760-7	103517	MELD score	Score DGAI AufnVonOPAWR	67
+44760-7	103518	MELD score	Score DGAI	70
+44760-7	103519	MELD score	Score DGAI AufnWiederaufnahmeGroesser48h	67
+44760-7	103520	MELD score	Score DGAI AufnWiederaufnahmeKleiner48h	67
+44760-7	103521	MELD score	Score DGAI EntlInfoANV	67
+44760-7	103522	MELD score	Score DGAI EntlInfoARDSALI	67
+44760-7	103523	MELD score	Score DGAI	70
+44760-7	103524	MELD score	Score DGAI EntlInfoECMOILA	67
+44760-7	103525	MELD score	Score DGAI EntlInfoBL	67
+44760-7	103526	MELD score	Score DGAI EntlInfoHFOV	67
+44760-7	103527	MELD score	Score DGAI	70
+44760-7	103528	MELD score	Score DGAI EntlInfoMODMOV	67
+44760-7	103529	MELD score	Score DGAI EntlInfoMRSA	67
+44760-7	103530	MELD score	Score DGAI EntlInfoNET	67
+44760-7	103531	MELD score	Score DGAI EntlInfoObduktionDurchgefuehrt	67
+44760-7	103532	MELD score	Score DGAI EntlInfoPolytrauma	67
+44760-7	103533	MELD score	Score DGAI EntlInfoSepsis	67
+44760-7	103534	MELD score	Score DGAI EntlInfoTherapieMinima	67
+44760-7	103535	MELD score	Score DGAI EntlInfoVRE	67
+44760-7	103536	MELD score	Score DGAI	70
+44760-7	103537	MELD score	Score DGAI EntlNachExterneNormalklinik	67
+44760-7	103538	MELD score	Score DGAI	70
+44760-7	103539	MELD score	Score DGAI EntlNachHause	67
+44760-7	103540	MELD score	Score DGAI	70
+44760-7	103541	MELD score	Score DGAI EntlNachNormalstation	67
+44760-7	103542	MELD score	Score DGAI EntlNachWachstation	67
+44760-7	103543	MELD score	Score DGAI	70
+44760-7	103544	MELD score	Score DGAI	70
+44760-7	103545	MELD score	Score DGAI	70
+44760-7	103546	MELD score	Score DGAI EntlPostVisiteDurchgefuehrt	67
+44760-7	103547	MELD score	Score DGAI EntlPostVisiteRestitutioAdIntegrum	67
+44760-7	103548	MELD score	Score DGAI EntlZustandExitus	67
+44760-7	103549	MELD score	Score DGAI EntlZustandGeringBeeintraechtigungDauer	67
+44760-7	103550	MELD score	Score DGAI	70
+44760-7	103551	MELD score	Score DGAI	70
+44760-7	103552	MELD score	Score DGAI EntlZustandUeberlebenErheblicherDefekt	67
+44760-7	103553	MELD score	Score DGAI AufnGeplantChirurgisch	67
+44760-7	103554	MELD score	Score DGAI	70
+44760-7	103555	MELD score	Score DGAI AufnMedizinisch	67
+44760-7	103556	MELD score	Score DGAI	70
+44760-7	103557	MELD score	Score DGAI	70
+44760-7	103558	MELD score	Score DGAI	70
+44760-7	103559	MELD score	Score DGAI	70
+44760-7	103560	MELD score	Score DGAI	70
+44760-7	103561	MELD score	Score DGAI AufnBeatmet	67
+44760-7	103562	MELD score	Score DGAI	70
+44760-7	104289	MELD score	Score CAM ICU Punktwert Gesamt	67
+44760-7	105222	MELD score	Score NRS	71
+44760-7	105223	MELD score	Score BPS	71
+44760-7	106651	MELD score	Score UStix	67
+44760-7	107969	MELD score	Score Ramsay	67
+44760-7	108233	MELD score	Score Petrussa	67
+44760-7	108377	MELD score	Score BradenQ	67
+44760-7	108395	MELD score	Score FLACC	67
+44760-7	108402	MELD score	Score NPASS Schmerz	67
+44760-7	108410	MELD score	Score NPASS Sedierung	67
+44760-7	108424	MELD score	Score PRISMIII	67
+44760-7	108441	MELD score	Score SOS	71
+44760-7	108458	MELD score	Score SOS	71
+44760-7	108483	MELD score	Score Thompson	67
+44760-7	108484	MELD score	Score Finnigan	67
+44760-7	108641	MELD score	Score Finnegan	67
+44760-7	108680	MELD score	Score NACA	67
+44760-7	108684	MELD score	Score ISS	71
+44760-7	109749	MELD score	Score ComfortB beatmet Skala	67
+44760-7	110743	MELD score	Score ComfortB an Skala	67
+44760-7	110976	MELD score	Score FOUR	67
+44760-7	117126	MELD score	Score CAM ICU Punktwert GesamtAktualisierung2020	67
+44760-7	117221	MELD score	Score	100
+44760-7	117225	MELD score	Score Race	70
+10335-8	101992	Color CSF	Score SOFA	63
+10335-8	102815	Color CSF	Score VICS	63
+3151-8	100104	Inhaled O2 flow rate	Flow	100
+3151-8	100113	Inhaled O2 flow rate	Flow	100
+3151-8	100273	Inhaled O2 flow rate	Flow	100
+3151-8	100807	Inhaled O2 flow rate	O2	100
+3151-8	101620	Inhaled O2 flow rate	Flow	100
+3151-8	101624	Inhaled O2 flow rate	O2	100
+3151-8	101630	Inhaled O2 flow rate	Proc Flow	62
+3151-8	102198	Inhaled O2 flow rate	O2	100
+3151-8	103087	Inhaled O2 flow rate	F120 Flow	62
+3151-8	105019	Inhaled O2 flow rate	Rate	100
+3151-8	107821	Inhaled O2 flow rate	Flow	100
+3151-8	107998	Inhaled O2 flow rate	P C3 Flow	62
+3151-8	108525	Inhaled O2 flow rate	G5 Flow	73
+3151-8	108729	Inhaled O2 flow rate	P MS Flow	62
+3151-8	113046	Inhaled O2 flow rate	T1 Flow	73
+31871-7	100077	L inter Ag Spec Ql	SM AV Intervall	67
+96962-6	100203	B pert.PT Prmt Lower resp Ql NAA+probe	PT	100
+96962-6	100676	B pert.PT Prmt Lower resp Ql NAA+probe	PT	100
+50018-1	105083	CMV IgG Fld Ql	G5 F CMV	64
+19254-2	103888	pO2 temp adj Bld	Doku Temp	62
+19254-2	105049	pO2 temp adj Bld	CRRT Temp	62
+19254-2	105050	pO2 temp adj Bld	CRRT Temp	62
+1714-5	103292	PACP Ser-cCnc	MS CPAP	60
+2162-6	104973	Creat 24h Ur-mRate	CRRT Temperatur	61
+2162-6	104994	Creat 24h Ur-mRate	CRRT Temperatur	61
+34105-7	107989	Hosp D/C sum	P C3 F SIMV	61
+29528-7	103265	Hippurate/Creat Ur-sRto	MS BreathRate	61
+2750-8	108636	pH Plr	P Power	62
+14622-5	104236	Vit C SerPl-sCnc	MS Servoi Cdyn	60
+14622-5	104247	Vit C SerPl-sCnc	MS Servoi CPAP	60
+5901-4	100203	PT Cont PPP	PT	100
+5901-4	100676	PT Cont PPP	PT	100
+5734-9	108000	Silver SerPl-mCnc	P C3 passiver	60
+83085-1	110915	CEA SerPl IA-mCnc	MS Servoi I E	60
+14415-4	102721	Calcium Amn-sCnc	Calcium	100
+14415-4	102743	Calcium Amn-sCnc	Calcium	100
+14415-4	102749	Calcium Amn-sCnc	CalciumLoesung	60
+14415-4	102763	Calcium Amn-sCnc	CalciumLoesung	60
+14415-4	103054	Calcium Amn-sCnc	Calcium	100
+14415-4	107934	Calcium Amn-sCnc	P ADS MS ADS Calcium postFilter	61
+14415-4	107935	Calcium Amn-sCnc	P ADS MS ADS Calcium preFilter	61
+14415-4	107956	Calcium Amn-sCnc	P ADS CalciumLoesung	61
+20564-1	1273	SaO2 % Bld	SaO2	100
+20564-1	117154	SaO2 % Bld	SpO2 l	71
+23546-5	104238	VEEV IgM Ser Ql	MS Servoi Vee	64
+50503-2	108157	Insulin sp3 SerPl-aCnc	Insulin ja	82
+50503-2	108158	Insulin sp3 SerPl-aCnc	Insulin nein	74
+11211-0	101423	CO2 Fld-sCnc	CO2	100
+11211-0	101434	CO2 Fld-sCnc	CO2	100
+20565-8	101423	CO2 Bld-sCnc	CO2	100
+20565-8	101434	CO2 Bld-sCnc	CO2	100
+20565-8	107849	CO2 Bld-sCnc	MS DCO2	63
+96824-8	101973	Coag Score SOFA	Score SAPS2	62
+96824-8	101992	Coag Score SOFA	Score SOFA	100
+96824-8	102764	Coag Score SOFA	Score ARDS	67
+96824-8	102784	Coag Score SOFA	Score RASS	67
+96824-8	102785	Coag Score SOFA	Score AIS	71
+96824-8	102788	Coag Score SOFA	Score Apgar	69
+96824-8	102791	Coag Score SOFA	Score BPS	71
+96824-8	102792	Coag Score SOFA	Score CIWA	67
+96824-8	102794	Coag Score SOFA	Score ComfortSkala	61
+96824-8	102795	Coag Score SOFA	Score CRIB	67
+96824-8	102796	Coag Score SOFA	Score DRS	71
+96824-8	102798	Coag Score SOFA	Score GDS	71
+96824-8	102800	Coag Score SOFA	Score Kuss	67
+96824-8	102801	Coag Score SOFA	Score MAAS	67
+96824-8	102802	Coag Score SOFA	Score MMS	71
+96824-8	102803	Coag Score SOFA	Score MOF	71
+96824-8	102804	Coag Score SOFA	Score mRS	71
+96824-8	102806	Coag Score SOFA	Score NIHSS	62
+96824-8	102807	Coag Score SOFA	Score NIPS	67
+96824-8	102810	Coag Score SOFA	Score RSS	71
+96824-8	102811	Coag Score SOFA	Score RTS	71
+96824-8	102812	Coag Score SOFA	Score SAS	71
+96824-8	102813	Coag Score SOFA	Score Lachs	62
+96824-8	102815	Coag Score SOFA	Score VICS	67
+96824-8	103444	Coag Score SOFA	Score DGAI	67
+96824-8	103458	Coag Score SOFA	Score DGAI	67
+96824-8	103506	Coag Score SOFA	Score DGAI	67
+96824-8	103507	Coag Score SOFA	Score DGAI	67
+96824-8	103509	Coag Score SOFA	Score DGAI	67
+96824-8	103510	Coag Score SOFA	Score DGAI	67
+96824-8	103511	Coag Score SOFA	Score DGAI	67
+96824-8	103512	Coag Score SOFA	Score DGAI	67
+96824-8	103518	Coag Score SOFA	Score DGAI	67
+96824-8	103523	Coag Score SOFA	Score DGAI	67
+96824-8	103527	Coag Score SOFA	Score DGAI	67
+96824-8	103536	Coag Score SOFA	Score DGAI	67
+96824-8	103538	Coag Score SOFA	Score DGAI	67
+96824-8	103540	Coag Score SOFA	Score DGAI	67
+96824-8	103543	Coag Score SOFA	Score DGAI	67
+96824-8	103544	Coag Score SOFA	Score DGAI	67
+96824-8	103545	Coag Score SOFA	Score DGAI	67
+96824-8	103550	Coag Score SOFA	Score DGAI	67
+96824-8	103551	Coag Score SOFA	Score DGAI	67
+96824-8	103554	Coag Score SOFA	Score DGAI	67
+96824-8	103556	Coag Score SOFA	Score DGAI	67
+96824-8	103557	Coag Score SOFA	Score DGAI	67
+96824-8	103558	Coag Score SOFA	Score DGAI	67
+96824-8	103559	Coag Score SOFA	Score DGAI	67
+96824-8	103560	Coag Score SOFA	Score DGAI	67
+96824-8	103562	Coag Score SOFA	Score DGAI	67
+96824-8	105222	Coag Score SOFA	Score NRS	71
+96824-8	105223	Coag Score SOFA	Score BPS	71
+96824-8	106651	Coag Score SOFA	Score UStix	62
+96824-8	107969	Coag Score SOFA	Score Ramsay	67
+96824-8	108395	Coag Score SOFA	Score FLACC	62
+96824-8	108441	Coag Score SOFA	Score SOS	71
+96824-8	108458	Coag Score SOFA	Score SOS	71
+96824-8	108483	Coag Score SOFA	Score Thompson	62
+96824-8	108680	Coag Score SOFA	Score NACA	67
+96824-8	108684	Coag Score SOFA	Score ISS	71
+96824-8	110976	Coag Score SOFA	Score FOUR	67
+96824-8	117221	Coag Score SOFA	Score	100
+96824-8	117225	Coag Score SOFA	Score Race	67
+49141-5	110915	CEV IgM Titr Ser IF	MS Servoi I E	62
+2128-7	103122	Citrate Ur-mCnc	Doku Citratloesung	61
+2128-7	104975	Citrate Ur-mCnc	CRRT CitratBlut	60
+2128-7	104996	Citrate Ur-mCnc	CRRT CitratBlut	60
+2128-7	105007	Citrate Ur-mCnc	CRRT CitratLoesung	61
+49310-6	104250	ANA Pat Ser-Imp	MS Servoi Pplat	60
+26714-6	104803	PPA Mec-mCnt	MS C2 Ppeak	61
+26714-6	110937	PPA Mec-mCnt	P MS MAC	60
+19220-3	100807	O2 Ct BldV-sCnc	O2	100
+19220-3	101624	O2 Ct BldV-sCnc	O2	100
+19220-3	102198	O2 Ct BldV-sCnc	O2	100
+33809-5	108157	Insulin sp10 p chal SerPl-aCnc	Insulin ja	82
+33809-5	108158	Insulin sp10 p chal SerPl-aCnc	Insulin nein	74
+39156-5	101473	BMI	BMI	100
+39156-5	105045	BMI	BIS	67
+39011-2	108718	MuV IgG CSF Ql	P CSF MS ICP	62
+17443-3	110860	PPA Ur-mCnc	P RTX Min	60
+2004-0	102721	Calcium Ur-sCnc	Calcium	100
+2004-0	102743	Calcium Ur-sCnc	Calcium	100
+2004-0	102749	Calcium Ur-sCnc	CalciumLoesung	62
+2004-0	102763	Calcium Ur-sCnc	CalciumLoesung	62
+2004-0	103054	Calcium Ur-sCnc	Calcium	100
+2004-0	103062	Calcium Ur-sCnc	MS Calciumfluss	60
+2004-0	103121	Calcium Ur-sCnc	Doku Calciuoesung	62
+2004-0	104985	Calcium Ur-sCnc	CRRT Doku CalciumLoesung	62
+2004-0	105006	Calcium Ur-sCnc	CRRT CalciumLoesung	65
+2004-0	107934	Calcium Ur-sCnc	P ADS MS ADS Calcium postFilter	64
+2004-0	107935	Calcium Ur-sCnc	P ADS MS ADS Calcium preFilter	64
+14934-4	104889	Urate Ur-sCnc	IsoUF Rate	61
+27834-1	108157	Insulin 1.5h p 75 g Glc PO SerPl-aCnc	Insulin ja	82
+27834-1	108158	Insulin 1.5h p 75 g Glc PO SerPl-aCnc	Insulin nein	74
+5883-4	101449	Virus Bld Cult	Blutverlusst	62
+26459-8	104785	nRBC # CSF	MS C2 RC	62
+72200-9	103158	FLUAV NA seg sequence ID Islt Seq	Na	100
+72200-9	103190	FLUAV NA seg sequence ID Islt Seq	Na	100
+72200-9	104882	FLUAV NA seg sequence ID Islt Seq	Na	100
+72200-9	104898	FLUAV NA seg sequence ID Islt Seq	Na	100
+72200-9	104923	FLUAV NA seg sequence ID Islt Seq	Na	100
+72200-9	104938	FLUAV NA seg sequence ID Islt Seq	Na	100
+72200-9	110787	FLUAV NA seg sequence ID Islt Seq	P Na	67
+72200-9	110807	FLUAV NA seg sequence ID Islt Seq	P Na	67
+12186-3	102040	COP Plas	p-CO	67
+12186-3	107987	COP Plas	P C3 Plateau	60
+24522-5	104973	Epineph/Creat Ur-sRto	CRRT Temperatur	61
+24522-5	104994	Epineph/Creat Ur-sRto	CRRT Temperatur	61
+51549-4	108626	Pigeon Feather IgG Ql	P Lifetherm Neigung	60
+27867-1	108157	Insulin sp7 p chal SerPl-aCnc	Insulin ja	82
+27867-1	108158	Insulin sp7 p chal SerPl-aCnc	Insulin nein	74
+8302-2	103595	Body height	Besonderheit	61
+8302-2	105082	Body height	G5 Body Wt	67
+8302-2	108522	Body height	Besonderheit	61
+8302-2	117218	Body height	G5 Body Weight	80
+74468-0	103399	Quest frm def Doc	Defi Frequenz	60
+19258-3	103888	pO2 temp adj BldV	Doku Temp	62
+19258-3	105049	pO2 temp adj BldV	CRRT Temp	62
+19258-3	105050	pO2 temp adj BldV	CRRT Temp	62
+27852-3	108157	Insulin 5h p chal SerPl-aCnc	Insulin ja	82
+27852-3	108158	Insulin 5h p chal SerPl-aCnc	Insulin nein	74
+8048-1	104236	VZV IgM Ser-aCnc	MS Servoi Cdyn	60
+14621-7	103258	Appearance Prt	ApneaRate	61
+74105-8	1273	SaO2 % BldMV from pO2	SaO2	100
+16285-9	104973	Creat/Prot Ur	CRRT Temperatur	64
+16285-9	104994	Creat/Prot Ur	CRRT Temperatur	64
+35066-0	110789	Blasts # Plr	P BasisNa	63
+35695-6	104253	CEV IgM Titr Ser	Servoi I E	62
+35695-6	104274	CEV IgM Titr Ser	Servoi I E	62
+35695-6	110915	CEV IgM Titr Ser	MS Servoi I E	62
+34917-5	107830	Plasma cell prec/leuk NFr Bld	PRec	100
+43951-3	104789	CD2 Cells # Tiss	MS C2 TI	64
+43951-3	104809	CD2 Cells # Tiss	C2 ETS	60
+5232-4	108157	Insulin Ab Ser RIA-aCnc	Insulin ja	82
+5232-4	108158	Insulin Ab Ser RIA-aCnc	Insulin nein	74
+81114-1	104242	MVEV IgM Titr Ser	MS Servoi MVe	67
+81114-1	104243	MVEV IgM Titr Ser	MS Servoi MVi	60
+81114-1	104244	MVEV IgM Titr Ser	MS Servoi Mve	67
+96790-1	101973	SOFA total score SOFA	Score SAPS2	62
+96790-1	101992	SOFA total score SOFA	Score SOFA	100
+96790-1	102764	SOFA total score SOFA	Score ARDS	67
+96790-1	102784	SOFA total score SOFA	Score RASS	67
+96790-1	102785	SOFA total score SOFA	Score AIS	71
+96790-1	102788	SOFA total score SOFA	Score Apgar	62
+96790-1	102791	SOFA total score SOFA	Score BPS	71
+96790-1	102792	SOFA total score SOFA	Score CIWA	67
+96790-1	102794	SOFA total score SOFA	Score ComfortSkala	71
+96790-1	102795	SOFA total score SOFA	Score CRIB	67
+96790-1	102796	SOFA total score SOFA	Score DRS	71
+96790-1	102798	SOFA total score SOFA	Score GDS	71
+96790-1	102800	SOFA total score SOFA	Score Kuss	67
+96790-1	102801	SOFA total score SOFA	Score MAAS	67
+96790-1	102802	SOFA total score SOFA	Score MMS	71
+96790-1	102803	SOFA total score SOFA	Score MOF	71
+96790-1	102804	SOFA total score SOFA	Score mRS	71
+96790-1	102806	SOFA total score SOFA	Score NIHSS	62
+96790-1	102807	SOFA total score SOFA	Score NIPS	67
+96790-1	102808	SOFA total score SOFA	Score NORTON	64
+96790-1	102810	SOFA total score SOFA	Score RSS	71
+96790-1	102811	SOFA total score SOFA	Score RTS	71
+96790-1	102812	SOFA total score SOFA	Score SAS	71
+96790-1	102813	SOFA total score SOFA	Score Lachs	62
+96790-1	102815	SOFA total score SOFA	Score VICS	67
+96790-1	102816	SOFA total score SOFA	Score Waterlow	60
+96790-1	102832	SOFA total score SOFA	Score Barthel	62
+96790-1	103444	SOFA total score SOFA	Score DGAI	67
+96790-1	103458	SOFA total score SOFA	Score DGAI	67
+96790-1	103506	SOFA total score SOFA	Score DGAI	67
+96790-1	103507	SOFA total score SOFA	Score DGAI	67
+96790-1	103509	SOFA total score SOFA	Score DGAI	67
+96790-1	103510	SOFA total score SOFA	Score DGAI	67
+96790-1	103511	SOFA total score SOFA	Score DGAI	67
+96790-1	103512	SOFA total score SOFA	Score DGAI	67
+96790-1	103518	SOFA total score SOFA	Score DGAI	67
+96790-1	103523	SOFA total score SOFA	Score DGAI	67
+96790-1	103527	SOFA total score SOFA	Score DGAI	67
+96790-1	103536	SOFA total score SOFA	Score DGAI	67
+96790-1	103538	SOFA total score SOFA	Score DGAI	67
+96790-1	103540	SOFA total score SOFA	Score DGAI	67
+96790-1	103543	SOFA total score SOFA	Score DGAI	67
+96790-1	103544	SOFA total score SOFA	Score DGAI	67
+96790-1	103545	SOFA total score SOFA	Score DGAI	67
+96790-1	103550	SOFA total score SOFA	Score DGAI	67
+96790-1	103551	SOFA total score SOFA	Score DGAI	67
+96790-1	103554	SOFA total score SOFA	Score DGAI	67
+96790-1	103556	SOFA total score SOFA	Score DGAI	67
+96790-1	103557	SOFA total score SOFA	Score DGAI	67
+96790-1	103558	SOFA total score SOFA	Score DGAI	67
+96790-1	103559	SOFA total score SOFA	Score DGAI	67
+96790-1	103560	SOFA total score SOFA	Score DGAI	67
+96790-1	103562	SOFA total score SOFA	Score DGAI	67
+96790-1	105222	SOFA total score SOFA	Score NRS	71
+96790-1	105223	SOFA total score SOFA	Score BPS	71
+96790-1	106651	SOFA total score SOFA	Score UStix	62
+96790-1	108395	SOFA total score SOFA	Score FLACC	62
+96790-1	108441	SOFA total score SOFA	Score SOS	71
+96790-1	108458	SOFA total score SOFA	Score SOS	71
+96790-1	108680	SOFA total score SOFA	Score NACA	67
+96790-1	108684	SOFA total score SOFA	Score ISS	71
+96790-1	110743	SOFA total score SOFA	Score ComfortB an Skala	62
+96790-1	110976	SOFA total score SOFA	Score FOUR	67
+96790-1	117221	SOFA total score SOFA	Score	100
+96790-1	117225	SOFA total score SOFA	Score Race	67
+4307-5	103842	Meperidine Dose	Doku Triadyne mittePause	62
+4307-5	103860	Meperidine Dose	Doku Triadyne Temp	61
+47283-7	102040	PMV BldCo	p-CO	62
+47283-7	107849	PMV BldCo	MS DCO2	62
+49723-0	102916	Tea IgG-mCnc	MS G5 TE	60
+2756-5	102037	pH Ur	p-SVR	60
+2756-5	110800	pH Ur	P UFRate	62
+2756-5	110857	pH Ur	P RTX	60
+2756-5	117162	pH Ur	P UFRate	62
+2026-3	101423	CO2 BldA-sCnc	CO2	100
+2026-3	101434	CO2 BldA-sCnc	CO2	100
+2026-3	107849	CO2 BldA-sCnc	MS DCO2	60
+2748-2	110784	pH Fld	P Fluss	62
+2748-2	110804	pH Fld	P Fluss	62
+91120-6	104033	AT III PPP Chromo.no added heparin	NO	100
+91120-6	110939	AT III PPP Chromo.no added heparin	P NO	67
+14245-5	102883	PS IgG Ser-aCnc	PS	100
+14245-5	104717	PS IgG Ser-aCnc	PS	100
+26454-9	104785	RBC # CSF	MS C2 RC	67
+26454-9	108716	RBC # CSF	P CSF MS LiquoGuard Liquorfluss	60
+26454-9	108717	RBC # CSF	P CSF MS Pcsf	60
+26454-9	108718	RBC # CSF	P CSF MS ICP	60
+26454-9	108719	RBC # CSF	P CSF LiquoGuard Pset	60
+26454-9	108720	RBC # CSF	P CSF Doku	60
+26454-9	110940	RBC # CSF	P CSF MS LiquoGuard Fuellstand	60
+26454-9	110941	RBC # CSF	P CSF LiquoGuard Vset	60
+33790-7	102721	Calcium sp1 p chal Ur-sCnc	Calcium	100
+33790-7	102743	Calcium sp1 p chal Ur-sCnc	Calcium	100
+33790-7	103054	Calcium sp1 p chal Ur-sCnc	Calcium	100
+33790-7	107934	Calcium sp1 p chal Ur-sCnc	P ADS MS ADS Calcium postFilter	60
+33790-7	107935	Calcium sp1 p chal Ur-sCnc	P ADS MS ADS Calcium preFilter	62
+17516-6	104786	Renin sup Plas-cCnc	MS C2 Rinsp	60
+10923-1	102139	Bromelin IgE Qn	Abdomen Nieren	62
+26607-2	104235	Cystathionin SerPl-sCnc	MS Servoi Cstatic	60
+14417-0	102721	Calcium Prt-sCnc	Calcium	100
+14417-0	102743	Calcium Prt-sCnc	Calcium	100
+14417-0	102749	Calcium Prt-sCnc	CalciumLoesung	60
+14417-0	102763	Calcium Prt-sCnc	CalciumLoesung	60
+14417-0	103054	Calcium Prt-sCnc	Calcium	100
+14417-0	103058	Calcium Prt-sCnc	CalciumFiltrat	60
+14417-0	104962	Calcium Prt-sCnc	CRRT MS CalciumVolKum	65
+14417-0	104968	Calcium Prt-sCnc	CRRT MS Calciumfluss	67
+14417-0	104974	Calcium Prt-sCnc	CRRT CalciumFiltrat	63
+14417-0	104995	Calcium Prt-sCnc	CRRT CalciumFiltrat	63
+14417-0	107934	Calcium Prt-sCnc	P ADS MS ADS Calcium postFilter	61
+14417-0	107935	Calcium Prt-sCnc	P ADS MS ADS Calcium preFilter	61
+25447-4	108157	Insulin Free SerPl-sCnc	Insulin ja	82
+25447-4	108158	Insulin Free SerPl-sCnc	Insulin nein	74
+2753-2	102037	pH SerPl	p-SVR	62
+2753-2	104267	pH SerPl	Servoi Phoch	60
+2753-2	112017	pH SerPl	P SEF	62
+50501-6	108157	Insulin sp1 SerPl-aCnc	Insulin ja	82
+50501-6	108158	Insulin sp1 SerPl-aCnc	Insulin nein	74
+12585-6	103265	Creat 2h Ur-mRate	MS BreathRate	60
+12585-6	104108	Creat 2h Ur-mRate	Temperatur 2a	60
+12585-6	104109	Creat 2h Ur-mRate	Temperatur 2b	60
+12585-6	104973	Creat 2h Ur-mRate	CRRT Temperatur	62
+12585-6	104994	Creat 2h Ur-mRate	CRRT Temperatur	62
+12585-6	110930	Creat 2h Ur-mRate	P Temperatur Rektal	61
+8478-0	101441	BP mean	Pmean	83
+8478-0	103317	BP mean	MS Pmean	67
+8478-0	104772	BP mean	MS Pmean	67
+8478-0	107835	BP mean	MS Pmean	67
+8478-0	117177	BP mean	P Weaning	62
+39982-4	104961	Creat BS Ur-mCnc	CRRT MS UFR BFR	65
+41647-9	101423	CO2 BldA Calc-sCnc	CO2	100
+41647-9	101434	CO2 BldA Calc-sCnc	CO2	100
+25362-5	102721	Calcium 24h Ur-sCnc	Calcium	100
+25362-5	102743	Calcium 24h Ur-sCnc	Calcium	100
+25362-5	103054	Calcium 24h Ur-sCnc	Calcium	100
+14359-4	104714	Gram Stn Prt	T Rampe	63
+51732-6	1273	SaO2 % BldC from pO2	SaO2	100
+8051-5	104238	VEEV IgM Ser-aCnc	MS Servoi Vee	60
+42206-3	108718	IgA CSF/SerPl	P CSF MS ICP	64
+5677-0	104108	Lead 24h Ur-mRate	Temperatur 2a	60
+5677-0	104109	Lead 24h Ur-mRate	Temperatur 2b	60
+39456-9	102788	APAP Ur-sCnc	Score Apgar	61
+56953-3	100077	L inter IgM Ser Ql IA	SM AV Intervall	61
+47862-8	108157	Insulin p meal SerPl-aCnc	Insulin ja	82
+47862-8	108158	Insulin p meal SerPl-aCnc	Insulin nein	74
+80600-0	100203	B pert.PT Prmt Nph Ql NAA+probe	PT	100
+80600-0	100676	B pert.PT Prmt Nph Ql NAA+probe	PT	100
+33819-4	108157	Insulin sp9 p chal SerPl-aCnc	Insulin ja	82
+33819-4	108158	Insulin sp9 p chal SerPl-aCnc	Insulin nein	74
+43942-2	108157	Insulin Free SerPl-mCnc	Insulin ja	82
+43942-2	108158	Insulin Free SerPl-mCnc	Insulin nein	74
+9838-4	104245	LKM Ab Titr Ser IF	MS Servoi AF	60
+9838-4	104246	LKM Ab Titr Ser IF	MS Servoi Af	60
+24127-3	100203	B pert.PT IgG Ser IA-aCnc	PT	100
+24127-3	100676	B pert.PT IgG Ser IA-aCnc	PT	100
+2746-6	102055	pH BldV	LVP	60
+3184-9	103568	ACT Bld	IABP ACAT	62
+3184-9	103586	ACT Bld	MS ECMO ACT	60
+29536-0	104236	WNV IgM Ser-aCnc	MS Servoi Cdyn	60
+47282-9	107849	MCV BldCo	MS DCO2	62
+92244-3	103158	Micro resist mut NA change type Islt/Spm	Na	100
+92244-3	103190	Micro resist mut NA change type Islt/Spm	Na	100
+92244-3	104882	Micro resist mut NA change type Islt/Spm	Na	100
+92244-3	104898	Micro resist mut NA change type Islt/Spm	Na	100
+92244-3	104923	Micro resist mut NA change type Islt/Spm	Na	100
+92244-3	104938	Micro resist mut NA change type Islt/Spm	Na	100
+92244-3	110787	Micro resist mut NA change type Islt/Spm	P Na	67
+92244-3	110807	Micro resist mut NA change type Islt/Spm	P Na	67
+82179-3	100203	B pert.PT Prmt Nph Ql NAA+non-probe	PT	100
+82179-3	100676	B pert.PT Prmt Nph Ql NAA+non-probe	PT	100
+26035-6	104247	Serotonin Plas-sCnc	MS Servoi CPAP	61
+33633-9	107830	HBV preC TAG Mut Ser Ql NAA+probe	PRec	100
+58372-4	104973	Meprobamate/Creat Ur	CRRT Temperatur	63
+58372-4	104994	Meprobamate/Creat Ur	CRRT Temperatur	63
+16551-4	101423	CO2 BldC-sCnc	CO2	100
+16551-4	101434	CO2 BldC-sCnc	CO2	100
+16551-4	107849	CO2 BldC-sCnc	MS DCO2	60
+12181-4	102721	Calcium Fld-sCnc	Calcium	100
+12181-4	102743	Calcium Fld-sCnc	Calcium	100
+12181-4	102749	Calcium Fld-sCnc	CalciumLoesung	67
+12181-4	102753	Calcium Fld-sCnc	Mess CalciumFluss	67
+12181-4	102763	Calcium Fld-sCnc	CalciumLoesung	67
+12181-4	103054	Calcium Fld-sCnc	Calcium	100
+12181-4	103058	Calcium Fld-sCnc	CalciumFiltrat	60
+12181-4	103062	Calcium Fld-sCnc	MS Calciumfluss	71
+12181-4	104968	Calcium Fld-sCnc	CRRT MS Calciumfluss	61
+12181-4	104974	Calcium Fld-sCnc	CRRT CalciumFiltrat	63
+12181-4	104995	Calcium Fld-sCnc	CRRT CalciumFiltrat	63
+12181-4	105006	Calcium Fld-sCnc	CRRT CalciumLoesung	63
+12181-4	107934	Calcium Fld-sCnc	P ADS MS ADS Calcium postFilter	61
+12181-4	107935	Calcium Fld-sCnc	P ADS MS ADS Calcium preFilter	61
+7044-1	102885	Pip+Tazo Islt Grad strip	MS PIP	67
+7044-1	103422	Pip+Tazo Islt Grad strip	MS PIP	67
+5259-7	104245	MBP Ab Titr Ser IF	MS Servoi AF	60
+5259-7	104246	MBP Ab Titr Ser IF	MS Servoi Af	60
+6216-6	110778	P betae IgE Qn	P MS Leitfaehigkeit	61
+6216-6	117156	P betae IgE Qn	P MS Leitfaehigkeit	61
+27863-0	108157	Insulin 2.5h p chal SerPl-aCnc	Insulin ja	82
+27863-0	108158	Insulin 2.5h p chal SerPl-aCnc	Insulin nein	74
+8310-5	101007	Body temperature	Temperaturstatus	62
+8310-5	102158	Body temperature	Koerpertemperatur	67
+8310-5	102583	Body temperature	Temperatur	77
+8310-5	102610	Body temperature	Temperatur	77
+8310-5	102622	Body temperature	Mess Temperatur	71
+8310-5	102623	Body temperature	Mess Temperatur	71
+8310-5	102678	Body temperature	Temperatur	77
+8310-5	102943	Body temperature	Temperatur	77
+8310-5	102956	Body temperature	BM25 Temperatur	77
+8310-5	102968	Body temperature	ADM Temperatur	80
+8310-5	102980	Body temperature	Temperatur	77
+8310-5	102993	Body temperature	BM25 Temperatur	77
+8310-5	103007	Body temperature	ADM Temperatur	80
+8310-5	103161	Body temperature	Temperatur	77
+8310-5	103192	Body temperature	Temperatur	77
+8310-5	103229	Body temperature	Temperatur	77
+8310-5	103244	Body temperature	Temperatur	77
+8310-5	103731	Body temperature	Doku Temperatur	77
+8310-5	103734	Body temperature	Doku ECMOTemperatur	69
+8310-5	103737	Body temperature	ECMOTemperatur	73
+8310-5	103745	Body temperature	BM25 Temperaturstufe	72
+8310-5	103746	Body temperature	BM25 Temperaturstufe	72
+8310-5	104101	Body temperature	Temperatur1a	71
+8310-5	104102	Body temperature	Temperatur1b	71
+8310-5	104103	Body temperature	Temperatur2a	71
+8310-5	104104	Body temperature	Temperatur2b	71
+8310-5	104105	Body temperature	Temperatur3a	71
+8310-5	104106	Body temperature	Temperatur3b	71
+8310-5	104107	Body temperature	Temperatur 1a	76
+8310-5	104108	Body temperature	Temperatur 2a	76
+8310-5	104109	Body temperature	Temperatur 2b	83
+8310-5	104110	Body temperature	Temperatur 1b	83
+8310-5	104111	Body temperature	Temperatur 3a	76
+8310-5	104112	Body temperature	Temperatur 3b	83
+8310-5	104147	Body temperature	Airvo Temperatur	75
+8310-5	104831	Body temperature	Apherese Temperatur	63
+8310-5	104844	Body temperature	Apherese Temperatur	63
+8310-5	104880	Body temperature	Temperatur	77
+8310-5	104896	Body temperature	Temperatur	77
+8310-5	104921	Body temperature	Temperatur	77
+8310-5	104936	Body temperature	Temperatur	77
+8310-5	104973	Body temperature	CRRT Temperatur	71
+8310-5	104994	Body temperature	CRRT Temperatur	71
+8310-5	106327	Body temperature	MS TemperaturIst	69
+8310-5	106333	Body temperature	Temperatur	77
+8310-5	106337	Body temperature	Temperatur	77
+8310-5	106517	Body temperature	BairHugger Doku Temperatur	62
+8310-5	107854	Body temperature	Doku Lufttemperatur	69
+8310-5	107857	Body temperature	Doku MS Lufttemperatur	63
+8310-5	107860	Body temperature	Lufttemperatur	67
+8310-5	107863	Body temperature	Doku Atom Lufttemperatur	65
+8310-5	107866	Body temperature	Atom Lufttemperatur	69
+8310-5	107939	Body temperature	P ADS ADS Systemtemperatur	63
+8310-5	107949	Body temperature	P ADS ADS Systemtemperatur	63
+8310-5	108632	Body temperature	BairHugger Temperatur	65
+8310-5	108742	Body temperature	P Temperatur DeltaT	69
+8310-5	110753	Body temperature	P Temperatur	79
+8310-5	110785	Body temperature	P Temperatur	79
+8310-5	110805	Body temperature	P Temperatur	79
+8310-5	110924	Body temperature	P Temperatur Venoes	69
+8310-5	110926	Body temperature	P Temperatur Haut	67
+8310-5	110927	Body temperature	P Temperatur Naso	73
+8310-5	110928	Body temperature	P Temperatur Oesophagial	60
+8310-5	110930	Body temperature	P Temperatur Rektal	63
+8310-5	110931	Body temperature	P Temperatur Allg	67
+8310-5	110933	Body temperature	P Temperatur Kern	67
+8310-5	110934	Body temperature	P Temperatur generic	61
+8310-5	110936	Body temperature	P Temperatur Kern	67
+8310-5	117157	Body temperature	P MS TemperaturIst	65
+8310-5	117161	Body temperature	P TemperaturZiel	75
+24462-4	110930	Hepta-CP 24h Ur-mRate	P Temperatur Rektal	60
+20388-5	104737	Nitrofurazone Susc Islt	MS Isofluran insp	60
+44274-9	108245	C bot Tox Spec IA	Sectio Notsectio	61
+60463-7	108157	Insulin Ab Ser-sCnc	Insulin ja	82
+60463-7	108158	Insulin Ab Ser-sCnc	Insulin nein	74
+27172-6	102721	Calcium 24h Stl-mCnt	Calcium	100
+27172-6	102743	Calcium 24h Stl-mCnt	Calcium	100
+27172-6	103054	Calcium 24h Stl-mCnt	Calcium	100
+27172-6	104968	Calcium 24h Stl-mCnt	CRRT MS Calciumfluss	60
+27172-6	107934	Calcium 24h Stl-mCnt	P ADS MS ADS Calcium postFilter	60
+10862-1	104245	BM Ab Titr Ser	MS Servoi AF	62
+10862-1	104246	BM Ab Titr Ser	MS Servoi Af	62
+29636-8	103258	Appearance Stl	ApneaRate	61
+13001-3	104973	Mandelate/Creat Ur	CRRT Temperatur	61
+13001-3	104994	Mandelate/Creat Ur	CRRT Temperatur	61
+10567-6	102742	Citrate Smn-sCnc	CitratLoesung	62
+10567-6	102748	Citrate Smn-sCnc	CitratLoesung	62
+10567-6	103051	Citrate Smn-sCnc	Citratloesung	62
+10567-6	103056	Citrate Smn-sCnc	Citratloesung	62
+10567-6	103061	Citrate Smn-sCnc	MS Citratfluss	60
+17322-9	102139	N men Ab Ser Ql	Abdomen Nieren	62
+17322-9	102140	N men Ab Ser Ql	Abdomen Leber	64
+7344-5	108626	Goose Feather IgG Qn	P Lifetherm Neigung	62
+30525-0	102045	Age	GEF	67
+49010-2	107981	PA ADP PRP-aCnc	P C3 PEEP CPAP	62
+49010-2	110820	PA ADP PRP-aCnc	P C3 PEEP CPAP	62
+19173-4	101596	AFP Plr-sCnc	Proc AF	63
+51479-4	110926	Sperm # Ur Auto	P Temperatur Haut	60
+14864-3	102040	pO2 BldCo	p-CO	62
+14864-3	107855	pO2 BldCo	Doku O2	62
+14864-3	117154	pO2 BldCo	SpO2 l	67
+33849-1	107830	Plasma cell prec/leuk NFr Bld Manual	PRec	100
+53788-6	103158	Na Urate Cry UrnS Ql Micro	Na	100
+53788-6	103190	Na Urate Cry UrnS Ql Micro	Na	100
+53788-6	104882	Na Urate Cry UrnS Ql Micro	Na	100
+53788-6	104898	Na Urate Cry UrnS Ql Micro	Na	100
+53788-6	104923	Na Urate Cry UrnS Ql Micro	Na	100
+53788-6	104938	Na Urate Cry UrnS Ql Micro	Na	100
+53788-6	110787	Na Urate Cry UrnS Ql Micro	P Na	67
+53788-6	110807	Na Urate Cry UrnS Ql Micro	P Na	67
+55976-5	108505	pH Fld.NB	P NBP liArm	60
+33455-7	103258	Appearance Spt	ApneaRate	61
+27874-7	108157	Insulin sp5 p chal SerPl-aCnc	Insulin ja	82
+27874-7	108158	Insulin sp5 p chal SerPl-aCnc	Insulin nein	74
+33798-0	103265	Creat 2h Ur-sRate	MS BreathRate	60
+35168-4	105020	AA SerPl-sCnc	A Sense	60
+35168-4	105033	AA SerPl-sCnc	A-Sense	60
+787-2	101627	MCV RBC Auto	Proc AMV	60
+74097-7	103433	Tacrolimus Bld LC/MS/MS-mCnc	MS i	67
+74097-7	107839	Tacrolimus Bld LC/MS/MS-mCnc	MS i	67
+74097-7	110780	Tacrolimus Bld LC/MS/MS-mCnc	P MS	67
+75756-7	103433	Bacteria Islt MS.MALDI-TOF	MS i	67
+75756-7	107839	Bacteria Islt MS.MALDI-TOF	MS i	67
+75756-7	110780	Bacteria Islt MS.MALDI-TOF	P MS	67
+18475-4	104973	Phe/Creat Ur-sRto	CRRT Temperatur	62
+18475-4	104994	Phe/Creat Ur-sRto	CRRT Temperatur	62
+16690-0	104973	Creat 72h Ur-mRate	CRRT Temperatur	61
+16690-0	104994	Creat 72h Ur-mRate	CRRT Temperatur	61
+9335-1	103258	Appearance Fld	ApneaRate	61
+8462-4	103045	BP dias	BM25 Dialysat	60
+8462-4	103124	BP dias	BM25 Dialysat	60
+8462-4	105045	BP dias	BIS	60
+10649-2	103062	Calicivirus Stl EM	MS Calciumfluss	61
+3298-7	104247	APAP SerPl-mCnc	MS Servoi CPAP	62
+53653-2	110833	pH Bifl	P BiasFlow	71
+10948-8	108626	Pigeon Feather IgE Qn	P Lifetherm Neigung	60
+17861-6	102721	Calcium SerPl-mCnc	Calcium	100
+17861-6	102743	Calcium SerPl-mCnc	Calcium	100
+17861-6	103054	Calcium SerPl-mCnc	Calcium	100
+17861-6	103062	Calcium SerPl-mCnc	MS Calciumfluss	61
+92726-9	103433	17OHP DBS LC/MS/MS-mCnc	MS i	67
+92726-9	107839	17OHP DBS LC/MS/MS-mCnc	MS i	67
+92726-9	110780	17OHP DBS LC/MS/MS-mCnc	P MS	67
+35654-3	104109	Creat/BW 24h Ur-RelMRat	Temperatur 2b	61
+281-6	106385	Imipenem Titr SBT	MS Rest Zeit min	61
+281-6	106390	Imipenem Titr SBT	MS Rest Zeit min	61
+40083-8	102721	Calcium 1D p chal SerPl-mCnc	Calcium	100
+40083-8	102743	Calcium 1D p chal SerPl-mCnc	Calcium	100
+40083-8	103054	Calcium 1D p chal SerPl-mCnc	Calcium	100
+40083-8	107934	Calcium 1D p chal SerPl-mCnc	P ADS MS ADS Calcium postFilter	62
+6053-3	102139	Brome IgE Qn	Abdomen Nieren	62
+12212-7	103158	EBV NA IgG Titr Ser IF	Na	100
+12212-7	103190	EBV NA IgG Titr Ser IF	Na	100
+12212-7	104882	EBV NA IgG Titr Ser IF	Na	100
+12212-7	104898	EBV NA IgG Titr Ser IF	Na	100
+12212-7	104923	EBV NA IgG Titr Ser IF	Na	100
+12212-7	104938	EBV NA IgG Titr Ser IF	Na	100
+12212-7	110787	EBV NA IgG Titr Ser IF	P Na	67
+12212-7	110807	EBV NA IgG Titr Ser IF	P Na	67
+8075-4	108157	Insulin Porcine Ab Ser-aCnc	Insulin ja	82
+8075-4	108158	Insulin Porcine Ab Ser-aCnc	Insulin nein	74
+22590-4	107934	T pallidum Ab Titr Ser	P ADS MS ADS Calcium postFilter	61
+50507-3	108157	Insulin sp7 SerPl-aCnc	Insulin ja	82
+50507-3	108158	Insulin sp7 SerPl-aCnc	Insulin nein	74
+96828-9	101609	Renal Score SOFA	Score Braden	64
+96828-9	101973	Renal Score SOFA	Score SAPS2	62
+96828-9	101992	Renal Score SOFA	Score SOFA	100
+96828-9	102764	Renal Score SOFA	Score ARDS	67
+96828-9	102784	Renal Score SOFA	Score RASS	69
+96828-9	102785	Renal Score SOFA	Score AIS	71
+96828-9	102788	Renal Score SOFA	Score Apgar	62
+96828-9	102791	Renal Score SOFA	Score BPS	71
+96828-9	102792	Renal Score SOFA	Score CIWA	67
+96828-9	102795	Renal Score SOFA	Score CRIB	67
+96828-9	102796	Renal Score SOFA	Score DRS	71
+96828-9	102798	Renal Score SOFA	Score GDS	71
+96828-9	102800	Renal Score SOFA	Score Kuss	67
+96828-9	102801	Renal Score SOFA	Score MAAS	67
+96828-9	102802	Renal Score SOFA	Score MMS	71
+96828-9	102803	Renal Score SOFA	Score MOF	71
+96828-9	102804	Renal Score SOFA	Score mRS	71
+96828-9	102806	Renal Score SOFA	Score NIHSS	62
+96828-9	102807	Renal Score SOFA	Score NIPS	67
+96828-9	102810	Renal Score SOFA	Score RSS	71
+96828-9	102811	Renal Score SOFA	Score RTS	71
+96828-9	102812	Renal Score SOFA	Score SAS	71
+96828-9	102813	Renal Score SOFA	Score Lachs	62
+96828-9	102815	Renal Score SOFA	Score VICS	67
+96828-9	102816	Renal Score SOFA	Score Waterlow	60
+96828-9	102832	Renal Score SOFA	Score Barthel	62
+96828-9	102848	Renal Score SOFA	Score Braden	64
+96828-9	103444	Renal Score SOFA	Score DGAI	67
+96828-9	103458	Renal Score SOFA	Score DGAI	67
+96828-9	103506	Renal Score SOFA	Score DGAI	67
+96828-9	103507	Renal Score SOFA	Score DGAI	67
+96828-9	103509	Renal Score SOFA	Score DGAI	67
+96828-9	103510	Renal Score SOFA	Score DGAI	67
+96828-9	103511	Renal Score SOFA	Score DGAI	67
+96828-9	103512	Renal Score SOFA	Score DGAI	67
+96828-9	103518	Renal Score SOFA	Score DGAI	67
+96828-9	103523	Renal Score SOFA	Score DGAI	67
+96828-9	103527	Renal Score SOFA	Score DGAI	67
+96828-9	103536	Renal Score SOFA	Score DGAI	67
+96828-9	103538	Renal Score SOFA	Score DGAI	67
+96828-9	103540	Renal Score SOFA	Score DGAI	67
+96828-9	103543	Renal Score SOFA	Score DGAI	67
+96828-9	103544	Renal Score SOFA	Score DGAI	67
+96828-9	103545	Renal Score SOFA	Score DGAI	67
+96828-9	103550	Renal Score SOFA	Score DGAI	67
+96828-9	103551	Renal Score SOFA	Score DGAI	67
+96828-9	103554	Renal Score SOFA	Score DGAI	67
+96828-9	103556	Renal Score SOFA	Score DGAI	67
+96828-9	103557	Renal Score SOFA	Score DGAI	67
+96828-9	103558	Renal Score SOFA	Score DGAI	67
+96828-9	103559	Renal Score SOFA	Score DGAI	67
+96828-9	103560	Renal Score SOFA	Score DGAI	67
+96828-9	103562	Renal Score SOFA	Score DGAI	67
+96828-9	105222	Renal Score SOFA	Score NRS	71
+96828-9	105223	Renal Score SOFA	Score BPS	71
+96828-9	106651	Renal Score SOFA	Score UStix	62
+96828-9	107969	Renal Score SOFA	Score Ramsay	71
+96828-9	108233	Renal Score SOFA	Score Petrussa	60
+96828-9	108377	Renal Score SOFA	Score BradenQ	62
+96828-9	108395	Renal Score SOFA	Score FLACC	62
+96828-9	108441	Renal Score SOFA	Score SOS	71
+96828-9	108458	Renal Score SOFA	Score SOS	71
+96828-9	108680	Renal Score SOFA	Score NACA	69
+96828-9	108684	Renal Score SOFA	Score ISS	71
+96828-9	110976	Renal Score SOFA	Score FOUR	67
+96828-9	117221	Renal Score SOFA	Score	100
+96828-9	117225	Renal Score SOFA	Score Race	67
+2923-1	104245	Vit A SerPl-mCnc	MS Servoi AF	64
+2923-1	104246	Vit A SerPl-mCnc	MS Servoi Af	64
+2923-1	104247	Vit A SerPl-mCnc	MS Servoi CPAP	60
+161-0	104733	Cephalothin Islt MIC	MS Halothan insp	67
+14246-3	102883	PS IgM Ser-aCnc	PS	100
+14246-3	104236	PS IgM Ser-aCnc	MS Servoi Cdyn	62
+14246-3	104717	PS IgM Ser-aCnc	PS	100
+5969-1	102050	PAP PPP IA-mCnc	PAP	100
+5969-1	107981	PAP PPP IA-mCnc	P C3 PEEP CPAP	62
+5969-1	110820	PAP PPP IA-mCnc	P C3 PEEP CPAP	62
+14339-6	108718	IgG MFr CSF	P CSF MS ICP	61
+6149-9	108157	Insulin Porcine IgE Qn	Insulin ja	82
+6149-9	108158	Insulin Porcine IgE Qn	Insulin nein	74
+30428-7	101627	MCV RBC	Proc AMV	67
+21260-5	103158	EBV NA Ab Titr Ser IF	Na	100
+21260-5	103190	EBV NA Ab Titr Ser IF	Na	100
+21260-5	104882	EBV NA Ab Titr Ser IF	Na	100
+21260-5	104898	EBV NA Ab Titr Ser IF	Na	100
+21260-5	104923	EBV NA Ab Titr Ser IF	Na	100
+21260-5	104938	EBV NA Ab Titr Ser IF	Na	100
+21260-5	110787	EBV NA Ab Titr Ser IF	P Na	67
+21260-5	110807	EBV NA Ab Titr Ser IF	P Na	67
+66493-8	103158	EBV NA 1 IgG Ser-aCnc	Na	100
+66493-8	103190	EBV NA 1 IgG Ser-aCnc	Na	100
+66493-8	104882	EBV NA 1 IgG Ser-aCnc	Na	100
+66493-8	104898	EBV NA 1 IgG Ser-aCnc	Na	100
+66493-8	104923	EBV NA 1 IgG Ser-aCnc	Na	100
+66493-8	104938	EBV NA 1 IgG Ser-aCnc	Na	100
+66493-8	110787	EBV NA 1 IgG Ser-aCnc	P Na	67
+66493-8	110807	EBV NA 1 IgG Ser-aCnc	P Na	67
+15923-6	110863	P frequentans IgE RAST Ql	P RTX Frequenz	62
+2462-0	104230	IgE Ser-mCnc	MS Servoi E	61
+2462-0	104239	IgE Ser-mCnc	MS Servoi e	61
+2462-0	104240	IgE Ser-mCnc	MS Servoi i	61
+12589-8	104973	Creat 12h Ur-mRate	CRRT Temperatur	61
+12589-8	104994	Creat 12h Ur-mRate	CRRT Temperatur	61
+27057-9	104233	Serotonin Ser-mCnc	MS Servoi Re	60
+27057-9	104234	Serotonin Ser-mCnc	MS Servoi Ri	60
+27057-9	104236	Serotonin Ser-mCnc	MS Servoi Cdyn	62
+4671-4	110897	Prot C Plas-mCnc	P C3 SBT Support min	61
+23868-3	110917	SNV IgM Titr Ser	MS Servoi Ti Tges	61
+13414-8	104249	Serine Amn-mCnc	MS Servoi Pmean	60
+643-7	104714	Gram Stn Pus	T Rampe	63
+1726-9	104247	cAMP SerPl-mCnc	MS Servoi CPAP	62
+5767-9	103258	Appearance Ur	ApneaRate	64
+25467-2	106521	Manganese SerPl-sCnc	Anamnese Nein	61
 \.
 
 
@@ -10955,14 +13506,11 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 9279-1	103035	Atemfrequenz	Gesamtatemfrequenz, ein Monitoring Parameter	80	f	1441
 8867-4	107875	Herzfrequenz	Gesamtfrequenz	69	f	1442
 9279-1	107875	Atemfrequenz	Gesamtfrequenz	77	f	1443
-21840-4	5	Geschlecht [North American Association of Central Cancer Register Standard Version 11]	Geschlecht des Patienten	100	f	1444
-76689-9	5	Geschlecht, zugewiesen bei Geburt	Geschlecht des Patienten	100	f	1445
 14348-7	6	Spezifisches Gewicht von Peritonealflüssigkeit mit Refraktometrie	Gewicht des Patienten	100	f	1446
 17608-1	6	Gewicht [Masse/Zeit] von 48-Stunden-Stuhl	Gewicht des Patienten	100	f	1447
 17609-9	6	Gewicht [Masse/Zeit] von 72-Stunden-Stuhl	Gewicht des Patienten	100	f	1448
 21612-7	6	Alter - Berichtet	Gewicht des Patienten	62	f	1449
 25530-7	6	Gewicht [Masse/Zeit] von 24-Stunden-Stuhl	Gewicht des Patienten	100	f	1450
-29463-7	6	Körpergewicht	Gewicht des Patienten	74	f	1451
 29638-4	6	Gewicht von Gewebe	Gewicht des Patienten	100	f	1452
 2964-5	6	Spezifisches Gewicht von Körperflüssigkeit	Gewicht des Patienten	100	f	1453
 2965-2	6	Spezifisches Gewicht von Urin	Gewicht des Patienten	100	f	1454
@@ -10994,6 +13542,8 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 12457-8	103045	Volumen von Dialysat	Gialysatrate	70	f	1480
 13057-5	103045	Thrombozyten [Einheiten/Volumen] in Dialysat	Gialysatrate	61	f	1481
 13494-0	103045	Volumen von 4-Stunden-Dialysat	Gialysatrate	64	f	1482
+76689-9	5	Geschlecht, zugewiesen bei Geburt	Geschlecht des Patienten	100	t	1445
+29463-7	6	Körpergewicht	Gewicht des Patienten	74	t	1451
 13495-7	103045	Volumen von 24-Stunden-Dialysat	Gialysatrate	64	f	1483
 2595-7	103045	Magnesium [Mol/Volumen] in Dialysat	Gialysatrate	60	f	1484
 2775-5	103045	Phosphat [Masse/Volumen] in Dialysat	Gialysatrate	62	f	1485
@@ -11003,9 +13553,7 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 51617-9	103045	Farbe von Dialysat	Gialysatrate	69	f	1489
 5920-4	103045	Protein [Masse/Volumen] in Dialysat	Gialysatrate	71	f	1490
 8716-3	103045	Vitalparameter	Gialysatrate	62	f	1491
-8867-4	1266	Herzfrequenz	Herzfrequenz	100	f	1492
 9279-1	1266	Atemfrequenz	Herzfrequenz	75	f	1493
-8867-4	102168	Herzfrequenz	HerzfrequenzHerzfrequenz	67	f	1494
 26437-4	102533	Funktionstests	Herzfunktionsindex	62	f	1495
 77599-9	100072	Ergänzende Dokumentation	Herzindex	67	f	1496
 77599-9	102185	Ergänzende Dokumentation	Herzindex	67	f	1497
@@ -11056,6 +13604,8 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 427-5	104739	Rifampicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1542
 439-0	104739	Rosoxacin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1543
 447-3	104739	Sisomicin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	63	f	1544
+8867-4	1266	Herzfrequenz	Herzfrequenz	100	t	1492
+8867-4	102168	Herzfrequenz	HerzfrequenzHerzfrequenz	67	t	1494
 455-6	104739	Spiramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	62	f	1545
 491-1	104739	Temocillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	60	f	1546
 507-4	104739	Tobramycin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Inspiratorisch gemessene Desfluran Konzentration.	62	f	1547
@@ -11128,11 +13678,8 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 8310-5	105043	Körpertemperatur	kontrollierte Wassertemperatur, gemessener Wert	62	f	1614
 8330-3	105043	Körpertemperatur - Intravaskulär	kontrollierte Wassertemperatur, gemessener Wert	62	f	1615
 8289-1	108502	Kopfumfang okzipital-frontal Perzentil	Kopfumfang bit cm	83	f	1616
-9843-4	108502	Kopfumfang okzipital-frontal	Kopfumfang bit cm	83	f	1617
 8289-1	11	Kopfumfang okzipital-frontal Perzentil	Kopfumfang des Patienten in Zentimetern	100	f	1618
-9843-4	11	Kopfumfang okzipital-frontal	Kopfumfang des Patienten in Zentimetern	100	f	1619
 8289-1	101763	Kopfumfang okzipital-frontal Perzentil	Kopfumfang des Patienten (Kinder)	74	f	1620
-9843-4	101763	Kopfumfang okzipital-frontal	Kopfumfang des Patienten (Kinder)	74	f	1621
 29463-7	101324	Körpergewicht	Körperoberfläche des Patienten (fallbezogen)	62	f	1622
 3140-1	101324	Körperoberfläche abgeleitet aus Formel	Körperoberfläche des Patienten (fallbezogen)	100	f	1623
 55286-9	101324	Körperliche Untersuchung nach Körperbereichen	Körperoberfläche des Patienten (fallbezogen)	62	f	1624
@@ -11152,12 +13699,12 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 32771-8	1270	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in arteriellem Blut	Körpertemperatur	100	f	1638
 33254-4	1270	pH von arteriellem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur	100	f	1639
 34705-4	1270	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Körpertemperatur	100	f	1640
+9843-4	108502	Kopfumfang okzipital-frontal	Kopfumfang bit cm	83	t	1617
 39485-8	1270	pH von Kapillarblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur	100	f	1641
 39486-6	1270	pH von venösem Blut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur	100	f	1642
 40619-9	1270	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in venösem Blut	Körpertemperatur	100	f	1643
 40620-7	1270	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Kapillarblut	Körpertemperatur	100	f	1644
 47720-8	1270	pH von Nabelschnurblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur	100	f	1645
-8310-5	1270	Körpertemperatur	Körpertemperatur	100	f	1646
 8330-3	1270	Körpertemperatur - Intravaskulär	Körpertemperatur	100	f	1647
 8334-5	1270	Körpertemperatur - Harnblase	Körpertemperatur	100	f	1648
 19254-2	1271	Sauerstoff [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Blut	Körpertemperatur Messkanal 2	75	f	1649
@@ -11172,16 +13719,12 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 40619-9	1271	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in venösem Blut	Körpertemperatur Messkanal 2	75	f	1658
 40620-7	1271	Kohlenstoffdioxid [Partialdruck] angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin in Kapillarblut	Körpertemperatur Messkanal 2	75	f	1659
 47720-8	1271	pH von Nabelschnurblut angepasst an aktuelle Körpertemperatur des Patienten oder der Patientin	Körpertemperatur Messkanal 2	75	f	1660
-8310-5	1271	Körpertemperatur	Körpertemperatur Messkanal 2	100	f	1661
 8330-3	1271	Körpertemperatur - Intravaskulär	Körpertemperatur Messkanal 2	75	f	1662
 8334-5	1271	Körpertemperatur - Harnblase	Körpertemperatur Messkanal 2	76	f	1663
 14832-0	101441	Metanephrine [Mol/Volumen] in Urin	Mean Airway Pressure	60	f	1664
-29304-3	103135	Abgegebene Medikation	Medikament	70	f	1665
-29304-3	103136	Abgegebene Medikation	Medikament	70	f	1666
 55107-7	103135	Anhang - Dokument	Medikament	67	f	1667
 55107-7	103136	Anhang - Dokument	Medikament	67	f	1668
 29304-3	60	Abgegebene Medikation	Medikamentenmischung	60	f	1669
-9279-1	103127	Atemfrequenz	Messparameter: gemessene Atemfrequenz	65	f	1670
 48584-7	106354	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumoctanoat per os (Nuklearmedizinisch)	Messung nur unter ASV Intellivent	78	f	1671
 48585-4	106354	Magenentleerungszeit durch Messung des Exhalats nach 100 mg Natriumacetat per os (Nuklearmedizinisch)	Messung nur unter ASV Intellivent	78	f	1672
 103-2	104035	Ceforanid [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1673
@@ -11201,6 +13744,9 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 15-8	104035	Amoxicillin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1687
 160-2	104035	Cephalothin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1688
 164-4	104035	Cephapirin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1689
+8310-5	1271	Körpertemperatur	Körpertemperatur Messkanal 2	100	t	1661
+29304-3	103135	Abgegebene Medikation	Medikament	70	t	1665
+9279-1	103127	Atemfrequenz	Messparameter: gemessene Atemfrequenz	65	t	1670
 168-5	104035	Cephradin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1690
 172-7	104035	Chloramphenicol [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1691
 176-8	104035	Chlortetracyclin [Empfindlichkeit] mit minimaler letaler Konzentration (MLK)	Messwert der NO2 Konzentration bei NO Beatmung	62	f	1692
@@ -11447,7 +13993,6 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 33390-6	102902	Respiratorisches Synzytial-Virus Antikörper [Nachweis] in Serum	Messwert; exspiratorisches Tidalvolumen Einheit: ml	60	f	1933
 7990-5	102902	Respiratorisches Synzytial-Virus Antikörper [Einheiten/Volumen] in Serum	Messwert; exspiratorisches Tidalvolumen Einheit: ml	60	f	1934
 8867-4	103265	Herzfrequenz	Messwert: gemessene Atemfrequenz	62	f	1935
-9279-1	103265	Atemfrequenz	Messwert: gemessene Atemfrequenz	75	f	1936
 12-5	103130	Amikacin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert: gemessene O2 Konzentration des Gasgemisches	60	f	1937
 12-5	103216	Amikacin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert: gemessene O2 Konzentration des Gasgemisches	60	f	1938
 267-5	103130	Gentamicin [Empfindlichkeit] mit minimaler Hemmkonzentration (MHK)	Messwert: gemessene O2 Konzentration des Gasgemisches	61	f	1939
@@ -11822,7 +14367,6 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 3150-0	107879	Inhalierte Sauerstoffkonzentration	Sauerstoffkonzentration des abgegebenen Gasgemisches	81	f	2308
 11556-8	1272	Sauerstoff [Partialdruck] in Blut	Sauerstoffsättigung	61	f	2309
 19224-5	1272	Sauerstoffsättigung in gemischt-venösem Blut	Sauerstoffsättigung	100	f	2310
-20564-1	1272	Sauerstoffsättigung in Blut	Sauerstoffsättigung	100	f	2311
 2708-6	1272	Sauerstoffsättigung in arteriellem Blut	Sauerstoffsättigung	100	f	2312
 2709-4	1272	Sauerstoffsättigung in Kapillarblut	Sauerstoffsättigung	100	f	2313
 2711-0	1272	Sauerstoffsättigung in venösem Blut	Sauerstoffsättigung	100	f	2314
@@ -11850,6 +14394,7 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 74105-8	102010	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	Sauerstoffsättigung Pulsoxymetrie	72	f	2336
 21840-4	103844	Geschlecht [North American Association of Central Cancer Register Standard Version 11]	Schläge /sek	62	f	2337
 33514-1	103844	Volumen von Schweiß	Schläge /sek	67	f	2338
+20564-1	1272	Sauerstoffsättigung in Blut	Sauerstoffsättigung	100	t	2311
 10163-4	100038	Anamnese früherer Schwangerschaften	Schwangerschaftswoche, in welcher das Baby geboren wurde	63	f	2339
 82810-3	100038	Schwangerschaftsstatus	Schwangerschaftswoche, in welcher das Baby geboren wurde	63	f	2340
 90767-5	100038	Übersicht der Schwangerschaft - Dokument	Schwangerschaftswoche, in welcher das Baby geboren wurde	65	f	2341
@@ -11897,13 +14442,11 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 76215-3	102912	Systolischer Blutdruck invasiv	Unerwarteter positiver endexspiratorischer Druck, ein Monitoring-Parameter	62	f	2383
 8462-4	102912	Diastolischer Blutdruck	Unerwarteter positiver endexspiratorischer Druck, ein Monitoring-Parameter	71	f	2384
 8480-6	102912	Systolischer Blutdruck	Unerwarteter positiver endexspiratorischer Druck, ein Monitoring-Parameter	64	f	2385
-19220-3	1274	Sauerstoffgehalt in venösem Blut	venöse Sauerstoffsättigung	65	f	2386
 19224-5	1274	Sauerstoffsättigung in gemischt-venösem Blut	venöse Sauerstoffsättigung	86	f	2387
 20564-1	1274	Sauerstoffsättigung in Blut	venöse Sauerstoffsättigung	88	f	2388
 2705-2	1274	Sauerstoff [Partialdruck] in venösem Blut	venöse Sauerstoffsättigung	70	f	2389
 2708-6	1274	Sauerstoffsättigung in arteriellem Blut	venöse Sauerstoffsättigung	86	f	2390
 2709-4	1274	Sauerstoffsättigung in Kapillarblut	venöse Sauerstoffsättigung	86	f	2391
-2711-0	1274	Sauerstoffsättigung in venösem Blut	venöse Sauerstoffsättigung	89	f	2392
 2713-6	1274	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in Blut	venöse Sauerstoffsättigung	86	f	2393
 28642-7	1274	Sauerstoffsättigung in arteriellem Nabelschnurblut	venöse Sauerstoffsättigung	86	f	2394
 28643-5	1274	Sauerstoffsättigung in venösem Nabelschnurblut	venöse Sauerstoffsättigung	86	f	2395
@@ -11912,6 +14455,7 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 51733-4	1274	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	venöse Sauerstoffsättigung	86	f	2398
 59408-5	1274	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	venöse Sauerstoffsättigung	86	f	2399
 74105-8	1274	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in gemischt-venösem Blut	venöse Sauerstoffsättigung	86	f	2400
+2711-0	1274	Sauerstoffsättigung in venösem Blut	venöse Sauerstoffsättigung	89	t	2392
 33882-2	100905	Probennahme-Datum des Probenmaterials	Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit	100	f	2401
 41395-5	100905	Probennahme-Datum von Urin	Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit	100	f	2402
 91560-3	100905	Datum der Abreise vom Reiseziel	Verlegungszeit im Verlegungsprotokoll mit Datum und Uhrzeit	100	f	2403
@@ -11988,6 +14532,13 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 21112-8	4	Geburtsdatum	Geburtsdatum des Patienten	100	t	1218
 3150-0	103281	Inhalierte Sauerstoffkonzentration	gemessene O2 Konzentration im Inspirationsgas	64	t	1375
 3148-4	103439	Sauerstoff [Partialdruck] in Gas	gemessene Sauerstoffkonzentration im Atemgas	62	t	1421
+21840-4	5	Geschlecht [North American Association of Central Cancer Register Standard Version 11]	Geschlecht des Patienten	100	t	1444
+9843-4	11	Kopfumfang okzipital-frontal	Kopfumfang des Patienten in Zentimetern	100	t	1619
+9843-4	101763	Kopfumfang okzipital-frontal	Kopfumfang des Patienten (Kinder)	74	t	1621
+8310-5	1270	Körpertemperatur	Körpertemperatur	100	t	1646
+29304-3	103136	Abgegebene Medikation	Medikament	70	t	1666
+9279-1	103265	Atemfrequenz	Messwert: gemessene Atemfrequenz	75	t	1936
+19220-3	1274	Sauerstoffgehalt in venösem Blut	venöse Sauerstoffsättigung	65	t	2386
 \.
 
 
@@ -22064,6 +24615,2519 @@ COPY loinc_copra.loinc_long_common_name_copra_name_analyse (loinc_num, copra_id,
 
 
 --
+-- Data for Name: loinc_shortname_copra_name; Type: TABLE DATA; Schema: loinc_copra; Owner: clinicuser
+--
+
+COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortname, copra_name, accuracy, is_match, id) FROM stdin;
+21112-8	104781	Birth date	AT_Air_Balken	62	f	1
+5673-9	104781	Lead Hair-mCnt	AT_Air_Balken	60	f	2
+8867-4	104781	Heart rate	AT_Air_Balken	62	f	3
+2703-7	104780	pO2 BldA	AT_O2_Balken	62	f	4
+3148-4	104780	pO2 Gas	AT_O2_Balken	67	f	5
+32240-4	108281	Fructose Ur Ql	Aufnahme_Fruchtwasser_gruen	62	f	6
+32240-4	108282	Fructose Ur Ql	Aufnahme_Fruchtwasser_klar	65	f	7
+25372-4	108243	HCG Ur-aCnc	Aufnahme_Geburt_spontan	60	f	8
+42512-4	108243	IgE Ur-aCnc	Aufnahme_Geburt_spontan	70	f	9
+11087-4	108157	Insulin Ab Titr Ser	Aufnahme_Insulin_ja	82	f	10
+12739-9	108157	Insulin sp2 p chal SerPl-mCnc	Aufnahme_Insulin_ja	82	f	11
+12741-5	108157	Insulin sp4 p chal SerPl-mCnc	Aufnahme_Insulin_ja	82	f	12
+12744-9	108157	Insulin sp7 p chal SerPl-mCnc	Aufnahme_Insulin_ja	82	f	13
+12757-1	108157	Insulin 30M pre chal SerPl-mCnc	Aufnahme_Insulin_ja	82	f	14
+14796-7	108157	Insulin SerPl-sCnc	Aufnahme_Insulin_ja	82	f	15
+1570-1	108157	Insulin BS SerPl-mCnc	Aufnahme_Insulin_ja	82	f	16
+1573-5	108157	Insulin p 12h fast SerPl-mCnc	Aufnahme_Insulin_ja	82	f	17
+15792-5	108157	Insulin Bovine IgE RAST Ql	Aufnahme_Insulin_ja	82	f	18
+15793-3	108157	Insulin Human IgE RAST Ql	Aufnahme_Insulin_ja	82	f	19
+15794-1	108157	Insulin Porcine IgE RAST Ql	Aufnahme_Insulin_ja	82	f	20
+18234-5	108157	Insulin Usub Ql	Aufnahme_Insulin_ja	82	f	21
+20448-7	108157	Insulin SerPl-aCnc	Aufnahme_Insulin_ja	82	f	22
+2481-0	108157	Insulin Ab Ser Ql	Aufnahme_Insulin_ja	82	f	23
+2482-8	108157	Insulin Ab Ser-mCnc	Aufnahme_Insulin_ja	82	f	24
+25447-4	108157	Insulin Free SerPl-sCnc	Aufnahme_Insulin_ja	82	f	25
+25686-7	108157	Insulin sp11 p chal SerPl-sCnc	Aufnahme_Insulin_ja	82	f	26
+25690-9	108157	Insulin sp15 p chal SerPl-sCnc	Aufnahme_Insulin_ja	82	f	27
+25697-4	108157	Insulin sp7 p chal SerPl-sCnc	Aufnahme_Insulin_ja	82	f	28
+27826-7	108157	Insulin 2h p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	29
+27828-3	108157	Insulin 3h p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	30
+27830-9	108157	Insulin 1h p 75 g Glc PO SerPl-aCnc	Aufnahme_Insulin_ja	82	f	31
+27832-5	108157	Insulin sp4 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	32
+27834-1	108157	Insulin 1.5h p 75 g Glc PO SerPl-aCnc	Aufnahme_Insulin_ja	82	f	33
+27852-3	108157	Insulin 5h p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	34
+27860-6	108157	Insulin 2h p 75 g Glc PO SerPl-aCnc	Aufnahme_Insulin_ja	82	f	35
+27863-0	108157	Insulin 2.5h p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	36
+27867-1	108157	Insulin sp7 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	37
+27873-9	108157	Insulin p fast SerPl-aCnc	Aufnahme_Insulin_ja	82	f	38
+27874-7	108157	Insulin sp5 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	39
+27875-4	108157	Insulin sp6 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	40
+30362-8	108157	Insulin 30M p 75 g Glc PO SerPl-aCnc	Aufnahme_Insulin_ja	82	f	41
+33809-5	108157	Insulin sp10 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	42
+33810-3	108157	Insulin sp11 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	43
+33811-1	108157	Insulin sp12 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	44
+33812-9	108157	Insulin sp13 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	45
+33813-7	108157	Insulin sp14 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	46
+33814-5	108157	Insulin sp15 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	47
+33815-2	108157	Insulin sp1 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	48
+33816-0	108157	Insulin sp2 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	49
+33817-8	108157	Insulin sp3 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	50
+33818-6	108157	Insulin sp8 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	51
+33819-4	108157	Insulin sp9 p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	52
+3695-4	108157	Insulin SerPl-mCnc	Aufnahme_Insulin_ja	82	f	53
+40290-9	108157	Insulin 1.5h p chal SerPl-sCnc	Aufnahme_Insulin_ja	82	f	54
+43942-2	108157	Insulin Free SerPl-mCnc	Aufnahme_Insulin_ja	82	f	55
+47663-0	108157	Insulin 30M p Glc SerPl-aCnc	Aufnahme_Insulin_ja	82	f	56
+47862-8	108157	Insulin p meal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	57
+50501-6	108157	Insulin sp1 SerPl-aCnc	Aufnahme_Insulin_ja	82	f	58
+50502-4	108157	Insulin sp2 SerPl-aCnc	Aufnahme_Insulin_ja	82	f	59
+50503-2	108157	Insulin sp3 SerPl-aCnc	Aufnahme_Insulin_ja	82	f	60
+50504-0	108157	Insulin sp4 SerPl-aCnc	Aufnahme_Insulin_ja	82	f	61
+50505-7	108157	Insulin sp5 SerPl-aCnc	Aufnahme_Insulin_ja	82	f	62
+50506-5	108157	Insulin sp6 SerPl-aCnc	Aufnahme_Insulin_ja	82	f	63
+50507-3	108157	Insulin sp7 SerPl-aCnc	Aufnahme_Insulin_ja	82	f	64
+50508-1	108157	Insulin sp8 SerPl-aCnc	Aufnahme_Insulin_ja	82	f	65
+5232-4	108157	Insulin Ab Ser RIA-aCnc	Aufnahme_Insulin_ja	82	f	66
+55389-1	108157	Insulin 5h p chal SerPl-sCnc	Aufnahme_Insulin_ja	82	f	67
+56533-3	108157	Insulin IgG Ser-aCnc	Aufnahme_Insulin_ja	82	f	68
+56546-5	108157	Insulin Ab Ser IA-aCnc	Aufnahme_Insulin_ja	82	f	69
+56946-7	108157	Insulin 2D p chal SerPl-aCnc	Aufnahme_Insulin_ja	82	f	70
+60463-7	108157	Insulin Ab Ser-sCnc	Aufnahme_Insulin_ja	82	f	71
+6147-3	108157	Insulin Bovine IgE Qn	Aufnahme_Insulin_ja	82	f	72
+6148-1	108157	Insulin Human IgE Qn	Aufnahme_Insulin_ja	82	f	73
+6149-9	108157	Insulin Porcine IgE Qn	Aufnahme_Insulin_ja	82	f	74
+6901-3	108157	Insulin Free SerPl-aCnc	Aufnahme_Insulin_ja	82	f	75
+8072-1	108157	Insulin Ab Ser-aCnc	Aufnahme_Insulin_ja	82	f	76
+8073-9	108157	Insulin Bovine Ab Ser-aCnc	Aufnahme_Insulin_ja	82	f	77
+8074-7	108157	Insulin Human Ab Ser-aCnc	Aufnahme_Insulin_ja	82	f	78
+8075-4	108157	Insulin Porcine Ab Ser-aCnc	Aufnahme_Insulin_ja	82	f	79
+11087-4	108158	Insulin Ab Titr Ser	Aufnahme_Insulin_nein	74	f	80
+12739-9	108158	Insulin sp2 p chal SerPl-mCnc	Aufnahme_Insulin_nein	74	f	81
+12741-5	108158	Insulin sp4 p chal SerPl-mCnc	Aufnahme_Insulin_nein	74	f	82
+12744-9	108158	Insulin sp7 p chal SerPl-mCnc	Aufnahme_Insulin_nein	74	f	83
+12757-1	108158	Insulin 30M pre chal SerPl-mCnc	Aufnahme_Insulin_nein	74	f	84
+14796-7	108158	Insulin SerPl-sCnc	Aufnahme_Insulin_nein	74	f	85
+1570-1	108158	Insulin BS SerPl-mCnc	Aufnahme_Insulin_nein	74	f	86
+1573-5	108158	Insulin p 12h fast SerPl-mCnc	Aufnahme_Insulin_nein	74	f	87
+15792-5	108158	Insulin Bovine IgE RAST Ql	Aufnahme_Insulin_nein	74	f	88
+15793-3	108158	Insulin Human IgE RAST Ql	Aufnahme_Insulin_nein	74	f	89
+15794-1	108158	Insulin Porcine IgE RAST Ql	Aufnahme_Insulin_nein	74	f	90
+18234-5	108158	Insulin Usub Ql	Aufnahme_Insulin_nein	74	f	91
+20448-7	108158	Insulin SerPl-aCnc	Aufnahme_Insulin_nein	74	f	92
+2481-0	108158	Insulin Ab Ser Ql	Aufnahme_Insulin_nein	74	f	93
+2482-8	108158	Insulin Ab Ser-mCnc	Aufnahme_Insulin_nein	74	f	94
+25447-4	108158	Insulin Free SerPl-sCnc	Aufnahme_Insulin_nein	74	f	95
+25686-7	108158	Insulin sp11 p chal SerPl-sCnc	Aufnahme_Insulin_nein	74	f	96
+25690-9	108158	Insulin sp15 p chal SerPl-sCnc	Aufnahme_Insulin_nein	74	f	97
+25697-4	108158	Insulin sp7 p chal SerPl-sCnc	Aufnahme_Insulin_nein	74	f	98
+27826-7	108158	Insulin 2h p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	99
+27828-3	108158	Insulin 3h p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	100
+27830-9	108158	Insulin 1h p 75 g Glc PO SerPl-aCnc	Aufnahme_Insulin_nein	74	f	101
+27832-5	108158	Insulin sp4 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	102
+27834-1	108158	Insulin 1.5h p 75 g Glc PO SerPl-aCnc	Aufnahme_Insulin_nein	74	f	103
+27852-3	108158	Insulin 5h p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	104
+27860-6	108158	Insulin 2h p 75 g Glc PO SerPl-aCnc	Aufnahme_Insulin_nein	74	f	105
+27863-0	108158	Insulin 2.5h p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	106
+27867-1	108158	Insulin sp7 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	107
+27873-9	108158	Insulin p fast SerPl-aCnc	Aufnahme_Insulin_nein	74	f	108
+27874-7	108158	Insulin sp5 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	109
+27875-4	108158	Insulin sp6 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	110
+27882-0	108158	Proinsulin SerPl-sCnc	Aufnahme_Insulin_nein	61	f	111
+30362-8	108158	Insulin 30M p 75 g Glc PO SerPl-aCnc	Aufnahme_Insulin_nein	74	f	112
+33809-5	108158	Insulin sp10 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	113
+33810-3	108158	Insulin sp11 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	114
+33811-1	108158	Insulin sp12 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	115
+33812-9	108158	Insulin sp13 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	116
+33813-7	108158	Insulin sp14 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	117
+33814-5	108158	Insulin sp15 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	118
+33815-2	108158	Insulin sp1 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	119
+33816-0	108158	Insulin sp2 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	120
+33817-8	108158	Insulin sp3 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	121
+33818-6	108158	Insulin sp8 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	122
+33819-4	108158	Insulin sp9 p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	123
+355-8	108158	Neomycin Islt MIC	Aufnahme_Insulin_nein	62	f	124
+3695-4	108158	Insulin SerPl-mCnc	Aufnahme_Insulin_nein	74	f	125
+40290-9	108158	Insulin 1.5h p chal SerPl-sCnc	Aufnahme_Insulin_nein	74	f	126
+43942-2	108158	Insulin Free SerPl-mCnc	Aufnahme_Insulin_nein	74	f	127
+47663-0	108158	Insulin 30M p Glc SerPl-aCnc	Aufnahme_Insulin_nein	74	f	128
+47862-8	108158	Insulin p meal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	129
+50501-6	108158	Insulin sp1 SerPl-aCnc	Aufnahme_Insulin_nein	74	f	130
+50502-4	108158	Insulin sp2 SerPl-aCnc	Aufnahme_Insulin_nein	74	f	131
+50503-2	108158	Insulin sp3 SerPl-aCnc	Aufnahme_Insulin_nein	74	f	132
+50504-0	108158	Insulin sp4 SerPl-aCnc	Aufnahme_Insulin_nein	74	f	133
+50505-7	108158	Insulin sp5 SerPl-aCnc	Aufnahme_Insulin_nein	74	f	134
+50506-5	108158	Insulin sp6 SerPl-aCnc	Aufnahme_Insulin_nein	74	f	135
+50507-3	108158	Insulin sp7 SerPl-aCnc	Aufnahme_Insulin_nein	74	f	136
+50508-1	108158	Insulin sp8 SerPl-aCnc	Aufnahme_Insulin_nein	74	f	137
+5232-4	108158	Insulin Ab Ser RIA-aCnc	Aufnahme_Insulin_nein	74	f	138
+55389-1	108158	Insulin 5h p chal SerPl-sCnc	Aufnahme_Insulin_nein	74	f	139
+56533-3	108158	Insulin IgG Ser-aCnc	Aufnahme_Insulin_nein	74	f	140
+56546-5	108158	Insulin Ab Ser IA-aCnc	Aufnahme_Insulin_nein	74	f	141
+56946-7	108158	Insulin 2D p chal SerPl-aCnc	Aufnahme_Insulin_nein	74	f	142
+60463-7	108158	Insulin Ab Ser-sCnc	Aufnahme_Insulin_nein	74	f	143
+6147-3	108158	Insulin Bovine IgE Qn	Aufnahme_Insulin_nein	74	f	144
+6148-1	108158	Insulin Human IgE Qn	Aufnahme_Insulin_nein	74	f	145
+6149-9	108158	Insulin Porcine IgE Qn	Aufnahme_Insulin_nein	74	f	146
+6901-3	108158	Insulin Free SerPl-aCnc	Aufnahme_Insulin_nein	74	f	147
+8072-1	108158	Insulin Ab Ser-aCnc	Aufnahme_Insulin_nein	74	f	148
+8073-9	108158	Insulin Bovine Ab Ser-aCnc	Aufnahme_Insulin_nein	74	f	149
+8074-7	108158	Insulin Human Ab Ser-aCnc	Aufnahme_Insulin_nein	74	f	150
+8075-4	108158	Insulin Porcine Ab Ser-aCnc	Aufnahme_Insulin_nein	74	f	151
+20706-8	108245	C bot Tox Spec Anim Inoc	Aufnahme_Sectio_Notsectio	60	f	152
+44274-9	108245	C bot Tox Spec IA	Aufnahme_Sectio_Notsectio	61	f	153
+44796-1	108245	C bot Tox Spec	Aufnahme_Sectio_Notsectio	60	f	154
+48037-6	101608	pH Vag	Beatmung_Anordnung_AbbruchkriterienPHzv	60	f	155
+32306-3	101600	pCO2 Ur	Beatmung_Anordnung_AbbruchkriterienPzvCO2	62	f	156
+2022-2	101602	pCO2 CSF	Beatmung_Anordnung_AbbruchkriterienSpO2	67	f	157
+3148-4	101602	pO2 Gas	Beatmung_Anordnung_AbbruchkriterienSpO2	73	f	158
+8278-4	100795	BSA formula	Beatmung_Anordnung_Beatmungsform	62	f	159
+3151-8	100113	Inhaled O2 flow rate	Beatmung_Anordnung_Flow	100	f	160
+95420-6	117219	Admitted to ICU for condition	Beatmung_Einstellung_Balken_ICU_IMC	60	f	161
+14196-0	102657	Retics #	Beatmung_Einstellung_ETS	67	f	162
+3151-8	100104	Inhaled O2 flow rate	Beatmung_Einstellung_Flow	100	f	163
+2499-2	104147	Iron 24h Ur-mRate	Beatmung_ES_Airvo_Temperatur	61	f	164
+8310-5	104147	Body temperature	Beatmung_ES_Airvo_Temperatur	75	f	165
+6857-7	103414	Spruce IgE Qn	Beatmung_ES_Avea_InspDruck	64	f	166
+43951-3	104809	CD2 Cells # Tiss	Beatmung_ES_C2_ETS	60	f	167
+16713-0	105080	CMV Ab CSF-aCnc	Beatmung_ES_C2_F_CMV	61	f	168
+40747-8	104822	C2 SerPl Ql	Beatmung_ES_C2_IEVerhaeltnis	100	f	169
+4484-2	104822	C2 SerPl-mCnc	Beatmung_ES_C2_IEVerhaeltnis	100	f	170
+56927-7	104822	HCV c2 Ab Ser Ql IB	Beatmung_ES_C2_IEVerhaeltnis	100	f	171
+69379-6	104822	van(A+B+C1+C2) genes Islt/Spm	Beatmung_ES_C2_IEVerhaeltnis	100	f	172
+40747-8	106283	C2 SerPl Ql	Beatmung_ES_C2_IEVerhaeltnis_Backup	100	f	173
+4484-2	106283	C2 SerPl-mCnc	Beatmung_ES_C2_IEVerhaeltnis_Backup	100	f	174
+56927-7	106283	HCV c2 Ab Ser Ql IB	Beatmung_ES_C2_IEVerhaeltnis_Backup	100	f	175
+69379-6	106283	van(A+B+C1+C2) genes Islt/Spm	Beatmung_ES_C2_IEVerhaeltnis_Backup	100	f	176
+5995-6	105078	PA Coll PRP	Beatmung_ES_C2_PEEP_CPAP_Ptief	61	f	177
+40747-8	104816	C2 SerPl Ql	Beatmung_ES_C2_Ptief	100	f	178
+4484-2	104816	C2 SerPl-mCnc	Beatmung_ES_C2_Ptief	100	f	179
+56927-7	104816	HCV c2 Ab Ser Ql IB	Beatmung_ES_C2_Ptief	100	f	180
+69379-6	104816	van(A+B+C1+C2) genes Islt/Spm	Beatmung_ES_C2_Ptief	100	f	181
+40747-8	104823	C2 SerPl Ql	Beatmung_ES_C2_Vt	100	f	182
+4484-2	104823	C2 SerPl-mCnc	Beatmung_ES_C2_Vt	100	f	183
+56927-7	104823	HCV c2 Ab Ser Ql IB	Beatmung_ES_C2_Vt	100	f	184
+69379-6	104823	van(A+B+C1+C2) genes Islt/Spm	Beatmung_ES_C2_Vt	100	f	185
+15164-7	110827	C3 Snv-mCnc	Beatmung_ES_C3_F_SIMV	60	f	186
+6801-5	110827	C3 Fld-mCnc	Beatmung_ES_C3_F_SIMV	60	f	187
+3151-8	103087	Inhaled O2 flow rate	Beatmung_ES_F120_Flow	62	f	188
+29463-7	117218	Weight	Beatmung_ES_G5_Body_Weight	100	f	189
+3141-9	117218	Weight Measured	Beatmung_ES_G5_Body_Weight	60	f	190
+8302-2	117218	Body height	Beatmung_ES_G5_Body_Weight	80	f	191
+8303-0	117218	Body height Prctl	Beatmung_ES_G5_Body_Weight	65	f	192
+8336-0	117218	Bdy weight Prctl Per Age	Beatmung_ES_G5_Body_Weight	60	f	193
+8339-4	117218	Birth weight Measured	Beatmung_ES_G5_Body_Weight	60	f	194
+8302-2	105082	Body height	Beatmung_ES_G5_Body_Wt	67	f	195
+45286-2	105083	CMV IgA Fld Ql	Beatmung_ES_G5_F_CMV	64	f	196
+50018-1	105083	CMV IgG Fld Ql	Beatmung_ES_G5_F_CMV	64	f	197
+3151-8	108525	Inhaled O2 flow rate	Beatmung_ES_G5_Flow	73	f	198
+3151-8	107821	Inhaled O2 flow rate	Beatmung_ES_Leoni_Flow	100	f	199
+14196-0	107828	Retics #	Beatmung_ES_Leoni_IRec	60	f	200
+2743-3	107831	pH Amn	Beatmung_ES_Leoni_P_man	73	f	201
+14196-0	107830	Retics #	Beatmung_ES_Leoni_PRec	60	f	202
+33633-9	107830	HBV preC TAG Mut Ser Ql NAA+probe	Beatmung_ES_Leoni_PRec	100	f	203
+33848-3	107830	Plasma cell prec # Bld Manual	Beatmung_ES_Leoni_PRec	100	f	204
+33849-1	107830	Plasma cell prec/leuk NFr Bld Manual	Beatmung_ES_Leoni_PRec	100	f	205
+34916-7	107830	Plasma cell prec # Bld	Beatmung_ES_Leoni_PRec	100	f	206
+34917-5	107830	Plasma cell prec/leuk NFr Bld	Beatmung_ES_Leoni_PRec	100	f	207
+91120-6	104033	AT III PPP Chromo.no added heparin	Beatmung_ES_NO	100	f	208
+3150-0	106783	Inhaled O2 concentration	Beatmung_ES_Optiflow_O2Konzentration	62	f	209
+11187-2	104748	P frequentans IgE Qn	Beatmung_ES_Pallas_Frequenz_Min	62	f	210
+3148-4	104745	pO2 Gas	Beatmung_ES_Pallas_Frischgas_O2	63	f	211
+13069-0	104717	PS IgA Ser-aCnc	Beatmung_ES_Pallas_PS	100	f	212
+14245-5	104717	PS IgG Ser-aCnc	Beatmung_ES_Pallas_PS	100	f	213
+14246-3	104717	PS IgM Ser-aCnc	Beatmung_ES_Pallas_PS	100	f	214
+30500-3	104717	PS IgA Ser Ql	Beatmung_ES_Pallas_PS	100	f	215
+32031-7	104717	PS IgA Ser IA-aCnc	Beatmung_ES_Pallas_PS	100	f	216
+32032-5	104717	PS IgG Ser IA-aCnc	Beatmung_ES_Pallas_PS	100	f	217
+33310-4	104717	PS Ab Ser Ql	Beatmung_ES_Pallas_PS	100	f	218
+9326-0	104717	PS IgG Ser Ql IA	Beatmung_ES_Pallas_PS	100	f	219
+9327-8	104717	PS IgM Ser Ql IA	Beatmung_ES_Pallas_PS	100	f	220
+14359-4	104714	Gram Stn Prt	Beatmung_ES_Pallas_T_Rampe	63	f	221
+14360-2	104714	Gram Stn Plr	Beatmung_ES_Pallas_T_Rampe	63	f	222
+643-7	104714	Gram Stn Pus	Beatmung_ES_Pallas_T_Rampe	63	f	223
+648-6	104714	Gram Stn Spt	Beatmung_ES_Pallas_T_Rampe	63	f	224
+664-3	104714	Gram Stn Spec	Beatmung_ES_Pallas_T_Rampe	70	f	225
+35694-9	104253	CEV IgG Titr Ser	Beatmung_ES_Servoi_Backup_I_E	62	f	226
+35695-6	104253	CEV IgM Titr Ser	Beatmung_ES_Servoi_Backup_I_E	62	f	227
+8069-7	104259	Epidis Ab Titr Ser	Beatmung_ES_Servoi_EDI_Trigger	61	f	228
+35694-9	104274	CEV IgG Titr Ser	Beatmung_ES_Servoi_I_E	62	f	229
+35695-6	104274	CEV IgM Titr Ser	Beatmung_ES_Servoi_I_E	62	f	230
+47383-5	104260	ANA Ser Ql IA	Beatmung_ES_Servoi_Nava_Pegel	60	f	231
+2753-2	104267	pH SerPl	Beatmung_ES_Servoi_Phoch	60	f	232
+32559-7	104272	Tau Prot Ser-mCnc	Beatmung_ES_Servoi_Tpause_Prozent	63	f	233
+20657-3	104273	Taurine SerPl-sCnc	Beatmung_ES_Servoi_Tpause_s	61	f	234
+51834-0	104273	Tryptase SerPl-sCnc	Beatmung_ES_Servoi_Tpause_s	65	f	235
+22240-6	106634	CMV Ab Titr CSF	Beatmung_ES_T1_F_CMV	61	f	236
+3151-8	113046	Inhaled O2 flow rate	Beatmung_ES_T1_Flow	73	f	237
+10333-3	103258	Appearance CSF	Beatmung_ES_VisionA_ApneaRate	61	f	238
+11158-3	103258	Appearance Ser	Beatmung_ES_VisionA_ApneaRate	61	f	239
+14620-9	103258	Appearance Plr	Beatmung_ES_VisionA_ApneaRate	61	f	240
+14621-7	103258	Appearance Prt	Beatmung_ES_VisionA_ApneaRate	61	f	241
+29605-3	103258	Appearance Snv	Beatmung_ES_VisionA_ApneaRate	61	f	242
+29636-8	103258	Appearance Stl	Beatmung_ES_VisionA_ApneaRate	61	f	243
+33455-7	103258	Appearance Spt	Beatmung_ES_VisionA_ApneaRate	61	f	244
+5767-9	103258	Appearance Ur	Beatmung_ES_VisionA_ApneaRate	64	f	245
+8867-4	103258	Heart rate	Beatmung_ES_VisionA_ApneaRate	63	f	246
+9335-1	103258	Appearance Fld	Beatmung_ES_VisionA_ApneaRate	61	f	247
+14196-0	103081	Retics #	Beatmung_ES_VisionA_ETS	67	f	248
+13069-0	102883	PS IgA Ser-aCnc	Beatmung_ES_VisionA_PS	100	f	249
+14245-5	102883	PS IgG Ser-aCnc	Beatmung_ES_VisionA_PS	100	f	250
+14246-3	102883	PS IgM Ser-aCnc	Beatmung_ES_VisionA_PS	100	f	251
+30500-3	102883	PS IgA Ser Ql	Beatmung_ES_VisionA_PS	100	f	252
+32031-7	102883	PS IgA Ser IA-aCnc	Beatmung_ES_VisionA_PS	100	f	253
+32032-5	102883	PS IgG Ser IA-aCnc	Beatmung_ES_VisionA_PS	100	f	254
+33310-4	102883	PS Ab Ser Ql	Beatmung_ES_VisionA_PS	100	f	255
+9326-0	102883	PS IgG Ser Ql IA	Beatmung_ES_VisionA_PS	100	f	256
+9327-8	102883	PS IgM Ser Ql IA	Beatmung_ES_VisionA_PS	100	f	257
+6683-7	102884	Reptilase time	Beatmung_ES_VisionA_RiseTime	73	f	258
+11211-0	101434	CO2 Fld-sCnc	Beatmung_Messung_CO2	100	f	259
+13538-4	101434	CO2 Ur-sCnc	Beatmung_Messung_CO2	100	f	260
+14040-0	101434	CO2 Stl-sCnc	Beatmung_Messung_CO2	100	f	261
+14640-7	101434	CO2 Dial fld-sCnc	Beatmung_Messung_CO2	100	f	262
+16551-4	101434	CO2 BldC-sCnc	Beatmung_Messung_CO2	100	f	263
+2026-3	101434	CO2 BldA-sCnc	Beatmung_Messung_CO2	100	f	264
+2027-1	101434	CO2 BldV-sCnc	Beatmung_Messung_CO2	100	f	265
+2028-9	101434	CO2 SerPl-sCnc	Beatmung_Messung_CO2	100	f	266
+20565-8	101434	CO2 Bld-sCnc	Beatmung_Messung_CO2	100	f	267
+32306-3	101434	pCO2 Ur	Beatmung_Messung_CO2	60	f	268
+34520-7	101434	CO2 BldCo-sCnc	Beatmung_Messung_CO2	100	f	269
+34728-6	101434	CO2 Bld Calc-sCnc	Beatmung_Messung_CO2	100	f	270
+38253-1	101434	CO2 Spec-sCnc	Beatmung_Messung_CO2	100	f	271
+39465-0	101434	CO2 BldCoV-sCnc	Beatmung_Messung_CO2	100	f	272
+41647-9	101434	CO2 BldA Calc-sCnc	Beatmung_Messung_CO2	100	f	273
+51781-3	101434	CO2 BldC Calc-sCnc	Beatmung_Messung_CO2	100	f	274
+57921-9	101434	CO2 BldCoA Calc-sCnc	Beatmung_Messung_CO2	100	f	275
+19817-6	101433	Complications	Beatmung_Messung_Compliance	70	f	276
+3151-8	100273	Inhaled O2 flow rate	Beatmung_Messung_Flow	100	f	277
+8478-0	101441	BP mean	Beatmung_Messung_Pmean	83	f	278
+2752-4	101443	pH Smn	Beatmung_Messung_Pmin	60	f	279
+2190-7	103431	DHEA-S Amn-mCnc	Beatmung_MS_Avea_MandVte	61	f	280
+18970-4	103422	Pip+Tazo Susc Islt	Beatmung_MS_Avea_PIP	67	f	281
+411-9	103422	Pip+Tazo Islt MLC	Beatmung_MS_Avea_PIP	67	f	282
+412-7	103422	Pip+Tazo Islt MIC	Beatmung_MS_Avea_PIP	67	f	283
+413-5	103422	Pip+Tazo Islt KB	Beatmung_MS_Avea_PIP	67	f	284
+414-3	103422	Pip+Tazo Titr SBT	Beatmung_MS_Avea_PIP	67	f	285
+7044-1	103422	Pip+Tazo Islt Grad strip	Beatmung_MS_Avea_PIP	67	f	286
+10681-5	103424	HSV Tiss EM	Beatmung_MS_Avea_Ti	62	f	287
+100342-5	103433	VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS	Beatmung_MS_Avea_Vti	67	f	288
+1827-5	103433	A1AT MS SerPl-mCnc	Beatmung_MS_Avea_Vti	67	f	289
+55805-6	103433	cycloSPORINE Bld LC/MS/MS-mCnc	Beatmung_MS_Avea_Vti	67	f	290
+74097-7	103433	Tacrolimus Bld LC/MS/MS-mCnc	Beatmung_MS_Avea_Vti	67	f	291
+75756-7	103433	Bacteria Islt MS.MALDI-TOF	Beatmung_MS_Avea_Vti	67	f	292
+92726-9	103433	17OHP DBS LC/MS/MS-mCnc	Beatmung_MS_Avea_Vti	67	f	293
+33863-2	104784	Cystatin C SerPl-mCnc	Beatmung_MS_C2_Cstat	62	f	294
+26714-6	104803	PPA Mec-mCnt	Beatmung_MS_C2_Ppeak	61	f	295
+13538-4	104785	CO2 Ur-sCnc	Beatmung_MS_C2_RCexsp	63	f	296
+2379-6	104785	GST RBC-cCnc	Beatmung_MS_C2_RCexsp	60	f	297
+26454-9	104785	RBC # CSF	Beatmung_MS_C2_RCexsp	67	f	298
+26459-8	104785	nRBC # CSF	Beatmung_MS_C2_RCexsp	62	f	299
+51641-9	104785	MSCV RBC	Beatmung_MS_C2_RCexsp	62	f	300
+17516-6	104786	Renin sup Plas-cCnc	Beatmung_MS_C2_Rinsp	60	f	301
+2917-3	104786	Renin sup Plas-mCnc	Beatmung_MS_C2_Rinsp	60	f	302
+14040-0	104788	CO2 Stl-sCnc	Beatmung_MS_C2_TE	60	f	303
+14040-0	104789	CO2 Stl-sCnc	Beatmung_MS_C2_TI	60	f	304
+3058-5	104789	TPI Ser-cCnc	Beatmung_MS_C2_TI	60	f	305
+43951-3	104789	CD2 Cells # Tiss	Beatmung_MS_C2_TI	64	f	306
+19817-6	103289	Complications	Beatmung_MS_Evita2_Compliance	69	f	307
+1714-5	103292	PACP Ser-cCnc	Beatmung_MS_Evita2_CPAP	60	f	308
+20420-6	103292	PACP Ser-mCnc	Beatmung_MS_Evita2_CPAP	60	f	309
+19817-6	103329	Complications	Beatmung_MS_Evita4_Compliance	69	f	310
+8478-0	103317	BP mean	Beatmung_MS_Evita4_Pmean	67	f	311
+52751-5	103827	aPTT-FS PPP	Beatmung_MS_EzPAP_PAP	61	f	312
+2962-9	103036	GH Amn-mCnc	Beatmung_MS_G5_fspontan	60	f	313
+2022-2	106412	pCO2 CSF	Beatmung_MS_G5_petCO2	60	f	314
+3148-4	106412	pO2 Gas	Beatmung_MS_G5_petCO2	63	f	315
+2381-2	102909	GSS RBC-mCnc	Beatmung_MS_G5_RCexsp	60	f	316
+2382-0	102909	GSH RBC-mCnc	Beatmung_MS_G5_RCexsp	60	f	317
+2965-2	102909	Sp Gr Ur	Beatmung_MS_G5_RCexsp	62	f	318
+51641-9	102909	MSCV RBC	Beatmung_MS_G5_RCexsp	62	f	319
+2965-2	102906	Sp Gr Ur	Beatmung_MS_G5_Rexsp	67	f	320
+3148-4	106413	pO2 Gas	Beatmung_MS_G5_SpO2	71	f	321
+49723-0	102916	Tea IgG-mCnc	Beatmung_MS_G5_TE	60	f	322
+16551-4	107849	CO2 BldC-sCnc	Beatmung_MS_Leoni_DCO2	60	f	323
+2026-3	107849	CO2 BldA-sCnc	Beatmung_MS_Leoni_DCO2	60	f	324
+2027-1	107849	CO2 BldV-sCnc	Beatmung_MS_Leoni_DCO2	60	f	325
+20565-8	107849	CO2 Bld-sCnc	Beatmung_MS_Leoni_DCO2	63	f	326
+47282-9	107849	MCV BldCo	Beatmung_MS_Leoni_DCO2	62	f	327
+47283-7	107849	PMV BldCo	Beatmung_MS_Leoni_DCO2	62	f	328
+2022-2	107833	pCO2 CSF	Beatmung_MS_Leoni_O2	62	f	329
+3148-4	107833	pO2 Gas	Beatmung_MS_Leoni_O2	67	f	330
+52751-5	107836	aPTT-FS PPP	Beatmung_MS_Leoni_Peep_CPAP	61	f	331
+8478-0	107835	BP mean	Beatmung_MS_Leoni_Pmean	67	f	332
+19840-8	107842	Breaths.spont+mech on vent	Beatmung_MS_Leoni_Spont	77	f	333
+100342-5	107839	VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS	Beatmung_MS_Leoni_Vti	67	f	334
+1827-5	107839	A1AT MS SerPl-mCnc	Beatmung_MS_Leoni_Vti	67	f	335
+55805-6	107839	cycloSPORINE Bld LC/MS/MS-mCnc	Beatmung_MS_Leoni_Vti	67	f	336
+74097-7	107839	Tacrolimus Bld LC/MS/MS-mCnc	Beatmung_MS_Leoni_Vti	67	f	337
+75756-7	107839	Bacteria Islt MS.MALDI-TOF	Beatmung_MS_Leoni_Vti	67	f	338
+92726-9	107839	17OHP DBS LC/MS/MS-mCnc	Beatmung_MS_Leoni_Vti	67	f	339
+3148-4	104035	pO2 Gas	Beatmung_MS_NO2	62	f	340
+162-8	104734	Cephalothin Islt KB	Beatmung_MS_Pallas_Halothan_exsp	60	f	341
+160-2	104733	Cephalothin Islt MLC	Beatmung_MS_Pallas_Halothan_insp	67	f	342
+161-0	104733	Cephalothin Islt MIC	Beatmung_MS_Pallas_Halothan_insp	67	f	343
+162-8	104733	Cephalothin Islt KB	Beatmung_MS_Pallas_Halothan_insp	63	f	344
+18900-1	104733	Cephalothin Susc Islt	Beatmung_MS_Pallas_Halothan_insp	65	f	345
+20388-5	104737	Nitrofurazone Susc Islt	Beatmung_MS_Pallas_Isofluran_insp	60	f	346
+2022-2	104731	pCO2 CSF	Beatmung_MS_Pallas_O2_exsp	62	f	347
+3148-4	104731	pO2 Gas	Beatmung_MS_Pallas_O2_exsp	67	f	348
+8478-0	104772	BP mean	Beatmung_MS_Pallas_Pmean	67	f	349
+10862-1	104245	BM Ab Titr Ser	Beatmung_MS_Servoi_AF	62	f	350
+14905-4	104245	Vit A SerPl-sCnc	Beatmung_MS_Servoi_AF	64	f	351
+1834-1	104245	AFP SerPl-mCnc	Beatmung_MS_Servoi_AF	62	f	352
+19177-5	104245	AFP SerPl-sCnc	Beatmung_MS_Servoi_AF	62	f	353
+2923-1	104245	Vit A SerPl-mCnc	Beatmung_MS_Servoi_AF	64	f	354
+5204-3	104245	HSV Ab Titr Ser CF	Beatmung_MS_Servoi_AF	60	f	355
+5243-1	104245	MeV Ab Titr Ser CF	Beatmung_MS_Servoi_AF	60	f	356
+5249-8	104245	MuV Ab Titr Ser CF	Beatmung_MS_Servoi_AF	60	f	357
+5250-6	104245	MuV Ab Titr Ser IF	Beatmung_MS_Servoi_AF	60	f	358
+5259-7	104245	MBP Ab Titr Ser IF	Beatmung_MS_Servoi_AF	60	f	359
+9513-3	104245	CMV Ab Titr Ser CF	Beatmung_MS_Servoi_AF	60	f	360
+9838-4	104245	LKM Ab Titr Ser IF	Beatmung_MS_Servoi_AF	60	f	361
+10862-1	104246	BM Ab Titr Ser	Beatmung_MS_Servoi_Afspont	62	f	362
+14905-4	104246	Vit A SerPl-sCnc	Beatmung_MS_Servoi_Afspont	64	f	363
+1834-1	104246	AFP SerPl-mCnc	Beatmung_MS_Servoi_Afspont	62	f	364
+19177-5	104246	AFP SerPl-sCnc	Beatmung_MS_Servoi_Afspont	62	f	365
+2923-1	104246	Vit A SerPl-mCnc	Beatmung_MS_Servoi_Afspont	64	f	366
+5204-3	104246	HSV Ab Titr Ser CF	Beatmung_MS_Servoi_Afspont	60	f	367
+5243-1	104246	MeV Ab Titr Ser CF	Beatmung_MS_Servoi_Afspont	60	f	368
+5249-8	104246	MuV Ab Titr Ser CF	Beatmung_MS_Servoi_Afspont	60	f	369
+5250-6	104246	MuV Ab Titr Ser IF	Beatmung_MS_Servoi_Afspont	60	f	370
+5259-7	104246	MBP Ab Titr Ser IF	Beatmung_MS_Servoi_Afspont	60	f	371
+9513-3	104246	CMV Ab Titr Ser CF	Beatmung_MS_Servoi_Afspont	60	f	372
+9838-4	104246	LKM Ab Titr Ser IF	Beatmung_MS_Servoi_Afspont	60	f	373
+14246-3	104236	PS IgM Ser-aCnc	Beatmung_MS_Servoi_Cdyn	62	f	374
+14622-5	104236	Vit C SerPl-sCnc	Beatmung_MS_Servoi_Cdyn	60	f	375
+14910-4	104236	Serotonin Ser-sCnc	Beatmung_MS_Servoi_Cdyn	62	f	376
+1903-4	104236	Vit C SerPl-mCnc	Beatmung_MS_Servoi_Cdyn	60	f	377
+27057-9	104236	Serotonin Ser-mCnc	Beatmung_MS_Servoi_Cdyn	62	f	378
+29536-0	104236	WNV IgM Ser-aCnc	Beatmung_MS_Servoi_Cdyn	60	f	379
+31409-6	104236	SNV IgM Ser-aCnc	Beatmung_MS_Servoi_Cdyn	60	f	380
+38476-8	104236	MIS SerPl-mCnc	Beatmung_MS_Servoi_Cdyn	64	f	381
+7992-1	104236	RSV IgM Ser-aCnc	Beatmung_MS_Servoi_Cdyn	60	f	382
+8048-1	104236	VZV IgM Ser-aCnc	Beatmung_MS_Servoi_Cdyn	60	f	383
+8056-4	104236	YFV IgM Ser-aCnc	Beatmung_MS_Servoi_Cdyn	60	f	384
+14581-3	104247	APAP SerPl-sCnc	Beatmung_MS_Servoi_CPAP	62	f	385
+14622-5	104247	Vit C SerPl-sCnc	Beatmung_MS_Servoi_CPAP	60	f	386
+14905-4	104247	Vit A SerPl-sCnc	Beatmung_MS_Servoi_CPAP	60	f	387
+1726-9	104247	cAMP SerPl-mCnc	Beatmung_MS_Servoi_CPAP	62	f	388
+1903-4	104247	Vit C SerPl-mCnc	Beatmung_MS_Servoi_CPAP	60	f	389
+25498-7	104247	cAMP SerPl-sCnc	Beatmung_MS_Servoi_CPAP	62	f	390
+26035-6	104247	Serotonin Plas-sCnc	Beatmung_MS_Servoi_CPAP	61	f	391
+2923-1	104247	Vit A SerPl-mCnc	Beatmung_MS_Servoi_CPAP	60	f	392
+3298-7	104247	APAP SerPl-mCnc	Beatmung_MS_Servoi_CPAP	62	f	393
+26607-2	104235	Cystathionin SerPl-sCnc	Beatmung_MS_Servoi_Cstatic	60	f	394
+33863-2	104235	Cystatin C SerPl-mCnc	Beatmung_MS_Servoi_Cstatic	63	f	395
+2462-0	104230	IgE Ser-mCnc	Beatmung_MS_Servoi_E	61	f	396
+83104-0	104226	MIS SerPl IA-mCnc	Beatmung_MS_Servoi_Edi_min	65	f	397
+10898-5	110915	EEEV IgM Titr Ser IF	Beatmung_MS_Servoi_I_E	61	f	398
+22261-2	110915	EEEV IgM Titr Ser	Beatmung_MS_Servoi_I_E	60	f	399
+35695-6	110915	CEV IgM Titr Ser	Beatmung_MS_Servoi_I_E	62	f	400
+43330-0	110915	EEEV IgM Titr Ser IA	Beatmung_MS_Servoi_I_E	61	f	401
+49141-5	110915	CEV IgM Titr Ser IF	Beatmung_MS_Servoi_I_E	62	f	402
+55925-2	110915	IgM Ser Elph-mCnc	Beatmung_MS_Servoi_I_E	60	f	403
+6812-2	110915	DENV IgM Titr Ser	Beatmung_MS_Servoi_I_E	60	f	404
+71711-6	110915	EBOV IgM Titr Ser IA	Beatmung_MS_Servoi_I_E	61	f	405
+83085-1	110915	CEA SerPl IA-mCnc	Beatmung_MS_Servoi_I_E	60	f	406
+22411-3	104242	LCMV IgM Titr Ser	Beatmung_MS_Servoi_MVe	60	f	407
+22420-4	104242	MuV IgM Titr Ser	Beatmung_MS_Servoi_MVe	62	f	408
+81112-5	104242	MVEV IgG Titr Ser	Beatmung_MS_Servoi_MVe	60	f	409
+81113-3	104242	MVEV IgM Ser Ql	Beatmung_MS_Servoi_MVe	64	f	410
+81114-1	104242	MVEV IgM Titr Ser	Beatmung_MS_Servoi_MVe	67	f	411
+22411-3	104244	LCMV IgM Titr Ser	Beatmung_MS_Servoi_Mve_spont	60	f	412
+22420-4	104244	MuV IgM Titr Ser	Beatmung_MS_Servoi_Mve_spont	62	f	413
+81112-5	104244	MVEV IgG Titr Ser	Beatmung_MS_Servoi_Mve_spont	60	f	414
+81113-3	104244	MVEV IgM Ser Ql	Beatmung_MS_Servoi_Mve_spont	64	f	415
+81114-1	104244	MVEV IgM Titr Ser	Beatmung_MS_Servoi_Mve_spont	67	f	416
+22411-3	104243	LCMV IgM Titr Ser	Beatmung_MS_Servoi_MVi	60	f	417
+22420-4	104243	MuV IgM Titr Ser	Beatmung_MS_Servoi_MVi	62	f	418
+81114-1	104243	MVEV IgM Titr Ser	Beatmung_MS_Servoi_MVi	60	f	419
+13414-8	104249	Serine Amn-mCnc	Beatmung_MS_Servoi_Pmean	60	f	420
+28009-9	104249	Specimen vol Ur	Beatmung_MS_Servoi_Pmean	60	f	421
+33514-1	104249	Specimen vol Sweat	Beatmung_MS_Servoi_Pmean	61	f	422
+3964-4	104251	PPA SerPl-mCnc	Beatmung_MS_Servoi_Ppeak	62	f	423
+4090-7	104251	Vancomycin Peak SerPl-mCnc	Beatmung_MS_Servoi_Ppeak	63	f	424
+14611-8	104250	ANA Pat Ser-Imp	Beatmung_MS_Servoi_Pplat	60	f	425
+3964-4	104250	PPA SerPl-mCnc	Beatmung_MS_Servoi_Pplat	62	f	426
+49310-6	104250	ANA Pat Ser-Imp	Beatmung_MS_Servoi_Pplat	60	f	427
+14910-4	104233	Serotonin Ser-sCnc	Beatmung_MS_Servoi_Re	60	f	428
+27057-9	104233	Serotonin Ser-mCnc	Beatmung_MS_Servoi_Re	60	f	429
+14910-4	104234	Serotonin Ser-sCnc	Beatmung_MS_Servoi_Ri	60	f	430
+27057-9	104234	Serotonin Ser-mCnc	Beatmung_MS_Servoi_Ri	60	f	431
+48138-2	104234	NSE SerPl RIA-mCnc	Beatmung_MS_Servoi_Ri	60	f	432
+23868-3	110917	SNV IgM Titr Ser	Beatmung_MS_Servoi_Ti_Tges	61	f	433
+26061-2	110917	TBEV Ab Titr Ser	Beatmung_MS_Servoi_Ti_Tges	61	f	434
+22607-6	104238	VEEV Ab Titr Ser	Beatmung_MS_Servoi_Vee	62	f	435
+22616-7	104238	WEEV IgM Titr Ser	Beatmung_MS_Servoi_Vee	60	f	436
+23546-5	104238	VEEV IgM Ser Ql	Beatmung_MS_Servoi_Vee	64	f	437
+8051-5	104238	VEEV IgM Ser-aCnc	Beatmung_MS_Servoi_Vee	60	f	438
+2462-0	104239	IgE Ser-mCnc	Beatmung_MS_Servoi_Vte	61	f	439
+2460-4	104240	IgD Ser-mCnc	Beatmung_MS_Servoi_Vti	61	f	440
+2462-0	104240	IgE Ser-mCnc	Beatmung_MS_Servoi_Vti	61	f	441
+9574-5	104240	RSV IgM Titr Ser IF	Beatmung_MS_Servoi_Vti	60	f	442
+33331-0	104232	WNV IgM Titr Ser	Beatmung_MS_Servoi_WOBv	60	f	443
+2022-2	107882	pCO2 CSF	Beatmung_MS_T1_petCO2	60	f	444
+4121-0	103264	Amobarbital Dose	Beatmung_MS_VisionA_AMVtotal	64	f	445
+12585-6	103265	Creat 2h Ur-mRate	Beatmung_MS_VisionA_BreathRate	60	f	446
+12586-4	103265	Creat 4h Ur-mRate	Beatmung_MS_VisionA_BreathRate	60	f	447
+12587-2	103265	Creat 6h Ur-mRate	Beatmung_MS_VisionA_BreathRate	60	f	448
+12588-0	103265	Creat 8h Ur-mRate	Beatmung_MS_VisionA_BreathRate	60	f	449
+13754-7	103265	Hippurate/Creat Ur	Beatmung_MS_VisionA_BreathRate	65	f	450
+21112-8	103265	Birth date	Beatmung_MS_VisionA_BreathRate	61	f	451
+29528-7	103265	Hippurate/Creat Ur-sRto	Beatmung_MS_VisionA_BreathRate	61	f	452
+33798-0	103265	Creat 2h Ur-sRate	Beatmung_MS_VisionA_BreathRate	60	f	453
+53120-2	103265	Creat 1h Ur-sRate	Beatmung_MS_VisionA_BreathRate	60	f	454
+70266-2	103265	Creat Prt/Ser	Beatmung_MS_VisionA_BreathRate	62	f	455
+8867-4	103265	Heart rate	Beatmung_MS_VisionA_BreathRate	61	f	456
+93733-4	103265	Creat 5h Ur-mRate	Beatmung_MS_VisionA_BreathRate	60	f	457
+93734-2	103265	Creat 5h Ur-sRate	Beatmung_MS_VisionA_BreathRate	60	f	458
+18970-4	102885	Pip+Tazo Susc Islt	Beatmung_MS_VisionA_PIP	67	f	459
+411-9	102885	Pip+Tazo Islt MLC	Beatmung_MS_VisionA_PIP	67	f	460
+412-7	102885	Pip+Tazo Islt MIC	Beatmung_MS_VisionA_PIP	67	f	461
+413-5	102885	Pip+Tazo Islt KB	Beatmung_MS_VisionA_PIP	67	f	462
+414-3	102885	Pip+Tazo Titr SBT	Beatmung_MS_VisionA_PIP	67	f	463
+7044-1	102885	Pip+Tazo Islt Grad strip	Beatmung_MS_VisionA_PIP	67	f	464
+26516-5	103262	Platelet # Plas	Beatmung_MS_VisionA_Plateau	61	f	465
+11139-3	104187	Metaneph Ur-mCnc	Beatmung_MS_Zephyros_Pmean	61	f	466
+19218-7	100807	O2 Ct BldA-sCnc	Beatmung_O2_Balken	100	f	467
+19219-5	100807	O2 Ct BldC-sCnc	Beatmung_O2_Balken	100	f	468
+19220-3	100807	O2 Ct BldV-sCnc	Beatmung_O2_Balken	100	f	469
+19994-3	100807	O2/Total gas setting VFr Vent	Beatmung_O2_Balken	100	f	470
+3150-0	100807	Inhaled O2 concentration	Beatmung_O2_Balken	100	f	471
+3151-8	100807	Inhaled O2 flow rate	Beatmung_O2_Balken	100	f	472
+34163-6	100807	O2 Ct Bld-sCnc	Beatmung_O2_Balken	100	f	473
+57800-5	100807	O2 Ct VFr Bld Calc	Beatmung_O2_Balken	100	f	474
+19173-4	101596	AFP Plr-sCnc	Beatmung_Proc_AF	63	f	475
+30428-7	101627	MCV RBC	Beatmung_Proc_AMV	67	f	476
+51641-9	101627	MSCV RBC	Beatmung_Proc_AMV	62	f	477
+787-2	101627	MCV RBC Auto	Beatmung_Proc_AMV	60	f	478
+3148-4	101628	pO2 Gas	Beatmung_Proc_ASB	67	f	479
+29554-3	101642	Procedure	Beatmung_Proc_BedingteVerordnung	62	f	480
+26455-6	101630	RBC # Fld	Beatmung_Proc_Flow	62	f	481
+3151-8	101630	Inhaled O2 flow rate	Beatmung_Proc_Flow	62	f	482
+56475-7	101645	Salmonella sp Ag form Islt Aggl	Beatmung_Proc_GeraetForm	62	f	483
+3151-8	101620	Inhaled O2 flow rate	Beatmung_VO_Flow	100	f	484
+56475-7	101644	Salmonella sp Ag form Islt Aggl	Beatmung_VO_GeraetForm	100	f	485
+19218-7	101624	O2 Ct BldA-sCnc	Beatmung_VO_O2	100	f	486
+19219-5	101624	O2 Ct BldC-sCnc	Beatmung_VO_O2	100	f	487
+19220-3	101624	O2 Ct BldV-sCnc	Beatmung_VO_O2	100	f	488
+19994-3	101624	O2/Total gas setting VFr Vent	Beatmung_VO_O2	100	f	489
+3150-0	101624	Inhaled O2 concentration	Beatmung_VO_O2	100	f	490
+3151-8	101624	Inhaled O2 flow rate	Beatmung_VO_O2	100	f	491
+34163-6	101624	O2 Ct Bld-sCnc	Beatmung_VO_O2	100	f	492
+57800-5	101624	O2 Ct VFr Bld Calc	Beatmung_VO_O2	100	f	493
+6039-2	100418	Beef IgE Qn	Befinden	63	f	494
+19728-5	100359	Beet IgE Qn	Bewegen	67	f	495
+6039-2	100359	Beef IgE Qn	Bewegen	67	f	496
+39156-5	105045	BMI	BIS	67	f	497
+8462-4	105045	BP dias	BIS	60	f	498
+8310-5	106333	Body temperature	CardioHelpMaquet_ES_TemperaturSoll	77	f	499
+15687-7	106331	Duck Feather IgE RAST Ql	CardioHelpMaquet_MS_DruckArteriell	63	f	500
+55594-6	106331	Duck Feather IgE Ql	CardioHelpMaquet_MS_DruckArteriell	61	f	501
+6100-2	106331	Duck Feather IgE Qn	CardioHelpMaquet_MS_DruckArteriell	61	f	502
+8310-5	106327	Body temperature	CardioHelpMaquet_MS_TemperaturIst	69	f	503
+8310-5	106337	Body temperature	CardioHelpMaquet_VO_TemperaturSoll	77	f	504
+48159-8	102021	HCV Ab s/co SerPl IA	CO	100	f	505
+51656-7	102021	HCV Ab s/co Fld	CO	100	f	506
+11211-0	101423	CO2 Fld-sCnc	CO2	100	f	507
+13538-4	101423	CO2 Ur-sCnc	CO2	100	f	508
+14040-0	101423	CO2 Stl-sCnc	CO2	100	f	509
+14640-7	101423	CO2 Dial fld-sCnc	CO2	100	f	510
+16551-4	101423	CO2 BldC-sCnc	CO2	100	f	511
+2026-3	101423	CO2 BldA-sCnc	CO2	100	f	512
+2027-1	101423	CO2 BldV-sCnc	CO2	100	f	513
+2028-9	101423	CO2 SerPl-sCnc	CO2	100	f	514
+20565-8	101423	CO2 Bld-sCnc	CO2	100	f	515
+32306-3	101423	pCO2 Ur	CO2	60	f	516
+34520-7	101423	CO2 BldCo-sCnc	CO2	100	f	517
+34728-6	101423	CO2 Bld Calc-sCnc	CO2	100	f	518
+38253-1	101423	CO2 Spec-sCnc	CO2	100	f	519
+39465-0	101423	CO2 BldCoV-sCnc	CO2	100	f	520
+41647-9	101423	CO2 BldA Calc-sCnc	CO2	100	f	521
+51781-3	101423	CO2 BldC Calc-sCnc	CO2	100	f	522
+57921-9	101423	CO2 BldCoA Calc-sCnc	CO2	100	f	523
+48159-8	24	HCV Ab s/co SerPl IA	CO_Fall_MergeSource	100	f	524
+51656-7	24	HCV Ab s/co Fld	CO_Fall_MergeSource	100	f	525
+48159-8	15	HCV Ab s/co SerPl IA	CO_Patient_MergeSource	100	f	526
+51656-7	15	HCV Ab s/co Fld	CO_Patient_MergeSource	100	f	527
+4199-6	1278	Codeine Dose	Diagnose	60	f	528
+4216-8	1278	DAM Dose	Diagnose	62	f	529
+4222-6	1278	Digoxin Dose	Diagnose	70	f	530
+10931-4	100135	Daphnia IgE Qn	Drainagen	61	f	531
+6092-1	100135	Crab IgE Qn	Drainagen	60	f	532
+6095-4	100135	D farinae IgE Qn	Drainagen	64	f	533
+14196-0	102046	Retics #	ETVI	60	f	534
+20874-4	106521	Manganese Tiss-mCnt	Fall_Anamnese_Auslandsaufenthalt_Nein	62	f	535
+25467-2	106521	Manganese SerPl-sCnc	Fall_Anamnese_Auslandsaufenthalt_Nein	61	f	536
+26787-2	106521	Anserine Amn-sCnc	Fall_Anamnese_Auslandsaufenthalt_Nein	60	f	537
+42221-2	106521	Manganese Ur-sCnc	Fall_Anamnese_Auslandsaufenthalt_Nein	60	f	538
+97186-1	108100	B para IS1001 DNA L resp Ql NAA+non-prb	Fall_Para	100	f	539
+19817-6	106597	Complications	Fall_Vormedikation_Keine_Vorhanden	62	f	540
+57833-6	106597	Rx for medication	Fall_Vormedikation_Keine_Vorhanden	73	f	541
+57833-6	105241	Rx for medication	F_MedDoku_Vormedikation	60	f	542
+60590-7	105241	Medication dispensed.brief Doc	F_MedDoku_Vormedikation	60	f	543
+30525-0	102045	Age	GEF	67	f	544
+9279-1	103694	Resp rate	Hypothermie_Coolgard_Doku-Rate	62	f	545
+9279-1	103686	Resp rate	Hypothermie_Coolgard_VO_Rate	62	f	546
+3184-9	103568	ACT Bld	IABP_ACAT_ES_Unterstuetzungsverhaeltnis	62	f	547
+3186-4	103568	Fact IXa PPP-aCnc	IABP_ACAT_ES_Unterstuetzungsverhaeltnis	62	f	548
+96826-3	106469	Cardio Score SOFA	IABP_CARDIOSAVE_ES_IABPAufblasen	62	f	549
+11187-2	104354	P frequentans IgE Qn	IABP_DatascopeCS300_ES_IABP_Frequenz	61	f	550
+11187-2	102121	P frequentans IgE Qn	IABP_Frequenz	61	f	551
+15184-5	102120	IgG Ser Ql IEP	IABP_Trigger	62	f	552
+33603-2	102120	BPI IgG Ser-aCnc	IABP_Trigger	64	f	553
+8302-2	108522	Body height	IstSoziale_Besonderheit	61	f	554
+8310-5	101007	Body temperature	KlinikTemperaturstatus	62	f	555
+13944-4	100091	LAP WBC Cont Micro-cCnc	LAP	100	f	557
+2744-1	100091	pH BldA	LAP	60	f	558
+8310-5	103737	Body temperature	Lungenersatzverfahren_Anordnung_ECMOTemperatur	73	f	560
+29554-3	102093	Procedure	Lungenersatzverfahren_Anordnung_ILAPressure	60	f	561
+8310-5	103734	Body temperature	Lungenersatzverfahren_Doku_ECMOTemperatur	69	f	562
+4659-9	100091	LAP WBC-cCnc	LAP	100	t	559
+8310-5	103731	Body temperature	Lungenersatzverfahren_Doku_Temperatur	77	f	563
+3184-9	103586	ACT Bld	Lungenersatzverfahren_MS_ECMO_ACT	60	f	564
+17051-4	106289	Laxatives Ur	Lungenersatzverfahren_MS_ILAactivve_P1	64	f	565
+17051-4	106290	Laxatives Ur	Lungenersatzverfahren_MS_ILAactivve_P2	64	f	566
+17051-4	106291	Laxatives Ur	Lungenersatzverfahren_MS_ILAactivve_P3	64	f	567
+17051-4	106293	Laxatives Ur	Lungenersatzverfahren_MS_ILAactivve_P4	64	f	568
+19211-2	104117	pO2 BldMV	Lungenersatzverfahren_MS_ILA_SpO2	60	f	569
+2019-8	104117	pCO2 BldA	Lungenersatzverfahren_MS_ILA_SpO2	60	f	570
+2703-7	104117	pO2 BldA	Lungenersatzverfahren_MS_ILA_SpO2	63	f	571
+2708-6	104117	SaO2 % BldA	Lungenersatzverfahren_MS_ILA_SpO2	60	f	572
+3148-4	104117	pO2 Gas	Lungenersatzverfahren_MS_ILA_SpO2	67	f	573
+2746-6	102055	pH BldV	LVP	60	f	574
+2711-0	102023	SaO2 % BldV	LVSA	62	f	575
+14619-1	104833	Appearance Plas	NEV_Apherese_ES_Multi_Plasma	67	f	576
+14619-1	104834	Appearance Plas	NEV_Apherese_ES_Multi_PlasmaVolumen	67	f	577
+8310-5	104831	Body temperature	NEV_Apherese_ES_Multi_Temperatur	63	f	578
+11158-3	104855	Appearance Ser	NEV_Apherese_VO_Balken	64	f	579
+14619-1	104846	Appearance Plas	NEV_Apherese_VO_Multi_Plasma_Volumen	67	f	580
+8310-5	104844	Body temperature	NEV_Apherese_VO_Multi_Temperatur	63	f	581
+11158-3	104849	Appearance Ser	NEV_Apherese_VO_SpülloesungAntikoag	64	f	582
+2004-0	104985	Calcium Ur-sCnc	NEV_CRRT_Doku_CalciumLoesung	62	f	583
+24518-3	104985	Calcium/Creat Ur-sRto	NEV_CRRT_Doku_CalciumLoesung	62	f	584
+27037-1	104985	Calcium/Creat 2h Ur	NEV_CRRT_Doku_CalciumLoesung	60	f	585
+29527-9	104986	Citrate/Creat Ur-sRto	NEV_CRRT_Doku_CitratLoesung	64	f	586
+30053-3	104986	Leucine/Creat Ur-Rto	NEV_CRRT_Doku_CitratLoesung	60	f	587
+34266-7	104986	Citrate Ur-sCnc	NEV_CRRT_Doku_CitratLoesung	63	f	588
+12181-4	104974	Calcium Fld-sCnc	NEV_CRRT_ES_Multi_CalciumFiltrat	63	f	589
+14417-0	104974	Calcium Prt-sCnc	NEV_CRRT_ES_Multi_CalciumFiltrat	63	f	590
+14637-3	104974	Calcium 24h Ur-sRate	NEV_CRRT_ES_Multi_CalciumFiltrat	62	f	591
+16518-3	104974	Calcium 2h Ur-mRate	NEV_CRRT_ES_Multi_CalciumFiltrat	63	f	592
+18186-7	104974	Calcium 12h Ur-mRate	NEV_CRRT_ES_Multi_CalciumFiltrat	62	f	593
+24518-3	104974	Calcium/Creat Ur-sRto	NEV_CRRT_ES_Multi_CalciumFiltrat	65	f	594
+27037-1	104974	Calcium/Creat 2h Ur	NEV_CRRT_ES_Multi_CalciumFiltrat	63	f	595
+50836-6	104974	Calcium Hair-sCnt	NEV_CRRT_ES_Multi_CalciumFiltrat	67	f	596
+51610-4	104974	Calcium 12h Ur-sRate	NEV_CRRT_ES_Multi_CalciumFiltrat	62	f	597
+2128-7	104975	Citrate Ur-mCnc	NEV_CRRT_ES_Multi_CitratBlut	60	f	598
+29527-9	104975	Citrate/Creat Ur-sRto	NEV_CRRT_ES_Multi_CitratBlut	61	f	599
+34266-7	104975	Citrate Ur-sCnc	NEV_CRRT_ES_Multi_CitratBlut	60	f	600
+70264-7	113047	Creat Plr/Ser	NEV_CRRT_ES_Multi_praeF	61	f	601
+70266-2	113047	Creat Prt/Ser	NEV_CRRT_ES_Multi_praeF	61	f	602
+8867-4	113047	Heart rate	NEV_CRRT_ES_Multi_praeF	60	f	603
+19254-2	105049	pO2 temp adj Bld	NEV_CRRT_ES_Multi_Temp	62	f	604
+19255-9	105049	pO2 temp adj BldA	NEV_CRRT_ES_Multi_Temp	62	f	605
+19256-7	105049	pO2 temp adj BldC	NEV_CRRT_ES_Multi_Temp	62	f	606
+19258-3	105049	pO2 temp adj BldV	NEV_CRRT_ES_Multi_Temp	62	f	607
+32771-8	105049	pCO2 temp adj BldA	NEV_CRRT_ES_Multi_Temp	62	f	608
+33254-4	105049	pH temp adj BldA	NEV_CRRT_ES_Multi_Temp	62	f	609
+34705-4	105049	pCO2 temp adj Bld	NEV_CRRT_ES_Multi_Temp	62	f	610
+39485-8	105049	pH temp adj BldC	NEV_CRRT_ES_Multi_Temp	62	f	611
+39486-6	105049	pH temp adj BldV	NEV_CRRT_ES_Multi_Temp	62	f	612
+40619-9	105049	pCO2 temp adj BldV	NEV_CRRT_ES_Multi_Temp	62	f	613
+40620-7	105049	pCO2 temp adj BldC	NEV_CRRT_ES_Multi_Temp	62	f	614
+47720-8	105049	pH temp adj BldCo	NEV_CRRT_ES_Multi_Temp	62	f	615
+8330-3	105049	Bdy temp IV	NEV_CRRT_ES_Multi_Temp	62	f	616
+8334-5	105049	Bdy temp Bladder	NEV_CRRT_ES_Multi_Temp	62	f	617
+12585-6	104973	Creat 2h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	62	f	618
+12586-4	104973	Creat 4h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	62	f	619
+12587-2	104973	Creat 6h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	62	f	620
+12588-0	104973	Creat 8h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	62	f	621
+12589-8	104973	Creat 12h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	61	f	622
+13001-3	104973	Mandelate/Creat Ur	NEV_CRRT_ES_Multi_Temperatur	61	f	623
+13754-7	104973	Hippurate/Creat Ur	NEV_CRRT_ES_Multi_Temperatur	61	f	624
+13789-3	104973	PETN/Creat Ur	NEV_CRRT_ES_Multi_Temperatur	64	f	625
+16285-9	104973	Creat/Prot Ur	NEV_CRRT_ES_Multi_Temperatur	64	f	626
+16689-2	104973	Creat 48h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	61	f	627
+16690-0	104973	Creat 72h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	61	f	628
+18475-4	104973	Phe/Creat Ur-sRto	NEV_CRRT_ES_Multi_Temperatur	62	f	629
+2162-6	104973	Creat 24h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	61	f	630
+24522-5	104973	Epineph/Creat Ur-sRto	NEV_CRRT_ES_Multi_Temperatur	61	f	631
+25122-3	104973	PETN/Creat Ur-sRto	NEV_CRRT_ES_Multi_Temperatur	61	f	632
+28604-7	104973	PETN/Creat Ur-Rto	NEV_CRRT_ES_Multi_Temperatur	62	f	633
+2890-2	104973	Prot/Creat Ur	NEV_CRRT_ES_Multi_Temperatur	64	f	634
+30055-8	104973	Phe/Creat Ur-Rto	NEV_CRRT_ES_Multi_Temperatur	65	f	635
+58372-4	104973	Meprobamate/Creat Ur	NEV_CRRT_ES_Multi_Temperatur	63	f	636
+58998-6	104973	Creat 18h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	61	f	637
+8310-5	104973	Body temperature	NEV_CRRT_ES_Multi_Temperatur	71	f	638
+93733-4	104973	Creat 5h Ur-mRate	NEV_CRRT_ES_Multi_Temperatur	62	f	639
+50757-4	104972	CK/CK MB Bld-cRto	NEV_CRRT_MS_Multi_artDruck	60	f	640
+70266-2	104959	Creat Prt/Ser	NEV_CRRT_MS_Multi_BehandlungszeitAktuell	60	f	641
+21232-4	104967	Creat BldA-mCnc	NEV_CRRT_MS_Multi_Bilanz	62	f	642
+21232-4	106402	Creat BldA-mCnc	NEV_CRRT_MS_Multi_Bilanz_ml	62	f	643
+12181-4	104968	Calcium Fld-sCnc	NEV_CRRT_MS_Multi_Calciumfluss	61	f	644
+14417-0	104968	Calcium Prt-sCnc	NEV_CRRT_MS_Multi_Calciumfluss	67	f	645
+16526-6	104968	Calcium/Prot SerPl	NEV_CRRT_MS_Multi_Calciumfluss	63	f	646
+24518-3	104968	Calcium/Creat Ur-sRto	NEV_CRRT_MS_Multi_Calciumfluss	63	f	647
+27037-1	104968	Calcium/Creat 2h Ur	NEV_CRRT_MS_Multi_Calciumfluss	62	f	648
+27172-6	104968	Calcium 24h Stl-mCnt	NEV_CRRT_MS_Multi_Calciumfluss	60	f	649
+53502-1	104968	Calcium Spec-sCnt	NEV_CRRT_MS_Multi_Calciumfluss	65	f	650
+14417-0	104962	Calcium Prt-sCnc	NEV_CRRT_MS_Multi_CalciumVolKum	65	f	651
+16526-6	104962	Calcium/Prot SerPl	NEV_CRRT_MS_Multi_CalciumVolKum	62	f	652
+24518-3	104962	Calcium/Creat Ur-sRto	NEV_CRRT_MS_Multi_CalciumVolKum	62	f	653
+27037-1	104962	Calcium/Creat 2h Ur	NEV_CRRT_MS_Multi_CalciumVolKum	60	f	654
+53502-1	104962	Calcium Spec-sCnt	NEV_CRRT_MS_Multi_CalciumVolKum	63	f	655
+29527-9	104969	Citrate/Creat Ur-sRto	NEV_CRRT_MS_Multi_Citratfluss	60	f	656
+70266-2	104970	Creat Prt/Ser	NEV_CRRT_MS_Multi_TMP	60	f	657
+39982-4	104961	Creat BS Ur-mCnc	NEV_CRRT_MS_Multi_UFR_BFRVerhaeltnis	65	f	658
+40133-1	104961	Creat BS Ur-sCnc	NEV_CRRT_MS_Multi_UFR_BFRVerhaeltnis	65	f	659
+50832-5	104961	Boron/Creat Ur-sRto	NEV_CRRT_MS_Multi_UFR_BFRVerhaeltnis	65	f	660
+75218-8	105013	Case rprt	NEV_CRRT_VO_Balken	62	f	661
+12181-4	105006	Calcium Fld-sCnc	NEV_CRRT_VO_CalciumLoesung	63	f	662
+2004-0	105006	Calcium Ur-sCnc	NEV_CRRT_VO_CalciumLoesung	65	f	663
+24518-3	105006	Calcium/Creat Ur-sRto	NEV_CRRT_VO_CalciumLoesung	60	f	664
+53502-1	105006	Calcium Spec-sCnt	NEV_CRRT_VO_CalciumLoesung	61	f	665
+15038-3	105007	Citrate SerPl-sCnc	NEV_CRRT_VO_CitratLoesung	61	f	666
+2128-7	105007	Citrate Ur-mCnc	NEV_CRRT_VO_CitratLoesung	61	f	667
+29527-9	105007	Citrate/Creat Ur-sRto	NEV_CRRT_VO_CitratLoesung	62	f	668
+34266-7	105007	Citrate Ur-sCnc	NEV_CRRT_VO_CitratLoesung	67	f	669
+13476-7	105011	Silver/Creat Ur	NEV_CRRT_VO_Filter	62	f	670
+87925-4	105011	RPR CSF-Titr	NEV_CRRT_VO_Filter	61	f	671
+12181-4	104995	Calcium Fld-sCnc	NEV_CRRT_VO_Multi_CalciumFiltrat	63	f	672
+14417-0	104995	Calcium Prt-sCnc	NEV_CRRT_VO_Multi_CalciumFiltrat	63	f	673
+14637-3	104995	Calcium 24h Ur-sRate	NEV_CRRT_VO_Multi_CalciumFiltrat	62	f	674
+16518-3	104995	Calcium 2h Ur-mRate	NEV_CRRT_VO_Multi_CalciumFiltrat	63	f	675
+18186-7	104995	Calcium 12h Ur-mRate	NEV_CRRT_VO_Multi_CalciumFiltrat	62	f	676
+24518-3	104995	Calcium/Creat Ur-sRto	NEV_CRRT_VO_Multi_CalciumFiltrat	65	f	677
+27037-1	104995	Calcium/Creat 2h Ur	NEV_CRRT_VO_Multi_CalciumFiltrat	63	f	678
+50836-6	104995	Calcium Hair-sCnt	NEV_CRRT_VO_Multi_CalciumFiltrat	67	f	679
+51610-4	104995	Calcium 12h Ur-sRate	NEV_CRRT_VO_Multi_CalciumFiltrat	62	f	680
+2128-7	104996	Citrate Ur-mCnc	NEV_CRRT_VO_Multi_CitratBlut	60	f	681
+29527-9	104996	Citrate/Creat Ur-sRto	NEV_CRRT_VO_Multi_CitratBlut	61	f	682
+34266-7	104996	Citrate Ur-sCnc	NEV_CRRT_VO_Multi_CitratBlut	60	f	683
+70264-7	113048	Creat Plr/Ser	NEV_CRRT_VO_Multi_praeF	61	f	684
+70266-2	113048	Creat Prt/Ser	NEV_CRRT_VO_Multi_praeF	61	f	685
+8867-4	113048	Heart rate	NEV_CRRT_VO_Multi_praeF	60	f	686
+19254-2	105050	pO2 temp adj Bld	NEV_CRRT_VO_Multi_Temp	62	f	687
+19255-9	105050	pO2 temp adj BldA	NEV_CRRT_VO_Multi_Temp	62	f	688
+19256-7	105050	pO2 temp adj BldC	NEV_CRRT_VO_Multi_Temp	62	f	689
+19258-3	105050	pO2 temp adj BldV	NEV_CRRT_VO_Multi_Temp	62	f	690
+32771-8	105050	pCO2 temp adj BldA	NEV_CRRT_VO_Multi_Temp	62	f	691
+33254-4	105050	pH temp adj BldA	NEV_CRRT_VO_Multi_Temp	62	f	692
+34705-4	105050	pCO2 temp adj Bld	NEV_CRRT_VO_Multi_Temp	62	f	693
+39485-8	105050	pH temp adj BldC	NEV_CRRT_VO_Multi_Temp	62	f	694
+39486-6	105050	pH temp adj BldV	NEV_CRRT_VO_Multi_Temp	62	f	695
+40619-9	105050	pCO2 temp adj BldV	NEV_CRRT_VO_Multi_Temp	62	f	696
+40620-7	105050	pCO2 temp adj BldC	NEV_CRRT_VO_Multi_Temp	62	f	697
+47720-8	105050	pH temp adj BldCo	NEV_CRRT_VO_Multi_Temp	62	f	698
+8330-3	105050	Bdy temp IV	NEV_CRRT_VO_Multi_Temp	62	f	699
+8334-5	105050	Bdy temp Bladder	NEV_CRRT_VO_Multi_Temp	62	f	700
+12585-6	104994	Creat 2h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	62	f	701
+12586-4	104994	Creat 4h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	62	f	702
+12587-2	104994	Creat 6h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	62	f	703
+12588-0	104994	Creat 8h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	62	f	704
+12589-8	104994	Creat 12h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	61	f	705
+13001-3	104994	Mandelate/Creat Ur	NEV_CRRT_VO_Multi_Temperatur	61	f	706
+13754-7	104994	Hippurate/Creat Ur	NEV_CRRT_VO_Multi_Temperatur	61	f	707
+13789-3	104994	PETN/Creat Ur	NEV_CRRT_VO_Multi_Temperatur	64	f	708
+16285-9	104994	Creat/Prot Ur	NEV_CRRT_VO_Multi_Temperatur	64	f	709
+16689-2	104994	Creat 48h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	61	f	710
+16690-0	104994	Creat 72h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	61	f	711
+18475-4	104994	Phe/Creat Ur-sRto	NEV_CRRT_VO_Multi_Temperatur	62	f	712
+2162-6	104994	Creat 24h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	61	f	713
+24522-5	104994	Epineph/Creat Ur-sRto	NEV_CRRT_VO_Multi_Temperatur	61	f	714
+25122-3	104994	PETN/Creat Ur-sRto	NEV_CRRT_VO_Multi_Temperatur	61	f	715
+28604-7	104994	PETN/Creat Ur-Rto	NEV_CRRT_VO_Multi_Temperatur	62	f	716
+2890-2	104994	Prot/Creat Ur	NEV_CRRT_VO_Multi_Temperatur	64	f	717
+30055-8	104994	Phe/Creat Ur-Rto	NEV_CRRT_VO_Multi_Temperatur	65	f	718
+58372-4	104994	Meprobamate/Creat Ur	NEV_CRRT_VO_Multi_Temperatur	63	f	719
+58998-6	104994	Creat 18h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	61	f	720
+8310-5	104994	Body temperature	NEV_CRRT_VO_Multi_Temperatur	71	f	721
+93733-4	104994	Creat 5h Ur-mRate	NEV_CRRT_VO_Multi_Temperatur	62	f	722
+75218-8	105010	Case rprt	NEV_CRRT_VO_Option	62	f	723
+75218-8	105003	Case rprt	NEV_CRRT_VO_SpülloesungAntikoag	62	f	724
+14934-4	104889	Urate Ur-sCnc	NEV_HD_ES_4008HS_IsoUF_Rate	61	f	725
+9279-1	104889	Resp rate	NEV_HD_ES_4008HS_IsoUF_Rate	63	f	726
+12212-7	104882	EBV NA IgG Titr Ser IF	NEV_HD_ES_4008HS_SollNa	100	f	727
+16825-2	104882	EBV NA IgG Fld Ql	NEV_HD_ES_4008HS_SollNa	100	f	728
+21260-5	104882	EBV NA Ab Titr Ser IF	NEV_HD_ES_4008HS_SollNa	100	f	729
+22296-8	104882	EBV NA Ab Ser Ql	NEV_HD_ES_4008HS_SollNa	100	f	730
+30083-0	104882	EBV NA IgG Ser IA-aCnc	NEV_HD_ES_4008HS_SollNa	100	f	731
+31372-6	104882	EBV NA Ab Ser-aCnc	NEV_HD_ES_4008HS_SollNa	100	f	732
+31373-4	104882	EBV NA IgG CSF-aCnc	NEV_HD_ES_4008HS_SollNa	100	f	733
+31374-2	104882	EBV NA IgG Ser-aCnc	NEV_HD_ES_4008HS_SollNa	100	f	734
+39103-7	104882	FLUAV NA cDNA Spec NAA+probe	NEV_HD_ES_4008HS_SollNa	100	f	735
+48584-7	104882	NM ExG GE time p 100mg Na octanoate PO	NEV_HD_ES_4008HS_SollNa	100	f	736
+48585-4	104882	NM ExG GE time p 100mg Na acetate PO	NEV_HD_ES_4008HS_SollNa	100	f	737
+49135-7	104882	Fract excret Na Ur+SerPl-Rto	NEV_HD_ES_4008HS_SollNa	100	f	738
+5155-7	104882	EBV NA IgG Ser Ql IF	NEV_HD_ES_4008HS_SollNa	100	f	739
+5156-5	104882	EBV NA IgG Ser Ql IA	NEV_HD_ES_4008HS_SollNa	100	f	740
+53129-3	104882	Na Urate Cry #/area UrnS HPF	NEV_HD_ES_4008HS_SollNa	100	f	741
+53788-6	104882	Na Urate Cry UrnS Ql Micro	NEV_HD_ES_4008HS_SollNa	100	f	742
+55134-1	104882	FLUAV NA RNA Islt NAA+probe	NEV_HD_ES_4008HS_SollNa	100	f	743
+61101-2	104882	FLUAV NA RNA Spec Seq	NEV_HD_ES_4008HS_SollNa	100	f	744
+66493-8	104882	EBV NA 1 IgG Ser-aCnc	NEV_HD_ES_4008HS_SollNa	100	f	745
+72200-9	104882	FLUAV NA seg sequence ID Islt Seq	NEV_HD_ES_4008HS_SollNa	100	f	746
+7883-2	104882	EBV NA IgG Ser Ql	NEV_HD_ES_4008HS_SollNa	100	f	747
+7884-0	104882	EBV NA IgM Ser Ql	NEV_HD_ES_4008HS_SollNa	100	f	748
+87716-7	104882	FLUAV NA gene Islt-Seq	NEV_HD_ES_4008HS_SollNa	100	f	749
+92244-3	104882	Micro resist mut NA change type Islt/Spm	NEV_HD_ES_4008HS_SollNa	100	f	750
+92245-0	104882	Micro resist mut NA change Islt/Spm	NEV_HD_ES_4008HS_SollNa	100	f	751
+8310-5	104880	Body temperature	NEV_HD_ES_4008HS_Temperatur	77	f	752
+12212-7	104898	EBV NA IgG Titr Ser IF	NEV_HD_ES_4008onl_SollNa	100	f	753
+16825-2	104898	EBV NA IgG Fld Ql	NEV_HD_ES_4008onl_SollNa	100	f	754
+21260-5	104898	EBV NA Ab Titr Ser IF	NEV_HD_ES_4008onl_SollNa	100	f	755
+22296-8	104898	EBV NA Ab Ser Ql	NEV_HD_ES_4008onl_SollNa	100	f	756
+30083-0	104898	EBV NA IgG Ser IA-aCnc	NEV_HD_ES_4008onl_SollNa	100	f	757
+31372-6	104898	EBV NA Ab Ser-aCnc	NEV_HD_ES_4008onl_SollNa	100	f	758
+31373-4	104898	EBV NA IgG CSF-aCnc	NEV_HD_ES_4008onl_SollNa	100	f	759
+31374-2	104898	EBV NA IgG Ser-aCnc	NEV_HD_ES_4008onl_SollNa	100	f	760
+39103-7	104898	FLUAV NA cDNA Spec NAA+probe	NEV_HD_ES_4008onl_SollNa	100	f	761
+48584-7	104898	NM ExG GE time p 100mg Na octanoate PO	NEV_HD_ES_4008onl_SollNa	100	f	762
+48585-4	104898	NM ExG GE time p 100mg Na acetate PO	NEV_HD_ES_4008onl_SollNa	100	f	763
+49135-7	104898	Fract excret Na Ur+SerPl-Rto	NEV_HD_ES_4008onl_SollNa	100	f	764
+5155-7	104898	EBV NA IgG Ser Ql IF	NEV_HD_ES_4008onl_SollNa	100	f	765
+5156-5	104898	EBV NA IgG Ser Ql IA	NEV_HD_ES_4008onl_SollNa	100	f	766
+53129-3	104898	Na Urate Cry #/area UrnS HPF	NEV_HD_ES_4008onl_SollNa	100	f	767
+53788-6	104898	Na Urate Cry UrnS Ql Micro	NEV_HD_ES_4008onl_SollNa	100	f	768
+55134-1	104898	FLUAV NA RNA Islt NAA+probe	NEV_HD_ES_4008onl_SollNa	100	f	769
+61101-2	104898	FLUAV NA RNA Spec Seq	NEV_HD_ES_4008onl_SollNa	100	f	770
+66493-8	104898	EBV NA 1 IgG Ser-aCnc	NEV_HD_ES_4008onl_SollNa	100	f	771
+72200-9	104898	FLUAV NA seg sequence ID Islt Seq	NEV_HD_ES_4008onl_SollNa	100	f	772
+7883-2	104898	EBV NA IgG Ser Ql	NEV_HD_ES_4008onl_SollNa	100	f	773
+7884-0	104898	EBV NA IgM Ser Ql	NEV_HD_ES_4008onl_SollNa	100	f	774
+87716-7	104898	FLUAV NA gene Islt-Seq	NEV_HD_ES_4008onl_SollNa	100	f	775
+92244-3	104898	Micro resist mut NA change type Islt/Spm	NEV_HD_ES_4008onl_SollNa	100	f	776
+92245-0	104898	Micro resist mut NA change Islt/Spm	NEV_HD_ES_4008onl_SollNa	100	f	777
+8310-5	104896	Body temperature	NEV_HD_ES_4008onl_Temperatur	77	f	778
+6179-6	104873	Mouse Epith IgE Qn	NEV_HD_MS_4008HS_Leitfähigkeit	61	f	779
+281-6	106390	Imipenem Titr SBT	NEV_HD_MS_4008HS_Rest_Zeit_min	61	f	780
+6179-6	104864	Mouse Epith IgE Qn	NEV_HD_MS_4008onl_Leitfähigkeit	61	f	781
+281-6	106385	Imipenem Titr SBT	NEV_HD_MS_4008onl_Rest_Zeit_min	61	f	782
+12212-7	104938	EBV NA IgG Titr Ser IF	NEV_HD_VO_4008HS_Soll_Na	100	f	783
+16825-2	104938	EBV NA IgG Fld Ql	NEV_HD_VO_4008HS_Soll_Na	100	f	784
+21260-5	104938	EBV NA Ab Titr Ser IF	NEV_HD_VO_4008HS_Soll_Na	100	f	785
+22296-8	104938	EBV NA Ab Ser Ql	NEV_HD_VO_4008HS_Soll_Na	100	f	786
+30083-0	104938	EBV NA IgG Ser IA-aCnc	NEV_HD_VO_4008HS_Soll_Na	100	f	787
+31372-6	104938	EBV NA Ab Ser-aCnc	NEV_HD_VO_4008HS_Soll_Na	100	f	788
+31373-4	104938	EBV NA IgG CSF-aCnc	NEV_HD_VO_4008HS_Soll_Na	100	f	789
+31374-2	104938	EBV NA IgG Ser-aCnc	NEV_HD_VO_4008HS_Soll_Na	100	f	790
+39103-7	104938	FLUAV NA cDNA Spec NAA+probe	NEV_HD_VO_4008HS_Soll_Na	100	f	791
+48584-7	104938	NM ExG GE time p 100mg Na octanoate PO	NEV_HD_VO_4008HS_Soll_Na	100	f	792
+48585-4	104938	NM ExG GE time p 100mg Na acetate PO	NEV_HD_VO_4008HS_Soll_Na	100	f	793
+49135-7	104938	Fract excret Na Ur+SerPl-Rto	NEV_HD_VO_4008HS_Soll_Na	100	f	794
+5155-7	104938	EBV NA IgG Ser Ql IF	NEV_HD_VO_4008HS_Soll_Na	100	f	795
+5156-5	104938	EBV NA IgG Ser Ql IA	NEV_HD_VO_4008HS_Soll_Na	100	f	796
+53129-3	104938	Na Urate Cry #/area UrnS HPF	NEV_HD_VO_4008HS_Soll_Na	100	f	797
+53788-6	104938	Na Urate Cry UrnS Ql Micro	NEV_HD_VO_4008HS_Soll_Na	100	f	798
+55134-1	104938	FLUAV NA RNA Islt NAA+probe	NEV_HD_VO_4008HS_Soll_Na	100	f	799
+61101-2	104938	FLUAV NA RNA Spec Seq	NEV_HD_VO_4008HS_Soll_Na	100	f	800
+66493-8	104938	EBV NA 1 IgG Ser-aCnc	NEV_HD_VO_4008HS_Soll_Na	100	f	801
+72200-9	104938	FLUAV NA seg sequence ID Islt Seq	NEV_HD_VO_4008HS_Soll_Na	100	f	802
+7883-2	104938	EBV NA IgG Ser Ql	NEV_HD_VO_4008HS_Soll_Na	100	f	803
+7884-0	104938	EBV NA IgM Ser Ql	NEV_HD_VO_4008HS_Soll_Na	100	f	804
+87716-7	104938	FLUAV NA gene Islt-Seq	NEV_HD_VO_4008HS_Soll_Na	100	f	805
+92244-3	104938	Micro resist mut NA change type Islt/Spm	NEV_HD_VO_4008HS_Soll_Na	100	f	806
+92245-0	104938	Micro resist mut NA change Islt/Spm	NEV_HD_VO_4008HS_Soll_Na	100	f	807
+29953-7	104939	ANA Titr Ser	NEV_HD_VO_4008HS_Start_Na	60	f	808
+50794-7	104939	OF start NFr RBC	NEV_HD_VO_4008HS_Start_Na	77	f	809
+82752-7	104939	Travel start date	NEV_HD_VO_4008HS_Start_Na	77	f	810
+8665-2	104939	LMP Start date	NEV_HD_VO_4008HS_Start_Na	77	f	811
+8310-5	104936	Body temperature	NEV_HD_VO_4008HS_Temperatur	77	f	812
+12301-8	104941	Procaine Ur Ql	NEV_HD_VO_4008HS_UF_Profil	61	f	813
+2887-8	104941	Prot Ur Ql	NEV_HD_VO_4008HS_UF_Profil	63	f	814
+12212-7	104923	EBV NA IgG Titr Ser IF	NEV_HD_VO_4008onl_SollNa	100	f	815
+16825-2	104923	EBV NA IgG Fld Ql	NEV_HD_VO_4008onl_SollNa	100	f	816
+21260-5	104923	EBV NA Ab Titr Ser IF	NEV_HD_VO_4008onl_SollNa	100	f	817
+22296-8	104923	EBV NA Ab Ser Ql	NEV_HD_VO_4008onl_SollNa	100	f	818
+30083-0	104923	EBV NA IgG Ser IA-aCnc	NEV_HD_VO_4008onl_SollNa	100	f	819
+31372-6	104923	EBV NA Ab Ser-aCnc	NEV_HD_VO_4008onl_SollNa	100	f	820
+31373-4	104923	EBV NA IgG CSF-aCnc	NEV_HD_VO_4008onl_SollNa	100	f	821
+31374-2	104923	EBV NA IgG Ser-aCnc	NEV_HD_VO_4008onl_SollNa	100	f	822
+39103-7	104923	FLUAV NA cDNA Spec NAA+probe	NEV_HD_VO_4008onl_SollNa	100	f	823
+48584-7	104923	NM ExG GE time p 100mg Na octanoate PO	NEV_HD_VO_4008onl_SollNa	100	f	824
+48585-4	104923	NM ExG GE time p 100mg Na acetate PO	NEV_HD_VO_4008onl_SollNa	100	f	825
+49135-7	104923	Fract excret Na Ur+SerPl-Rto	NEV_HD_VO_4008onl_SollNa	100	f	826
+5155-7	104923	EBV NA IgG Ser Ql IF	NEV_HD_VO_4008onl_SollNa	100	f	827
+5156-5	104923	EBV NA IgG Ser Ql IA	NEV_HD_VO_4008onl_SollNa	100	f	828
+53129-3	104923	Na Urate Cry #/area UrnS HPF	NEV_HD_VO_4008onl_SollNa	100	f	829
+53788-6	104923	Na Urate Cry UrnS Ql Micro	NEV_HD_VO_4008onl_SollNa	100	f	830
+55134-1	104923	FLUAV NA RNA Islt NAA+probe	NEV_HD_VO_4008onl_SollNa	100	f	831
+61101-2	104923	FLUAV NA RNA Spec Seq	NEV_HD_VO_4008onl_SollNa	100	f	832
+66493-8	104923	EBV NA 1 IgG Ser-aCnc	NEV_HD_VO_4008onl_SollNa	100	f	833
+72200-9	104923	FLUAV NA seg sequence ID Islt Seq	NEV_HD_VO_4008onl_SollNa	100	f	834
+7883-2	104923	EBV NA IgG Ser Ql	NEV_HD_VO_4008onl_SollNa	100	f	835
+7884-0	104923	EBV NA IgM Ser Ql	NEV_HD_VO_4008onl_SollNa	100	f	836
+87716-7	104923	FLUAV NA gene Islt-Seq	NEV_HD_VO_4008onl_SollNa	100	f	837
+92244-3	104923	Micro resist mut NA change type Islt/Spm	NEV_HD_VO_4008onl_SollNa	100	f	838
+92245-0	104923	Micro resist mut NA change Islt/Spm	NEV_HD_VO_4008onl_SollNa	100	f	839
+8310-5	104921	Body temperature	NEV_HD_VO_4008onl_Temperatur	77	f	840
+77599-9	102504	Additional documentation	Nierenersatzverfahren_Dokumentation_Abschluss	64	f	841
+77599-9	101404	Additional documentation	Nierenersatzverfahren_Dokumentation_Antikoagulatio	73	f	842
+77599-9	101417	Additional documentation	Nierenersatzverfahren_Dokumentation_Balken	65	f	843
+77599-9	101398	Additional documentation	Nierenersatzverfahren_Dokumentation_Blutfluss	64	f	844
+77599-9	102503	Additional documentation	Nierenersatzverfahren_Dokumentation_BlutflussEinst	62	f	845
+77599-9	101405	Additional documentation	Nierenersatzverfahren_Dokumentation_Option	65	f	846
+77599-9	101391	Additional documentation	Nierenersatzverfahren_Dokumentation_Verfahren	65	f	847
+12181-4	102721	Calcium Fld-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	848
+14415-4	102721	Calcium Amn-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	849
+14417-0	102721	Calcium Prt-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	850
+14637-3	102721	Calcium 24h Ur-sRate	Nierenersatzverfahren_Einstell_Calcium	100	f	851
+16271-9	102721	Calcium 30M p chal SerPl-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	852
+16518-3	102721	Calcium 2h Ur-mRate	Nierenersatzverfahren_Einstell_Calcium	100	f	853
+16519-1	102721	Calcium 10M p chal SerPl-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	854
+16526-6	102721	Calcium/Prot SerPl	Nierenersatzverfahren_Einstell_Calcium	100	f	855
+17861-6	102721	Calcium SerPl-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	856
+17862-4	102721	Calcium Ur-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	857
+18186-7	102721	Calcium 12h Ur-mRate	Nierenersatzverfahren_Einstell_Calcium	100	f	858
+1996-8	102721	Calcium Bld-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	859
+1998-4	102721	Calcium Dial fld-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	860
+2000-8	102721	Calcium SerPl-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	861
+2001-6	102721	Calcium 24h Stl-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	862
+2004-0	102721	Calcium Ur-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	863
+2005-7	102721	Calcium p 12h fast 2h Ur-sRate	Nierenersatzverfahren_Einstell_Calcium	100	f	864
+24518-3	102721	Calcium/Creat Ur-sRto	Nierenersatzverfahren_Einstell_Calcium	100	f	865
+25362-5	102721	Calcium 24h Ur-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	866
+27037-1	102721	Calcium/Creat 2h Ur	Nierenersatzverfahren_Einstell_Calcium	100	f	867
+27172-6	102721	Calcium 24h Stl-mCnt	Nierenersatzverfahren_Einstell_Calcium	100	f	868
+29265-6	102721	Calcium Album cor SerPl-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	869
+33790-7	102721	Calcium sp1 p chal Ur-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	870
+38250-7	102721	Calcium Spec-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	871
+40083-8	102721	Calcium 1D p chal SerPl-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	872
+40230-5	102721	Calcium 1.5h p chal SerPl-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	873
+42593-4	102721	Calcium BldC-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	874
+42857-3	102721	Calcium BldV-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	875
+46099-8	102721	Calcium Album cor SerPl-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	876
+49005-2	102721	Calcium DiafP-sCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	877
+49764-4	102721	Calcium Amn-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	878
+49765-1	102721	Calcium Bld-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	879
+50836-6	102721	Calcium Hair-sCnt	Nierenersatzverfahren_Einstell_Calcium	100	f	880
+51610-4	102721	Calcium 12h Ur-sRate	Nierenersatzverfahren_Einstell_Calcium	100	f	881
+53502-1	102721	Calcium Spec-sCnt	Nierenersatzverfahren_Einstell_Calcium	100	f	882
+57335-2	102721	Calcium 12h Ur-mCnc	Nierenersatzverfahren_Einstell_Calcium	100	f	883
+12181-4	102749	Calcium Fld-sCnc	Nierenersatzverfahren_Einstell_CalciumLoesung	67	f	884
+14415-4	102749	Calcium Amn-sCnc	Nierenersatzverfahren_Einstell_CalciumLoesung	60	f	885
+14417-0	102749	Calcium Prt-sCnc	Nierenersatzverfahren_Einstell_CalciumLoesung	60	f	886
+1996-8	102749	Calcium Bld-sCnc	Nierenersatzverfahren_Einstell_CalciumLoesung	60	f	887
+2004-0	102749	Calcium Ur-sCnc	Nierenersatzverfahren_Einstell_CalciumLoesung	62	f	888
+10567-6	102748	Citrate Smn-sCnc	Nierenersatzverfahren_Einstell_CitratLoesung	62	f	889
+2126-1	102748	Citrate Smn-mCnc	Nierenersatzverfahren_Einstell_CitratLoesung	62	f	890
+34266-7	102748	Citrate Ur-sCnc	Nierenersatzverfahren_Einstell_CitratLoesung	64	f	891
+26516-5	102585	Platelet # Plas	Nierenersatzverfahren_Einstell_Plasmarate	61	f	892
+8310-5	102583	Body temperature	Nierenersatzverfahren_Einstell_SollTemperatur	77	f	893
+8310-5	102610	Body temperature	Nierenersatzverfahren_Einstell_Temperatur	77	f	894
+12181-4	102753	Calcium Fld-sCnc	Nierenersatzverfahren_Mess_CalciumFluss	67	f	895
+9279-1	102644	Resp rate	Nierenersatzverfahren_Mess_ISOUFRate	61	f	896
+8310-5	102622	Body temperature	Nierenersatzverfahren_Mess_SollTemperatur	71	f	897
+8310-5	102623	Body temperature	Nierenersatzverfahren_Mess_Temperatur	71	f	898
+2988-4	102626	Testost Ur-mCnc	Nierenersatzverfahren_Mess_UFR	61	f	899
+12181-4	102743	Calcium Fld-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	900
+14415-4	102743	Calcium Amn-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	901
+14417-0	102743	Calcium Prt-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	902
+14637-3	102743	Calcium 24h Ur-sRate	Nierenersatzverfahren_VO_Calcium	100	f	903
+16271-9	102743	Calcium 30M p chal SerPl-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	904
+16518-3	102743	Calcium 2h Ur-mRate	Nierenersatzverfahren_VO_Calcium	100	f	905
+16519-1	102743	Calcium 10M p chal SerPl-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	906
+16526-6	102743	Calcium/Prot SerPl	Nierenersatzverfahren_VO_Calcium	100	f	907
+17861-6	102743	Calcium SerPl-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	908
+17862-4	102743	Calcium Ur-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	909
+18186-7	102743	Calcium 12h Ur-mRate	Nierenersatzverfahren_VO_Calcium	100	f	910
+1996-8	102743	Calcium Bld-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	911
+1998-4	102743	Calcium Dial fld-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	912
+2000-8	102743	Calcium SerPl-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	913
+2001-6	102743	Calcium 24h Stl-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	914
+2004-0	102743	Calcium Ur-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	915
+2005-7	102743	Calcium p 12h fast 2h Ur-sRate	Nierenersatzverfahren_VO_Calcium	100	f	916
+24518-3	102743	Calcium/Creat Ur-sRto	Nierenersatzverfahren_VO_Calcium	100	f	917
+25362-5	102743	Calcium 24h Ur-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	918
+27037-1	102743	Calcium/Creat 2h Ur	Nierenersatzverfahren_VO_Calcium	100	f	919
+27172-6	102743	Calcium 24h Stl-mCnt	Nierenersatzverfahren_VO_Calcium	100	f	920
+29265-6	102743	Calcium Album cor SerPl-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	921
+33790-7	102743	Calcium sp1 p chal Ur-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	922
+38250-7	102743	Calcium Spec-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	923
+40083-8	102743	Calcium 1D p chal SerPl-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	924
+40230-5	102743	Calcium 1.5h p chal SerPl-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	925
+42593-4	102743	Calcium BldC-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	926
+42857-3	102743	Calcium BldV-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	927
+46099-8	102743	Calcium Album cor SerPl-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	928
+49005-2	102743	Calcium DiafP-sCnc	Nierenersatzverfahren_VO_Calcium	100	f	929
+49764-4	102743	Calcium Amn-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	930
+49765-1	102743	Calcium Bld-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	931
+50836-6	102743	Calcium Hair-sCnt	Nierenersatzverfahren_VO_Calcium	100	f	932
+51610-4	102743	Calcium 12h Ur-sRate	Nierenersatzverfahren_VO_Calcium	100	f	933
+53502-1	102743	Calcium Spec-sCnt	Nierenersatzverfahren_VO_Calcium	100	f	934
+57335-2	102743	Calcium 12h Ur-mCnc	Nierenersatzverfahren_VO_Calcium	100	f	935
+12181-4	102763	Calcium Fld-sCnc	Nierenersatzverfahren_VO_CalciumLoesung	67	f	936
+14415-4	102763	Calcium Amn-sCnc	Nierenersatzverfahren_VO_CalciumLoesung	60	f	937
+14417-0	102763	Calcium Prt-sCnc	Nierenersatzverfahren_VO_CalciumLoesung	60	f	938
+1996-8	102763	Calcium Bld-sCnc	Nierenersatzverfahren_VO_CalciumLoesung	60	f	939
+2004-0	102763	Calcium Ur-sCnc	Nierenersatzverfahren_VO_CalciumLoesung	62	f	940
+10567-6	102742	Citrate Smn-sCnc	Nierenersatzverfahren_VO_CitratLoesung	62	f	941
+2126-1	102742	Citrate Smn-mCnc	Nierenersatzverfahren_VO_CitratLoesung	62	f	942
+34266-7	102742	Citrate Ur-sCnc	Nierenersatzverfahren_VO_CitratLoesung	64	f	943
+8310-5	102678	Body temperature	Nierenersatzverfahren_VO_Temperatur	77	f	944
+2004-0	103121	Calcium Ur-sCnc	Nierenverfahren_Doku_Calciumloesung	62	f	945
+2128-7	103122	Citrate Ur-mCnc	Nierenverfahren_Doku_Citratloesung	61	f	946
+34266-7	103122	Citrate Ur-sCnc	Nierenverfahren_Doku_Citratloesung	67	f	947
+12212-7	103158	EBV NA IgG Titr Ser IF	Nierenverfahren_ES_4008HS_SollNa	100	f	948
+16825-2	103158	EBV NA IgG Fld Ql	Nierenverfahren_ES_4008HS_SollNa	100	f	949
+21260-5	103158	EBV NA Ab Titr Ser IF	Nierenverfahren_ES_4008HS_SollNa	100	f	950
+22296-8	103158	EBV NA Ab Ser Ql	Nierenverfahren_ES_4008HS_SollNa	100	f	951
+30083-0	103158	EBV NA IgG Ser IA-aCnc	Nierenverfahren_ES_4008HS_SollNa	100	f	952
+31372-6	103158	EBV NA Ab Ser-aCnc	Nierenverfahren_ES_4008HS_SollNa	100	f	953
+31373-4	103158	EBV NA IgG CSF-aCnc	Nierenverfahren_ES_4008HS_SollNa	100	f	954
+31374-2	103158	EBV NA IgG Ser-aCnc	Nierenverfahren_ES_4008HS_SollNa	100	f	955
+39103-7	103158	FLUAV NA cDNA Spec NAA+probe	Nierenverfahren_ES_4008HS_SollNa	100	f	956
+48584-7	103158	NM ExG GE time p 100mg Na octanoate PO	Nierenverfahren_ES_4008HS_SollNa	100	f	957
+48585-4	103158	NM ExG GE time p 100mg Na acetate PO	Nierenverfahren_ES_4008HS_SollNa	100	f	958
+49135-7	103158	Fract excret Na Ur+SerPl-Rto	Nierenverfahren_ES_4008HS_SollNa	100	f	959
+5155-7	103158	EBV NA IgG Ser Ql IF	Nierenverfahren_ES_4008HS_SollNa	100	f	960
+5156-5	103158	EBV NA IgG Ser Ql IA	Nierenverfahren_ES_4008HS_SollNa	100	f	961
+53129-3	103158	Na Urate Cry #/area UrnS HPF	Nierenverfahren_ES_4008HS_SollNa	100	f	962
+53788-6	103158	Na Urate Cry UrnS Ql Micro	Nierenverfahren_ES_4008HS_SollNa	100	f	963
+55134-1	103158	FLUAV NA RNA Islt NAA+probe	Nierenverfahren_ES_4008HS_SollNa	100	f	964
+61101-2	103158	FLUAV NA RNA Spec Seq	Nierenverfahren_ES_4008HS_SollNa	100	f	965
+66493-8	103158	EBV NA 1 IgG Ser-aCnc	Nierenverfahren_ES_4008HS_SollNa	100	f	966
+72200-9	103158	FLUAV NA seg sequence ID Islt Seq	Nierenverfahren_ES_4008HS_SollNa	100	f	967
+7883-2	103158	EBV NA IgG Ser Ql	Nierenverfahren_ES_4008HS_SollNa	100	f	968
+7884-0	103158	EBV NA IgM Ser Ql	Nierenverfahren_ES_4008HS_SollNa	100	f	969
+87716-7	103158	FLUAV NA gene Islt-Seq	Nierenverfahren_ES_4008HS_SollNa	100	f	970
+92244-3	103158	Micro resist mut NA change type Islt/Spm	Nierenverfahren_ES_4008HS_SollNa	100	f	971
+92245-0	103158	Micro resist mut NA change Islt/Spm	Nierenverfahren_ES_4008HS_SollNa	100	f	972
+8310-5	103161	Body temperature	Nierenverfahren_ES_4008HS_Temperatur	77	f	973
+12212-7	103190	EBV NA IgG Titr Ser IF	Nierenverfahren_ES_4008onl_SollNa	100	f	974
+16825-2	103190	EBV NA IgG Fld Ql	Nierenverfahren_ES_4008onl_SollNa	100	f	975
+21260-5	103190	EBV NA Ab Titr Ser IF	Nierenverfahren_ES_4008onl_SollNa	100	f	976
+22296-8	103190	EBV NA Ab Ser Ql	Nierenverfahren_ES_4008onl_SollNa	100	f	977
+30083-0	103190	EBV NA IgG Ser IA-aCnc	Nierenverfahren_ES_4008onl_SollNa	100	f	978
+31372-6	103190	EBV NA Ab Ser-aCnc	Nierenverfahren_ES_4008onl_SollNa	100	f	979
+31373-4	103190	EBV NA IgG CSF-aCnc	Nierenverfahren_ES_4008onl_SollNa	100	f	980
+31374-2	103190	EBV NA IgG Ser-aCnc	Nierenverfahren_ES_4008onl_SollNa	100	f	981
+39103-7	103190	FLUAV NA cDNA Spec NAA+probe	Nierenverfahren_ES_4008onl_SollNa	100	f	982
+48584-7	103190	NM ExG GE time p 100mg Na octanoate PO	Nierenverfahren_ES_4008onl_SollNa	100	f	983
+48585-4	103190	NM ExG GE time p 100mg Na acetate PO	Nierenverfahren_ES_4008onl_SollNa	100	f	984
+49135-7	103190	Fract excret Na Ur+SerPl-Rto	Nierenverfahren_ES_4008onl_SollNa	100	f	985
+5155-7	103190	EBV NA IgG Ser Ql IF	Nierenverfahren_ES_4008onl_SollNa	100	f	986
+5156-5	103190	EBV NA IgG Ser Ql IA	Nierenverfahren_ES_4008onl_SollNa	100	f	987
+53129-3	103190	Na Urate Cry #/area UrnS HPF	Nierenverfahren_ES_4008onl_SollNa	100	f	988
+53788-6	103190	Na Urate Cry UrnS Ql Micro	Nierenverfahren_ES_4008onl_SollNa	100	f	989
+55134-1	103190	FLUAV NA RNA Islt NAA+probe	Nierenverfahren_ES_4008onl_SollNa	100	f	990
+61101-2	103190	FLUAV NA RNA Spec Seq	Nierenverfahren_ES_4008onl_SollNa	100	f	991
+66493-8	103190	EBV NA 1 IgG Ser-aCnc	Nierenverfahren_ES_4008onl_SollNa	100	f	992
+72200-9	103190	FLUAV NA seg sequence ID Islt Seq	Nierenverfahren_ES_4008onl_SollNa	100	f	993
+7883-2	103190	EBV NA IgG Ser Ql	Nierenverfahren_ES_4008onl_SollNa	100	f	994
+7884-0	103190	EBV NA IgM Ser Ql	Nierenverfahren_ES_4008onl_SollNa	100	f	995
+87716-7	103190	FLUAV NA gene Islt-Seq	Nierenverfahren_ES_4008onl_SollNa	100	f	996
+92244-3	103190	Micro resist mut NA change type Islt/Spm	Nierenverfahren_ES_4008onl_SollNa	100	f	997
+92245-0	103190	Micro resist mut NA change Islt/Spm	Nierenverfahren_ES_4008onl_SollNa	100	f	998
+8310-5	103192	Body temperature	Nierenverfahren_ES_4008onl_Temperatur	77	f	999
+51865-4	103069	Plasmodium Ag Bld	Nierenverfahren_ES_ADM_Plasmavolumen	65	f	1000
+31083-9	103007	Lead 8h Ur-mRate	Nierenverfahren_ES_ADM_Temperatur	60	f	1001
+8310-5	103007	Body temperature	Nierenverfahren_ES_ADM_Temperatur	80	f	1002
+8462-4	103124	BP dias	Nierenverfahren_ES_BM25_Dialysat	60	f	1003
+8310-5	102993	Body temperature	Nierenverfahren_ES_BM25_Temperatur	77	f	1004
+8310-5	103745	Body temperature	Nierenverfahren_ES_BM25_Temperaturstufe	72	f	1005
+34782-3	103336	Infectious disease Note	Nierenverfahren_ES_GeräteDesinfektion	61	f	1006
+12181-4	103058	Calcium Fld-sCnc	Nierenverfahren_ES_Multi_CalciumFiltrat	60	f	1007
+14417-0	103058	Calcium Prt-sCnc	Nierenverfahren_ES_Multi_CalciumFiltrat	60	f	1008
+16518-3	103058	Calcium 2h Ur-mRate	Nierenverfahren_ES_Multi_CalciumFiltrat	61	f	1009
+27037-1	103058	Calcium/Creat 2h Ur	Nierenverfahren_ES_Multi_CalciumFiltrat	61	f	1010
+50836-6	103058	Calcium Hair-sCnt	Nierenverfahren_ES_Multi_CalciumFiltrat	65	f	1011
+10567-6	103056	Citrate Smn-sCnc	Nierenverfahren_ES_Multi_Citratloesung	62	f	1012
+2126-1	103056	Citrate Smn-mCnc	Nierenverfahren_ES_Multi_Citratloesung	62	f	1013
+34266-7	103056	Citrate Ur-sCnc	Nierenverfahren_ES_Multi_Citratloesung	64	f	1014
+8310-5	102980	Body temperature	Nierenverfahren_ES_Multi_Temperatur	77	f	1015
+6179-6	103168	Mouse Epith IgE Qn	Nierenverfahren_MS_4008HS_Leitfähigkeit	61	f	1016
+6179-6	103199	Mouse Epith IgE Qn	Nierenverfahren_MS_4008onl_Leitfähigkeit	61	f	1017
+10649-2	103062	Calicivirus Stl EM	Nierenverfahren_MS_Multi_Calciumfluss	61	f	1018
+12181-4	103062	Calcium Fld-sCnc	Nierenverfahren_MS_Multi_Calciumfluss	71	f	1019
+17861-6	103062	Calcium SerPl-mCnc	Nierenverfahren_MS_Multi_Calciumfluss	61	f	1020
+17862-4	103062	Calcium Ur-mCnc	Nierenverfahren_MS_Multi_Calciumfluss	60	f	1021
+1998-4	103062	Calcium Dial fld-sCnc	Nierenverfahren_MS_Multi_Calciumfluss	61	f	1022
+2000-8	103062	Calcium SerPl-sCnc	Nierenverfahren_MS_Multi_Calciumfluss	61	f	1023
+2004-0	103062	Calcium Ur-sCnc	Nierenverfahren_MS_Multi_Calciumfluss	60	f	1024
+38250-7	103062	Calcium Spec-mCnc	Nierenverfahren_MS_Multi_Calciumfluss	62	f	1025
+47369-4	103062	Calcit Fld-mCnc	Nierenverfahren_MS_Multi_Calciumfluss	60	f	1026
+49005-2	103062	Calcium DiafP-sCnc	Nierenverfahren_MS_Multi_Calciumfluss	61	f	1027
+53502-1	103062	Calcium Spec-sCnt	Nierenverfahren_MS_Multi_Calciumfluss	62	f	1028
+10567-6	103061	Citrate Smn-sCnc	Nierenverfahren_MS_Multi_Citratfluss	60	f	1029
+2126-1	103061	Citrate Smn-mCnc	Nierenverfahren_MS_Multi_Citratfluss	60	f	1030
+8310-5	103244	Body temperature	Nierenverfahren_VO_4008HS_Temperatur	77	f	1031
+8310-5	103229	Body temperature	Nierenverfahren_VO_4008onl_Temperatur	77	f	1032
+51865-4	103085	Plasmodium Ag Bld	Nierenverfahren_VO_ADM_Plasmavolumen	65	f	1033
+31083-9	102968	Lead 8h Ur-mRate	Nierenverfahren_VO_ADM_Temperatur	60	f	1034
+8310-5	102968	Body temperature	Nierenverfahren_VO_ADM_Temperatur	80	f	1035
+8462-4	103045	BP dias	Nierenverfahren_VO_BM25_Dialysat	60	f	1036
+8310-5	102956	Body temperature	Nierenverfahren_VO_BM25_Temperatur	77	f	1037
+8310-5	103746	Body temperature	Nierenverfahren_VO_BM25_Temperaturstufe	72	f	1038
+10567-6	103051	Citrate Smn-sCnc	Nierenverfahren_VO_Citratloesung	62	f	1039
+2126-1	103051	Citrate Smn-mCnc	Nierenverfahren_VO_Citratloesung	62	f	1040
+34266-7	103051	Citrate Ur-sCnc	Nierenverfahren_VO_Citratloesung	64	f	1041
+12181-4	103054	Calcium Fld-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1042
+14415-4	103054	Calcium Amn-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1043
+14417-0	103054	Calcium Prt-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1044
+14637-3	103054	Calcium 24h Ur-sRate	Nierenverfahren_VO_Multi_Calcium	100	f	1045
+16271-9	103054	Calcium 30M p chal SerPl-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1046
+16518-3	103054	Calcium 2h Ur-mRate	Nierenverfahren_VO_Multi_Calcium	100	f	1047
+16519-1	103054	Calcium 10M p chal SerPl-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1048
+16526-6	103054	Calcium/Prot SerPl	Nierenverfahren_VO_Multi_Calcium	100	f	1049
+17861-6	103054	Calcium SerPl-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1050
+17862-4	103054	Calcium Ur-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1051
+18186-7	103054	Calcium 12h Ur-mRate	Nierenverfahren_VO_Multi_Calcium	100	f	1052
+1996-8	103054	Calcium Bld-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1053
+1998-4	103054	Calcium Dial fld-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1054
+2000-8	103054	Calcium SerPl-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1055
+2001-6	103054	Calcium 24h Stl-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1056
+2004-0	103054	Calcium Ur-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1057
+2005-7	103054	Calcium p 12h fast 2h Ur-sRate	Nierenverfahren_VO_Multi_Calcium	100	f	1058
+24518-3	103054	Calcium/Creat Ur-sRto	Nierenverfahren_VO_Multi_Calcium	100	f	1059
+25362-5	103054	Calcium 24h Ur-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1060
+27037-1	103054	Calcium/Creat 2h Ur	Nierenverfahren_VO_Multi_Calcium	100	f	1061
+27172-6	103054	Calcium 24h Stl-mCnt	Nierenverfahren_VO_Multi_Calcium	100	f	1062
+29265-6	103054	Calcium Album cor SerPl-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1063
+33790-7	103054	Calcium sp1 p chal Ur-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1064
+38250-7	103054	Calcium Spec-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1065
+40083-8	103054	Calcium 1D p chal SerPl-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1066
+40230-5	103054	Calcium 1.5h p chal SerPl-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1067
+42593-4	103054	Calcium BldC-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1068
+42857-3	103054	Calcium BldV-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1069
+46099-8	103054	Calcium Album cor SerPl-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1070
+49005-2	103054	Calcium DiafP-sCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1071
+49764-4	103054	Calcium Amn-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1072
+49765-1	103054	Calcium Bld-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1073
+50836-6	103054	Calcium Hair-sCnt	Nierenverfahren_VO_Multi_Calcium	100	f	1074
+51610-4	103054	Calcium 12h Ur-sRate	Nierenverfahren_VO_Multi_Calcium	100	f	1075
+53502-1	103054	Calcium Spec-sCnt	Nierenverfahren_VO_Multi_Calcium	100	f	1076
+57335-2	103054	Calcium 12h Ur-mCnc	Nierenverfahren_VO_Multi_Calcium	100	f	1077
+8310-5	102943	Body temperature	Nierenverfahren_VO_Multi_Temperatur	77	f	1078
+10737-5	103819	Virus Stl EM	NIRSrechts_MS	63	f	1079
+10738-3	103819	Virus Tiss EM	NIRSrechts_MS	60	f	1080
+8310-5	104101	Body temperature	Ort_Temperatur1a_Messung	71	f	1081
+8310-5	104102	Body temperature	Ort_Temperatur1b_Messung	71	f	1082
+8310-5	104103	Body temperature	Ort_Temperatur2a_Messung	71	f	1083
+8310-5	104104	Body temperature	Ort_Temperatur2b_Messung	71	f	1084
+8310-5	104105	Body temperature	Ort_Temperatur3a_Messung	71	f	1085
+8310-5	104106	Body temperature	Ort_Temperatur3b_Messung	71	f	1086
+21612-7	100085	Age - Reported	Pacergeräte_Balken	64	f	1087
+2749-0	107961	pH Gast	P_ADVOS_ADVOS_VO_Balken	67	f	1088
+3148-4	107961	pO2 Gas	P_ADVOS_ADVOS_VO_Balken	67	f	1089
+8310-5	107939	Body temperature	P_ADVOS_ES_ADVOS_Systemtemperatur	63	f	1090
+12181-4	107934	Calcium Fld-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1091
+14415-4	107934	Calcium Amn-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1092
+14417-0	107934	Calcium Prt-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1093
+16271-9	107934	Calcium 30M p chal SerPl-mCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1094
+16519-1	107934	Calcium 10M p chal SerPl-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1095
+17862-4	107934	Calcium Ur-mCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	64	f	1096
+1996-8	107934	Calcium Bld-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1097
+2001-6	107934	Calcium 24h Stl-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	60	f	1098
+2004-0	107934	Calcium Ur-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	64	f	1099
+2005-7	107934	Calcium p 12h fast 2h Ur-sRate	P_ADVOS_MS_ADVOS_Calcium_postFilter	60	f	1100
+21465-0	107934	P falciparum Ab Titr Ser IF	P_ADVOS_MS_ADVOS_Calcium_postFilter	63	f	1101
+22441-0	107934	P falciparum Ab Titr Ser	P_ADVOS_MS_ADVOS_Calcium_postFilter	67	f	1102
+22590-4	107934	T pallidum Ab Titr Ser	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1103
+27172-6	107934	Calcium 24h Stl-mCnt	P_ADVOS_MS_ADVOS_Calcium_postFilter	60	f	1104
+33790-7	107934	Calcium sp1 p chal Ur-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	60	f	1105
+40083-8	107934	Calcium 1D p chal SerPl-mCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	62	f	1106
+40230-5	107934	Calcium 1.5h p chal SerPl-sCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	60	f	1107
+49764-4	107934	Calcium Amn-mCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1108
+49765-1	107934	Calcium Bld-mCnc	P_ADVOS_MS_ADVOS_Calcium_postFilter	61	f	1109
+12181-4	107935	Calcium Fld-sCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1110
+14415-4	107935	Calcium Amn-sCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1111
+14417-0	107935	Calcium Prt-sCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1112
+14637-3	107935	Calcium 24h Ur-sRate	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1113
+16518-3	107935	Calcium 2h Ur-mRate	P_ADVOS_MS_ADVOS_Calcium_preFilter	62	f	1114
+17862-4	107935	Calcium Ur-mCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	64	f	1115
+18186-7	107935	Calcium 12h Ur-mRate	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1116
+1996-8	107935	Calcium Bld-sCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1117
+2004-0	107935	Calcium Ur-sCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	64	f	1118
+2005-7	107935	Calcium p 12h fast 2h Ur-sRate	P_ADVOS_MS_ADVOS_Calcium_preFilter	64	f	1119
+21465-0	107935	P falciparum Ab Titr Ser IF	P_ADVOS_MS_ADVOS_Calcium_preFilter	60	f	1120
+22441-0	107935	P falciparum Ab Titr Ser	P_ADVOS_MS_ADVOS_Calcium_preFilter	64	f	1121
+24518-3	107935	Calcium/Creat Ur-sRto	P_ADVOS_MS_ADVOS_Calcium_preFilter	60	f	1122
+33790-7	107935	Calcium sp1 p chal Ur-sCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	62	f	1123
+49764-4	107935	Calcium Amn-mCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1124
+49765-1	107935	Calcium Bld-mCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1125
+51610-4	107935	Calcium 12h Ur-sRate	P_ADVOS_MS_ADVOS_Calcium_preFilter	61	f	1126
+5278-7	107935	P falciparum Ab Ser-aCnc	P_ADVOS_MS_ADVOS_Calcium_preFilter	60	f	1127
+53502-1	107935	Calcium Spec-sCnt	P_ADVOS_MS_ADVOS_Calcium_preFilter	60	f	1128
+8310-5	107949	Body temperature	P_ADVOS_VO_ADVOS_Systemtemperatur	63	f	1129
+14415-4	107956	Calcium Amn-sCnc	P_ADVOS_VO_CalciumLoesung	61	f	1130
+1996-8	107956	Calcium Bld-sCnc	P_ADVOS_VO_CalciumLoesung	61	f	1131
+14903-9	107960	Folate Bld-Imp	P_ADVOS_VO_Filter	62	f	1132
+5969-1	102050	PAP PPP IA-mCnc	PAP	100	f	1133
+8302-2	103595	Body height	Patient_Besonderheit	61	f	1134
+5883-4	101449	Virus Bld Cult	Patient_Blutverlusst	62	f	1135
+39156-5	101473	BMI	Patient_BMI	100	f	1136
+59574-4	101473	BMI Prctl	Patient_BMI	100	f	1137
+29463-7	6	Weight	Patient_Gewicht	62	f	1138
+11556-8	117154	pO2 Bld	Patient_SpO2_l	77	f	1139
+11557-6	117154	pCO2 Bld	Patient_SpO2_l	71	f	1140
+14003-8	117154	pCO2 BldCo	Patient_SpO2_l	62	f	1141
+14864-3	117154	pO2 BldCo	Patient_SpO2_l	67	f	1142
+19211-2	117154	pO2 BldMV	Patient_SpO2_l	67	f	1143
+19212-0	117154	pCO2 BldMV	Patient_SpO2_l	62	f	1144
+19224-5	117154	SaO2 % BldMV	Patient_SpO2_l	62	f	1145
+2019-8	117154	pCO2 BldA	Patient_SpO2_l	67	f	1146
+2020-6	117154	pCO2 BldC	Patient_SpO2_l	67	f	1147
+2021-4	117154	pCO2 BldV	Patient_SpO2_l	67	f	1148
+20564-1	117154	SaO2 % Bld	Patient_SpO2_l	71	f	1149
+2703-7	117154	pO2 BldA	Patient_SpO2_l	71	f	1150
+2704-5	117154	pO2 BldC	Patient_SpO2_l	71	f	1151
+2705-2	117154	pO2 BldV	Patient_SpO2_l	71	f	1152
+2708-6	117154	SaO2 % BldA	Patient_SpO2_l	67	f	1153
+2709-4	117154	SaO2 % BldC	Patient_SpO2_l	67	f	1154
+2711-0	117154	SaO2 % BldV	Patient_SpO2_l	67	f	1155
+28649-2	117154	pO2 BldCoV	Patient_SpO2_l	62	f	1156
+3148-4	117154	pO2 Gas	Patient_SpO2_l	62	f	1157
+3148-4	117151	pO2 Gas	Patient_SpO2po	62	f	1158
+3148-4	117152	pO2 Gas	Patient_SpO2pr	62	f	1159
+32306-3	117152	pCO2 Ur	Patient_SpO2pr	62	f	1160
+2022-2	117153	pCO2 CSF	Patient_SpO2r	62	f	1161
+3148-4	117153	pO2 Gas	Patient_SpO2r	67	f	1162
+32306-3	117153	pCO2 Ur	Patient_SpO2r	67	f	1163
+2749-0	110832	pH Gast	P_Beatmung_Atemgas	62	f	1164
+3148-4	110832	pO2 Gas	P_Beatmung_Atemgas	62	f	1165
+53653-2	110833	pH Bifl	P_Beatmung_ES_3100A_BiasFlow	71	f	1166
+11187-2	110834	P frequentans IgE Qn	P_Beatmung_ES_3100A_Frequenz	60	f	1167
+96823-0	110835	Respiration Score SOFA	P_Beatmung_ES_3100A_Inspirationszeit	60	f	1168
+14658-9	108011	CA Titr SerPl	P_Beatmung_ES_C3_Backup_Ti	60	f	1169
+87925-4	108011	RPR CSF-Titr	P_Beatmung_ES_C3_Backup_Ti	63	f	1170
+13086-4	108010	C3 NeF SerPl-mCnc	P_Beatmung_ES_C3_Backup_Vt	67	f	1171
+15164-7	108010	C3 Snv-mCnc	P_Beatmung_ES_C3_Backup_Vt	67	f	1172
+38387-7	108010	C3 NeF SerPl Ql	P_Beatmung_ES_C3_Backup_Vt	67	f	1173
+38388-5	108010	C3 SerPl Ql	P_Beatmung_ES_C3_Backup_Vt	67	f	1174
+43575-0	108010	C3 Pcar-mCnc	P_Beatmung_ES_C3_Backup_Vt	67	f	1175
+43578-4	108010	C3 Prt-mCnc	P_Beatmung_ES_C3_Backup_Vt	67	f	1176
+43579-2	108010	C3 Plr-mCnc	P_Beatmung_ES_C3_Backup_Vt	67	f	1177
+4485-9	108010	C3 SerPl-mCnc	P_Beatmung_ES_C3_Backup_Vt	67	f	1178
+6801-5	108010	C3 Fld-mCnc	P_Beatmung_ES_C3_Backup_Vt	67	f	1179
+44796-1	107976	C bot Tox Spec	P_Beatmung_ES_C3_Body_Wt	62	f	1180
+46417-2	107976	PT BldC	P_Beatmung_ES_C3_Body_Wt	63	f	1181
+33913-5	107997	pH BldC Fetus	P_Beatmung_ES_C3_ETS	67	f	1182
+13226-6	107988	CMV IgM CSF-aCnc	P_Beatmung_ES_C3_F_CMV	62	f	1183
+22243-0	107988	CMV IgG CSF-aCnc	P_Beatmung_ES_C3_F_CMV	62	f	1184
+5122-7	107988	CMV Ab SerPl IF-aCnc	P_Beatmung_ES_C3_F_CMV	60	f	1185
+5838-8	107988	CMV Spec Ql Cult	P_Beatmung_ES_C3_F_CMV	62	f	1186
+3151-8	107998	Inhaled O2 flow rate	P_Beatmung_ES_C3_Flow	62	f	1187
+38388-5	107998	C3 SerPl Ql	P_Beatmung_ES_C3_Flow	60	f	1188
+6801-5	107998	C3 Fld-mCnc	P_Beatmung_ES_C3_Flow	60	f	1189
+38388-5	110826	C3 SerPl Ql	P_Beatmung_ES_C3_Freq	60	f	1190
+34105-7	107989	Hosp D/C sum	P_Beatmung_ES_C3_F_SIMV	61	f	1191
+2839-9	107975	Progest SerPl-mCnc	P_Beatmung_ES_C3_Groesse	60	f	1192
+38388-5	108002	C3 SerPl Ql	P_Beatmung_ES_C3_HLI	63	f	1193
+13086-4	110828	C3 NeF SerPl-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1194
+15164-7	110828	C3 Snv-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1195
+38387-7	110828	C3 NeF SerPl Ql	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1196
+38388-5	110828	C3 SerPl Ql	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1197
+43575-0	110828	C3 Pcar-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1198
+43578-4	110828	C3 Prt-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1199
+43579-2	110828	C3 Plr-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1200
+4485-9	110828	C3 SerPl-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1201
+6801-5	110828	C3 Fld-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis	67	f	1202
+13086-4	110831	C3 NeF SerPl-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1203
+15164-7	110831	C3 Snv-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1204
+38387-7	110831	C3 NeF SerPl Ql	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1205
+38388-5	110831	C3 SerPl Ql	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1206
+43575-0	110831	C3 Pcar-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1207
+43578-4	110831	C3 Prt-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1208
+43579-2	110831	C3 Plr-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1209
+4485-9	110831	C3 SerPl-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1210
+6801-5	110831	C3 Fld-mCnc	P_Beatmung_ES_C3_IEVerhaeltnis_Backup	67	f	1211
+25527-3	108000	Silver SerPl-sCnc	P_Beatmung_ES_C3_passiver_Patient	60	f	1212
+5734-9	108000	Silver SerPl-mCnc	P_Beatmung_ES_C3_passiver_Patient	60	f	1213
+49010-2	110820	PA ADP PRP-aCnc	P_Beatmung_ES_C3_PEEP_CPAP	62	f	1214
+5969-1	110820	PAP PPP IA-mCnc	P_Beatmung_ES_C3_PEEP_CPAP	62	f	1215
+49010-2	107981	PA ADP PRP-aCnc	P_Beatmung_ES_C3_PEEP_CPAP_Ptief	62	f	1216
+5969-1	107981	PAP PPP IA-mCnc	P_Beatmung_ES_C3_PEEP_CPAP_Ptief	62	f	1217
+12186-3	107987	COP Plas	P_Beatmung_ES_C3_Plateau	60	f	1218
+13086-4	107992	C3 NeF SerPl-mCnc	P_Beatmung_ES_C3_Ptief	67	f	1219
+15164-7	107992	C3 Snv-mCnc	P_Beatmung_ES_C3_Ptief	67	f	1220
+38387-7	107992	C3 NeF SerPl Ql	P_Beatmung_ES_C3_Ptief	67	f	1221
+38388-5	107992	C3 SerPl Ql	P_Beatmung_ES_C3_Ptief	67	f	1222
+43575-0	107992	C3 Pcar-mCnc	P_Beatmung_ES_C3_Ptief	67	f	1223
+43578-4	107992	C3 Prt-mCnc	P_Beatmung_ES_C3_Ptief	67	f	1224
+43579-2	107992	C3 Plr-mCnc	P_Beatmung_ES_C3_Ptief	67	f	1225
+4485-9	107992	C3 SerPl-mCnc	P_Beatmung_ES_C3_Ptief	67	f	1226
+6801-5	107992	C3 Fld-mCnc	P_Beatmung_ES_C3_Ptief	67	f	1227
+4671-4	110897	Prot C Plas-mCnc	P_Beatmung_ES_C3_SBT_Support_min	61	f	1228
+426-7	110899	PZA Titr SBT	P_Beatmung_ES_C3_SBT_Zeitraum_bevor	62	f	1229
+426-7	110900	PZA Titr SBT	P_Beatmung_ES_C3_SBT_Zeitraum_nach	62	f	1230
+40958-1	110890	C parvum Stl	P_Beatmung_ES_C3_SHT	60	f	1231
+53645-8	110890	PV Stl Cult	P_Beatmung_ES_C3_SHT	63	f	1232
+56483-1	110890	PBG Stl-mCnt	P_Beatmung_ES_C3_SHT	60	f	1233
+8167-9	107990	THC Mec Ql	P_Beatmung_ES_C3_Thoch	60	f	1234
+14658-9	107991	CA Titr SerPl	P_Beatmung_ES_C3_Ti	60	f	1235
+87925-4	107991	RPR CSF-Titr	P_Beatmung_ES_C3_Ti	63	f	1236
+13086-4	107985	C3 NeF SerPl-mCnc	P_Beatmung_ES_C3_Vt	67	f	1237
+15164-7	107985	C3 Snv-mCnc	P_Beatmung_ES_C3_Vt	67	f	1238
+38387-7	107985	C3 NeF SerPl Ql	P_Beatmung_ES_C3_Vt	67	f	1239
+38388-5	107985	C3 SerPl Ql	P_Beatmung_ES_C3_Vt	67	f	1240
+43575-0	107985	C3 Pcar-mCnc	P_Beatmung_ES_C3_Vt	67	f	1241
+43578-4	107985	C3 Prt-mCnc	P_Beatmung_ES_C3_Vt	67	f	1242
+43579-2	107985	C3 Plr-mCnc	P_Beatmung_ES_C3_Vt	67	f	1243
+4485-9	107985	C3 SerPl-mCnc	P_Beatmung_ES_C3_Vt	67	f	1244
+6801-5	107985	C3 Fld-mCnc	P_Beatmung_ES_C3_Vt	67	f	1245
+2743-3	110939	pH Amn	P_Beatmung_ES_NO	60	f	1246
+91120-6	110939	AT III PPP Chromo.no added heparin	P_Beatmung_ES_NO	67	f	1247
+15923-6	110863	P frequentans IgE RAST Ql	P_Beatmung_ES_RTX_Frequenz	62	f	1248
+2756-5	110857	pH Ur	P_Beatmung_ES_RTX_IE	60	f	1249
+17443-3	110860	PPA Ur-mCnc	P_Beatmung_ES_RTX_MinBackup	60	f	1250
+24446-7	110860	PBG Ur-mCnc	P_Beatmung_ES_RTX_MinBackup	60	f	1251
+34611-4	110860	PSA Ur-mCnc	P_Beatmung_ES_RTX_MinBackup	60	f	1252
+3937-0	110860	PCP Ur-mCnc	P_Beatmung_ES_RTX_MinBackup	60	f	1253
+43578-4	110860	C3 Prt-mCnc	P_Beatmung_ES_RTX_MinBackup	60	f	1254
+59574-4	110860	BMI Prctl	P_Beatmung_ES_RTX_MinBackup	67	f	1255
+48584-7	110854	NM ExG GE time p 100mg Na octanoate PO	P_Beatmung_ES_RTX_Time	75	f	1256
+48585-4	110854	NM ExG GE time p 100mg Na acetate PO	P_Beatmung_ES_RTX_Time	75	f	1257
+5902-2	110854	Prothrombin time	P_Beatmung_ES_RTX_Time	62	f	1258
+11208-6	108723	ANF Plas-mCnc	P_Beatmung_MS_AnaConDa_AF	60	f	1259
+2743-3	108723	pH Amn	P_Beatmung_MS_AnaConDa_AF	62	f	1260
+49762-8	108723	AFP Plr-mCnc	P_Beatmung_MS_AnaConDa_AF	63	f	1261
+38253-1	108724	CO2 Spec-sCnc	P_Beatmung_MS_AnaConDa_etCo2	61	f	1262
+19194-0	110937	NSE Plr-aCnc	P_Beatmung_MS_AnaConDa_MAC	60	f	1263
+26714-6	110937	PPA Mec-mCnt	P_Beatmung_MS_AnaConDa_MAC	60	f	1264
+38476-8	110937	MIS SerPl-mCnc	P_Beatmung_MS_AnaConDa_MAC	64	f	1265
+43575-0	108028	C3 Pcar-mCnc	P_Beatmung_MS_C3_AutoPeep	63	f	1266
+43578-4	108028	C3 Prt-mCnc	P_Beatmung_MS_C3_AutoPeep	67	f	1267
+43579-2	108028	C3 Plr-mCnc	P_Beatmung_MS_C3_AutoPeep	67	f	1268
+4485-9	108028	C3 SerPl-mCnc	P_Beatmung_MS_C3_AutoPeep	60	f	1269
+33863-2	108036	Cystatin C SerPl-mCnc	P_Beatmung_MS_C3_Cstat	65	f	1270
+43575-0	108031	C3 Pcar-mCnc	P_Beatmung_MS_C3_IEVerhaeltnis	63	f	1271
+43578-4	108031	C3 Prt-mCnc	P_Beatmung_MS_C3_IEVerhaeltnis	67	f	1272
+43579-2	108031	C3 Plr-mCnc	P_Beatmung_MS_C3_IEVerhaeltnis	67	f	1273
+4485-9	108031	C3 SerPl-mCnc	P_Beatmung_MS_C3_IEVerhaeltnis	60	f	1274
+2022-2	108021	pCO2 CSF	P_Beatmung_MS_C3_petCO2	64	f	1275
+43578-4	108037	C3 Prt-mCnc	P_Beatmung_MS_C3_PTP	64	f	1276
+38436-2	108034	CC Spec #/mass VC	P_Beatmung_MS_C3_RCexsp	64	f	1277
+43575-0	108034	C3 Pcar-mCnc	P_Beatmung_MS_C3_RCexsp	64	f	1278
+43578-4	108034	C3 Prt-mCnc	P_Beatmung_MS_C3_RCexsp	67	f	1279
+43579-2	108034	C3 Plr-mCnc	P_Beatmung_MS_C3_RCexsp	67	f	1280
+564-5	108034	CC Spec VC	P_Beatmung_MS_C3_RCexsp	60	f	1281
+43575-0	108039	C3 Pcar-mCnc	P_Beatmung_MS_C3_RSB	61	f	1282
+43578-4	108039	C3 Prt-mCnc	P_Beatmung_MS_C3_RSB	64	f	1283
+43579-2	108039	C3 Plr-mCnc	P_Beatmung_MS_C3_RSB	64	f	1284
+43578-4	108029	C3 Prt-mCnc	P_Beatmung_MS_C3_TE	67	f	1285
+14658-9	108030	CA Titr SerPl	P_Beatmung_MS_C3_TI	61	f	1286
+32787-4	108030	p-ANCA Titr Ser	P_Beatmung_MS_C3_TI	64	f	1287
+43578-4	108030	C3 Prt-mCnc	P_Beatmung_MS_C3_TI	67	f	1288
+87925-4	108030	RPR CSF-Titr	P_Beatmung_MS_C3_TI	64	f	1289
+2022-2	108020	pCO2 CSF	P_Beatmung_MS_C3_VCO2	70	f	1290
+38436-2	108020	CC Spec #/mass VC	P_Beatmung_MS_C3_VCO2	67	f	1291
+564-5	108020	CC Spec VC	P_Beatmung_MS_C3_VCO2	64	f	1292
+38436-2	108014	CC Spec #/mass VC	P_Beatmung_MS_C3_VTE	62	f	1293
+43578-4	108014	C3 Prt-mCnc	P_Beatmung_MS_C3_VTE	64	f	1294
+32787-4	108015	p-ANCA Titr Ser	P_Beatmung_MS_C3_VTi	62	f	1295
+38436-2	108015	CC Spec #/mass VC	P_Beatmung_MS_C3_VTi	62	f	1296
+43578-4	108015	C3 Prt-mCnc	P_Beatmung_MS_C3_VTi	64	f	1297
+87925-4	108015	RPR CSF-Titr	P_Beatmung_MS_C3_VTi	61	f	1298
+32162-0	108738	Cells # Plr Manual	P_Celestangabe	60	f	1299
+32163-8	108738	Cells # Prt Manual	P_Celestangabe	60	f	1300
+12186-3	102040	COP Plas	p-CO	67	f	1301
+14864-3	102040	pO2 BldCo	p-CO	62	f	1302
+14873-4	102040	pH BldCo	p-CO	67	f	1303
+28646-8	102040	pH BldCoA	p-CO	62	f	1304
+28647-6	102040	pH BldCoV	p-CO	62	f	1305
+47283-7	102040	PMV BldCo	p-CO	62	f	1306
+48159-8	102040	HCV Ab s/co SerPl IA	p-CO	67	f	1307
+51656-7	102040	HCV Ab s/co Fld	p-CO	67	f	1308
+55601-9	102040	Cyto Pcar	p-CO	62	f	1309
+14515-1	108720	P jiroveci Ag CSF Ql IF	P_CSF_Doku_Balken	67	f	1310
+26454-9	108720	RBC # CSF	P_CSF_Doku_Balken	60	f	1311
+26465-5	108720	WBC # CSF	P_CSF_Doku_Balken	60	f	1312
+60023-9	108720	LDH CSF P to L-cCnc	P_CSF_Doku_Balken	67	f	1313
+60024-7	108720	LDH CSF L to P-cCnc	P_CSF_Doku_Balken	67	f	1314
+26454-9	108719	RBC # CSF	P_CSF_ES_LiquoGuard_Pset	60	f	1315
+26465-5	108719	WBC # CSF	P_CSF_ES_LiquoGuard_Pset	60	f	1316
+26454-9	110941	RBC # CSF	P_CSF_ES_LiquoGuard_Vset	60	f	1317
+26465-5	110941	WBC # CSF	P_CSF_ES_LiquoGuard_Vset	60	f	1318
+14339-6	108718	IgG MFr CSF	P_CSF_MS_LiqouGuard_ICP	61	f	1319
+26454-9	108718	RBC # CSF	P_CSF_MS_LiqouGuard_ICP	60	f	1320
+26465-5	108718	WBC # CSF	P_CSF_MS_LiqouGuard_ICP	60	f	1321
+29805-9	108718	POWV IgM CSF Ql IF	P_CSF_MS_LiqouGuard_ICP	60	f	1322
+39011-2	108718	MuV IgG CSF Ql	P_CSF_MS_LiqouGuard_ICP	62	f	1323
+41131-4	108718	MuV IgM CSF Ql	P_CSF_MS_LiqouGuard_ICP	62	f	1324
+42206-3	108718	IgA CSF/SerPl	P_CSF_MS_LiqouGuard_ICP	64	f	1325
+42207-1	108718	IgG CSF/SerPl	P_CSF_MS_LiqouGuard_ICP	64	f	1326
+42208-9	108718	IgM CSF/SerPl	P_CSF_MS_LiqouGuard_ICP	64	f	1327
+45062-7	108718	CRP CSF-mCnc	P_CSF_MS_LiqouGuard_ICP	67	f	1328
+10680-7	108717	HSV CSF EM	P_CSF_MS_LiqouGuard_Pcsf	61	f	1329
+26454-9	108717	RBC # CSF	P_CSF_MS_LiqouGuard_Pcsf	60	f	1330
+26465-5	108717	WBC # CSF	P_CSF_MS_LiqouGuard_Pcsf	60	f	1331
+26454-9	110940	RBC # CSF	P_CSF_MS_LiquoGuard_Fuellstand	60	f	1332
+26465-5	110940	WBC # CSF	P_CSF_MS_LiquoGuard_Fuellstand	60	f	1333
+26454-9	108716	RBC # CSF	P_CSF_MS_LiquoGuard_Liquorfluss	60	f	1334
+26465-5	108716	WBC # CSF	P_CSF_MS_LiquoGuard_Liquorfluss	60	f	1335
+60546-9	108042	PV Islt Cult	P_EctSta	60	f	1336
+53576-5	113045	PH monitoring report Doc	P_EEG_Monitoring	77	f	1337
+2022-2	102168	pCO2 CSF	PICCO_HF	62	f	1338
+19212-0	102170	pCO2 BldMV	PICCO_ITBV	60	f	1339
+2021-4	102170	pCO2 BldV	PICCO_ITBV	63	f	1340
+2021-4	102171	pCO2 BldV	PICCO_ITBVI	60	f	1341
+2022-2	102166	pCO2 CSF	PICCO_PC	62	f	1342
+32306-3	102164	pCO2 Ur	PICCO_SVR	62	f	1343
+3151-8	108729	Inhaled O2 flow rate	P_Impella_Impella_MS_Flow	62	f	1344
+55976-5	108505	pH Fld.NB	P_NBP_liArm	60	f	1345
+9704-8	108506	Sperm Smn	P_NBP_reArm	60	f	1346
+9780-8	108506	Sperm # Smn	P_NBP_reArm	60	f	1347
+54111-0	108504	NB hear screen Pnl	P_NBP_reBein	60	f	1348
+35066-0	110789	Blasts # Plr	P_NEV_HD_ES_5008onl_BasisNa	63	f	1349
+35073-6	110789	Basophils # Prt	P_NEV_HD_ES_5008onl_BasisNa	64	f	1350
+2748-2	110784	pH Fld	P_NEV_HD_ES_5008onl_Fluss	62	f	1351
+54244-9	110784	FLUV Spec	P_NEV_HD_ES_5008onl_Fluss	62	f	1352
+9279-1	110797	Resp rate	P_NEV_HD_ES_5008onl_IsoUFRate	60	f	1353
+12212-7	110787	EBV NA IgG Titr Ser IF	P_NEV_HD_ES_5008onl_SollNa	67	f	1354
+16825-2	110787	EBV NA IgG Fld Ql	P_NEV_HD_ES_5008onl_SollNa	67	f	1355
+21260-5	110787	EBV NA Ab Titr Ser IF	P_NEV_HD_ES_5008onl_SollNa	67	f	1356
+22296-8	110787	EBV NA Ab Ser Ql	P_NEV_HD_ES_5008onl_SollNa	67	f	1357
+2743-3	110787	pH Amn	P_NEV_HD_ES_5008onl_SollNa	60	f	1358
+30083-0	110787	EBV NA IgG Ser IA-aCnc	P_NEV_HD_ES_5008onl_SollNa	67	f	1359
+31372-6	110787	EBV NA Ab Ser-aCnc	P_NEV_HD_ES_5008onl_SollNa	67	f	1360
+31373-4	110787	EBV NA IgG CSF-aCnc	P_NEV_HD_ES_5008onl_SollNa	67	f	1361
+31374-2	110787	EBV NA IgG Ser-aCnc	P_NEV_HD_ES_5008onl_SollNa	67	f	1362
+39103-7	110787	FLUAV NA cDNA Spec NAA+probe	P_NEV_HD_ES_5008onl_SollNa	67	f	1363
+48584-7	110787	NM ExG GE time p 100mg Na octanoate PO	P_NEV_HD_ES_5008onl_SollNa	100	f	1364
+48585-4	110787	NM ExG GE time p 100mg Na acetate PO	P_NEV_HD_ES_5008onl_SollNa	100	f	1365
+49135-7	110787	Fract excret Na Ur+SerPl-Rto	P_NEV_HD_ES_5008onl_SollNa	67	f	1366
+5155-7	110787	EBV NA IgG Ser Ql IF	P_NEV_HD_ES_5008onl_SollNa	67	f	1367
+5156-5	110787	EBV NA IgG Ser Ql IA	P_NEV_HD_ES_5008onl_SollNa	67	f	1368
+53129-3	110787	Na Urate Cry #/area UrnS HPF	P_NEV_HD_ES_5008onl_SollNa	67	f	1369
+53788-6	110787	Na Urate Cry UrnS Ql Micro	P_NEV_HD_ES_5008onl_SollNa	67	f	1370
+55134-1	110787	FLUAV NA RNA Islt NAA+probe	P_NEV_HD_ES_5008onl_SollNa	67	f	1371
+61101-2	110787	FLUAV NA RNA Spec Seq	P_NEV_HD_ES_5008onl_SollNa	67	f	1372
+66493-8	110787	EBV NA 1 IgG Ser-aCnc	P_NEV_HD_ES_5008onl_SollNa	67	f	1373
+72200-9	110787	FLUAV NA seg sequence ID Islt Seq	P_NEV_HD_ES_5008onl_SollNa	67	f	1374
+7883-2	110787	EBV NA IgG Ser Ql	P_NEV_HD_ES_5008onl_SollNa	67	f	1375
+7884-0	110787	EBV NA IgM Ser Ql	P_NEV_HD_ES_5008onl_SollNa	67	f	1376
+87716-7	110787	FLUAV NA gene Islt-Seq	P_NEV_HD_ES_5008onl_SollNa	67	f	1377
+92244-3	110787	Micro resist mut NA change type Islt/Spm	P_NEV_HD_ES_5008onl_SollNa	67	f	1378
+92245-0	110787	Micro resist mut NA change Islt/Spm	P_NEV_HD_ES_5008onl_SollNa	67	f	1379
+8665-2	110788	LMP Start date	P_NEV_HD_ES_5008onl_StartNa	61	f	1380
+50749-1	110785	Prot Ur-Imp	P_NEV_HD_ES_5008onl_Temperatur	61	f	1381
+8310-5	110785	Body temperature	P_NEV_HD_ES_5008onl_Temperatur	79	f	1382
+2756-5	110800	pH Ur	P_NEV_HD_ES_5008onl_UFRate	62	f	1383
+8310-5	117161	Body temperature	P_NEV_HD_ES_Genius_TemperaturZiel	75	f	1384
+2756-5	117162	pH Ur	P_NEV_HD_ES_Genius_UFRate	62	f	1385
+6216-6	110778	P betae IgE Qn	P_NEV_HD_MS_5008onl_Leitfaehigkeit	61	f	1386
+2743-3	110779	pH Amn	P_NEV_HD_MS_5008onl_SollNa	62	f	1387
+48584-7	110779	NM ExG GE time p 100mg Na octanoate PO	P_NEV_HD_MS_5008onl_SollNa	73	f	1388
+48585-4	110779	NM ExG GE time p 100mg Na acetate PO	P_NEV_HD_MS_5008onl_SollNa	73	f	1389
+100342-5	110780	VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS	P_NEV_HD_MS_5008onl_TMP	67	f	1390
+1827-5	110780	A1AT MS SerPl-mCnc	P_NEV_HD_MS_5008onl_TMP	67	f	1391
+2743-3	110780	pH Amn	P_NEV_HD_MS_5008onl_TMP	60	f	1392
+55805-6	110780	cycloSPORINE Bld LC/MS/MS-mCnc	P_NEV_HD_MS_5008onl_TMP	67	f	1393
+74097-7	110780	Tacrolimus Bld LC/MS/MS-mCnc	P_NEV_HD_MS_5008onl_TMP	67	f	1394
+75756-7	110780	Bacteria Islt MS.MALDI-TOF	P_NEV_HD_MS_5008onl_TMP	67	f	1395
+92726-9	110780	17OHP DBS LC/MS/MS-mCnc	P_NEV_HD_MS_5008onl_TMP	67	f	1396
+6216-6	117156	P betae IgE Qn	P_NEV_HD_MS_Genius_Leitfaehigkeit	61	f	1397
+8310-5	117157	Body temperature	P_NEV_HD_MS_Genius_TemperaturIst	65	f	1398
+48584-7	117155	NM ExG GE time p 100mg Na octanoate PO	P_NEV_HD_MS_Genius_UF_Time	67	f	1399
+48585-4	117155	NM ExG GE time p 100mg Na acetate PO	P_NEV_HD_MS_Genius_UF_Time	67	f	1400
+2748-2	110804	pH Fld	P_NEV_HD_VO_5008onl_Fluss	62	f	1401
+54244-9	110804	FLUV Spec	P_NEV_HD_VO_5008onl_Fluss	62	f	1402
+12212-7	110807	EBV NA IgG Titr Ser IF	P_NEV_HD_VO_5008onl_SollNa	67	f	1403
+16825-2	110807	EBV NA IgG Fld Ql	P_NEV_HD_VO_5008onl_SollNa	67	f	1404
+21260-5	110807	EBV NA Ab Titr Ser IF	P_NEV_HD_VO_5008onl_SollNa	67	f	1405
+22296-8	110807	EBV NA Ab Ser Ql	P_NEV_HD_VO_5008onl_SollNa	67	f	1406
+2743-3	110807	pH Amn	P_NEV_HD_VO_5008onl_SollNa	60	f	1407
+30083-0	110807	EBV NA IgG Ser IA-aCnc	P_NEV_HD_VO_5008onl_SollNa	67	f	1408
+31372-6	110807	EBV NA Ab Ser-aCnc	P_NEV_HD_VO_5008onl_SollNa	67	f	1409
+31373-4	110807	EBV NA IgG CSF-aCnc	P_NEV_HD_VO_5008onl_SollNa	67	f	1410
+31374-2	110807	EBV NA IgG Ser-aCnc	P_NEV_HD_VO_5008onl_SollNa	67	f	1411
+39103-7	110807	FLUAV NA cDNA Spec NAA+probe	P_NEV_HD_VO_5008onl_SollNa	67	f	1412
+48584-7	110807	NM ExG GE time p 100mg Na octanoate PO	P_NEV_HD_VO_5008onl_SollNa	100	f	1413
+48585-4	110807	NM ExG GE time p 100mg Na acetate PO	P_NEV_HD_VO_5008onl_SollNa	100	f	1414
+49135-7	110807	Fract excret Na Ur+SerPl-Rto	P_NEV_HD_VO_5008onl_SollNa	67	f	1415
+5155-7	110807	EBV NA IgG Ser Ql IF	P_NEV_HD_VO_5008onl_SollNa	67	f	1416
+5156-5	110807	EBV NA IgG Ser Ql IA	P_NEV_HD_VO_5008onl_SollNa	67	f	1417
+53129-3	110807	Na Urate Cry #/area UrnS HPF	P_NEV_HD_VO_5008onl_SollNa	67	f	1418
+53788-6	110807	Na Urate Cry UrnS Ql Micro	P_NEV_HD_VO_5008onl_SollNa	67	f	1419
+55134-1	110807	FLUAV NA RNA Islt NAA+probe	P_NEV_HD_VO_5008onl_SollNa	67	f	1420
+61101-2	110807	FLUAV NA RNA Spec Seq	P_NEV_HD_VO_5008onl_SollNa	67	f	1421
+66493-8	110807	EBV NA 1 IgG Ser-aCnc	P_NEV_HD_VO_5008onl_SollNa	67	f	1422
+72200-9	110807	FLUAV NA seg sequence ID Islt Seq	P_NEV_HD_VO_5008onl_SollNa	67	f	1423
+7883-2	110807	EBV NA IgG Ser Ql	P_NEV_HD_VO_5008onl_SollNa	67	f	1424
+7884-0	110807	EBV NA IgM Ser Ql	P_NEV_HD_VO_5008onl_SollNa	67	f	1425
+87716-7	110807	FLUAV NA gene Islt-Seq	P_NEV_HD_VO_5008onl_SollNa	67	f	1426
+92244-3	110807	Micro resist mut NA change type Islt/Spm	P_NEV_HD_VO_5008onl_SollNa	67	f	1427
+92245-0	110807	Micro resist mut NA change Islt/Spm	P_NEV_HD_VO_5008onl_SollNa	67	f	1428
+8665-2	110808	LMP Start date	P_NEV_HD_VO_5008onl_StartNa	61	f	1429
+50749-1	110805	Prot Ur-Imp	P_NEV_HD_VO_5008onl_Temperatur	61	f	1430
+8310-5	110805	Body temperature	P_NEV_HD_VO_5008onl_Temperatur	79	f	1431
+29304-3	104403	Medication dispensed	Praemedikation	65	f	1432
+57833-6	104403	Rx for medication	Praemedikation	65	f	1433
+11481-9	112017	HPV Spec	P_SEF	62	f	1434
+17433-4	112017	pH Spec	P_SEF	67	f	1435
+2753-2	112017	pH SerPl	P_SEF	62	f	1436
+17433-4	112018	pH Spec	P_SEF1	62	f	1437
+17433-4	112019	pH Spec	P_SEF2	62	f	1438
+2752-4	102408	pH Smn	p-SV	60	f	1439
+2755-7	102408	pH Stl	p-SV	60	f	1440
+35004-1	102408	Polys # Snv	p-SV	62	f	1441
+48037-6	102408	pH Vag	p-SV	60	f	1442
+8480-6	102408	BP sys	p-SV	60	f	1443
+2753-2	102037	pH SerPl	p-SVR	62	f	1444
+2756-5	102037	pH Ur	p-SVR	60	f	1445
+5964-2	100560	PT Bld	PT_AllgBefund	62	f	1446
+23830-3	100676	B pert.PT IgA Ser-aCnc	PT_Befund	100	f	1447
+23831-1	100676	B pert.PT IgG Ser-aCnc	PT_Befund	100	f	1448
+24127-3	100676	B pert.PT IgG Ser IA-aCnc	PT_Befund	100	f	1449
+24128-1	100676	B pert.PT IgA Ser IA-aCnc	PT_Befund	100	f	1450
+42638-7	100676	PT PPP 1:1 saline	PT_Befund	100	f	1451
+46417-2	100676	PT BldC	PT_Befund	100	f	1452
+52752-3	100676	PT PIVKA insensitive Act/Nor BldC	PT_Befund	100	f	1453
+52753-1	100676	PT PIVKA insensitive Act/Nor PPP	PT_Befund	100	f	1454
+52760-6	100676	PT PIVKA sensitive Act/Nor BldC	PT_Befund	100	f	1455
+52761-4	100676	PT PIVKA sensitive Act/Nor PPP	PT_Befund	100	f	1456
+5901-4	100676	PT Cont PPP	PT_Befund	100	f	1457
+5964-2	100676	PT Bld	PT_Befund	100	f	1458
+80600-0	100676	B pert.PT Prmt Nph Ql NAA+probe	PT_Befund	100	f	1459
+82179-3	100676	B pert.PT Prmt Nph Ql NAA+non-probe	PT_Befund	100	f	1460
+94478-5	100676	B pert.PT Prmt Low resp Ql NAA+non-probe	PT_Befund	100	f	1461
+96962-6	100676	B pert.PT Prmt Lower resp Ql NAA+probe	PT_Befund	100	f	1462
+30089-7	110925	Trans Cells #/area UrnS HPF	P_Temperatur_Arteriell	60	f	1463
+46136-8	110925	Trans Cells #/area UrnS LPF	P_Temperatur_Arteriell	60	f	1464
+8310-5	108742	Body temperature	P_Temperatur_DeltaT	69	f	1465
+8310-5	110934	Body temperature	P_Temperatur_generic	61	f	1466
+50560-2	110926	pH Ur Strip.auto	P_Temperatur_Haut	61	f	1467
+51479-4	110926	Sperm # Ur Auto	P_Temperatur_Haut	60	f	1468
+51480-2	110926	Bacteria # Ur Auto	P_Temperatur_Haut	61	f	1469
+8310-5	110926	Body temperature	P_Temperatur_Haut	67	f	1470
+8310-5	110933	Body temperature	P_Temperatur_Kern	67	f	1471
+8310-5	110931	Body temperature	P_Temperatur_Messung_OrtAllg	67	f	1472
+8310-5	110936	Body temperature	P_Temperatur_Messung_OrtKern	67	f	1473
+8310-5	110927	Body temperature	P_Temperatur_Naso	73	f	1474
+8310-5	110928	Body temperature	P_Temperatur_Oesophagial	60	f	1475
+12585-6	110930	Creat 2h Ur-mRate	P_Temperatur_Rektal	61	f	1476
+12586-4	110930	Creat 4h Ur-mRate	P_Temperatur_Rektal	61	f	1477
+12587-2	110930	Creat 6h Ur-mRate	P_Temperatur_Rektal	61	f	1478
+12588-0	110930	Creat 8h Ur-mRate	P_Temperatur_Rektal	61	f	1479
+2150-1	110930	Creatine 24h Ur-mRate	P_Temperatur_Rektal	60	f	1480
+24462-4	110930	Hepta-CP 24h Ur-mRate	P_Temperatur_Rektal	60	f	1481
+38163-2	110930	Hepta-CP/Creat Ur	P_Temperatur_Rektal	61	f	1482
+8310-5	110930	Body temperature	P_Temperatur_Rektal	63	f	1483
+93733-4	110930	Creat 5h Ur-mRate	P_Temperatur_Rektal	61	f	1484
+8310-5	110924	Body temperature	P_Temperatur_Venoes	69	f	1485
+47720-8	110754	pH temp adj BldCo	P_Therapiebetten_Doku_DraegerBabytherm_ES_Temp	64	f	1486
+8330-3	110754	Bdy temp IV	P_Therapiebetten_Doku_DraegerBabytherm_ES_Temp	64	f	1487
+55594-6	108625	Duck Feather IgE Ql	P_Therapiebetten_Doku_Lifetherm_ES_Neigung	60	f	1488
+6100-2	108625	Duck Feather IgE Qn	P_Therapiebetten_Doku_Lifetherm_ES_Neigung	60	f	1489
+7289-2	108625	Duck Feather IgG Qn	P_Therapiebetten_Doku_Lifetherm_ES_Neigung	65	f	1490
+2755-7	110752	pH Stl	P_Therapiebetten_VO_DraegerBabytherm_Strahler	62	f	1491
+32112-5	110752	Sertraline Ur Ql	P_Therapiebetten_VO_DraegerBabytherm_Strahler	62	f	1492
+50749-1	110753	Prot Ur-Imp	P_Therapiebetten_VO_DraegerBabytherm_Temperatur	61	f	1493
+8310-5	110753	Body temperature	P_Therapiebetten_VO_DraegerBabytherm_Temperatur	79	f	1494
+10948-8	108626	Pigeon Feather IgE Qn	P_Therapiebetten_VO_Lifetherm_Neigung	60	f	1495
+17464-9	108626	Pigeon Feather IgE Ql	P_Therapiebetten_VO_Lifetherm_Neigung	60	f	1496
+51548-6	108626	Parrot Feather IgG Ql	P_Therapiebetten_VO_Lifetherm_Neigung	60	f	1497
+51549-4	108626	Pigeon Feather IgG Ql	P_Therapiebetten_VO_Lifetherm_Neigung	60	f	1498
+7344-5	108626	Goose Feather IgG Qn	P_Therapiebetten_VO_Lifetherm_Neigung	62	f	1499
+13440-3	108624	Interpretation Ur IFE-Imp	P_Therapiebetten_VO_Lifetherm_Temperatur	60	f	1500
+2750-8	108636	pH Plr	P_Waermesysteme_InfantWarmer_VO_Power	62	f	1501
+8478-0	117177	BP mean	P_Weaning	62	f	1502
+6301-6	102027	INR PPP	RPP	60	f	1503
+19224-5	1273	SaO2 % BldMV	SaO2	100	f	1504
+20564-1	1273	SaO2 % Bld	SaO2	100	f	1505
+2708-6	1273	SaO2 % BldA	SaO2	100	f	1506
+2709-4	1273	SaO2 % BldC	SaO2	100	f	1507
+2711-0	1273	SaO2 % BldV	SaO2	100	f	1508
+2713-6	1273	SaO2 % Bld from pO2	SaO2	100	f	1509
+28642-7	1273	SaO2 % BldCoA	SaO2	100	f	1510
+28643-5	1273	SaO2 % BldCoV	SaO2	100	f	1511
+51731-8	1273	SaO2 % BldV from pO2	SaO2	100	f	1512
+51732-6	1273	SaO2 % BldC from pO2	SaO2	100	f	1513
+51733-4	1273	SaO2 % BldA from pO2	SaO2	100	f	1514
+59408-5	1273	SaO2 % BldA PulseOx	SaO2	100	f	1515
+74105-8	1273	SaO2 % BldMV from pO2	SaO2	100	f	1516
+96823-0	105103	Respiration Score SOFA	Sauerstoff_RespirationBarValue	65	f	1517
+74468-0	103399	Quest frm def Doc	Schrittmacher_Defi_ES_Frequenz	60	f	1518
+9279-1	105014	Resp rate	Schrittmacher_Osypka101H_ES_Rate	62	f	1519
+14722-3	105033	ENA Ab Ser Ql	Schrittmacher_Osypka203H_ES_A-Sense	60	f	1520
+24461-6	105033	FA SerPl-sCnc	Schrittmacher_Osypka203H_ES_A-Sense	60	f	1521
+35168-4	105033	AA SerPl-sCnc	Schrittmacher_Osypka203H_ES_A-Sense	60	f	1522
+14722-3	105020	ENA Ab Ser Ql	Schrittmacher_Osypka203H_ES_A_Sense	60	f	1523
+24461-6	105020	FA SerPl-sCnc	Schrittmacher_Osypka203H_ES_A_Sense	60	f	1524
+35168-4	105020	AA SerPl-sCnc	Schrittmacher_Osypka203H_ES_A_Sense	60	f	1525
+100858-0	105022	CD4+154/CD4 stim COVID Spike	Schrittmacher_Osypka203H_ES_A_STIM	80	f	1526
+100859-8	105022	CD4 IFNg/CD4 p Stim COVID Sp	Schrittmacher_Osypka203H_ES_A_STIM	80	f	1527
+100860-6	105022	CD4 TNFa/CD4 p Stim COVID Sp	Schrittmacher_Osypka203H_ES_A_STIM	80	f	1528
+14650-6	105025	Citrate 24h Ur-sRate	Schrittmacher_Osypka203H_ES_Highrate_StimRate	65	f	1529
+3151-8	105019	Inhaled O2 flow rate	Schrittmacher_Osypka203H_ES_Rate	100	f	1530
+8867-4	105019	Heart rate	Schrittmacher_Osypka203H_ES_Rate	100	f	1531
+9278-3	105019	Breath rate special circumstances	Schrittmacher_Osypka203H_ES_Rate	100	f	1532
+9279-1	105019	Resp rate	Schrittmacher_Osypka203H_ES_Rate	100	f	1533
+100858-0	105023	CD4+154/CD4 stim COVID Spike	Schrittmacher_Osypka203H_ES_V_STIM	80	f	1534
+100859-8	105023	CD4 IFNg/CD4 p Stim COVID Sp	Schrittmacher_Osypka203H_ES_V_STIM	80	f	1535
+100860-6	105023	CD4 TNFa/CD4 p Stim COVID Sp	Schrittmacher_Osypka203H_ES_V_STIM	80	f	1536
+11187-2	103397	P frequentans IgE Qn	Schrittmacher_Siemens_ES_Frequenz	61	f	1537
+34571-0	102785	Screen aPTT	Score_AIS	60	f	1538
+44760-7	102785	MELD score	Score_AIS	71	f	1539
+73561-3	102785	IGF-I Z-score SerPl	Score_AIS	71	f	1540
+88859-4	102785	Disease stage score for risk calculation	Score_AIS	71	f	1541
+9271-8	102785	10M Apgar Score	Score_AIS	71	f	1542
+9274-2	102785	5M Apgar Score	Score_AIS	71	f	1543
+96790-1	102785	SOFA total score SOFA	Score_AIS	71	f	1544
+96823-0	102785	Respiration Score SOFA	Score_AIS	71	f	1545
+96824-8	102785	Coag Score SOFA	Score_AIS	71	f	1546
+96825-5	102785	Liver Score SOFA	Score_AIS	71	f	1547
+96826-3	102785	Cardio Score SOFA	Score_AIS	71	f	1548
+96827-1	102785	CNS Score SOFA	Score_AIS	71	f	1549
+96828-9	102785	Renal Score SOFA	Score_AIS	71	f	1550
+34231-1	102786	Aldost/Creat Ur-sRto	Score_Aldrete	61	f	1551
+44760-7	102786	MELD score	Score_Aldrete	70	f	1552
+6303-2	102786	Screen dRVVT	Score_Aldrete	64	f	1553
+44760-7	102787	MELD score	Score_APACHE2	67	f	1554
+9271-8	102787	10M Apgar Score	Score_APACHE2	64	f	1555
+9274-2	102787	5M Apgar Score	Score_APACHE2	67	f	1556
+34571-0	102788	Screen aPTT	Score_Apgar	64	f	1557
+39456-9	102788	APAP Ur-sCnc	Score_Apgar	61	f	1558
+44760-7	102788	MELD score	Score_Apgar	67	f	1559
+73561-3	102788	IGF-I Z-score SerPl	Score_Apgar	62	f	1560
+88859-4	102788	Disease stage score for risk calculation	Score_Apgar	62	f	1561
+9271-8	102788	10M Apgar Score	Score_Apgar	100	f	1562
+9274-2	102788	5M Apgar Score	Score_Apgar	100	f	1563
+96790-1	102788	SOFA total score SOFA	Score_Apgar	62	f	1564
+96823-0	102788	Respiration Score SOFA	Score_Apgar	62	f	1565
+96824-8	102788	Coag Score SOFA	Score_Apgar	69	f	1566
+96825-5	102788	Liver Score SOFA	Score_Apgar	62	f	1567
+96826-3	102788	Cardio Score SOFA	Score_Apgar	62	f	1568
+96827-1	102788	CNS Score SOFA	Score_Apgar	62	f	1569
+96828-9	102788	Renal Score SOFA	Score_Apgar	62	f	1570
+44760-7	102764	MELD score	Score_ARDS	70	f	1571
+73561-3	102764	IGF-I Z-score SerPl	Score_ARDS	67	f	1572
+88859-4	102764	Disease stage score for risk calculation	Score_ARDS	67	f	1573
+9271-8	102764	10M Apgar Score	Score_ARDS	67	f	1574
+9274-2	102764	5M Apgar Score	Score_ARDS	67	f	1575
+96790-1	102764	SOFA total score SOFA	Score_ARDS	67	f	1576
+96823-0	102764	Respiration Score SOFA	Score_ARDS	67	f	1577
+96824-8	102764	Coag Score SOFA	Score_ARDS	67	f	1578
+96825-5	102764	Liver Score SOFA	Score_ARDS	67	f	1579
+96826-3	102764	Cardio Score SOFA	Score_ARDS	74	f	1580
+96827-1	102764	CNS Score SOFA	Score_ARDS	67	f	1581
+96828-9	102764	Renal Score SOFA	Score_ARDS	67	f	1582
+44760-7	102832	MELD score	Score_Barthel	70	f	1583
+96790-1	102832	SOFA total score SOFA	Score_Barthel	62	f	1584
+96828-9	102832	Renal Score SOFA	Score_Barthel	62	f	1585
+44760-7	102789	MELD score	Score_BernerSchmerzscore	67	f	1586
+44760-7	102790	MELD score	Score_Besinger	67	f	1587
+73561-3	102790	IGF-I Z-score SerPl	Score_Besinger	61	f	1588
+96825-5	102790	Liver Score SOFA	Score_Besinger	60	f	1589
+34571-0	102791	Screen aPTT	Score_BPS	60	f	1590
+44760-7	102791	MELD score	Score_BPS	71	f	1591
+73561-3	102791	IGF-I Z-score SerPl	Score_BPS	71	f	1592
+88859-4	102791	Disease stage score for risk calculation	Score_BPS	71	f	1593
+9271-8	102791	10M Apgar Score	Score_BPS	71	f	1594
+9274-2	102791	5M Apgar Score	Score_BPS	71	f	1595
+96790-1	102791	SOFA total score SOFA	Score_BPS	71	f	1596
+96823-0	102791	Respiration Score SOFA	Score_BPS	71	f	1597
+96824-8	102791	Coag Score SOFA	Score_BPS	71	f	1598
+96825-5	102791	Liver Score SOFA	Score_BPS	71	f	1599
+96826-3	102791	Cardio Score SOFA	Score_BPS	71	f	1600
+96827-1	102791	CNS Score SOFA	Score_BPS	71	f	1601
+96828-9	102791	Renal Score SOFA	Score_BPS	71	f	1602
+34571-0	105223	Screen aPTT	Score_BPS_Verlauf	60	f	1603
+44760-7	105223	MELD score	Score_BPS_Verlauf	71	f	1604
+73561-3	105223	IGF-I Z-score SerPl	Score_BPS_Verlauf	71	f	1605
+88859-4	105223	Disease stage score for risk calculation	Score_BPS_Verlauf	71	f	1606
+9271-8	105223	10M Apgar Score	Score_BPS_Verlauf	71	f	1607
+9274-2	105223	5M Apgar Score	Score_BPS_Verlauf	71	f	1608
+96790-1	105223	SOFA total score SOFA	Score_BPS_Verlauf	71	f	1609
+96823-0	105223	Respiration Score SOFA	Score_BPS_Verlauf	71	f	1610
+96824-8	105223	Coag Score SOFA	Score_BPS_Verlauf	71	f	1611
+96825-5	105223	Liver Score SOFA	Score_BPS_Verlauf	71	f	1612
+96826-3	105223	Cardio Score SOFA	Score_BPS_Verlauf	71	f	1613
+96827-1	105223	CNS Score SOFA	Score_BPS_Verlauf	71	f	1614
+96828-9	105223	Renal Score SOFA	Score_BPS_Verlauf	71	f	1615
+44760-7	101609	MELD score	Score_Braden	67	f	1616
+96828-9	101609	Renal Score SOFA	Score_Braden	64	f	1617
+44760-7	108377	MELD score	Score_BradenQ	67	f	1618
+96828-9	108377	Renal Score SOFA	Score_BradenQ	62	f	1619
+44760-7	102848	MELD score	Score_Braden_Verlauf	67	f	1620
+96828-9	102848	Renal Score SOFA	Score_Braden_Verlauf	64	f	1621
+44760-7	104289	MELD score	Score_CAM_ICU_Punktwert_Gesamt	67	f	1622
+44760-7	117126	MELD score	Score_CAM_ICU_Punktwert_GesamtAktualisierung2020	67	f	1623
+44760-7	102792	MELD score	Score_CIWA	67	f	1624
+73561-3	102792	IGF-I Z-score SerPl	Score_CIWA	67	f	1625
+88859-4	102792	Disease stage score for risk calculation	Score_CIWA	67	f	1626
+9271-8	102792	10M Apgar Score	Score_CIWA	67	f	1627
+9274-2	102792	5M Apgar Score	Score_CIWA	67	f	1628
+96790-1	102792	SOFA total score SOFA	Score_CIWA	67	f	1629
+96823-0	102792	Respiration Score SOFA	Score_CIWA	67	f	1630
+96824-8	102792	Coag Score SOFA	Score_CIWA	67	f	1631
+96825-5	102792	Liver Score SOFA	Score_CIWA	67	f	1632
+96826-3	102792	Cardio Score SOFA	Score_CIWA	67	f	1633
+96827-1	102792	CNS Score SOFA	Score_CIWA	67	f	1634
+96828-9	102792	Renal Score SOFA	Score_CIWA	67	f	1635
+44760-7	102793	MELD score	Score_Cleveland	72	f	1636
+96825-5	102793	Liver Score SOFA	Score_Cleveland	65	f	1637
+44760-7	109749	MELD score	Score_ComfortB_beatmet_Skala	67	f	1638
+44760-7	110743	MELD score	Score_ComfortB_spontan_Skala	67	f	1639
+96790-1	110743	SOFA total score SOFA	Score_ComfortB_spontan_Skala	62	f	1640
+44760-7	102794	MELD score	Score_ComfortSkala	67	f	1641
+51844-9	102794	Cortis Sal-sCnc	Score_ComfortSkala	61	f	1642
+96790-1	102794	SOFA total score SOFA	Score_ComfortSkala	71	f	1643
+96824-8	102794	Coag Score SOFA	Score_ComfortSkala	61	f	1644
+96827-1	102794	CNS Score SOFA	Score_ComfortSkala	62	f	1645
+44760-7	102795	MELD score	Score_CRIB	67	f	1646
+73561-3	102795	IGF-I Z-score SerPl	Score_CRIB	67	f	1647
+88859-4	102795	Disease stage score for risk calculation	Score_CRIB	67	f	1648
+9271-8	102795	10M Apgar Score	Score_CRIB	67	f	1649
+9274-2	102795	5M Apgar Score	Score_CRIB	67	f	1650
+96790-1	102795	SOFA total score SOFA	Score_CRIB	67	f	1651
+96823-0	102795	Respiration Score SOFA	Score_CRIB	67	f	1652
+96824-8	102795	Coag Score SOFA	Score_CRIB	67	f	1653
+96825-5	102795	Liver Score SOFA	Score_CRIB	67	f	1654
+96826-3	102795	Cardio Score SOFA	Score_CRIB	67	f	1655
+96827-1	102795	CNS Score SOFA	Score_CRIB	67	f	1656
+96828-9	102795	Renal Score SOFA	Score_CRIB	67	f	1657
+44760-7	103444	MELD score	Score_DGAI_AufnArzt	70	f	1658
+73561-3	103444	IGF-I Z-score SerPl	Score_DGAI_AufnArzt	67	f	1659
+88859-4	103444	Disease stage score for risk calculation	Score_DGAI_AufnArzt	67	f	1660
+9271-8	103444	10M Apgar Score	Score_DGAI_AufnArzt	67	f	1661
+9274-2	103444	5M Apgar Score	Score_DGAI_AufnArzt	67	f	1662
+96790-1	103444	SOFA total score SOFA	Score_DGAI_AufnArzt	67	f	1663
+96823-0	103444	Respiration Score SOFA	Score_DGAI_AufnArzt	67	f	1664
+96824-8	103444	Coag Score SOFA	Score_DGAI_AufnArzt	67	f	1665
+96825-5	103444	Liver Score SOFA	Score_DGAI_AufnArzt	67	f	1666
+96826-3	103444	Cardio Score SOFA	Score_DGAI_AufnArzt	67	f	1667
+96827-1	103444	CNS Score SOFA	Score_DGAI_AufnArzt	67	f	1668
+96828-9	103444	Renal Score SOFA	Score_DGAI_AufnArzt	67	f	1669
+44760-7	103556	MELD score	Score_DGAI_AufnASA1	70	f	1670
+73561-3	103556	IGF-I Z-score SerPl	Score_DGAI_AufnASA1	67	f	1671
+88859-4	103556	Disease stage score for risk calculation	Score_DGAI_AufnASA1	67	f	1672
+9271-8	103556	10M Apgar Score	Score_DGAI_AufnASA1	67	f	1673
+9274-2	103556	5M Apgar Score	Score_DGAI_AufnASA1	67	f	1674
+96790-1	103556	SOFA total score SOFA	Score_DGAI_AufnASA1	67	f	1675
+96823-0	103556	Respiration Score SOFA	Score_DGAI_AufnASA1	67	f	1676
+96824-8	103556	Coag Score SOFA	Score_DGAI_AufnASA1	67	f	1677
+96825-5	103556	Liver Score SOFA	Score_DGAI_AufnASA1	67	f	1678
+96826-3	103556	Cardio Score SOFA	Score_DGAI_AufnASA1	67	f	1679
+96827-1	103556	CNS Score SOFA	Score_DGAI_AufnASA1	67	f	1680
+96828-9	103556	Renal Score SOFA	Score_DGAI_AufnASA1	67	f	1681
+44760-7	103557	MELD score	Score_DGAI_AufnASA2	70	f	1682
+73561-3	103557	IGF-I Z-score SerPl	Score_DGAI_AufnASA2	67	f	1683
+88859-4	103557	Disease stage score for risk calculation	Score_DGAI_AufnASA2	67	f	1684
+9271-8	103557	10M Apgar Score	Score_DGAI_AufnASA2	67	f	1685
+9274-2	103557	5M Apgar Score	Score_DGAI_AufnASA2	67	f	1686
+96790-1	103557	SOFA total score SOFA	Score_DGAI_AufnASA2	67	f	1687
+96823-0	103557	Respiration Score SOFA	Score_DGAI_AufnASA2	67	f	1688
+96824-8	103557	Coag Score SOFA	Score_DGAI_AufnASA2	67	f	1689
+96825-5	103557	Liver Score SOFA	Score_DGAI_AufnASA2	67	f	1690
+96826-3	103557	Cardio Score SOFA	Score_DGAI_AufnASA2	67	f	1691
+96827-1	103557	CNS Score SOFA	Score_DGAI_AufnASA2	67	f	1692
+96828-9	103557	Renal Score SOFA	Score_DGAI_AufnASA2	67	f	1693
+44760-7	103558	MELD score	Score_DGAI_AufnASA3	70	f	1694
+73561-3	103558	IGF-I Z-score SerPl	Score_DGAI_AufnASA3	67	f	1695
+88859-4	103558	Disease stage score for risk calculation	Score_DGAI_AufnASA3	67	f	1696
+9271-8	103558	10M Apgar Score	Score_DGAI_AufnASA3	67	f	1697
+9274-2	103558	5M Apgar Score	Score_DGAI_AufnASA3	67	f	1698
+96790-1	103558	SOFA total score SOFA	Score_DGAI_AufnASA3	67	f	1699
+96823-0	103558	Respiration Score SOFA	Score_DGAI_AufnASA3	67	f	1700
+96824-8	103558	Coag Score SOFA	Score_DGAI_AufnASA3	67	f	1701
+96825-5	103558	Liver Score SOFA	Score_DGAI_AufnASA3	67	f	1702
+96826-3	103558	Cardio Score SOFA	Score_DGAI_AufnASA3	67	f	1703
+96827-1	103558	CNS Score SOFA	Score_DGAI_AufnASA3	67	f	1704
+96828-9	103558	Renal Score SOFA	Score_DGAI_AufnASA3	67	f	1705
+44760-7	103559	MELD score	Score_DGAI_AufnASA4	70	f	1706
+73561-3	103559	IGF-I Z-score SerPl	Score_DGAI_AufnASA4	67	f	1707
+88859-4	103559	Disease stage score for risk calculation	Score_DGAI_AufnASA4	67	f	1708
+9271-8	103559	10M Apgar Score	Score_DGAI_AufnASA4	67	f	1709
+9274-2	103559	5M Apgar Score	Score_DGAI_AufnASA4	67	f	1710
+96790-1	103559	SOFA total score SOFA	Score_DGAI_AufnASA4	67	f	1711
+96823-0	103559	Respiration Score SOFA	Score_DGAI_AufnASA4	67	f	1712
+96824-8	103559	Coag Score SOFA	Score_DGAI_AufnASA4	67	f	1713
+96825-5	103559	Liver Score SOFA	Score_DGAI_AufnASA4	67	f	1714
+96826-3	103559	Cardio Score SOFA	Score_DGAI_AufnASA4	67	f	1715
+96827-1	103559	CNS Score SOFA	Score_DGAI_AufnASA4	67	f	1716
+96828-9	103559	Renal Score SOFA	Score_DGAI_AufnASA4	67	f	1717
+44760-7	103560	MELD score	Score_DGAI_AufnASA5	70	f	1718
+73561-3	103560	IGF-I Z-score SerPl	Score_DGAI_AufnASA5	67	f	1719
+88859-4	103560	Disease stage score for risk calculation	Score_DGAI_AufnASA5	67	f	1720
+9271-8	103560	10M Apgar Score	Score_DGAI_AufnASA5	67	f	1721
+9274-2	103560	5M Apgar Score	Score_DGAI_AufnASA5	67	f	1722
+96790-1	103560	SOFA total score SOFA	Score_DGAI_AufnASA5	67	f	1723
+96823-0	103560	Respiration Score SOFA	Score_DGAI_AufnASA5	67	f	1724
+96824-8	103560	Coag Score SOFA	Score_DGAI_AufnASA5	67	f	1725
+96825-5	103560	Liver Score SOFA	Score_DGAI_AufnASA5	67	f	1726
+96826-3	103560	Cardio Score SOFA	Score_DGAI_AufnASA5	67	f	1727
+96827-1	103560	CNS Score SOFA	Score_DGAI_AufnASA5	67	f	1728
+96828-9	103560	Renal Score SOFA	Score_DGAI_AufnASA5	67	f	1729
+44760-7	103561	MELD score	Score_DGAI_AufnBeatmet	67	f	1730
+44760-7	103458	MELD score	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	70	f	1731
+73561-3	103458	IGF-I Z-score SerPl	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1732
+88859-4	103458	Disease stage score for risk calculation	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1733
+9271-8	103458	10M Apgar Score	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1734
+9274-2	103458	5M Apgar Score	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1735
+96790-1	103458	SOFA total score SOFA	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1736
+96823-0	103458	Respiration Score SOFA	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1737
+96824-8	103458	Coag Score SOFA	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1738
+96825-5	103458	Liver Score SOFA	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1739
+96826-3	103458	Cardio Score SOFA	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1740
+96827-1	103458	CNS Score SOFA	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1741
+96828-9	103458	Renal Score SOFA	Score_DGAI_AufnBeatmungsstundenbiszurAufnahme	67	f	1742
+44760-7	103504	MELD score	Score_DGAI_AufnChronischeAIDS	67	f	1743
+44760-7	103506	MELD score	Score_DGAI_AufnChronischeHaematologischeNeoplasie	70	f	1744
+73561-3	103506	IGF-I Z-score SerPl	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1745
+88859-4	103506	Disease stage score for risk calculation	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1746
+9271-8	103506	10M Apgar Score	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1747
+9274-2	103506	5M Apgar Score	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1748
+96790-1	103506	SOFA total score SOFA	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1749
+96823-0	103506	Respiration Score SOFA	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1750
+96824-8	103506	Coag Score SOFA	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1751
+96825-5	103506	Liver Score SOFA	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1752
+96826-3	103506	Cardio Score SOFA	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1753
+96827-1	103506	CNS Score SOFA	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1754
+96828-9	103506	Renal Score SOFA	Score_DGAI_AufnChronischeHaematologischeNeoplasie	67	f	1755
+44760-7	103507	MELD score	Score_DGAI_AufnChronischeMetastasierenNeoplasie	70	f	1756
+73561-3	103507	IGF-I Z-score SerPl	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1757
+88859-4	103507	Disease stage score for risk calculation	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1758
+9271-8	103507	10M Apgar Score	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1759
+9274-2	103507	5M Apgar Score	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1760
+96790-1	103507	SOFA total score SOFA	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1761
+96823-0	103507	Respiration Score SOFA	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1762
+96824-8	103507	Coag Score SOFA	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1763
+96825-5	103507	Liver Score SOFA	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1764
+96826-3	103507	Cardio Score SOFA	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1765
+96827-1	103507	CNS Score SOFA	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1766
+96828-9	103507	Renal Score SOFA	Score_DGAI_AufnChronischeMetastasierenNeoplasie	67	f	1767
+44760-7	103553	MELD score	Score_DGAI_AufnGeplantChirurgisch	67	f	1768
+44760-7	103508	MELD score	Score_DGAI_AufnIndikationBeatmungsfall	67	f	1769
+44760-7	103509	MELD score	Score_DGAI_AufnIndikationIntensivBehandlung	70	f	1770
+73561-3	103509	IGF-I Z-score SerPl	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1771
+88859-4	103509	Disease stage score for risk calculation	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1772
+9271-8	103509	10M Apgar Score	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1773
+9274-2	103509	5M Apgar Score	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1774
+96790-1	103509	SOFA total score SOFA	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1775
+96823-0	103509	Respiration Score SOFA	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1776
+96824-8	103509	Coag Score SOFA	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1777
+96825-5	103509	Liver Score SOFA	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1778
+96826-3	103509	Cardio Score SOFA	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1779
+96827-1	103509	CNS Score SOFA	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1780
+96828-9	103509	Renal Score SOFA	Score_DGAI_AufnIndikationIntensivBehandlung	67	f	1781
+44760-7	103510	MELD score	Score_DGAI_AufnIndikationIntensivUeberwachung	70	f	1782
+73561-3	103510	IGF-I Z-score SerPl	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1783
+88859-4	103510	Disease stage score for risk calculation	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1784
+9271-8	103510	10M Apgar Score	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1785
+9274-2	103510	5M Apgar Score	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1786
+96790-1	103510	SOFA total score SOFA	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1787
+96823-0	103510	Respiration Score SOFA	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1788
+96824-8	103510	Coag Score SOFA	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1789
+96825-5	103510	Liver Score SOFA	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1790
+96826-3	103510	Cardio Score SOFA	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1791
+96827-1	103510	CNS Score SOFA	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1792
+96828-9	103510	Renal Score SOFA	Score_DGAI_AufnIndikationIntensivUeberwachung	67	f	1793
+44760-7	103511	MELD score	Score_DGAI_AufnIndikationSchwerstkrankerPatient	70	f	1794
+73561-3	103511	IGF-I Z-score SerPl	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1795
+88859-4	103511	Disease stage score for risk calculation	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1796
+9271-8	103511	10M Apgar Score	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1797
+9274-2	103511	5M Apgar Score	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1798
+96790-1	103511	SOFA total score SOFA	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1799
+96823-0	103511	Respiration Score SOFA	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1800
+96824-8	103511	Coag Score SOFA	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1801
+96825-5	103511	Liver Score SOFA	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1802
+96826-3	103511	Cardio Score SOFA	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1803
+96827-1	103511	CNS Score SOFA	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1804
+96828-9	103511	Renal Score SOFA	Score_DGAI_AufnIndikationSchwerstkrankerPatient	67	f	1805
+44760-7	103555	MELD score	Score_DGAI_AufnMedizinisch	67	f	1806
+44760-7	103513	MELD score	Score_DGAI_AufnNachOperation	67	f	1807
+96823-0	103513	Respiration Score SOFA	Score_DGAI_AufnNachOperation	60	f	1808
+44760-7	103514	MELD score	Score_DGAI_AufnTraumaPolytrauma	67	f	1809
+44760-7	103554	MELD score	Score_DGAI_AufnUngeplantChirurgisch	70	f	1810
+73561-3	103554	IGF-I Z-score SerPl	Score_DGAI_AufnUngeplantChirurgisch	67	f	1811
+88859-4	103554	Disease stage score for risk calculation	Score_DGAI_AufnUngeplantChirurgisch	67	f	1812
+9271-8	103554	10M Apgar Score	Score_DGAI_AufnUngeplantChirurgisch	67	f	1813
+9274-2	103554	5M Apgar Score	Score_DGAI_AufnUngeplantChirurgisch	67	f	1814
+96790-1	103554	SOFA total score SOFA	Score_DGAI_AufnUngeplantChirurgisch	67	f	1815
+96823-0	103554	Respiration Score SOFA	Score_DGAI_AufnUngeplantChirurgisch	67	f	1816
+96824-8	103554	Coag Score SOFA	Score_DGAI_AufnUngeplantChirurgisch	67	f	1817
+96825-5	103554	Liver Score SOFA	Score_DGAI_AufnUngeplantChirurgisch	67	f	1818
+96826-3	103554	Cardio Score SOFA	Score_DGAI_AufnUngeplantChirurgisch	67	f	1819
+96827-1	103554	CNS Score SOFA	Score_DGAI_AufnUngeplantChirurgisch	67	f	1820
+96828-9	103554	Renal Score SOFA	Score_DGAI_AufnUngeplantChirurgisch	67	f	1821
+44760-7	103515	MELD score	Score_DGAI_AufnVonExterneKlinik	67	f	1822
+44760-7	103512	MELD score	Score_DGAI_AufnVonIntensivstationWachstation	70	f	1823
+73561-3	103512	IGF-I Z-score SerPl	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1824
+88859-4	103512	Disease stage score for risk calculation	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1825
+9271-8	103512	10M Apgar Score	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1826
+9274-2	103512	5M Apgar Score	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1827
+96790-1	103512	SOFA total score SOFA	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1828
+96823-0	103512	Respiration Score SOFA	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1829
+96824-8	103512	Coag Score SOFA	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1830
+96825-5	103512	Liver Score SOFA	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1831
+96826-3	103512	Cardio Score SOFA	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1832
+96827-1	103512	CNS Score SOFA	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1833
+96828-9	103512	Renal Score SOFA	Score_DGAI_AufnVonIntensivstationWachstation	67	f	1834
+44760-7	103516	MELD score	Score_DGAI_AufnVonNotaufnahmeNAW	67	f	1835
+44760-7	103517	MELD score	Score_DGAI_AufnVonOPAWR	67	f	1836
+44760-7	103518	MELD score	Score_DGAI_AufnVonPeriphererStation	70	f	1837
+73561-3	103518	IGF-I Z-score SerPl	Score_DGAI_AufnVonPeriphererStation	67	f	1838
+88859-4	103518	Disease stage score for risk calculation	Score_DGAI_AufnVonPeriphererStation	67	f	1839
+9271-8	103518	10M Apgar Score	Score_DGAI_AufnVonPeriphererStation	67	f	1840
+9274-2	103518	5M Apgar Score	Score_DGAI_AufnVonPeriphererStation	67	f	1841
+96790-1	103518	SOFA total score SOFA	Score_DGAI_AufnVonPeriphererStation	67	f	1842
+96823-0	103518	Respiration Score SOFA	Score_DGAI_AufnVonPeriphererStation	67	f	1843
+96824-8	103518	Coag Score SOFA	Score_DGAI_AufnVonPeriphererStation	67	f	1844
+96825-5	103518	Liver Score SOFA	Score_DGAI_AufnVonPeriphererStation	67	f	1845
+96826-3	103518	Cardio Score SOFA	Score_DGAI_AufnVonPeriphererStation	67	f	1846
+96827-1	103518	CNS Score SOFA	Score_DGAI_AufnVonPeriphererStation	67	f	1847
+96828-9	103518	Renal Score SOFA	Score_DGAI_AufnVonPeriphererStation	67	f	1848
+44760-7	103519	MELD score	Score_DGAI_AufnWiederaufnahmeGroesser48h	67	f	1849
+44760-7	103520	MELD score	Score_DGAI_AufnWiederaufnahmeKleiner48h	67	f	1850
+44760-7	103464	MELD score	Score_DGAI_EntlArzt	67	f	1851
+44760-7	103462	MELD score	Score_DGAI_EntlDatum	67	f	1852
+44760-7	103521	MELD score	Score_DGAI_EntlInfoANV	67	f	1853
+44760-7	103522	MELD score	Score_DGAI_EntlInfoARDSALI	67	f	1854
+44760-7	103523	MELD score	Score_DGAI_EntlInfoBarthelIndexErhoben	70	f	1855
+73561-3	103523	IGF-I Z-score SerPl	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1856
+88859-4	103523	Disease stage score for risk calculation	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1857
+9271-8	103523	10M Apgar Score	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1858
+9274-2	103523	5M Apgar Score	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1859
+96790-1	103523	SOFA total score SOFA	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1860
+96823-0	103523	Respiration Score SOFA	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1861
+96824-8	103523	Coag Score SOFA	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1862
+96825-5	103523	Liver Score SOFA	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1863
+96826-3	103523	Cardio Score SOFA	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1864
+96827-1	103523	CNS Score SOFA	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1865
+96828-9	103523	Renal Score SOFA	Score_DGAI_EntlInfoBarthelIndexErhoben	67	f	1866
+44760-7	103524	MELD score	Score_DGAI_EntlInfoECMOILA	67	f	1867
+44760-7	103525	MELD score	Score_DGAI_EntlInfoESBL	67	f	1868
+44760-7	103526	MELD score	Score_DGAI_EntlInfoHFOV	67	f	1869
+44760-7	103527	MELD score	Score_DGAI_EntlInfoMaximaleTherapieAufStation	70	f	1870
+73561-3	103527	IGF-I Z-score SerPl	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1871
+88859-4	103527	Disease stage score for risk calculation	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1872
+9271-8	103527	10M Apgar Score	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1873
+9274-2	103527	5M Apgar Score	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1874
+96790-1	103527	SOFA total score SOFA	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1875
+96823-0	103527	Respiration Score SOFA	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1876
+96824-8	103527	Coag Score SOFA	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1877
+96825-5	103527	Liver Score SOFA	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1878
+96826-3	103527	Cardio Score SOFA	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1879
+96827-1	103527	CNS Score SOFA	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1880
+96828-9	103527	Renal Score SOFA	Score_DGAI_EntlInfoMaximaleTherapieAufStation	67	f	1881
+44760-7	103528	MELD score	Score_DGAI_EntlInfoMODMOV	67	f	1882
+44760-7	103529	MELD score	Score_DGAI_EntlInfoMRSA	67	f	1883
+44760-7	103530	MELD score	Score_DGAI_EntlInfoNET	67	f	1884
+44760-7	103531	MELD score	Score_DGAI_EntlInfoObduktionDurchgefuehrt	67	f	1885
+44760-7	103532	MELD score	Score_DGAI_EntlInfoPolytrauma	67	f	1886
+44760-7	103533	MELD score	Score_DGAI_EntlInfoSepsis	67	f	1887
+44760-7	103534	MELD score	Score_DGAI_EntlInfoTherapieMinima	67	f	1888
+44760-7	103535	MELD score	Score_DGAI_EntlInfoVRE	67	f	1889
+44760-7	103536	MELD score	Score_DGAI_EntlNachAndereIntensivstation	70	f	1890
+73561-3	103536	IGF-I Z-score SerPl	Score_DGAI_EntlNachAndereIntensivstation	67	f	1891
+88859-4	103536	Disease stage score for risk calculation	Score_DGAI_EntlNachAndereIntensivstation	67	f	1892
+9271-8	103536	10M Apgar Score	Score_DGAI_EntlNachAndereIntensivstation	67	f	1893
+9274-2	103536	5M Apgar Score	Score_DGAI_EntlNachAndereIntensivstation	67	f	1894
+96790-1	103536	SOFA total score SOFA	Score_DGAI_EntlNachAndereIntensivstation	67	f	1895
+96823-0	103536	Respiration Score SOFA	Score_DGAI_EntlNachAndereIntensivstation	67	f	1896
+96824-8	103536	Coag Score SOFA	Score_DGAI_EntlNachAndereIntensivstation	67	f	1897
+96825-5	103536	Liver Score SOFA	Score_DGAI_EntlNachAndereIntensivstation	67	f	1898
+96826-3	103536	Cardio Score SOFA	Score_DGAI_EntlNachAndereIntensivstation	67	f	1899
+96827-1	103536	CNS Score SOFA	Score_DGAI_EntlNachAndereIntensivstation	67	f	1900
+96828-9	103536	Renal Score SOFA	Score_DGAI_EntlNachAndereIntensivstation	67	f	1901
+44760-7	103537	MELD score	Score_DGAI_EntlNachExterneNormalklinik	67	f	1902
+44760-7	103538	MELD score	Score_DGAI_EntlNachExterneSpezialklinik	70	f	1903
+73561-3	103538	IGF-I Z-score SerPl	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1904
+88859-4	103538	Disease stage score for risk calculation	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1905
+9271-8	103538	10M Apgar Score	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1906
+9274-2	103538	5M Apgar Score	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1907
+96790-1	103538	SOFA total score SOFA	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1908
+96823-0	103538	Respiration Score SOFA	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1909
+96824-8	103538	Coag Score SOFA	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1910
+96825-5	103538	Liver Score SOFA	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1911
+96826-3	103538	Cardio Score SOFA	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1912
+96827-1	103538	CNS Score SOFA	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1913
+96828-9	103538	Renal Score SOFA	Score_DGAI_EntlNachExterneSpezialklinik	67	f	1914
+44760-7	103539	MELD score	Score_DGAI_EntlNachHause	67	f	1915
+44760-7	103540	MELD score	Score_DGAI_EntlNachKeineVerlegungExitus	70	f	1916
+73561-3	103540	IGF-I Z-score SerPl	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1917
+88859-4	103540	Disease stage score for risk calculation	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1918
+9271-8	103540	10M Apgar Score	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1919
+9274-2	103540	5M Apgar Score	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1920
+96790-1	103540	SOFA total score SOFA	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1921
+96823-0	103540	Respiration Score SOFA	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1922
+96824-8	103540	Coag Score SOFA	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1923
+96825-5	103540	Liver Score SOFA	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1924
+96826-3	103540	Cardio Score SOFA	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1925
+96827-1	103540	CNS Score SOFA	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1926
+96828-9	103540	Renal Score SOFA	Score_DGAI_EntlNachKeineVerlegungExitus	67	f	1927
+44760-7	103541	MELD score	Score_DGAI_EntlNachNormalstation	67	f	1928
+44760-7	103542	MELD score	Score_DGAI_EntlNachWachstation	67	f	1929
+44760-7	103543	MELD score	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	70	f	1930
+73561-3	103543	IGF-I Z-score SerPl	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1931
+88859-4	103543	Disease stage score for risk calculation	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1932
+9271-8	103543	10M Apgar Score	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1933
+9274-2	103543	5M Apgar Score	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1934
+96790-1	103543	SOFA total score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1935
+96823-0	103543	Respiration Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1936
+96824-8	103543	Coag Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1937
+96825-5	103543	Liver Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1938
+96826-3	103543	Cardio Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1939
+96827-1	103543	CNS Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1940
+96828-9	103543	Renal Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf	67	f	1941
+44760-7	103544	MELD score	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	70	f	1942
+73561-3	103544	IGF-I Z-score SerPl	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1943
+88859-4	103544	Disease stage score for risk calculation	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1944
+9271-8	103544	10M Apgar Score	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1945
+9274-2	103544	5M Apgar Score	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1946
+96790-1	103544	SOFA total score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1947
+96823-0	103544	Respiration Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1948
+96824-8	103544	Coag Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1949
+96825-5	103544	Liver Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1950
+96826-3	103544	Cardio Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1951
+96827-1	103544	CNS Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1952
+96828-9	103544	Renal Score SOFA	Score_DGAI_EntlPostVisiteBeeintraechtigungPassager	67	f	1953
+44760-7	103492	MELD score	Score_DGAI_EntlPostVisiteDatum	67	f	1954
+44760-7	103545	MELD score	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	70	f	1955
+73561-3	103545	IGF-I Z-score SerPl	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1956
+88859-4	103545	Disease stage score for risk calculation	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1957
+9271-8	103545	10M Apgar Score	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1958
+9274-2	103545	5M Apgar Score	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1959
+96790-1	103545	SOFA total score SOFA	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1960
+96823-0	103545	Respiration Score SOFA	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1961
+96824-8	103545	Coag Score SOFA	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1962
+96825-5	103545	Liver Score SOFA	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1963
+96826-3	103545	Cardio Score SOFA	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1964
+96827-1	103545	CNS Score SOFA	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1965
+96828-9	103545	Renal Score SOFA	Score_DGAI_EntlPostVisiteExitusImKrankenhaus	67	f	1966
+44760-7	103546	MELD score	Score_DGAI_EntlPostVisiteKeineDurchgefuehrt	67	f	1967
+44760-7	103547	MELD score	Score_DGAI_EntlPostVisiteRestitutioAdIntegrum	67	f	1968
+44760-7	103562	MELD score	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	70	f	1969
+73561-3	103562	IGF-I Z-score SerPl	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1970
+88859-4	103562	Disease stage score for risk calculation	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1971
+9271-8	103562	10M Apgar Score	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1972
+9274-2	103562	5M Apgar Score	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1973
+96790-1	103562	SOFA total score SOFA	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1974
+96823-0	103562	Respiration Score SOFA	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1975
+96824-8	103562	Coag Score SOFA	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1976
+96825-5	103562	Liver Score SOFA	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1977
+96826-3	103562	Cardio Score SOFA	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1978
+96827-1	103562	CNS Score SOFA	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1979
+96828-9	103562	Renal Score SOFA	Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe	67	f	1980
+44760-7	103463	MELD score	Score_DGAI_EntlZeit	67	f	1981
+44760-7	103548	MELD score	Score_DGAI_EntlZustandExitus	67	f	1982
+44760-7	103549	MELD score	Score_DGAI_EntlZustandGeringBeeintraechtigungDauer	67	f	1983
+44760-7	103550	MELD score	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	70	f	1984
+73561-3	103550	IGF-I Z-score SerPl	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1985
+88859-4	103550	Disease stage score for risk calculation	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1986
+9271-8	103550	10M Apgar Score	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1987
+9274-2	103550	5M Apgar Score	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1988
+96790-1	103550	SOFA total score SOFA	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1989
+96823-0	103550	Respiration Score SOFA	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1990
+96824-8	103550	Coag Score SOFA	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1991
+96825-5	103550	Liver Score SOFA	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1992
+96826-3	103550	Cardio Score SOFA	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1993
+96827-1	103550	CNS Score SOFA	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1994
+96828-9	103550	Renal Score SOFA	Score_DGAI_EntlZustandGeringBeeintraechtigungPassa	67	f	1995
+44760-7	103551	MELD score	Score_DGAI_EntlZustandRestitutioAdIntegrum	70	f	1996
+73561-3	103551	IGF-I Z-score SerPl	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	1997
+88859-4	103551	Disease stage score for risk calculation	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	1998
+9271-8	103551	10M Apgar Score	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	1999
+9274-2	103551	5M Apgar Score	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	2000
+96790-1	103551	SOFA total score SOFA	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	2001
+96823-0	103551	Respiration Score SOFA	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	2002
+96824-8	103551	Coag Score SOFA	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	2003
+96825-5	103551	Liver Score SOFA	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	2004
+96826-3	103551	Cardio Score SOFA	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	2005
+96827-1	103551	CNS Score SOFA	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	2006
+96828-9	103551	Renal Score SOFA	Score_DGAI_EntlZustandRestitutioAdIntegrum	67	f	2007
+44760-7	103552	MELD score	Score_DGAI_EntlZustandUeberlebenErheblicherDefekt	67	f	2008
+12286-1	102796	Drugs Ur Scn	Score_DRS	67	f	2009
+44760-7	102796	MELD score	Score_DRS	74	f	2010
+6303-2	102796	Screen dRVVT	Score_DRS	67	f	2011
+73561-3	102796	IGF-I Z-score SerPl	Score_DRS	71	f	2012
+88859-4	102796	Disease stage score for risk calculation	Score_DRS	71	f	2013
+9271-8	102796	10M Apgar Score	Score_DRS	71	f	2014
+9274-2	102796	5M Apgar Score	Score_DRS	71	f	2015
+96790-1	102796	SOFA total score SOFA	Score_DRS	71	f	2016
+96823-0	102796	Respiration Score SOFA	Score_DRS	71	f	2017
+96824-8	102796	Coag Score SOFA	Score_DRS	71	f	2018
+96825-5	102796	Liver Score SOFA	Score_DRS	71	f	2019
+96826-3	102796	Cardio Score SOFA	Score_DRS	71	f	2020
+96827-1	102796	CNS Score SOFA	Score_DRS	71	f	2021
+96828-9	102796	Renal Score SOFA	Score_DRS	71	f	2022
+44760-7	102797	MELD score	Score_Dubois	67	f	2023
+96826-3	102797	Cardio Score SOFA	Score_Dubois	62	f	2024
+44760-7	108641	MELD score	Score_Finnegan	67	f	2025
+96825-5	108641	Liver Score SOFA	Score_Finnegan	60	f	2026
+44760-7	108484	MELD score	Score_Finnigan	67	f	2027
+44760-7	108395	MELD score	Score_FLACC	67	f	2028
+48164-8	108395	NSE Fld-mCnc	Score_FLACC	61	f	2029
+73561-3	108395	IGF-I Z-score SerPl	Score_FLACC	62	f	2030
+88859-4	108395	Disease stage score for risk calculation	Score_FLACC	62	f	2031
+9271-8	108395	10M Apgar Score	Score_FLACC	62	f	2032
+9274-2	108395	5M Apgar Score	Score_FLACC	62	f	2033
+96790-1	108395	SOFA total score SOFA	Score_FLACC	62	f	2034
+96823-0	108395	Respiration Score SOFA	Score_FLACC	62	f	2035
+96824-8	108395	Coag Score SOFA	Score_FLACC	62	f	2036
+96825-5	108395	Liver Score SOFA	Score_FLACC	62	f	2037
+96826-3	108395	Cardio Score SOFA	Score_FLACC	62	f	2038
+96827-1	108395	CNS Score SOFA	Score_FLACC	64	f	2039
+96828-9	108395	Renal Score SOFA	Score_FLACC	62	f	2040
+44760-7	110976	MELD score	Score_FOUR	67	f	2041
+73561-3	110976	IGF-I Z-score SerPl	Score_FOUR	67	f	2042
+88859-4	110976	Disease stage score for risk calculation	Score_FOUR	67	f	2043
+9271-8	110976	10M Apgar Score	Score_FOUR	67	f	2044
+9274-2	110976	5M Apgar Score	Score_FOUR	67	f	2045
+96790-1	110976	SOFA total score SOFA	Score_FOUR	67	f	2046
+96823-0	110976	Respiration Score SOFA	Score_FOUR	67	f	2047
+96824-8	110976	Coag Score SOFA	Score_FOUR	67	f	2048
+96825-5	110976	Liver Score SOFA	Score_FOUR	67	f	2049
+96826-3	110976	Cardio Score SOFA	Score_FOUR	67	f	2050
+96827-1	110976	CNS Score SOFA	Score_FOUR	67	f	2051
+96828-9	110976	Renal Score SOFA	Score_FOUR	67	f	2052
+44760-7	102798	MELD score	Score_GDS	74	f	2053
+73561-3	102798	IGF-I Z-score SerPl	Score_GDS	71	f	2054
+88859-4	102798	Disease stage score for risk calculation	Score_GDS	71	f	2055
+9271-8	102798	10M Apgar Score	Score_GDS	71	f	2056
+9274-2	102798	5M Apgar Score	Score_GDS	71	f	2057
+96790-1	102798	SOFA total score SOFA	Score_GDS	71	f	2058
+96823-0	102798	Respiration Score SOFA	Score_GDS	71	f	2059
+96824-8	102798	Coag Score SOFA	Score_GDS	71	f	2060
+96825-5	102798	Liver Score SOFA	Score_GDS	71	f	2061
+96826-3	102798	Cardio Score SOFA	Score_GDS	71	f	2062
+96827-1	102798	CNS Score SOFA	Score_GDS	71	f	2063
+96828-9	102798	Renal Score SOFA	Score_GDS	71	f	2064
+44760-7	108684	MELD score	Score_ISS	71	f	2065
+73561-3	108684	IGF-I Z-score SerPl	Score_ISS	71	f	2066
+88859-4	108684	Disease stage score for risk calculation	Score_ISS	71	f	2067
+9271-8	108684	10M Apgar Score	Score_ISS	71	f	2068
+9274-2	108684	5M Apgar Score	Score_ISS	71	f	2069
+96790-1	108684	SOFA total score SOFA	Score_ISS	71	f	2070
+96823-0	108684	Respiration Score SOFA	Score_ISS	71	f	2071
+96824-8	108684	Coag Score SOFA	Score_ISS	71	f	2072
+96825-5	108684	Liver Score SOFA	Score_ISS	71	f	2073
+96826-3	108684	Cardio Score SOFA	Score_ISS	71	f	2074
+96827-1	108684	CNS Score SOFA	Score_ISS	71	f	2075
+96828-9	108684	Renal Score SOFA	Score_ISS	71	f	2076
+26606-4	102799	Carnosine SerPl-sCnc	Score_KarnofskyIndex	60	f	2077
+44760-7	102799	MELD score	Score_KarnofskyIndex	67	f	2078
+44760-7	102800	MELD score	Score_Kuss	67	f	2079
+73561-3	102800	IGF-I Z-score SerPl	Score_Kuss	67	f	2080
+88859-4	102800	Disease stage score for risk calculation	Score_Kuss	67	f	2081
+9271-8	102800	10M Apgar Score	Score_Kuss	67	f	2082
+9274-2	102800	5M Apgar Score	Score_Kuss	67	f	2083
+96790-1	102800	SOFA total score SOFA	Score_Kuss	67	f	2084
+96823-0	102800	Respiration Score SOFA	Score_Kuss	67	f	2085
+96824-8	102800	Coag Score SOFA	Score_Kuss	67	f	2086
+96825-5	102800	Liver Score SOFA	Score_Kuss	67	f	2087
+96826-3	102800	Cardio Score SOFA	Score_Kuss	67	f	2088
+96827-1	102800	CNS Score SOFA	Score_Kuss	67	f	2089
+96828-9	102800	Renal Score SOFA	Score_Kuss	67	f	2090
+44760-7	102813	MELD score	Score_Lachs	67	f	2091
+73561-3	102813	IGF-I Z-score SerPl	Score_Lachs	62	f	2092
+88859-4	102813	Disease stage score for risk calculation	Score_Lachs	62	f	2093
+9271-8	102813	10M Apgar Score	Score_Lachs	62	f	2094
+9274-2	102813	5M Apgar Score	Score_Lachs	62	f	2095
+96790-1	102813	SOFA total score SOFA	Score_Lachs	62	f	2096
+96823-0	102813	Respiration Score SOFA	Score_Lachs	62	f	2097
+96824-8	102813	Coag Score SOFA	Score_Lachs	62	f	2098
+96825-5	102813	Liver Score SOFA	Score_Lachs	62	f	2099
+96826-3	102813	Cardio Score SOFA	Score_Lachs	62	f	2100
+96827-1	102813	CNS Score SOFA	Score_Lachs	64	f	2101
+96828-9	102813	Renal Score SOFA	Score_Lachs	62	f	2102
+44760-7	102801	MELD score	Score_MAAS	70	f	2103
+73561-3	102801	IGF-I Z-score SerPl	Score_MAAS	67	f	2104
+88859-4	102801	Disease stage score for risk calculation	Score_MAAS	67	f	2105
+9271-8	102801	10M Apgar Score	Score_MAAS	72	f	2106
+9274-2	102801	5M Apgar Score	Score_MAAS	75	f	2107
+96790-1	102801	SOFA total score SOFA	Score_MAAS	67	f	2108
+96823-0	102801	Respiration Score SOFA	Score_MAAS	67	f	2109
+96824-8	102801	Coag Score SOFA	Score_MAAS	67	f	2110
+96825-5	102801	Liver Score SOFA	Score_MAAS	67	f	2111
+96826-3	102801	Cardio Score SOFA	Score_MAAS	67	f	2112
+96827-1	102801	CNS Score SOFA	Score_MAAS	67	f	2113
+96828-9	102801	Renal Score SOFA	Score_MAAS	67	f	2114
+44760-7	102802	MELD score	Score_MMS	74	f	2115
+73561-3	102802	IGF-I Z-score SerPl	Score_MMS	71	f	2116
+88859-4	102802	Disease stage score for risk calculation	Score_MMS	71	f	2117
+9271-8	102802	10M Apgar Score	Score_MMS	71	f	2118
+9274-2	102802	5M Apgar Score	Score_MMS	71	f	2119
+96790-1	102802	SOFA total score SOFA	Score_MMS	71	f	2120
+96823-0	102802	Respiration Score SOFA	Score_MMS	71	f	2121
+96824-8	102802	Coag Score SOFA	Score_MMS	71	f	2122
+96825-5	102802	Liver Score SOFA	Score_MMS	71	f	2123
+96826-3	102802	Cardio Score SOFA	Score_MMS	71	f	2124
+96827-1	102802	CNS Score SOFA	Score_MMS	71	f	2125
+96828-9	102802	Renal Score SOFA	Score_MMS	71	f	2126
+44760-7	102803	MELD score	Score_MOF	74	f	2127
+48766-0	102803	Source of info	Score_MOF	61	f	2128
+73561-3	102803	IGF-I Z-score SerPl	Score_MOF	71	f	2129
+88859-4	102803	Disease stage score for risk calculation	Score_MOF	71	f	2130
+9271-8	102803	10M Apgar Score	Score_MOF	71	f	2131
+9274-2	102803	5M Apgar Score	Score_MOF	71	f	2132
+96790-1	102803	SOFA total score SOFA	Score_MOF	71	f	2133
+96823-0	102803	Respiration Score SOFA	Score_MOF	71	f	2134
+96824-8	102803	Coag Score SOFA	Score_MOF	71	f	2135
+96825-5	102803	Liver Score SOFA	Score_MOF	71	f	2136
+96826-3	102803	Cardio Score SOFA	Score_MOF	71	f	2137
+96827-1	102803	CNS Score SOFA	Score_MOF	71	f	2138
+96828-9	102803	Renal Score SOFA	Score_MOF	71	f	2139
+44760-7	102804	MELD score	Score_mRS	74	f	2140
+73561-3	102804	IGF-I Z-score SerPl	Score_mRS	71	f	2141
+88859-4	102804	Disease stage score for risk calculation	Score_mRS	71	f	2142
+9271-8	102804	10M Apgar Score	Score_mRS	71	f	2143
+9274-2	102804	5M Apgar Score	Score_mRS	71	f	2144
+96790-1	102804	SOFA total score SOFA	Score_mRS	71	f	2145
+96823-0	102804	Respiration Score SOFA	Score_mRS	71	f	2146
+96824-8	102804	Coag Score SOFA	Score_mRS	71	f	2147
+96825-5	102804	Liver Score SOFA	Score_mRS	71	f	2148
+96826-3	102804	Cardio Score SOFA	Score_mRS	71	f	2149
+96827-1	102804	CNS Score SOFA	Score_mRS	71	f	2150
+96828-9	102804	Renal Score SOFA	Score_mRS	71	f	2151
+44760-7	102805	MELD score	Score_MukositisSkala	67	f	2152
+44760-7	108680	MELD score	Score_NACA	67	f	2153
+73561-3	108680	IGF-I Z-score SerPl	Score_NACA	67	f	2154
+88859-4	108680	Disease stage score for risk calculation	Score_NACA	67	f	2155
+9271-8	108680	10M Apgar Score	Score_NACA	67	f	2156
+9274-2	108680	5M Apgar Score	Score_NACA	67	f	2157
+96790-1	108680	SOFA total score SOFA	Score_NACA	67	f	2158
+96823-0	108680	Respiration Score SOFA	Score_NACA	67	f	2159
+96824-8	108680	Coag Score SOFA	Score_NACA	67	f	2160
+96825-5	108680	Liver Score SOFA	Score_NACA	67	f	2161
+96826-3	108680	Cardio Score SOFA	Score_NACA	67	f	2162
+96827-1	108680	CNS Score SOFA	Score_NACA	67	f	2163
+96828-9	108680	Renal Score SOFA	Score_NACA	69	f	2164
+44760-7	102806	MELD score	Score_NIHSS	67	f	2165
+73561-3	102806	IGF-I Z-score SerPl	Score_NIHSS	62	f	2166
+88859-4	102806	Disease stage score for risk calculation	Score_NIHSS	62	f	2167
+9271-8	102806	10M Apgar Score	Score_NIHSS	62	f	2168
+9274-2	102806	5M Apgar Score	Score_NIHSS	62	f	2169
+96790-1	102806	SOFA total score SOFA	Score_NIHSS	62	f	2170
+96823-0	102806	Respiration Score SOFA	Score_NIHSS	62	f	2171
+96824-8	102806	Coag Score SOFA	Score_NIHSS	62	f	2172
+96825-5	102806	Liver Score SOFA	Score_NIHSS	62	f	2173
+96826-3	102806	Cardio Score SOFA	Score_NIHSS	62	f	2174
+96827-1	102806	CNS Score SOFA	Score_NIHSS	72	f	2175
+96828-9	102806	Renal Score SOFA	Score_NIHSS	62	f	2176
+44760-7	102807	MELD score	Score_NIPS	67	f	2177
+73561-3	102807	IGF-I Z-score SerPl	Score_NIPS	67	f	2178
+88859-4	102807	Disease stage score for risk calculation	Score_NIPS	67	f	2179
+9271-8	102807	10M Apgar Score	Score_NIPS	67	f	2180
+9274-2	102807	5M Apgar Score	Score_NIPS	67	f	2181
+96790-1	102807	SOFA total score SOFA	Score_NIPS	67	f	2182
+96823-0	102807	Respiration Score SOFA	Score_NIPS	67	f	2183
+96824-8	102807	Coag Score SOFA	Score_NIPS	67	f	2184
+96825-5	102807	Liver Score SOFA	Score_NIPS	67	f	2185
+96826-3	102807	Cardio Score SOFA	Score_NIPS	67	f	2186
+96827-1	102807	CNS Score SOFA	Score_NIPS	67	f	2187
+96828-9	102807	Renal Score SOFA	Score_NIPS	67	f	2188
+44760-7	102808	MELD score	Score_NORTON	67	f	2189
+48766-0	102808	Source of info	Score_NORTON	62	f	2190
+96790-1	102808	SOFA total score SOFA	Score_NORTON	64	f	2191
+96827-1	102808	CNS Score SOFA	Score_NORTON	62	f	2192
+44760-7	108402	MELD score	Score_NPASS_Schmerz	67	f	2193
+96827-1	108402	CNS Score SOFA	Score_NPASS_Schmerz	61	f	2194
+44760-7	108410	MELD score	Score_NPASS_Sedierung	67	f	2195
+44760-7	105222	MELD score	Score_NRS_Verlauf	71	f	2196
+73561-3	105222	IGF-I Z-score SerPl	Score_NRS_Verlauf	71	f	2197
+88859-4	105222	Disease stage score for risk calculation	Score_NRS_Verlauf	71	f	2198
+9271-8	105222	10M Apgar Score	Score_NRS_Verlauf	71	f	2199
+9274-2	105222	5M Apgar Score	Score_NRS_Verlauf	71	f	2200
+96790-1	105222	SOFA total score SOFA	Score_NRS_Verlauf	71	f	2201
+96823-0	105222	Respiration Score SOFA	Score_NRS_Verlauf	71	f	2202
+96824-8	105222	Coag Score SOFA	Score_NRS_Verlauf	71	f	2203
+96825-5	105222	Liver Score SOFA	Score_NRS_Verlauf	71	f	2204
+96826-3	105222	Cardio Score SOFA	Score_NRS_Verlauf	71	f	2205
+96827-1	105222	CNS Score SOFA	Score_NRS_Verlauf	71	f	2206
+96828-9	105222	Renal Score SOFA	Score_NRS_Verlauf	71	f	2207
+44760-7	108233	MELD score	Score_Petrussa	67	f	2208
+96825-5	108233	Liver Score SOFA	Score_Petrussa	67	f	2209
+96827-1	108233	CNS Score SOFA	Score_Petrussa	64	f	2210
+96828-9	108233	Renal Score SOFA	Score_Petrussa	60	f	2211
+44760-7	108424	MELD score	Score_PRISMIII	67	f	2212
+44760-7	117225	MELD score	Score_Race	70	f	2213
+73561-3	117225	IGF-I Z-score SerPl	Score_Race	67	f	2214
+88859-4	117225	Disease stage score for risk calculation	Score_Race	67	f	2215
+9271-8	117225	10M Apgar Score	Score_Race	67	f	2216
+9274-2	117225	5M Apgar Score	Score_Race	67	f	2217
+9279-1	117225	Resp rate	Score_Race	63	f	2218
+96790-1	117225	SOFA total score SOFA	Score_Race	67	f	2219
+96823-0	117225	Respiration Score SOFA	Score_Race	67	f	2220
+96824-8	117225	Coag Score SOFA	Score_Race	67	f	2221
+96825-5	117225	Liver Score SOFA	Score_Race	67	f	2222
+96826-3	117225	Cardio Score SOFA	Score_Race	67	f	2223
+96827-1	117225	CNS Score SOFA	Score_Race	67	f	2224
+96828-9	117225	Renal Score SOFA	Score_Race	67	f	2225
+44760-7	107969	MELD score	Score_Ramsay	67	f	2226
+9274-2	107969	5M Apgar Score	Score_Ramsay	62	f	2227
+96824-8	107969	Coag Score SOFA	Score_Ramsay	67	f	2228
+96825-5	107969	Liver Score SOFA	Score_Ramsay	64	f	2229
+96826-3	107969	Cardio Score SOFA	Score_Ramsay	62	f	2230
+96827-1	107969	CNS Score SOFA	Score_Ramsay	62	f	2231
+96828-9	107969	Renal Score SOFA	Score_Ramsay	71	f	2232
+44760-7	117221	MELD score	Score_Rankin	100	f	2233
+73561-3	117221	IGF-I Z-score SerPl	Score_Rankin	100	f	2234
+88859-4	117221	Disease stage score for risk calculation	Score_Rankin	100	f	2235
+9271-8	117221	10M Apgar Score	Score_Rankin	100	f	2236
+9274-2	117221	5M Apgar Score	Score_Rankin	100	f	2237
+96790-1	117221	SOFA total score SOFA	Score_Rankin	100	f	2238
+96823-0	117221	Respiration Score SOFA	Score_Rankin	100	f	2239
+96824-8	117221	Coag Score SOFA	Score_Rankin	100	f	2240
+96825-5	117221	Liver Score SOFA	Score_Rankin	100	f	2241
+96826-3	117221	Cardio Score SOFA	Score_Rankin	100	f	2242
+96827-1	117221	CNS Score SOFA	Score_Rankin	100	f	2243
+96828-9	117221	Renal Score SOFA	Score_Rankin	100	f	2244
+44760-7	102784	MELD score	Score_RASS	67	f	2245
+73561-3	102784	IGF-I Z-score SerPl	Score_RASS	67	f	2246
+88859-4	102784	Disease stage score for risk calculation	Score_RASS	67	f	2247
+9271-8	102784	10M Apgar Score	Score_RASS	67	f	2248
+9274-2	102784	5M Apgar Score	Score_RASS	67	f	2249
+96790-1	102784	SOFA total score SOFA	Score_RASS	67	f	2250
+96823-0	102784	Respiration Score SOFA	Score_RASS	67	f	2251
+96824-8	102784	Coag Score SOFA	Score_RASS	67	f	2252
+96825-5	102784	Liver Score SOFA	Score_RASS	67	f	2253
+96826-3	102784	Cardio Score SOFA	Score_RASS	67	f	2254
+96827-1	102784	CNS Score SOFA	Score_RASS	67	f	2255
+96828-9	102784	Renal Score SOFA	Score_RASS	69	f	2256
+44760-7	102810	MELD score	Score_RSS	71	f	2257
+73561-3	102810	IGF-I Z-score SerPl	Score_RSS	71	f	2258
+88859-4	102810	Disease stage score for risk calculation	Score_RSS	71	f	2259
+9271-8	102810	10M Apgar Score	Score_RSS	71	f	2260
+9274-2	102810	5M Apgar Score	Score_RSS	71	f	2261
+96790-1	102810	SOFA total score SOFA	Score_RSS	71	f	2262
+96823-0	102810	Respiration Score SOFA	Score_RSS	71	f	2263
+96824-8	102810	Coag Score SOFA	Score_RSS	71	f	2264
+96825-5	102810	Liver Score SOFA	Score_RSS	71	f	2265
+96826-3	102810	Cardio Score SOFA	Score_RSS	71	f	2266
+96827-1	102810	CNS Score SOFA	Score_RSS	71	f	2267
+96828-9	102810	Renal Score SOFA	Score_RSS	71	f	2268
+15043-3	102811	Cortis Ur-sCnc	Score_RTS	61	f	2269
+34571-0	102811	Screen aPTT	Score_RTS	60	f	2270
+39781-0	102811	Urea Prt-sCnc	Score_RTS	64	f	2271
+44760-7	102811	MELD score	Score_RTS	71	f	2272
+6303-2	102811	Screen dRVVT	Score_RTS	67	f	2273
+73561-3	102811	IGF-I Z-score SerPl	Score_RTS	71	f	2274
+88859-4	102811	Disease stage score for risk calculation	Score_RTS	71	f	2275
+9271-8	102811	10M Apgar Score	Score_RTS	71	f	2276
+9274-2	102811	5M Apgar Score	Score_RTS	71	f	2277
+96790-1	102811	SOFA total score SOFA	Score_RTS	71	f	2278
+96823-0	102811	Respiration Score SOFA	Score_RTS	71	f	2279
+96824-8	102811	Coag Score SOFA	Score_RTS	71	f	2280
+96825-5	102811	Liver Score SOFA	Score_RTS	71	f	2281
+96826-3	102811	Cardio Score SOFA	Score_RTS	71	f	2282
+96827-1	102811	CNS Score SOFA	Score_RTS	71	f	2283
+96828-9	102811	Renal Score SOFA	Score_RTS	71	f	2284
+34571-0	101973	Screen aPTT	Score_SAPS2	64	f	2285
+44760-7	101973	MELD score	Score_SAPS2	67	f	2286
+73561-3	101973	IGF-I Z-score SerPl	Score_SAPS2	62	f	2287
+88859-4	101973	Disease stage score for risk calculation	Score_SAPS2	62	f	2288
+9271-8	101973	10M Apgar Score	Score_SAPS2	62	f	2289
+9274-2	101973	5M Apgar Score	Score_SAPS2	64	f	2290
+96790-1	101973	SOFA total score SOFA	Score_SAPS2	62	f	2291
+96823-0	101973	Respiration Score SOFA	Score_SAPS2	62	f	2292
+96824-8	101973	Coag Score SOFA	Score_SAPS2	62	f	2293
+96825-5	101973	Liver Score SOFA	Score_SAPS2	62	f	2294
+96826-3	101973	Cardio Score SOFA	Score_SAPS2	62	f	2295
+96827-1	101973	CNS Score SOFA	Score_SAPS2	64	f	2296
+96828-9	101973	Renal Score SOFA	Score_SAPS2	62	f	2297
+34571-0	102812	Screen aPTT	Score_SAS	60	f	2298
+44760-7	102812	MELD score	Score_SAS	71	f	2299
+73561-3	102812	IGF-I Z-score SerPl	Score_SAS	71	f	2300
+88859-4	102812	Disease stage score for risk calculation	Score_SAS	71	f	2301
+9271-8	102812	10M Apgar Score	Score_SAS	71	f	2302
+9274-2	102812	5M Apgar Score	Score_SAS	71	f	2303
+96790-1	102812	SOFA total score SOFA	Score_SAS	71	f	2304
+96823-0	102812	Respiration Score SOFA	Score_SAS	71	f	2305
+96824-8	102812	Coag Score SOFA	Score_SAS	71	f	2306
+96825-5	102812	Liver Score SOFA	Score_SAS	71	f	2307
+96826-3	102812	Cardio Score SOFA	Score_SAS	71	f	2308
+96827-1	102812	CNS Score SOFA	Score_SAS	71	f	2309
+96828-9	102812	Renal Score SOFA	Score_SAS	71	f	2310
+10335-8	101992	Color CSF	Score_SOFA	63	f	2311
+44760-7	101992	MELD score	Score_SOFA	67	f	2312
+73561-3	101992	IGF-I Z-score SerPl	Score_SOFA	67	f	2313
+88859-4	101992	Disease stage score for risk calculation	Score_SOFA	67	f	2314
+9271-8	101992	10M Apgar Score	Score_SOFA	67	f	2315
+9274-2	101992	5M Apgar Score	Score_SOFA	67	f	2316
+96790-1	101992	SOFA total score SOFA	Score_SOFA	100	f	2317
+96823-0	101992	Respiration Score SOFA	Score_SOFA	100	f	2318
+96824-8	101992	Coag Score SOFA	Score_SOFA	100	f	2319
+96825-5	101992	Liver Score SOFA	Score_SOFA	100	f	2320
+96826-3	101992	Cardio Score SOFA	Score_SOFA	100	f	2321
+96827-1	101992	CNS Score SOFA	Score_SOFA	100	f	2322
+96828-9	101992	Renal Score SOFA	Score_SOFA	100	f	2323
+44760-7	108441	MELD score	Score_SOS	71	f	2324
+73561-3	108441	IGF-I Z-score SerPl	Score_SOS	71	f	2325
+88859-4	108441	Disease stage score for risk calculation	Score_SOS	71	f	2326
+9271-8	108441	10M Apgar Score	Score_SOS	71	f	2327
+9274-2	108441	5M Apgar Score	Score_SOS	71	f	2328
+96790-1	108441	SOFA total score SOFA	Score_SOS	71	f	2329
+96823-0	108441	Respiration Score SOFA	Score_SOS	71	f	2330
+96824-8	108441	Coag Score SOFA	Score_SOS	71	f	2331
+96825-5	108441	Liver Score SOFA	Score_SOS	71	f	2332
+96826-3	108441	Cardio Score SOFA	Score_SOS	71	f	2333
+96827-1	108441	CNS Score SOFA	Score_SOS	71	f	2334
+96828-9	108441	Renal Score SOFA	Score_SOS	71	f	2335
+44760-7	108458	MELD score	Score_SOS_PD	71	f	2336
+73561-3	108458	IGF-I Z-score SerPl	Score_SOS_PD	71	f	2337
+88859-4	108458	Disease stage score for risk calculation	Score_SOS_PD	71	f	2338
+9271-8	108458	10M Apgar Score	Score_SOS_PD	71	f	2339
+9274-2	108458	5M Apgar Score	Score_SOS_PD	71	f	2340
+96790-1	108458	SOFA total score SOFA	Score_SOS_PD	71	f	2341
+96823-0	108458	Respiration Score SOFA	Score_SOS_PD	71	f	2342
+96824-8	108458	Coag Score SOFA	Score_SOS_PD	71	f	2343
+96825-5	108458	Liver Score SOFA	Score_SOS_PD	71	f	2344
+96826-3	108458	Cardio Score SOFA	Score_SOS_PD	71	f	2345
+96827-1	108458	CNS Score SOFA	Score_SOS_PD	71	f	2346
+96828-9	108458	Renal Score SOFA	Score_SOS_PD	71	f	2347
+44760-7	108483	MELD score	Score_Thompson	67	f	2348
+96824-8	108483	Coag Score SOFA	Score_Thompson	62	f	2349
+44760-7	102771	MELD score	Score_TISS10	67	f	2350
+96827-1	102771	CNS Score SOFA	Score_TISS10	62	f	2351
+44760-7	101947	MELD score	Score_TISS28	67	f	2352
+96827-1	101947	CNS Score SOFA	Score_TISS28	62	f	2353
+44760-7	106651	MELD score	Score_UStix	67	f	2354
+73561-3	106651	IGF-I Z-score SerPl	Score_UStix	62	f	2355
+88859-4	106651	Disease stage score for risk calculation	Score_UStix	62	f	2356
+9271-8	106651	10M Apgar Score	Score_UStix	62	f	2357
+9274-2	106651	5M Apgar Score	Score_UStix	62	f	2358
+9397-1	106651	Color Stl	Score_UStix	60	f	2359
+96790-1	106651	SOFA total score SOFA	Score_UStix	62	f	2360
+96823-0	106651	Respiration Score SOFA	Score_UStix	62	f	2361
+96824-8	106651	Coag Score SOFA	Score_UStix	62	f	2362
+96825-5	106651	Liver Score SOFA	Score_UStix	62	f	2363
+96826-3	106651	Cardio Score SOFA	Score_UStix	62	f	2364
+96827-1	106651	CNS Score SOFA	Score_UStix	62	f	2365
+96828-9	106651	Renal Score SOFA	Score_UStix	62	f	2366
+10335-8	102815	Color CSF	Score_VICS	63	f	2367
+14196-0	102815	Retics #	Score_VICS	62	f	2368
+41461-5	102815	Virus Spec	Score_VICS	60	f	2369
+44760-7	102815	MELD score	Score_VICS	67	f	2370
+73561-3	102815	IGF-I Z-score SerPl	Score_VICS	67	f	2371
+88859-4	102815	Disease stage score for risk calculation	Score_VICS	67	f	2372
+9271-8	102815	10M Apgar Score	Score_VICS	67	f	2373
+9274-2	102815	5M Apgar Score	Score_VICS	67	f	2374
+96790-1	102815	SOFA total score SOFA	Score_VICS	67	f	2375
+96823-0	102815	Respiration Score SOFA	Score_VICS	67	f	2376
+96824-8	102815	Coag Score SOFA	Score_VICS	67	f	2377
+96825-5	102815	Liver Score SOFA	Score_VICS	67	f	2378
+96826-3	102815	Cardio Score SOFA	Score_VICS	67	f	2379
+96827-1	102815	CNS Score SOFA	Score_VICS	67	f	2380
+96828-9	102815	Renal Score SOFA	Score_VICS	67	f	2381
+44760-7	102816	MELD score	Score_Waterlow	67	f	2382
+96790-1	102816	SOFA total score SOFA	Score_Waterlow	60	f	2383
+96825-5	102816	Liver Score SOFA	Score_Waterlow	60	f	2384
+96828-9	102816	Renal Score SOFA	Score_Waterlow	60	f	2385
+23210-8	100077	Listeria Ab Ser Ql	SM_AV_Intervall	61	f	2386
+31533-3	100077	Neuronal Ab Ser Ql	SM_AV_Intervall	61	f	2387
+31871-7	100077	L inter Ag Spec Ql	SM_AV_Intervall	67	f	2388
+56953-3	100077	L inter IgM Ser Ql IA	SM_AV_Intervall	61	f	2389
+6605-0	100077	L inter Ag Tiss Ql IF	SM_AV_Intervall	61	f	2390
+9279-1	100082	Resp rate	SM-Draehte	63	f	2391
+53558-3	100081	Bacteria Smn Cult	SM_Output_Atrium	61	f	2392
+3148-4	1272	pO2 Gas	SO2	60	f	2393
+2022-2	102010	pCO2 CSF	SpO2	67	f	2394
+3148-4	102010	pO2 Gas	SpO2	73	f	2395
+11556-8	108509	pO2 Bld	SpO2_2	62	f	2396
+3148-4	108509	pO2 Gas	SpO2_2	62	f	2397
+2022-2	104116	pCO2 CSF	SpO2_Messung_Ort	67	f	2398
+3148-4	104116	pO2 Gas	SpO2_Messung_Ort	73	f	2399
+14003-8	103809	pCO2 BldCo	tcpCO2	62	f	2400
+2020-6	103809	pCO2 BldC	tcpCO2	67	f	2401
+2022-2	103809	pCO2 CSF	tcpCO2	71	f	2402
+32306-3	103809	pCO2 Ur	tcpCO2	62	f	2403
+2022-2	108508	pCO2 CSF	tcpO2	62	f	2404
+2704-5	108508	pO2 BldC	tcpO2	62	f	2405
+26801-1	104107	Prot 12h Ur-mRate	Temperatur_Messung_Ort1a	60	f	2406
+8310-5	104107	Body temperature	Temperatur_Messung_Ort1a	76	f	2407
+26801-1	104110	Prot 12h Ur-mRate	Temperatur_Messung_Ort1b	60	f	2408
+8310-5	104110	Body temperature	Temperatur_Messung_Ort1b	83	f	2409
+12585-6	104108	Creat 2h Ur-mRate	Temperatur_Messung_Ort2a	60	f	2410
+14584-7	104108	cAMP 24h Ur-sRate	Temperatur_Messung_Ort2a	60	f	2411
+14712-4	104108	Epineph 24h Ur-sRate	Temperatur_Messung_Ort2a	61	f	2412
+2232-7	104108	Epineph 24h Ur-mRate	Temperatur_Messung_Ort2a	61	f	2413
+2436-4	104108	HVA 24h Ur-mRate	Temperatur_Messung_Ort2a	62	f	2414
+25495-3	104108	Phe 24h Ur-sRate	Temperatur_Messung_Ort2a	62	f	2415
+26611-4	104108	PETN 24h Ur-sRate	Temperatur_Messung_Ort2a	60	f	2416
+26801-1	104108	Prot 12h Ur-mRate	Temperatur_Messung_Ort2a	60	f	2417
+2889-4	104108	Prot 24h Ur-mRate	Temperatur_Messung_Ort2a	60	f	2418
+5677-0	104108	Lead 24h Ur-mRate	Temperatur_Messung_Ort2a	60	f	2419
+6776-9	104108	Estrone 24h Ur-mRate	Temperatur_Messung_Ort2a	61	f	2420
+8310-5	104108	Body temperature	Temperatur_Messung_Ort2a	76	f	2421
+12585-6	104109	Creat 2h Ur-mRate	Temperatur_Messung_Ort2b	60	f	2422
+14584-7	104109	cAMP 24h Ur-sRate	Temperatur_Messung_Ort2b	60	f	2423
+14712-4	104109	Epineph 24h Ur-sRate	Temperatur_Messung_Ort2b	61	f	2424
+2232-7	104109	Epineph 24h Ur-mRate	Temperatur_Messung_Ort2b	61	f	2425
+25495-3	104109	Phe 24h Ur-sRate	Temperatur_Messung_Ort2b	62	f	2426
+26611-4	104109	PETN 24h Ur-sRate	Temperatur_Messung_Ort2b	60	f	2427
+26801-1	104109	Prot 12h Ur-mRate	Temperatur_Messung_Ort2b	60	f	2428
+2889-4	104109	Prot 24h Ur-mRate	Temperatur_Messung_Ort2b	60	f	2429
+35654-3	104109	Creat/BW 24h Ur-RelMRat	Temperatur_Messung_Ort2b	61	f	2430
+5677-0	104109	Lead 24h Ur-mRate	Temperatur_Messung_Ort2b	60	f	2431
+6776-9	104109	Estrone 24h Ur-mRate	Temperatur_Messung_Ort2b	61	f	2432
+8310-5	104109	Body temperature	Temperatur_Messung_Ort2b	83	f	2433
+8310-5	104111	Body temperature	Temperatur_Messung_Ort3a	76	f	2434
+8310-5	104112	Body temperature	Temperatur_Messung_Ort3b	83	f	2435
+8310-5	107863	Body temperature	Therapiebetten_Doku_Atom_ES_Lufttemperatur	65	f	2436
+77599-9	107864	Additional documentation	Therapiebetten_Doku_Atom_ES_O2_Konzentration	60	f	2437
+19254-2	103888	pO2 temp adj Bld	Therapiebetten_Doku_BariAir_Temp	62	f	2438
+19255-9	103888	pO2 temp adj BldA	Therapiebetten_Doku_BariAir_Temp	62	f	2439
+19256-7	103888	pO2 temp adj BldC	Therapiebetten_Doku_BariAir_Temp	62	f	2440
+19258-3	103888	pO2 temp adj BldV	Therapiebetten_Doku_BariAir_Temp	62	f	2441
+32771-8	103888	pCO2 temp adj BldA	Therapiebetten_Doku_BariAir_Temp	62	f	2442
+33254-4	103888	pH temp adj BldA	Therapiebetten_Doku_BariAir_Temp	62	f	2443
+34705-4	103888	pCO2 temp adj Bld	Therapiebetten_Doku_BariAir_Temp	62	f	2444
+39485-8	103888	pH temp adj BldC	Therapiebetten_Doku_BariAir_Temp	62	f	2445
+39486-6	103888	pH temp adj BldV	Therapiebetten_Doku_BariAir_Temp	62	f	2446
+40619-9	103888	pCO2 temp adj BldV	Therapiebetten_Doku_BariAir_Temp	62	f	2447
+40620-7	103888	pCO2 temp adj BldC	Therapiebetten_Doku_BariAir_Temp	62	f	2448
+47720-8	103888	pH temp adj BldCo	Therapiebetten_Doku_BariAir_Temp	62	f	2449
+8330-3	103888	Bdy temp IV	Therapiebetten_Doku_BariAir_Temp	62	f	2450
+8334-5	103888	Bdy temp Bladder	Therapiebetten_Doku_BariAir_Temp	62	f	2451
+8310-5	107854	Body temperature	Therapiebetten_Doku_Giraffe_ES_Lufttemperatur	69	f	2452
+14864-3	107855	pO2 BldCo	Therapiebetten_Doku_Giraffe_ES_O2	62	f	2453
+8310-5	107857	Body temperature	Therapiebetten_Doku_Giraffe_MS_Lufttemperatur	63	f	2454
+4307-5	103842	Meperidine Dose	Therapiebetten_Doku_Triadyne_mittePause	62	f	2455
+4456-0	103839	Trimipramine Dose	Therapiebetten_Doku_Triadyne_rePause	60	f	2456
+4307-5	103860	Meperidine Dose	Therapiebetten_Doku_Triadyne_Temp	61	f	2457
+8310-5	107866	Body temperature	Therapiebetten_VO_Atom_ES_Lufttemperatur	69	f	2458
+3150-0	107867	Inhaled O2 concentration	Therapiebetten_VO_Atom_ES_O2_Konzentration	62	f	2459
+2366-3	107860	Glutamate 24h Ur-mRate	Therapiebetten_VO_Giraffe_ES_Lufttemperatur	61	f	2460
+8310-5	107860	Body temperature	Therapiebetten_VO_Giraffe_ES_Lufttemperatur	67	f	2461
+3150-0	107861	Inhaled O2 concentration	Therapiebetten_VO_Giraffe_ES_O2_Konzentration	70	f	2462
+30067-3	103925	Proline/Creat Ur-Rto	Therapiebetten_VO_Rotorest_reRotWinkel	60	f	2463
+56654-7	103925	Nickel/Creat Ur-Rto	Therapiebetten_VO_Rotorest_reRotWinkel	62	f	2464
+14722-3	102140	ENA Ab Ser Ql	Untersuchung_Abdomen_Leber	62	f	2465
+16740-3	102140	DENV Ab Ser Ql	Untersuchung_Abdomen_Leber	67	f	2466
+17322-9	102140	N men Ab Ser Ql	Untersuchung_Abdomen_Leber	64	f	2467
+46197-0	102140	MeV Ab Ser Ql	Untersuchung_Abdomen_Leber	62	f	2468
+10923-1	102139	Bromelin IgE Qn	Untersuchung_Abdomen_Nieren	62	f	2469
+17322-9	102139	N men Ab Ser Ql	Untersuchung_Abdomen_Nieren	62	f	2470
+6053-3	102139	Brome IgE Qn	Untersuchung_Abdomen_Nieren	62	f	2471
+9481-3	102142	pH Wat	Untersuchung_ExtremitaetenLeiste_Haut	60	f	2472
+8310-5	102158	Body temperature	Untersuchung_Status_Koerpertemperatur	67	f	2473
+23830-3	100203	B pert.PT IgA Ser-aCnc	Verlauf_PT	100	f	2474
+23831-1	100203	B pert.PT IgG Ser-aCnc	Verlauf_PT	100	f	2475
+24127-3	100203	B pert.PT IgG Ser IA-aCnc	Verlauf_PT	100	f	2476
+24128-1	100203	B pert.PT IgA Ser IA-aCnc	Verlauf_PT	100	f	2477
+42638-7	100203	PT PPP 1:1 saline	Verlauf_PT	100	f	2478
+46417-2	100203	PT BldC	Verlauf_PT	100	f	2479
+52752-3	100203	PT PIVKA insensitive Act/Nor BldC	Verlauf_PT	100	f	2480
+52753-1	100203	PT PIVKA insensitive Act/Nor PPP	Verlauf_PT	100	f	2481
+52760-6	100203	PT PIVKA sensitive Act/Nor BldC	Verlauf_PT	100	f	2482
+52761-4	100203	PT PIVKA sensitive Act/Nor PPP	Verlauf_PT	100	f	2483
+5901-4	100203	PT Cont PPP	Verlauf_PT	100	f	2484
+5964-2	100203	PT Bld	Verlauf_PT	100	f	2485
+80600-0	100203	B pert.PT Prmt Nph Ql NAA+probe	Verlauf_PT	100	f	2486
+82179-3	100203	B pert.PT Prmt Nph Ql NAA+non-probe	Verlauf_PT	100	f	2487
+94478-5	100203	B pert.PT Prmt Low resp Ql NAA+non-probe	Verlauf_PT	100	f	2488
+96962-6	100203	B pert.PT Prmt Lower resp Ql NAA+probe	Verlauf_PT	100	f	2489
+19218-7	102198	O2 Ct BldA-sCnc	VigilanceC_O2	100	f	2490
+19219-5	102198	O2 Ct BldC-sCnc	VigilanceC_O2	100	f	2491
+19220-3	102198	O2 Ct BldV-sCnc	VigilanceC_O2	100	f	2492
+19994-3	102198	O2/Total gas setting VFr Vent	VigilanceC_O2	100	f	2493
+3150-0	102198	Inhaled O2 concentration	VigilanceC_O2	100	f	2494
+3151-8	102198	Inhaled O2 flow rate	VigilanceC_O2	100	f	2495
+34163-6	102198	O2 Ct Bld-sCnc	VigilanceC_O2	100	f	2496
+57800-5	102198	O2 Ct VFr Bld Calc	VigilanceC_O2	100	f	2497
+48159-8	102489	HCV Ab s/co SerPl IA	Vigileo_CO	100	f	2498
+51656-7	102489	HCV Ab s/co Fld	Vigileo_CO	100	f	2499
+2022-2	102183	pCO2 CSF	Vigileo_ScvO2	62	f	2500
+19817-6	100008	Complications	Vormedikation	62	f	2501
+57833-6	100008	Rx for medication	Vormedikation	73	f	2502
+8310-5	106517	Body temperature	Waermesysteme_BairHugger_Doku_Temperatur	62	f	2503
+8310-5	108632	Body temperature	Waermesysteme_BairHugger_VO_Temperatur	65	f	2504
+77599-9	100189	Additional documentation	Wunddokumentation	63	f	2505
+11502-2	100	Laboratory report	Laborwert	62	t	556
+\.
+
+
+--
 -- Name: copra_description_only_words_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
@@ -22082,6 +27146,13 @@ SELECT pg_catalog.setval('loinc_copra.loinc_long_common_name_copra_description_i
 --
 
 SELECT pg_catalog.setval('loinc_copra.loinc_long_common_name_copra_name_analyse_id_seq', 5028, true);
+
+
+--
+-- Name: loinc_shortname_copra_name_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
+--
+
+SELECT pg_catalog.setval('loinc_copra.loinc_shortname_copra_name_id_seq', 2505, true);
 
 
 --

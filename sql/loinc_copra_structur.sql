@@ -44,3 +44,25 @@ alter table loinc_copra.loinc_long_common_name_copra_description
 add column id serial not null;
 
 truncate loinc_copra.from_script;
+
+copy loinc_copra.from_script 
+from '/home/ahodelin/git_repos/copra_loinc/csv/results/loinc_shortname-copra_name.csv'
+csv delimiter E';' quote '"';
+
+select 
+  distinct lgt.loinc_num, 
+  copra_id, 
+  shortname loinc_shortname, 
+  ccv.name copra_name, 
+  accuracy, 
+  false is_match
+into loinc_copra.loinc_shortname_copra_name
+from loinc_copra.from_script fsc
+join copra.co6_config_variables ccv 
+  on ccv.id = fsc.copra_id 
+join loinc.loinc lgt 
+  on lgt.loinc_num = fsc.loinc_num 
+order by copra_name;
+
+alter table loinc_copra.loinc_shortname_copra_name
+add column id serial not null;
