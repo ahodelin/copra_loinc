@@ -25750,12 +25750,9 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 14415-4	107956	Calcium Amn-sCnc	P_ADVOS_VO_CalciumLoesung	61	f	1130
 1996-8	107956	Calcium Bld-sCnc	P_ADVOS_VO_CalciumLoesung	61	f	1131
 14903-9	107960	Folate Bld-Imp	P_ADVOS_VO_Filter	62	f	1132
-5969-1	102050	PAP PPP IA-mCnc	PAP	100	f	1133
 8302-2	103595	Body height	Patient_Besonderheit	61	f	1134
 5883-4	101449	Virus Bld Cult	Patient_Blutverlusst	62	f	1135
-39156-5	101473	BMI	Patient_BMI	100	f	1136
 59574-4	101473	BMI Prctl	Patient_BMI	100	f	1137
-29463-7	6	Weight	Patient_Gewicht	62	f	1138
 11556-8	117154	pO2 Bld	Patient_SpO2_l	77	f	1139
 11557-6	117154	pCO2 Bld	Patient_SpO2_l	71	f	1140
 14003-8	117154	pCO2 BldCo	Patient_SpO2_l	62	f	1141
@@ -25766,6 +25763,8 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 2019-8	117154	pCO2 BldA	Patient_SpO2_l	67	f	1146
 2020-6	117154	pCO2 BldC	Patient_SpO2_l	67	f	1147
 2021-4	117154	pCO2 BldV	Patient_SpO2_l	67	f	1148
+5969-1	102050	PAP PPP IA-mCnc	PAP	100	t	1133
+29463-7	6	Weight	Patient_Gewicht	62	t	1138
 20564-1	117154	SaO2 % Bld	Patient_SpO2_l	71	f	1149
 2703-7	117154	pO2 BldA	Patient_SpO2_l	71	f	1150
 2704-5	117154	pO2 BldC	Patient_SpO2_l	71	f	1151
@@ -26083,26 +26082,18 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 30089-7	110925	Trans Cells #/area UrnS HPF	P_Temperatur_Arteriell	60	f	1463
 46136-8	110925	Trans Cells #/area UrnS LPF	P_Temperatur_Arteriell	60	f	1464
 8310-5	108742	Body temperature	P_Temperatur_DeltaT	69	f	1465
-8310-5	110934	Body temperature	P_Temperatur_generic	61	f	1466
 50560-2	110926	pH Ur Strip.auto	P_Temperatur_Haut	61	f	1467
 51479-4	110926	Sperm # Ur Auto	P_Temperatur_Haut	60	f	1468
 51480-2	110926	Bacteria # Ur Auto	P_Temperatur_Haut	61	f	1469
-8310-5	110926	Body temperature	P_Temperatur_Haut	67	f	1470
-8310-5	110933	Body temperature	P_Temperatur_Kern	67	f	1471
-8310-5	110931	Body temperature	P_Temperatur_Messung_OrtAllg	67	f	1472
-8310-5	110936	Body temperature	P_Temperatur_Messung_OrtKern	67	f	1473
-8310-5	110927	Body temperature	P_Temperatur_Naso	73	f	1474
-8310-5	110928	Body temperature	P_Temperatur_Oesophagial	60	f	1475
 12585-6	110930	Creat 2h Ur-mRate	P_Temperatur_Rektal	61	f	1476
 12586-4	110930	Creat 4h Ur-mRate	P_Temperatur_Rektal	61	f	1477
 12587-2	110930	Creat 6h Ur-mRate	P_Temperatur_Rektal	61	f	1478
+8310-5	110926	Body temperature	P_Temperatur_Haut	67	t	1470
 12588-0	110930	Creat 8h Ur-mRate	P_Temperatur_Rektal	61	f	1479
 2150-1	110930	Creatine 24h Ur-mRate	P_Temperatur_Rektal	60	f	1480
 24462-4	110930	Hepta-CP 24h Ur-mRate	P_Temperatur_Rektal	60	f	1481
 38163-2	110930	Hepta-CP/Creat Ur	P_Temperatur_Rektal	61	f	1482
-8310-5	110930	Body temperature	P_Temperatur_Rektal	63	f	1483
 93733-4	110930	Creat 5h Ur-mRate	P_Temperatur_Rektal	61	f	1484
-8310-5	110924	Body temperature	P_Temperatur_Venoes	69	f	1485
 47720-8	110754	pH temp adj BldCo	P_Therapiebetten_Doku_DraegerBabytherm_ES_Temp	64	f	1486
 8330-3	110754	Bdy temp IV	P_Therapiebetten_Doku_DraegerBabytherm_ES_Temp	64	f	1487
 55594-6	108625	Duck Feather IgE Ql	P_Therapiebetten_Doku_Lifetherm_ES_Neigung	60	f	1488
@@ -26121,19 +26112,6 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 2750-8	108636	pH Plr	P_Waermesysteme_InfantWarmer_VO_Power	62	f	1501
 8478-0	117177	BP mean	P_Weaning	62	f	1502
 6301-6	102027	INR PPP	RPP	60	f	1503
-19224-5	1273	SaO2 % BldMV	SaO2	100	f	1504
-20564-1	1273	SaO2 % Bld	SaO2	100	f	1505
-2708-6	1273	SaO2 % BldA	SaO2	100	f	1506
-2709-4	1273	SaO2 % BldC	SaO2	100	f	1507
-2711-0	1273	SaO2 % BldV	SaO2	100	f	1508
-2713-6	1273	SaO2 % Bld from pO2	SaO2	100	f	1509
-28642-7	1273	SaO2 % BldCoA	SaO2	100	f	1510
-28643-5	1273	SaO2 % BldCoV	SaO2	100	f	1511
-51731-8	1273	SaO2 % BldV from pO2	SaO2	100	f	1512
-51732-6	1273	SaO2 % BldC from pO2	SaO2	100	f	1513
-51733-4	1273	SaO2 % BldA from pO2	SaO2	100	f	1514
-59408-5	1273	SaO2 % BldA PulseOx	SaO2	100	f	1515
-74105-8	1273	SaO2 % BldMV from pO2	SaO2	100	f	1516
 96823-0	105103	Respiration Score SOFA	Sauerstoff_RespirationBarValue	65	f	1517
 74468-0	103399	Quest frm def Doc	Schrittmacher_Defi_ES_Frequenz	60	f	1518
 9279-1	105014	Resp rate	Schrittmacher_Osypka101H_ES_Rate	62	f	1519
@@ -26177,6 +26155,8 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 34571-0	102788	Screen aPTT	Score_Apgar	64	f	1557
 39456-9	102788	APAP Ur-sCnc	Score_Apgar	61	f	1558
 44760-7	102788	MELD score	Score_Apgar	67	f	1559
+8310-5	110924	Body temperature	P_Temperatur_Venoes	69	t	1485
+19224-5	1273	SaO2 % BldMV	SaO2	100	t	1504
 73561-3	102788	IGF-I Z-score SerPl	Score_Apgar	62	f	1560
 88859-4	102788	Disease stage score for risk calculation	Score_Apgar	62	f	1561
 9271-8	102788	10M Apgar Score	Score_Apgar	100	f	1562
@@ -27124,6 +27104,26 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 8310-5	108632	Body temperature	Waermesysteme_BairHugger_VO_Temperatur	65	f	2504
 77599-9	100189	Additional documentation	Wunddokumentation	63	f	2505
 11502-2	100	Laboratory report	Laborwert	62	t	556
+39156-5	101473	BMI	Patient_BMI	100	t	1136
+8310-5	110934	Body temperature	P_Temperatur_generic	61	t	1466
+8310-5	110933	Body temperature	P_Temperatur_Kern	67	t	1471
+8310-5	110931	Body temperature	P_Temperatur_Messung_OrtAllg	67	t	1472
+8310-5	110936	Body temperature	P_Temperatur_Messung_OrtKern	67	t	1473
+8310-5	110927	Body temperature	P_Temperatur_Naso	73	t	1474
+8310-5	110928	Body temperature	P_Temperatur_Oesophagial	60	t	1475
+8310-5	110930	Body temperature	P_Temperatur_Rektal	63	t	1483
+20564-1	1273	SaO2 % Bld	SaO2	100	t	1505
+2708-6	1273	SaO2 % BldA	SaO2	100	t	1506
+2709-4	1273	SaO2 % BldC	SaO2	100	t	1507
+2711-0	1273	SaO2 % BldV	SaO2	100	t	1508
+2713-6	1273	SaO2 % Bld from pO2	SaO2	100	t	1509
+28642-7	1273	SaO2 % BldCoA	SaO2	100	t	1510
+28643-5	1273	SaO2 % BldCoV	SaO2	100	t	1511
+51731-8	1273	SaO2 % BldV from pO2	SaO2	100	t	1512
+51732-6	1273	SaO2 % BldC from pO2	SaO2	100	t	1513
+51733-4	1273	SaO2 % BldA from pO2	SaO2	100	t	1514
+59408-5	1273	SaO2 % BldA PulseOx	SaO2	100	t	1515
+74105-8	1273	SaO2 % BldMV from pO2	SaO2	100	t	1516
 \.
 
 
