@@ -62,11 +62,20 @@ where id between 1504 and 1516
 and not is_match
 ;
 
+update loinc_copra.loinc_shortname_copra_name
+set is_match = true
+where id between 1562 and 1563
+and not is_match
+;
+
 select id, loinc_shortname, copra_name, accuracy, is_match 
 from loinc_copra.loinc_shortname_copra_name 
 where not is_match 
-and id > 1516
+and id > 1843
 order by id;
+
+select * from loinc_copra.loinc_shortname_copra_name lscn where is_match;
+
 /*
 select * from loinc_copra.loinc_long_common_name_copra_description 
 where is_match

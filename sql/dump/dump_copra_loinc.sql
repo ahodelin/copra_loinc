@@ -26159,8 +26159,6 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 19224-5	1273	SaO2 % BldMV	SaO2	100	t	1504
 73561-3	102788	IGF-I Z-score SerPl	Score_Apgar	62	f	1560
 88859-4	102788	Disease stage score for risk calculation	Score_Apgar	62	f	1561
-9271-8	102788	10M Apgar Score	Score_Apgar	100	f	1562
-9274-2	102788	5M Apgar Score	Score_Apgar	100	f	1563
 96790-1	102788	SOFA total score SOFA	Score_Apgar	62	f	1564
 96823-0	102788	Respiration Score SOFA	Score_Apgar	62	f	1565
 96824-8	102788	Coag Score SOFA	Score_Apgar	69	f	1566
@@ -27124,6 +27122,8 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 51733-4	1273	SaO2 % BldA from pO2	SaO2	100	t	1514
 59408-5	1273	SaO2 % BldA PulseOx	SaO2	100	t	1515
 74105-8	1273	SaO2 % BldMV from pO2	SaO2	100	t	1516
+9271-8	102788	10M Apgar Score	Score_Apgar	100	t	1562
+9274-2	102788	5M Apgar Score	Score_Apgar	100	t	1563
 \.
 
 
