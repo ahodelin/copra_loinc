@@ -1,0 +1,2506 @@
+loinc_num;copra_id;loinc_shortname;copra_name;accuracy;is_match;id
+21112-8;104781;Birth date;AT_Air_Balken;62;Nein;1
+5673-9;104781;Lead Hair-mCnt;AT_Air_Balken;60;Nein;2
+8867-4;104781;Heart rate;AT_Air_Balken;62;Nein;3
+2703-7;104780;pO2 BldA;AT_O2_Balken;62;Nein;4
+3148-4;104780;pO2 Gas;AT_O2_Balken;67;Nein;5
+32240-4;108281;Fructose Ur Ql;Aufnahme_Fruchtwasser_gruen;62;Nein;6
+32240-4;108282;Fructose Ur Ql;Aufnahme_Fruchtwasser_klar;65;Nein;7
+25372-4;108243;HCG Ur-aCnc;Aufnahme_Geburt_spontan;60;Nein;8
+42512-4;108243;IgE Ur-aCnc;Aufnahme_Geburt_spontan;70;Nein;9
+11087-4;108157;Insulin Ab Titr Ser;Aufnahme_Insulin_ja;82;Nein;10
+12739-9;108157;Insulin sp2 p chal SerPl-mCnc;Aufnahme_Insulin_ja;82;Nein;11
+12741-5;108157;Insulin sp4 p chal SerPl-mCnc;Aufnahme_Insulin_ja;82;Nein;12
+12744-9;108157;Insulin sp7 p chal SerPl-mCnc;Aufnahme_Insulin_ja;82;Nein;13
+12757-1;108157;Insulin 30M pre chal SerPl-mCnc;Aufnahme_Insulin_ja;82;Nein;14
+14796-7;108157;Insulin SerPl-sCnc;Aufnahme_Insulin_ja;82;Nein;15
+1570-1;108157;Insulin BS SerPl-mCnc;Aufnahme_Insulin_ja;82;Nein;16
+1573-5;108157;Insulin p 12h fast SerPl-mCnc;Aufnahme_Insulin_ja;82;Nein;17
+15792-5;108157;Insulin Bovine IgE RAST Ql;Aufnahme_Insulin_ja;82;Nein;18
+15793-3;108157;Insulin Human IgE RAST Ql;Aufnahme_Insulin_ja;82;Nein;19
+15794-1;108157;Insulin Porcine IgE RAST Ql;Aufnahme_Insulin_ja;82;Nein;20
+18234-5;108157;Insulin Usub Ql;Aufnahme_Insulin_ja;82;Nein;21
+20448-7;108157;Insulin SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;22
+2481-0;108157;Insulin Ab Ser Ql;Aufnahme_Insulin_ja;82;Nein;23
+2482-8;108157;Insulin Ab Ser-mCnc;Aufnahme_Insulin_ja;82;Nein;24
+25447-4;108157;Insulin Free SerPl-sCnc;Aufnahme_Insulin_ja;82;Nein;25
+25686-7;108157;Insulin sp11 p chal SerPl-sCnc;Aufnahme_Insulin_ja;82;Nein;26
+25690-9;108157;Insulin sp15 p chal SerPl-sCnc;Aufnahme_Insulin_ja;82;Nein;27
+25697-4;108157;Insulin sp7 p chal SerPl-sCnc;Aufnahme_Insulin_ja;82;Nein;28
+27826-7;108157;Insulin 2h p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;29
+27828-3;108157;Insulin 3h p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;30
+27830-9;108157;Insulin 1h p 75 g Glc PO SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;31
+27832-5;108157;Insulin sp4 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;32
+27834-1;108157;Insulin 1.5h p 75 g Glc PO SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;33
+27852-3;108157;Insulin 5h p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;34
+27860-6;108157;Insulin 2h p 75 g Glc PO SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;35
+27863-0;108157;Insulin 2.5h p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;36
+27867-1;108157;Insulin sp7 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;37
+27873-9;108157;Insulin p fast SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;38
+27874-7;108157;Insulin sp5 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;39
+27875-4;108157;Insulin sp6 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;40
+30362-8;108157;Insulin 30M p 75 g Glc PO SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;41
+33809-5;108157;Insulin sp10 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;42
+33810-3;108157;Insulin sp11 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;43
+33811-1;108157;Insulin sp12 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;44
+33812-9;108157;Insulin sp13 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;45
+33813-7;108157;Insulin sp14 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;46
+33814-5;108157;Insulin sp15 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;47
+33815-2;108157;Insulin sp1 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;48
+33816-0;108157;Insulin sp2 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;49
+33817-8;108157;Insulin sp3 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;50
+33818-6;108157;Insulin sp8 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;51
+33819-4;108157;Insulin sp9 p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;52
+3695-4;108157;Insulin SerPl-mCnc;Aufnahme_Insulin_ja;82;Nein;53
+40290-9;108157;Insulin 1.5h p chal SerPl-sCnc;Aufnahme_Insulin_ja;82;Nein;54
+43942-2;108157;Insulin Free SerPl-mCnc;Aufnahme_Insulin_ja;82;Nein;55
+47663-0;108157;Insulin 30M p Glc SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;56
+47862-8;108157;Insulin p meal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;57
+50501-6;108157;Insulin sp1 SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;58
+50502-4;108157;Insulin sp2 SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;59
+50503-2;108157;Insulin sp3 SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;60
+50504-0;108157;Insulin sp4 SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;61
+50505-7;108157;Insulin sp5 SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;62
+50506-5;108157;Insulin sp6 SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;63
+50507-3;108157;Insulin sp7 SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;64
+50508-1;108157;Insulin sp8 SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;65
+5232-4;108157;Insulin Ab Ser RIA-aCnc;Aufnahme_Insulin_ja;82;Nein;66
+55389-1;108157;Insulin 5h p chal SerPl-sCnc;Aufnahme_Insulin_ja;82;Nein;67
+56533-3;108157;Insulin IgG Ser-aCnc;Aufnahme_Insulin_ja;82;Nein;68
+56546-5;108157;Insulin Ab Ser IA-aCnc;Aufnahme_Insulin_ja;82;Nein;69
+56946-7;108157;Insulin 2D p chal SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;70
+60463-7;108157;Insulin Ab Ser-sCnc;Aufnahme_Insulin_ja;82;Nein;71
+6147-3;108157;Insulin Bovine IgE Qn;Aufnahme_Insulin_ja;82;Nein;72
+6148-1;108157;Insulin Human IgE Qn;Aufnahme_Insulin_ja;82;Nein;73
+6149-9;108157;Insulin Porcine IgE Qn;Aufnahme_Insulin_ja;82;Nein;74
+6901-3;108157;Insulin Free SerPl-aCnc;Aufnahme_Insulin_ja;82;Nein;75
+8072-1;108157;Insulin Ab Ser-aCnc;Aufnahme_Insulin_ja;82;Nein;76
+8073-9;108157;Insulin Bovine Ab Ser-aCnc;Aufnahme_Insulin_ja;82;Nein;77
+8074-7;108157;Insulin Human Ab Ser-aCnc;Aufnahme_Insulin_ja;82;Nein;78
+8075-4;108157;Insulin Porcine Ab Ser-aCnc;Aufnahme_Insulin_ja;82;Nein;79
+11087-4;108158;Insulin Ab Titr Ser;Aufnahme_Insulin_nein;74;Nein;80
+12739-9;108158;Insulin sp2 p chal SerPl-mCnc;Aufnahme_Insulin_nein;74;Nein;81
+12741-5;108158;Insulin sp4 p chal SerPl-mCnc;Aufnahme_Insulin_nein;74;Nein;82
+12744-9;108158;Insulin sp7 p chal SerPl-mCnc;Aufnahme_Insulin_nein;74;Nein;83
+12757-1;108158;Insulin 30M pre chal SerPl-mCnc;Aufnahme_Insulin_nein;74;Nein;84
+14796-7;108158;Insulin SerPl-sCnc;Aufnahme_Insulin_nein;74;Nein;85
+1570-1;108158;Insulin BS SerPl-mCnc;Aufnahme_Insulin_nein;74;Nein;86
+1573-5;108158;Insulin p 12h fast SerPl-mCnc;Aufnahme_Insulin_nein;74;Nein;87
+15792-5;108158;Insulin Bovine IgE RAST Ql;Aufnahme_Insulin_nein;74;Nein;88
+15793-3;108158;Insulin Human IgE RAST Ql;Aufnahme_Insulin_nein;74;Nein;89
+15794-1;108158;Insulin Porcine IgE RAST Ql;Aufnahme_Insulin_nein;74;Nein;90
+18234-5;108158;Insulin Usub Ql;Aufnahme_Insulin_nein;74;Nein;91
+20448-7;108158;Insulin SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;92
+2481-0;108158;Insulin Ab Ser Ql;Aufnahme_Insulin_nein;74;Nein;93
+2482-8;108158;Insulin Ab Ser-mCnc;Aufnahme_Insulin_nein;74;Nein;94
+25447-4;108158;Insulin Free SerPl-sCnc;Aufnahme_Insulin_nein;74;Nein;95
+25686-7;108158;Insulin sp11 p chal SerPl-sCnc;Aufnahme_Insulin_nein;74;Nein;96
+25690-9;108158;Insulin sp15 p chal SerPl-sCnc;Aufnahme_Insulin_nein;74;Nein;97
+25697-4;108158;Insulin sp7 p chal SerPl-sCnc;Aufnahme_Insulin_nein;74;Nein;98
+27826-7;108158;Insulin 2h p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;99
+27828-3;108158;Insulin 3h p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;100
+27830-9;108158;Insulin 1h p 75 g Glc PO SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;101
+27832-5;108158;Insulin sp4 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;102
+27834-1;108158;Insulin 1.5h p 75 g Glc PO SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;103
+27852-3;108158;Insulin 5h p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;104
+27860-6;108158;Insulin 2h p 75 g Glc PO SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;105
+27863-0;108158;Insulin 2.5h p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;106
+27867-1;108158;Insulin sp7 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;107
+27873-9;108158;Insulin p fast SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;108
+27874-7;108158;Insulin sp5 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;109
+27875-4;108158;Insulin sp6 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;110
+27882-0;108158;Proinsulin SerPl-sCnc;Aufnahme_Insulin_nein;61;Nein;111
+30362-8;108158;Insulin 30M p 75 g Glc PO SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;112
+33809-5;108158;Insulin sp10 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;113
+33810-3;108158;Insulin sp11 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;114
+33811-1;108158;Insulin sp12 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;115
+33812-9;108158;Insulin sp13 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;116
+33813-7;108158;Insulin sp14 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;117
+33814-5;108158;Insulin sp15 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;118
+33815-2;108158;Insulin sp1 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;119
+33816-0;108158;Insulin sp2 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;120
+33817-8;108158;Insulin sp3 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;121
+33818-6;108158;Insulin sp8 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;122
+33819-4;108158;Insulin sp9 p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;123
+355-8;108158;Neomycin Islt MIC;Aufnahme_Insulin_nein;62;Nein;124
+3695-4;108158;Insulin SerPl-mCnc;Aufnahme_Insulin_nein;74;Nein;125
+40290-9;108158;Insulin 1.5h p chal SerPl-sCnc;Aufnahme_Insulin_nein;74;Nein;126
+43942-2;108158;Insulin Free SerPl-mCnc;Aufnahme_Insulin_nein;74;Nein;127
+47663-0;108158;Insulin 30M p Glc SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;128
+47862-8;108158;Insulin p meal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;129
+50501-6;108158;Insulin sp1 SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;130
+50502-4;108158;Insulin sp2 SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;131
+50503-2;108158;Insulin sp3 SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;132
+50504-0;108158;Insulin sp4 SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;133
+50505-7;108158;Insulin sp5 SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;134
+50506-5;108158;Insulin sp6 SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;135
+50507-3;108158;Insulin sp7 SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;136
+50508-1;108158;Insulin sp8 SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;137
+5232-4;108158;Insulin Ab Ser RIA-aCnc;Aufnahme_Insulin_nein;74;Nein;138
+55389-1;108158;Insulin 5h p chal SerPl-sCnc;Aufnahme_Insulin_nein;74;Nein;139
+56533-3;108158;Insulin IgG Ser-aCnc;Aufnahme_Insulin_nein;74;Nein;140
+56546-5;108158;Insulin Ab Ser IA-aCnc;Aufnahme_Insulin_nein;74;Nein;141
+56946-7;108158;Insulin 2D p chal SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;142
+60463-7;108158;Insulin Ab Ser-sCnc;Aufnahme_Insulin_nein;74;Nein;143
+6147-3;108158;Insulin Bovine IgE Qn;Aufnahme_Insulin_nein;74;Nein;144
+6148-1;108158;Insulin Human IgE Qn;Aufnahme_Insulin_nein;74;Nein;145
+6149-9;108158;Insulin Porcine IgE Qn;Aufnahme_Insulin_nein;74;Nein;146
+6901-3;108158;Insulin Free SerPl-aCnc;Aufnahme_Insulin_nein;74;Nein;147
+8072-1;108158;Insulin Ab Ser-aCnc;Aufnahme_Insulin_nein;74;Nein;148
+8073-9;108158;Insulin Bovine Ab Ser-aCnc;Aufnahme_Insulin_nein;74;Nein;149
+8074-7;108158;Insulin Human Ab Ser-aCnc;Aufnahme_Insulin_nein;74;Nein;150
+8075-4;108158;Insulin Porcine Ab Ser-aCnc;Aufnahme_Insulin_nein;74;Nein;151
+20706-8;108245;C bot Tox Spec Anim Inoc;Aufnahme_Sectio_Notsectio;60;Nein;152
+44274-9;108245;C bot Tox Spec IA;Aufnahme_Sectio_Notsectio;61;Nein;153
+44796-1;108245;C bot Tox Spec;Aufnahme_Sectio_Notsectio;60;Nein;154
+48037-6;101608;pH Vag;Beatmung_Anordnung_AbbruchkriterienPHzv;60;Nein;155
+32306-3;101600;pCO2 Ur;Beatmung_Anordnung_AbbruchkriterienPzvCO2;62;Nein;156
+2022-2;101602;pCO2 CSF;Beatmung_Anordnung_AbbruchkriterienSpO2;67;Nein;157
+3148-4;101602;pO2 Gas;Beatmung_Anordnung_AbbruchkriterienSpO2;73;Nein;158
+8278-4;100795;BSA formula;Beatmung_Anordnung_Beatmungsform;62;Nein;159
+3151-8;100113;Inhaled O2 flow rate;Beatmung_Anordnung_Flow;100;Nein;160
+95420-6;117219;Admitted to ICU for condition;Beatmung_Einstellung_Balken_ICU_IMC;60;Nein;161
+14196-0;102657;Retics #;Beatmung_Einstellung_ETS;67;Nein;162
+3151-8;100104;Inhaled O2 flow rate;Beatmung_Einstellung_Flow;100;Nein;163
+2499-2;104147;Iron 24h Ur-mRate;Beatmung_ES_Airvo_Temperatur;61;Nein;164
+8310-5;104147;Body temperature;Beatmung_ES_Airvo_Temperatur;75;Nein;165
+6857-7;103414;Spruce IgE Qn;Beatmung_ES_Avea_InspDruck;64;Nein;166
+43951-3;104809;CD2 Cells # Tiss;Beatmung_ES_C2_ETS;60;Nein;167
+16713-0;105080;CMV Ab CSF-aCnc;Beatmung_ES_C2_F_CMV;61;Nein;168
+40747-8;104822;C2 SerPl Ql;Beatmung_ES_C2_IEVerhaeltnis;100;Nein;169
+4484-2;104822;C2 SerPl-mCnc;Beatmung_ES_C2_IEVerhaeltnis;100;Nein;170
+56927-7;104822;HCV c2 Ab Ser Ql IB;Beatmung_ES_C2_IEVerhaeltnis;100;Nein;171
+69379-6;104822;van(A+B+C1+C2) genes Islt/Spm;Beatmung_ES_C2_IEVerhaeltnis;100;Nein;172
+40747-8;106283;C2 SerPl Ql;Beatmung_ES_C2_IEVerhaeltnis_Backup;100;Nein;173
+4484-2;106283;C2 SerPl-mCnc;Beatmung_ES_C2_IEVerhaeltnis_Backup;100;Nein;174
+56927-7;106283;HCV c2 Ab Ser Ql IB;Beatmung_ES_C2_IEVerhaeltnis_Backup;100;Nein;175
+69379-6;106283;van(A+B+C1+C2) genes Islt/Spm;Beatmung_ES_C2_IEVerhaeltnis_Backup;100;Nein;176
+5995-6;105078;PA Coll PRP;Beatmung_ES_C2_PEEP_CPAP_Ptief;61;Nein;177
+40747-8;104816;C2 SerPl Ql;Beatmung_ES_C2_Ptief;100;Nein;178
+4484-2;104816;C2 SerPl-mCnc;Beatmung_ES_C2_Ptief;100;Nein;179
+56927-7;104816;HCV c2 Ab Ser Ql IB;Beatmung_ES_C2_Ptief;100;Nein;180
+69379-6;104816;van(A+B+C1+C2) genes Islt/Spm;Beatmung_ES_C2_Ptief;100;Nein;181
+40747-8;104823;C2 SerPl Ql;Beatmung_ES_C2_Vt;100;Nein;182
+4484-2;104823;C2 SerPl-mCnc;Beatmung_ES_C2_Vt;100;Nein;183
+56927-7;104823;HCV c2 Ab Ser Ql IB;Beatmung_ES_C2_Vt;100;Nein;184
+69379-6;104823;van(A+B+C1+C2) genes Islt/Spm;Beatmung_ES_C2_Vt;100;Nein;185
+15164-7;110827;C3 Snv-mCnc;Beatmung_ES_C3_F_SIMV;60;Nein;186
+6801-5;110827;C3 Fld-mCnc;Beatmung_ES_C3_F_SIMV;60;Nein;187
+3151-8;103087;Inhaled O2 flow rate;Beatmung_ES_F120_Flow;62;Nein;188
+29463-7;117218;Weight;Beatmung_ES_G5_Body_Weight;100;Nein;189
+3141-9;117218;Weight Measured;Beatmung_ES_G5_Body_Weight;60;Nein;190
+8302-2;117218;Body height;Beatmung_ES_G5_Body_Weight;80;Nein;191
+8303-0;117218;Body height Prctl;Beatmung_ES_G5_Body_Weight;65;Nein;192
+8336-0;117218;Bdy weight Prctl Per Age;Beatmung_ES_G5_Body_Weight;60;Nein;193
+8339-4;117218;Birth weight Measured;Beatmung_ES_G5_Body_Weight;60;Nein;194
+8302-2;105082;Body height;Beatmung_ES_G5_Body_Wt;67;Nein;195
+45286-2;105083;CMV IgA Fld Ql;Beatmung_ES_G5_F_CMV;64;Nein;196
+50018-1;105083;CMV IgG Fld Ql;Beatmung_ES_G5_F_CMV;64;Nein;197
+3151-8;108525;Inhaled O2 flow rate;Beatmung_ES_G5_Flow;73;Nein;198
+3151-8;107821;Inhaled O2 flow rate;Beatmung_ES_Leoni_Flow;100;Nein;199
+14196-0;107828;Retics #;Beatmung_ES_Leoni_IRec;60;Nein;200
+2743-3;107831;pH Amn;Beatmung_ES_Leoni_P_man;73;Nein;201
+14196-0;107830;Retics #;Beatmung_ES_Leoni_PRec;60;Nein;202
+33633-9;107830;HBV preC TAG Mut Ser Ql NAA+probe;Beatmung_ES_Leoni_PRec;100;Nein;203
+33848-3;107830;Plasma cell prec # Bld Manual;Beatmung_ES_Leoni_PRec;100;Nein;204
+33849-1;107830;Plasma cell prec/leuk NFr Bld Manual;Beatmung_ES_Leoni_PRec;100;Nein;205
+34916-7;107830;Plasma cell prec # Bld;Beatmung_ES_Leoni_PRec;100;Nein;206
+34917-5;107830;Plasma cell prec/leuk NFr Bld;Beatmung_ES_Leoni_PRec;100;Nein;207
+91120-6;104033;AT III PPP Chromo.no added heparin;Beatmung_ES_NO;100;Nein;208
+3150-0;106783;Inhaled O2 concentration;Beatmung_ES_Optiflow_O2Konzentration;62;Nein;209
+11187-2;104748;P frequentans IgE Qn;Beatmung_ES_Pallas_Frequenz_Min;62;Nein;210
+3148-4;104745;pO2 Gas;Beatmung_ES_Pallas_Frischgas_O2;63;Nein;211
+13069-0;104717;PS IgA Ser-aCnc;Beatmung_ES_Pallas_PS;100;Nein;212
+14245-5;104717;PS IgG Ser-aCnc;Beatmung_ES_Pallas_PS;100;Nein;213
+14246-3;104717;PS IgM Ser-aCnc;Beatmung_ES_Pallas_PS;100;Nein;214
+30500-3;104717;PS IgA Ser Ql;Beatmung_ES_Pallas_PS;100;Nein;215
+32031-7;104717;PS IgA Ser IA-aCnc;Beatmung_ES_Pallas_PS;100;Nein;216
+32032-5;104717;PS IgG Ser IA-aCnc;Beatmung_ES_Pallas_PS;100;Nein;217
+33310-4;104717;PS Ab Ser Ql;Beatmung_ES_Pallas_PS;100;Nein;218
+9326-0;104717;PS IgG Ser Ql IA;Beatmung_ES_Pallas_PS;100;Nein;219
+9327-8;104717;PS IgM Ser Ql IA;Beatmung_ES_Pallas_PS;100;Nein;220
+14359-4;104714;Gram Stn Prt;Beatmung_ES_Pallas_T_Rampe;63;Nein;221
+14360-2;104714;Gram Stn Plr;Beatmung_ES_Pallas_T_Rampe;63;Nein;222
+643-7;104714;Gram Stn Pus;Beatmung_ES_Pallas_T_Rampe;63;Nein;223
+648-6;104714;Gram Stn Spt;Beatmung_ES_Pallas_T_Rampe;63;Nein;224
+664-3;104714;Gram Stn Spec;Beatmung_ES_Pallas_T_Rampe;70;Nein;225
+35694-9;104253;CEV IgG Titr Ser;Beatmung_ES_Servoi_Backup_I_E;62;Nein;226
+35695-6;104253;CEV IgM Titr Ser;Beatmung_ES_Servoi_Backup_I_E;62;Nein;227
+8069-7;104259;Epidis Ab Titr Ser;Beatmung_ES_Servoi_EDI_Trigger;61;Nein;228
+35694-9;104274;CEV IgG Titr Ser;Beatmung_ES_Servoi_I_E;62;Nein;229
+35695-6;104274;CEV IgM Titr Ser;Beatmung_ES_Servoi_I_E;62;Nein;230
+47383-5;104260;ANA Ser Ql IA;Beatmung_ES_Servoi_Nava_Pegel;60;Nein;231
+2753-2;104267;pH SerPl;Beatmung_ES_Servoi_Phoch;60;Nein;232
+32559-7;104272;Tau Prot Ser-mCnc;Beatmung_ES_Servoi_Tpause_Prozent;63;Nein;233
+20657-3;104273;Taurine SerPl-sCnc;Beatmung_ES_Servoi_Tpause_s;61;Nein;234
+51834-0;104273;Tryptase SerPl-sCnc;Beatmung_ES_Servoi_Tpause_s;65;Nein;235
+22240-6;106634;CMV Ab Titr CSF;Beatmung_ES_T1_F_CMV;61;Nein;236
+3151-8;113046;Inhaled O2 flow rate;Beatmung_ES_T1_Flow;73;Nein;237
+10333-3;103258;Appearance CSF;Beatmung_ES_VisionA_ApneaRate;61;Nein;238
+11158-3;103258;Appearance Ser;Beatmung_ES_VisionA_ApneaRate;61;Nein;239
+14620-9;103258;Appearance Plr;Beatmung_ES_VisionA_ApneaRate;61;Nein;240
+14621-7;103258;Appearance Prt;Beatmung_ES_VisionA_ApneaRate;61;Nein;241
+29605-3;103258;Appearance Snv;Beatmung_ES_VisionA_ApneaRate;61;Nein;242
+29636-8;103258;Appearance Stl;Beatmung_ES_VisionA_ApneaRate;61;Nein;243
+33455-7;103258;Appearance Spt;Beatmung_ES_VisionA_ApneaRate;61;Nein;244
+5767-9;103258;Appearance Ur;Beatmung_ES_VisionA_ApneaRate;64;Nein;245
+8867-4;103258;Heart rate;Beatmung_ES_VisionA_ApneaRate;63;Nein;246
+9335-1;103258;Appearance Fld;Beatmung_ES_VisionA_ApneaRate;61;Nein;247
+14196-0;103081;Retics #;Beatmung_ES_VisionA_ETS;67;Nein;248
+13069-0;102883;PS IgA Ser-aCnc;Beatmung_ES_VisionA_PS;100;Nein;249
+14245-5;102883;PS IgG Ser-aCnc;Beatmung_ES_VisionA_PS;100;Nein;250
+14246-3;102883;PS IgM Ser-aCnc;Beatmung_ES_VisionA_PS;100;Nein;251
+30500-3;102883;PS IgA Ser Ql;Beatmung_ES_VisionA_PS;100;Nein;252
+32031-7;102883;PS IgA Ser IA-aCnc;Beatmung_ES_VisionA_PS;100;Nein;253
+32032-5;102883;PS IgG Ser IA-aCnc;Beatmung_ES_VisionA_PS;100;Nein;254
+33310-4;102883;PS Ab Ser Ql;Beatmung_ES_VisionA_PS;100;Nein;255
+9326-0;102883;PS IgG Ser Ql IA;Beatmung_ES_VisionA_PS;100;Nein;256
+9327-8;102883;PS IgM Ser Ql IA;Beatmung_ES_VisionA_PS;100;Nein;257
+6683-7;102884;Reptilase time;Beatmung_ES_VisionA_RiseTime;73;Nein;258
+11211-0;101434;CO2 Fld-sCnc;Beatmung_Messung_CO2;100;Nein;259
+13538-4;101434;CO2 Ur-sCnc;Beatmung_Messung_CO2;100;Nein;260
+14040-0;101434;CO2 Stl-sCnc;Beatmung_Messung_CO2;100;Nein;261
+14640-7;101434;CO2 Dial fld-sCnc;Beatmung_Messung_CO2;100;Nein;262
+16551-4;101434;CO2 BldC-sCnc;Beatmung_Messung_CO2;100;Nein;263
+2026-3;101434;CO2 BldA-sCnc;Beatmung_Messung_CO2;100;Nein;264
+2027-1;101434;CO2 BldV-sCnc;Beatmung_Messung_CO2;100;Nein;265
+2028-9;101434;CO2 SerPl-sCnc;Beatmung_Messung_CO2;100;Nein;266
+20565-8;101434;CO2 Bld-sCnc;Beatmung_Messung_CO2;100;Nein;267
+32306-3;101434;pCO2 Ur;Beatmung_Messung_CO2;60;Nein;268
+34520-7;101434;CO2 BldCo-sCnc;Beatmung_Messung_CO2;100;Nein;269
+34728-6;101434;CO2 Bld Calc-sCnc;Beatmung_Messung_CO2;100;Nein;270
+38253-1;101434;CO2 Spec-sCnc;Beatmung_Messung_CO2;100;Nein;271
+39465-0;101434;CO2 BldCoV-sCnc;Beatmung_Messung_CO2;100;Nein;272
+41647-9;101434;CO2 BldA Calc-sCnc;Beatmung_Messung_CO2;100;Nein;273
+51781-3;101434;CO2 BldC Calc-sCnc;Beatmung_Messung_CO2;100;Nein;274
+57921-9;101434;CO2 BldCoA Calc-sCnc;Beatmung_Messung_CO2;100;Nein;275
+19817-6;101433;Complications;Beatmung_Messung_Compliance;70;Nein;276
+3151-8;100273;Inhaled O2 flow rate;Beatmung_Messung_Flow;100;Nein;277
+8478-0;101441;BP mean;Beatmung_Messung_Pmean;83;Nein;278
+2752-4;101443;pH Smn;Beatmung_Messung_Pmin;60;Nein;279
+2190-7;103431;DHEA-S Amn-mCnc;Beatmung_MS_Avea_MandVte;61;Nein;280
+18970-4;103422;Pip+Tazo Susc Islt;Beatmung_MS_Avea_PIP;67;Nein;281
+411-9;103422;Pip+Tazo Islt MLC;Beatmung_MS_Avea_PIP;67;Nein;282
+412-7;103422;Pip+Tazo Islt MIC;Beatmung_MS_Avea_PIP;67;Nein;283
+413-5;103422;Pip+Tazo Islt KB;Beatmung_MS_Avea_PIP;67;Nein;284
+414-3;103422;Pip+Tazo Titr SBT;Beatmung_MS_Avea_PIP;67;Nein;285
+7044-1;103422;Pip+Tazo Islt Grad strip;Beatmung_MS_Avea_PIP;67;Nein;286
+10681-5;103424;HSV Tiss EM;Beatmung_MS_Avea_Ti;62;Nein;287
+100342-5;103433;VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS;Beatmung_MS_Avea_Vti;67;Nein;288
+1827-5;103433;A1AT MS SerPl-mCnc;Beatmung_MS_Avea_Vti;67;Nein;289
+55805-6;103433;cycloSPORINE Bld LC/MS/MS-mCnc;Beatmung_MS_Avea_Vti;67;Nein;290
+74097-7;103433;Tacrolimus Bld LC/MS/MS-mCnc;Beatmung_MS_Avea_Vti;67;Nein;291
+75756-7;103433;Bacteria Islt MS.MALDI-TOF;Beatmung_MS_Avea_Vti;67;Nein;292
+92726-9;103433;17OHP DBS LC/MS/MS-mCnc;Beatmung_MS_Avea_Vti;67;Nein;293
+33863-2;104784;Cystatin C SerPl-mCnc;Beatmung_MS_C2_Cstat;62;Nein;294
+26714-6;104803;PPA Mec-mCnt;Beatmung_MS_C2_Ppeak;61;Nein;295
+13538-4;104785;CO2 Ur-sCnc;Beatmung_MS_C2_RCexsp;63;Nein;296
+2379-6;104785;GST RBC-cCnc;Beatmung_MS_C2_RCexsp;60;Nein;297
+26454-9;104785;RBC # CSF;Beatmung_MS_C2_RCexsp;67;Nein;298
+26459-8;104785;nRBC # CSF;Beatmung_MS_C2_RCexsp;62;Nein;299
+51641-9;104785;MSCV RBC;Beatmung_MS_C2_RCexsp;62;Nein;300
+17516-6;104786;Renin sup Plas-cCnc;Beatmung_MS_C2_Rinsp;60;Nein;301
+2917-3;104786;Renin sup Plas-mCnc;Beatmung_MS_C2_Rinsp;60;Nein;302
+14040-0;104788;CO2 Stl-sCnc;Beatmung_MS_C2_TE;60;Nein;303
+14040-0;104789;CO2 Stl-sCnc;Beatmung_MS_C2_TI;60;Nein;304
+3058-5;104789;TPI Ser-cCnc;Beatmung_MS_C2_TI;60;Nein;305
+43951-3;104789;CD2 Cells # Tiss;Beatmung_MS_C2_TI;64;Nein;306
+19817-6;103289;Complications;Beatmung_MS_Evita2_Compliance;69;Nein;307
+1714-5;103292;PACP Ser-cCnc;Beatmung_MS_Evita2_CPAP;60;Nein;308
+20420-6;103292;PACP Ser-mCnc;Beatmung_MS_Evita2_CPAP;60;Nein;309
+19817-6;103329;Complications;Beatmung_MS_Evita4_Compliance;69;Nein;310
+8478-0;103317;BP mean;Beatmung_MS_Evita4_Pmean;67;Nein;311
+52751-5;103827;aPTT-FS PPP;Beatmung_MS_EzPAP_PAP;61;Nein;312
+2962-9;103036;GH Amn-mCnc;Beatmung_MS_G5_fspontan;60;Nein;313
+2022-2;106412;pCO2 CSF;Beatmung_MS_G5_petCO2;60;Nein;314
+3148-4;106412;pO2 Gas;Beatmung_MS_G5_petCO2;63;Nein;315
+2381-2;102909;GSS RBC-mCnc;Beatmung_MS_G5_RCexsp;60;Nein;316
+2382-0;102909;GSH RBC-mCnc;Beatmung_MS_G5_RCexsp;60;Nein;317
+2965-2;102909;Sp Gr Ur;Beatmung_MS_G5_RCexsp;62;Nein;318
+51641-9;102909;MSCV RBC;Beatmung_MS_G5_RCexsp;62;Nein;319
+2965-2;102906;Sp Gr Ur;Beatmung_MS_G5_Rexsp;67;Nein;320
+3148-4;106413;pO2 Gas;Beatmung_MS_G5_SpO2;71;Nein;321
+49723-0;102916;Tea IgG-mCnc;Beatmung_MS_G5_TE;60;Nein;322
+16551-4;107849;CO2 BldC-sCnc;Beatmung_MS_Leoni_DCO2;60;Nein;323
+2026-3;107849;CO2 BldA-sCnc;Beatmung_MS_Leoni_DCO2;60;Nein;324
+2027-1;107849;CO2 BldV-sCnc;Beatmung_MS_Leoni_DCO2;60;Nein;325
+20565-8;107849;CO2 Bld-sCnc;Beatmung_MS_Leoni_DCO2;63;Nein;326
+47282-9;107849;MCV BldCo;Beatmung_MS_Leoni_DCO2;62;Nein;327
+47283-7;107849;PMV BldCo;Beatmung_MS_Leoni_DCO2;62;Nein;328
+2022-2;107833;pCO2 CSF;Beatmung_MS_Leoni_O2;62;Nein;329
+3148-4;107833;pO2 Gas;Beatmung_MS_Leoni_O2;67;Nein;330
+52751-5;107836;aPTT-FS PPP;Beatmung_MS_Leoni_Peep_CPAP;61;Nein;331
+8478-0;107835;BP mean;Beatmung_MS_Leoni_Pmean;67;Nein;332
+19840-8;107842;Breaths.spont+mech on vent;Beatmung_MS_Leoni_Spont;77;Nein;333
+100342-5;107839;VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS;Beatmung_MS_Leoni_Vti;67;Nein;334
+1827-5;107839;A1AT MS SerPl-mCnc;Beatmung_MS_Leoni_Vti;67;Nein;335
+55805-6;107839;cycloSPORINE Bld LC/MS/MS-mCnc;Beatmung_MS_Leoni_Vti;67;Nein;336
+74097-7;107839;Tacrolimus Bld LC/MS/MS-mCnc;Beatmung_MS_Leoni_Vti;67;Nein;337
+75756-7;107839;Bacteria Islt MS.MALDI-TOF;Beatmung_MS_Leoni_Vti;67;Nein;338
+92726-9;107839;17OHP DBS LC/MS/MS-mCnc;Beatmung_MS_Leoni_Vti;67;Nein;339
+3148-4;104035;pO2 Gas;Beatmung_MS_NO2;62;Nein;340
+162-8;104734;Cephalothin Islt KB;Beatmung_MS_Pallas_Halothan_exsp;60;Nein;341
+160-2;104733;Cephalothin Islt MLC;Beatmung_MS_Pallas_Halothan_insp;67;Nein;342
+161-0;104733;Cephalothin Islt MIC;Beatmung_MS_Pallas_Halothan_insp;67;Nein;343
+162-8;104733;Cephalothin Islt KB;Beatmung_MS_Pallas_Halothan_insp;63;Nein;344
+18900-1;104733;Cephalothin Susc Islt;Beatmung_MS_Pallas_Halothan_insp;65;Nein;345
+20388-5;104737;Nitrofurazone Susc Islt;Beatmung_MS_Pallas_Isofluran_insp;60;Nein;346
+2022-2;104731;pCO2 CSF;Beatmung_MS_Pallas_O2_exsp;62;Nein;347
+3148-4;104731;pO2 Gas;Beatmung_MS_Pallas_O2_exsp;67;Nein;348
+8478-0;104772;BP mean;Beatmung_MS_Pallas_Pmean;67;Nein;349
+10862-1;104245;BM Ab Titr Ser;Beatmung_MS_Servoi_AF;62;Nein;350
+14905-4;104245;Vit A SerPl-sCnc;Beatmung_MS_Servoi_AF;64;Nein;351
+1834-1;104245;AFP SerPl-mCnc;Beatmung_MS_Servoi_AF;62;Nein;352
+19177-5;104245;AFP SerPl-sCnc;Beatmung_MS_Servoi_AF;62;Nein;353
+2923-1;104245;Vit A SerPl-mCnc;Beatmung_MS_Servoi_AF;64;Nein;354
+5204-3;104245;HSV Ab Titr Ser CF;Beatmung_MS_Servoi_AF;60;Nein;355
+5243-1;104245;MeV Ab Titr Ser CF;Beatmung_MS_Servoi_AF;60;Nein;356
+5249-8;104245;MuV Ab Titr Ser CF;Beatmung_MS_Servoi_AF;60;Nein;357
+5250-6;104245;MuV Ab Titr Ser IF;Beatmung_MS_Servoi_AF;60;Nein;358
+5259-7;104245;MBP Ab Titr Ser IF;Beatmung_MS_Servoi_AF;60;Nein;359
+9513-3;104245;CMV Ab Titr Ser CF;Beatmung_MS_Servoi_AF;60;Nein;360
+9838-4;104245;LKM Ab Titr Ser IF;Beatmung_MS_Servoi_AF;60;Nein;361
+10862-1;104246;BM Ab Titr Ser;Beatmung_MS_Servoi_Afspont;62;Nein;362
+14905-4;104246;Vit A SerPl-sCnc;Beatmung_MS_Servoi_Afspont;64;Nein;363
+1834-1;104246;AFP SerPl-mCnc;Beatmung_MS_Servoi_Afspont;62;Nein;364
+19177-5;104246;AFP SerPl-sCnc;Beatmung_MS_Servoi_Afspont;62;Nein;365
+2923-1;104246;Vit A SerPl-mCnc;Beatmung_MS_Servoi_Afspont;64;Nein;366
+5204-3;104246;HSV Ab Titr Ser CF;Beatmung_MS_Servoi_Afspont;60;Nein;367
+5243-1;104246;MeV Ab Titr Ser CF;Beatmung_MS_Servoi_Afspont;60;Nein;368
+5249-8;104246;MuV Ab Titr Ser CF;Beatmung_MS_Servoi_Afspont;60;Nein;369
+5250-6;104246;MuV Ab Titr Ser IF;Beatmung_MS_Servoi_Afspont;60;Nein;370
+5259-7;104246;MBP Ab Titr Ser IF;Beatmung_MS_Servoi_Afspont;60;Nein;371
+9513-3;104246;CMV Ab Titr Ser CF;Beatmung_MS_Servoi_Afspont;60;Nein;372
+9838-4;104246;LKM Ab Titr Ser IF;Beatmung_MS_Servoi_Afspont;60;Nein;373
+14246-3;104236;PS IgM Ser-aCnc;Beatmung_MS_Servoi_Cdyn;62;Nein;374
+14622-5;104236;Vit C SerPl-sCnc;Beatmung_MS_Servoi_Cdyn;60;Nein;375
+14910-4;104236;Serotonin Ser-sCnc;Beatmung_MS_Servoi_Cdyn;62;Nein;376
+1903-4;104236;Vit C SerPl-mCnc;Beatmung_MS_Servoi_Cdyn;60;Nein;377
+27057-9;104236;Serotonin Ser-mCnc;Beatmung_MS_Servoi_Cdyn;62;Nein;378
+29536-0;104236;WNV IgM Ser-aCnc;Beatmung_MS_Servoi_Cdyn;60;Nein;379
+31409-6;104236;SNV IgM Ser-aCnc;Beatmung_MS_Servoi_Cdyn;60;Nein;380
+38476-8;104236;MIS SerPl-mCnc;Beatmung_MS_Servoi_Cdyn;64;Nein;381
+7992-1;104236;RSV IgM Ser-aCnc;Beatmung_MS_Servoi_Cdyn;60;Nein;382
+8048-1;104236;VZV IgM Ser-aCnc;Beatmung_MS_Servoi_Cdyn;60;Nein;383
+8056-4;104236;YFV IgM Ser-aCnc;Beatmung_MS_Servoi_Cdyn;60;Nein;384
+14581-3;104247;APAP SerPl-sCnc;Beatmung_MS_Servoi_CPAP;62;Nein;385
+14622-5;104247;Vit C SerPl-sCnc;Beatmung_MS_Servoi_CPAP;60;Nein;386
+14905-4;104247;Vit A SerPl-sCnc;Beatmung_MS_Servoi_CPAP;60;Nein;387
+1726-9;104247;cAMP SerPl-mCnc;Beatmung_MS_Servoi_CPAP;62;Nein;388
+1903-4;104247;Vit C SerPl-mCnc;Beatmung_MS_Servoi_CPAP;60;Nein;389
+25498-7;104247;cAMP SerPl-sCnc;Beatmung_MS_Servoi_CPAP;62;Nein;390
+26035-6;104247;Serotonin Plas-sCnc;Beatmung_MS_Servoi_CPAP;61;Nein;391
+2923-1;104247;Vit A SerPl-mCnc;Beatmung_MS_Servoi_CPAP;60;Nein;392
+3298-7;104247;APAP SerPl-mCnc;Beatmung_MS_Servoi_CPAP;62;Nein;393
+26607-2;104235;Cystathionin SerPl-sCnc;Beatmung_MS_Servoi_Cstatic;60;Nein;394
+33863-2;104235;Cystatin C SerPl-mCnc;Beatmung_MS_Servoi_Cstatic;63;Nein;395
+2462-0;104230;IgE Ser-mCnc;Beatmung_MS_Servoi_E;61;Nein;396
+83104-0;104226;MIS SerPl IA-mCnc;Beatmung_MS_Servoi_Edi_min;65;Nein;397
+10898-5;110915;EEEV IgM Titr Ser IF;Beatmung_MS_Servoi_I_E;61;Nein;398
+22261-2;110915;EEEV IgM Titr Ser;Beatmung_MS_Servoi_I_E;60;Nein;399
+35695-6;110915;CEV IgM Titr Ser;Beatmung_MS_Servoi_I_E;62;Nein;400
+43330-0;110915;EEEV IgM Titr Ser IA;Beatmung_MS_Servoi_I_E;61;Nein;401
+49141-5;110915;CEV IgM Titr Ser IF;Beatmung_MS_Servoi_I_E;62;Nein;402
+55925-2;110915;IgM Ser Elph-mCnc;Beatmung_MS_Servoi_I_E;60;Nein;403
+6812-2;110915;DENV IgM Titr Ser;Beatmung_MS_Servoi_I_E;60;Nein;404
+71711-6;110915;EBOV IgM Titr Ser IA;Beatmung_MS_Servoi_I_E;61;Nein;405
+83085-1;110915;CEA SerPl IA-mCnc;Beatmung_MS_Servoi_I_E;60;Nein;406
+22411-3;104242;LCMV IgM Titr Ser;Beatmung_MS_Servoi_MVe;60;Nein;407
+22420-4;104242;MuV IgM Titr Ser;Beatmung_MS_Servoi_MVe;62;Nein;408
+81112-5;104242;MVEV IgG Titr Ser;Beatmung_MS_Servoi_MVe;60;Nein;409
+81113-3;104242;MVEV IgM Ser Ql;Beatmung_MS_Servoi_MVe;64;Nein;410
+81114-1;104242;MVEV IgM Titr Ser;Beatmung_MS_Servoi_MVe;67;Nein;411
+22411-3;104244;LCMV IgM Titr Ser;Beatmung_MS_Servoi_Mve_spont;60;Nein;412
+22420-4;104244;MuV IgM Titr Ser;Beatmung_MS_Servoi_Mve_spont;62;Nein;413
+81112-5;104244;MVEV IgG Titr Ser;Beatmung_MS_Servoi_Mve_spont;60;Nein;414
+81113-3;104244;MVEV IgM Ser Ql;Beatmung_MS_Servoi_Mve_spont;64;Nein;415
+81114-1;104244;MVEV IgM Titr Ser;Beatmung_MS_Servoi_Mve_spont;67;Nein;416
+22411-3;104243;LCMV IgM Titr Ser;Beatmung_MS_Servoi_MVi;60;Nein;417
+22420-4;104243;MuV IgM Titr Ser;Beatmung_MS_Servoi_MVi;62;Nein;418
+81114-1;104243;MVEV IgM Titr Ser;Beatmung_MS_Servoi_MVi;60;Nein;419
+13414-8;104249;Serine Amn-mCnc;Beatmung_MS_Servoi_Pmean;60;Nein;420
+28009-9;104249;Specimen vol Ur;Beatmung_MS_Servoi_Pmean;60;Nein;421
+33514-1;104249;Specimen vol Sweat;Beatmung_MS_Servoi_Pmean;61;Nein;422
+3964-4;104251;PPA SerPl-mCnc;Beatmung_MS_Servoi_Ppeak;62;Nein;423
+4090-7;104251;Vancomycin Peak SerPl-mCnc;Beatmung_MS_Servoi_Ppeak;63;Nein;424
+14611-8;104250;ANA Pat Ser-Imp;Beatmung_MS_Servoi_Pplat;60;Nein;425
+3964-4;104250;PPA SerPl-mCnc;Beatmung_MS_Servoi_Pplat;62;Nein;426
+49310-6;104250;ANA Pat Ser-Imp;Beatmung_MS_Servoi_Pplat;60;Nein;427
+14910-4;104233;Serotonin Ser-sCnc;Beatmung_MS_Servoi_Re;60;Nein;428
+27057-9;104233;Serotonin Ser-mCnc;Beatmung_MS_Servoi_Re;60;Nein;429
+14910-4;104234;Serotonin Ser-sCnc;Beatmung_MS_Servoi_Ri;60;Nein;430
+27057-9;104234;Serotonin Ser-mCnc;Beatmung_MS_Servoi_Ri;60;Nein;431
+48138-2;104234;NSE SerPl RIA-mCnc;Beatmung_MS_Servoi_Ri;60;Nein;432
+23868-3;110917;SNV IgM Titr Ser;Beatmung_MS_Servoi_Ti_Tges;61;Nein;433
+26061-2;110917;TBEV Ab Titr Ser;Beatmung_MS_Servoi_Ti_Tges;61;Nein;434
+22607-6;104238;VEEV Ab Titr Ser;Beatmung_MS_Servoi_Vee;62;Nein;435
+22616-7;104238;WEEV IgM Titr Ser;Beatmung_MS_Servoi_Vee;60;Nein;436
+23546-5;104238;VEEV IgM Ser Ql;Beatmung_MS_Servoi_Vee;64;Nein;437
+8051-5;104238;VEEV IgM Ser-aCnc;Beatmung_MS_Servoi_Vee;60;Nein;438
+2462-0;104239;IgE Ser-mCnc;Beatmung_MS_Servoi_Vte;61;Nein;439
+2460-4;104240;IgD Ser-mCnc;Beatmung_MS_Servoi_Vti;61;Nein;440
+2462-0;104240;IgE Ser-mCnc;Beatmung_MS_Servoi_Vti;61;Nein;441
+9574-5;104240;RSV IgM Titr Ser IF;Beatmung_MS_Servoi_Vti;60;Nein;442
+33331-0;104232;WNV IgM Titr Ser;Beatmung_MS_Servoi_WOBv;60;Nein;443
+2022-2;107882;pCO2 CSF;Beatmung_MS_T1_petCO2;60;Nein;444
+4121-0;103264;Amobarbital Dose;Beatmung_MS_VisionA_AMVtotal;64;Nein;445
+12585-6;103265;Creat 2h Ur-mRate;Beatmung_MS_VisionA_BreathRate;60;Nein;446
+12586-4;103265;Creat 4h Ur-mRate;Beatmung_MS_VisionA_BreathRate;60;Nein;447
+12587-2;103265;Creat 6h Ur-mRate;Beatmung_MS_VisionA_BreathRate;60;Nein;448
+12588-0;103265;Creat 8h Ur-mRate;Beatmung_MS_VisionA_BreathRate;60;Nein;449
+13754-7;103265;Hippurate/Creat Ur;Beatmung_MS_VisionA_BreathRate;65;Nein;450
+21112-8;103265;Birth date;Beatmung_MS_VisionA_BreathRate;61;Nein;451
+29528-7;103265;Hippurate/Creat Ur-sRto;Beatmung_MS_VisionA_BreathRate;61;Nein;452
+33798-0;103265;Creat 2h Ur-sRate;Beatmung_MS_VisionA_BreathRate;60;Nein;453
+53120-2;103265;Creat 1h Ur-sRate;Beatmung_MS_VisionA_BreathRate;60;Nein;454
+70266-2;103265;Creat Prt/Ser;Beatmung_MS_VisionA_BreathRate;62;Nein;455
+8867-4;103265;Heart rate;Beatmung_MS_VisionA_BreathRate;61;Nein;456
+93733-4;103265;Creat 5h Ur-mRate;Beatmung_MS_VisionA_BreathRate;60;Nein;457
+93734-2;103265;Creat 5h Ur-sRate;Beatmung_MS_VisionA_BreathRate;60;Nein;458
+18970-4;102885;Pip+Tazo Susc Islt;Beatmung_MS_VisionA_PIP;67;Nein;459
+411-9;102885;Pip+Tazo Islt MLC;Beatmung_MS_VisionA_PIP;67;Nein;460
+412-7;102885;Pip+Tazo Islt MIC;Beatmung_MS_VisionA_PIP;67;Nein;461
+413-5;102885;Pip+Tazo Islt KB;Beatmung_MS_VisionA_PIP;67;Nein;462
+414-3;102885;Pip+Tazo Titr SBT;Beatmung_MS_VisionA_PIP;67;Nein;463
+7044-1;102885;Pip+Tazo Islt Grad strip;Beatmung_MS_VisionA_PIP;67;Nein;464
+26516-5;103262;Platelet # Plas;Beatmung_MS_VisionA_Plateau;61;Nein;465
+11139-3;104187;Metaneph Ur-mCnc;Beatmung_MS_Zephyros_Pmean;61;Nein;466
+19218-7;100807;O2 Ct BldA-sCnc;Beatmung_O2_Balken;100;Nein;467
+19219-5;100807;O2 Ct BldC-sCnc;Beatmung_O2_Balken;100;Nein;468
+19220-3;100807;O2 Ct BldV-sCnc;Beatmung_O2_Balken;100;Nein;469
+19994-3;100807;O2/Total gas setting VFr Vent;Beatmung_O2_Balken;100;Nein;470
+3150-0;100807;Inhaled O2 concentration;Beatmung_O2_Balken;100;Nein;471
+3151-8;100807;Inhaled O2 flow rate;Beatmung_O2_Balken;100;Nein;472
+34163-6;100807;O2 Ct Bld-sCnc;Beatmung_O2_Balken;100;Nein;473
+57800-5;100807;O2 Ct VFr Bld Calc;Beatmung_O2_Balken;100;Nein;474
+19173-4;101596;AFP Plr-sCnc;Beatmung_Proc_AF;63;Nein;475
+30428-7;101627;MCV RBC;Beatmung_Proc_AMV;67;Nein;476
+51641-9;101627;MSCV RBC;Beatmung_Proc_AMV;62;Nein;477
+787-2;101627;MCV RBC Auto;Beatmung_Proc_AMV;60;Nein;478
+3148-4;101628;pO2 Gas;Beatmung_Proc_ASB;67;Nein;479
+29554-3;101642;Procedure;Beatmung_Proc_BedingteVerordnung;62;Nein;480
+26455-6;101630;RBC # Fld;Beatmung_Proc_Flow;62;Nein;481
+3151-8;101630;Inhaled O2 flow rate;Beatmung_Proc_Flow;62;Nein;482
+56475-7;101645;Salmonella sp Ag form Islt Aggl;Beatmung_Proc_GeraetForm;62;Nein;483
+3151-8;101620;Inhaled O2 flow rate;Beatmung_VO_Flow;100;Nein;484
+56475-7;101644;Salmonella sp Ag form Islt Aggl;Beatmung_VO_GeraetForm;100;Nein;485
+19218-7;101624;O2 Ct BldA-sCnc;Beatmung_VO_O2;100;Nein;486
+19219-5;101624;O2 Ct BldC-sCnc;Beatmung_VO_O2;100;Nein;487
+19220-3;101624;O2 Ct BldV-sCnc;Beatmung_VO_O2;100;Nein;488
+19994-3;101624;O2/Total gas setting VFr Vent;Beatmung_VO_O2;100;Nein;489
+3150-0;101624;Inhaled O2 concentration;Beatmung_VO_O2;100;Nein;490
+3151-8;101624;Inhaled O2 flow rate;Beatmung_VO_O2;100;Nein;491
+34163-6;101624;O2 Ct Bld-sCnc;Beatmung_VO_O2;100;Nein;492
+57800-5;101624;O2 Ct VFr Bld Calc;Beatmung_VO_O2;100;Nein;493
+6039-2;100418;Beef IgE Qn;Befinden;63;Nein;494
+19728-5;100359;Beet IgE Qn;Bewegen;67;Nein;495
+6039-2;100359;Beef IgE Qn;Bewegen;67;Nein;496
+39156-5;105045;BMI;BIS;67;Nein;497
+8462-4;105045;BP dias;BIS;60;Nein;498
+8310-5;106333;Body temperature;CardioHelpMaquet_ES_TemperaturSoll;77;Nein;499
+15687-7;106331;Duck Feather IgE RAST Ql;CardioHelpMaquet_MS_DruckArteriell;63;Nein;500
+55594-6;106331;Duck Feather IgE Ql;CardioHelpMaquet_MS_DruckArteriell;61;Nein;501
+6100-2;106331;Duck Feather IgE Qn;CardioHelpMaquet_MS_DruckArteriell;61;Nein;502
+8310-5;106327;Body temperature;CardioHelpMaquet_MS_TemperaturIst;69;Nein;503
+8310-5;106337;Body temperature;CardioHelpMaquet_VO_TemperaturSoll;77;Nein;504
+48159-8;102021;HCV Ab s/co SerPl IA;CO;100;Nein;505
+51656-7;102021;HCV Ab s/co Fld;CO;100;Nein;506
+11211-0;101423;CO2 Fld-sCnc;CO2;100;Nein;507
+13538-4;101423;CO2 Ur-sCnc;CO2;100;Nein;508
+14040-0;101423;CO2 Stl-sCnc;CO2;100;Nein;509
+14640-7;101423;CO2 Dial fld-sCnc;CO2;100;Nein;510
+16551-4;101423;CO2 BldC-sCnc;CO2;100;Nein;511
+2026-3;101423;CO2 BldA-sCnc;CO2;100;Nein;512
+2027-1;101423;CO2 BldV-sCnc;CO2;100;Nein;513
+2028-9;101423;CO2 SerPl-sCnc;CO2;100;Nein;514
+20565-8;101423;CO2 Bld-sCnc;CO2;100;Nein;515
+32306-3;101423;pCO2 Ur;CO2;60;Nein;516
+34520-7;101423;CO2 BldCo-sCnc;CO2;100;Nein;517
+34728-6;101423;CO2 Bld Calc-sCnc;CO2;100;Nein;518
+38253-1;101423;CO2 Spec-sCnc;CO2;100;Nein;519
+39465-0;101423;CO2 BldCoV-sCnc;CO2;100;Nein;520
+41647-9;101423;CO2 BldA Calc-sCnc;CO2;100;Nein;521
+51781-3;101423;CO2 BldC Calc-sCnc;CO2;100;Nein;522
+57921-9;101423;CO2 BldCoA Calc-sCnc;CO2;100;Nein;523
+48159-8;24;HCV Ab s/co SerPl IA;CO_Fall_MergeSource;100;Nein;524
+51656-7;24;HCV Ab s/co Fld;CO_Fall_MergeSource;100;Nein;525
+48159-8;15;HCV Ab s/co SerPl IA;CO_Patient_MergeSource;100;Nein;526
+51656-7;15;HCV Ab s/co Fld;CO_Patient_MergeSource;100;Nein;527
+4199-6;1278;Codeine Dose;Diagnose;60;Nein;528
+4216-8;1278;DAM Dose;Diagnose;62;Nein;529
+4222-6;1278;Digoxin Dose;Diagnose;70;Nein;530
+10931-4;100135;Daphnia IgE Qn;Drainagen;61;Nein;531
+6092-1;100135;Crab IgE Qn;Drainagen;60;Nein;532
+6095-4;100135;D farinae IgE Qn;Drainagen;64;Nein;533
+14196-0;102046;Retics #;ETVI;60;Nein;534
+20874-4;106521;Manganese Tiss-mCnt;Fall_Anamnese_Auslandsaufenthalt_Nein;62;Nein;535
+25467-2;106521;Manganese SerPl-sCnc;Fall_Anamnese_Auslandsaufenthalt_Nein;61;Nein;536
+26787-2;106521;Anserine Amn-sCnc;Fall_Anamnese_Auslandsaufenthalt_Nein;60;Nein;537
+42221-2;106521;Manganese Ur-sCnc;Fall_Anamnese_Auslandsaufenthalt_Nein;60;Nein;538
+97186-1;108100;B para IS1001 DNA L resp Ql NAA+non-prb;Fall_Para;100;Nein;539
+19817-6;106597;Complications;Fall_Vormedikation_Keine_Vorhanden;62;Nein;540
+57833-6;106597;Rx for medication;Fall_Vormedikation_Keine_Vorhanden;73;Nein;541
+57833-6;105241;Rx for medication;F_MedDoku_Vormedikation;60;Nein;542
+60590-7;105241;Medication dispensed.brief Doc;F_MedDoku_Vormedikation;60;Nein;543
+30525-0;102045;Age;GEF;67;Nein;544
+9279-1;103694;Resp rate;Hypothermie_Coolgard_Doku-Rate;62;Nein;545
+9279-1;103686;Resp rate;Hypothermie_Coolgard_VO_Rate;62;Nein;546
+3184-9;103568;ACT Bld;IABP_ACAT_ES_Unterstuetzungsverhaeltnis;62;Nein;547
+3186-4;103568;Fact IXa PPP-aCnc;IABP_ACAT_ES_Unterstuetzungsverhaeltnis;62;Nein;548
+96826-3;106469;Cardio Score SOFA;IABP_CARDIOSAVE_ES_IABPAufblasen;62;Nein;549
+11187-2;104354;P frequentans IgE Qn;IABP_DatascopeCS300_ES_IABP_Frequenz;61;Nein;550
+11187-2;102121;P frequentans IgE Qn;IABP_Frequenz;61;Nein;551
+15184-5;102120;IgG Ser Ql IEP;IABP_Trigger;62;Nein;552
+33603-2;102120;BPI IgG Ser-aCnc;IABP_Trigger;64;Nein;553
+8302-2;108522;Body height;IstSoziale_Besonderheit;61;Nein;554
+8310-5;101007;Body temperature;KlinikTemperaturstatus;62;Nein;555
+13944-4;100091;LAP WBC Cont Micro-cCnc;LAP;100;Nein;557
+2744-1;100091;pH BldA;LAP;60;Nein;558
+8310-5;103737;Body temperature;Lungenersatzverfahren_Anordnung_ECMOTemperatur;73;Nein;560
+29554-3;102093;Procedure;Lungenersatzverfahren_Anordnung_ILAPressure;60;Nein;561
+8310-5;103734;Body temperature;Lungenersatzverfahren_Doku_ECMOTemperatur;69;Nein;562
+4659-9;100091;LAP WBC-cCnc;LAP;100;Ja;559
+8310-5;103731;Body temperature;Lungenersatzverfahren_Doku_Temperatur;77;Nein;563
+3184-9;103586;ACT Bld;Lungenersatzverfahren_MS_ECMO_ACT;60;Nein;564
+17051-4;106289;Laxatives Ur;Lungenersatzverfahren_MS_ILAactivve_P1;64;Nein;565
+17051-4;106290;Laxatives Ur;Lungenersatzverfahren_MS_ILAactivve_P2;64;Nein;566
+17051-4;106291;Laxatives Ur;Lungenersatzverfahren_MS_ILAactivve_P3;64;Nein;567
+17051-4;106293;Laxatives Ur;Lungenersatzverfahren_MS_ILAactivve_P4;64;Nein;568
+19211-2;104117;pO2 BldMV;Lungenersatzverfahren_MS_ILA_SpO2;60;Nein;569
+2019-8;104117;pCO2 BldA;Lungenersatzverfahren_MS_ILA_SpO2;60;Nein;570
+2703-7;104117;pO2 BldA;Lungenersatzverfahren_MS_ILA_SpO2;63;Nein;571
+2708-6;104117;SaO2 % BldA;Lungenersatzverfahren_MS_ILA_SpO2;60;Nein;572
+3148-4;104117;pO2 Gas;Lungenersatzverfahren_MS_ILA_SpO2;67;Nein;573
+2746-6;102055;pH BldV;LVP;60;Nein;574
+2711-0;102023;SaO2 % BldV;LVSA;62;Nein;575
+14619-1;104833;Appearance Plas;NEV_Apherese_ES_Multi_Plasma;67;Nein;576
+14619-1;104834;Appearance Plas;NEV_Apherese_ES_Multi_PlasmaVolumen;67;Nein;577
+8310-5;104831;Body temperature;NEV_Apherese_ES_Multi_Temperatur;63;Nein;578
+11158-3;104855;Appearance Ser;NEV_Apherese_VO_Balken;64;Nein;579
+14619-1;104846;Appearance Plas;NEV_Apherese_VO_Multi_Plasma_Volumen;67;Nein;580
+8310-5;104844;Body temperature;NEV_Apherese_VO_Multi_Temperatur;63;Nein;581
+11158-3;104849;Appearance Ser;NEV_Apherese_VO_SpülloesungAntikoag;64;Nein;582
+2004-0;104985;Calcium Ur-sCnc;NEV_CRRT_Doku_CalciumLoesung;62;Nein;583
+24518-3;104985;Calcium/Creat Ur-sRto;NEV_CRRT_Doku_CalciumLoesung;62;Nein;584
+27037-1;104985;Calcium/Creat 2h Ur;NEV_CRRT_Doku_CalciumLoesung;60;Nein;585
+29527-9;104986;Citrate/Creat Ur-sRto;NEV_CRRT_Doku_CitratLoesung;64;Nein;586
+30053-3;104986;Leucine/Creat Ur-Rto;NEV_CRRT_Doku_CitratLoesung;60;Nein;587
+34266-7;104986;Citrate Ur-sCnc;NEV_CRRT_Doku_CitratLoesung;63;Nein;588
+12181-4;104974;Calcium Fld-sCnc;NEV_CRRT_ES_Multi_CalciumFiltrat;63;Nein;589
+14417-0;104974;Calcium Prt-sCnc;NEV_CRRT_ES_Multi_CalciumFiltrat;63;Nein;590
+14637-3;104974;Calcium 24h Ur-sRate;NEV_CRRT_ES_Multi_CalciumFiltrat;62;Nein;591
+16518-3;104974;Calcium 2h Ur-mRate;NEV_CRRT_ES_Multi_CalciumFiltrat;63;Nein;592
+18186-7;104974;Calcium 12h Ur-mRate;NEV_CRRT_ES_Multi_CalciumFiltrat;62;Nein;593
+24518-3;104974;Calcium/Creat Ur-sRto;NEV_CRRT_ES_Multi_CalciumFiltrat;65;Nein;594
+27037-1;104974;Calcium/Creat 2h Ur;NEV_CRRT_ES_Multi_CalciumFiltrat;63;Nein;595
+50836-6;104974;Calcium Hair-sCnt;NEV_CRRT_ES_Multi_CalciumFiltrat;67;Nein;596
+51610-4;104974;Calcium 12h Ur-sRate;NEV_CRRT_ES_Multi_CalciumFiltrat;62;Nein;597
+2128-7;104975;Citrate Ur-mCnc;NEV_CRRT_ES_Multi_CitratBlut;60;Nein;598
+29527-9;104975;Citrate/Creat Ur-sRto;NEV_CRRT_ES_Multi_CitratBlut;61;Nein;599
+34266-7;104975;Citrate Ur-sCnc;NEV_CRRT_ES_Multi_CitratBlut;60;Nein;600
+70264-7;113047;Creat Plr/Ser;NEV_CRRT_ES_Multi_praeF;61;Nein;601
+70266-2;113047;Creat Prt/Ser;NEV_CRRT_ES_Multi_praeF;61;Nein;602
+8867-4;113047;Heart rate;NEV_CRRT_ES_Multi_praeF;60;Nein;603
+19254-2;105049;pO2 temp adj Bld;NEV_CRRT_ES_Multi_Temp;62;Nein;604
+19255-9;105049;pO2 temp adj BldA;NEV_CRRT_ES_Multi_Temp;62;Nein;605
+19256-7;105049;pO2 temp adj BldC;NEV_CRRT_ES_Multi_Temp;62;Nein;606
+19258-3;105049;pO2 temp adj BldV;NEV_CRRT_ES_Multi_Temp;62;Nein;607
+32771-8;105049;pCO2 temp adj BldA;NEV_CRRT_ES_Multi_Temp;62;Nein;608
+33254-4;105049;pH temp adj BldA;NEV_CRRT_ES_Multi_Temp;62;Nein;609
+34705-4;105049;pCO2 temp adj Bld;NEV_CRRT_ES_Multi_Temp;62;Nein;610
+39485-8;105049;pH temp adj BldC;NEV_CRRT_ES_Multi_Temp;62;Nein;611
+39486-6;105049;pH temp adj BldV;NEV_CRRT_ES_Multi_Temp;62;Nein;612
+40619-9;105049;pCO2 temp adj BldV;NEV_CRRT_ES_Multi_Temp;62;Nein;613
+40620-7;105049;pCO2 temp adj BldC;NEV_CRRT_ES_Multi_Temp;62;Nein;614
+47720-8;105049;pH temp adj BldCo;NEV_CRRT_ES_Multi_Temp;62;Nein;615
+8330-3;105049;Bdy temp IV;NEV_CRRT_ES_Multi_Temp;62;Nein;616
+8334-5;105049;Bdy temp Bladder;NEV_CRRT_ES_Multi_Temp;62;Nein;617
+12585-6;104973;Creat 2h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;62;Nein;618
+12586-4;104973;Creat 4h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;62;Nein;619
+12587-2;104973;Creat 6h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;62;Nein;620
+12588-0;104973;Creat 8h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;62;Nein;621
+12589-8;104973;Creat 12h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;61;Nein;622
+13001-3;104973;Mandelate/Creat Ur;NEV_CRRT_ES_Multi_Temperatur;61;Nein;623
+13754-7;104973;Hippurate/Creat Ur;NEV_CRRT_ES_Multi_Temperatur;61;Nein;624
+13789-3;104973;PETN/Creat Ur;NEV_CRRT_ES_Multi_Temperatur;64;Nein;625
+16285-9;104973;Creat/Prot Ur;NEV_CRRT_ES_Multi_Temperatur;64;Nein;626
+16689-2;104973;Creat 48h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;61;Nein;627
+16690-0;104973;Creat 72h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;61;Nein;628
+18475-4;104973;Phe/Creat Ur-sRto;NEV_CRRT_ES_Multi_Temperatur;62;Nein;629
+2162-6;104973;Creat 24h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;61;Nein;630
+24522-5;104973;Epineph/Creat Ur-sRto;NEV_CRRT_ES_Multi_Temperatur;61;Nein;631
+25122-3;104973;PETN/Creat Ur-sRto;NEV_CRRT_ES_Multi_Temperatur;61;Nein;632
+28604-7;104973;PETN/Creat Ur-Rto;NEV_CRRT_ES_Multi_Temperatur;62;Nein;633
+2890-2;104973;Prot/Creat Ur;NEV_CRRT_ES_Multi_Temperatur;64;Nein;634
+30055-8;104973;Phe/Creat Ur-Rto;NEV_CRRT_ES_Multi_Temperatur;65;Nein;635
+58372-4;104973;Meprobamate/Creat Ur;NEV_CRRT_ES_Multi_Temperatur;63;Nein;636
+58998-6;104973;Creat 18h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;61;Nein;637
+8310-5;104973;Body temperature;NEV_CRRT_ES_Multi_Temperatur;71;Nein;638
+93733-4;104973;Creat 5h Ur-mRate;NEV_CRRT_ES_Multi_Temperatur;62;Nein;639
+50757-4;104972;CK/CK MB Bld-cRto;NEV_CRRT_MS_Multi_artDruck;60;Nein;640
+70266-2;104959;Creat Prt/Ser;NEV_CRRT_MS_Multi_BehandlungszeitAktuell;60;Nein;641
+21232-4;104967;Creat BldA-mCnc;NEV_CRRT_MS_Multi_Bilanz;62;Nein;642
+21232-4;106402;Creat BldA-mCnc;NEV_CRRT_MS_Multi_Bilanz_ml;62;Nein;643
+12181-4;104968;Calcium Fld-sCnc;NEV_CRRT_MS_Multi_Calciumfluss;61;Nein;644
+14417-0;104968;Calcium Prt-sCnc;NEV_CRRT_MS_Multi_Calciumfluss;67;Nein;645
+16526-6;104968;Calcium/Prot SerPl;NEV_CRRT_MS_Multi_Calciumfluss;63;Nein;646
+24518-3;104968;Calcium/Creat Ur-sRto;NEV_CRRT_MS_Multi_Calciumfluss;63;Nein;647
+27037-1;104968;Calcium/Creat 2h Ur;NEV_CRRT_MS_Multi_Calciumfluss;62;Nein;648
+27172-6;104968;Calcium 24h Stl-mCnt;NEV_CRRT_MS_Multi_Calciumfluss;60;Nein;649
+53502-1;104968;Calcium Spec-sCnt;NEV_CRRT_MS_Multi_Calciumfluss;65;Nein;650
+14417-0;104962;Calcium Prt-sCnc;NEV_CRRT_MS_Multi_CalciumVolKum;65;Nein;651
+16526-6;104962;Calcium/Prot SerPl;NEV_CRRT_MS_Multi_CalciumVolKum;62;Nein;652
+24518-3;104962;Calcium/Creat Ur-sRto;NEV_CRRT_MS_Multi_CalciumVolKum;62;Nein;653
+27037-1;104962;Calcium/Creat 2h Ur;NEV_CRRT_MS_Multi_CalciumVolKum;60;Nein;654
+53502-1;104962;Calcium Spec-sCnt;NEV_CRRT_MS_Multi_CalciumVolKum;63;Nein;655
+29527-9;104969;Citrate/Creat Ur-sRto;NEV_CRRT_MS_Multi_Citratfluss;60;Nein;656
+70266-2;104970;Creat Prt/Ser;NEV_CRRT_MS_Multi_TMP;60;Nein;657
+39982-4;104961;Creat BS Ur-mCnc;NEV_CRRT_MS_Multi_UFR_BFRVerhaeltnis;65;Nein;658
+40133-1;104961;Creat BS Ur-sCnc;NEV_CRRT_MS_Multi_UFR_BFRVerhaeltnis;65;Nein;659
+50832-5;104961;Boron/Creat Ur-sRto;NEV_CRRT_MS_Multi_UFR_BFRVerhaeltnis;65;Nein;660
+75218-8;105013;Case rprt;NEV_CRRT_VO_Balken;62;Nein;661
+12181-4;105006;Calcium Fld-sCnc;NEV_CRRT_VO_CalciumLoesung;63;Nein;662
+2004-0;105006;Calcium Ur-sCnc;NEV_CRRT_VO_CalciumLoesung;65;Nein;663
+24518-3;105006;Calcium/Creat Ur-sRto;NEV_CRRT_VO_CalciumLoesung;60;Nein;664
+53502-1;105006;Calcium Spec-sCnt;NEV_CRRT_VO_CalciumLoesung;61;Nein;665
+15038-3;105007;Citrate SerPl-sCnc;NEV_CRRT_VO_CitratLoesung;61;Nein;666
+2128-7;105007;Citrate Ur-mCnc;NEV_CRRT_VO_CitratLoesung;61;Nein;667
+29527-9;105007;Citrate/Creat Ur-sRto;NEV_CRRT_VO_CitratLoesung;62;Nein;668
+34266-7;105007;Citrate Ur-sCnc;NEV_CRRT_VO_CitratLoesung;67;Nein;669
+13476-7;105011;Silver/Creat Ur;NEV_CRRT_VO_Filter;62;Nein;670
+87925-4;105011;RPR CSF-Titr;NEV_CRRT_VO_Filter;61;Nein;671
+12181-4;104995;Calcium Fld-sCnc;NEV_CRRT_VO_Multi_CalciumFiltrat;63;Nein;672
+14417-0;104995;Calcium Prt-sCnc;NEV_CRRT_VO_Multi_CalciumFiltrat;63;Nein;673
+14637-3;104995;Calcium 24h Ur-sRate;NEV_CRRT_VO_Multi_CalciumFiltrat;62;Nein;674
+16518-3;104995;Calcium 2h Ur-mRate;NEV_CRRT_VO_Multi_CalciumFiltrat;63;Nein;675
+18186-7;104995;Calcium 12h Ur-mRate;NEV_CRRT_VO_Multi_CalciumFiltrat;62;Nein;676
+24518-3;104995;Calcium/Creat Ur-sRto;NEV_CRRT_VO_Multi_CalciumFiltrat;65;Nein;677
+27037-1;104995;Calcium/Creat 2h Ur;NEV_CRRT_VO_Multi_CalciumFiltrat;63;Nein;678
+50836-6;104995;Calcium Hair-sCnt;NEV_CRRT_VO_Multi_CalciumFiltrat;67;Nein;679
+51610-4;104995;Calcium 12h Ur-sRate;NEV_CRRT_VO_Multi_CalciumFiltrat;62;Nein;680
+2128-7;104996;Citrate Ur-mCnc;NEV_CRRT_VO_Multi_CitratBlut;60;Nein;681
+29527-9;104996;Citrate/Creat Ur-sRto;NEV_CRRT_VO_Multi_CitratBlut;61;Nein;682
+34266-7;104996;Citrate Ur-sCnc;NEV_CRRT_VO_Multi_CitratBlut;60;Nein;683
+70264-7;113048;Creat Plr/Ser;NEV_CRRT_VO_Multi_praeF;61;Nein;684
+70266-2;113048;Creat Prt/Ser;NEV_CRRT_VO_Multi_praeF;61;Nein;685
+8867-4;113048;Heart rate;NEV_CRRT_VO_Multi_praeF;60;Nein;686
+19254-2;105050;pO2 temp adj Bld;NEV_CRRT_VO_Multi_Temp;62;Nein;687
+19255-9;105050;pO2 temp adj BldA;NEV_CRRT_VO_Multi_Temp;62;Nein;688
+19256-7;105050;pO2 temp adj BldC;NEV_CRRT_VO_Multi_Temp;62;Nein;689
+19258-3;105050;pO2 temp adj BldV;NEV_CRRT_VO_Multi_Temp;62;Nein;690
+32771-8;105050;pCO2 temp adj BldA;NEV_CRRT_VO_Multi_Temp;62;Nein;691
+33254-4;105050;pH temp adj BldA;NEV_CRRT_VO_Multi_Temp;62;Nein;692
+34705-4;105050;pCO2 temp adj Bld;NEV_CRRT_VO_Multi_Temp;62;Nein;693
+39485-8;105050;pH temp adj BldC;NEV_CRRT_VO_Multi_Temp;62;Nein;694
+39486-6;105050;pH temp adj BldV;NEV_CRRT_VO_Multi_Temp;62;Nein;695
+40619-9;105050;pCO2 temp adj BldV;NEV_CRRT_VO_Multi_Temp;62;Nein;696
+40620-7;105050;pCO2 temp adj BldC;NEV_CRRT_VO_Multi_Temp;62;Nein;697
+47720-8;105050;pH temp adj BldCo;NEV_CRRT_VO_Multi_Temp;62;Nein;698
+8330-3;105050;Bdy temp IV;NEV_CRRT_VO_Multi_Temp;62;Nein;699
+8334-5;105050;Bdy temp Bladder;NEV_CRRT_VO_Multi_Temp;62;Nein;700
+12585-6;104994;Creat 2h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;62;Nein;701
+12586-4;104994;Creat 4h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;62;Nein;702
+12587-2;104994;Creat 6h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;62;Nein;703
+12588-0;104994;Creat 8h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;62;Nein;704
+12589-8;104994;Creat 12h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;61;Nein;705
+13001-3;104994;Mandelate/Creat Ur;NEV_CRRT_VO_Multi_Temperatur;61;Nein;706
+13754-7;104994;Hippurate/Creat Ur;NEV_CRRT_VO_Multi_Temperatur;61;Nein;707
+13789-3;104994;PETN/Creat Ur;NEV_CRRT_VO_Multi_Temperatur;64;Nein;708
+16285-9;104994;Creat/Prot Ur;NEV_CRRT_VO_Multi_Temperatur;64;Nein;709
+16689-2;104994;Creat 48h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;61;Nein;710
+16690-0;104994;Creat 72h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;61;Nein;711
+18475-4;104994;Phe/Creat Ur-sRto;NEV_CRRT_VO_Multi_Temperatur;62;Nein;712
+2162-6;104994;Creat 24h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;61;Nein;713
+24522-5;104994;Epineph/Creat Ur-sRto;NEV_CRRT_VO_Multi_Temperatur;61;Nein;714
+25122-3;104994;PETN/Creat Ur-sRto;NEV_CRRT_VO_Multi_Temperatur;61;Nein;715
+28604-7;104994;PETN/Creat Ur-Rto;NEV_CRRT_VO_Multi_Temperatur;62;Nein;716
+2890-2;104994;Prot/Creat Ur;NEV_CRRT_VO_Multi_Temperatur;64;Nein;717
+30055-8;104994;Phe/Creat Ur-Rto;NEV_CRRT_VO_Multi_Temperatur;65;Nein;718
+58372-4;104994;Meprobamate/Creat Ur;NEV_CRRT_VO_Multi_Temperatur;63;Nein;719
+58998-6;104994;Creat 18h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;61;Nein;720
+8310-5;104994;Body temperature;NEV_CRRT_VO_Multi_Temperatur;71;Nein;721
+93733-4;104994;Creat 5h Ur-mRate;NEV_CRRT_VO_Multi_Temperatur;62;Nein;722
+75218-8;105010;Case rprt;NEV_CRRT_VO_Option;62;Nein;723
+75218-8;105003;Case rprt;NEV_CRRT_VO_SpülloesungAntikoag;62;Nein;724
+14934-4;104889;Urate Ur-sCnc;NEV_HD_ES_4008HS_IsoUF_Rate;61;Nein;725
+9279-1;104889;Resp rate;NEV_HD_ES_4008HS_IsoUF_Rate;63;Nein;726
+12212-7;104882;EBV NA IgG Titr Ser IF;NEV_HD_ES_4008HS_SollNa;100;Nein;727
+16825-2;104882;EBV NA IgG Fld Ql;NEV_HD_ES_4008HS_SollNa;100;Nein;728
+21260-5;104882;EBV NA Ab Titr Ser IF;NEV_HD_ES_4008HS_SollNa;100;Nein;729
+22296-8;104882;EBV NA Ab Ser Ql;NEV_HD_ES_4008HS_SollNa;100;Nein;730
+30083-0;104882;EBV NA IgG Ser IA-aCnc;NEV_HD_ES_4008HS_SollNa;100;Nein;731
+31372-6;104882;EBV NA Ab Ser-aCnc;NEV_HD_ES_4008HS_SollNa;100;Nein;732
+31373-4;104882;EBV NA IgG CSF-aCnc;NEV_HD_ES_4008HS_SollNa;100;Nein;733
+31374-2;104882;EBV NA IgG Ser-aCnc;NEV_HD_ES_4008HS_SollNa;100;Nein;734
+39103-7;104882;FLUAV NA cDNA Spec NAA+probe;NEV_HD_ES_4008HS_SollNa;100;Nein;735
+48584-7;104882;NM ExG GE time p 100mg Na octanoate PO;NEV_HD_ES_4008HS_SollNa;100;Nein;736
+48585-4;104882;NM ExG GE time p 100mg Na acetate PO;NEV_HD_ES_4008HS_SollNa;100;Nein;737
+49135-7;104882;Fract excret Na Ur+SerPl-Rto;NEV_HD_ES_4008HS_SollNa;100;Nein;738
+5155-7;104882;EBV NA IgG Ser Ql IF;NEV_HD_ES_4008HS_SollNa;100;Nein;739
+5156-5;104882;EBV NA IgG Ser Ql IA;NEV_HD_ES_4008HS_SollNa;100;Nein;740
+53129-3;104882;Na Urate Cry #/area UrnS HPF;NEV_HD_ES_4008HS_SollNa;100;Nein;741
+53788-6;104882;Na Urate Cry UrnS Ql Micro;NEV_HD_ES_4008HS_SollNa;100;Nein;742
+55134-1;104882;FLUAV NA RNA Islt NAA+probe;NEV_HD_ES_4008HS_SollNa;100;Nein;743
+61101-2;104882;FLUAV NA RNA Spec Seq;NEV_HD_ES_4008HS_SollNa;100;Nein;744
+66493-8;104882;EBV NA 1 IgG Ser-aCnc;NEV_HD_ES_4008HS_SollNa;100;Nein;745
+72200-9;104882;FLUAV NA seg sequence ID Islt Seq;NEV_HD_ES_4008HS_SollNa;100;Nein;746
+7883-2;104882;EBV NA IgG Ser Ql;NEV_HD_ES_4008HS_SollNa;100;Nein;747
+7884-0;104882;EBV NA IgM Ser Ql;NEV_HD_ES_4008HS_SollNa;100;Nein;748
+87716-7;104882;FLUAV NA gene Islt-Seq;NEV_HD_ES_4008HS_SollNa;100;Nein;749
+92244-3;104882;Micro resist mut NA change type Islt/Spm;NEV_HD_ES_4008HS_SollNa;100;Nein;750
+92245-0;104882;Micro resist mut NA change Islt/Spm;NEV_HD_ES_4008HS_SollNa;100;Nein;751
+8310-5;104880;Body temperature;NEV_HD_ES_4008HS_Temperatur;77;Nein;752
+12212-7;104898;EBV NA IgG Titr Ser IF;NEV_HD_ES_4008onl_SollNa;100;Nein;753
+16825-2;104898;EBV NA IgG Fld Ql;NEV_HD_ES_4008onl_SollNa;100;Nein;754
+21260-5;104898;EBV NA Ab Titr Ser IF;NEV_HD_ES_4008onl_SollNa;100;Nein;755
+22296-8;104898;EBV NA Ab Ser Ql;NEV_HD_ES_4008onl_SollNa;100;Nein;756
+30083-0;104898;EBV NA IgG Ser IA-aCnc;NEV_HD_ES_4008onl_SollNa;100;Nein;757
+31372-6;104898;EBV NA Ab Ser-aCnc;NEV_HD_ES_4008onl_SollNa;100;Nein;758
+31373-4;104898;EBV NA IgG CSF-aCnc;NEV_HD_ES_4008onl_SollNa;100;Nein;759
+31374-2;104898;EBV NA IgG Ser-aCnc;NEV_HD_ES_4008onl_SollNa;100;Nein;760
+39103-7;104898;FLUAV NA cDNA Spec NAA+probe;NEV_HD_ES_4008onl_SollNa;100;Nein;761
+48584-7;104898;NM ExG GE time p 100mg Na octanoate PO;NEV_HD_ES_4008onl_SollNa;100;Nein;762
+48585-4;104898;NM ExG GE time p 100mg Na acetate PO;NEV_HD_ES_4008onl_SollNa;100;Nein;763
+49135-7;104898;Fract excret Na Ur+SerPl-Rto;NEV_HD_ES_4008onl_SollNa;100;Nein;764
+5155-7;104898;EBV NA IgG Ser Ql IF;NEV_HD_ES_4008onl_SollNa;100;Nein;765
+5156-5;104898;EBV NA IgG Ser Ql IA;NEV_HD_ES_4008onl_SollNa;100;Nein;766
+53129-3;104898;Na Urate Cry #/area UrnS HPF;NEV_HD_ES_4008onl_SollNa;100;Nein;767
+53788-6;104898;Na Urate Cry UrnS Ql Micro;NEV_HD_ES_4008onl_SollNa;100;Nein;768
+55134-1;104898;FLUAV NA RNA Islt NAA+probe;NEV_HD_ES_4008onl_SollNa;100;Nein;769
+61101-2;104898;FLUAV NA RNA Spec Seq;NEV_HD_ES_4008onl_SollNa;100;Nein;770
+66493-8;104898;EBV NA 1 IgG Ser-aCnc;NEV_HD_ES_4008onl_SollNa;100;Nein;771
+72200-9;104898;FLUAV NA seg sequence ID Islt Seq;NEV_HD_ES_4008onl_SollNa;100;Nein;772
+7883-2;104898;EBV NA IgG Ser Ql;NEV_HD_ES_4008onl_SollNa;100;Nein;773
+7884-0;104898;EBV NA IgM Ser Ql;NEV_HD_ES_4008onl_SollNa;100;Nein;774
+87716-7;104898;FLUAV NA gene Islt-Seq;NEV_HD_ES_4008onl_SollNa;100;Nein;775
+92244-3;104898;Micro resist mut NA change type Islt/Spm;NEV_HD_ES_4008onl_SollNa;100;Nein;776
+92245-0;104898;Micro resist mut NA change Islt/Spm;NEV_HD_ES_4008onl_SollNa;100;Nein;777
+8310-5;104896;Body temperature;NEV_HD_ES_4008onl_Temperatur;77;Nein;778
+6179-6;104873;Mouse Epith IgE Qn;NEV_HD_MS_4008HS_Leitfähigkeit;61;Nein;779
+281-6;106390;Imipenem Titr SBT;NEV_HD_MS_4008HS_Rest_Zeit_min;61;Nein;780
+6179-6;104864;Mouse Epith IgE Qn;NEV_HD_MS_4008onl_Leitfähigkeit;61;Nein;781
+281-6;106385;Imipenem Titr SBT;NEV_HD_MS_4008onl_Rest_Zeit_min;61;Nein;782
+12212-7;104938;EBV NA IgG Titr Ser IF;NEV_HD_VO_4008HS_Soll_Na;100;Nein;783
+16825-2;104938;EBV NA IgG Fld Ql;NEV_HD_VO_4008HS_Soll_Na;100;Nein;784
+21260-5;104938;EBV NA Ab Titr Ser IF;NEV_HD_VO_4008HS_Soll_Na;100;Nein;785
+22296-8;104938;EBV NA Ab Ser Ql;NEV_HD_VO_4008HS_Soll_Na;100;Nein;786
+30083-0;104938;EBV NA IgG Ser IA-aCnc;NEV_HD_VO_4008HS_Soll_Na;100;Nein;787
+31372-6;104938;EBV NA Ab Ser-aCnc;NEV_HD_VO_4008HS_Soll_Na;100;Nein;788
+31373-4;104938;EBV NA IgG CSF-aCnc;NEV_HD_VO_4008HS_Soll_Na;100;Nein;789
+31374-2;104938;EBV NA IgG Ser-aCnc;NEV_HD_VO_4008HS_Soll_Na;100;Nein;790
+39103-7;104938;FLUAV NA cDNA Spec NAA+probe;NEV_HD_VO_4008HS_Soll_Na;100;Nein;791
+48584-7;104938;NM ExG GE time p 100mg Na octanoate PO;NEV_HD_VO_4008HS_Soll_Na;100;Nein;792
+48585-4;104938;NM ExG GE time p 100mg Na acetate PO;NEV_HD_VO_4008HS_Soll_Na;100;Nein;793
+49135-7;104938;Fract excret Na Ur+SerPl-Rto;NEV_HD_VO_4008HS_Soll_Na;100;Nein;794
+5155-7;104938;EBV NA IgG Ser Ql IF;NEV_HD_VO_4008HS_Soll_Na;100;Nein;795
+5156-5;104938;EBV NA IgG Ser Ql IA;NEV_HD_VO_4008HS_Soll_Na;100;Nein;796
+53129-3;104938;Na Urate Cry #/area UrnS HPF;NEV_HD_VO_4008HS_Soll_Na;100;Nein;797
+53788-6;104938;Na Urate Cry UrnS Ql Micro;NEV_HD_VO_4008HS_Soll_Na;100;Nein;798
+55134-1;104938;FLUAV NA RNA Islt NAA+probe;NEV_HD_VO_4008HS_Soll_Na;100;Nein;799
+61101-2;104938;FLUAV NA RNA Spec Seq;NEV_HD_VO_4008HS_Soll_Na;100;Nein;800
+66493-8;104938;EBV NA 1 IgG Ser-aCnc;NEV_HD_VO_4008HS_Soll_Na;100;Nein;801
+72200-9;104938;FLUAV NA seg sequence ID Islt Seq;NEV_HD_VO_4008HS_Soll_Na;100;Nein;802
+7883-2;104938;EBV NA IgG Ser Ql;NEV_HD_VO_4008HS_Soll_Na;100;Nein;803
+7884-0;104938;EBV NA IgM Ser Ql;NEV_HD_VO_4008HS_Soll_Na;100;Nein;804
+87716-7;104938;FLUAV NA gene Islt-Seq;NEV_HD_VO_4008HS_Soll_Na;100;Nein;805
+92244-3;104938;Micro resist mut NA change type Islt/Spm;NEV_HD_VO_4008HS_Soll_Na;100;Nein;806
+92245-0;104938;Micro resist mut NA change Islt/Spm;NEV_HD_VO_4008HS_Soll_Na;100;Nein;807
+29953-7;104939;ANA Titr Ser;NEV_HD_VO_4008HS_Start_Na;60;Nein;808
+50794-7;104939;OF start NFr RBC;NEV_HD_VO_4008HS_Start_Na;77;Nein;809
+82752-7;104939;Travel start date;NEV_HD_VO_4008HS_Start_Na;77;Nein;810
+8665-2;104939;LMP Start date;NEV_HD_VO_4008HS_Start_Na;77;Nein;811
+8310-5;104936;Body temperature;NEV_HD_VO_4008HS_Temperatur;77;Nein;812
+12301-8;104941;Procaine Ur Ql;NEV_HD_VO_4008HS_UF_Profil;61;Nein;813
+2887-8;104941;Prot Ur Ql;NEV_HD_VO_4008HS_UF_Profil;63;Nein;814
+12212-7;104923;EBV NA IgG Titr Ser IF;NEV_HD_VO_4008onl_SollNa;100;Nein;815
+16825-2;104923;EBV NA IgG Fld Ql;NEV_HD_VO_4008onl_SollNa;100;Nein;816
+21260-5;104923;EBV NA Ab Titr Ser IF;NEV_HD_VO_4008onl_SollNa;100;Nein;817
+22296-8;104923;EBV NA Ab Ser Ql;NEV_HD_VO_4008onl_SollNa;100;Nein;818
+30083-0;104923;EBV NA IgG Ser IA-aCnc;NEV_HD_VO_4008onl_SollNa;100;Nein;819
+31372-6;104923;EBV NA Ab Ser-aCnc;NEV_HD_VO_4008onl_SollNa;100;Nein;820
+31373-4;104923;EBV NA IgG CSF-aCnc;NEV_HD_VO_4008onl_SollNa;100;Nein;821
+31374-2;104923;EBV NA IgG Ser-aCnc;NEV_HD_VO_4008onl_SollNa;100;Nein;822
+39103-7;104923;FLUAV NA cDNA Spec NAA+probe;NEV_HD_VO_4008onl_SollNa;100;Nein;823
+48584-7;104923;NM ExG GE time p 100mg Na octanoate PO;NEV_HD_VO_4008onl_SollNa;100;Nein;824
+48585-4;104923;NM ExG GE time p 100mg Na acetate PO;NEV_HD_VO_4008onl_SollNa;100;Nein;825
+49135-7;104923;Fract excret Na Ur+SerPl-Rto;NEV_HD_VO_4008onl_SollNa;100;Nein;826
+5155-7;104923;EBV NA IgG Ser Ql IF;NEV_HD_VO_4008onl_SollNa;100;Nein;827
+5156-5;104923;EBV NA IgG Ser Ql IA;NEV_HD_VO_4008onl_SollNa;100;Nein;828
+53129-3;104923;Na Urate Cry #/area UrnS HPF;NEV_HD_VO_4008onl_SollNa;100;Nein;829
+53788-6;104923;Na Urate Cry UrnS Ql Micro;NEV_HD_VO_4008onl_SollNa;100;Nein;830
+55134-1;104923;FLUAV NA RNA Islt NAA+probe;NEV_HD_VO_4008onl_SollNa;100;Nein;831
+61101-2;104923;FLUAV NA RNA Spec Seq;NEV_HD_VO_4008onl_SollNa;100;Nein;832
+66493-8;104923;EBV NA 1 IgG Ser-aCnc;NEV_HD_VO_4008onl_SollNa;100;Nein;833
+72200-9;104923;FLUAV NA seg sequence ID Islt Seq;NEV_HD_VO_4008onl_SollNa;100;Nein;834
+7883-2;104923;EBV NA IgG Ser Ql;NEV_HD_VO_4008onl_SollNa;100;Nein;835
+7884-0;104923;EBV NA IgM Ser Ql;NEV_HD_VO_4008onl_SollNa;100;Nein;836
+87716-7;104923;FLUAV NA gene Islt-Seq;NEV_HD_VO_4008onl_SollNa;100;Nein;837
+92244-3;104923;Micro resist mut NA change type Islt/Spm;NEV_HD_VO_4008onl_SollNa;100;Nein;838
+92245-0;104923;Micro resist mut NA change Islt/Spm;NEV_HD_VO_4008onl_SollNa;100;Nein;839
+8310-5;104921;Body temperature;NEV_HD_VO_4008onl_Temperatur;77;Nein;840
+77599-9;102504;Additional documentation;Nierenersatzverfahren_Dokumentation_Abschluss;64;Nein;841
+77599-9;101404;Additional documentation;Nierenersatzverfahren_Dokumentation_Antikoagulatio;73;Nein;842
+77599-9;101417;Additional documentation;Nierenersatzverfahren_Dokumentation_Balken;65;Nein;843
+77599-9;101398;Additional documentation;Nierenersatzverfahren_Dokumentation_Blutfluss;64;Nein;844
+77599-9;102503;Additional documentation;Nierenersatzverfahren_Dokumentation_BlutflussEinst;62;Nein;845
+77599-9;101405;Additional documentation;Nierenersatzverfahren_Dokumentation_Option;65;Nein;846
+77599-9;101391;Additional documentation;Nierenersatzverfahren_Dokumentation_Verfahren;65;Nein;847
+12181-4;102721;Calcium Fld-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;848
+14415-4;102721;Calcium Amn-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;849
+14417-0;102721;Calcium Prt-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;850
+14637-3;102721;Calcium 24h Ur-sRate;Nierenersatzverfahren_Einstell_Calcium;100;Nein;851
+16271-9;102721;Calcium 30M p chal SerPl-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;852
+16518-3;102721;Calcium 2h Ur-mRate;Nierenersatzverfahren_Einstell_Calcium;100;Nein;853
+16519-1;102721;Calcium 10M p chal SerPl-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;854
+16526-6;102721;Calcium/Prot SerPl;Nierenersatzverfahren_Einstell_Calcium;100;Nein;855
+17861-6;102721;Calcium SerPl-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;856
+17862-4;102721;Calcium Ur-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;857
+18186-7;102721;Calcium 12h Ur-mRate;Nierenersatzverfahren_Einstell_Calcium;100;Nein;858
+1996-8;102721;Calcium Bld-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;859
+1998-4;102721;Calcium Dial fld-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;860
+2000-8;102721;Calcium SerPl-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;861
+2001-6;102721;Calcium 24h Stl-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;862
+2004-0;102721;Calcium Ur-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;863
+2005-7;102721;Calcium p 12h fast 2h Ur-sRate;Nierenersatzverfahren_Einstell_Calcium;100;Nein;864
+24518-3;102721;Calcium/Creat Ur-sRto;Nierenersatzverfahren_Einstell_Calcium;100;Nein;865
+25362-5;102721;Calcium 24h Ur-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;866
+27037-1;102721;Calcium/Creat 2h Ur;Nierenersatzverfahren_Einstell_Calcium;100;Nein;867
+27172-6;102721;Calcium 24h Stl-mCnt;Nierenersatzverfahren_Einstell_Calcium;100;Nein;868
+29265-6;102721;Calcium Album cor SerPl-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;869
+33790-7;102721;Calcium sp1 p chal Ur-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;870
+38250-7;102721;Calcium Spec-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;871
+40083-8;102721;Calcium 1D p chal SerPl-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;872
+40230-5;102721;Calcium 1.5h p chal SerPl-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;873
+42593-4;102721;Calcium BldC-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;874
+42857-3;102721;Calcium BldV-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;875
+46099-8;102721;Calcium Album cor SerPl-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;876
+49005-2;102721;Calcium DiafP-sCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;877
+49764-4;102721;Calcium Amn-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;878
+49765-1;102721;Calcium Bld-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;879
+50836-6;102721;Calcium Hair-sCnt;Nierenersatzverfahren_Einstell_Calcium;100;Nein;880
+51610-4;102721;Calcium 12h Ur-sRate;Nierenersatzverfahren_Einstell_Calcium;100;Nein;881
+53502-1;102721;Calcium Spec-sCnt;Nierenersatzverfahren_Einstell_Calcium;100;Nein;882
+57335-2;102721;Calcium 12h Ur-mCnc;Nierenersatzverfahren_Einstell_Calcium;100;Nein;883
+12181-4;102749;Calcium Fld-sCnc;Nierenersatzverfahren_Einstell_CalciumLoesung;67;Nein;884
+14415-4;102749;Calcium Amn-sCnc;Nierenersatzverfahren_Einstell_CalciumLoesung;60;Nein;885
+14417-0;102749;Calcium Prt-sCnc;Nierenersatzverfahren_Einstell_CalciumLoesung;60;Nein;886
+1996-8;102749;Calcium Bld-sCnc;Nierenersatzverfahren_Einstell_CalciumLoesung;60;Nein;887
+2004-0;102749;Calcium Ur-sCnc;Nierenersatzverfahren_Einstell_CalciumLoesung;62;Nein;888
+10567-6;102748;Citrate Smn-sCnc;Nierenersatzverfahren_Einstell_CitratLoesung;62;Nein;889
+2126-1;102748;Citrate Smn-mCnc;Nierenersatzverfahren_Einstell_CitratLoesung;62;Nein;890
+34266-7;102748;Citrate Ur-sCnc;Nierenersatzverfahren_Einstell_CitratLoesung;64;Nein;891
+26516-5;102585;Platelet # Plas;Nierenersatzverfahren_Einstell_Plasmarate;61;Nein;892
+8310-5;102583;Body temperature;Nierenersatzverfahren_Einstell_SollTemperatur;77;Nein;893
+8310-5;102610;Body temperature;Nierenersatzverfahren_Einstell_Temperatur;77;Nein;894
+12181-4;102753;Calcium Fld-sCnc;Nierenersatzverfahren_Mess_CalciumFluss;67;Nein;895
+9279-1;102644;Resp rate;Nierenersatzverfahren_Mess_ISOUFRate;61;Nein;896
+8310-5;102622;Body temperature;Nierenersatzverfahren_Mess_SollTemperatur;71;Nein;897
+8310-5;102623;Body temperature;Nierenersatzverfahren_Mess_Temperatur;71;Nein;898
+2988-4;102626;Testost Ur-mCnc;Nierenersatzverfahren_Mess_UFR;61;Nein;899
+12181-4;102743;Calcium Fld-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;900
+14415-4;102743;Calcium Amn-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;901
+14417-0;102743;Calcium Prt-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;902
+14637-3;102743;Calcium 24h Ur-sRate;Nierenersatzverfahren_VO_Calcium;100;Nein;903
+16271-9;102743;Calcium 30M p chal SerPl-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;904
+16518-3;102743;Calcium 2h Ur-mRate;Nierenersatzverfahren_VO_Calcium;100;Nein;905
+16519-1;102743;Calcium 10M p chal SerPl-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;906
+16526-6;102743;Calcium/Prot SerPl;Nierenersatzverfahren_VO_Calcium;100;Nein;907
+17861-6;102743;Calcium SerPl-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;908
+17862-4;102743;Calcium Ur-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;909
+18186-7;102743;Calcium 12h Ur-mRate;Nierenersatzverfahren_VO_Calcium;100;Nein;910
+1996-8;102743;Calcium Bld-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;911
+1998-4;102743;Calcium Dial fld-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;912
+2000-8;102743;Calcium SerPl-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;913
+2001-6;102743;Calcium 24h Stl-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;914
+2004-0;102743;Calcium Ur-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;915
+2005-7;102743;Calcium p 12h fast 2h Ur-sRate;Nierenersatzverfahren_VO_Calcium;100;Nein;916
+24518-3;102743;Calcium/Creat Ur-sRto;Nierenersatzverfahren_VO_Calcium;100;Nein;917
+25362-5;102743;Calcium 24h Ur-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;918
+27037-1;102743;Calcium/Creat 2h Ur;Nierenersatzverfahren_VO_Calcium;100;Nein;919
+27172-6;102743;Calcium 24h Stl-mCnt;Nierenersatzverfahren_VO_Calcium;100;Nein;920
+29265-6;102743;Calcium Album cor SerPl-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;921
+33790-7;102743;Calcium sp1 p chal Ur-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;922
+38250-7;102743;Calcium Spec-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;923
+40083-8;102743;Calcium 1D p chal SerPl-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;924
+40230-5;102743;Calcium 1.5h p chal SerPl-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;925
+42593-4;102743;Calcium BldC-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;926
+42857-3;102743;Calcium BldV-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;927
+46099-8;102743;Calcium Album cor SerPl-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;928
+49005-2;102743;Calcium DiafP-sCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;929
+49764-4;102743;Calcium Amn-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;930
+49765-1;102743;Calcium Bld-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;931
+50836-6;102743;Calcium Hair-sCnt;Nierenersatzverfahren_VO_Calcium;100;Nein;932
+51610-4;102743;Calcium 12h Ur-sRate;Nierenersatzverfahren_VO_Calcium;100;Nein;933
+53502-1;102743;Calcium Spec-sCnt;Nierenersatzverfahren_VO_Calcium;100;Nein;934
+57335-2;102743;Calcium 12h Ur-mCnc;Nierenersatzverfahren_VO_Calcium;100;Nein;935
+12181-4;102763;Calcium Fld-sCnc;Nierenersatzverfahren_VO_CalciumLoesung;67;Nein;936
+14415-4;102763;Calcium Amn-sCnc;Nierenersatzverfahren_VO_CalciumLoesung;60;Nein;937
+14417-0;102763;Calcium Prt-sCnc;Nierenersatzverfahren_VO_CalciumLoesung;60;Nein;938
+1996-8;102763;Calcium Bld-sCnc;Nierenersatzverfahren_VO_CalciumLoesung;60;Nein;939
+2004-0;102763;Calcium Ur-sCnc;Nierenersatzverfahren_VO_CalciumLoesung;62;Nein;940
+10567-6;102742;Citrate Smn-sCnc;Nierenersatzverfahren_VO_CitratLoesung;62;Nein;941
+2126-1;102742;Citrate Smn-mCnc;Nierenersatzverfahren_VO_CitratLoesung;62;Nein;942
+34266-7;102742;Citrate Ur-sCnc;Nierenersatzverfahren_VO_CitratLoesung;64;Nein;943
+8310-5;102678;Body temperature;Nierenersatzverfahren_VO_Temperatur;77;Nein;944
+2004-0;103121;Calcium Ur-sCnc;Nierenverfahren_Doku_Calciumloesung;62;Nein;945
+2128-7;103122;Citrate Ur-mCnc;Nierenverfahren_Doku_Citratloesung;61;Nein;946
+34266-7;103122;Citrate Ur-sCnc;Nierenverfahren_Doku_Citratloesung;67;Nein;947
+12212-7;103158;EBV NA IgG Titr Ser IF;Nierenverfahren_ES_4008HS_SollNa;100;Nein;948
+16825-2;103158;EBV NA IgG Fld Ql;Nierenverfahren_ES_4008HS_SollNa;100;Nein;949
+21260-5;103158;EBV NA Ab Titr Ser IF;Nierenverfahren_ES_4008HS_SollNa;100;Nein;950
+22296-8;103158;EBV NA Ab Ser Ql;Nierenverfahren_ES_4008HS_SollNa;100;Nein;951
+30083-0;103158;EBV NA IgG Ser IA-aCnc;Nierenverfahren_ES_4008HS_SollNa;100;Nein;952
+31372-6;103158;EBV NA Ab Ser-aCnc;Nierenverfahren_ES_4008HS_SollNa;100;Nein;953
+31373-4;103158;EBV NA IgG CSF-aCnc;Nierenverfahren_ES_4008HS_SollNa;100;Nein;954
+31374-2;103158;EBV NA IgG Ser-aCnc;Nierenverfahren_ES_4008HS_SollNa;100;Nein;955
+39103-7;103158;FLUAV NA cDNA Spec NAA+probe;Nierenverfahren_ES_4008HS_SollNa;100;Nein;956
+48584-7;103158;NM ExG GE time p 100mg Na octanoate PO;Nierenverfahren_ES_4008HS_SollNa;100;Nein;957
+48585-4;103158;NM ExG GE time p 100mg Na acetate PO;Nierenverfahren_ES_4008HS_SollNa;100;Nein;958
+49135-7;103158;Fract excret Na Ur+SerPl-Rto;Nierenverfahren_ES_4008HS_SollNa;100;Nein;959
+5155-7;103158;EBV NA IgG Ser Ql IF;Nierenverfahren_ES_4008HS_SollNa;100;Nein;960
+5156-5;103158;EBV NA IgG Ser Ql IA;Nierenverfahren_ES_4008HS_SollNa;100;Nein;961
+53129-3;103158;Na Urate Cry #/area UrnS HPF;Nierenverfahren_ES_4008HS_SollNa;100;Nein;962
+53788-6;103158;Na Urate Cry UrnS Ql Micro;Nierenverfahren_ES_4008HS_SollNa;100;Nein;963
+55134-1;103158;FLUAV NA RNA Islt NAA+probe;Nierenverfahren_ES_4008HS_SollNa;100;Nein;964
+61101-2;103158;FLUAV NA RNA Spec Seq;Nierenverfahren_ES_4008HS_SollNa;100;Nein;965
+66493-8;103158;EBV NA 1 IgG Ser-aCnc;Nierenverfahren_ES_4008HS_SollNa;100;Nein;966
+72200-9;103158;FLUAV NA seg sequence ID Islt Seq;Nierenverfahren_ES_4008HS_SollNa;100;Nein;967
+7883-2;103158;EBV NA IgG Ser Ql;Nierenverfahren_ES_4008HS_SollNa;100;Nein;968
+7884-0;103158;EBV NA IgM Ser Ql;Nierenverfahren_ES_4008HS_SollNa;100;Nein;969
+87716-7;103158;FLUAV NA gene Islt-Seq;Nierenverfahren_ES_4008HS_SollNa;100;Nein;970
+92244-3;103158;Micro resist mut NA change type Islt/Spm;Nierenverfahren_ES_4008HS_SollNa;100;Nein;971
+92245-0;103158;Micro resist mut NA change Islt/Spm;Nierenverfahren_ES_4008HS_SollNa;100;Nein;972
+8310-5;103161;Body temperature;Nierenverfahren_ES_4008HS_Temperatur;77;Nein;973
+12212-7;103190;EBV NA IgG Titr Ser IF;Nierenverfahren_ES_4008onl_SollNa;100;Nein;974
+16825-2;103190;EBV NA IgG Fld Ql;Nierenverfahren_ES_4008onl_SollNa;100;Nein;975
+21260-5;103190;EBV NA Ab Titr Ser IF;Nierenverfahren_ES_4008onl_SollNa;100;Nein;976
+22296-8;103190;EBV NA Ab Ser Ql;Nierenverfahren_ES_4008onl_SollNa;100;Nein;977
+30083-0;103190;EBV NA IgG Ser IA-aCnc;Nierenverfahren_ES_4008onl_SollNa;100;Nein;978
+31372-6;103190;EBV NA Ab Ser-aCnc;Nierenverfahren_ES_4008onl_SollNa;100;Nein;979
+31373-4;103190;EBV NA IgG CSF-aCnc;Nierenverfahren_ES_4008onl_SollNa;100;Nein;980
+31374-2;103190;EBV NA IgG Ser-aCnc;Nierenverfahren_ES_4008onl_SollNa;100;Nein;981
+39103-7;103190;FLUAV NA cDNA Spec NAA+probe;Nierenverfahren_ES_4008onl_SollNa;100;Nein;982
+48584-7;103190;NM ExG GE time p 100mg Na octanoate PO;Nierenverfahren_ES_4008onl_SollNa;100;Nein;983
+48585-4;103190;NM ExG GE time p 100mg Na acetate PO;Nierenverfahren_ES_4008onl_SollNa;100;Nein;984
+49135-7;103190;Fract excret Na Ur+SerPl-Rto;Nierenverfahren_ES_4008onl_SollNa;100;Nein;985
+5155-7;103190;EBV NA IgG Ser Ql IF;Nierenverfahren_ES_4008onl_SollNa;100;Nein;986
+5156-5;103190;EBV NA IgG Ser Ql IA;Nierenverfahren_ES_4008onl_SollNa;100;Nein;987
+53129-3;103190;Na Urate Cry #/area UrnS HPF;Nierenverfahren_ES_4008onl_SollNa;100;Nein;988
+53788-6;103190;Na Urate Cry UrnS Ql Micro;Nierenverfahren_ES_4008onl_SollNa;100;Nein;989
+55134-1;103190;FLUAV NA RNA Islt NAA+probe;Nierenverfahren_ES_4008onl_SollNa;100;Nein;990
+61101-2;103190;FLUAV NA RNA Spec Seq;Nierenverfahren_ES_4008onl_SollNa;100;Nein;991
+66493-8;103190;EBV NA 1 IgG Ser-aCnc;Nierenverfahren_ES_4008onl_SollNa;100;Nein;992
+72200-9;103190;FLUAV NA seg sequence ID Islt Seq;Nierenverfahren_ES_4008onl_SollNa;100;Nein;993
+7883-2;103190;EBV NA IgG Ser Ql;Nierenverfahren_ES_4008onl_SollNa;100;Nein;994
+7884-0;103190;EBV NA IgM Ser Ql;Nierenverfahren_ES_4008onl_SollNa;100;Nein;995
+87716-7;103190;FLUAV NA gene Islt-Seq;Nierenverfahren_ES_4008onl_SollNa;100;Nein;996
+92244-3;103190;Micro resist mut NA change type Islt/Spm;Nierenverfahren_ES_4008onl_SollNa;100;Nein;997
+92245-0;103190;Micro resist mut NA change Islt/Spm;Nierenverfahren_ES_4008onl_SollNa;100;Nein;998
+8310-5;103192;Body temperature;Nierenverfahren_ES_4008onl_Temperatur;77;Nein;999
+51865-4;103069;Plasmodium Ag Bld;Nierenverfahren_ES_ADM_Plasmavolumen;65;Nein;1000
+31083-9;103007;Lead 8h Ur-mRate;Nierenverfahren_ES_ADM_Temperatur;60;Nein;1001
+8310-5;103007;Body temperature;Nierenverfahren_ES_ADM_Temperatur;80;Nein;1002
+8462-4;103124;BP dias;Nierenverfahren_ES_BM25_Dialysat;60;Nein;1003
+8310-5;102993;Body temperature;Nierenverfahren_ES_BM25_Temperatur;77;Nein;1004
+8310-5;103745;Body temperature;Nierenverfahren_ES_BM25_Temperaturstufe;72;Nein;1005
+34782-3;103336;Infectious disease Note;Nierenverfahren_ES_GeräteDesinfektion;61;Nein;1006
+12181-4;103058;Calcium Fld-sCnc;Nierenverfahren_ES_Multi_CalciumFiltrat;60;Nein;1007
+14417-0;103058;Calcium Prt-sCnc;Nierenverfahren_ES_Multi_CalciumFiltrat;60;Nein;1008
+16518-3;103058;Calcium 2h Ur-mRate;Nierenverfahren_ES_Multi_CalciumFiltrat;61;Nein;1009
+27037-1;103058;Calcium/Creat 2h Ur;Nierenverfahren_ES_Multi_CalciumFiltrat;61;Nein;1010
+50836-6;103058;Calcium Hair-sCnt;Nierenverfahren_ES_Multi_CalciumFiltrat;65;Nein;1011
+10567-6;103056;Citrate Smn-sCnc;Nierenverfahren_ES_Multi_Citratloesung;62;Nein;1012
+2126-1;103056;Citrate Smn-mCnc;Nierenverfahren_ES_Multi_Citratloesung;62;Nein;1013
+34266-7;103056;Citrate Ur-sCnc;Nierenverfahren_ES_Multi_Citratloesung;64;Nein;1014
+8310-5;102980;Body temperature;Nierenverfahren_ES_Multi_Temperatur;77;Nein;1015
+6179-6;103168;Mouse Epith IgE Qn;Nierenverfahren_MS_4008HS_Leitfähigkeit;61;Nein;1016
+6179-6;103199;Mouse Epith IgE Qn;Nierenverfahren_MS_4008onl_Leitfähigkeit;61;Nein;1017
+10649-2;103062;Calicivirus Stl EM;Nierenverfahren_MS_Multi_Calciumfluss;61;Nein;1018
+12181-4;103062;Calcium Fld-sCnc;Nierenverfahren_MS_Multi_Calciumfluss;71;Nein;1019
+17861-6;103062;Calcium SerPl-mCnc;Nierenverfahren_MS_Multi_Calciumfluss;61;Nein;1020
+17862-4;103062;Calcium Ur-mCnc;Nierenverfahren_MS_Multi_Calciumfluss;60;Nein;1021
+1998-4;103062;Calcium Dial fld-sCnc;Nierenverfahren_MS_Multi_Calciumfluss;61;Nein;1022
+2000-8;103062;Calcium SerPl-sCnc;Nierenverfahren_MS_Multi_Calciumfluss;61;Nein;1023
+2004-0;103062;Calcium Ur-sCnc;Nierenverfahren_MS_Multi_Calciumfluss;60;Nein;1024
+38250-7;103062;Calcium Spec-mCnc;Nierenverfahren_MS_Multi_Calciumfluss;62;Nein;1025
+47369-4;103062;Calcit Fld-mCnc;Nierenverfahren_MS_Multi_Calciumfluss;60;Nein;1026
+49005-2;103062;Calcium DiafP-sCnc;Nierenverfahren_MS_Multi_Calciumfluss;61;Nein;1027
+53502-1;103062;Calcium Spec-sCnt;Nierenverfahren_MS_Multi_Calciumfluss;62;Nein;1028
+10567-6;103061;Citrate Smn-sCnc;Nierenverfahren_MS_Multi_Citratfluss;60;Nein;1029
+2126-1;103061;Citrate Smn-mCnc;Nierenverfahren_MS_Multi_Citratfluss;60;Nein;1030
+8310-5;103244;Body temperature;Nierenverfahren_VO_4008HS_Temperatur;77;Nein;1031
+8310-5;103229;Body temperature;Nierenverfahren_VO_4008onl_Temperatur;77;Nein;1032
+51865-4;103085;Plasmodium Ag Bld;Nierenverfahren_VO_ADM_Plasmavolumen;65;Nein;1033
+31083-9;102968;Lead 8h Ur-mRate;Nierenverfahren_VO_ADM_Temperatur;60;Nein;1034
+8310-5;102968;Body temperature;Nierenverfahren_VO_ADM_Temperatur;80;Nein;1035
+8462-4;103045;BP dias;Nierenverfahren_VO_BM25_Dialysat;60;Nein;1036
+8310-5;102956;Body temperature;Nierenverfahren_VO_BM25_Temperatur;77;Nein;1037
+8310-5;103746;Body temperature;Nierenverfahren_VO_BM25_Temperaturstufe;72;Nein;1038
+10567-6;103051;Citrate Smn-sCnc;Nierenverfahren_VO_Citratloesung;62;Nein;1039
+2126-1;103051;Citrate Smn-mCnc;Nierenverfahren_VO_Citratloesung;62;Nein;1040
+34266-7;103051;Citrate Ur-sCnc;Nierenverfahren_VO_Citratloesung;64;Nein;1041
+12181-4;103054;Calcium Fld-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1042
+14415-4;103054;Calcium Amn-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1043
+14417-0;103054;Calcium Prt-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1044
+14637-3;103054;Calcium 24h Ur-sRate;Nierenverfahren_VO_Multi_Calcium;100;Nein;1045
+16271-9;103054;Calcium 30M p chal SerPl-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1046
+16518-3;103054;Calcium 2h Ur-mRate;Nierenverfahren_VO_Multi_Calcium;100;Nein;1047
+16519-1;103054;Calcium 10M p chal SerPl-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1048
+16526-6;103054;Calcium/Prot SerPl;Nierenverfahren_VO_Multi_Calcium;100;Nein;1049
+17861-6;103054;Calcium SerPl-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1050
+17862-4;103054;Calcium Ur-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1051
+18186-7;103054;Calcium 12h Ur-mRate;Nierenverfahren_VO_Multi_Calcium;100;Nein;1052
+1996-8;103054;Calcium Bld-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1053
+1998-4;103054;Calcium Dial fld-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1054
+2000-8;103054;Calcium SerPl-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1055
+2001-6;103054;Calcium 24h Stl-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1056
+2004-0;103054;Calcium Ur-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1057
+2005-7;103054;Calcium p 12h fast 2h Ur-sRate;Nierenverfahren_VO_Multi_Calcium;100;Nein;1058
+24518-3;103054;Calcium/Creat Ur-sRto;Nierenverfahren_VO_Multi_Calcium;100;Nein;1059
+25362-5;103054;Calcium 24h Ur-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1060
+27037-1;103054;Calcium/Creat 2h Ur;Nierenverfahren_VO_Multi_Calcium;100;Nein;1061
+27172-6;103054;Calcium 24h Stl-mCnt;Nierenverfahren_VO_Multi_Calcium;100;Nein;1062
+29265-6;103054;Calcium Album cor SerPl-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1063
+33790-7;103054;Calcium sp1 p chal Ur-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1064
+38250-7;103054;Calcium Spec-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1065
+40083-8;103054;Calcium 1D p chal SerPl-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1066
+40230-5;103054;Calcium 1.5h p chal SerPl-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1067
+42593-4;103054;Calcium BldC-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1068
+42857-3;103054;Calcium BldV-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1069
+46099-8;103054;Calcium Album cor SerPl-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1070
+49005-2;103054;Calcium DiafP-sCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1071
+49764-4;103054;Calcium Amn-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1072
+49765-1;103054;Calcium Bld-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1073
+50836-6;103054;Calcium Hair-sCnt;Nierenverfahren_VO_Multi_Calcium;100;Nein;1074
+51610-4;103054;Calcium 12h Ur-sRate;Nierenverfahren_VO_Multi_Calcium;100;Nein;1075
+53502-1;103054;Calcium Spec-sCnt;Nierenverfahren_VO_Multi_Calcium;100;Nein;1076
+57335-2;103054;Calcium 12h Ur-mCnc;Nierenverfahren_VO_Multi_Calcium;100;Nein;1077
+8310-5;102943;Body temperature;Nierenverfahren_VO_Multi_Temperatur;77;Nein;1078
+10737-5;103819;Virus Stl EM;NIRSrechts_MS;63;Nein;1079
+10738-3;103819;Virus Tiss EM;NIRSrechts_MS;60;Nein;1080
+8310-5;104101;Body temperature;Ort_Temperatur1a_Messung;71;Nein;1081
+8310-5;104102;Body temperature;Ort_Temperatur1b_Messung;71;Nein;1082
+8310-5;104103;Body temperature;Ort_Temperatur2a_Messung;71;Nein;1083
+8310-5;104104;Body temperature;Ort_Temperatur2b_Messung;71;Nein;1084
+8310-5;104105;Body temperature;Ort_Temperatur3a_Messung;71;Nein;1085
+8310-5;104106;Body temperature;Ort_Temperatur3b_Messung;71;Nein;1086
+21612-7;100085;Age - Reported;Pacergeräte_Balken;64;Nein;1087
+2749-0;107961;pH Gast;P_ADVOS_ADVOS_VO_Balken;67;Nein;1088
+3148-4;107961;pO2 Gas;P_ADVOS_ADVOS_VO_Balken;67;Nein;1089
+8310-5;107939;Body temperature;P_ADVOS_ES_ADVOS_Systemtemperatur;63;Nein;1090
+12181-4;107934;Calcium Fld-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1091
+14415-4;107934;Calcium Amn-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1092
+14417-0;107934;Calcium Prt-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1093
+16271-9;107934;Calcium 30M p chal SerPl-mCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1094
+16519-1;107934;Calcium 10M p chal SerPl-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1095
+17862-4;107934;Calcium Ur-mCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;64;Nein;1096
+1996-8;107934;Calcium Bld-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1097
+2001-6;107934;Calcium 24h Stl-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;60;Nein;1098
+2004-0;107934;Calcium Ur-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;64;Nein;1099
+2005-7;107934;Calcium p 12h fast 2h Ur-sRate;P_ADVOS_MS_ADVOS_Calcium_postFilter;60;Nein;1100
+21465-0;107934;P falciparum Ab Titr Ser IF;P_ADVOS_MS_ADVOS_Calcium_postFilter;63;Nein;1101
+22441-0;107934;P falciparum Ab Titr Ser;P_ADVOS_MS_ADVOS_Calcium_postFilter;67;Nein;1102
+22590-4;107934;T pallidum Ab Titr Ser;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1103
+27172-6;107934;Calcium 24h Stl-mCnt;P_ADVOS_MS_ADVOS_Calcium_postFilter;60;Nein;1104
+33790-7;107934;Calcium sp1 p chal Ur-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;60;Nein;1105
+40083-8;107934;Calcium 1D p chal SerPl-mCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;62;Nein;1106
+40230-5;107934;Calcium 1.5h p chal SerPl-sCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;60;Nein;1107
+49764-4;107934;Calcium Amn-mCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1108
+49765-1;107934;Calcium Bld-mCnc;P_ADVOS_MS_ADVOS_Calcium_postFilter;61;Nein;1109
+12181-4;107935;Calcium Fld-sCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1110
+14415-4;107935;Calcium Amn-sCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1111
+14417-0;107935;Calcium Prt-sCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1112
+14637-3;107935;Calcium 24h Ur-sRate;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1113
+16518-3;107935;Calcium 2h Ur-mRate;P_ADVOS_MS_ADVOS_Calcium_preFilter;62;Nein;1114
+17862-4;107935;Calcium Ur-mCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;64;Nein;1115
+18186-7;107935;Calcium 12h Ur-mRate;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1116
+1996-8;107935;Calcium Bld-sCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1117
+2004-0;107935;Calcium Ur-sCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;64;Nein;1118
+2005-7;107935;Calcium p 12h fast 2h Ur-sRate;P_ADVOS_MS_ADVOS_Calcium_preFilter;64;Nein;1119
+21465-0;107935;P falciparum Ab Titr Ser IF;P_ADVOS_MS_ADVOS_Calcium_preFilter;60;Nein;1120
+22441-0;107935;P falciparum Ab Titr Ser;P_ADVOS_MS_ADVOS_Calcium_preFilter;64;Nein;1121
+24518-3;107935;Calcium/Creat Ur-sRto;P_ADVOS_MS_ADVOS_Calcium_preFilter;60;Nein;1122
+33790-7;107935;Calcium sp1 p chal Ur-sCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;62;Nein;1123
+49764-4;107935;Calcium Amn-mCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1124
+49765-1;107935;Calcium Bld-mCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1125
+51610-4;107935;Calcium 12h Ur-sRate;P_ADVOS_MS_ADVOS_Calcium_preFilter;61;Nein;1126
+5278-7;107935;P falciparum Ab Ser-aCnc;P_ADVOS_MS_ADVOS_Calcium_preFilter;60;Nein;1127
+53502-1;107935;Calcium Spec-sCnt;P_ADVOS_MS_ADVOS_Calcium_preFilter;60;Nein;1128
+8310-5;107949;Body temperature;P_ADVOS_VO_ADVOS_Systemtemperatur;63;Nein;1129
+14415-4;107956;Calcium Amn-sCnc;P_ADVOS_VO_CalciumLoesung;61;Nein;1130
+1996-8;107956;Calcium Bld-sCnc;P_ADVOS_VO_CalciumLoesung;61;Nein;1131
+14903-9;107960;Folate Bld-Imp;P_ADVOS_VO_Filter;62;Nein;1132
+8302-2;103595;Body height;Patient_Besonderheit;61;Nein;1134
+5883-4;101449;Virus Bld Cult;Patient_Blutverlusst;62;Nein;1135
+59574-4;101473;BMI Prctl;Patient_BMI;100;Nein;1137
+11556-8;117154;pO2 Bld;Patient_SpO2_l;77;Nein;1139
+11557-6;117154;pCO2 Bld;Patient_SpO2_l;71;Nein;1140
+14003-8;117154;pCO2 BldCo;Patient_SpO2_l;62;Nein;1141
+14864-3;117154;pO2 BldCo;Patient_SpO2_l;67;Nein;1142
+19211-2;117154;pO2 BldMV;Patient_SpO2_l;67;Nein;1143
+19212-0;117154;pCO2 BldMV;Patient_SpO2_l;62;Nein;1144
+19224-5;117154;SaO2 % BldMV;Patient_SpO2_l;62;Nein;1145
+2019-8;117154;pCO2 BldA;Patient_SpO2_l;67;Nein;1146
+2020-6;117154;pCO2 BldC;Patient_SpO2_l;67;Nein;1147
+2021-4;117154;pCO2 BldV;Patient_SpO2_l;67;Nein;1148
+5969-1;102050;PAP PPP IA-mCnc;PAP;100;Ja;1133
+29463-7;6;Weight;Patient_Gewicht;62;Ja;1138
+20564-1;117154;SaO2 % Bld;Patient_SpO2_l;71;Nein;1149
+2703-7;117154;pO2 BldA;Patient_SpO2_l;71;Nein;1150
+2704-5;117154;pO2 BldC;Patient_SpO2_l;71;Nein;1151
+2705-2;117154;pO2 BldV;Patient_SpO2_l;71;Nein;1152
+2708-6;117154;SaO2 % BldA;Patient_SpO2_l;67;Nein;1153
+2709-4;117154;SaO2 % BldC;Patient_SpO2_l;67;Nein;1154
+2711-0;117154;SaO2 % BldV;Patient_SpO2_l;67;Nein;1155
+28649-2;117154;pO2 BldCoV;Patient_SpO2_l;62;Nein;1156
+3148-4;117154;pO2 Gas;Patient_SpO2_l;62;Nein;1157
+3148-4;117151;pO2 Gas;Patient_SpO2po;62;Nein;1158
+3148-4;117152;pO2 Gas;Patient_SpO2pr;62;Nein;1159
+32306-3;117152;pCO2 Ur;Patient_SpO2pr;62;Nein;1160
+2022-2;117153;pCO2 CSF;Patient_SpO2r;62;Nein;1161
+3148-4;117153;pO2 Gas;Patient_SpO2r;67;Nein;1162
+32306-3;117153;pCO2 Ur;Patient_SpO2r;67;Nein;1163
+2749-0;110832;pH Gast;P_Beatmung_Atemgas;62;Nein;1164
+3148-4;110832;pO2 Gas;P_Beatmung_Atemgas;62;Nein;1165
+53653-2;110833;pH Bifl;P_Beatmung_ES_3100A_BiasFlow;71;Nein;1166
+11187-2;110834;P frequentans IgE Qn;P_Beatmung_ES_3100A_Frequenz;60;Nein;1167
+96823-0;110835;Respiration Score SOFA;P_Beatmung_ES_3100A_Inspirationszeit;60;Nein;1168
+14658-9;108011;CA Titr SerPl;P_Beatmung_ES_C3_Backup_Ti;60;Nein;1169
+87925-4;108011;RPR CSF-Titr;P_Beatmung_ES_C3_Backup_Ti;63;Nein;1170
+13086-4;108010;C3 NeF SerPl-mCnc;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1171
+15164-7;108010;C3 Snv-mCnc;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1172
+38387-7;108010;C3 NeF SerPl Ql;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1173
+38388-5;108010;C3 SerPl Ql;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1174
+43575-0;108010;C3 Pcar-mCnc;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1175
+43578-4;108010;C3 Prt-mCnc;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1176
+43579-2;108010;C3 Plr-mCnc;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1177
+4485-9;108010;C3 SerPl-mCnc;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1178
+6801-5;108010;C3 Fld-mCnc;P_Beatmung_ES_C3_Backup_Vt;67;Nein;1179
+44796-1;107976;C bot Tox Spec;P_Beatmung_ES_C3_Body_Wt;62;Nein;1180
+46417-2;107976;PT BldC;P_Beatmung_ES_C3_Body_Wt;63;Nein;1181
+33913-5;107997;pH BldC Fetus;P_Beatmung_ES_C3_ETS;67;Nein;1182
+13226-6;107988;CMV IgM CSF-aCnc;P_Beatmung_ES_C3_F_CMV;62;Nein;1183
+22243-0;107988;CMV IgG CSF-aCnc;P_Beatmung_ES_C3_F_CMV;62;Nein;1184
+5122-7;107988;CMV Ab SerPl IF-aCnc;P_Beatmung_ES_C3_F_CMV;60;Nein;1185
+5838-8;107988;CMV Spec Ql Cult;P_Beatmung_ES_C3_F_CMV;62;Nein;1186
+3151-8;107998;Inhaled O2 flow rate;P_Beatmung_ES_C3_Flow;62;Nein;1187
+38388-5;107998;C3 SerPl Ql;P_Beatmung_ES_C3_Flow;60;Nein;1188
+6801-5;107998;C3 Fld-mCnc;P_Beatmung_ES_C3_Flow;60;Nein;1189
+38388-5;110826;C3 SerPl Ql;P_Beatmung_ES_C3_Freq;60;Nein;1190
+34105-7;107989;Hosp D/C sum;P_Beatmung_ES_C3_F_SIMV;61;Nein;1191
+2839-9;107975;Progest SerPl-mCnc;P_Beatmung_ES_C3_Groesse;60;Nein;1192
+38388-5;108002;C3 SerPl Ql;P_Beatmung_ES_C3_HLI;63;Nein;1193
+13086-4;110828;C3 NeF SerPl-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1194
+15164-7;110828;C3 Snv-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1195
+38387-7;110828;C3 NeF SerPl Ql;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1196
+38388-5;110828;C3 SerPl Ql;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1197
+43575-0;110828;C3 Pcar-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1198
+43578-4;110828;C3 Prt-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1199
+43579-2;110828;C3 Plr-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1200
+4485-9;110828;C3 SerPl-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1201
+6801-5;110828;C3 Fld-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis;67;Nein;1202
+13086-4;110831;C3 NeF SerPl-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1203
+15164-7;110831;C3 Snv-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1204
+38387-7;110831;C3 NeF SerPl Ql;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1205
+38388-5;110831;C3 SerPl Ql;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1206
+43575-0;110831;C3 Pcar-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1207
+43578-4;110831;C3 Prt-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1208
+43579-2;110831;C3 Plr-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1209
+4485-9;110831;C3 SerPl-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1210
+6801-5;110831;C3 Fld-mCnc;P_Beatmung_ES_C3_IEVerhaeltnis_Backup;67;Nein;1211
+25527-3;108000;Silver SerPl-sCnc;P_Beatmung_ES_C3_passiver_Patient;60;Nein;1212
+5734-9;108000;Silver SerPl-mCnc;P_Beatmung_ES_C3_passiver_Patient;60;Nein;1213
+49010-2;110820;PA ADP PRP-aCnc;P_Beatmung_ES_C3_PEEP_CPAP;62;Nein;1214
+5969-1;110820;PAP PPP IA-mCnc;P_Beatmung_ES_C3_PEEP_CPAP;62;Nein;1215
+49010-2;107981;PA ADP PRP-aCnc;P_Beatmung_ES_C3_PEEP_CPAP_Ptief;62;Nein;1216
+5969-1;107981;PAP PPP IA-mCnc;P_Beatmung_ES_C3_PEEP_CPAP_Ptief;62;Nein;1217
+12186-3;107987;COP Plas;P_Beatmung_ES_C3_Plateau;60;Nein;1218
+13086-4;107992;C3 NeF SerPl-mCnc;P_Beatmung_ES_C3_Ptief;67;Nein;1219
+15164-7;107992;C3 Snv-mCnc;P_Beatmung_ES_C3_Ptief;67;Nein;1220
+38387-7;107992;C3 NeF SerPl Ql;P_Beatmung_ES_C3_Ptief;67;Nein;1221
+38388-5;107992;C3 SerPl Ql;P_Beatmung_ES_C3_Ptief;67;Nein;1222
+43575-0;107992;C3 Pcar-mCnc;P_Beatmung_ES_C3_Ptief;67;Nein;1223
+43578-4;107992;C3 Prt-mCnc;P_Beatmung_ES_C3_Ptief;67;Nein;1224
+43579-2;107992;C3 Plr-mCnc;P_Beatmung_ES_C3_Ptief;67;Nein;1225
+4485-9;107992;C3 SerPl-mCnc;P_Beatmung_ES_C3_Ptief;67;Nein;1226
+6801-5;107992;C3 Fld-mCnc;P_Beatmung_ES_C3_Ptief;67;Nein;1227
+4671-4;110897;Prot C Plas-mCnc;P_Beatmung_ES_C3_SBT_Support_min;61;Nein;1228
+426-7;110899;PZA Titr SBT;P_Beatmung_ES_C3_SBT_Zeitraum_bevor;62;Nein;1229
+426-7;110900;PZA Titr SBT;P_Beatmung_ES_C3_SBT_Zeitraum_nach;62;Nein;1230
+40958-1;110890;C parvum Stl;P_Beatmung_ES_C3_SHT;60;Nein;1231
+53645-8;110890;PV Stl Cult;P_Beatmung_ES_C3_SHT;63;Nein;1232
+56483-1;110890;PBG Stl-mCnt;P_Beatmung_ES_C3_SHT;60;Nein;1233
+8167-9;107990;THC Mec Ql;P_Beatmung_ES_C3_Thoch;60;Nein;1234
+14658-9;107991;CA Titr SerPl;P_Beatmung_ES_C3_Ti;60;Nein;1235
+87925-4;107991;RPR CSF-Titr;P_Beatmung_ES_C3_Ti;63;Nein;1236
+13086-4;107985;C3 NeF SerPl-mCnc;P_Beatmung_ES_C3_Vt;67;Nein;1237
+15164-7;107985;C3 Snv-mCnc;P_Beatmung_ES_C3_Vt;67;Nein;1238
+38387-7;107985;C3 NeF SerPl Ql;P_Beatmung_ES_C3_Vt;67;Nein;1239
+38388-5;107985;C3 SerPl Ql;P_Beatmung_ES_C3_Vt;67;Nein;1240
+43575-0;107985;C3 Pcar-mCnc;P_Beatmung_ES_C3_Vt;67;Nein;1241
+43578-4;107985;C3 Prt-mCnc;P_Beatmung_ES_C3_Vt;67;Nein;1242
+43579-2;107985;C3 Plr-mCnc;P_Beatmung_ES_C3_Vt;67;Nein;1243
+4485-9;107985;C3 SerPl-mCnc;P_Beatmung_ES_C3_Vt;67;Nein;1244
+6801-5;107985;C3 Fld-mCnc;P_Beatmung_ES_C3_Vt;67;Nein;1245
+2743-3;110939;pH Amn;P_Beatmung_ES_NO;60;Nein;1246
+91120-6;110939;AT III PPP Chromo.no added heparin;P_Beatmung_ES_NO;67;Nein;1247
+15923-6;110863;P frequentans IgE RAST Ql;P_Beatmung_ES_RTX_Frequenz;62;Nein;1248
+2756-5;110857;pH Ur;P_Beatmung_ES_RTX_IE;60;Nein;1249
+17443-3;110860;PPA Ur-mCnc;P_Beatmung_ES_RTX_MinBackup;60;Nein;1250
+24446-7;110860;PBG Ur-mCnc;P_Beatmung_ES_RTX_MinBackup;60;Nein;1251
+34611-4;110860;PSA Ur-mCnc;P_Beatmung_ES_RTX_MinBackup;60;Nein;1252
+3937-0;110860;PCP Ur-mCnc;P_Beatmung_ES_RTX_MinBackup;60;Nein;1253
+43578-4;110860;C3 Prt-mCnc;P_Beatmung_ES_RTX_MinBackup;60;Nein;1254
+59574-4;110860;BMI Prctl;P_Beatmung_ES_RTX_MinBackup;67;Nein;1255
+48584-7;110854;NM ExG GE time p 100mg Na octanoate PO;P_Beatmung_ES_RTX_Time;75;Nein;1256
+48585-4;110854;NM ExG GE time p 100mg Na acetate PO;P_Beatmung_ES_RTX_Time;75;Nein;1257
+5902-2;110854;Prothrombin time;P_Beatmung_ES_RTX_Time;62;Nein;1258
+11208-6;108723;ANF Plas-mCnc;P_Beatmung_MS_AnaConDa_AF;60;Nein;1259
+2743-3;108723;pH Amn;P_Beatmung_MS_AnaConDa_AF;62;Nein;1260
+49762-8;108723;AFP Plr-mCnc;P_Beatmung_MS_AnaConDa_AF;63;Nein;1261
+38253-1;108724;CO2 Spec-sCnc;P_Beatmung_MS_AnaConDa_etCo2;61;Nein;1262
+19194-0;110937;NSE Plr-aCnc;P_Beatmung_MS_AnaConDa_MAC;60;Nein;1263
+26714-6;110937;PPA Mec-mCnt;P_Beatmung_MS_AnaConDa_MAC;60;Nein;1264
+38476-8;110937;MIS SerPl-mCnc;P_Beatmung_MS_AnaConDa_MAC;64;Nein;1265
+43575-0;108028;C3 Pcar-mCnc;P_Beatmung_MS_C3_AutoPeep;63;Nein;1266
+43578-4;108028;C3 Prt-mCnc;P_Beatmung_MS_C3_AutoPeep;67;Nein;1267
+43579-2;108028;C3 Plr-mCnc;P_Beatmung_MS_C3_AutoPeep;67;Nein;1268
+4485-9;108028;C3 SerPl-mCnc;P_Beatmung_MS_C3_AutoPeep;60;Nein;1269
+33863-2;108036;Cystatin C SerPl-mCnc;P_Beatmung_MS_C3_Cstat;65;Nein;1270
+43575-0;108031;C3 Pcar-mCnc;P_Beatmung_MS_C3_IEVerhaeltnis;63;Nein;1271
+43578-4;108031;C3 Prt-mCnc;P_Beatmung_MS_C3_IEVerhaeltnis;67;Nein;1272
+43579-2;108031;C3 Plr-mCnc;P_Beatmung_MS_C3_IEVerhaeltnis;67;Nein;1273
+4485-9;108031;C3 SerPl-mCnc;P_Beatmung_MS_C3_IEVerhaeltnis;60;Nein;1274
+2022-2;108021;pCO2 CSF;P_Beatmung_MS_C3_petCO2;64;Nein;1275
+43578-4;108037;C3 Prt-mCnc;P_Beatmung_MS_C3_PTP;64;Nein;1276
+38436-2;108034;CC Spec #/mass VC;P_Beatmung_MS_C3_RCexsp;64;Nein;1277
+43575-0;108034;C3 Pcar-mCnc;P_Beatmung_MS_C3_RCexsp;64;Nein;1278
+43578-4;108034;C3 Prt-mCnc;P_Beatmung_MS_C3_RCexsp;67;Nein;1279
+43579-2;108034;C3 Plr-mCnc;P_Beatmung_MS_C3_RCexsp;67;Nein;1280
+564-5;108034;CC Spec VC;P_Beatmung_MS_C3_RCexsp;60;Nein;1281
+43575-0;108039;C3 Pcar-mCnc;P_Beatmung_MS_C3_RSB;61;Nein;1282
+43578-4;108039;C3 Prt-mCnc;P_Beatmung_MS_C3_RSB;64;Nein;1283
+43579-2;108039;C3 Plr-mCnc;P_Beatmung_MS_C3_RSB;64;Nein;1284
+43578-4;108029;C3 Prt-mCnc;P_Beatmung_MS_C3_TE;67;Nein;1285
+14658-9;108030;CA Titr SerPl;P_Beatmung_MS_C3_TI;61;Nein;1286
+32787-4;108030;p-ANCA Titr Ser;P_Beatmung_MS_C3_TI;64;Nein;1287
+43578-4;108030;C3 Prt-mCnc;P_Beatmung_MS_C3_TI;67;Nein;1288
+87925-4;108030;RPR CSF-Titr;P_Beatmung_MS_C3_TI;64;Nein;1289
+2022-2;108020;pCO2 CSF;P_Beatmung_MS_C3_VCO2;70;Nein;1290
+38436-2;108020;CC Spec #/mass VC;P_Beatmung_MS_C3_VCO2;67;Nein;1291
+564-5;108020;CC Spec VC;P_Beatmung_MS_C3_VCO2;64;Nein;1292
+38436-2;108014;CC Spec #/mass VC;P_Beatmung_MS_C3_VTE;62;Nein;1293
+43578-4;108014;C3 Prt-mCnc;P_Beatmung_MS_C3_VTE;64;Nein;1294
+32787-4;108015;p-ANCA Titr Ser;P_Beatmung_MS_C3_VTi;62;Nein;1295
+38436-2;108015;CC Spec #/mass VC;P_Beatmung_MS_C3_VTi;62;Nein;1296
+43578-4;108015;C3 Prt-mCnc;P_Beatmung_MS_C3_VTi;64;Nein;1297
+87925-4;108015;RPR CSF-Titr;P_Beatmung_MS_C3_VTi;61;Nein;1298
+32162-0;108738;Cells # Plr Manual;P_Celestangabe;60;Nein;1299
+32163-8;108738;Cells # Prt Manual;P_Celestangabe;60;Nein;1300
+12186-3;102040;COP Plas;p-CO;67;Nein;1301
+14864-3;102040;pO2 BldCo;p-CO;62;Nein;1302
+14873-4;102040;pH BldCo;p-CO;67;Nein;1303
+28646-8;102040;pH BldCoA;p-CO;62;Nein;1304
+28647-6;102040;pH BldCoV;p-CO;62;Nein;1305
+47283-7;102040;PMV BldCo;p-CO;62;Nein;1306
+48159-8;102040;HCV Ab s/co SerPl IA;p-CO;67;Nein;1307
+51656-7;102040;HCV Ab s/co Fld;p-CO;67;Nein;1308
+55601-9;102040;Cyto Pcar;p-CO;62;Nein;1309
+14515-1;108720;P jiroveci Ag CSF Ql IF;P_CSF_Doku_Balken;67;Nein;1310
+26454-9;108720;RBC # CSF;P_CSF_Doku_Balken;60;Nein;1311
+26465-5;108720;WBC # CSF;P_CSF_Doku_Balken;60;Nein;1312
+60023-9;108720;LDH CSF P to L-cCnc;P_CSF_Doku_Balken;67;Nein;1313
+60024-7;108720;LDH CSF L to P-cCnc;P_CSF_Doku_Balken;67;Nein;1314
+26454-9;108719;RBC # CSF;P_CSF_ES_LiquoGuard_Pset;60;Nein;1315
+26465-5;108719;WBC # CSF;P_CSF_ES_LiquoGuard_Pset;60;Nein;1316
+26454-9;110941;RBC # CSF;P_CSF_ES_LiquoGuard_Vset;60;Nein;1317
+26465-5;110941;WBC # CSF;P_CSF_ES_LiquoGuard_Vset;60;Nein;1318
+14339-6;108718;IgG MFr CSF;P_CSF_MS_LiqouGuard_ICP;61;Nein;1319
+26454-9;108718;RBC # CSF;P_CSF_MS_LiqouGuard_ICP;60;Nein;1320
+26465-5;108718;WBC # CSF;P_CSF_MS_LiqouGuard_ICP;60;Nein;1321
+29805-9;108718;POWV IgM CSF Ql IF;P_CSF_MS_LiqouGuard_ICP;60;Nein;1322
+39011-2;108718;MuV IgG CSF Ql;P_CSF_MS_LiqouGuard_ICP;62;Nein;1323
+41131-4;108718;MuV IgM CSF Ql;P_CSF_MS_LiqouGuard_ICP;62;Nein;1324
+42206-3;108718;IgA CSF/SerPl;P_CSF_MS_LiqouGuard_ICP;64;Nein;1325
+42207-1;108718;IgG CSF/SerPl;P_CSF_MS_LiqouGuard_ICP;64;Nein;1326
+42208-9;108718;IgM CSF/SerPl;P_CSF_MS_LiqouGuard_ICP;64;Nein;1327
+45062-7;108718;CRP CSF-mCnc;P_CSF_MS_LiqouGuard_ICP;67;Nein;1328
+10680-7;108717;HSV CSF EM;P_CSF_MS_LiqouGuard_Pcsf;61;Nein;1329
+26454-9;108717;RBC # CSF;P_CSF_MS_LiqouGuard_Pcsf;60;Nein;1330
+26465-5;108717;WBC # CSF;P_CSF_MS_LiqouGuard_Pcsf;60;Nein;1331
+26454-9;110940;RBC # CSF;P_CSF_MS_LiquoGuard_Fuellstand;60;Nein;1332
+26465-5;110940;WBC # CSF;P_CSF_MS_LiquoGuard_Fuellstand;60;Nein;1333
+26454-9;108716;RBC # CSF;P_CSF_MS_LiquoGuard_Liquorfluss;60;Nein;1334
+26465-5;108716;WBC # CSF;P_CSF_MS_LiquoGuard_Liquorfluss;60;Nein;1335
+60546-9;108042;PV Islt Cult;P_EctSta;60;Nein;1336
+53576-5;113045;PH monitoring report Doc;P_EEG_Monitoring;77;Nein;1337
+2022-2;102168;pCO2 CSF;PICCO_HF;62;Nein;1338
+19212-0;102170;pCO2 BldMV;PICCO_ITBV;60;Nein;1339
+2021-4;102170;pCO2 BldV;PICCO_ITBV;63;Nein;1340
+2021-4;102171;pCO2 BldV;PICCO_ITBVI;60;Nein;1341
+2022-2;102166;pCO2 CSF;PICCO_PC;62;Nein;1342
+32306-3;102164;pCO2 Ur;PICCO_SVR;62;Nein;1343
+3151-8;108729;Inhaled O2 flow rate;P_Impella_Impella_MS_Flow;62;Nein;1344
+55976-5;108505;pH Fld.NB;P_NBP_liArm;60;Nein;1345
+9704-8;108506;Sperm Smn;P_NBP_reArm;60;Nein;1346
+9780-8;108506;Sperm # Smn;P_NBP_reArm;60;Nein;1347
+54111-0;108504;NB hear screen Pnl;P_NBP_reBein;60;Nein;1348
+35066-0;110789;Blasts # Plr;P_NEV_HD_ES_5008onl_BasisNa;63;Nein;1349
+35073-6;110789;Basophils # Prt;P_NEV_HD_ES_5008onl_BasisNa;64;Nein;1350
+2748-2;110784;pH Fld;P_NEV_HD_ES_5008onl_Fluss;62;Nein;1351
+54244-9;110784;FLUV Spec;P_NEV_HD_ES_5008onl_Fluss;62;Nein;1352
+9279-1;110797;Resp rate;P_NEV_HD_ES_5008onl_IsoUFRate;60;Nein;1353
+12212-7;110787;EBV NA IgG Titr Ser IF;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1354
+16825-2;110787;EBV NA IgG Fld Ql;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1355
+21260-5;110787;EBV NA Ab Titr Ser IF;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1356
+22296-8;110787;EBV NA Ab Ser Ql;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1357
+2743-3;110787;pH Amn;P_NEV_HD_ES_5008onl_SollNa;60;Nein;1358
+30083-0;110787;EBV NA IgG Ser IA-aCnc;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1359
+31372-6;110787;EBV NA Ab Ser-aCnc;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1360
+31373-4;110787;EBV NA IgG CSF-aCnc;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1361
+31374-2;110787;EBV NA IgG Ser-aCnc;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1362
+39103-7;110787;FLUAV NA cDNA Spec NAA+probe;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1363
+48584-7;110787;NM ExG GE time p 100mg Na octanoate PO;P_NEV_HD_ES_5008onl_SollNa;100;Nein;1364
+48585-4;110787;NM ExG GE time p 100mg Na acetate PO;P_NEV_HD_ES_5008onl_SollNa;100;Nein;1365
+49135-7;110787;Fract excret Na Ur+SerPl-Rto;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1366
+5155-7;110787;EBV NA IgG Ser Ql IF;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1367
+5156-5;110787;EBV NA IgG Ser Ql IA;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1368
+53129-3;110787;Na Urate Cry #/area UrnS HPF;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1369
+53788-6;110787;Na Urate Cry UrnS Ql Micro;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1370
+55134-1;110787;FLUAV NA RNA Islt NAA+probe;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1371
+61101-2;110787;FLUAV NA RNA Spec Seq;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1372
+66493-8;110787;EBV NA 1 IgG Ser-aCnc;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1373
+72200-9;110787;FLUAV NA seg sequence ID Islt Seq;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1374
+7883-2;110787;EBV NA IgG Ser Ql;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1375
+7884-0;110787;EBV NA IgM Ser Ql;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1376
+87716-7;110787;FLUAV NA gene Islt-Seq;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1377
+92244-3;110787;Micro resist mut NA change type Islt/Spm;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1378
+92245-0;110787;Micro resist mut NA change Islt/Spm;P_NEV_HD_ES_5008onl_SollNa;67;Nein;1379
+8665-2;110788;LMP Start date;P_NEV_HD_ES_5008onl_StartNa;61;Nein;1380
+50749-1;110785;Prot Ur-Imp;P_NEV_HD_ES_5008onl_Temperatur;61;Nein;1381
+8310-5;110785;Body temperature;P_NEV_HD_ES_5008onl_Temperatur;79;Nein;1382
+2756-5;110800;pH Ur;P_NEV_HD_ES_5008onl_UFRate;62;Nein;1383
+8310-5;117161;Body temperature;P_NEV_HD_ES_Genius_TemperaturZiel;75;Nein;1384
+2756-5;117162;pH Ur;P_NEV_HD_ES_Genius_UFRate;62;Nein;1385
+6216-6;110778;P betae IgE Qn;P_NEV_HD_MS_5008onl_Leitfaehigkeit;61;Nein;1386
+2743-3;110779;pH Amn;P_NEV_HD_MS_5008onl_SollNa;62;Nein;1387
+48584-7;110779;NM ExG GE time p 100mg Na octanoate PO;P_NEV_HD_MS_5008onl_SollNa;73;Nein;1388
+48585-4;110779;NM ExG GE time p 100mg Na acetate PO;P_NEV_HD_MS_5008onl_SollNa;73;Nein;1389
+100342-5;110780;VOCs (volatiles) SARS-CoV-2 ExG Ql GC-MS;P_NEV_HD_MS_5008onl_TMP;67;Nein;1390
+1827-5;110780;A1AT MS SerPl-mCnc;P_NEV_HD_MS_5008onl_TMP;67;Nein;1391
+2743-3;110780;pH Amn;P_NEV_HD_MS_5008onl_TMP;60;Nein;1392
+55805-6;110780;cycloSPORINE Bld LC/MS/MS-mCnc;P_NEV_HD_MS_5008onl_TMP;67;Nein;1393
+74097-7;110780;Tacrolimus Bld LC/MS/MS-mCnc;P_NEV_HD_MS_5008onl_TMP;67;Nein;1394
+75756-7;110780;Bacteria Islt MS.MALDI-TOF;P_NEV_HD_MS_5008onl_TMP;67;Nein;1395
+92726-9;110780;17OHP DBS LC/MS/MS-mCnc;P_NEV_HD_MS_5008onl_TMP;67;Nein;1396
+6216-6;117156;P betae IgE Qn;P_NEV_HD_MS_Genius_Leitfaehigkeit;61;Nein;1397
+8310-5;117157;Body temperature;P_NEV_HD_MS_Genius_TemperaturIst;65;Nein;1398
+48584-7;117155;NM ExG GE time p 100mg Na octanoate PO;P_NEV_HD_MS_Genius_UF_Time;67;Nein;1399
+48585-4;117155;NM ExG GE time p 100mg Na acetate PO;P_NEV_HD_MS_Genius_UF_Time;67;Nein;1400
+2748-2;110804;pH Fld;P_NEV_HD_VO_5008onl_Fluss;62;Nein;1401
+54244-9;110804;FLUV Spec;P_NEV_HD_VO_5008onl_Fluss;62;Nein;1402
+12212-7;110807;EBV NA IgG Titr Ser IF;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1403
+16825-2;110807;EBV NA IgG Fld Ql;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1404
+21260-5;110807;EBV NA Ab Titr Ser IF;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1405
+22296-8;110807;EBV NA Ab Ser Ql;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1406
+2743-3;110807;pH Amn;P_NEV_HD_VO_5008onl_SollNa;60;Nein;1407
+30083-0;110807;EBV NA IgG Ser IA-aCnc;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1408
+31372-6;110807;EBV NA Ab Ser-aCnc;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1409
+31373-4;110807;EBV NA IgG CSF-aCnc;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1410
+31374-2;110807;EBV NA IgG Ser-aCnc;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1411
+39103-7;110807;FLUAV NA cDNA Spec NAA+probe;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1412
+48584-7;110807;NM ExG GE time p 100mg Na octanoate PO;P_NEV_HD_VO_5008onl_SollNa;100;Nein;1413
+48585-4;110807;NM ExG GE time p 100mg Na acetate PO;P_NEV_HD_VO_5008onl_SollNa;100;Nein;1414
+49135-7;110807;Fract excret Na Ur+SerPl-Rto;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1415
+5155-7;110807;EBV NA IgG Ser Ql IF;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1416
+5156-5;110807;EBV NA IgG Ser Ql IA;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1417
+53129-3;110807;Na Urate Cry #/area UrnS HPF;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1418
+53788-6;110807;Na Urate Cry UrnS Ql Micro;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1419
+55134-1;110807;FLUAV NA RNA Islt NAA+probe;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1420
+61101-2;110807;FLUAV NA RNA Spec Seq;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1421
+66493-8;110807;EBV NA 1 IgG Ser-aCnc;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1422
+72200-9;110807;FLUAV NA seg sequence ID Islt Seq;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1423
+7883-2;110807;EBV NA IgG Ser Ql;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1424
+7884-0;110807;EBV NA IgM Ser Ql;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1425
+87716-7;110807;FLUAV NA gene Islt-Seq;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1426
+92244-3;110807;Micro resist mut NA change type Islt/Spm;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1427
+92245-0;110807;Micro resist mut NA change Islt/Spm;P_NEV_HD_VO_5008onl_SollNa;67;Nein;1428
+8665-2;110808;LMP Start date;P_NEV_HD_VO_5008onl_StartNa;61;Nein;1429
+50749-1;110805;Prot Ur-Imp;P_NEV_HD_VO_5008onl_Temperatur;61;Nein;1430
+8310-5;110805;Body temperature;P_NEV_HD_VO_5008onl_Temperatur;79;Nein;1431
+29304-3;104403;Medication dispensed;Praemedikation;65;Nein;1432
+57833-6;104403;Rx for medication;Praemedikation;65;Nein;1433
+11481-9;112017;HPV Spec;P_SEF;62;Nein;1434
+17433-4;112017;pH Spec;P_SEF;67;Nein;1435
+2753-2;112017;pH SerPl;P_SEF;62;Nein;1436
+17433-4;112018;pH Spec;P_SEF1;62;Nein;1437
+17433-4;112019;pH Spec;P_SEF2;62;Nein;1438
+2752-4;102408;pH Smn;p-SV;60;Nein;1439
+2755-7;102408;pH Stl;p-SV;60;Nein;1440
+35004-1;102408;Polys # Snv;p-SV;62;Nein;1441
+48037-6;102408;pH Vag;p-SV;60;Nein;1442
+8480-6;102408;BP sys;p-SV;60;Nein;1443
+2753-2;102037;pH SerPl;p-SVR;62;Nein;1444
+2756-5;102037;pH Ur;p-SVR;60;Nein;1445
+5964-2;100560;PT Bld;PT_AllgBefund;62;Nein;1446
+23830-3;100676;B pert.PT IgA Ser-aCnc;PT_Befund;100;Nein;1447
+23831-1;100676;B pert.PT IgG Ser-aCnc;PT_Befund;100;Nein;1448
+24127-3;100676;B pert.PT IgG Ser IA-aCnc;PT_Befund;100;Nein;1449
+24128-1;100676;B pert.PT IgA Ser IA-aCnc;PT_Befund;100;Nein;1450
+42638-7;100676;PT PPP 1:1 saline;PT_Befund;100;Nein;1451
+46417-2;100676;PT BldC;PT_Befund;100;Nein;1452
+52752-3;100676;PT PIVKA insensitive Act/Nor BldC;PT_Befund;100;Nein;1453
+52753-1;100676;PT PIVKA insensitive Act/Nor PPP;PT_Befund;100;Nein;1454
+52760-6;100676;PT PIVKA sensitive Act/Nor BldC;PT_Befund;100;Nein;1455
+52761-4;100676;PT PIVKA sensitive Act/Nor PPP;PT_Befund;100;Nein;1456
+5901-4;100676;PT Cont PPP;PT_Befund;100;Nein;1457
+5964-2;100676;PT Bld;PT_Befund;100;Nein;1458
+80600-0;100676;B pert.PT Prmt Nph Ql NAA+probe;PT_Befund;100;Nein;1459
+82179-3;100676;B pert.PT Prmt Nph Ql NAA+non-probe;PT_Befund;100;Nein;1460
+94478-5;100676;B pert.PT Prmt Low resp Ql NAA+non-probe;PT_Befund;100;Nein;1461
+96962-6;100676;B pert.PT Prmt Lower resp Ql NAA+probe;PT_Befund;100;Nein;1462
+30089-7;110925;Trans Cells #/area UrnS HPF;P_Temperatur_Arteriell;60;Nein;1463
+46136-8;110925;Trans Cells #/area UrnS LPF;P_Temperatur_Arteriell;60;Nein;1464
+8310-5;108742;Body temperature;P_Temperatur_DeltaT;69;Nein;1465
+50560-2;110926;pH Ur Strip.auto;P_Temperatur_Haut;61;Nein;1467
+51479-4;110926;Sperm # Ur Auto;P_Temperatur_Haut;60;Nein;1468
+51480-2;110926;Bacteria # Ur Auto;P_Temperatur_Haut;61;Nein;1469
+12585-6;110930;Creat 2h Ur-mRate;P_Temperatur_Rektal;61;Nein;1476
+12586-4;110930;Creat 4h Ur-mRate;P_Temperatur_Rektal;61;Nein;1477
+12587-2;110930;Creat 6h Ur-mRate;P_Temperatur_Rektal;61;Nein;1478
+8310-5;110926;Body temperature;P_Temperatur_Haut;67;Ja;1470
+12588-0;110930;Creat 8h Ur-mRate;P_Temperatur_Rektal;61;Nein;1479
+2150-1;110930;Creatine 24h Ur-mRate;P_Temperatur_Rektal;60;Nein;1480
+24462-4;110930;Hepta-CP 24h Ur-mRate;P_Temperatur_Rektal;60;Nein;1481
+38163-2;110930;Hepta-CP/Creat Ur;P_Temperatur_Rektal;61;Nein;1482
+93733-4;110930;Creat 5h Ur-mRate;P_Temperatur_Rektal;61;Nein;1484
+47720-8;110754;pH temp adj BldCo;P_Therapiebetten_Doku_DraegerBabytherm_ES_Temp;64;Nein;1486
+8330-3;110754;Bdy temp IV;P_Therapiebetten_Doku_DraegerBabytherm_ES_Temp;64;Nein;1487
+55594-6;108625;Duck Feather IgE Ql;P_Therapiebetten_Doku_Lifetherm_ES_Neigung;60;Nein;1488
+6100-2;108625;Duck Feather IgE Qn;P_Therapiebetten_Doku_Lifetherm_ES_Neigung;60;Nein;1489
+7289-2;108625;Duck Feather IgG Qn;P_Therapiebetten_Doku_Lifetherm_ES_Neigung;65;Nein;1490
+2755-7;110752;pH Stl;P_Therapiebetten_VO_DraegerBabytherm_Strahler;62;Nein;1491
+32112-5;110752;Sertraline Ur Ql;P_Therapiebetten_VO_DraegerBabytherm_Strahler;62;Nein;1492
+50749-1;110753;Prot Ur-Imp;P_Therapiebetten_VO_DraegerBabytherm_Temperatur;61;Nein;1493
+8310-5;110753;Body temperature;P_Therapiebetten_VO_DraegerBabytherm_Temperatur;79;Nein;1494
+10948-8;108626;Pigeon Feather IgE Qn;P_Therapiebetten_VO_Lifetherm_Neigung;60;Nein;1495
+17464-9;108626;Pigeon Feather IgE Ql;P_Therapiebetten_VO_Lifetherm_Neigung;60;Nein;1496
+51548-6;108626;Parrot Feather IgG Ql;P_Therapiebetten_VO_Lifetherm_Neigung;60;Nein;1497
+51549-4;108626;Pigeon Feather IgG Ql;P_Therapiebetten_VO_Lifetherm_Neigung;60;Nein;1498
+7344-5;108626;Goose Feather IgG Qn;P_Therapiebetten_VO_Lifetherm_Neigung;62;Nein;1499
+13440-3;108624;Interpretation Ur IFE-Imp;P_Therapiebetten_VO_Lifetherm_Temperatur;60;Nein;1500
+2750-8;108636;pH Plr;P_Waermesysteme_InfantWarmer_VO_Power;62;Nein;1501
+8478-0;117177;BP mean;P_Weaning;62;Nein;1502
+6301-6;102027;INR PPP;RPP;60;Nein;1503
+96823-0;105103;Respiration Score SOFA;Sauerstoff_RespirationBarValue;65;Nein;1517
+74468-0;103399;Quest frm def Doc;Schrittmacher_Defi_ES_Frequenz;60;Nein;1518
+9279-1;105014;Resp rate;Schrittmacher_Osypka101H_ES_Rate;62;Nein;1519
+14722-3;105033;ENA Ab Ser Ql;Schrittmacher_Osypka203H_ES_A-Sense;60;Nein;1520
+24461-6;105033;FA SerPl-sCnc;Schrittmacher_Osypka203H_ES_A-Sense;60;Nein;1521
+35168-4;105033;AA SerPl-sCnc;Schrittmacher_Osypka203H_ES_A-Sense;60;Nein;1522
+14722-3;105020;ENA Ab Ser Ql;Schrittmacher_Osypka203H_ES_A_Sense;60;Nein;1523
+24461-6;105020;FA SerPl-sCnc;Schrittmacher_Osypka203H_ES_A_Sense;60;Nein;1524
+35168-4;105020;AA SerPl-sCnc;Schrittmacher_Osypka203H_ES_A_Sense;60;Nein;1525
+100858-0;105022;CD4+154/CD4 stim COVID Spike;Schrittmacher_Osypka203H_ES_A_STIM;80;Nein;1526
+100859-8;105022;CD4 IFNg/CD4 p Stim COVID Sp;Schrittmacher_Osypka203H_ES_A_STIM;80;Nein;1527
+100860-6;105022;CD4 TNFa/CD4 p Stim COVID Sp;Schrittmacher_Osypka203H_ES_A_STIM;80;Nein;1528
+14650-6;105025;Citrate 24h Ur-sRate;Schrittmacher_Osypka203H_ES_Highrate_StimRate;65;Nein;1529
+3151-8;105019;Inhaled O2 flow rate;Schrittmacher_Osypka203H_ES_Rate;100;Nein;1530
+8867-4;105019;Heart rate;Schrittmacher_Osypka203H_ES_Rate;100;Nein;1531
+9278-3;105019;Breath rate special circumstances;Schrittmacher_Osypka203H_ES_Rate;100;Nein;1532
+9279-1;105019;Resp rate;Schrittmacher_Osypka203H_ES_Rate;100;Nein;1533
+100858-0;105023;CD4+154/CD4 stim COVID Spike;Schrittmacher_Osypka203H_ES_V_STIM;80;Nein;1534
+100859-8;105023;CD4 IFNg/CD4 p Stim COVID Sp;Schrittmacher_Osypka203H_ES_V_STIM;80;Nein;1535
+100860-6;105023;CD4 TNFa/CD4 p Stim COVID Sp;Schrittmacher_Osypka203H_ES_V_STIM;80;Nein;1536
+11187-2;103397;P frequentans IgE Qn;Schrittmacher_Siemens_ES_Frequenz;61;Nein;1537
+34571-0;102785;Screen aPTT;Score_AIS;60;Nein;1538
+44760-7;102785;MELD score;Score_AIS;71;Nein;1539
+73561-3;102785;IGF-I Z-score SerPl;Score_AIS;71;Nein;1540
+88859-4;102785;Disease stage score for risk calculation;Score_AIS;71;Nein;1541
+9271-8;102785;10M Apgar Score;Score_AIS;71;Nein;1542
+9274-2;102785;5M Apgar Score;Score_AIS;71;Nein;1543
+96790-1;102785;SOFA total score SOFA;Score_AIS;71;Nein;1544
+96823-0;102785;Respiration Score SOFA;Score_AIS;71;Nein;1545
+96824-8;102785;Coag Score SOFA;Score_AIS;71;Nein;1546
+96825-5;102785;Liver Score SOFA;Score_AIS;71;Nein;1547
+96826-3;102785;Cardio Score SOFA;Score_AIS;71;Nein;1548
+96827-1;102785;CNS Score SOFA;Score_AIS;71;Nein;1549
+96828-9;102785;Renal Score SOFA;Score_AIS;71;Nein;1550
+34231-1;102786;Aldost/Creat Ur-sRto;Score_Aldrete;61;Nein;1551
+44760-7;102786;MELD score;Score_Aldrete;70;Nein;1552
+6303-2;102786;Screen dRVVT;Score_Aldrete;64;Nein;1553
+44760-7;102787;MELD score;Score_APACHE2;67;Nein;1554
+9271-8;102787;10M Apgar Score;Score_APACHE2;64;Nein;1555
+9274-2;102787;5M Apgar Score;Score_APACHE2;67;Nein;1556
+34571-0;102788;Screen aPTT;Score_Apgar;64;Nein;1557
+39456-9;102788;APAP Ur-sCnc;Score_Apgar;61;Nein;1558
+44760-7;102788;MELD score;Score_Apgar;67;Nein;1559
+8310-5;110924;Body temperature;P_Temperatur_Venoes;69;Ja;1485
+19224-5;1273;SaO2 % BldMV;SaO2;100;Ja;1504
+73561-3;102788;IGF-I Z-score SerPl;Score_Apgar;62;Nein;1560
+88859-4;102788;Disease stage score for risk calculation;Score_Apgar;62;Nein;1561
+96790-1;102788;SOFA total score SOFA;Score_Apgar;62;Nein;1564
+96823-0;102788;Respiration Score SOFA;Score_Apgar;62;Nein;1565
+96824-8;102788;Coag Score SOFA;Score_Apgar;69;Nein;1566
+96825-5;102788;Liver Score SOFA;Score_Apgar;62;Nein;1567
+96826-3;102788;Cardio Score SOFA;Score_Apgar;62;Nein;1568
+96827-1;102788;CNS Score SOFA;Score_Apgar;62;Nein;1569
+96828-9;102788;Renal Score SOFA;Score_Apgar;62;Nein;1570
+44760-7;102764;MELD score;Score_ARDS;70;Nein;1571
+73561-3;102764;IGF-I Z-score SerPl;Score_ARDS;67;Nein;1572
+88859-4;102764;Disease stage score for risk calculation;Score_ARDS;67;Nein;1573
+9271-8;102764;10M Apgar Score;Score_ARDS;67;Nein;1574
+9274-2;102764;5M Apgar Score;Score_ARDS;67;Nein;1575
+96790-1;102764;SOFA total score SOFA;Score_ARDS;67;Nein;1576
+96823-0;102764;Respiration Score SOFA;Score_ARDS;67;Nein;1577
+96824-8;102764;Coag Score SOFA;Score_ARDS;67;Nein;1578
+96825-5;102764;Liver Score SOFA;Score_ARDS;67;Nein;1579
+96826-3;102764;Cardio Score SOFA;Score_ARDS;74;Nein;1580
+96827-1;102764;CNS Score SOFA;Score_ARDS;67;Nein;1581
+96828-9;102764;Renal Score SOFA;Score_ARDS;67;Nein;1582
+44760-7;102832;MELD score;Score_Barthel;70;Nein;1583
+96790-1;102832;SOFA total score SOFA;Score_Barthel;62;Nein;1584
+96828-9;102832;Renal Score SOFA;Score_Barthel;62;Nein;1585
+44760-7;102789;MELD score;Score_BernerSchmerzscore;67;Nein;1586
+44760-7;102790;MELD score;Score_Besinger;67;Nein;1587
+73561-3;102790;IGF-I Z-score SerPl;Score_Besinger;61;Nein;1588
+96825-5;102790;Liver Score SOFA;Score_Besinger;60;Nein;1589
+34571-0;102791;Screen aPTT;Score_BPS;60;Nein;1590
+44760-7;102791;MELD score;Score_BPS;71;Nein;1591
+73561-3;102791;IGF-I Z-score SerPl;Score_BPS;71;Nein;1592
+88859-4;102791;Disease stage score for risk calculation;Score_BPS;71;Nein;1593
+9271-8;102791;10M Apgar Score;Score_BPS;71;Nein;1594
+9274-2;102791;5M Apgar Score;Score_BPS;71;Nein;1595
+96790-1;102791;SOFA total score SOFA;Score_BPS;71;Nein;1596
+96823-0;102791;Respiration Score SOFA;Score_BPS;71;Nein;1597
+96824-8;102791;Coag Score SOFA;Score_BPS;71;Nein;1598
+96825-5;102791;Liver Score SOFA;Score_BPS;71;Nein;1599
+96826-3;102791;Cardio Score SOFA;Score_BPS;71;Nein;1600
+96827-1;102791;CNS Score SOFA;Score_BPS;71;Nein;1601
+96828-9;102791;Renal Score SOFA;Score_BPS;71;Nein;1602
+34571-0;105223;Screen aPTT;Score_BPS_Verlauf;60;Nein;1603
+44760-7;105223;MELD score;Score_BPS_Verlauf;71;Nein;1604
+73561-3;105223;IGF-I Z-score SerPl;Score_BPS_Verlauf;71;Nein;1605
+88859-4;105223;Disease stage score for risk calculation;Score_BPS_Verlauf;71;Nein;1606
+9271-8;105223;10M Apgar Score;Score_BPS_Verlauf;71;Nein;1607
+9274-2;105223;5M Apgar Score;Score_BPS_Verlauf;71;Nein;1608
+96790-1;105223;SOFA total score SOFA;Score_BPS_Verlauf;71;Nein;1609
+96823-0;105223;Respiration Score SOFA;Score_BPS_Verlauf;71;Nein;1610
+96824-8;105223;Coag Score SOFA;Score_BPS_Verlauf;71;Nein;1611
+96825-5;105223;Liver Score SOFA;Score_BPS_Verlauf;71;Nein;1612
+96826-3;105223;Cardio Score SOFA;Score_BPS_Verlauf;71;Nein;1613
+96827-1;105223;CNS Score SOFA;Score_BPS_Verlauf;71;Nein;1614
+96828-9;105223;Renal Score SOFA;Score_BPS_Verlauf;71;Nein;1615
+44760-7;101609;MELD score;Score_Braden;67;Nein;1616
+96828-9;101609;Renal Score SOFA;Score_Braden;64;Nein;1617
+44760-7;108377;MELD score;Score_BradenQ;67;Nein;1618
+96828-9;108377;Renal Score SOFA;Score_BradenQ;62;Nein;1619
+44760-7;102848;MELD score;Score_Braden_Verlauf;67;Nein;1620
+96828-9;102848;Renal Score SOFA;Score_Braden_Verlauf;64;Nein;1621
+44760-7;104289;MELD score;Score_CAM_ICU_Punktwert_Gesamt;67;Nein;1622
+44760-7;117126;MELD score;Score_CAM_ICU_Punktwert_GesamtAktualisierung2020;67;Nein;1623
+44760-7;102792;MELD score;Score_CIWA;67;Nein;1624
+73561-3;102792;IGF-I Z-score SerPl;Score_CIWA;67;Nein;1625
+88859-4;102792;Disease stage score for risk calculation;Score_CIWA;67;Nein;1626
+9271-8;102792;10M Apgar Score;Score_CIWA;67;Nein;1627
+9274-2;102792;5M Apgar Score;Score_CIWA;67;Nein;1628
+96790-1;102792;SOFA total score SOFA;Score_CIWA;67;Nein;1629
+96823-0;102792;Respiration Score SOFA;Score_CIWA;67;Nein;1630
+96824-8;102792;Coag Score SOFA;Score_CIWA;67;Nein;1631
+96825-5;102792;Liver Score SOFA;Score_CIWA;67;Nein;1632
+96826-3;102792;Cardio Score SOFA;Score_CIWA;67;Nein;1633
+96827-1;102792;CNS Score SOFA;Score_CIWA;67;Nein;1634
+96828-9;102792;Renal Score SOFA;Score_CIWA;67;Nein;1635
+44760-7;102793;MELD score;Score_Cleveland;72;Nein;1636
+96825-5;102793;Liver Score SOFA;Score_Cleveland;65;Nein;1637
+44760-7;109749;MELD score;Score_ComfortB_beatmet_Skala;67;Nein;1638
+44760-7;110743;MELD score;Score_ComfortB_spontan_Skala;67;Nein;1639
+96790-1;110743;SOFA total score SOFA;Score_ComfortB_spontan_Skala;62;Nein;1640
+44760-7;102794;MELD score;Score_ComfortSkala;67;Nein;1641
+51844-9;102794;Cortis Sal-sCnc;Score_ComfortSkala;61;Nein;1642
+96790-1;102794;SOFA total score SOFA;Score_ComfortSkala;71;Nein;1643
+96824-8;102794;Coag Score SOFA;Score_ComfortSkala;61;Nein;1644
+96827-1;102794;CNS Score SOFA;Score_ComfortSkala;62;Nein;1645
+44760-7;102795;MELD score;Score_CRIB;67;Nein;1646
+73561-3;102795;IGF-I Z-score SerPl;Score_CRIB;67;Nein;1647
+88859-4;102795;Disease stage score for risk calculation;Score_CRIB;67;Nein;1648
+9271-8;102795;10M Apgar Score;Score_CRIB;67;Nein;1649
+9274-2;102795;5M Apgar Score;Score_CRIB;67;Nein;1650
+96790-1;102795;SOFA total score SOFA;Score_CRIB;67;Nein;1651
+96823-0;102795;Respiration Score SOFA;Score_CRIB;67;Nein;1652
+96824-8;102795;Coag Score SOFA;Score_CRIB;67;Nein;1653
+96825-5;102795;Liver Score SOFA;Score_CRIB;67;Nein;1654
+96826-3;102795;Cardio Score SOFA;Score_CRIB;67;Nein;1655
+96827-1;102795;CNS Score SOFA;Score_CRIB;67;Nein;1656
+96828-9;102795;Renal Score SOFA;Score_CRIB;67;Nein;1657
+44760-7;103444;MELD score;Score_DGAI_AufnArzt;70;Nein;1658
+73561-3;103444;IGF-I Z-score SerPl;Score_DGAI_AufnArzt;67;Nein;1659
+88859-4;103444;Disease stage score for risk calculation;Score_DGAI_AufnArzt;67;Nein;1660
+9271-8;103444;10M Apgar Score;Score_DGAI_AufnArzt;67;Nein;1661
+9274-2;103444;5M Apgar Score;Score_DGAI_AufnArzt;67;Nein;1662
+96790-1;103444;SOFA total score SOFA;Score_DGAI_AufnArzt;67;Nein;1663
+96823-0;103444;Respiration Score SOFA;Score_DGAI_AufnArzt;67;Nein;1664
+96824-8;103444;Coag Score SOFA;Score_DGAI_AufnArzt;67;Nein;1665
+96825-5;103444;Liver Score SOFA;Score_DGAI_AufnArzt;67;Nein;1666
+96826-3;103444;Cardio Score SOFA;Score_DGAI_AufnArzt;67;Nein;1667
+96827-1;103444;CNS Score SOFA;Score_DGAI_AufnArzt;67;Nein;1668
+96828-9;103444;Renal Score SOFA;Score_DGAI_AufnArzt;67;Nein;1669
+44760-7;103556;MELD score;Score_DGAI_AufnASA1;70;Nein;1670
+73561-3;103556;IGF-I Z-score SerPl;Score_DGAI_AufnASA1;67;Nein;1671
+88859-4;103556;Disease stage score for risk calculation;Score_DGAI_AufnASA1;67;Nein;1672
+9271-8;103556;10M Apgar Score;Score_DGAI_AufnASA1;67;Nein;1673
+9274-2;103556;5M Apgar Score;Score_DGAI_AufnASA1;67;Nein;1674
+96790-1;103556;SOFA total score SOFA;Score_DGAI_AufnASA1;67;Nein;1675
+96823-0;103556;Respiration Score SOFA;Score_DGAI_AufnASA1;67;Nein;1676
+96824-8;103556;Coag Score SOFA;Score_DGAI_AufnASA1;67;Nein;1677
+96825-5;103556;Liver Score SOFA;Score_DGAI_AufnASA1;67;Nein;1678
+96826-3;103556;Cardio Score SOFA;Score_DGAI_AufnASA1;67;Nein;1679
+96827-1;103556;CNS Score SOFA;Score_DGAI_AufnASA1;67;Nein;1680
+96828-9;103556;Renal Score SOFA;Score_DGAI_AufnASA1;67;Nein;1681
+44760-7;103557;MELD score;Score_DGAI_AufnASA2;70;Nein;1682
+73561-3;103557;IGF-I Z-score SerPl;Score_DGAI_AufnASA2;67;Nein;1683
+88859-4;103557;Disease stage score for risk calculation;Score_DGAI_AufnASA2;67;Nein;1684
+9271-8;103557;10M Apgar Score;Score_DGAI_AufnASA2;67;Nein;1685
+9274-2;103557;5M Apgar Score;Score_DGAI_AufnASA2;67;Nein;1686
+96790-1;103557;SOFA total score SOFA;Score_DGAI_AufnASA2;67;Nein;1687
+96823-0;103557;Respiration Score SOFA;Score_DGAI_AufnASA2;67;Nein;1688
+96824-8;103557;Coag Score SOFA;Score_DGAI_AufnASA2;67;Nein;1689
+96825-5;103557;Liver Score SOFA;Score_DGAI_AufnASA2;67;Nein;1690
+96826-3;103557;Cardio Score SOFA;Score_DGAI_AufnASA2;67;Nein;1691
+96827-1;103557;CNS Score SOFA;Score_DGAI_AufnASA2;67;Nein;1692
+96828-9;103557;Renal Score SOFA;Score_DGAI_AufnASA2;67;Nein;1693
+44760-7;103558;MELD score;Score_DGAI_AufnASA3;70;Nein;1694
+73561-3;103558;IGF-I Z-score SerPl;Score_DGAI_AufnASA3;67;Nein;1695
+88859-4;103558;Disease stage score for risk calculation;Score_DGAI_AufnASA3;67;Nein;1696
+9271-8;103558;10M Apgar Score;Score_DGAI_AufnASA3;67;Nein;1697
+9274-2;103558;5M Apgar Score;Score_DGAI_AufnASA3;67;Nein;1698
+96790-1;103558;SOFA total score SOFA;Score_DGAI_AufnASA3;67;Nein;1699
+96823-0;103558;Respiration Score SOFA;Score_DGAI_AufnASA3;67;Nein;1700
+96824-8;103558;Coag Score SOFA;Score_DGAI_AufnASA3;67;Nein;1701
+96825-5;103558;Liver Score SOFA;Score_DGAI_AufnASA3;67;Nein;1702
+96826-3;103558;Cardio Score SOFA;Score_DGAI_AufnASA3;67;Nein;1703
+96827-1;103558;CNS Score SOFA;Score_DGAI_AufnASA3;67;Nein;1704
+96828-9;103558;Renal Score SOFA;Score_DGAI_AufnASA3;67;Nein;1705
+44760-7;103559;MELD score;Score_DGAI_AufnASA4;70;Nein;1706
+73561-3;103559;IGF-I Z-score SerPl;Score_DGAI_AufnASA4;67;Nein;1707
+88859-4;103559;Disease stage score for risk calculation;Score_DGAI_AufnASA4;67;Nein;1708
+9271-8;103559;10M Apgar Score;Score_DGAI_AufnASA4;67;Nein;1709
+9274-2;103559;5M Apgar Score;Score_DGAI_AufnASA4;67;Nein;1710
+96790-1;103559;SOFA total score SOFA;Score_DGAI_AufnASA4;67;Nein;1711
+96823-0;103559;Respiration Score SOFA;Score_DGAI_AufnASA4;67;Nein;1712
+96824-8;103559;Coag Score SOFA;Score_DGAI_AufnASA4;67;Nein;1713
+96825-5;103559;Liver Score SOFA;Score_DGAI_AufnASA4;67;Nein;1714
+96826-3;103559;Cardio Score SOFA;Score_DGAI_AufnASA4;67;Nein;1715
+96827-1;103559;CNS Score SOFA;Score_DGAI_AufnASA4;67;Nein;1716
+96828-9;103559;Renal Score SOFA;Score_DGAI_AufnASA4;67;Nein;1717
+44760-7;103560;MELD score;Score_DGAI_AufnASA5;70;Nein;1718
+73561-3;103560;IGF-I Z-score SerPl;Score_DGAI_AufnASA5;67;Nein;1719
+88859-4;103560;Disease stage score for risk calculation;Score_DGAI_AufnASA5;67;Nein;1720
+9271-8;103560;10M Apgar Score;Score_DGAI_AufnASA5;67;Nein;1721
+9274-2;103560;5M Apgar Score;Score_DGAI_AufnASA5;67;Nein;1722
+96790-1;103560;SOFA total score SOFA;Score_DGAI_AufnASA5;67;Nein;1723
+96823-0;103560;Respiration Score SOFA;Score_DGAI_AufnASA5;67;Nein;1724
+96824-8;103560;Coag Score SOFA;Score_DGAI_AufnASA5;67;Nein;1725
+96825-5;103560;Liver Score SOFA;Score_DGAI_AufnASA5;67;Nein;1726
+96826-3;103560;Cardio Score SOFA;Score_DGAI_AufnASA5;67;Nein;1727
+96827-1;103560;CNS Score SOFA;Score_DGAI_AufnASA5;67;Nein;1728
+96828-9;103560;Renal Score SOFA;Score_DGAI_AufnASA5;67;Nein;1729
+44760-7;103561;MELD score;Score_DGAI_AufnBeatmet;67;Nein;1730
+44760-7;103458;MELD score;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;70;Nein;1731
+73561-3;103458;IGF-I Z-score SerPl;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1732
+88859-4;103458;Disease stage score for risk calculation;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1733
+9271-8;103458;10M Apgar Score;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1734
+9274-2;103458;5M Apgar Score;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1735
+96790-1;103458;SOFA total score SOFA;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1736
+96823-0;103458;Respiration Score SOFA;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1737
+96824-8;103458;Coag Score SOFA;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1738
+96825-5;103458;Liver Score SOFA;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1739
+96826-3;103458;Cardio Score SOFA;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1740
+96827-1;103458;CNS Score SOFA;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1741
+96828-9;103458;Renal Score SOFA;Score_DGAI_AufnBeatmungsstundenbiszurAufnahme;67;Nein;1742
+44760-7;103504;MELD score;Score_DGAI_AufnChronischeAIDS;67;Nein;1743
+44760-7;103506;MELD score;Score_DGAI_AufnChronischeHaematologischeNeoplasie;70;Nein;1744
+73561-3;103506;IGF-I Z-score SerPl;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1745
+88859-4;103506;Disease stage score for risk calculation;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1746
+9271-8;103506;10M Apgar Score;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1747
+9274-2;103506;5M Apgar Score;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1748
+96790-1;103506;SOFA total score SOFA;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1749
+96823-0;103506;Respiration Score SOFA;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1750
+96824-8;103506;Coag Score SOFA;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1751
+96825-5;103506;Liver Score SOFA;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1752
+96826-3;103506;Cardio Score SOFA;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1753
+96827-1;103506;CNS Score SOFA;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1754
+96828-9;103506;Renal Score SOFA;Score_DGAI_AufnChronischeHaematologischeNeoplasie;67;Nein;1755
+44760-7;103507;MELD score;Score_DGAI_AufnChronischeMetastasierenNeoplasie;70;Nein;1756
+73561-3;103507;IGF-I Z-score SerPl;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1757
+88859-4;103507;Disease stage score for risk calculation;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1758
+9271-8;103507;10M Apgar Score;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1759
+9274-2;103507;5M Apgar Score;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1760
+96790-1;103507;SOFA total score SOFA;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1761
+96823-0;103507;Respiration Score SOFA;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1762
+96824-8;103507;Coag Score SOFA;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1763
+96825-5;103507;Liver Score SOFA;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1764
+96826-3;103507;Cardio Score SOFA;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1765
+96827-1;103507;CNS Score SOFA;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1766
+96828-9;103507;Renal Score SOFA;Score_DGAI_AufnChronischeMetastasierenNeoplasie;67;Nein;1767
+44760-7;103553;MELD score;Score_DGAI_AufnGeplantChirurgisch;67;Nein;1768
+44760-7;103508;MELD score;Score_DGAI_AufnIndikationBeatmungsfall;67;Nein;1769
+44760-7;103509;MELD score;Score_DGAI_AufnIndikationIntensivBehandlung;70;Nein;1770
+73561-3;103509;IGF-I Z-score SerPl;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1771
+88859-4;103509;Disease stage score for risk calculation;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1772
+9271-8;103509;10M Apgar Score;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1773
+9274-2;103509;5M Apgar Score;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1774
+96790-1;103509;SOFA total score SOFA;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1775
+96823-0;103509;Respiration Score SOFA;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1776
+96824-8;103509;Coag Score SOFA;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1777
+96825-5;103509;Liver Score SOFA;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1778
+96826-3;103509;Cardio Score SOFA;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1779
+96827-1;103509;CNS Score SOFA;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1780
+96828-9;103509;Renal Score SOFA;Score_DGAI_AufnIndikationIntensivBehandlung;67;Nein;1781
+44760-7;103510;MELD score;Score_DGAI_AufnIndikationIntensivUeberwachung;70;Nein;1782
+73561-3;103510;IGF-I Z-score SerPl;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1783
+88859-4;103510;Disease stage score for risk calculation;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1784
+9271-8;103510;10M Apgar Score;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1785
+9274-2;103510;5M Apgar Score;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1786
+96790-1;103510;SOFA total score SOFA;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1787
+96823-0;103510;Respiration Score SOFA;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1788
+96824-8;103510;Coag Score SOFA;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1789
+96825-5;103510;Liver Score SOFA;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1790
+96826-3;103510;Cardio Score SOFA;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1791
+96827-1;103510;CNS Score SOFA;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1792
+96828-9;103510;Renal Score SOFA;Score_DGAI_AufnIndikationIntensivUeberwachung;67;Nein;1793
+44760-7;103511;MELD score;Score_DGAI_AufnIndikationSchwerstkrankerPatient;70;Nein;1794
+73561-3;103511;IGF-I Z-score SerPl;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1795
+88859-4;103511;Disease stage score for risk calculation;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1796
+9271-8;103511;10M Apgar Score;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1797
+9274-2;103511;5M Apgar Score;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1798
+96790-1;103511;SOFA total score SOFA;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1799
+96823-0;103511;Respiration Score SOFA;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1800
+96824-8;103511;Coag Score SOFA;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1801
+96825-5;103511;Liver Score SOFA;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1802
+96826-3;103511;Cardio Score SOFA;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1803
+96827-1;103511;CNS Score SOFA;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1804
+96828-9;103511;Renal Score SOFA;Score_DGAI_AufnIndikationSchwerstkrankerPatient;67;Nein;1805
+44760-7;103555;MELD score;Score_DGAI_AufnMedizinisch;67;Nein;1806
+44760-7;103513;MELD score;Score_DGAI_AufnNachOperation;67;Nein;1807
+96823-0;103513;Respiration Score SOFA;Score_DGAI_AufnNachOperation;60;Nein;1808
+44760-7;103514;MELD score;Score_DGAI_AufnTraumaPolytrauma;67;Nein;1809
+44760-7;103554;MELD score;Score_DGAI_AufnUngeplantChirurgisch;70;Nein;1810
+73561-3;103554;IGF-I Z-score SerPl;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1811
+88859-4;103554;Disease stage score for risk calculation;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1812
+9271-8;103554;10M Apgar Score;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1813
+9274-2;103554;5M Apgar Score;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1814
+96790-1;103554;SOFA total score SOFA;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1815
+96823-0;103554;Respiration Score SOFA;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1816
+96824-8;103554;Coag Score SOFA;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1817
+96825-5;103554;Liver Score SOFA;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1818
+96826-3;103554;Cardio Score SOFA;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1819
+96827-1;103554;CNS Score SOFA;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1820
+96828-9;103554;Renal Score SOFA;Score_DGAI_AufnUngeplantChirurgisch;67;Nein;1821
+44760-7;103515;MELD score;Score_DGAI_AufnVonExterneKlinik;67;Nein;1822
+44760-7;103512;MELD score;Score_DGAI_AufnVonIntensivstationWachstation;70;Nein;1823
+73561-3;103512;IGF-I Z-score SerPl;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1824
+88859-4;103512;Disease stage score for risk calculation;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1825
+9271-8;103512;10M Apgar Score;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1826
+9274-2;103512;5M Apgar Score;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1827
+96790-1;103512;SOFA total score SOFA;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1828
+96823-0;103512;Respiration Score SOFA;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1829
+96824-8;103512;Coag Score SOFA;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1830
+96825-5;103512;Liver Score SOFA;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1831
+96826-3;103512;Cardio Score SOFA;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1832
+96827-1;103512;CNS Score SOFA;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1833
+96828-9;103512;Renal Score SOFA;Score_DGAI_AufnVonIntensivstationWachstation;67;Nein;1834
+44760-7;103516;MELD score;Score_DGAI_AufnVonNotaufnahmeNAW;67;Nein;1835
+44760-7;103517;MELD score;Score_DGAI_AufnVonOPAWR;67;Nein;1836
+44760-7;103518;MELD score;Score_DGAI_AufnVonPeriphererStation;70;Nein;1837
+73561-3;103518;IGF-I Z-score SerPl;Score_DGAI_AufnVonPeriphererStation;67;Nein;1838
+88859-4;103518;Disease stage score for risk calculation;Score_DGAI_AufnVonPeriphererStation;67;Nein;1839
+9271-8;103518;10M Apgar Score;Score_DGAI_AufnVonPeriphererStation;67;Nein;1840
+9274-2;103518;5M Apgar Score;Score_DGAI_AufnVonPeriphererStation;67;Nein;1841
+96790-1;103518;SOFA total score SOFA;Score_DGAI_AufnVonPeriphererStation;67;Nein;1842
+96823-0;103518;Respiration Score SOFA;Score_DGAI_AufnVonPeriphererStation;67;Nein;1843
+96824-8;103518;Coag Score SOFA;Score_DGAI_AufnVonPeriphererStation;67;Nein;1844
+96825-5;103518;Liver Score SOFA;Score_DGAI_AufnVonPeriphererStation;67;Nein;1845
+96826-3;103518;Cardio Score SOFA;Score_DGAI_AufnVonPeriphererStation;67;Nein;1846
+96827-1;103518;CNS Score SOFA;Score_DGAI_AufnVonPeriphererStation;67;Nein;1847
+96828-9;103518;Renal Score SOFA;Score_DGAI_AufnVonPeriphererStation;67;Nein;1848
+44760-7;103519;MELD score;Score_DGAI_AufnWiederaufnahmeGroesser48h;67;Nein;1849
+44760-7;103520;MELD score;Score_DGAI_AufnWiederaufnahmeKleiner48h;67;Nein;1850
+44760-7;103464;MELD score;Score_DGAI_EntlArzt;67;Nein;1851
+44760-7;103462;MELD score;Score_DGAI_EntlDatum;67;Nein;1852
+44760-7;103521;MELD score;Score_DGAI_EntlInfoANV;67;Nein;1853
+44760-7;103522;MELD score;Score_DGAI_EntlInfoARDSALI;67;Nein;1854
+44760-7;103523;MELD score;Score_DGAI_EntlInfoBarthelIndexErhoben;70;Nein;1855
+73561-3;103523;IGF-I Z-score SerPl;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1856
+88859-4;103523;Disease stage score for risk calculation;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1857
+9271-8;103523;10M Apgar Score;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1858
+9274-2;103523;5M Apgar Score;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1859
+96790-1;103523;SOFA total score SOFA;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1860
+96823-0;103523;Respiration Score SOFA;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1861
+96824-8;103523;Coag Score SOFA;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1862
+96825-5;103523;Liver Score SOFA;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1863
+96826-3;103523;Cardio Score SOFA;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1864
+96827-1;103523;CNS Score SOFA;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1865
+96828-9;103523;Renal Score SOFA;Score_DGAI_EntlInfoBarthelIndexErhoben;67;Nein;1866
+44760-7;103524;MELD score;Score_DGAI_EntlInfoECMOILA;67;Nein;1867
+44760-7;103525;MELD score;Score_DGAI_EntlInfoESBL;67;Nein;1868
+44760-7;103526;MELD score;Score_DGAI_EntlInfoHFOV;67;Nein;1869
+44760-7;103527;MELD score;Score_DGAI_EntlInfoMaximaleTherapieAufStation;70;Nein;1870
+73561-3;103527;IGF-I Z-score SerPl;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1871
+88859-4;103527;Disease stage score for risk calculation;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1872
+9271-8;103527;10M Apgar Score;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1873
+9274-2;103527;5M Apgar Score;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1874
+96790-1;103527;SOFA total score SOFA;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1875
+96823-0;103527;Respiration Score SOFA;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1876
+96824-8;103527;Coag Score SOFA;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1877
+96825-5;103527;Liver Score SOFA;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1878
+96826-3;103527;Cardio Score SOFA;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1879
+96827-1;103527;CNS Score SOFA;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1880
+96828-9;103527;Renal Score SOFA;Score_DGAI_EntlInfoMaximaleTherapieAufStation;67;Nein;1881
+44760-7;103528;MELD score;Score_DGAI_EntlInfoMODMOV;67;Nein;1882
+44760-7;103529;MELD score;Score_DGAI_EntlInfoMRSA;67;Nein;1883
+44760-7;103530;MELD score;Score_DGAI_EntlInfoNET;67;Nein;1884
+44760-7;103531;MELD score;Score_DGAI_EntlInfoObduktionDurchgefuehrt;67;Nein;1885
+44760-7;103532;MELD score;Score_DGAI_EntlInfoPolytrauma;67;Nein;1886
+44760-7;103533;MELD score;Score_DGAI_EntlInfoSepsis;67;Nein;1887
+44760-7;103534;MELD score;Score_DGAI_EntlInfoTherapieMinima;67;Nein;1888
+44760-7;103535;MELD score;Score_DGAI_EntlInfoVRE;67;Nein;1889
+44760-7;103536;MELD score;Score_DGAI_EntlNachAndereIntensivstation;70;Nein;1890
+73561-3;103536;IGF-I Z-score SerPl;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1891
+88859-4;103536;Disease stage score for risk calculation;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1892
+9271-8;103536;10M Apgar Score;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1893
+9274-2;103536;5M Apgar Score;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1894
+96790-1;103536;SOFA total score SOFA;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1895
+96823-0;103536;Respiration Score SOFA;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1896
+96824-8;103536;Coag Score SOFA;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1897
+96825-5;103536;Liver Score SOFA;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1898
+96826-3;103536;Cardio Score SOFA;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1899
+96827-1;103536;CNS Score SOFA;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1900
+96828-9;103536;Renal Score SOFA;Score_DGAI_EntlNachAndereIntensivstation;67;Nein;1901
+44760-7;103537;MELD score;Score_DGAI_EntlNachExterneNormalklinik;67;Nein;1902
+44760-7;103538;MELD score;Score_DGAI_EntlNachExterneSpezialklinik;70;Nein;1903
+73561-3;103538;IGF-I Z-score SerPl;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1904
+88859-4;103538;Disease stage score for risk calculation;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1905
+9271-8;103538;10M Apgar Score;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1906
+9274-2;103538;5M Apgar Score;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1907
+96790-1;103538;SOFA total score SOFA;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1908
+96823-0;103538;Respiration Score SOFA;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1909
+96824-8;103538;Coag Score SOFA;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1910
+96825-5;103538;Liver Score SOFA;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1911
+96826-3;103538;Cardio Score SOFA;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1912
+96827-1;103538;CNS Score SOFA;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1913
+96828-9;103538;Renal Score SOFA;Score_DGAI_EntlNachExterneSpezialklinik;67;Nein;1914
+44760-7;103539;MELD score;Score_DGAI_EntlNachHause;67;Nein;1915
+44760-7;103540;MELD score;Score_DGAI_EntlNachKeineVerlegungExitus;70;Nein;1916
+73561-3;103540;IGF-I Z-score SerPl;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1917
+88859-4;103540;Disease stage score for risk calculation;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1918
+9271-8;103540;10M Apgar Score;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1919
+9274-2;103540;5M Apgar Score;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1920
+96790-1;103540;SOFA total score SOFA;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1921
+96823-0;103540;Respiration Score SOFA;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1922
+96824-8;103540;Coag Score SOFA;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1923
+96825-5;103540;Liver Score SOFA;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1924
+96826-3;103540;Cardio Score SOFA;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1925
+96827-1;103540;CNS Score SOFA;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1926
+96828-9;103540;Renal Score SOFA;Score_DGAI_EntlNachKeineVerlegungExitus;67;Nein;1927
+44760-7;103541;MELD score;Score_DGAI_EntlNachNormalstation;67;Nein;1928
+44760-7;103542;MELD score;Score_DGAI_EntlNachWachstation;67;Nein;1929
+44760-7;103543;MELD score;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;70;Nein;1930
+73561-3;103543;IGF-I Z-score SerPl;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1931
+88859-4;103543;Disease stage score for risk calculation;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1932
+9271-8;103543;10M Apgar Score;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1933
+9274-2;103543;5M Apgar Score;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1934
+96790-1;103543;SOFA total score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1935
+96823-0;103543;Respiration Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1936
+96824-8;103543;Coag Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1937
+96825-5;103543;Liver Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1938
+96826-3;103543;Cardio Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1939
+96827-1;103543;CNS Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1940
+96828-9;103543;Renal Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungDauerhaf;67;Nein;1941
+44760-7;103544;MELD score;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;70;Nein;1942
+73561-3;103544;IGF-I Z-score SerPl;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1943
+88859-4;103544;Disease stage score for risk calculation;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1944
+9271-8;103544;10M Apgar Score;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1945
+9274-2;103544;5M Apgar Score;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1946
+96790-1;103544;SOFA total score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1947
+96823-0;103544;Respiration Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1948
+96824-8;103544;Coag Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1949
+96825-5;103544;Liver Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1950
+96826-3;103544;Cardio Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1951
+96827-1;103544;CNS Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1952
+96828-9;103544;Renal Score SOFA;Score_DGAI_EntlPostVisiteBeeintraechtigungPassager;67;Nein;1953
+44760-7;103492;MELD score;Score_DGAI_EntlPostVisiteDatum;67;Nein;1954
+44760-7;103545;MELD score;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;70;Nein;1955
+73561-3;103545;IGF-I Z-score SerPl;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1956
+88859-4;103545;Disease stage score for risk calculation;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1957
+9271-8;103545;10M Apgar Score;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1958
+9274-2;103545;5M Apgar Score;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1959
+96790-1;103545;SOFA total score SOFA;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1960
+96823-0;103545;Respiration Score SOFA;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1961
+96824-8;103545;Coag Score SOFA;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1962
+96825-5;103545;Liver Score SOFA;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1963
+96826-3;103545;Cardio Score SOFA;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1964
+96827-1;103545;CNS Score SOFA;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1965
+96828-9;103545;Renal Score SOFA;Score_DGAI_EntlPostVisiteExitusImKrankenhaus;67;Nein;1966
+44760-7;103546;MELD score;Score_DGAI_EntlPostVisiteKeineDurchgefuehrt;67;Nein;1967
+44760-7;103547;MELD score;Score_DGAI_EntlPostVisiteRestitutioAdIntegrum;67;Nein;1968
+44760-7;103562;MELD score;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;70;Nein;1969
+73561-3;103562;IGF-I Z-score SerPl;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1970
+88859-4;103562;Disease stage score for risk calculation;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1971
+9271-8;103562;10M Apgar Score;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1972
+9274-2;103562;5M Apgar Score;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1973
+96790-1;103562;SOFA total score SOFA;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1974
+96823-0;103562;Respiration Score SOFA;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1975
+96824-8;103562;Coag Score SOFA;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1976
+96825-5;103562;Liver Score SOFA;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1977
+96826-3;103562;Cardio Score SOFA;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1978
+96827-1;103562;CNS Score SOFA;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1979
+96828-9;103562;Renal Score SOFA;Score_DGAI_EntlPostVisiteUeberlebenErheblicherDefe;67;Nein;1980
+44760-7;103463;MELD score;Score_DGAI_EntlZeit;67;Nein;1981
+44760-7;103548;MELD score;Score_DGAI_EntlZustandExitus;67;Nein;1982
+44760-7;103549;MELD score;Score_DGAI_EntlZustandGeringBeeintraechtigungDauer;67;Nein;1983
+44760-7;103550;MELD score;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;70;Nein;1984
+73561-3;103550;IGF-I Z-score SerPl;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1985
+88859-4;103550;Disease stage score for risk calculation;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1986
+9271-8;103550;10M Apgar Score;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1987
+9274-2;103550;5M Apgar Score;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1988
+96790-1;103550;SOFA total score SOFA;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1989
+96823-0;103550;Respiration Score SOFA;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1990
+96824-8;103550;Coag Score SOFA;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1991
+96825-5;103550;Liver Score SOFA;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1992
+96826-3;103550;Cardio Score SOFA;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1993
+96827-1;103550;CNS Score SOFA;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1994
+96828-9;103550;Renal Score SOFA;Score_DGAI_EntlZustandGeringBeeintraechtigungPassa;67;Nein;1995
+44760-7;103551;MELD score;Score_DGAI_EntlZustandRestitutioAdIntegrum;70;Nein;1996
+73561-3;103551;IGF-I Z-score SerPl;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;1997
+88859-4;103551;Disease stage score for risk calculation;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;1998
+9271-8;103551;10M Apgar Score;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;1999
+9274-2;103551;5M Apgar Score;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;2000
+96790-1;103551;SOFA total score SOFA;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;2001
+96823-0;103551;Respiration Score SOFA;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;2002
+96824-8;103551;Coag Score SOFA;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;2003
+96825-5;103551;Liver Score SOFA;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;2004
+96826-3;103551;Cardio Score SOFA;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;2005
+96827-1;103551;CNS Score SOFA;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;2006
+96828-9;103551;Renal Score SOFA;Score_DGAI_EntlZustandRestitutioAdIntegrum;67;Nein;2007
+44760-7;103552;MELD score;Score_DGAI_EntlZustandUeberlebenErheblicherDefekt;67;Nein;2008
+12286-1;102796;Drugs Ur Scn;Score_DRS;67;Nein;2009
+44760-7;102796;MELD score;Score_DRS;74;Nein;2010
+6303-2;102796;Screen dRVVT;Score_DRS;67;Nein;2011
+73561-3;102796;IGF-I Z-score SerPl;Score_DRS;71;Nein;2012
+88859-4;102796;Disease stage score for risk calculation;Score_DRS;71;Nein;2013
+9271-8;102796;10M Apgar Score;Score_DRS;71;Nein;2014
+9274-2;102796;5M Apgar Score;Score_DRS;71;Nein;2015
+96790-1;102796;SOFA total score SOFA;Score_DRS;71;Nein;2016
+96823-0;102796;Respiration Score SOFA;Score_DRS;71;Nein;2017
+96824-8;102796;Coag Score SOFA;Score_DRS;71;Nein;2018
+96825-5;102796;Liver Score SOFA;Score_DRS;71;Nein;2019
+96826-3;102796;Cardio Score SOFA;Score_DRS;71;Nein;2020
+96827-1;102796;CNS Score SOFA;Score_DRS;71;Nein;2021
+96828-9;102796;Renal Score SOFA;Score_DRS;71;Nein;2022
+44760-7;102797;MELD score;Score_Dubois;67;Nein;2023
+96826-3;102797;Cardio Score SOFA;Score_Dubois;62;Nein;2024
+44760-7;108641;MELD score;Score_Finnegan;67;Nein;2025
+96825-5;108641;Liver Score SOFA;Score_Finnegan;60;Nein;2026
+44760-7;108484;MELD score;Score_Finnigan;67;Nein;2027
+44760-7;108395;MELD score;Score_FLACC;67;Nein;2028
+48164-8;108395;NSE Fld-mCnc;Score_FLACC;61;Nein;2029
+73561-3;108395;IGF-I Z-score SerPl;Score_FLACC;62;Nein;2030
+88859-4;108395;Disease stage score for risk calculation;Score_FLACC;62;Nein;2031
+9271-8;108395;10M Apgar Score;Score_FLACC;62;Nein;2032
+9274-2;108395;5M Apgar Score;Score_FLACC;62;Nein;2033
+96790-1;108395;SOFA total score SOFA;Score_FLACC;62;Nein;2034
+96823-0;108395;Respiration Score SOFA;Score_FLACC;62;Nein;2035
+96824-8;108395;Coag Score SOFA;Score_FLACC;62;Nein;2036
+96825-5;108395;Liver Score SOFA;Score_FLACC;62;Nein;2037
+96826-3;108395;Cardio Score SOFA;Score_FLACC;62;Nein;2038
+96827-1;108395;CNS Score SOFA;Score_FLACC;64;Nein;2039
+96828-9;108395;Renal Score SOFA;Score_FLACC;62;Nein;2040
+44760-7;110976;MELD score;Score_FOUR;67;Nein;2041
+73561-3;110976;IGF-I Z-score SerPl;Score_FOUR;67;Nein;2042
+88859-4;110976;Disease stage score for risk calculation;Score_FOUR;67;Nein;2043
+9271-8;110976;10M Apgar Score;Score_FOUR;67;Nein;2044
+9274-2;110976;5M Apgar Score;Score_FOUR;67;Nein;2045
+96790-1;110976;SOFA total score SOFA;Score_FOUR;67;Nein;2046
+96823-0;110976;Respiration Score SOFA;Score_FOUR;67;Nein;2047
+96824-8;110976;Coag Score SOFA;Score_FOUR;67;Nein;2048
+96825-5;110976;Liver Score SOFA;Score_FOUR;67;Nein;2049
+96826-3;110976;Cardio Score SOFA;Score_FOUR;67;Nein;2050
+96827-1;110976;CNS Score SOFA;Score_FOUR;67;Nein;2051
+96828-9;110976;Renal Score SOFA;Score_FOUR;67;Nein;2052
+44760-7;102798;MELD score;Score_GDS;74;Nein;2053
+73561-3;102798;IGF-I Z-score SerPl;Score_GDS;71;Nein;2054
+88859-4;102798;Disease stage score for risk calculation;Score_GDS;71;Nein;2055
+9271-8;102798;10M Apgar Score;Score_GDS;71;Nein;2056
+9274-2;102798;5M Apgar Score;Score_GDS;71;Nein;2057
+96790-1;102798;SOFA total score SOFA;Score_GDS;71;Nein;2058
+96823-0;102798;Respiration Score SOFA;Score_GDS;71;Nein;2059
+96824-8;102798;Coag Score SOFA;Score_GDS;71;Nein;2060
+96825-5;102798;Liver Score SOFA;Score_GDS;71;Nein;2061
+96826-3;102798;Cardio Score SOFA;Score_GDS;71;Nein;2062
+96827-1;102798;CNS Score SOFA;Score_GDS;71;Nein;2063
+96828-9;102798;Renal Score SOFA;Score_GDS;71;Nein;2064
+44760-7;108684;MELD score;Score_ISS;71;Nein;2065
+73561-3;108684;IGF-I Z-score SerPl;Score_ISS;71;Nein;2066
+88859-4;108684;Disease stage score for risk calculation;Score_ISS;71;Nein;2067
+9271-8;108684;10M Apgar Score;Score_ISS;71;Nein;2068
+9274-2;108684;5M Apgar Score;Score_ISS;71;Nein;2069
+96790-1;108684;SOFA total score SOFA;Score_ISS;71;Nein;2070
+96823-0;108684;Respiration Score SOFA;Score_ISS;71;Nein;2071
+96824-8;108684;Coag Score SOFA;Score_ISS;71;Nein;2072
+96825-5;108684;Liver Score SOFA;Score_ISS;71;Nein;2073
+96826-3;108684;Cardio Score SOFA;Score_ISS;71;Nein;2074
+96827-1;108684;CNS Score SOFA;Score_ISS;71;Nein;2075
+96828-9;108684;Renal Score SOFA;Score_ISS;71;Nein;2076
+26606-4;102799;Carnosine SerPl-sCnc;Score_KarnofskyIndex;60;Nein;2077
+44760-7;102799;MELD score;Score_KarnofskyIndex;67;Nein;2078
+44760-7;102800;MELD score;Score_Kuss;67;Nein;2079
+73561-3;102800;IGF-I Z-score SerPl;Score_Kuss;67;Nein;2080
+88859-4;102800;Disease stage score for risk calculation;Score_Kuss;67;Nein;2081
+9271-8;102800;10M Apgar Score;Score_Kuss;67;Nein;2082
+9274-2;102800;5M Apgar Score;Score_Kuss;67;Nein;2083
+96790-1;102800;SOFA total score SOFA;Score_Kuss;67;Nein;2084
+96823-0;102800;Respiration Score SOFA;Score_Kuss;67;Nein;2085
+96824-8;102800;Coag Score SOFA;Score_Kuss;67;Nein;2086
+96825-5;102800;Liver Score SOFA;Score_Kuss;67;Nein;2087
+96826-3;102800;Cardio Score SOFA;Score_Kuss;67;Nein;2088
+96827-1;102800;CNS Score SOFA;Score_Kuss;67;Nein;2089
+96828-9;102800;Renal Score SOFA;Score_Kuss;67;Nein;2090
+44760-7;102813;MELD score;Score_Lachs;67;Nein;2091
+73561-3;102813;IGF-I Z-score SerPl;Score_Lachs;62;Nein;2092
+88859-4;102813;Disease stage score for risk calculation;Score_Lachs;62;Nein;2093
+9271-8;102813;10M Apgar Score;Score_Lachs;62;Nein;2094
+9274-2;102813;5M Apgar Score;Score_Lachs;62;Nein;2095
+96790-1;102813;SOFA total score SOFA;Score_Lachs;62;Nein;2096
+96823-0;102813;Respiration Score SOFA;Score_Lachs;62;Nein;2097
+96824-8;102813;Coag Score SOFA;Score_Lachs;62;Nein;2098
+96825-5;102813;Liver Score SOFA;Score_Lachs;62;Nein;2099
+96826-3;102813;Cardio Score SOFA;Score_Lachs;62;Nein;2100
+96827-1;102813;CNS Score SOFA;Score_Lachs;64;Nein;2101
+96828-9;102813;Renal Score SOFA;Score_Lachs;62;Nein;2102
+44760-7;102801;MELD score;Score_MAAS;70;Nein;2103
+73561-3;102801;IGF-I Z-score SerPl;Score_MAAS;67;Nein;2104
+88859-4;102801;Disease stage score for risk calculation;Score_MAAS;67;Nein;2105
+9271-8;102801;10M Apgar Score;Score_MAAS;72;Nein;2106
+9274-2;102801;5M Apgar Score;Score_MAAS;75;Nein;2107
+96790-1;102801;SOFA total score SOFA;Score_MAAS;67;Nein;2108
+96823-0;102801;Respiration Score SOFA;Score_MAAS;67;Nein;2109
+96824-8;102801;Coag Score SOFA;Score_MAAS;67;Nein;2110
+96825-5;102801;Liver Score SOFA;Score_MAAS;67;Nein;2111
+96826-3;102801;Cardio Score SOFA;Score_MAAS;67;Nein;2112
+96827-1;102801;CNS Score SOFA;Score_MAAS;67;Nein;2113
+96828-9;102801;Renal Score SOFA;Score_MAAS;67;Nein;2114
+44760-7;102802;MELD score;Score_MMS;74;Nein;2115
+73561-3;102802;IGF-I Z-score SerPl;Score_MMS;71;Nein;2116
+88859-4;102802;Disease stage score for risk calculation;Score_MMS;71;Nein;2117
+9271-8;102802;10M Apgar Score;Score_MMS;71;Nein;2118
+9274-2;102802;5M Apgar Score;Score_MMS;71;Nein;2119
+96790-1;102802;SOFA total score SOFA;Score_MMS;71;Nein;2120
+96823-0;102802;Respiration Score SOFA;Score_MMS;71;Nein;2121
+96824-8;102802;Coag Score SOFA;Score_MMS;71;Nein;2122
+96825-5;102802;Liver Score SOFA;Score_MMS;71;Nein;2123
+96826-3;102802;Cardio Score SOFA;Score_MMS;71;Nein;2124
+96827-1;102802;CNS Score SOFA;Score_MMS;71;Nein;2125
+96828-9;102802;Renal Score SOFA;Score_MMS;71;Nein;2126
+44760-7;102803;MELD score;Score_MOF;74;Nein;2127
+48766-0;102803;Source of info;Score_MOF;61;Nein;2128
+73561-3;102803;IGF-I Z-score SerPl;Score_MOF;71;Nein;2129
+88859-4;102803;Disease stage score for risk calculation;Score_MOF;71;Nein;2130
+9271-8;102803;10M Apgar Score;Score_MOF;71;Nein;2131
+9274-2;102803;5M Apgar Score;Score_MOF;71;Nein;2132
+96790-1;102803;SOFA total score SOFA;Score_MOF;71;Nein;2133
+96823-0;102803;Respiration Score SOFA;Score_MOF;71;Nein;2134
+96824-8;102803;Coag Score SOFA;Score_MOF;71;Nein;2135
+96825-5;102803;Liver Score SOFA;Score_MOF;71;Nein;2136
+96826-3;102803;Cardio Score SOFA;Score_MOF;71;Nein;2137
+96827-1;102803;CNS Score SOFA;Score_MOF;71;Nein;2138
+96828-9;102803;Renal Score SOFA;Score_MOF;71;Nein;2139
+44760-7;102804;MELD score;Score_mRS;74;Nein;2140
+73561-3;102804;IGF-I Z-score SerPl;Score_mRS;71;Nein;2141
+88859-4;102804;Disease stage score for risk calculation;Score_mRS;71;Nein;2142
+9271-8;102804;10M Apgar Score;Score_mRS;71;Nein;2143
+9274-2;102804;5M Apgar Score;Score_mRS;71;Nein;2144
+96790-1;102804;SOFA total score SOFA;Score_mRS;71;Nein;2145
+96823-0;102804;Respiration Score SOFA;Score_mRS;71;Nein;2146
+96824-8;102804;Coag Score SOFA;Score_mRS;71;Nein;2147
+96825-5;102804;Liver Score SOFA;Score_mRS;71;Nein;2148
+96826-3;102804;Cardio Score SOFA;Score_mRS;71;Nein;2149
+96827-1;102804;CNS Score SOFA;Score_mRS;71;Nein;2150
+96828-9;102804;Renal Score SOFA;Score_mRS;71;Nein;2151
+44760-7;102805;MELD score;Score_MukositisSkala;67;Nein;2152
+44760-7;108680;MELD score;Score_NACA;67;Nein;2153
+73561-3;108680;IGF-I Z-score SerPl;Score_NACA;67;Nein;2154
+88859-4;108680;Disease stage score for risk calculation;Score_NACA;67;Nein;2155
+9271-8;108680;10M Apgar Score;Score_NACA;67;Nein;2156
+9274-2;108680;5M Apgar Score;Score_NACA;67;Nein;2157
+96790-1;108680;SOFA total score SOFA;Score_NACA;67;Nein;2158
+96823-0;108680;Respiration Score SOFA;Score_NACA;67;Nein;2159
+96824-8;108680;Coag Score SOFA;Score_NACA;67;Nein;2160
+96825-5;108680;Liver Score SOFA;Score_NACA;67;Nein;2161
+96826-3;108680;Cardio Score SOFA;Score_NACA;67;Nein;2162
+96827-1;108680;CNS Score SOFA;Score_NACA;67;Nein;2163
+96828-9;108680;Renal Score SOFA;Score_NACA;69;Nein;2164
+44760-7;102806;MELD score;Score_NIHSS;67;Nein;2165
+73561-3;102806;IGF-I Z-score SerPl;Score_NIHSS;62;Nein;2166
+88859-4;102806;Disease stage score for risk calculation;Score_NIHSS;62;Nein;2167
+9271-8;102806;10M Apgar Score;Score_NIHSS;62;Nein;2168
+9274-2;102806;5M Apgar Score;Score_NIHSS;62;Nein;2169
+96790-1;102806;SOFA total score SOFA;Score_NIHSS;62;Nein;2170
+96823-0;102806;Respiration Score SOFA;Score_NIHSS;62;Nein;2171
+96824-8;102806;Coag Score SOFA;Score_NIHSS;62;Nein;2172
+96825-5;102806;Liver Score SOFA;Score_NIHSS;62;Nein;2173
+96826-3;102806;Cardio Score SOFA;Score_NIHSS;62;Nein;2174
+96827-1;102806;CNS Score SOFA;Score_NIHSS;72;Nein;2175
+96828-9;102806;Renal Score SOFA;Score_NIHSS;62;Nein;2176
+44760-7;102807;MELD score;Score_NIPS;67;Nein;2177
+73561-3;102807;IGF-I Z-score SerPl;Score_NIPS;67;Nein;2178
+88859-4;102807;Disease stage score for risk calculation;Score_NIPS;67;Nein;2179
+9271-8;102807;10M Apgar Score;Score_NIPS;67;Nein;2180
+9274-2;102807;5M Apgar Score;Score_NIPS;67;Nein;2181
+96790-1;102807;SOFA total score SOFA;Score_NIPS;67;Nein;2182
+96823-0;102807;Respiration Score SOFA;Score_NIPS;67;Nein;2183
+96824-8;102807;Coag Score SOFA;Score_NIPS;67;Nein;2184
+96825-5;102807;Liver Score SOFA;Score_NIPS;67;Nein;2185
+96826-3;102807;Cardio Score SOFA;Score_NIPS;67;Nein;2186
+96827-1;102807;CNS Score SOFA;Score_NIPS;67;Nein;2187
+96828-9;102807;Renal Score SOFA;Score_NIPS;67;Nein;2188
+44760-7;102808;MELD score;Score_NORTON;67;Nein;2189
+48766-0;102808;Source of info;Score_NORTON;62;Nein;2190
+96790-1;102808;SOFA total score SOFA;Score_NORTON;64;Nein;2191
+96827-1;102808;CNS Score SOFA;Score_NORTON;62;Nein;2192
+44760-7;108402;MELD score;Score_NPASS_Schmerz;67;Nein;2193
+96827-1;108402;CNS Score SOFA;Score_NPASS_Schmerz;61;Nein;2194
+44760-7;108410;MELD score;Score_NPASS_Sedierung;67;Nein;2195
+44760-7;105222;MELD score;Score_NRS_Verlauf;71;Nein;2196
+73561-3;105222;IGF-I Z-score SerPl;Score_NRS_Verlauf;71;Nein;2197
+88859-4;105222;Disease stage score for risk calculation;Score_NRS_Verlauf;71;Nein;2198
+9271-8;105222;10M Apgar Score;Score_NRS_Verlauf;71;Nein;2199
+9274-2;105222;5M Apgar Score;Score_NRS_Verlauf;71;Nein;2200
+96790-1;105222;SOFA total score SOFA;Score_NRS_Verlauf;71;Nein;2201
+96823-0;105222;Respiration Score SOFA;Score_NRS_Verlauf;71;Nein;2202
+96824-8;105222;Coag Score SOFA;Score_NRS_Verlauf;71;Nein;2203
+96825-5;105222;Liver Score SOFA;Score_NRS_Verlauf;71;Nein;2204
+96826-3;105222;Cardio Score SOFA;Score_NRS_Verlauf;71;Nein;2205
+96827-1;105222;CNS Score SOFA;Score_NRS_Verlauf;71;Nein;2206
+96828-9;105222;Renal Score SOFA;Score_NRS_Verlauf;71;Nein;2207
+44760-7;108233;MELD score;Score_Petrussa;67;Nein;2208
+96825-5;108233;Liver Score SOFA;Score_Petrussa;67;Nein;2209
+96827-1;108233;CNS Score SOFA;Score_Petrussa;64;Nein;2210
+96828-9;108233;Renal Score SOFA;Score_Petrussa;60;Nein;2211
+44760-7;108424;MELD score;Score_PRISMIII;67;Nein;2212
+44760-7;117225;MELD score;Score_Race;70;Nein;2213
+73561-3;117225;IGF-I Z-score SerPl;Score_Race;67;Nein;2214
+88859-4;117225;Disease stage score for risk calculation;Score_Race;67;Nein;2215
+9271-8;117225;10M Apgar Score;Score_Race;67;Nein;2216
+9274-2;117225;5M Apgar Score;Score_Race;67;Nein;2217
+9279-1;117225;Resp rate;Score_Race;63;Nein;2218
+96790-1;117225;SOFA total score SOFA;Score_Race;67;Nein;2219
+96823-0;117225;Respiration Score SOFA;Score_Race;67;Nein;2220
+96824-8;117225;Coag Score SOFA;Score_Race;67;Nein;2221
+96825-5;117225;Liver Score SOFA;Score_Race;67;Nein;2222
+96826-3;117225;Cardio Score SOFA;Score_Race;67;Nein;2223
+96827-1;117225;CNS Score SOFA;Score_Race;67;Nein;2224
+96828-9;117225;Renal Score SOFA;Score_Race;67;Nein;2225
+44760-7;107969;MELD score;Score_Ramsay;67;Nein;2226
+9274-2;107969;5M Apgar Score;Score_Ramsay;62;Nein;2227
+96824-8;107969;Coag Score SOFA;Score_Ramsay;67;Nein;2228
+96825-5;107969;Liver Score SOFA;Score_Ramsay;64;Nein;2229
+96826-3;107969;Cardio Score SOFA;Score_Ramsay;62;Nein;2230
+96827-1;107969;CNS Score SOFA;Score_Ramsay;62;Nein;2231
+96828-9;107969;Renal Score SOFA;Score_Ramsay;71;Nein;2232
+44760-7;117221;MELD score;Score_Rankin;100;Nein;2233
+73561-3;117221;IGF-I Z-score SerPl;Score_Rankin;100;Nein;2234
+88859-4;117221;Disease stage score for risk calculation;Score_Rankin;100;Nein;2235
+9271-8;117221;10M Apgar Score;Score_Rankin;100;Nein;2236
+9274-2;117221;5M Apgar Score;Score_Rankin;100;Nein;2237
+96790-1;117221;SOFA total score SOFA;Score_Rankin;100;Nein;2238
+96823-0;117221;Respiration Score SOFA;Score_Rankin;100;Nein;2239
+96824-8;117221;Coag Score SOFA;Score_Rankin;100;Nein;2240
+96825-5;117221;Liver Score SOFA;Score_Rankin;100;Nein;2241
+96826-3;117221;Cardio Score SOFA;Score_Rankin;100;Nein;2242
+96827-1;117221;CNS Score SOFA;Score_Rankin;100;Nein;2243
+96828-9;117221;Renal Score SOFA;Score_Rankin;100;Nein;2244
+44760-7;102784;MELD score;Score_RASS;67;Nein;2245
+73561-3;102784;IGF-I Z-score SerPl;Score_RASS;67;Nein;2246
+88859-4;102784;Disease stage score for risk calculation;Score_RASS;67;Nein;2247
+9271-8;102784;10M Apgar Score;Score_RASS;67;Nein;2248
+9274-2;102784;5M Apgar Score;Score_RASS;67;Nein;2249
+96790-1;102784;SOFA total score SOFA;Score_RASS;67;Nein;2250
+96823-0;102784;Respiration Score SOFA;Score_RASS;67;Nein;2251
+96824-8;102784;Coag Score SOFA;Score_RASS;67;Nein;2252
+96825-5;102784;Liver Score SOFA;Score_RASS;67;Nein;2253
+96826-3;102784;Cardio Score SOFA;Score_RASS;67;Nein;2254
+96827-1;102784;CNS Score SOFA;Score_RASS;67;Nein;2255
+96828-9;102784;Renal Score SOFA;Score_RASS;69;Nein;2256
+44760-7;102810;MELD score;Score_RSS;71;Nein;2257
+73561-3;102810;IGF-I Z-score SerPl;Score_RSS;71;Nein;2258
+88859-4;102810;Disease stage score for risk calculation;Score_RSS;71;Nein;2259
+9271-8;102810;10M Apgar Score;Score_RSS;71;Nein;2260
+9274-2;102810;5M Apgar Score;Score_RSS;71;Nein;2261
+96790-1;102810;SOFA total score SOFA;Score_RSS;71;Nein;2262
+96823-0;102810;Respiration Score SOFA;Score_RSS;71;Nein;2263
+96824-8;102810;Coag Score SOFA;Score_RSS;71;Nein;2264
+96825-5;102810;Liver Score SOFA;Score_RSS;71;Nein;2265
+96826-3;102810;Cardio Score SOFA;Score_RSS;71;Nein;2266
+96827-1;102810;CNS Score SOFA;Score_RSS;71;Nein;2267
+96828-9;102810;Renal Score SOFA;Score_RSS;71;Nein;2268
+15043-3;102811;Cortis Ur-sCnc;Score_RTS;61;Nein;2269
+34571-0;102811;Screen aPTT;Score_RTS;60;Nein;2270
+39781-0;102811;Urea Prt-sCnc;Score_RTS;64;Nein;2271
+44760-7;102811;MELD score;Score_RTS;71;Nein;2272
+6303-2;102811;Screen dRVVT;Score_RTS;67;Nein;2273
+73561-3;102811;IGF-I Z-score SerPl;Score_RTS;71;Nein;2274
+88859-4;102811;Disease stage score for risk calculation;Score_RTS;71;Nein;2275
+9271-8;102811;10M Apgar Score;Score_RTS;71;Nein;2276
+9274-2;102811;5M Apgar Score;Score_RTS;71;Nein;2277
+96790-1;102811;SOFA total score SOFA;Score_RTS;71;Nein;2278
+96823-0;102811;Respiration Score SOFA;Score_RTS;71;Nein;2279
+96824-8;102811;Coag Score SOFA;Score_RTS;71;Nein;2280
+96825-5;102811;Liver Score SOFA;Score_RTS;71;Nein;2281
+96826-3;102811;Cardio Score SOFA;Score_RTS;71;Nein;2282
+96827-1;102811;CNS Score SOFA;Score_RTS;71;Nein;2283
+96828-9;102811;Renal Score SOFA;Score_RTS;71;Nein;2284
+34571-0;101973;Screen aPTT;Score_SAPS2;64;Nein;2285
+44760-7;101973;MELD score;Score_SAPS2;67;Nein;2286
+73561-3;101973;IGF-I Z-score SerPl;Score_SAPS2;62;Nein;2287
+88859-4;101973;Disease stage score for risk calculation;Score_SAPS2;62;Nein;2288
+9271-8;101973;10M Apgar Score;Score_SAPS2;62;Nein;2289
+9274-2;101973;5M Apgar Score;Score_SAPS2;64;Nein;2290
+96790-1;101973;SOFA total score SOFA;Score_SAPS2;62;Nein;2291
+96823-0;101973;Respiration Score SOFA;Score_SAPS2;62;Nein;2292
+96824-8;101973;Coag Score SOFA;Score_SAPS2;62;Nein;2293
+96825-5;101973;Liver Score SOFA;Score_SAPS2;62;Nein;2294
+96826-3;101973;Cardio Score SOFA;Score_SAPS2;62;Nein;2295
+96827-1;101973;CNS Score SOFA;Score_SAPS2;64;Nein;2296
+96828-9;101973;Renal Score SOFA;Score_SAPS2;62;Nein;2297
+34571-0;102812;Screen aPTT;Score_SAS;60;Nein;2298
+44760-7;102812;MELD score;Score_SAS;71;Nein;2299
+73561-3;102812;IGF-I Z-score SerPl;Score_SAS;71;Nein;2300
+88859-4;102812;Disease stage score for risk calculation;Score_SAS;71;Nein;2301
+9271-8;102812;10M Apgar Score;Score_SAS;71;Nein;2302
+9274-2;102812;5M Apgar Score;Score_SAS;71;Nein;2303
+96790-1;102812;SOFA total score SOFA;Score_SAS;71;Nein;2304
+96823-0;102812;Respiration Score SOFA;Score_SAS;71;Nein;2305
+96824-8;102812;Coag Score SOFA;Score_SAS;71;Nein;2306
+96825-5;102812;Liver Score SOFA;Score_SAS;71;Nein;2307
+96826-3;102812;Cardio Score SOFA;Score_SAS;71;Nein;2308
+96827-1;102812;CNS Score SOFA;Score_SAS;71;Nein;2309
+96828-9;102812;Renal Score SOFA;Score_SAS;71;Nein;2310
+10335-8;101992;Color CSF;Score_SOFA;63;Nein;2311
+44760-7;101992;MELD score;Score_SOFA;67;Nein;2312
+73561-3;101992;IGF-I Z-score SerPl;Score_SOFA;67;Nein;2313
+88859-4;101992;Disease stage score for risk calculation;Score_SOFA;67;Nein;2314
+9271-8;101992;10M Apgar Score;Score_SOFA;67;Nein;2315
+9274-2;101992;5M Apgar Score;Score_SOFA;67;Nein;2316
+96790-1;101992;SOFA total score SOFA;Score_SOFA;100;Nein;2317
+96823-0;101992;Respiration Score SOFA;Score_SOFA;100;Nein;2318
+96824-8;101992;Coag Score SOFA;Score_SOFA;100;Nein;2319
+96825-5;101992;Liver Score SOFA;Score_SOFA;100;Nein;2320
+96826-3;101992;Cardio Score SOFA;Score_SOFA;100;Nein;2321
+96827-1;101992;CNS Score SOFA;Score_SOFA;100;Nein;2322
+96828-9;101992;Renal Score SOFA;Score_SOFA;100;Nein;2323
+44760-7;108441;MELD score;Score_SOS;71;Nein;2324
+73561-3;108441;IGF-I Z-score SerPl;Score_SOS;71;Nein;2325
+88859-4;108441;Disease stage score for risk calculation;Score_SOS;71;Nein;2326
+9271-8;108441;10M Apgar Score;Score_SOS;71;Nein;2327
+9274-2;108441;5M Apgar Score;Score_SOS;71;Nein;2328
+96790-1;108441;SOFA total score SOFA;Score_SOS;71;Nein;2329
+96823-0;108441;Respiration Score SOFA;Score_SOS;71;Nein;2330
+96824-8;108441;Coag Score SOFA;Score_SOS;71;Nein;2331
+96825-5;108441;Liver Score SOFA;Score_SOS;71;Nein;2332
+96826-3;108441;Cardio Score SOFA;Score_SOS;71;Nein;2333
+96827-1;108441;CNS Score SOFA;Score_SOS;71;Nein;2334
+96828-9;108441;Renal Score SOFA;Score_SOS;71;Nein;2335
+44760-7;108458;MELD score;Score_SOS_PD;71;Nein;2336
+73561-3;108458;IGF-I Z-score SerPl;Score_SOS_PD;71;Nein;2337
+88859-4;108458;Disease stage score for risk calculation;Score_SOS_PD;71;Nein;2338
+9271-8;108458;10M Apgar Score;Score_SOS_PD;71;Nein;2339
+9274-2;108458;5M Apgar Score;Score_SOS_PD;71;Nein;2340
+96790-1;108458;SOFA total score SOFA;Score_SOS_PD;71;Nein;2341
+96823-0;108458;Respiration Score SOFA;Score_SOS_PD;71;Nein;2342
+96824-8;108458;Coag Score SOFA;Score_SOS_PD;71;Nein;2343
+96825-5;108458;Liver Score SOFA;Score_SOS_PD;71;Nein;2344
+96826-3;108458;Cardio Score SOFA;Score_SOS_PD;71;Nein;2345
+96827-1;108458;CNS Score SOFA;Score_SOS_PD;71;Nein;2346
+96828-9;108458;Renal Score SOFA;Score_SOS_PD;71;Nein;2347
+44760-7;108483;MELD score;Score_Thompson;67;Nein;2348
+96824-8;108483;Coag Score SOFA;Score_Thompson;62;Nein;2349
+44760-7;102771;MELD score;Score_TISS10;67;Nein;2350
+96827-1;102771;CNS Score SOFA;Score_TISS10;62;Nein;2351
+44760-7;101947;MELD score;Score_TISS28;67;Nein;2352
+96827-1;101947;CNS Score SOFA;Score_TISS28;62;Nein;2353
+44760-7;106651;MELD score;Score_UStix;67;Nein;2354
+73561-3;106651;IGF-I Z-score SerPl;Score_UStix;62;Nein;2355
+88859-4;106651;Disease stage score for risk calculation;Score_UStix;62;Nein;2356
+9271-8;106651;10M Apgar Score;Score_UStix;62;Nein;2357
+9274-2;106651;5M Apgar Score;Score_UStix;62;Nein;2358
+9397-1;106651;Color Stl;Score_UStix;60;Nein;2359
+96790-1;106651;SOFA total score SOFA;Score_UStix;62;Nein;2360
+96823-0;106651;Respiration Score SOFA;Score_UStix;62;Nein;2361
+96824-8;106651;Coag Score SOFA;Score_UStix;62;Nein;2362
+96825-5;106651;Liver Score SOFA;Score_UStix;62;Nein;2363
+96826-3;106651;Cardio Score SOFA;Score_UStix;62;Nein;2364
+96827-1;106651;CNS Score SOFA;Score_UStix;62;Nein;2365
+96828-9;106651;Renal Score SOFA;Score_UStix;62;Nein;2366
+10335-8;102815;Color CSF;Score_VICS;63;Nein;2367
+14196-0;102815;Retics #;Score_VICS;62;Nein;2368
+41461-5;102815;Virus Spec;Score_VICS;60;Nein;2369
+44760-7;102815;MELD score;Score_VICS;67;Nein;2370
+73561-3;102815;IGF-I Z-score SerPl;Score_VICS;67;Nein;2371
+88859-4;102815;Disease stage score for risk calculation;Score_VICS;67;Nein;2372
+9271-8;102815;10M Apgar Score;Score_VICS;67;Nein;2373
+9274-2;102815;5M Apgar Score;Score_VICS;67;Nein;2374
+96790-1;102815;SOFA total score SOFA;Score_VICS;67;Nein;2375
+96823-0;102815;Respiration Score SOFA;Score_VICS;67;Nein;2376
+96824-8;102815;Coag Score SOFA;Score_VICS;67;Nein;2377
+96825-5;102815;Liver Score SOFA;Score_VICS;67;Nein;2378
+96826-3;102815;Cardio Score SOFA;Score_VICS;67;Nein;2379
+96827-1;102815;CNS Score SOFA;Score_VICS;67;Nein;2380
+96828-9;102815;Renal Score SOFA;Score_VICS;67;Nein;2381
+44760-7;102816;MELD score;Score_Waterlow;67;Nein;2382
+96790-1;102816;SOFA total score SOFA;Score_Waterlow;60;Nein;2383
+96825-5;102816;Liver Score SOFA;Score_Waterlow;60;Nein;2384
+96828-9;102816;Renal Score SOFA;Score_Waterlow;60;Nein;2385
+23210-8;100077;Listeria Ab Ser Ql;SM_AV_Intervall;61;Nein;2386
+31533-3;100077;Neuronal Ab Ser Ql;SM_AV_Intervall;61;Nein;2387
+31871-7;100077;L inter Ag Spec Ql;SM_AV_Intervall;67;Nein;2388
+56953-3;100077;L inter IgM Ser Ql IA;SM_AV_Intervall;61;Nein;2389
+6605-0;100077;L inter Ag Tiss Ql IF;SM_AV_Intervall;61;Nein;2390
+9279-1;100082;Resp rate;SM-Draehte;63;Nein;2391
+53558-3;100081;Bacteria Smn Cult;SM_Output_Atrium;61;Nein;2392
+3148-4;1272;pO2 Gas;SO2;60;Nein;2393
+2022-2;102010;pCO2 CSF;SpO2;67;Nein;2394
+3148-4;102010;pO2 Gas;SpO2;73;Nein;2395
+11556-8;108509;pO2 Bld;SpO2_2;62;Nein;2396
+3148-4;108509;pO2 Gas;SpO2_2;62;Nein;2397
+2022-2;104116;pCO2 CSF;SpO2_Messung_Ort;67;Nein;2398
+3148-4;104116;pO2 Gas;SpO2_Messung_Ort;73;Nein;2399
+14003-8;103809;pCO2 BldCo;tcpCO2;62;Nein;2400
+2020-6;103809;pCO2 BldC;tcpCO2;67;Nein;2401
+2022-2;103809;pCO2 CSF;tcpCO2;71;Nein;2402
+32306-3;103809;pCO2 Ur;tcpCO2;62;Nein;2403
+2022-2;108508;pCO2 CSF;tcpO2;62;Nein;2404
+2704-5;108508;pO2 BldC;tcpO2;62;Nein;2405
+26801-1;104107;Prot 12h Ur-mRate;Temperatur_Messung_Ort1a;60;Nein;2406
+8310-5;104107;Body temperature;Temperatur_Messung_Ort1a;76;Nein;2407
+26801-1;104110;Prot 12h Ur-mRate;Temperatur_Messung_Ort1b;60;Nein;2408
+8310-5;104110;Body temperature;Temperatur_Messung_Ort1b;83;Nein;2409
+12585-6;104108;Creat 2h Ur-mRate;Temperatur_Messung_Ort2a;60;Nein;2410
+14584-7;104108;cAMP 24h Ur-sRate;Temperatur_Messung_Ort2a;60;Nein;2411
+14712-4;104108;Epineph 24h Ur-sRate;Temperatur_Messung_Ort2a;61;Nein;2412
+2232-7;104108;Epineph 24h Ur-mRate;Temperatur_Messung_Ort2a;61;Nein;2413
+2436-4;104108;HVA 24h Ur-mRate;Temperatur_Messung_Ort2a;62;Nein;2414
+25495-3;104108;Phe 24h Ur-sRate;Temperatur_Messung_Ort2a;62;Nein;2415
+26611-4;104108;PETN 24h Ur-sRate;Temperatur_Messung_Ort2a;60;Nein;2416
+26801-1;104108;Prot 12h Ur-mRate;Temperatur_Messung_Ort2a;60;Nein;2417
+2889-4;104108;Prot 24h Ur-mRate;Temperatur_Messung_Ort2a;60;Nein;2418
+5677-0;104108;Lead 24h Ur-mRate;Temperatur_Messung_Ort2a;60;Nein;2419
+6776-9;104108;Estrone 24h Ur-mRate;Temperatur_Messung_Ort2a;61;Nein;2420
+8310-5;104108;Body temperature;Temperatur_Messung_Ort2a;76;Nein;2421
+12585-6;104109;Creat 2h Ur-mRate;Temperatur_Messung_Ort2b;60;Nein;2422
+14584-7;104109;cAMP 24h Ur-sRate;Temperatur_Messung_Ort2b;60;Nein;2423
+14712-4;104109;Epineph 24h Ur-sRate;Temperatur_Messung_Ort2b;61;Nein;2424
+2232-7;104109;Epineph 24h Ur-mRate;Temperatur_Messung_Ort2b;61;Nein;2425
+25495-3;104109;Phe 24h Ur-sRate;Temperatur_Messung_Ort2b;62;Nein;2426
+26611-4;104109;PETN 24h Ur-sRate;Temperatur_Messung_Ort2b;60;Nein;2427
+26801-1;104109;Prot 12h Ur-mRate;Temperatur_Messung_Ort2b;60;Nein;2428
+2889-4;104109;Prot 24h Ur-mRate;Temperatur_Messung_Ort2b;60;Nein;2429
+35654-3;104109;Creat/BW 24h Ur-RelMRat;Temperatur_Messung_Ort2b;61;Nein;2430
+5677-0;104109;Lead 24h Ur-mRate;Temperatur_Messung_Ort2b;60;Nein;2431
+6776-9;104109;Estrone 24h Ur-mRate;Temperatur_Messung_Ort2b;61;Nein;2432
+8310-5;104109;Body temperature;Temperatur_Messung_Ort2b;83;Nein;2433
+8310-5;104111;Body temperature;Temperatur_Messung_Ort3a;76;Nein;2434
+8310-5;104112;Body temperature;Temperatur_Messung_Ort3b;83;Nein;2435
+8310-5;107863;Body temperature;Therapiebetten_Doku_Atom_ES_Lufttemperatur;65;Nein;2436
+77599-9;107864;Additional documentation;Therapiebetten_Doku_Atom_ES_O2_Konzentration;60;Nein;2437
+19254-2;103888;pO2 temp adj Bld;Therapiebetten_Doku_BariAir_Temp;62;Nein;2438
+19255-9;103888;pO2 temp adj BldA;Therapiebetten_Doku_BariAir_Temp;62;Nein;2439
+19256-7;103888;pO2 temp adj BldC;Therapiebetten_Doku_BariAir_Temp;62;Nein;2440
+19258-3;103888;pO2 temp adj BldV;Therapiebetten_Doku_BariAir_Temp;62;Nein;2441
+32771-8;103888;pCO2 temp adj BldA;Therapiebetten_Doku_BariAir_Temp;62;Nein;2442
+33254-4;103888;pH temp adj BldA;Therapiebetten_Doku_BariAir_Temp;62;Nein;2443
+34705-4;103888;pCO2 temp adj Bld;Therapiebetten_Doku_BariAir_Temp;62;Nein;2444
+39485-8;103888;pH temp adj BldC;Therapiebetten_Doku_BariAir_Temp;62;Nein;2445
+39486-6;103888;pH temp adj BldV;Therapiebetten_Doku_BariAir_Temp;62;Nein;2446
+40619-9;103888;pCO2 temp adj BldV;Therapiebetten_Doku_BariAir_Temp;62;Nein;2447
+40620-7;103888;pCO2 temp adj BldC;Therapiebetten_Doku_BariAir_Temp;62;Nein;2448
+47720-8;103888;pH temp adj BldCo;Therapiebetten_Doku_BariAir_Temp;62;Nein;2449
+8330-3;103888;Bdy temp IV;Therapiebetten_Doku_BariAir_Temp;62;Nein;2450
+8334-5;103888;Bdy temp Bladder;Therapiebetten_Doku_BariAir_Temp;62;Nein;2451
+8310-5;107854;Body temperature;Therapiebetten_Doku_Giraffe_ES_Lufttemperatur;69;Nein;2452
+14864-3;107855;pO2 BldCo;Therapiebetten_Doku_Giraffe_ES_O2;62;Nein;2453
+8310-5;107857;Body temperature;Therapiebetten_Doku_Giraffe_MS_Lufttemperatur;63;Nein;2454
+4307-5;103842;Meperidine Dose;Therapiebetten_Doku_Triadyne_mittePause;62;Nein;2455
+4456-0;103839;Trimipramine Dose;Therapiebetten_Doku_Triadyne_rePause;60;Nein;2456
+4307-5;103860;Meperidine Dose;Therapiebetten_Doku_Triadyne_Temp;61;Nein;2457
+8310-5;107866;Body temperature;Therapiebetten_VO_Atom_ES_Lufttemperatur;69;Nein;2458
+3150-0;107867;Inhaled O2 concentration;Therapiebetten_VO_Atom_ES_O2_Konzentration;62;Nein;2459
+2366-3;107860;Glutamate 24h Ur-mRate;Therapiebetten_VO_Giraffe_ES_Lufttemperatur;61;Nein;2460
+8310-5;107860;Body temperature;Therapiebetten_VO_Giraffe_ES_Lufttemperatur;67;Nein;2461
+3150-0;107861;Inhaled O2 concentration;Therapiebetten_VO_Giraffe_ES_O2_Konzentration;70;Nein;2462
+30067-3;103925;Proline/Creat Ur-Rto;Therapiebetten_VO_Rotorest_reRotWinkel;60;Nein;2463
+56654-7;103925;Nickel/Creat Ur-Rto;Therapiebetten_VO_Rotorest_reRotWinkel;62;Nein;2464
+14722-3;102140;ENA Ab Ser Ql;Untersuchung_Abdomen_Leber;62;Nein;2465
+16740-3;102140;DENV Ab Ser Ql;Untersuchung_Abdomen_Leber;67;Nein;2466
+17322-9;102140;N men Ab Ser Ql;Untersuchung_Abdomen_Leber;64;Nein;2467
+46197-0;102140;MeV Ab Ser Ql;Untersuchung_Abdomen_Leber;62;Nein;2468
+10923-1;102139;Bromelin IgE Qn;Untersuchung_Abdomen_Nieren;62;Nein;2469
+17322-9;102139;N men Ab Ser Ql;Untersuchung_Abdomen_Nieren;62;Nein;2470
+6053-3;102139;Brome IgE Qn;Untersuchung_Abdomen_Nieren;62;Nein;2471
+9481-3;102142;pH Wat;Untersuchung_ExtremitaetenLeiste_Haut;60;Nein;2472
+8310-5;102158;Body temperature;Untersuchung_Status_Koerpertemperatur;67;Nein;2473
+23830-3;100203;B pert.PT IgA Ser-aCnc;Verlauf_PT;100;Nein;2474
+23831-1;100203;B pert.PT IgG Ser-aCnc;Verlauf_PT;100;Nein;2475
+24127-3;100203;B pert.PT IgG Ser IA-aCnc;Verlauf_PT;100;Nein;2476
+24128-1;100203;B pert.PT IgA Ser IA-aCnc;Verlauf_PT;100;Nein;2477
+42638-7;100203;PT PPP 1:1 saline;Verlauf_PT;100;Nein;2478
+46417-2;100203;PT BldC;Verlauf_PT;100;Nein;2479
+52752-3;100203;PT PIVKA insensitive Act/Nor BldC;Verlauf_PT;100;Nein;2480
+52753-1;100203;PT PIVKA insensitive Act/Nor PPP;Verlauf_PT;100;Nein;2481
+52760-6;100203;PT PIVKA sensitive Act/Nor BldC;Verlauf_PT;100;Nein;2482
+52761-4;100203;PT PIVKA sensitive Act/Nor PPP;Verlauf_PT;100;Nein;2483
+5901-4;100203;PT Cont PPP;Verlauf_PT;100;Nein;2484
+5964-2;100203;PT Bld;Verlauf_PT;100;Nein;2485
+80600-0;100203;B pert.PT Prmt Nph Ql NAA+probe;Verlauf_PT;100;Nein;2486
+82179-3;100203;B pert.PT Prmt Nph Ql NAA+non-probe;Verlauf_PT;100;Nein;2487
+94478-5;100203;B pert.PT Prmt Low resp Ql NAA+non-probe;Verlauf_PT;100;Nein;2488
+96962-6;100203;B pert.PT Prmt Lower resp Ql NAA+probe;Verlauf_PT;100;Nein;2489
+19218-7;102198;O2 Ct BldA-sCnc;VigilanceC_O2;100;Nein;2490
+19219-5;102198;O2 Ct BldC-sCnc;VigilanceC_O2;100;Nein;2491
+19220-3;102198;O2 Ct BldV-sCnc;VigilanceC_O2;100;Nein;2492
+19994-3;102198;O2/Total gas setting VFr Vent;VigilanceC_O2;100;Nein;2493
+3150-0;102198;Inhaled O2 concentration;VigilanceC_O2;100;Nein;2494
+3151-8;102198;Inhaled O2 flow rate;VigilanceC_O2;100;Nein;2495
+34163-6;102198;O2 Ct Bld-sCnc;VigilanceC_O2;100;Nein;2496
+57800-5;102198;O2 Ct VFr Bld Calc;VigilanceC_O2;100;Nein;2497
+48159-8;102489;HCV Ab s/co SerPl IA;Vigileo_CO;100;Nein;2498
+51656-7;102489;HCV Ab s/co Fld;Vigileo_CO;100;Nein;2499
+2022-2;102183;pCO2 CSF;Vigileo_ScvO2;62;Nein;2500
+19817-6;100008;Complications;Vormedikation;62;Nein;2501
+57833-6;100008;Rx for medication;Vormedikation;73;Nein;2502
+8310-5;106517;Body temperature;Waermesysteme_BairHugger_Doku_Temperatur;62;Nein;2503
+8310-5;108632;Body temperature;Waermesysteme_BairHugger_VO_Temperatur;65;Nein;2504
+77599-9;100189;Additional documentation;Wunddokumentation;63;Nein;2505
+11502-2;100;Laboratory report;Laborwert;62;Ja;556
+39156-5;101473;BMI;Patient_BMI;100;Ja;1136
+8310-5;110934;Body temperature;P_Temperatur_generic;61;Ja;1466
+8310-5;110933;Body temperature;P_Temperatur_Kern;67;Ja;1471
+8310-5;110931;Body temperature;P_Temperatur_Messung_OrtAllg;67;Ja;1472
+8310-5;110936;Body temperature;P_Temperatur_Messung_OrtKern;67;Ja;1473
+8310-5;110927;Body temperature;P_Temperatur_Naso;73;Ja;1474
+8310-5;110928;Body temperature;P_Temperatur_Oesophagial;60;Ja;1475
+8310-5;110930;Body temperature;P_Temperatur_Rektal;63;Ja;1483
+20564-1;1273;SaO2 % Bld;SaO2;100;Ja;1505
+2708-6;1273;SaO2 % BldA;SaO2;100;Ja;1506
+2709-4;1273;SaO2 % BldC;SaO2;100;Ja;1507
+2711-0;1273;SaO2 % BldV;SaO2;100;Ja;1508
+2713-6;1273;SaO2 % Bld from pO2;SaO2;100;Ja;1509
+28642-7;1273;SaO2 % BldCoA;SaO2;100;Ja;1510
+28643-5;1273;SaO2 % BldCoV;SaO2;100;Ja;1511
+51731-8;1273;SaO2 % BldV from pO2;SaO2;100;Ja;1512
+51732-6;1273;SaO2 % BldC from pO2;SaO2;100;Ja;1513
+51733-4;1273;SaO2 % BldA from pO2;SaO2;100;Ja;1514
+59408-5;1273;SaO2 % BldA PulseOx;SaO2;100;Ja;1515
+74105-8;1273;SaO2 % BldMV from pO2;SaO2;100;Ja;1516
+9271-8;102788;10M Apgar Score;Score_Apgar;100;Ja;1562
+9274-2;102788;5M Apgar Score;Score_Apgar;100;Ja;1563
