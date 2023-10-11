@@ -9657,6 +9657,16 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 6	75919-1	110922	Left ventricular Cardiac index	LCWI
 7	44974-4	1268	Pulse intensity of Unspecified artery palpation	Puls
 8	8865-8	1268	Pulse intensity by palpation	Puls
+9	60985-9	1269	Central venous pressure (CVP)	ZVD
+10	76533-9	1275	Blood pressure by Noninvasive	NBP
+11	8837-7	100073	Systemic vascular Resistance index	SVRI
+12	8831-0	100074	Systemic vascular Resistance	SVR
+13	61017-0	100086	Cerebral perfusion pressure	CPP
+14	60956-0	100088	Intracranial pressure (ICP)	ICP
+15	3150-0	100100	Inhaled oxygen concentration	Beatmung_Messung_FiO2
+16	60826-5	101433	Lung compliance	Beatmung_Messung_Compliance
+17	9279-1	101442	Atemfrequenz	Beatmung_Messung_AF
+18	38199-6	101444	Intrinsic PEEP Respiratory system	Beatmung_Messung_IntrinsicPEEP
 \.
 
 
@@ -9844,8 +9854,8 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 16513-4	102763	Calcium.ionisiert [Mol/Volumen] in Serum oder Plasma --3. Probenmaterial nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	189
 16517-5	102763	Calcium.ionisiert [Mol/Volumen] in Serum oder Plasma --7. Probenmaterial nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	190
 9279-1	1267	Atemfrequenz	Atemfrequenz	100	t	161
-59408-5	1273	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	arterielle Sauerstoffsättigung	77	t	155
 18776-5	30	Behandlungsplan - Notiz	Behandlung	65	t	175
+59408-5	1273	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	arterielle Sauerstoffsättigung	77	f	155
 16518-3	102763	Calcium [Masse/Zeit] in 2-Stunden-Urin	Bezeichnug der Calcium Lösung	70	f	191
 16519-1	102763	Calcium [Mol/Volumen] in Serum oder Plasma --10 Minuten nach XXX Stimulation	Bezeichnug der Calcium Lösung	70	f	192
 16526-6	102763	Calcium/Protein [Massenverhältnis] in Serum oder Plasma	Bezeichnug der Calcium Lösung	70	f	193
@@ -12108,7 +12118,6 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 8480-6	1276	Systolischer Blutdruck	arterielle Blutdruck	62	t	80
 8480-6	100093	Systolischer Blutdruck	arterieller Blutdruck 1	65	t	109
 2708-6	1273	Sauerstoffsättigung in arteriellem Blut	arterielle Sauerstoffsättigung	91	t	144
-51733-4	1273	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	arterielle Sauerstoffsättigung	77	t	154
 29308-4	1278	Diagnose	Diagnosen des Patienten	94	t	352
 17608-1	110904	Gewicht [Masse/Zeit] von 48-Stunden-Stuhl	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	t	420
 17609-9	110904	Gewicht [Masse/Zeit] von 72-Stunden-Stuhl	Differenz zwischen dem aktuellen Gewicht und dem Gewicht des letzten Eintrags	100	t	421
@@ -12124,6 +12133,7 @@ COPY loinc_copra.loinc_long_common_name_copra_description (loinc_num, copra_id, 
 29304-3	103136	Abgegebene Medikation	Medikament	70	t	1666
 9279-1	103265	Atemfrequenz	Messwert: gemessene Atemfrequenz	75	t	1936
 19220-3	1274	Sauerstoffgehalt in venösem Blut	venöse Sauerstoffsättigung	65	t	2386
+51733-4	1273	Sauerstoffsättigung berechnet aus Sauerstoff-Partialdruck in arteriellem Blut	arterielle Sauerstoffsättigung	77	f	154
 \.
 
 
@@ -17984,7 +17994,7 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 8310-5	103737	Body temperature	Lungenersatzverfahren_Anordnung_ECMOTemperatur	73	f	560
 29554-3	102093	Procedure	Lungenersatzverfahren_Anordnung_ILAPressure	60	f	561
 8310-5	103734	Body temperature	Lungenersatzverfahren_Doku_ECMOTemperatur	69	f	562
-4659-9	100091	LAP WBC-cCnc	LAP	100	t	559
+4659-9	100091	LAP WBC-cCnc	LAP	100	f	559
 8310-5	103731	Body temperature	Lungenersatzverfahren_Doku_Temperatur	77	f	563
 3184-9	103586	ACT Bld	Lungenersatzverfahren_MS_ECMO_ACT	60	f	564
 17051-4	106289	Laxatives Ur	Lungenersatzverfahren_MS_ILAactivve_P1	64	f	565
@@ -18961,7 +18971,7 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 39456-9	102788	APAP Ur-sCnc	Score_Apgar	61	f	1558
 44760-7	102788	MELD score	Score_Apgar	67	f	1559
 8310-5	110924	Body temperature	P_Temperatur_Venoes	69	t	1485
-19224-5	1273	SaO2 % BldMV	SaO2	100	t	1504
+19224-5	1273	SaO2 % BldMV	SaO2	100	f	1504
 73561-3	102788	IGF-I Z-score SerPl	Score_Apgar	62	f	1560
 88859-4	102788	Disease stage score for risk calculation	Score_Apgar	62	f	1561
 96790-1	102788	SOFA total score SOFA	Score_Apgar	62	f	1564
@@ -19915,20 +19925,20 @@ COPY loinc_copra.loinc_shortname_copra_name (loinc_num, copra_id, loinc_shortnam
 8310-5	110927	Body temperature	P_Temperatur_Naso	73	t	1474
 8310-5	110928	Body temperature	P_Temperatur_Oesophagial	60	t	1475
 8310-5	110930	Body temperature	P_Temperatur_Rektal	63	t	1483
-20564-1	1273	SaO2 % Bld	SaO2	100	t	1505
 2708-6	1273	SaO2 % BldA	SaO2	100	t	1506
-2709-4	1273	SaO2 % BldC	SaO2	100	t	1507
-2711-0	1273	SaO2 % BldV	SaO2	100	t	1508
-2713-6	1273	SaO2 % Bld from pO2	SaO2	100	t	1509
-28642-7	1273	SaO2 % BldCoA	SaO2	100	t	1510
-28643-5	1273	SaO2 % BldCoV	SaO2	100	t	1511
-51731-8	1273	SaO2 % BldV from pO2	SaO2	100	t	1512
-51732-6	1273	SaO2 % BldC from pO2	SaO2	100	t	1513
-51733-4	1273	SaO2 % BldA from pO2	SaO2	100	t	1514
-59408-5	1273	SaO2 % BldA PulseOx	SaO2	100	t	1515
-74105-8	1273	SaO2 % BldMV from pO2	SaO2	100	t	1516
 9271-8	102788	10M Apgar Score	Score_Apgar	100	t	1562
 9274-2	102788	5M Apgar Score	Score_Apgar	100	t	1563
+20564-1	1273	SaO2 % Bld	SaO2	100	f	1505
+2709-4	1273	SaO2 % BldC	SaO2	100	f	1507
+2711-0	1273	SaO2 % BldV	SaO2	100	f	1508
+2713-6	1273	SaO2 % Bld from pO2	SaO2	100	f	1509
+28642-7	1273	SaO2 % BldCoA	SaO2	100	f	1510
+28643-5	1273	SaO2 % BldCoV	SaO2	100	f	1511
+51731-8	1273	SaO2 % BldV from pO2	SaO2	100	f	1512
+51732-6	1273	SaO2 % BldC from pO2	SaO2	100	f	1513
+51733-4	1273	SaO2 % BldA from pO2	SaO2	100	f	1514
+59408-5	1273	SaO2 % BldA PulseOx	SaO2	100	f	1515
+74105-8	1273	SaO2 % BldMV from pO2	SaO2	100	f	1516
 \.
 
 
@@ -19943,7 +19953,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 8, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 18, true);
 
 
 --
