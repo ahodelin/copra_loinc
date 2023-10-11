@@ -94,6 +94,43 @@ CREATE TABLE loinc_copra.from_script (
 ALTER TABLE loinc_copra.from_script OWNER TO clinicuser;
 
 --
+-- Name: loinc_copra_hand; Type: TABLE; Schema: loinc_copra; Owner: clinicuser
+--
+
+CREATE TABLE loinc_copra.loinc_copra_hand (
+    id integer NOT NULL,
+    loinc_num character varying NOT NULL,
+    copra_id bigint NOT NULL,
+    loinc_long_common_name character varying NOT NULL,
+    copra_name character varying NOT NULL
+);
+
+
+ALTER TABLE loinc_copra.loinc_copra_hand OWNER TO clinicuser;
+
+--
+-- Name: loinc_copra_hand_id_seq; Type: SEQUENCE; Schema: loinc_copra; Owner: clinicuser
+--
+
+CREATE SEQUENCE loinc_copra.loinc_copra_hand_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE loinc_copra.loinc_copra_hand_id_seq OWNER TO clinicuser;
+
+--
+-- Name: loinc_copra_hand_id_seq; Type: SEQUENCE OWNED BY; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER SEQUENCE loinc_copra.loinc_copra_hand_id_seq OWNED BY loinc_copra.loinc_copra_hand.id;
+
+
+--
 -- Name: loinc_long_common_name_copra_description; Type: TABLE; Schema: loinc_copra; Owner: clinicuser
 --
 
@@ -254,6 +291,13 @@ ALTER SEQUENCE loinc_copra.loinc_shortname_copra_name_id_seq OWNED BY loinc_copr
 --
 
 ALTER TABLE ONLY loinc_copra.copra_description_only_words ALTER COLUMN id SET DEFAULT nextval('loinc_copra.copra_description_only_words_id_seq'::regclass);
+
+
+--
+-- Name: loinc_copra_hand id; Type: DEFAULT; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER TABLE ONLY loinc_copra.loinc_copra_hand ALTER COLUMN id SET DEFAULT nextval('loinc_copra.loinc_copra_hand_id_seq'::regclass);
 
 
 --
@@ -9597,6 +9641,22 @@ COPY loinc_copra.copra_description_words (id, copra_description_words, descripti
 --
 
 COPY loinc_copra.from_script (loinc_num, copra_id, loinc_entity, copra_entity, accuracy) FROM stdin;
+\.
+
+
+--
+-- Data for Name: loinc_copra_hand; Type: TABLE DATA; Schema: loinc_copra; Owner: clinicuser
+--
+
+COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_name, copra_name) FROM stdin;
+1	75919-1	100072	Left ventricular Cardiac index	CI
+2	75919-1	102035	Left ventricular Cardiac index	PCCI
+3	75919-1	102167	Left ventricular Cardiac index	PICCO_HI
+4	75919-1	102185	Left ventricular Cardiac index	VigilanceC_CI
+5	75919-1	102535	Left ventricular Cardiac index	p-CI
+6	75919-1	110922	Left ventricular Cardiac index	LCWI
+7	44974-4	1268	Pulse intensity of Unspecified artery palpation	Puls
+8	8865-8	1268	Pulse intensity by palpation	Puls
 \.
 
 
@@ -19880,6 +19940,13 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 
 
 --
+-- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
+--
+
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 8, true);
+
+
+--
 -- Name: loinc_long_common_name_copra_description_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
@@ -19905,6 +19972,30 @@ SELECT pg_catalog.setval('loinc_copra.loinc_shortname_copra_description_id_seq',
 --
 
 SELECT pg_catalog.setval('loinc_copra.loinc_shortname_copra_name_id_seq', 2505, true);
+
+
+--
+-- Name: loinc_copra_hand loinc_copra_hand_pkey; Type: CONSTRAINT; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER TABLE ONLY loinc_copra.loinc_copra_hand
+    ADD CONSTRAINT loinc_copra_hand_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: loinc_copra_hand loinc_copra_hand_copra_id_fkey; Type: FK CONSTRAINT; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER TABLE ONLY loinc_copra.loinc_copra_hand
+    ADD CONSTRAINT loinc_copra_hand_copra_id_fkey FOREIGN KEY (copra_id) REFERENCES copra.co6_config_variables(id);
+
+
+--
+-- Name: loinc_copra_hand loinc_copra_hand_loinc_num_fkey; Type: FK CONSTRAINT; Schema: loinc_copra; Owner: clinicuser
+--
+
+ALTER TABLE ONLY loinc_copra.loinc_copra_hand
+    ADD CONSTRAINT loinc_copra_hand_loinc_num_fkey FOREIGN KEY (loinc_num) REFERENCES loinc.loinc(loinc_num);
 
 
 --
