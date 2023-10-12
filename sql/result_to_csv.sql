@@ -209,19 +209,105 @@ where l.loinc_num in ('')
 and ccv.id in ()
 and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
 
-select id, name, description from copra.co6_config_variables ccv
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('8861-7')
+and ccv.id in (102023)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('76297-1')
+and ccv.id in (102024)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('8862-5')
+and ccv.id in (102028)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('8864-1')
+and ccv.id in (102029)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('8828-6')
+and ccv.id in (102032)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('60975-0')
+and ccv.id in (102033)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('75919-1')
+and ccv.id in (102035)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('8831-0')
+and ccv.id in (102037)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('8837-7')
+and ccv.id in (102038)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('76284-9')
+and ccv.id in (102050)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('')
+and ccv.id in ()
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+
+select 
+id, name, 
+description from copra.co6_config_variables ccv
 where parent in (1, 20)
 and co6_config_variabletypes_id in (3, 6, 5, 12)
-and id > 102019
+and id > 102050
 and description notnull
 --and description like '%ndex%'
 order by id ;
 
-select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name like '%Pulm%pre%' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name like '%nary%ressure%' order by long_common_name ;
 
-select "LOINC_NUM", "LONG_COMMON_NAME" from loinc.loinc_german_translation where "LONG_COMMON_NAME" LIKE '%Herzleistung%'; -- german
-select loinc_num , long_common_name from loinc.loinc where long_common_name like '%compliance%'
+select "LOINC_NUM", "LONG_COMMON_NAME" from loinc.loinc_german_translation where "LOINC_NUM" = '8864-1'; -- german
+select loinc_num , long_common_name from loinc.loinc where loinc_num LIKE '%19466-9%'
 
+-- LP73417-5 - Stroke volume -> 102030 - SV
+-- LP19466-9 - Cardiac output -> 102021 - CO
+-- LP19466-9 - Cardiac output -> 102040 - p-CO
+-- LP19466-9 - Cardiac output -> 102051 - HZV
 
 select * from loinc_copra.loinc_copra_hand;
+
+select * from copra.co6_config_variables ccv where id = 110922;
 

@@ -9672,6 +9672,15 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 21	8400-4	102016	Right atrial Intrachamber mean pressure	RAP
 22	75994-4	102018	Pulmonary artery wedge pressure	PWP
 23	8414-5	102019	Pulmonary artery Mean blood pressure	PAM
+24	8861-7	102023	Left ventriclar Stroke work	LVSA
+25	76297-1	102024	Left ventricular Stroke volume index	LVSAI
+26	8862-5	102028	Right ventricular Stroke work	RVSA
+27	8864-1	102029	Right ventricular Stroke work index	RVSAI
+28	8828-6	102032	Pulmonary vascular Resistance	TPR
+29	60975-0	102033	Vascular resistance	TVR
+30	8831-0	102037	Systemic vascular Resistance	p-SVR
+31	8837-7	102038	Systemic vascular Resistance index	p-SVRI
+32	76284-9	102050	Pulmonary artery Blood pressure	PAP
 \.
 
 
@@ -19958,7 +19967,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 23, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 32, true);
 
 
 --
