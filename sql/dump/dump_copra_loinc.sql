@@ -9667,6 +9667,11 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 16	60826-5	101433	Lung compliance	Beatmung_Messung_Compliance
 17	9279-1	101442	Atemfrequenz	Beatmung_Messung_AF
 18	38199-6	101444	Intrinsic PEEP Respiratory system	Beatmung_Messung_IntrinsicPEEP
+19	59408-5	102010	Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie	SpO2
+20	96976-6	102012	Carbon dioxide end tidal baseline - sub-maximal exercise delta	etCO2
+21	8400-4	102016	Right atrial Intrachamber mean pressure	RAP
+22	75994-4	102018	Pulmonary artery wedge pressure	PWP
+23	8414-5	102019	Pulmonary artery Mean blood pressure	PAM
 \.
 
 
@@ -19953,7 +19958,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 18, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 23, true);
 
 
 --
