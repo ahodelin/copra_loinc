@@ -9691,6 +9691,16 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 40	8831-0	102164	Systemic vascular Resistance	PICCO_SVR
 41	8837-7	102165	Systemic vascular Resistance index	PICCO_SVRI
 42	76285-6	102166	Pulmonary capillary Blood pressure	PICCO_PC
+43	8831-0	102189	Systemic vascular Resistance	VigilanceC_SVR
+44	8837-7	102190	Systemic vascular Resistance index	VigilanceC_SVRI
+45	8828-6	102191	Pulmonary vascular Resistance	VigilanceC_PVR
+46	8834-4	102192	Pulmonary vascular Resistance index	VigilanceC_PVRI
+47	60949-5	102873	Mean airway pressure	Beatmung_ES_VisionA_MAP
+48	60949-5	102878	Mean airway pressure	Beatmung_MS_VisionA_MAP
+49	75958-9	102902	Tidal volume expired Respiratory system airway	Beatmung_MS_G5_VTE
+50	8462-4	103010	Diastolischer Blutdruck	Nierenverfahren_MS_Multi_artDruck
+51	8478-0	103010	Mittlerer Blutdruck	Nierenverfahren_MS_Multi_artDruck
+52	8480-6	103010	Systolischer Blutdruck	Nierenverfahren_MS_Multi_artDruck
 \.
 
 
@@ -19977,7 +19987,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 42, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 52, true);
 
 
 --
