@@ -9701,6 +9701,9 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 50	8462-4	103010	Diastolischer Blutdruck	Nierenverfahren_MS_Multi_artDruck
 51	8478-0	103010	Mittlerer Blutdruck	Nierenverfahren_MS_Multi_artDruck
 52	8480-6	103010	Systolischer Blutdruck	Nierenverfahren_MS_Multi_artDruck
+53	76528-9	103036	Breath rate spontaneous	Beatmung_MS_G5_fspontan
+54	99712-2	103043	Dialysate flow rate Renal replacement therapy circuit	Nierenverfahren_VO_Multi_Dialysat
+55	99712-2	103045	Dialysate flow rate Renal replacement therapy circuit	Nierenverfahren_VO_BM25_Dialysat
 \.
 
 
@@ -19987,7 +19990,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 52, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 55, true);
 
 
 --
