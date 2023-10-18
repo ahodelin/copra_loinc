@@ -9745,6 +9745,25 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 94	60829-9	104721	Pressure.plateau Respiratory system airway	Beatmung_MS_Pallas_Pplat
 95	60829-9	107886	Pressure.plateau Respiratory system airway	Beatmung_MS_T1_Pplateau
 96	60829-9	108023	Pressure.plateau Respiratory system airway	P_Beatmung_MS_C3_Pplateau
+97	75931-6	100103	Inspiration/Expiration time Ratio	Beatmung_Einstellung_I:E
+98	75931-6	100112	Inspiration/Expiration time Ratio	Beatmung_Anordnung_I:E
+99	75931-6	102898	Inspiration/Expiration time Ratio	Beatmung_ES_G5_IEVerhaeltnis
+100	75931-6	102926	Inspiration/Expiration time Ratio	Beatmung_MS_G5_IEVerhaeltnis
+101	75931-6	103266	Inspiration/Expiration time Ratio	Beatmung_MS_VisionA_IEVerhaeltnis
+102	75931-6	104274	Inspiration/Expiration time Ratio	Beatmung_ES_Servoi_I_E
+103	75931-6	107876	Inspiration/Expiration time Ratio	Beatmung_MS_T1_IEVerhaeltnis
+104	75931-6	110915	Inspiration/Expiration time Ratio	Beatmung_MS_Servoi_I_E
+105	75931-6	103270	Inspiration/Expiration time Ratio	Beatmung_ES_Evita2_VerhaeltnisTiTe
+106	20075-8	103284	PEEP Respiratory system	Beatmung_MS_Evita2_Ppeep
+107	75946-4	103288	Airway resistance	Beatmung_MS_Evita2_Resistance
+108	75946-4	103328	Airway resistance	Beatmung_MS_Evita4_Resistance
+109	60826-5	103289	Lung compliance	Beatmung_MS_Evita2_Compliance
+110	60826-5	103329	Lung compliance	Beatmung_MS_Evita4_Compliance
+111	60828-1	102907	Compliance.static Lung	Beatmung_MS_G5_Cstat
+112	60828-1	103440	Compliance.static Lung	Beatmung_MS_Avea_Cstat
+113	60828-1	104235	Compliance.static Lung	Beatmung_MS_Servoi_Cstatic
+114	60828-1	107871	Compliance.static Lung	Beatmung_MS_T1_Cstat
+115	60828-1	108036	Compliance.static Lung	P_Beatmung_MS_C3_Cstat
 \.
 
 
@@ -20031,7 +20050,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 96, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 115, true);
 
 
 --
