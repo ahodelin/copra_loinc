@@ -61,6 +61,7 @@ where is_match
 select copra_id, loinc_num, 100, copra_name, loinc_long_common_name 
 from loinc_copra.loinc_copra_hand
 order by copra_id, loinc_num;
+--103265
 
 select * from loinc_copra.loinc_shortname_copra_name llcnc where is_match ;
 update loinc_copra.loinc_shortname_copra_name
@@ -416,6 +417,73 @@ and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
 --insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
 select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
 from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('76221-1')
+and ccv.id in (103327, 103433, 104240)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('75958-9')
+and ccv.id in (100096, 103286, 103326, 104239, 107893)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('20075-8')
+and ccv.id in (100102, 103425, 104264, 104722)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+-- NO 101444, 
+
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('38199-6')
+and ccv.id in (103330)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+-- NO 101444, 
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('20075-8')
+and ccv.id in (100111, 100258, 102893, 103275, 103301, 103411, 104708, 104722, 105078, 107981)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+-- NO 101444 
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('35410-0')
+and ccv.id in (102858, 102860, 103086, 103125, 103128, 103139, 103276, 103292, 105078, 107981)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('20075-8')
+and ccv.id in (103142)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('60740-8')
+and ccv.id in (103260)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('60829-9')
+and ccv.id in (101447, 103262, 103283, 103438, 104721, 107886, 108023)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
+
+insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
 where l.loinc_num in ('')
 and ccv.id in ()
 and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
@@ -426,14 +494,20 @@ id, name,
 description from copra.co6_config_variables ccv
 where parent in (1, 20)
 and co6_config_variabletypes_id in (3, 6, 5, 12)
-and id > 103126
+and id > 103265
 and description notnull
-and description !~* 'Liste|Bezeichnung|^Anlage |^kumulativ$|^Medikament$'
+and description !~* 'Liste|Bezeichnung|^Anlage |^kumulativ$|^Medikament$| Tidalvol|PEEP|CPAP|plateau'
 --and description like '%ndex%'
 order by id 
 --limit 20;
 
-select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name like '%xygen%aturati%' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name like '%lateau%' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where loinc_num = '35410-0' ;
+
+/*
+60829-9  |Pressure.plateau Respiratory system airway                  
+76259-1  |Pressure.plateau Respiratory system airway --on ventilator  
+*/
 
 
 
@@ -449,8 +523,30 @@ select loinc_num , long_common_name from loinc.loinc where loinc_num LIKE '%1946
 -- LP73417-5 - Stroke volume -> 102186 - VigilanceC_SV
 -- LP73417-5 - Stroke volume -> 102874 - Beatmung_ES_VisionA_Schlagvolumen
 -- LP73417-5 - Stroke volume -> 102408 - p-SV
+-- LP101940-7 - Tidal volume -> 103132 - Beatmung_MS_BiPAPV_Vt
+-- LP101940-7 - Tidal volume -> 100101 - Beatmung_Einstellung_VT
+-- LP101940-7 - Tidal volume -> 103084 - Beatmung_MS_VisionA_Tidalvolumen
+-- LP101940-7 - Tidal volume -> 103421 - Beatmung_MS_Avea_Vte
+-- LP101940-7 - Tidal volume -> 103431 - Beatmung_MS_Avea_MandVte
+-- LP101940-7 - Tidal volume -> 104284 - Beatmung_ES_Servoi_Vt
+-- LP101940-7 - Tidal volume -> 104726 - Beatmung_MS_Pallas_Vt
+
 
 select * from loinc_copra.loinc_copra_hand;
 
-select * from copra.co6_config_variables ccv where id = 110922;
+select * from copra.co6_config_variables ccv where description ~* 'plateau' and parent = 1 and co6_config_variabletypes_id in (3, 6, 5, 12) order by id;
+
+/*
+ 
+76246-8  |Intrinsic dynamic PEEP Respiratory system|Intrinsic dyn PEEP Respiratory
+38199-6  |Intrinsic PEEP Respiratory system        |Intrinsic PEEP Respiratory    
+20076-6  |Minimum PEEP setting Ventilator alarm    |Min PEEP setting Vent alarm                 
+76248-4  |PEEP Respiratory system --on ventilator  |PEEP on vent Respiratory      
+83388-9  |Total dynamic PEEP Respiratory system    |Total dynamic PEEP Respiratory
+76247-6  |Total PEEP Respiratory system            |Total PEEP Respiratory        
+*/
+
+-- 83386-3  Extrinsic PEEP Respiratory system
+-- 38199-6  Intrinsic PEEP Respiratory system
+-- 20075-8  PEEP Respiratory system
 

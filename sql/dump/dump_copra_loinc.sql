@@ -9704,6 +9704,47 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 53	76528-9	103036	Breath rate spontaneous	Beatmung_MS_G5_fspontan
 54	99712-2	103043	Dialysate flow rate Renal replacement therapy circuit	Nierenverfahren_VO_Multi_Dialysat
 55	99712-2	103045	Dialysate flow rate Renal replacement therapy circuit	Nierenverfahren_VO_BM25_Dialysat
+56	76221-1	103327	Tidal volume.inspired	Beatmung_MS_Evita4_Vt
+57	76221-1	103433	Tidal volume.inspired	Beatmung_MS_Avea_Vti
+58	76221-1	104240	Tidal volume.inspired	Beatmung_MS_Servoi_Vti
+59	75958-9	100096	Tidal volume expired Respiratory system airway	Beatmung_Messung_VTeMl
+60	75958-9	103286	Tidal volume expired Respiratory system airway	Beatmung_MS_Evita2_Vte
+61	75958-9	103326	Tidal volume expired Respiratory system airway	Beatmung_MS_Evita4_Vte
+62	75958-9	104239	Tidal volume expired Respiratory system airway	Beatmung_MS_Servoi_Vte
+63	75958-9	107893	Tidal volume expired Respiratory system airway	Beatmung_MS_T1_VTE
+64	20075-8	100102	PEEP Respiratory system	Beatmung_Einstellung_PEEP
+65	20075-8	103425	PEEP Respiratory system	Beatmung_MS_Avea_PEEP
+66	20075-8	104264	PEEP Respiratory system	Beatmung_ES_Servoi_PEEP
+67	20075-8	104722	PEEP Respiratory system	Beatmung_MS_Pallas_PEEP
+68	38199-6	103330	Intrinsic PEEP Respiratory system	Beatmung_MS_Evita4_PEEPi
+69	20075-8	100111	PEEP Respiratory system	Beatmung_Anordnung_PEEP
+70	20075-8	100258	PEEP Respiratory system	Beatmung_Einstellung_intermPEEP
+71	20075-8	102893	PEEP Respiratory system	Beatmung_ES_G5_PeepCPAP
+72	20075-8	103275	PEEP Respiratory system	Beatmung_ES_Evita2_PEEP
+73	20075-8	103301	PEEP Respiratory system	Beatmung_ES_Evita4_PEEP
+74	20075-8	103411	PEEP Respiratory system	Beatmung_ES_Avea_PEEP
+75	20075-8	104708	PEEP Respiratory system	Beatmung_ES_Pallas_PEEP
+76	20075-8	105078	PEEP Respiratory system	Beatmung_ES_C2_PEEP_CPAP_Ptief
+77	20075-8	107981	PEEP Respiratory system	P_Beatmung_ES_C3_PEEP_CPAP_Ptief
+78	35410-0	102858	Continuous positive airway pressure Respiratory system	Beatmung_Einstellung_CPAPcmH2O
+79	35410-0	102860	Continuous positive airway pressure Respiratory system	Beatmung_Messung_CPAPcmH2O
+80	35410-0	103086	Continuous positive airway pressure Respiratory system	Beatmung_ES_F120_CPAP
+81	35410-0	103125	Continuous positive airway pressure Respiratory system	Beatmung_ES_BiPAPV_CPAP
+82	35410-0	103128	Continuous positive airway pressure Respiratory system	Beatmung_MS_BiPAPV_CPAP
+83	35410-0	103139	Continuous positive airway pressure Respiratory system	Beatmung_ES_VisionA_PEEPCPAP
+84	35410-0	103276	Continuous positive airway pressure Respiratory system	Beatmung_ES_Evita2_CPAP
+85	35410-0	103292	Continuous positive airway pressure Respiratory system	Beatmung_MS_Evita2_CPAP
+86	35410-0	105078	Continuous positive airway pressure Respiratory system	Beatmung_ES_C2_PEEP_CPAP_Ptief
+87	35410-0	107981	Continuous positive airway pressure Respiratory system	P_Beatmung_ES_C3_PEEP_CPAP_Ptief
+88	20075-8	103142	PEEP Respiratory system	Beatmung_MS_VisionA_PEEP
+89	60740-8	103260	Inspiration [Time] Respiratory system	Beatmung_ES_VisionA_Ti
+90	60829-9	101447	Pressure.plateau Respiratory system airway	Beatmung_Messung_Pplateau
+91	60829-9	103262	Pressure.plateau Respiratory system airway	Beatmung_MS_VisionA_Plateau
+92	60829-9	103283	Pressure.plateau Respiratory system airway	Beatmung_MS_Evita2_Pplat
+93	60829-9	103438	Pressure.plateau Respiratory system airway	Beatmung_MS_Avea_Pplat
+94	60829-9	104721	Pressure.plateau Respiratory system airway	Beatmung_MS_Pallas_Pplat
+95	60829-9	107886	Pressure.plateau Respiratory system airway	Beatmung_MS_T1_Pplateau
+96	60829-9	108023	Pressure.plateau Respiratory system airway	P_Beatmung_MS_C3_Pplateau
 \.
 
 
@@ -19990,7 +20031,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 55, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 96, true);
 
 
 --
