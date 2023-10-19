@@ -559,17 +559,18 @@ where l.loinc_num in ('20116-0')
 and ccv.id in (103432)
 and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
 
---insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
 select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
 from loinc.loinc l, copra.co6_config_variables ccv 
-where l.loinc_num in ('')
-and ccv.id in ()
+where l.loinc_num in ('75931-6')
+and ccv.id in (103426)
 and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand);
 
---insert into loinc_copra.loinc_copra_till_now
-select * from loinc_copra.loinc_copra_hand lch 
+--insert into loinc_copra.loinc_copra_till_now(copra_id, loinc_num, name, "LONG_COMMON_NAME")
+select id, copra_id, loinc_num  from loinc_copra.loinc_copra_hand lch; 
 where copra_id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
 
+select * from loinc_copra.loinc_copra_till_now lctn;
 
 select 
 id, name, 
@@ -587,7 +588,7 @@ order by id
 -- 19931-5  |Peak inspiratory gas flow setting Ventilator
 
 -- loinc
-select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'gas flow' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* '.+volum' order by long_common_name ;
 select loinc_num, long_common_name, shortname from loinc.loinc l where loinc_num = '35410-0' ;
 
 
