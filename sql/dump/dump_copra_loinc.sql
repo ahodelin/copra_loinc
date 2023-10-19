@@ -9789,6 +9789,7 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 124	76528-9	107874	Breath rate spontaneous	Beatmung_MS_T1_fSpontan
 125	76528-9	108018	Breath rate spontaneous	P_Beatmung_MS_C3_fSpontan
 126	20116-0	103432	Tidal volume.spontaneous --on ventilator	Beatmung_MS_Avea_SpontVte
+127	75931-6	103426	Inspiration/Expiration time Ratio	Beatmung_MS_Avea_IE
 \.
 
 
@@ -20322,7 +20323,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 126, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 127, true);
 
 
 --
