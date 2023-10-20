@@ -9790,6 +9790,24 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 125	76528-9	108018	Breath rate spontaneous	P_Beatmung_MS_C3_fSpontan
 126	20116-0	103432	Tidal volume.spontaneous --on ventilator	Beatmung_MS_Avea_SpontVte
 127	75931-6	103426	Inspiration/Expiration time Ratio	Beatmung_MS_Avea_IE
+128	20140-0	103423	Volume expired	Beatmung_MS_Avea_Ve
+129	76008-2	103034	Expired minute Volume during Mechanical ventilation	Beatmung_MS_G5_ExpMinVol
+130	76008-2	107872	Expired minute Volume during Mechanical ventilation	Beatmung_MS_T1_ExpMinVol
+131	76008-2	108016	Expired minute Volume during Mechanical ventilation	P_Beatmung_MS_C3_ExspMinVol
+132	60740-8	102887	Inspiration [Time] Respiratory system	Beatmung_ES_G5_Ti
+133	60740-8	102904	Inspiration [Time] Respiratory system	Beatmung_MS_G5_TI
+134	60740-8	102908	Inspiration [Time] Respiratory system	Beatmung_MS_G5_RCinsp
+135	60740-8	103424	Inspiration [Time] Respiratory system	Beatmung_MS_Avea_Ti
+136	60740-8	104716	Inspiration [Time] Respiratory system	Beatmung_ES_Pallas_Tinsp
+137	60740-8	106640	Inspiration [Time] Respiratory system	Beatmung_ES_T1_Ti
+138	60740-8	107891	Inspiration [Time] Respiratory system	Beatmung_MS_T1_TI
+139	60739-0	102909	Expiration [Time] Respiratory system	Beatmung_MS_G5_RCexsp
+140	60739-0	102916	Expiration [Time] Respiratory system	Beatmung_MS_G5_TE
+141	60739-0	103427	Expiration [Time] Respiratory system	Beatmung_MS_Avea_Te
+142	60739-0	108034	Expiration [Time] Respiratory system	P_Beatmung_MS_C3_RCexsp
+143	50982-8	104032	Horowitz index in Blood	Beatmung_MS_HorowitzINPULS
+144	76113-0	104035	Nitrogen dioxide [VFr/PPres] Gas delivery system	Beatmung_MS_NO2
+145	80341-1	104231	Respiratory effort	Beatmung_MS_Servoi_WOBp
 \.
 
 
@@ -10037,6 +10055,25 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 103431	LP101940-7	Beatmung_MS_Avea_MandVte	Tidal volume
 104284	LP101940-7	Beatmung_ES_Servoi_Vt	Tidal volume
 104726	LP101940-7	Beatmung_MS_Pallas_Vt	Tidal volume
+103426	75931-6	Beatmung_MS_Avea_IE	Inspiration/Expiration time Ratio
+103423	20140-0	Beatmung_MS_Avea_Ve	Volume expired
+103034	76008-2	Beatmung_MS_G5_ExpMinVol	Expired minute Volume during Mechanical ventilation
+107872	76008-2	Beatmung_MS_T1_ExpMinVol	Expired minute Volume during Mechanical ventilation
+108016	76008-2	P_Beatmung_MS_C3_ExspMinVol	Expired minute Volume during Mechanical ventilation
+102887	60740-8	Beatmung_ES_G5_Ti	Inspiration [Time] Respiratory system
+102904	60740-8	Beatmung_MS_G5_TI	Inspiration [Time] Respiratory system
+102908	60740-8	Beatmung_MS_G5_RCinsp	Inspiration [Time] Respiratory system
+103424	60740-8	Beatmung_MS_Avea_Ti	Inspiration [Time] Respiratory system
+104716	60740-8	Beatmung_ES_Pallas_Tinsp	Inspiration [Time] Respiratory system
+106640	60740-8	Beatmung_ES_T1_Ti	Inspiration [Time] Respiratory system
+107891	60740-8	Beatmung_MS_T1_TI	Inspiration [Time] Respiratory system
+102909	60739-0	Beatmung_MS_G5_RCexsp	Expiration [Time] Respiratory system
+102916	60739-0	Beatmung_MS_G5_TE	Expiration [Time] Respiratory system
+103427	60739-0	Beatmung_MS_Avea_Te	Expiration [Time] Respiratory system
+108034	60739-0	P_Beatmung_MS_C3_RCexsp	Expiration [Time] Respiratory system
+104032	50982-8	Beatmung_MS_HorowitzINPULS	Horowitz index in Blood
+104035	76113-0	Beatmung_MS_NO2	Nitrogen dioxide [VFr/PPres] Gas delivery system
+104231	80341-1	Beatmung_MS_Servoi_WOBp	Respiratory effort
 \.
 
 
@@ -20323,7 +20360,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 127, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 145, true);
 
 
 --
