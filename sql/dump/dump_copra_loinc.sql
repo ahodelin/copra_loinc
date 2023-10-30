@@ -9814,6 +9814,17 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 149	60949-5	104249	Mean airway pressure	Beatmung_MS_Servoi_Pmean
 150	75943-1	104250	Airway pressure --during respiratory pause	Beatmung_MS_Servoi_Pplat
 151	9279-1	104283	Atemfrequenz	Beatmung_ES_Servoi_Frequenz
+152	33425-0	104725	Minute volume setting Ventilator	Beatmung_MS_Pallas_MV
+153	61021-2	104733	Halothane [VFr/PPres] Airway adaptor --during inspiration	Beatmung_MS_Pallas_Halothan_insp
+154	61020-4	104734	Halothane [VFr/PPres] Airway adaptor --during expiration	Beatmung_MS_Pallas_Halothan_exsp
+155	60885-1	104735	Enflurane [VFr/PPres] Airway adaptor --during inspiration	Beatmung_MS_Pallas_Enfluran_insp
+156	60884-4	104736	Enflurane [VFr/PPres] Airway adaptor --at end expiration	Beatmung_MS_Pallas_Enfluran_exsp
+157	62270-4	104737	Isoflurane [VFr/PPres] Airway adaptor --during inspiration	Beatmung_MS_Pallas_Isofluran_insp
+158	62269-6	104738	Isoflurane [VFr/PPres] Airway adaptor --during expiration	Beatmung_MS_Pallas_Isofluran_exsp
+159	60805-9	104739	Desflurane [VFr/PPres] Airway adaptor --during inspiration	Beatmung_MS_Pallas_Desfluran_insp
+160	62265-4	104740	Desflurane [VFr/PPres] Airway adaptor --during expiration	Beatmung_MS_Pallas_Desfluran_exsp
+161	60907-3	104741	Sevoflurane [VFr/PPres] Airway adaptor --during inspiration	Beatmung_MS_Pallas_Sevofluran_insp
+162	60807-5	104742	Sevoflurane [VFr/PPres] Airway adaptor --during expiration	Beatmung_MS_Pallas_Sevofluran_exsp
 \.
 
 
@@ -10086,6 +10097,17 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104249	60949-5	Beatmung_MS_Servoi_Pmean	Mean airway pressure
 104250	75943-1	Beatmung_MS_Servoi_Pplat	Airway pressure --during respiratory pause
 104283	9279-1	Beatmung_ES_Servoi_Frequenz	Atemfrequenz
+104725	33425-0	Beatmung_MS_Pallas_MV	Minute volume setting Ventilator
+104733	61021-2	Beatmung_MS_Pallas_Halothan_insp	Halothane [VFr/PPres] Airway adaptor --during inspiration
+104734	61020-4	Beatmung_MS_Pallas_Halothan_exsp	Halothane [VFr/PPres] Airway adaptor --during expiration
+104735	60885-1	Beatmung_MS_Pallas_Enfluran_insp	Enflurane [VFr/PPres] Airway adaptor --during inspiration
+104736	60884-4	Beatmung_MS_Pallas_Enfluran_exsp	Enflurane [VFr/PPres] Airway adaptor --at end expiration
+104737	62270-4	Beatmung_MS_Pallas_Isofluran_insp	Isoflurane [VFr/PPres] Airway adaptor --during inspiration
+104738	62269-6	Beatmung_MS_Pallas_Isofluran_exsp	Isoflurane [VFr/PPres] Airway adaptor --during expiration
+104739	60805-9	Beatmung_MS_Pallas_Desfluran_insp	Desflurane [VFr/PPres] Airway adaptor --during inspiration
+104740	62265-4	Beatmung_MS_Pallas_Desfluran_exsp	Desflurane [VFr/PPres] Airway adaptor --during expiration
+104741	60907-3	Beatmung_MS_Pallas_Sevofluran_insp	Sevoflurane [VFr/PPres] Airway adaptor --during inspiration
+104742	60807-5	Beatmung_MS_Pallas_Sevofluran_exsp	Sevoflurane [VFr/PPres] Airway adaptor --during expiration
 \.
 
 
@@ -20372,7 +20394,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 151, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 162, true);
 
 
 --
