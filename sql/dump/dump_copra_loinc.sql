@@ -9825,6 +9825,10 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 160	62265-4	104740	Desflurane [VFr/PPres] Airway adaptor --during expiration	Beatmung_MS_Pallas_Desfluran_exsp
 161	60907-3	104741	Sevoflurane [VFr/PPres] Airway adaptor --during inspiration	Beatmung_MS_Pallas_Sevofluran_insp
 162	60807-5	104742	Sevoflurane [VFr/PPres] Airway adaptor --during expiration	Beatmung_MS_Pallas_Sevofluran_exsp
+163	75923-3	104743	Fresh gas.air flow Gas delivery system	Beatmung_MS_Pallas_Frischgas_Flow_gesamt
+164	75925-8	104745	Fresh gas.oxygen flow Gas delivery system	Beatmung_ES_Pallas_Frischgas_O2
+165	76297-1	104760	Left ventricular Stroke volume index	Schlagvolumenindex
+166	60821-6	107812	Apnea duration	Beatmung_ES_Leoni_Apnoezeit
 \.
 
 
@@ -10108,6 +10112,11 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104740	62265-4	Beatmung_MS_Pallas_Desfluran_exsp	Desflurane [VFr/PPres] Airway adaptor --during expiration
 104741	60907-3	Beatmung_MS_Pallas_Sevofluran_insp	Sevoflurane [VFr/PPres] Airway adaptor --during inspiration
 104742	60807-5	Beatmung_MS_Pallas_Sevofluran_exsp	Sevoflurane [VFr/PPres] Airway adaptor --during expiration
+104743	75923-3	Beatmung_MS_Pallas_Frischgas_Flow_gesamt	Fresh gas.air flow Gas delivery system
+104745	75925-8	Beatmung_ES_Pallas_Frischgas_O2	Fresh gas.oxygen flow Gas delivery system
+104758	LP73417-5	Schlagvolumen	Stroke volume
+104760	76297-1	Schlagvolumenindex	Left ventricular Stroke volume index
+107812	60821-6	Beatmung_ES_Leoni_Apnoezeit	Apnea duration
 \.
 
 
@@ -20394,7 +20403,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 162, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 166, true);
 
 
 --
