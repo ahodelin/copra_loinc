@@ -9808,6 +9808,11 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 143	50982-8	104032	Horowitz index in Blood	Beatmung_MS_HorowitzINPULS
 144	76113-0	104035	Nitrogen dioxide [VFr/PPres] Gas delivery system	Beatmung_MS_NO2
 145	80341-1	104231	Respiratory effort	Beatmung_MS_Servoi_WOBp
+146	9279-1	104245	Atemfrequenz	Beatmung_MS_Servoi_AF
+147	35410-0	104247	Continuous positive airway pressure Respiratory system	Beatmung_MS_Servoi_CPAP
+148	20075-8	104248	PEEP Respiratory system	Beatmung_MS_Servoi_PEEP
+149	60949-5	104249	Mean airway pressure	Beatmung_MS_Servoi_Pmean
+150	75943-1	104250	Airway pressure --during respiratory pause	Beatmung_MS_Servoi_Pplat
 \.
 
 
@@ -10074,6 +10079,11 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104032	50982-8	Beatmung_MS_HorowitzINPULS	Horowitz index in Blood
 104035	76113-0	Beatmung_MS_NO2	Nitrogen dioxide [VFr/PPres] Gas delivery system
 104231	80341-1	Beatmung_MS_Servoi_WOBp	Respiratory effort
+104245	9279-1	Beatmung_MS_Servoi_AF	Atemfrequenz
+104247	35410-0	Beatmung_MS_Servoi_CPAP	Continuous positive airway pressure Respiratory system
+104248	20075-8	Beatmung_MS_Servoi_PEEP	PEEP Respiratory system
+104249	60949-5	Beatmung_MS_Servoi_Pmean	Mean airway pressure
+104250	75943-1	Beatmung_MS_Servoi_Pplat	Airway pressure --during respiratory pause
 \.
 
 
@@ -20360,7 +20370,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 145, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 150, true);
 
 
 --
