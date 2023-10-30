@@ -9813,6 +9813,7 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 148	20075-8	104248	PEEP Respiratory system	Beatmung_MS_Servoi_PEEP
 149	60949-5	104249	Mean airway pressure	Beatmung_MS_Servoi_Pmean
 150	75943-1	104250	Airway pressure --during respiratory pause	Beatmung_MS_Servoi_Pplat
+151	9279-1	104283	Atemfrequenz	Beatmung_ES_Servoi_Frequenz
 \.
 
 
@@ -10084,6 +10085,7 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104248	20075-8	Beatmung_MS_Servoi_PEEP	PEEP Respiratory system
 104249	60949-5	Beatmung_MS_Servoi_Pmean	Mean airway pressure
 104250	75943-1	Beatmung_MS_Servoi_Pplat	Airway pressure --during respiratory pause
+104283	9279-1	Beatmung_ES_Servoi_Frequenz	Atemfrequenz
 \.
 
 
@@ -20370,7 +20372,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 150, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 151, true);
 
 
 --
