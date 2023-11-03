@@ -9829,6 +9829,27 @@ COPY loinc_copra.loinc_copra_hand (id, loinc_num, copra_id, loinc_long_common_na
 164	75925-8	104745	Fresh gas.oxygen flow Gas delivery system	Beatmung_ES_Pallas_Frischgas_O2
 165	76297-1	104760	Left ventricular Stroke volume index	Schlagvolumenindex
 166	60821-6	107812	Apnea duration	Beatmung_ES_Leoni_Apnoezeit
+167	64099-5	107873	Peak expiratory flow attempt	Beatmung_MS_T1_ExspFlow
+168	60948-7	107878	Peak inspiratory flow Respiratory system airway	Beatmung_MS_T1_InspFlow
+169	19994-3	107879	Oxygen/Total gas setting [Volume Fraction] Ventilator	Beatmung_MS_T1_O2VolProzent
+170	76004-1	107880	Airway occlusion pressure	Beatmung_MS_T1_P01
+171	75948-0	107888	Airway resistance --during inspiration	Beatmung_MS_T1_Rinsp
+172	64099-5	108032	Peak expiratory flow attempt	P_Beatmung_MS_C3_ExspFlow
+173	60948-7	108033	Peak inspiratory flow Respiratory system airway	P_Beatmung_MS_C3_InspFlow
+174	76004-1	108038	Airway occlusion pressure	P_Beatmung_MS_C3_P01
+175	8518-3	108503	Femoral artery - left Diastolic blood pressure	P_NBP_liBein
+176	8534-0	108503	Femoral artery - left Mean blood pressure	P_NBP_liBein
+177	8553-0	108503	Femoral artery - left Systolic blood pressure	P_NBP_liBein
+178	8519-1	108504	Femoral artery - right Diastolic blood pressure	P_NBP_reBein
+179	8535-7	108504	Femoral artery - right Mean blood pressure	P_NBP_reBein
+180	8554-8	108504	Femoral artery - right Systolic blood pressure	P_NBP_reBein
+181	8514-2	108505	Brachial artery - left Diastolic blood pressure	P_NBP_liArm
+182	8530-8	108505	Brachial artery - left Mean blood pressure	P_NBP_liArm
+183	8546-4	108505	Brachial artery - left Systolic blood pressure	P_NBP_liArm
+184	8515-9	108506	Brachial artery - right Diastolic blood pressure	P_NBP_reArm
+185	8531-6	108506	Brachial artery - right Mean blood pressure	P_NBP_reArm
+186	8547-2	108506	Brachial artery - right Systolic blood pressure	P_NBP_reArm
+187	33437-5	108508	Oxygen [Partial pressure] in Capillary blood by Transcutaneous O2 monitor	tcpO2
 \.
 
 
@@ -10117,6 +10138,33 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104758	LP73417-5	Schlagvolumen	Stroke volume
 104760	76297-1	Schlagvolumenindex	Left ventricular Stroke volume index
 107812	60821-6	Beatmung_ES_Leoni_Apnoezeit	Apnea duration
+107873	64099-5	Beatmung_MS_T1_ExspFlow	Peak expiratory flow attempt
+107878	60948-7	Beatmung_MS_T1_InspFlow	Peak inspiratory flow Respiratory system airway
+107879	19994-3	Beatmung_MS_T1_O2VolProzent	Oxygen/Total gas setting [Volume Fraction] Ventilator
+107880	76004-1	Beatmung_MS_T1_P01	Airway occlusion pressure
+107888	75948-0	Beatmung_MS_T1_Rinsp	Airway resistance --during inspiration
+108032	64099-5	P_Beatmung_MS_C3_ExspFlow	Peak expiratory flow attempt
+108033	60948-7	P_Beatmung_MS_C3_InspFlow	Peak inspiratory flow Respiratory system airway
+108038	76004-1	P_Beatmung_MS_C3_P01	Airway occlusion pressure
+108503	8518-3	P_NBP_liBein	Femoral artery - left Diastolic blood pressure
+108503	8534-0	P_NBP_liBein	Femoral artery - left Mean blood pressure
+108503	8553-0	P_NBP_liBein	Femoral artery - left Systolic blood pressure
+108504	8519-1	P_NBP_reBein	Femoral artery - right Diastolic blood pressure
+108504	8535-7	P_NBP_reBein	Femoral artery - right Mean blood pressure
+108504	8554-8	P_NBP_reBein	Femoral artery - right Systolic blood pressure
+108503	8517-5	P_NBP_liBein	Dorsal pedal artery - left Diastolic blood pressure
+108503	8532-4	P_NBP_liBein	Dorsal pedal artery - left Mean blood pressure
+108503	8550-6	P_NBP_liBein	Dorsal pedal artery - left Systolic blood pressure
+108504	8516-7	P_NBP_reBein	Dorsal pedal artery - right Diastolic blood pressure
+108504	8533-2	P_NBP_reBein	Dorsal pedal artery - right Mean blood pressure
+108504	8551-4	P_NBP_reBein	Dorsal pedal artery - right Systolic blood pressure
+108505	8514-2	P_NBP_liArm	Brachial artery - left Diastolic blood pressure
+108505	8530-8	P_NBP_liArm	Brachial artery - left Mean blood pressure
+108505	8546-4	P_NBP_liArm	Brachial artery - left Systolic blood pressure
+108506	8515-9	P_NBP_reArm	Brachial artery - right Diastolic blood pressure
+108506	8531-6	P_NBP_reArm	Brachial artery - right Mean blood pressure
+108506	8547-2	P_NBP_reArm	Brachial artery - right Systolic blood pressure
+108508	33437-5	tcpO2	Oxygen [Partial pressure] in Capillary blood by Transcutaneous O2 monitor
 \.
 
 
@@ -20403,7 +20451,7 @@ SELECT pg_catalog.setval('loinc_copra.copra_description_only_words_id_seq', 2175
 -- Name: loinc_copra_hand_id_seq; Type: SEQUENCE SET; Schema: loinc_copra; Owner: clinicuser
 --
 
-SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 166, true);
+SELECT pg_catalog.setval('loinc_copra.loinc_copra_hand_id_seq', 187, true);
 
 
 --
