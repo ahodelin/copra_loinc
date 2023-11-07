@@ -903,13 +903,41 @@ insert into loinc_copra.loinc_copra_till_now(copra_id, loinc_num, name, "LONG_CO
 select copra_id, loinc_num, copra_name, loinc_long_common_name  from loinc_copra.loinc_copra_hand lch 
 where copra_id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
 
+insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('60988-3')
+and ccv.id in (110919)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
+
+--insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('60996-6')
+and ccv.id in (110921)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
+
+insert into loinc_copra.loinc_copra_hand (loinc_num, copra_id, loinc_long_common_name, copra_name)
+select l.loinc_num, ccv.id, l.long_common_name, ccv.name 
+from loinc.loinc l, copra.co6_config_variables ccv 
+where l.loinc_num in ('60956-0')
+and ccv.id in (110923)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_hand)
+and ccv.id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
+
+insert into loinc_copra.loinc_copra_till_now(copra_id, loinc_num, name, "LONG_COMMON_NAME")
+select copra_id, loinc_num, copra_name, loinc_long_common_name  from loinc_copra.loinc_copra_hand lch 
+where copra_id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
+
 
 select 
 id, name, 
 description from copra.co6_config_variables ccv
 where parent in (1, 20)
 and co6_config_variabletypes_id in (3, 6, 5, 12)
-and id > 110836
+and id > 112021
 and description notnull
 and description !~* 'Liste|Bezeichnung|^Anlage |^kumulativ$|^Medikament$| Tidalvol|PEEP|CPAP|plateau|i:e|complianc|spontan'
 and id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn)
@@ -918,19 +946,18 @@ order by id
 
 
 -- loincl
-select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'airway.+pressure' and long_common_name not like '%Deprecated%' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'blood pressure' and long_common_name not like '%Deprecated%' order by long_common_name ;
 select loinc_num, long_common_name, shortname from loinc.loinc l where shortname  ~* 'SpO2' order by long_common_name ;
 
 -- german loinc
-select "LOINC_NUM", "LONG_COMMON_NAME" from loinc.loinc_german_translation where "LOINC_NUM" = '60985-9';
+select "LOINC_NUM", "LONG_COMMON_NAME" from loinc.loinc_german_translation where "LONG_COMMON_NAME" ~* 'Blutdruck';
 
 -- copra
 select * from copra.co6_config_variables ccv where description ~* 'no2' and parent = 1 and co6_config_variabletypes_id in (3, 6, 5, 12) order by id;
 
-select * from copra.co6_config_variables ccv where name = 'SV';
+select * from copra.co6_config_variables ccv where name = 'SvO2';
 
--- till now
-select * from loinc_copra.loinc_copra_till_now;
+
 
 insert into loinc_copra.loinc_copra_till_now
 values
@@ -963,5 +990,37 @@ values
 
 
 
-select * from copra.co6_config_variables ccv where description ~* 'saturation|fraktion|fraction|concentration|konzentration|sättigun';
+
+delete from loinc_copra.loinc_copra_till_now where copra_id = 5 and loinc_num = '21840-4';
+delete from loinc_copra.loinc_copra_till_now where copra_id = 11 and loinc_num = '8289-1';
+delete from loinc_copra.loinc_copra_till_now where copra_id = 14 and loinc_num = '18833-4';
+delete from loinc_copra.loinc_copra_till_now where copra_id = 1274 and loinc_num = '19220-3';
+delete from loinc_copra.loinc_copra_till_now where copra_id = 1276 and loinc_num in ('76215-3', '76213-8');
+delete from loinc_copra.loinc_copra_till_now where copra_id = 100093 and loinc_num in ('76215-3', '76213-8');
+delete from loinc_copra.loinc_copra_till_now where copra_id = 101473 and loinc_num = '59574-4';
+
+-- 8462-4, Diastolischer Blutdruck
+-- 8478-0, Mittlerer Blutdruck
+-- 8480-6, Systolischer Blutdruck
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '49051-6',
+"LONG_COMMON_NAME" = 'Gestational age in weeks'
+where copra_id = 9;
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '49051-6',
+"LONG_COMMON_NAME" = 'Gestational age in weeks'
+where copra_id = 100037;
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = 'LP35925-4',
+"LONG_COMMON_NAME" = 'Body mass index'
+where copra_id = 101473;
+
+select * from loinc_copra.loinc_copra_till_now lctn 
+where copra_id > 102535
+order by copra_id;
+
+
 
