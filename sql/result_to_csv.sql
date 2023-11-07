@@ -946,11 +946,11 @@ order by id
 
 
 -- loincl
-select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'blood pressure' and long_common_name not like '%Deprecated%' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'temperature' and long_common_name not like '%Deprecated%' order by long_common_name ;
 select loinc_num, long_common_name, shortname from loinc.loinc l where shortname  ~* 'SpO2' order by long_common_name ;
 
 -- german loinc
-select "LOINC_NUM", "LONG_COMMON_NAME" from loinc.loinc_german_translation where "LONG_COMMON_NAME" ~* 'Blutdruck';
+select "LOINC_NUM", "LONG_COMMON_NAME" from loinc.loinc_german_translation where "LOINC_NUM" = '8302-2';
 
 -- copra
 select * from copra.co6_config_variables ccv where description ~* 'no2' and parent = 1 and co6_config_variabletypes_id in (3, 6, 5, 12) order by id;
@@ -979,7 +979,7 @@ values
   (104726, 'LP101940-7', 'Beatmung_MS_Pallas_Vt', 'Tidal volume');
  
  
- insert into loinc_copra.loinc_copra_till_now
+insert into loinc_copra.loinc_copra_till_now
 values
   (108503, '8517-5', 'P_NBP_liBein', 'Dorsal pedal artery - left Diastolic blood pressure'),
   (108503, '8532-4', 'P_NBP_liBein', 'Dorsal pedal artery - left Mean blood pressure'),
@@ -998,6 +998,8 @@ delete from loinc_copra.loinc_copra_till_now where copra_id = 1274 and loinc_num
 delete from loinc_copra.loinc_copra_till_now where copra_id = 1276 and loinc_num in ('76215-3', '76213-8');
 delete from loinc_copra.loinc_copra_till_now where copra_id = 100093 and loinc_num in ('76215-3', '76213-8');
 delete from loinc_copra.loinc_copra_till_now where copra_id = 101473 and loinc_num = '59574-4';
+delete from loinc_copra.loinc_copra_till_now where copra_id = 103045 and loinc_num = '12457-8';
+delete from loinc_copra.loinc_copra_till_now where copra_id = 110904 and loinc_num = '29463-7';
 
 -- 8462-4, Diastolischer Blutdruck
 -- 8478-0, Mittlerer Blutdruck
@@ -1018,9 +1020,95 @@ set loinc_num = 'LP35925-4',
 "LONG_COMMON_NAME" = 'Body mass index'
 where copra_id = 101473;
 
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '99712-2',
+"LONG_COMMON_NAME" = 'Dialysate flow rate Renal replacement therapy circuit'
+where copra_id = 103124;
+
+--110929|8310-5   |P_Temperatur_Tympanal       |Körpertemperatur
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '8310-5',
+"LONG_COMMON_NAME" = 'Ear temperature'
+where copra_id = 110929;
+
+-- 110928|8310-5   |P_Temperatur_Oesophagial    |Körpertemperatur
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '60836-4',
+"LONG_COMMON_NAME" = 'Esophageal temperature'
+where copra_id = 110928;
+
+-- 110927|8310-5   |P_Temperatur_Naso           |Körpertemperatur
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '76010-8',
+"LONG_COMMON_NAME" = 'Nasal temperature'
+where copra_id = 110927;
+
+-- 110933|8310-5   |P_Temperatur_Kern           |Körpertemperatur
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '8329-5',
+"LONG_COMMON_NAME" = 'Body temperature - Core'
+where copra_id = 110933;
+
+-- 110936|8310-5   |P_Temperatur_Messung_OrtKern|Körpertemperatur
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '8329-5',
+"LONG_COMMON_NAME" = 'Body temperature - Core'
+where copra_id = 110936;
+
+-- 110930|8310-5   |P_Temperatur_Rektal         |Körpertemperatur
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '8332-9',
+"LONG_COMMON_NAME" = 'Rectal temperature'
+where copra_id = 110930;
+
+-- 110926|8310-5   |P_Temperatur_Haut           |Körpertemperatur
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '39106-0',
+"LONG_COMMON_NAME" = 'Temperature of Skin'
+where copra_id = 110926;
+
+-- 110924|8310-5   |P_Temperatur_Venoes         |Körpertemperatur
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '75987-8',
+"LONG_COMMON_NAME" = 'Venous blood temperature'
+where copra_id = 110924;
+
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'clear' and long_common_name not like '%Deprecated%' order by long_common_name ;
+
+
 select * from loinc_copra.loinc_copra_till_now lctn 
-where copra_id > 102535
+where copra_id > 110923
 order by copra_id;
 
 
 
+select * from copra.co6_config_variables ccv 
+where id = 100098;
+and parent in (1, 20)
+and co6_config_variabletypes_id in (3, 6, 5, 12)
+and id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
+
+insert into loinc_copra.loinc_copra_till_now
+values
+  (102061, '75931-6', 'Beatmung_Messung_ExpirationszeitI:E', 'Inspiration/Expiration time Ratio'),
+  (100290, '75931-6', 'Beatmung_Messung_InspirationszeitI:E', 'Inspiration/Expiration time Ratio'),
+  (102069, '75931-6', 'Beatmung_Messung_I:EVerhaeltnisI', 'Inspiration/Expiration time Ratio'),
+  (102070, '75931-6', 'Beatmung_Messung_I:EVerhaeltnisE', 'Inspiration/Expiration time Ratio'),
+  (102529, '75931-6', 'Beatmung_Einstellung_I:EInsp', 'Inspiration/Expiration time Ratio'),
+  (102530, '75931-6', 'Beatmung_Einstellung_I:EExsp', 'Inspiration/Expiration time Ratio');
+
+insert into loinc_copra.loinc_copra_till_now
+values
+  (103716, '60834-9', 'TempBT', 'Blood temperature');
+ 
+ insert into loinc_copra.loinc_copra_till_now
+values
+  (7, '8302-2', 'Patient_Groesse', 'Körpergröße');
+
+ 
+  
