@@ -10168,6 +10168,8 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 102530	75931-6	Beatmung_Einstellung_I:EExsp	Inspiration/Expiration time Ratio
 103716	60834-9	TempBT	Blood temperature
 7	8302-2	Patient_Groesse	Körpergröße
+100098	76009-0	Beatmung_Messung_MV	Inspired minute Volume during Mechanical ventilation
+100300	76531-3	Beatmung_Messung_Pmax	Pressure.max Respiratory system airway --on ventilator
 \.
 
 

@@ -1082,7 +1082,7 @@ select loinc_num, long_common_name, shortname from loinc.loinc l where long_comm
 
 
 select * from loinc_copra.loinc_copra_till_now lctn 
-where copra_id > 110923
+where copra_id > 102051
 order by copra_id;
 
 
@@ -1106,9 +1106,22 @@ insert into loinc_copra.loinc_copra_till_now
 values
   (103716, '60834-9', 'TempBT', 'Blood temperature');
  
- insert into loinc_copra.loinc_copra_till_now
+insert into loinc_copra.loinc_copra_till_now
 values
   (7, '8302-2', 'Patient_Groesse', 'Körpergröße');
+ 
+ insert into loinc_copra.loinc_copra_till_now
+values
+  (100098, '76009-0', 'Beatmung_Messung_MV', 'Inspired minute Volume during Mechanical ventilation');
+ 
+insert into loinc_copra.loinc_copra_till_now
+values
+  (100300, '76531-3', 'Beatmung_Messung_Pmax', 'Pressure.max Respiratory system airway --on ventilator');
+
+ 
+ 
+select * from copra.co6_config_variables ccv 
+where id = 102178;
 
  
   
