@@ -1082,16 +1082,16 @@ select loinc_num, long_common_name, shortname from loinc.loinc l where long_comm
 
 
 select * from loinc_copra.loinc_copra_till_now lctn 
-where copra_id > 102051
+where loinc_num = 'LP19466-9'
 order by copra_id;
 
 
 
 select * from copra.co6_config_variables ccv 
-where id = 100098;
+where "name" ~* 'Schlagvolumen'
 and parent in (1, 20)
 and co6_config_variabletypes_id in (3, 6, 5, 12)
-and id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
+and id in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
 
 insert into loinc_copra.loinc_copra_till_now
 values
@@ -1117,11 +1117,37 @@ values
 insert into loinc_copra.loinc_copra_till_now
 values
   (100300, '76531-3', 'Beatmung_Messung_Pmax', 'Pressure.max Respiratory system airway --on ventilator');
+ 
+insert into loinc_copra.loinc_copra_till_now
+values
+  (102036, '76297-1', 'p-SVI', 'Left ventricular Cardiac index'),
+  (102179, '76297-1', 'Vigileo_SVI', 'Left ventricular Cardiac index'),
+  (102187, '76297-1', 'VigilanceC_SVI', 'Left ventricular Cardiac index');
+ 
 
- 
- 
-select * from copra.co6_config_variables ccv 
-where id = 102178;
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '20562-5',
+"LONG_COMMON_NAME" = 'Left ventricular Stroke volume'
+where copra_id in (102030, 102186, 102408);  
 
- 
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '8741-1',
+"LONG_COMMON_NAME" = 'Left ventricular Cardiac output'
+where copra_id in (102051, 102173, 102184); 
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '20562-5',
+"LONG_COMMON_NAME" = 'Left ventricular Stroke volume'
+where copra_id in (102874, 104758); 
+
+-- --'76297-1', 'p-SVI', 'Left ventricular Cardiac index'
+
+
+select * from loinc_copra.loinc_copra_till_now lctn 
+where copra_id > 102874
+order by copra_id;
+
+
+select * from loinc_copra.loinc_copra_till_now lctn 
+where name ~ 'SV'; 
   

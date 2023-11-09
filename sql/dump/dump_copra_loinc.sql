@@ -10065,15 +10065,8 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 110922	75919-1	LCWI	Left ventricular Cardiac index
 110931	8310-5	P_Temperatur_Messung_OrtAllg	Körpertemperatur
 110934	8310-5	P_Temperatur_generic	Körpertemperatur
-102030	LP73417-5	SV	Stroke volume
-102186	LP73417-5	VigilanceC_SV	Stroke volume
-102874	LP73417-5	Beatmung_ES_VisionA_Schlagvolumen	Stroke volume
-102408	LP73417-5	p-SV	Stroke volume
 102021	LP19466-9	CO	Cardiac output
 102040	LP19466-9	p-CO	Cardiac output
-102051	LP19466-9	HZV	Cardiac output
-102173	LP19466-9	PICCO_HZV	Cardiac output
-102184	LP19466-9	VigilanceC_HZV	Cardiac output
 103132	LP101940-7	Beatmung_MS_BiPAPV_Vt	Tidal volume
 100101	LP101940-7	Beatmung_Einstellung_VT	Tidal volume
 103084	LP101940-7	Beatmung_MS_VisionA_Tidalvolumen	Tidal volume
@@ -10099,6 +10092,10 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 110936	8329-5	P_Temperatur_Messung_OrtKern	Body temperature - Core
 110926	39106-0	P_Temperatur_Haut	Temperature of Skin
 110924	75987-8	P_Temperatur_Venoes	Venous blood temperature
+102030	20562-5	SV	Left ventricular Stroke volume
+102051	8741-1	HZV	Left ventricular Cardiac output
+102173	8741-1	PICCO_HZV	Left ventricular Cardiac output
+102874	20562-5	Beatmung_ES_VisionA_Schlagvolumen	Left ventricular Stroke volume
 106640	60740-8	Beatmung_ES_T1_Ti	Inspiration [Time] Respiratory system
 107891	60740-8	Beatmung_MS_T1_TI	Inspiration [Time] Respiratory system
 102909	60739-0	Beatmung_MS_G5_RCexsp	Expiration [Time] Respiratory system
@@ -10127,7 +10124,6 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104742	60807-5	Beatmung_MS_Pallas_Sevofluran_exsp	Sevoflurane [VFr/PPres] Airway adaptor --during expiration
 104743	75923-3	Beatmung_MS_Pallas_Frischgas_Flow_gesamt	Fresh gas.air flow Gas delivery system
 104745	75925-8	Beatmung_ES_Pallas_Frischgas_O2	Fresh gas.oxygen flow Gas delivery system
-104758	LP73417-5	Schlagvolumen	Stroke volume
 104760	76297-1	Schlagvolumenindex	Left ventricular Stroke volume index
 107812	60821-6	Beatmung_ES_Leoni_Apnoezeit	Apnea duration
 107873	64099-5	Beatmung_MS_T1_ExspFlow	Peak expiratory flow attempt
@@ -10170,6 +10166,13 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 7	8302-2	Patient_Groesse	Körpergröße
 100098	76009-0	Beatmung_Messung_MV	Inspired minute Volume during Mechanical ventilation
 100300	76531-3	Beatmung_Messung_Pmax	Pressure.max Respiratory system airway --on ventilator
+102036	76297-1	p-SVI	Left ventricular Cardiac index
+102179	76297-1	Vigileo_SVI	Left ventricular Cardiac index
+102187	76297-1	VigilanceC_SVI	Left ventricular Cardiac index
+102186	20562-5	VigilanceC_SV	Left ventricular Stroke volume
+102408	20562-5	p-SV	Left ventricular Stroke volume
+102184	8741-1	VigilanceC_HZV	Left ventricular Cardiac output
+104758	20562-5	Schlagvolumen	Left ventricular Stroke volume
 \.
 
 
