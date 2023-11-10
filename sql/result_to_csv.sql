@@ -946,7 +946,7 @@ order by id
 
 
 -- loincl
-select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'temperature' and long_common_name not like '%Deprecated%' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'gas.+flow' and long_common_name not like '%Deprecated%' order by long_common_name ;
 select loinc_num, long_common_name, shortname from loinc.loinc l where shortname  ~* 'SpO2' order by long_common_name ;
 
 -- german loinc
@@ -987,10 +987,7 @@ values
   (108504, '8516-7', 'P_NBP_reBein', 'Dorsal pedal artery - right Diastolic blood pressure'),
   (108504, '8533-2', 'P_NBP_reBein', 'Dorsal pedal artery - right Mean blood pressure'),
   (108504, '8551-4', 'P_NBP_reBein', 'Dorsal pedal artery - right Systolic blood pressure');
-
-
-
-
+ 
 delete from loinc_copra.loinc_copra_till_now where copra_id = 5 and loinc_num = '21840-4';
 delete from loinc_copra.loinc_copra_till_now where copra_id = 11 and loinc_num = '8289-1';
 delete from loinc_copra.loinc_copra_till_now where copra_id = 14 and loinc_num = '18833-4';
@@ -1124,6 +1121,13 @@ values
   (102179, '76297-1', 'Vigileo_SVI', 'Left ventricular Cardiac index'),
   (102187, '76297-1', 'VigilanceC_SVI', 'Left ventricular Cardiac index');
  
+insert into loinc_copra.loinc_copra_till_now
+values
+  (101441, '76530-5', 'Beatmung_Messung_Pmean', 'Mean pressure Respiratory system airway --on ventilator'),
+  (104187, '76530-5', 'Beatmung_MS_Zephyros_Pmean', 'Mean pressure Respiratory system airway --on ventilator'),
+  (107835, '76530-5', 'Beatmung_MS_Leoni_Pmean', 'Mean pressure Respiratory system airway --on ventilator')
+  ;
+ 
 
 update loinc_copra.loinc_copra_till_now 
 set loinc_num = '20562-5',
@@ -1140,14 +1144,60 @@ set loinc_num = '20562-5',
 "LONG_COMMON_NAME" = 'Left ventricular Stroke volume'
 where copra_id in (102874, 104758); 
 
--- --'76297-1', 'p-SVI', 'Left ventricular Cardiac index'
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '76530-5',
+"LONG_COMMON_NAME" = 'Mean pressure Respiratory system airway --on ventilator'
+where copra_id in (102873, 102878, 103317, 103429, 104772, 104249);
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '76334-2',
+"LONG_COMMON_NAME" = 'Inspiratory time setting Ventilator'
+where copra_id in (102887);
+
+insert into loinc_copra.loinc_copra_till_now
+values
+  (102903, '76264-1', 'Beatmung_MS_G5_InspFlow', 'Inspiratory gas flow Respiratory system airway'),
+  (100113, '76264-1', 'Beatmung_Anordnung_Flow', 'Inspiratory gas flow Respiratory system airway')
+ ;
+
+insert into loinc_copra.loinc_copra_till_now
+values
+  (102915, '60792-9', 'Beatmung_MS_G5_ExspFlow', 'Expiratory gas flow Respiratory system airway --on ventilator'),
+  (104792, '60792-9', 'Beatmung_MS_C2_ExspFlow', 'Expiratory gas flow Respiratory system airway --on ventilator')
+ ;
+
+insert into loinc_copra.loinc_copra_till_now
+values
+  (103087, '76275-7', 'Beatmung_ES_F120_Flow', 'Inspiratory flow setting Ventilator'),
+  (103268, '76275-7', 'Beatmung_ES_Evita2_InspFlow', 'Inspiratory flow setting Ventilator')
+ ;
+
+insert into loinc_copra.loinc_copra_till_now
+values
+  (103058, '83064-6', 'Nierenverfahren_ES_Multi_CalciumFiltrat', 'Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit'),
+  (104974, '83064-6', 'NEV_CRRT_ES_Multi_CalciumFiltrat', 'Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit'),
+  (104995, '83064-6', 'NEV_CRRT_VO_Multi_CalciumFiltrat', 'Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit')
+ ;
+
+insert into loinc_copra.loinc_copra_till_now
+values
+  (103078, '76154-4', 'Beatmung_MS_VisionA_Amplitude', 'Airway pressure delta --on ventilator'),
+  (102658, '76154-4', 'Beatmung_Messung_Amplitude', 'Airway pressure delta --on ventilator'),
+  (103215, '76154-4', 'Beatmung_MS_3100B_Amplitude', 'Airway pressure delta --on ventilator'),
+  (110839, '76154-4', 'P_Beatmung_MS_3100A_Amplitude', 'Airway pressure delta --on ventilator')
+ ;
 
 
 select * from loinc_copra.loinc_copra_till_now lctn 
-where copra_id > 102874
+where copra_id > 103090
 order by copra_id;
 
 
-select * from loinc_copra.loinc_copra_till_now lctn 
-where name ~ 'SV'; 
-  
+select * from copra.co6_config_variables ccv 
+where description  ~* 'dif|ampli'
+and parent in (1, 20)
+and co6_config_variabletypes_id in (3, 6, 5, 12)
+and id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
+
+select * from copra.co6_config_variables ccv
+where id = 103078;  
