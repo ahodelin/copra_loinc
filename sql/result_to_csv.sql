@@ -1075,7 +1075,7 @@ set loinc_num = '75987-8',
 "LONG_COMMON_NAME" = 'Venous blood temperature'
 where copra_id = 110924;
 
-select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'clear' and long_common_name not like '%Deprecated%' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'oxygen.+flow' and long_common_name not like '%Deprecated%' order by long_common_name ;
 
 
 select * from loinc_copra.loinc_copra_till_now lctn 
@@ -1194,10 +1194,13 @@ order by copra_id;
 
 
 select * from copra.co6_config_variables ccv 
-where description  ~* 'dif|ampli'
+where description ~* 'stof.+fl'
 and parent in (1, 20)
 and co6_config_variabletypes_id in (3, 6, 5, 12)
 and id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
 
 select * from copra.co6_config_variables ccv
-where id = 103078;  
+where id = 103091; 
+
+select * from loinc_copra.loinc_copra_till_now lctn 
+where "LONG_COMMON_NAME" ~* 'Oxygen'
