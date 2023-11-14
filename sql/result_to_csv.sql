@@ -1075,7 +1075,7 @@ set loinc_num = '75987-8',
 "LONG_COMMON_NAME" = 'Venous blood temperature'
 where copra_id = 110924;
 
-select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'oxygen.+flow' and long_common_name not like '%Deprecated%' order by long_common_name ;
+select loinc_num, long_common_name, shortname from loinc.loinc l where long_common_name ~* 'Respiratory rate' and long_common_name not like '%Deprecated%' order by long_common_name ;
 
 
 select * from loinc_copra.loinc_copra_till_now lctn 
@@ -1150,9 +1150,50 @@ set loinc_num = '76530-5',
 where copra_id in (102873, 102878, 103317, 103429, 104772, 104249);
 
 update loinc_copra.loinc_copra_till_now 
+set loinc_num = '71835-3',
+"LONG_COMMON_NAME" = 'Oxygen/Gas total [Pure volume fraction] Inhaled gas'
+where copra_id in (100100);
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '76530-5',
+"LONG_COMMON_NAME" = 'Mean pressure Respiratory system airway --on ventilator'
+where copra_id in (102873, 102878, 103317, 103429, 104772, 104249);
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '19839-0',
+"LONG_COMMON_NAME" = 'Breath rate spontaneous --on ventilator'
+where copra_id in (100270);
+
+update loinc_copra.loinc_copra_till_now 
 set loinc_num = '76334-2',
 "LONG_COMMON_NAME" = 'Inspiratory time setting Ventilator'
 where copra_id in (102887);
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '76248-4',
+"LONG_COMMON_NAME" = 'PEEP Respiratory system --on ventilator'
+where loinc_num = '20075-8';
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '33438-3',
+"LONG_COMMON_NAME" = 'Breath rate mechanical --on ventilator'
+where copra_id in (101442);
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '19839-0',
+"LONG_COMMON_NAME" = 'Breath rate spontaneous --on ventilator'
+where copra_id in (103324);
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '76009-0',
+"LONG_COMMON_NAME" = 'Inspired minute Volume during Mechanical ventilation'
+where copra_id in (104725);
+
+update loinc_copra.loinc_copra_till_now 
+set loinc_num = '76222-9',
+"LONG_COMMON_NAME" = 'Tidal volume Ventilator --on ventilator'
+where copra_id in (104726);
+
 
 insert into loinc_copra.loinc_copra_till_now
 values
@@ -1199,8 +1240,55 @@ and parent in (1, 20)
 and co6_config_variabletypes_id in (3, 6, 5, 12)
 and id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn);
 
-select * from copra.co6_config_variables ccv
-where id = 103091; 
+
 
 select * from loinc_copra.loinc_copra_till_now lctn 
-where "LONG_COMMON_NAME" ~* 'Oxygen'
+where "LONG_COMMON_NAME" ~* 'Oxygen';
+
+
+create table loinc_copra.copra_loinc_master(id bigint not null, loinc_num varchar not null);
+
+copy loinc_copra.copra_loinc_master from '/media/db/cdw_database/copra_loinc_master' delimiter E';' csv header;
+
+insert into loinc_copra.loinc_copra_till_now
+select clm.id, clm.loinc_num, ccv."name", l.long_common_name
+from loinc_copra.copra_loinc_master clm
+join loinc.loinc l  
+  on l.loinc_num = clm.loinc_num
+join copra.co6_config_variables ccv 
+  on ccv.id = clm.id
+where clm.id not in (select copra_id from loinc_copra.loinc_copra_till_now lctn)
+and clm.id not in (100108, 103091, 103214, 103296, 105006)
+order by clm.id
+;
+
+select * from copra.co6_config_variables ccv
+where id = 104730; 
+
+delete from loinc_copra.loinc_copra_till_now 
+where loinc_num = '5969-1',
+
+delete from loinc_copra.loinc_copra_till_now 
+where loinc_num = '35410-0' and copra_id = 107981;
+
+
+select copra_id, count(copra_id) from loinc_copra.loinc_copra_till_now lctn 
+group by copra_id 
+having count(copra_id) = 2
+order by copra_id;
+
+-- 103058
+-- 103058|83064-6  |Nierenverfahren_ES_Multi_CalciumFiltrat|Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit|
+select * from loinc_copra.loinc_copra_till_now lctn where copra_id = 103058;
+
+delete from loinc_copra.loinc_copra_till_now lctn where copra_id = 103058;
+insert into loinc_copra.loinc_copra_till_now 
+values (103058, '83064-6', 'Nierenverfahren_ES_Multi_CalciumFiltrat', 'Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit');
+
+copy
+(
+  select copra_id config_var_id, loinc_num, name, "LONG_COMMON_NAME" loinc_long_common_name 
+  from loinc_copra.loinc_copra_till_now lctn 
+  order by copra_id
+) to '/home/ahodelin/git_repos/copra_loinc/csv/copra2loinc_to_review.csv' csv delimiter E';' header;
+

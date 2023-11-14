@@ -79,6 +79,18 @@ CREATE TABLE loinc_copra.copra_description_words (
 ALTER TABLE loinc_copra.copra_description_words OWNER TO clinicuser;
 
 --
+-- Name: copra_loinc_master; Type: TABLE; Schema: loinc_copra; Owner: clinicuser
+--
+
+CREATE TABLE loinc_copra.copra_loinc_master (
+    id bigint NOT NULL,
+    loinc_num character varying NOT NULL
+);
+
+
+ALTER TABLE loinc_copra.copra_loinc_master OWNER TO clinicuser;
+
+--
 -- Name: from_script; Type: TABLE; Schema: loinc_copra; Owner: clinicuser
 --
 
@@ -9651,6 +9663,78 @@ COPY loinc_copra.copra_description_words (id, copra_description_words, descripti
 
 
 --
+-- Data for Name: copra_loinc_master; Type: TABLE DATA; Schema: loinc_copra; Owner: clinicuser
+--
+
+COPY loinc_copra.copra_loinc_master (id, loinc_num) FROM stdin;
+6	29463-7
+7	8302-2
+11	9843-4
+1266	8867-4
+1267	9279-1
+1269	60985-9
+100088	60956-0
+100098	76009-0
+100100	71835-3
+100102	76248-4
+100105	71835-3
+100108	33438-3
+100270	19839-0
+100275	76248-4
+100300	76531-3
+101322	29463-7
+101442	33438-3
+101444	76248-4
+102010	59408-5
+102018	75994-4
+102030	20562-5
+102036	76297-1
+102039	75919-1
+102051	8741-1
+102179	76297-1
+102184	8741-1
+102408	20562-5
+102873	76530-5
+102874	20562-5
+102878	76530-5
+102887	76334-2
+102903	76275-7
+102915	60792-9
+102926	75931-6
+103035	33438-3
+103036	19839-0
+103036	19840-8
+103058	83064-6
+103078	76154-4
+103091	19941-4
+103214	71835-3
+103216	71835-3
+103296	71835-3
+103297	76334-2
+103314	71835-3
+103318	76248-4
+103320	76009-0
+103323	33438-3
+103324	19839-0
+103324	19840-8
+103817	3147-6
+103943	76248-4
+104249	76530-5
+104264	76248-4
+104722	76248-4
+104725	76009-0
+104726	76222-9
+104727	33438-3
+104730	71835-3
+104758	20562-5
+104974	83064-6
+105006	83064-6
+106784	19941-4
+110933	8329-5
+\.
+
+
+--
 -- Data for Name: from_script; Type: TABLE DATA; Schema: loinc_copra; Owner: clinicuser
 --
 
@@ -9895,17 +9979,11 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 100093	8478-0	ABP_1	Mittlerer Blutdruck
 100093	8480-6	ABP_1	Systolischer Blutdruck
 100096	75958-9	Beatmung_Messung_VTeMl	Tidal volume expired Respiratory system airway
-100100	3150-0	Beatmung_Messung_FiO2	Inhaled oxygen concentration
-100102	20075-8	Beatmung_Einstellung_PEEP	PEEP Respiratory system
 100103	75931-6	Beatmung_Einstellung_I:E	Inspiration/Expiration time Ratio
-100111	20075-8	Beatmung_Anordnung_PEEP	PEEP Respiratory system
 100112	75931-6	Beatmung_Anordnung_I:E	Inspiration/Expiration time Ratio
-100258	20075-8	Beatmung_Einstellung_intermPEEP	PEEP Respiratory system
-100270	76528-9	Beatmung_Messung_AFSpontan	Breath rate spontaneous
 101322	29463-7	Patient_AufnGewicht	Körpergewicht
 101423	33022-5	CO2	Kohlenstoffdioxid [Partialdruck] in Kapillarblut mit transkutanem CO2-Monitoring
 101433	60826-5	Beatmung_Messung_Compliance	Lung compliance
-101442	9279-1	Beatmung_Messung_AF	Atemfrequenz
 101444	38199-6	Beatmung_Messung_IntrinsicPEEP	Intrinsic PEEP Respiratory system
 101447	60829-9	Beatmung_Messung_Pplateau	Pressure.plateau Respiratory system airway
 101696	18725-2	Mikrobio	Mikrobiologie
@@ -9924,7 +10002,6 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 102035	75919-1	PCCI	Left ventricular Cardiac index
 102037	8831-0	p-SVR	Systemic vascular Resistance
 102038	8837-7	p-SVRI	Systemic vascular Resistance index
-102050	5969-1	PAP	Plasmin-Plasmininhibitor-Komplex [Masse/Volumen] in thrombozytenarmem Plasma mit Immunoassay
 102050	76284-9	PAP	Pulmonary artery Blood pressure
 102053	76285-6	PC	Pulmonary capillary Blood pressure
 102158	8310-5	Untersuchung_Status_Koerpertemperatur	Körpertemperatur
@@ -9943,6 +10020,12 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 9	49051-6	COPRA_Patient_Schwangerschaftswoche	Gestational age in weeks
 100037	49051-6	akt._Schwangerschaftwoche	Gestational age in weeks
 101473	LP35925-4	Patient_BMI	Body mass index
+100100	71835-3	Beatmung_Messung_FiO2	Oxygen/Gas total [Pure volume fraction] Inhaled gas
+100270	19839-0	Beatmung_Messung_AFSpontan	Breath rate spontaneous --on ventilator
+100102	76248-4	Beatmung_Einstellung_PEEP	PEEP Respiratory system --on ventilator
+100111	76248-4	Beatmung_Anordnung_PEEP	PEEP Respiratory system --on ventilator
+100258	76248-4	Beatmung_Einstellung_intermPEEP	PEEP Respiratory system --on ventilator
+101442	33438-3	Beatmung_Messung_AF	Breath rate mechanical --on ventilator
 102190	8837-7	VigilanceC_SVRI	Systemic vascular Resistance index
 102191	8828-6	VigilanceC_PVR	Pulmonary vascular Resistance
 102192	8834-4	VigilanceC_PVRI	Pulmonary vascular Resistance index
@@ -9958,7 +10041,6 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 102788	9274-2	Score_Apgar	5-min-Apgar-Score
 102858	35410-0	Beatmung_Einstellung_CPAPcmH2O	Continuous positive airway pressure Respiratory system
 102860	35410-0	Beatmung_Messung_CPAPcmH2O	Continuous positive airway pressure Respiratory system
-102893	20075-8	Beatmung_ES_G5_PeepCPAP	PEEP Respiratory system
 102898	75931-6	Beatmung_ES_G5_IEVerhaeltnis	Inspiration/Expiration time Ratio
 102902	75958-9	Beatmung_MS_G5_VTE	Tidal volume expired Respiratory system airway
 102907	60828-1	Beatmung_MS_G5_Cstat	Compliance.static Lung
@@ -9966,7 +10048,6 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 103010	8462-4	Nierenverfahren_MS_Multi_artDruck	Diastolischer Blutdruck
 103010	8478-0	Nierenverfahren_MS_Multi_artDruck	Mittlerer Blutdruck
 103010	8480-6	Nierenverfahren_MS_Multi_artDruck	Systolischer Blutdruck
-103036	76528-9	Beatmung_MS_G5_fspontan	Breath rate spontaneous
 103043	99712-2	Nierenverfahren_VO_Multi_Dialysat	Dialysate flow rate Renal replacement therapy circuit
 103045	99712-2	Nierenverfahren_VO_BM25_Dialysat	Dialysate flow rate Renal replacement therapy circuit
 103054	46093-1	Nierenverfahren_VO_Multi_Calcium	Calcium.ionisiert [Mol/Volumen] in Dialysat
@@ -9978,7 +10059,6 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 103135	29304-3	Nierenverfahren_VO_Bolus	Abgegebene Medikation
 103136	29304-3	Nierenverfahren_Doku_Bolus	Abgegebene Medikation
 103139	35410-0	Beatmung_ES_VisionA_PEEPCPAP	Continuous positive airway pressure Respiratory system
-103142	20075-8	Beatmung_MS_VisionA_PEEP	PEEP Respiratory system
 103160	12514-6	Nierenverfahren_ES_4008HS_Bicarbonat	Bicarbonat [Mol/Volumen] in Dialysat
 103191	12514-6	Nierenverfahren_ES_4008onl_Bicarbonat	Bicarbonat [Mol/Volumen] in Dialysat
 103218	47842-0	Nierenverfahren_VO_4008onl_Dialysezeit	Sammelzeitraum von Dialysat
@@ -9988,33 +10068,31 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 103265	9279-1	Beatmung_MS_VisionA_BreathRate	Atemfrequenz
 103266	75931-6	Beatmung_MS_VisionA_IEVerhaeltnis	Inspiration/Expiration time Ratio
 103270	75931-6	Beatmung_ES_Evita2_VerhaeltnisTiTe	Inspiration/Expiration time Ratio
-103275	20075-8	Beatmung_ES_Evita2_PEEP	PEEP Respiratory system
 103276	35410-0	Beatmung_ES_Evita2_CPAP	Continuous positive airway pressure Respiratory system
 103281	3150-0	Beatmung_MS_Evita2_O2Konzentration	Inhalierte Sauerstoffkonzentration
 103283	60829-9	Beatmung_MS_Evita2_Pplat	Pressure.plateau Respiratory system airway
-103284	20075-8	Beatmung_MS_Evita2_Ppeep	PEEP Respiratory system
 103286	75958-9	Beatmung_MS_Evita2_Vte	Tidal volume expired Respiratory system airway
 103287	9279-1	Beatmung_MS_Evita2_frequenz	Atemfrequenz
 103288	75946-4	Beatmung_MS_Evita2_Resistance	Airway resistance
 103289	60826-5	Beatmung_MS_Evita2_Compliance	Lung compliance
 103291	76528-9	Beatmung_MS_Evita2_frequenzspon	Breath rate spontaneous
 103292	35410-0	Beatmung_MS_Evita2_CPAP	Continuous positive airway pressure Respiratory system
-103301	20075-8	Beatmung_ES_Evita4_PEEP	PEEP Respiratory system
-103318	20075-8	Beatmung_MS_Evita4_PEEP	PEEP Respiratory system
-103324	76528-9	Beatmung_MS_Evita4_fspn	Breath rate spontaneous
 103326	75958-9	Beatmung_MS_Evita4_Vte	Tidal volume expired Respiratory system airway
 103327	76221-1	Beatmung_MS_Evita4_Vt	Tidal volume.inspired
 103328	75946-4	Beatmung_MS_Evita4_Resistance	Airway resistance
 103329	60826-5	Beatmung_MS_Evita4_Compliance	Lung compliance
 103330	38199-6	Beatmung_MS_Evita4_PEEPi	Intrinsic PEEP Respiratory system
-103411	20075-8	Beatmung_ES_Avea_PEEP	PEEP Respiratory system
-103425	20075-8	Beatmung_MS_Avea_PEEP	PEEP Respiratory system
 103430	9279-1	Beatmung_MS_Avea_Frequenz	Atemfrequenz
 103432	20116-0	Beatmung_MS_Avea_SpontVte	Tidal volume.spontaneous --on ventilator
 103433	76221-1	Beatmung_MS_Avea_Vti	Tidal volume.inspired
 103435	76528-9	Beatmung_MS_Avea_SpontAF	Breath rate spontaneous
 103124	99712-2	Nierenverfahren_ES_BM25_Dialysat	Dialysate flow rate Renal replacement therapy circuit
 102873	76530-5	Beatmung_ES_VisionA_MAP	Mean pressure Respiratory system airway --on ventilator
+102893	76248-4	Beatmung_ES_G5_PeepCPAP	PEEP Respiratory system --on ventilator
+103142	76248-4	Beatmung_MS_VisionA_PEEP	PEEP Respiratory system --on ventilator
+103275	76248-4	Beatmung_ES_Evita2_PEEP	PEEP Respiratory system --on ventilator
+103036	19839-0	Beatmung_MS_G5_fspontan	Breath rate spontaneous --on ventilator
+103324	19839-0	Beatmung_MS_Evita4_fspn	Breath rate spontaneous --on ventilator
 103438	60829-9	Beatmung_MS_Avea_Pplat	Pressure.plateau Respiratory system airway
 103439	3148-4	Beatmung_MS_Avea_FiO2	Sauerstoff [Partialdruck] in Gas
 103440	60828-1	Beatmung_MS_Avea_Cstat	Compliance.static Lung
@@ -10022,14 +10100,10 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104235	60828-1	Beatmung_MS_Servoi_Cstatic	Compliance.static Lung
 104239	75958-9	Beatmung_MS_Servoi_Vte	Tidal volume expired Respiratory system airway
 104240	76221-1	Beatmung_MS_Servoi_Vti	Tidal volume.inspired
-104264	20075-8	Beatmung_ES_Servoi_PEEP	PEEP Respiratory system
 104274	75931-6	Beatmung_ES_Servoi_I_E	Inspiration/Expiration time Ratio
-104708	20075-8	Beatmung_ES_Pallas_PEEP	PEEP Respiratory system
 104721	60829-9	Beatmung_MS_Pallas_Pplat	Pressure.plateau Respiratory system airway
-104722	20075-8	Beatmung_MS_Pallas_PEEP	PEEP Respiratory system
 104727	9279-1	Beatmung_MS_Pallas_Frequenz	Atemfrequenz
 104730	3150-0	Beatmung_MS_Pallas_O2_insp	Inhalierte Sauerstoffkonzentration
-105078	20075-8	Beatmung_ES_C2_PEEP_CPAP_Ptief	PEEP Respiratory system
 105078	35410-0	Beatmung_ES_C2_PEEP_CPAP_Ptief	Continuous positive airway pressure Respiratory system
 106522	8691-8	Fall_Anamnese_Auslandsaufenthalt_Ja	Reiseanamnese
 106649	35090-0	Fall_Anamnese_Auslandsaufenthalt_unbekannt	Anamnese
@@ -10038,8 +10112,6 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 107876	75931-6	Beatmung_MS_T1_IEVerhaeltnis	Inspiration/Expiration time Ratio
 107886	60829-9	Beatmung_MS_T1_Pplateau	Pressure.plateau Respiratory system airway
 107893	75958-9	Beatmung_MS_T1_VTE	Tidal volume expired Respiratory system airway
-107981	20075-8	P_Beatmung_ES_C3_PEEP_CPAP_Ptief	PEEP Respiratory system
-107981	35410-0	P_Beatmung_ES_C3_PEEP_CPAP_Ptief	Continuous positive airway pressure Respiratory system
 108018	76528-9	P_Beatmung_MS_C3_fSpontan	Breath rate spontaneous
 108023	60829-9	P_Beatmung_MS_C3_Pplateau	Pressure.plateau Respiratory system airway
 108036	60828-1	P_Beatmung_MS_C3_Cstat	Compliance.static Lung
@@ -10069,7 +10141,6 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 103421	LP101940-7	Beatmung_MS_Avea_Vte	Tidal volume
 103431	LP101940-7	Beatmung_MS_Avea_MandVte	Tidal volume
 104284	LP101940-7	Beatmung_ES_Servoi_Vt	Tidal volume
-104726	LP101940-7	Beatmung_MS_Pallas_Vt	Tidal volume
 103426	75931-6	Beatmung_MS_Avea_IE	Inspiration/Expiration time Ratio
 103423	20140-0	Beatmung_MS_Avea_Ve	Volume expired
 103034	76008-2	Beatmung_MS_G5_ExpMinVol	Expired minute Volume during Mechanical ventilation
@@ -10093,6 +10164,8 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 102874	20562-5	Beatmung_ES_VisionA_Schlagvolumen	Left ventricular Stroke volume
 104772	76530-5	Beatmung_MS_Pallas_Pmean	Mean pressure Respiratory system airway --on ventilator
 102887	76334-2	Beatmung_ES_G5_Ti	Inspiratory time setting Ventilator
+104264	76248-4	Beatmung_ES_Servoi_PEEP	PEEP Respiratory system --on ventilator
+104726	76222-9	Beatmung_MS_Pallas_Vt	Tidal volume Ventilator --on ventilator
 106640	60740-8	Beatmung_ES_T1_Ti	Inspiration [Time] Respiratory system
 107891	60740-8	Beatmung_MS_T1_TI	Inspiration [Time] Respiratory system
 102909	60739-0	Beatmung_MS_G5_RCexsp	Expiration [Time] Respiratory system
@@ -10104,10 +10177,8 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104231	80341-1	Beatmung_MS_Servoi_WOBp	Respiratory effort
 104245	9279-1	Beatmung_MS_Servoi_AF	Atemfrequenz
 104247	35410-0	Beatmung_MS_Servoi_CPAP	Continuous positive airway pressure Respiratory system
-104248	20075-8	Beatmung_MS_Servoi_PEEP	PEEP Respiratory system
 104250	75943-1	Beatmung_MS_Servoi_Pplat	Airway pressure --during respiratory pause
 104283	9279-1	Beatmung_ES_Servoi_Frequenz	Atemfrequenz
-104725	33425-0	Beatmung_MS_Pallas_MV	Minute volume setting Ventilator
 104733	61021-2	Beatmung_MS_Pallas_Halothan_insp	Halothane [VFr/PPres] Airway adaptor --during inspiration
 104734	61020-4	Beatmung_MS_Pallas_Halothan_exsp	Halothane [VFr/PPres] Airway adaptor --during expiration
 104735	60885-1	Beatmung_MS_Pallas_Enfluran_insp	Enflurane [VFr/PPres] Airway adaptor --during inspiration
@@ -10166,6 +10237,8 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 102179	76297-1	Vigileo_SVI	Left ventricular Cardiac index
 102187	76297-1	VigilanceC_SVI	Left ventricular Cardiac index
 102186	20562-5	VigilanceC_SV	Left ventricular Stroke volume
+104248	76248-4	Beatmung_MS_Servoi_PEEP	PEEP Respiratory system --on ventilator
+104725	76009-0	Beatmung_MS_Pallas_MV	Inspired minute Volume during Mechanical ventilation
 102408	20562-5	p-SV	Left ventricular Stroke volume
 102184	8741-1	VigilanceC_HZV	Left ventricular Cardiac output
 104758	20562-5	Schlagvolumen	Left ventricular Stroke volume
@@ -10182,14 +10255,34 @@ COPY loinc_copra.loinc_copra_till_now (copra_id, loinc_num, name, "LONG_COMMON_N
 104792	60792-9	Beatmung_MS_C2_ExspFlow	Expiratory gas flow Respiratory system airway --on ventilator
 103087	76275-7	Beatmung_ES_F120_Flow	Inspiratory flow setting Ventilator
 103268	76275-7	Beatmung_ES_Evita2_InspFlow	Inspiratory flow setting Ventilator
-103058	83064-6	Nierenverfahren_ES_Multi_CalciumFiltrat	Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit
-103058	83064-6	Nierenverfahren_ES_Multi_CalciumFiltrat	Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit
 104974	83064-6	NEV_CRRT_ES_Multi_CalciumFiltrat	Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit
 104995	83064-6	NEV_CRRT_VO_Multi_CalciumFiltrat	Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit
 103078	76154-4	Beatmung_MS_VisionA_Amplitude	Airway pressure delta --on ventilator
 102658	76154-4	Beatmung_Messung_Amplitude	Airway pressure delta --on ventilator
 103215	76154-4	Beatmung_MS_3100B_Amplitude	Airway pressure delta --on ventilator
 110839	76154-4	P_Beatmung_MS_3100A_Amplitude	Airway pressure delta --on ventilator
+103284	76248-4	Beatmung_MS_Evita2_Ppeep	PEEP Respiratory system --on ventilator
+103301	76248-4	Beatmung_ES_Evita4_PEEP	PEEP Respiratory system --on ventilator
+103318	76248-4	Beatmung_MS_Evita4_PEEP	PEEP Respiratory system --on ventilator
+103411	76248-4	Beatmung_ES_Avea_PEEP	PEEP Respiratory system --on ventilator
+103425	76248-4	Beatmung_MS_Avea_PEEP	PEEP Respiratory system --on ventilator
+104708	76248-4	Beatmung_ES_Pallas_PEEP	PEEP Respiratory system --on ventilator
+104722	76248-4	Beatmung_MS_Pallas_PEEP	PEEP Respiratory system --on ventilator
+105078	76248-4	Beatmung_ES_C2_PEEP_CPAP_Ptief	PEEP Respiratory system --on ventilator
+107981	76248-4	P_Beatmung_ES_C3_PEEP_CPAP_Ptief	PEEP Respiratory system --on ventilator
+100105	71835-3	Beatmung_Einstellung_FiO2	Oxygen/Gas total [Pure volume fraction] Inhaled gas
+100275	76248-4	Beatmung_Messung_PEEP	PEEP Respiratory system --on ventilator
+102039	75919-1	dPmax	Left ventricular Cardiac index
+103035	33438-3	Beatmung_MS_G5_ftotal	Breath rate mechanical --on ventilator
+103216	71835-3	Beatmung_MS_3100B_O2Konzentration	Oxygen/Gas total [Pure volume fraction] Inhaled gas
+103297	76334-2	Beatmung_ES_Evita4_Tinsp	Inspiratory time setting Ventilator
+103314	71835-3	Beatmung_MS_Evita4_FiO2	Oxygen/Gas total [Pure volume fraction] Inhaled gas
+103320	76009-0	Beatmung_MS_Evita4_MV	Inspired minute Volume during Mechanical ventilation
+103323	33438-3	Beatmung_MS_Evita4_frequenz	Breath rate mechanical --on ventilator
+103817	3147-6	PtiO2Druck	Oxygen [Partial pressure] in Exhaled gas
+103943	76248-4	Beatmung_ES_Heimbeatmung_Peep	PEEP Respiratory system --on ventilator
+106784	19941-4	Beatmung_ES_Optiflow_O2Flow	Oxygen gas flow Oxygen delivery system
+103058	83064-6	Nierenverfahren_ES_Multi_CalciumFiltrat	Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit
 \.
 
 

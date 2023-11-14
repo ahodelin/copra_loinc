@@ -1,0 +1,339 @@
+config_var_id;loinc_num;name;loinc_long_common_name
+4;21112-8;Patient_Geburtsdatum;Geburtsdatum
+5;76689-9;Patient_Geschlecht;Geschlecht, zugewiesen bei Geburt
+6;29463-7;Patient_Gewicht;Körpergewicht
+7;8302-2;Patient_Groesse;Körpergröße
+9;49051-6;COPRA_Patient_Schwangerschaftswoche;Gestational age in weeks
+11;9843-4;COPRA_Patient_Kopfumfang;Kopfumfang okzipital-frontal
+14;8339-4;COPRA_Patient_Geburtsgewicht;Geburtsgewicht, gemessen
+22;55128-3;Fall_Entlassung;Entlassanordnung
+30;18776-5;Behandlung;Behandlungsplan - Notiz
+100;11502-2;Laborwert;Laborbericht
+670;80391-6;COPRA_Pflege_Fall;Pflegegrad [Typ]
+1266;8867-4;HF;Herzfrequenz
+1267;9279-1;AF;Atemfrequenz
+1268;8865-8;Puls;Pulse intensity by palpation
+1268;44974-4;Puls;Pulse intensity of Unspecified artery palpation
+1269;60985-9;ZVD;Central venous pressure (CVP)
+1270;8310-5;T_K;Körpertemperatur
+1271;8310-5;T_K2;Körpertemperatur
+1272;20564-1;SO2;Sauerstoffsättigung in Blut
+1273;2708-6;SaO2;Sauerstoffsättigung in arteriellem Blut
+1274;2711-0;SvO2;Sauerstoffsättigung in venösem Blut
+1275;76533-9;NBP;Blood pressure by Noninvasive
+1276;8462-4;ABP;Diastolischer Blutdruck
+1276;8478-0;ABP;Mittlerer Blutdruck
+1276;8480-6;ABP;Systolischer Blutdruck
+1278;29548-5;Diagnose;Diagnose - Freitext
+1278;29308-4;Diagnose;Diagnose
+100037;49051-6;akt._Schwangerschaftwoche;Gestational age in weeks
+100072;75919-1;CI;Left ventricular Cardiac index
+100073;8837-7;SVRI;Systemic vascular Resistance index
+100074;8831-0;SVR;Systemic vascular Resistance
+100086;61017-0;CPP;Cerebral perfusion pressure
+100088;60956-0;ICP;Intracranial pressure (ICP)
+100093;8478-0;ABP_1;Mittlerer Blutdruck
+100093;8462-4;ABP_1;Diastolischer Blutdruck
+100093;8480-6;ABP_1;Systolischer Blutdruck
+100096;75958-9;Beatmung_Messung_VTeMl;Tidal volume expired Respiratory system airway
+100098;76009-0;Beatmung_Messung_MV;Inspired minute Volume during Mechanical ventilation
+100100;71835-3;Beatmung_Messung_FiO2;Oxygen/Gas total [Pure volume fraction] Inhaled gas
+100101;LP101940-7;Beatmung_Einstellung_VT;Tidal volume
+100102;76248-4;Beatmung_Einstellung_PEEP;PEEP Respiratory system --on ventilator
+100103;75931-6;Beatmung_Einstellung_I:E;Inspiration/Expiration time Ratio
+100105;71835-3;Beatmung_Einstellung_FiO2;Oxygen/Gas total [Pure volume fraction] Inhaled gas
+100111;76248-4;Beatmung_Anordnung_PEEP;PEEP Respiratory system --on ventilator
+100112;75931-6;Beatmung_Anordnung_I:E;Inspiration/Expiration time Ratio
+100113;76264-1;Beatmung_Anordnung_Flow;Inspiratory gas flow Respiratory system airway
+100258;76248-4;Beatmung_Einstellung_intermPEEP;PEEP Respiratory system --on ventilator
+100270;19839-0;Beatmung_Messung_AFSpontan;Breath rate spontaneous --on ventilator
+100275;76248-4;Beatmung_Messung_PEEP;PEEP Respiratory system --on ventilator
+100290;75931-6;Beatmung_Messung_InspirationszeitI:E;Inspiration/Expiration time Ratio
+100300;76531-3;Beatmung_Messung_Pmax;Pressure.max Respiratory system airway --on ventilator
+101322;29463-7;Patient_AufnGewicht;Körpergewicht
+101423;33022-5;CO2;Kohlenstoffdioxid [Partialdruck] in Kapillarblut mit transkutanem CO2-Monitoring
+101433;60826-5;Beatmung_Messung_Compliance;Lung compliance
+101441;76530-5;Beatmung_Messung_Pmean;Mean pressure Respiratory system airway --on ventilator
+101442;33438-3;Beatmung_Messung_AF;Breath rate mechanical --on ventilator
+101444;38199-6;Beatmung_Messung_IntrinsicPEEP;Intrinsic PEEP Respiratory system
+101447;60829-9;Beatmung_Messung_Pplateau;Pressure.plateau Respiratory system airway
+101473;LP35925-4;Patient_BMI;Body mass index
+101696;18725-2;Mikrobio;Mikrobiologie
+101763;9843-4;Patient_Kopfumfang;Kopfumfang okzipital-frontal
+102010;59408-5;SpO2;Sauerstoffsättigung in arteriellem Blut mit Pulsoximetrie
+102012;96976-6;etCO2;Carbon dioxide end tidal baseline - sub-maximal exercise delta
+102016;8400-4;RAP;Right atrial Intrachamber mean pressure
+102018;75994-4;PWP;Pulmonary artery wedge pressure
+102019;8414-5;PAM;Pulmonary artery Mean blood pressure
+102021;LP19466-9;CO;Cardiac output
+102023;8861-7;LVSA;Left ventriclar Stroke work
+102024;76297-1;LVSAI;Left ventricular Stroke volume index
+102028;8862-5;RVSA;Right ventricular Stroke work
+102029;8864-1;RVSAI;Right ventricular Stroke work index
+102030;20562-5;SV;Left ventricular Stroke volume
+102032;8828-6;TPR;Pulmonary vascular Resistance
+102033;60975-0;TVR;Vascular resistance
+102035;75919-1;PCCI;Left ventricular Cardiac index
+102036;76297-1;p-SVI;Left ventricular Cardiac index
+102037;8831-0;p-SVR;Systemic vascular Resistance
+102038;8837-7;p-SVRI;Systemic vascular Resistance index
+102039;75919-1;dPmax;Left ventricular Cardiac index
+102040;LP19466-9;p-CO;Cardiac output
+102050;76284-9;PAP;Pulmonary artery Blood pressure
+102051;8741-1;HZV;Left ventricular Cardiac output
+102053;76285-6;PC;Pulmonary capillary Blood pressure
+102061;75931-6;Beatmung_Messung_ExpirationszeitI:E;Inspiration/Expiration time Ratio
+102069;75931-6;Beatmung_Messung_I:EVerhaeltnisI;Inspiration/Expiration time Ratio
+102070;75931-6;Beatmung_Messung_I:EVerhaeltnisE;Inspiration/Expiration time Ratio
+102158;8310-5;Untersuchung_Status_Koerpertemperatur;Körpertemperatur
+102162;8462-4;PICCO_ABP;Diastolischer Blutdruck
+102162;8478-0;PICCO_ABP;Mittlerer Blutdruck
+102162;8480-6;PICCO_ABP;Systolischer Blutdruck
+102163;60985-9;PICCO_ZVD;Central venous pressure (CVP)
+102164;8831-0;PICCO_SVR;Systemic vascular Resistance
+102165;8837-7;PICCO_SVRI;Systemic vascular Resistance index
+102166;76285-6;PICCO_PC;Pulmonary capillary Blood pressure
+102167;75919-1;PICCO_HI;Left ventricular Cardiac index
+102168;8867-4;PICCO_HF;Herzfrequenz
+102173;8741-1;PICCO_HZV;Left ventricular Cardiac output
+102178;75919-1;Vigileo_COCI;Left ventricular Cardiac index
+102179;76297-1;Vigileo_SVI;Left ventricular Cardiac index
+102184;8741-1;VigilanceC_HZV;Left ventricular Cardiac output
+102185;75919-1;VigilanceC_CI;Left ventricular Cardiac index
+102186;20562-5;VigilanceC_SV;Left ventricular Stroke volume
+102187;76297-1;VigilanceC_SVI;Left ventricular Cardiac index
+102189;8831-0;VigilanceC_SVR;Systemic vascular Resistance
+102190;8837-7;VigilanceC_SVRI;Systemic vascular Resistance index
+102191;8828-6;VigilanceC_PVR;Pulmonary vascular Resistance
+102192;8834-4;VigilanceC_PVRI;Pulmonary vascular Resistance index
+102408;20562-5;p-SV;Left ventricular Stroke volume
+102529;75931-6;Beatmung_Einstellung_I:EInsp;Inspiration/Expiration time Ratio
+102530;75931-6;Beatmung_Einstellung_I:EExsp;Inspiration/Expiration time Ratio
+102535;75919-1;p-CI;Left ventricular Cardiac index
+102597;12514-6;Nierenersatzverfahren_Einstell_Bicarbonat;Bicarbonat [Mol/Volumen] in Dialysat
+102658;76154-4;Beatmung_Messung_Amplitude;Airway pressure delta --on ventilator
+102677;12514-6;Nierenersatzverfahren_VO_Bicarbonat;Bicarbonat [Mol/Volumen] in Dialysat
+102697;2949-6;Nierenersatzverfahren_Einstell_BasisNatrium;Natrium [Mol/Volumen] in Dialysat
+102721;1998-4;Nierenersatzverfahren_Einstell_Calcium;Calcium [Mol/Volumen] in Dialysat
+102743;1998-4;Nierenersatzverfahren_VO_Calcium;Calcium [Mol/Volumen] in Dialysat
+102749;1998-4;Nierenersatzverfahren_Einstell_CalciumLoesung;Calcium [Mol/Volumen] in Dialysat
+102763;1998-4;Nierenersatzverfahren_VO_CalciumLoesung;Calcium [Mol/Volumen] in Dialysat
+102788;9271-8;Score_Apgar;10-min-Apgar-Score
+102788;9274-2;Score_Apgar;5-min-Apgar-Score
+102858;35410-0;Beatmung_Einstellung_CPAPcmH2O;Continuous positive airway pressure Respiratory system
+102860;35410-0;Beatmung_Messung_CPAPcmH2O;Continuous positive airway pressure Respiratory system
+102873;76530-5;Beatmung_ES_VisionA_MAP;Mean pressure Respiratory system airway --on ventilator
+102874;20562-5;Beatmung_ES_VisionA_Schlagvolumen;Left ventricular Stroke volume
+102878;76530-5;Beatmung_MS_VisionA_MAP;Mean pressure Respiratory system airway --on ventilator
+102887;76334-2;Beatmung_ES_G5_Ti;Inspiratory time setting Ventilator
+102893;76248-4;Beatmung_ES_G5_PeepCPAP;PEEP Respiratory system --on ventilator
+102898;75931-6;Beatmung_ES_G5_IEVerhaeltnis;Inspiration/Expiration time Ratio
+102902;75958-9;Beatmung_MS_G5_VTE;Tidal volume expired Respiratory system airway
+102903;76264-1;Beatmung_MS_G5_InspFlow;Inspiratory gas flow Respiratory system airway
+102904;60740-8;Beatmung_MS_G5_TI;Inspiration [Time] Respiratory system
+102907;60828-1;Beatmung_MS_G5_Cstat;Compliance.static Lung
+102908;60740-8;Beatmung_MS_G5_RCinsp;Inspiration [Time] Respiratory system
+102909;60739-0;Beatmung_MS_G5_RCexsp;Expiration [Time] Respiratory system
+102915;60792-9;Beatmung_MS_G5_ExspFlow;Expiratory gas flow Respiratory system airway --on ventilator
+102916;60739-0;Beatmung_MS_G5_TE;Expiration [Time] Respiratory system
+102926;75931-6;Beatmung_MS_G5_IEVerhaeltnis;Inspiration/Expiration time Ratio
+103010;8462-4;Nierenverfahren_MS_Multi_artDruck;Diastolischer Blutdruck
+103010;8478-0;Nierenverfahren_MS_Multi_artDruck;Mittlerer Blutdruck
+103010;8480-6;Nierenverfahren_MS_Multi_artDruck;Systolischer Blutdruck
+103034;76008-2;Beatmung_MS_G5_ExpMinVol;Expired minute Volume during Mechanical ventilation
+103035;33438-3;Beatmung_MS_G5_ftotal;Breath rate mechanical --on ventilator
+103036;19839-0;Beatmung_MS_G5_fspontan;Breath rate spontaneous --on ventilator
+103043;99712-2;Nierenverfahren_VO_Multi_Dialysat;Dialysate flow rate Renal replacement therapy circuit
+103045;99712-2;Nierenverfahren_VO_BM25_Dialysat;Dialysate flow rate Renal replacement therapy circuit
+103054;46093-1;Nierenverfahren_VO_Multi_Calcium;Calcium.ionisiert [Mol/Volumen] in Dialysat
+103058;83064-6;Nierenverfahren_ES_Multi_CalciumFiltrat;Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit
+103078;76154-4;Beatmung_MS_VisionA_Amplitude;Airway pressure delta --on ventilator
+103079;19211-2;Beatmung_MS_VisionA_O2Konzentration;Sauerstoff [Partialdruck] in gemischt-venösem Blut
+103084;LP101940-7;Beatmung_MS_VisionA_Tidalvolumen;Tidal volume
+103086;35410-0;Beatmung_ES_F120_CPAP;Continuous positive airway pressure Respiratory system
+103087;76275-7;Beatmung_ES_F120_Flow;Inspiratory flow setting Ventilator
+103124;99712-2;Nierenverfahren_ES_BM25_Dialysat;Dialysate flow rate Renal replacement therapy circuit
+103125;35410-0;Beatmung_ES_BiPAPV_CPAP;Continuous positive airway pressure Respiratory system
+103127;9279-1;Beatmung_MS_BiPAPV_AF;Atemfrequenz
+103128;35410-0;Beatmung_MS_BiPAPV_CPAP;Continuous positive airway pressure Respiratory system
+103132;LP101940-7;Beatmung_MS_BiPAPV_Vt;Tidal volume
+103135;29304-3;Nierenverfahren_VO_Bolus;Abgegebene Medikation
+103136;29304-3;Nierenverfahren_Doku_Bolus;Abgegebene Medikation
+103139;35410-0;Beatmung_ES_VisionA_PEEPCPAP;Continuous positive airway pressure Respiratory system
+103142;76248-4;Beatmung_MS_VisionA_PEEP;PEEP Respiratory system --on ventilator
+103160;12514-6;Nierenverfahren_ES_4008HS_Bicarbonat;Bicarbonat [Mol/Volumen] in Dialysat
+103191;12514-6;Nierenverfahren_ES_4008onl_Bicarbonat;Bicarbonat [Mol/Volumen] in Dialysat
+103215;76154-4;Beatmung_MS_3100B_Amplitude;Airway pressure delta --on ventilator
+103216;71835-3;Beatmung_MS_3100B_O2Konzentration;Oxygen/Gas total [Pure volume fraction] Inhaled gas
+103218;47842-0;Nierenverfahren_VO_4008onl_Dialysezeit;Sammelzeitraum von Dialysat
+103243;12514-6;Nierenverfahren_VO_4008HS_Bicarbonat;Bicarbonat [Mol/Volumen] in Dialysat
+103260;60740-8;Beatmung_ES_VisionA_Ti;Inspiration [Time] Respiratory system
+103262;60829-9;Beatmung_MS_VisionA_Plateau;Pressure.plateau Respiratory system airway
+103265;9279-1;Beatmung_MS_VisionA_BreathRate;Atemfrequenz
+103266;75931-6;Beatmung_MS_VisionA_IEVerhaeltnis;Inspiration/Expiration time Ratio
+103268;76275-7;Beatmung_ES_Evita2_InspFlow;Inspiratory flow setting Ventilator
+103270;75931-6;Beatmung_ES_Evita2_VerhaeltnisTiTe;Inspiration/Expiration time Ratio
+103275;76248-4;Beatmung_ES_Evita2_PEEP;PEEP Respiratory system --on ventilator
+103276;35410-0;Beatmung_ES_Evita2_CPAP;Continuous positive airway pressure Respiratory system
+103281;3150-0;Beatmung_MS_Evita2_O2Konzentration;Inhalierte Sauerstoffkonzentration
+103283;60829-9;Beatmung_MS_Evita2_Pplat;Pressure.plateau Respiratory system airway
+103284;76248-4;Beatmung_MS_Evita2_Ppeep;PEEP Respiratory system --on ventilator
+103286;75958-9;Beatmung_MS_Evita2_Vte;Tidal volume expired Respiratory system airway
+103287;9279-1;Beatmung_MS_Evita2_frequenz;Atemfrequenz
+103288;75946-4;Beatmung_MS_Evita2_Resistance;Airway resistance
+103289;60826-5;Beatmung_MS_Evita2_Compliance;Lung compliance
+103291;76528-9;Beatmung_MS_Evita2_frequenzspon;Breath rate spontaneous
+103292;35410-0;Beatmung_MS_Evita2_CPAP;Continuous positive airway pressure Respiratory system
+103297;76334-2;Beatmung_ES_Evita4_Tinsp;Inspiratory time setting Ventilator
+103301;76248-4;Beatmung_ES_Evita4_PEEP;PEEP Respiratory system --on ventilator
+103314;71835-3;Beatmung_MS_Evita4_FiO2;Oxygen/Gas total [Pure volume fraction] Inhaled gas
+103317;76530-5;Beatmung_MS_Evita4_Pmean;Mean pressure Respiratory system airway --on ventilator
+103318;76248-4;Beatmung_MS_Evita4_PEEP;PEEP Respiratory system --on ventilator
+103320;76009-0;Beatmung_MS_Evita4_MV;Inspired minute Volume during Mechanical ventilation
+103323;33438-3;Beatmung_MS_Evita4_frequenz;Breath rate mechanical --on ventilator
+103324;19839-0;Beatmung_MS_Evita4_fspn;Breath rate spontaneous --on ventilator
+103326;75958-9;Beatmung_MS_Evita4_Vte;Tidal volume expired Respiratory system airway
+103327;76221-1;Beatmung_MS_Evita4_Vt;Tidal volume.inspired
+103328;75946-4;Beatmung_MS_Evita4_Resistance;Airway resistance
+103329;60826-5;Beatmung_MS_Evita4_Compliance;Lung compliance
+103330;38199-6;Beatmung_MS_Evita4_PEEPi;Intrinsic PEEP Respiratory system
+103411;76248-4;Beatmung_ES_Avea_PEEP;PEEP Respiratory system --on ventilator
+103421;LP101940-7;Beatmung_MS_Avea_Vte;Tidal volume
+103423;20140-0;Beatmung_MS_Avea_Ve;Volume expired
+103424;60740-8;Beatmung_MS_Avea_Ti;Inspiration [Time] Respiratory system
+103425;76248-4;Beatmung_MS_Avea_PEEP;PEEP Respiratory system --on ventilator
+103426;75931-6;Beatmung_MS_Avea_IE;Inspiration/Expiration time Ratio
+103427;60739-0;Beatmung_MS_Avea_Te;Expiration [Time] Respiratory system
+103429;76530-5;Beatmung_MS_Avea_Mitteldruck;Mean pressure Respiratory system airway --on ventilator
+103430;9279-1;Beatmung_MS_Avea_Frequenz;Atemfrequenz
+103431;LP101940-7;Beatmung_MS_Avea_MandVte;Tidal volume
+103432;20116-0;Beatmung_MS_Avea_SpontVte;Tidal volume.spontaneous --on ventilator
+103433;76221-1;Beatmung_MS_Avea_Vti;Tidal volume.inspired
+103435;76528-9;Beatmung_MS_Avea_SpontAF;Breath rate spontaneous
+103438;60829-9;Beatmung_MS_Avea_Pplat;Pressure.plateau Respiratory system airway
+103439;3148-4;Beatmung_MS_Avea_FiO2;Sauerstoff [Partialdruck] in Gas
+103440;60828-1;Beatmung_MS_Avea_Cstat;Compliance.static Lung
+103716;60834-9;TempBT;Blood temperature
+103817;3147-6;PtiO2Druck;Oxygen [Partial pressure] in Exhaled gas
+103943;76248-4;Beatmung_ES_Heimbeatmung_Peep;PEEP Respiratory system --on ventilator
+104032;50982-8;Beatmung_MS_HorowitzINPULS;Horowitz index in Blood
+104035;76113-0;Beatmung_MS_NO2;Nitrogen dioxide [VFr/PPres] Gas delivery system
+104151;3150-0;Beatmung_ES_Airvo_O2Konzentration;Inhalierte Sauerstoffkonzentration
+104187;76530-5;Beatmung_MS_Zephyros_Pmean;Mean pressure Respiratory system airway --on ventilator
+104231;80341-1;Beatmung_MS_Servoi_WOBp;Respiratory effort
+104235;60828-1;Beatmung_MS_Servoi_Cstatic;Compliance.static Lung
+104239;75958-9;Beatmung_MS_Servoi_Vte;Tidal volume expired Respiratory system airway
+104240;76221-1;Beatmung_MS_Servoi_Vti;Tidal volume.inspired
+104245;9279-1;Beatmung_MS_Servoi_AF;Atemfrequenz
+104247;35410-0;Beatmung_MS_Servoi_CPAP;Continuous positive airway pressure Respiratory system
+104248;76248-4;Beatmung_MS_Servoi_PEEP;PEEP Respiratory system --on ventilator
+104249;76530-5;Beatmung_MS_Servoi_Pmean;Mean pressure Respiratory system airway --on ventilator
+104250;75943-1;Beatmung_MS_Servoi_Pplat;Airway pressure --during respiratory pause
+104264;76248-4;Beatmung_ES_Servoi_PEEP;PEEP Respiratory system --on ventilator
+104274;75931-6;Beatmung_ES_Servoi_I_E;Inspiration/Expiration time Ratio
+104283;9279-1;Beatmung_ES_Servoi_Frequenz;Atemfrequenz
+104284;LP101940-7;Beatmung_ES_Servoi_Vt;Tidal volume
+104708;76248-4;Beatmung_ES_Pallas_PEEP;PEEP Respiratory system --on ventilator
+104716;60740-8;Beatmung_ES_Pallas_Tinsp;Inspiration [Time] Respiratory system
+104721;60829-9;Beatmung_MS_Pallas_Pplat;Pressure.plateau Respiratory system airway
+104722;76248-4;Beatmung_MS_Pallas_PEEP;PEEP Respiratory system --on ventilator
+104725;76009-0;Beatmung_MS_Pallas_MV;Inspired minute Volume during Mechanical ventilation
+104726;76222-9;Beatmung_MS_Pallas_Vt;Tidal volume Ventilator --on ventilator
+104727;9279-1;Beatmung_MS_Pallas_Frequenz;Atemfrequenz
+104730;3150-0;Beatmung_MS_Pallas_O2_insp;Inhalierte Sauerstoffkonzentration
+104733;61021-2;Beatmung_MS_Pallas_Halothan_insp;Halothane [VFr/PPres] Airway adaptor --during inspiration
+104734;61020-4;Beatmung_MS_Pallas_Halothan_exsp;Halothane [VFr/PPres] Airway adaptor --during expiration
+104735;60885-1;Beatmung_MS_Pallas_Enfluran_insp;Enflurane [VFr/PPres] Airway adaptor --during inspiration
+104736;60884-4;Beatmung_MS_Pallas_Enfluran_exsp;Enflurane [VFr/PPres] Airway adaptor --at end expiration
+104737;62270-4;Beatmung_MS_Pallas_Isofluran_insp;Isoflurane [VFr/PPres] Airway adaptor --during inspiration
+104738;62269-6;Beatmung_MS_Pallas_Isofluran_exsp;Isoflurane [VFr/PPres] Airway adaptor --during expiration
+104739;60805-9;Beatmung_MS_Pallas_Desfluran_insp;Desflurane [VFr/PPres] Airway adaptor --during inspiration
+104740;62265-4;Beatmung_MS_Pallas_Desfluran_exsp;Desflurane [VFr/PPres] Airway adaptor --during expiration
+104741;60907-3;Beatmung_MS_Pallas_Sevofluran_insp;Sevoflurane [VFr/PPres] Airway adaptor --during inspiration
+104742;60807-5;Beatmung_MS_Pallas_Sevofluran_exsp;Sevoflurane [VFr/PPres] Airway adaptor --during expiration
+104743;75923-3;Beatmung_MS_Pallas_Frischgas_Flow_gesamt;Fresh gas.air flow Gas delivery system
+104745;75925-8;Beatmung_ES_Pallas_Frischgas_O2;Fresh gas.oxygen flow Gas delivery system
+104758;20562-5;Schlagvolumen;Left ventricular Stroke volume
+104760;76297-1;Schlagvolumenindex;Left ventricular Stroke volume index
+104772;76530-5;Beatmung_MS_Pallas_Pmean;Mean pressure Respiratory system airway --on ventilator
+104792;60792-9;Beatmung_MS_C2_ExspFlow;Expiratory gas flow Respiratory system airway --on ventilator
+104974;83064-6;NEV_CRRT_ES_Multi_CalciumFiltrat;Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit
+104995;83064-6;NEV_CRRT_VO_Multi_CalciumFiltrat;Calcium.ionized [Moles/volume] in Blood drawn from CRRT circuit
+105078;76248-4;Beatmung_ES_C2_PEEP_CPAP_Ptief;PEEP Respiratory system --on ventilator
+105078;35410-0;Beatmung_ES_C2_PEEP_CPAP_Ptief;Continuous positive airway pressure Respiratory system
+106522;8691-8;Fall_Anamnese_Auslandsaufenthalt_Ja;Reiseanamnese
+106640;60740-8;Beatmung_ES_T1_Ti;Inspiration [Time] Respiratory system
+106649;35090-0;Fall_Anamnese_Auslandsaufenthalt_unbekannt;Anamnese
+106784;19941-4;Beatmung_ES_Optiflow_O2Flow;Oxygen gas flow Oxygen delivery system
+107812;60821-6;Beatmung_ES_Leoni_Apnoezeit;Apnea duration
+107835;76530-5;Beatmung_MS_Leoni_Pmean;Mean pressure Respiratory system airway --on ventilator
+107871;60828-1;Beatmung_MS_T1_Cstat;Compliance.static Lung
+107872;76008-2;Beatmung_MS_T1_ExpMinVol;Expired minute Volume during Mechanical ventilation
+107873;64099-5;Beatmung_MS_T1_ExspFlow;Peak expiratory flow attempt
+107874;76528-9;Beatmung_MS_T1_fSpontan;Breath rate spontaneous
+107876;75931-6;Beatmung_MS_T1_IEVerhaeltnis;Inspiration/Expiration time Ratio
+107878;60948-7;Beatmung_MS_T1_InspFlow;Peak inspiratory flow Respiratory system airway
+107879;19994-3;Beatmung_MS_T1_O2VolProzent;Oxygen/Total gas setting [Volume Fraction] Ventilator
+107880;76004-1;Beatmung_MS_T1_P01;Airway occlusion pressure
+107886;60829-9;Beatmung_MS_T1_Pplateau;Pressure.plateau Respiratory system airway
+107888;75948-0;Beatmung_MS_T1_Rinsp;Airway resistance --during inspiration
+107891;60740-8;Beatmung_MS_T1_TI;Inspiration [Time] Respiratory system
+107893;75958-9;Beatmung_MS_T1_VTE;Tidal volume expired Respiratory system airway
+107981;76248-4;P_Beatmung_ES_C3_PEEP_CPAP_Ptief;PEEP Respiratory system --on ventilator
+108016;76008-2;P_Beatmung_MS_C3_ExspMinVol;Expired minute Volume during Mechanical ventilation
+108018;76528-9;P_Beatmung_MS_C3_fSpontan;Breath rate spontaneous
+108023;60829-9;P_Beatmung_MS_C3_Pplateau;Pressure.plateau Respiratory system airway
+108032;64099-5;P_Beatmung_MS_C3_ExspFlow;Peak expiratory flow attempt
+108033;60948-7;P_Beatmung_MS_C3_InspFlow;Peak inspiratory flow Respiratory system airway
+108034;60739-0;P_Beatmung_MS_C3_RCexsp;Expiration [Time] Respiratory system
+108036;60828-1;P_Beatmung_MS_C3_Cstat;Compliance.static Lung
+108038;76004-1;P_Beatmung_MS_C3_P01;Airway occlusion pressure
+108129;90767-5;Aufnahme_Schwangerschaft_sonstige;Übersicht der Schwangerschaft - Dokument
+108129;82810-3;Aufnahme_Schwangerschaft_sonstige;Schwangerschaftsstatus
+108132;82810-3;Aufnahme_Schwangerschaft_spontan;Schwangerschaftsstatus
+108132;90767-5;Aufnahme_Schwangerschaft_spontan;Übersicht der Schwangerschaft - Dokument
+108151;21112-8;Mutter_Geburtsdatum;Geburtsdatum
+108162;82810-3;Aufnahme_Probleme_Schwangerschaft_Text;Schwangerschaftsstatus
+108162;90767-5;Aufnahme_Probleme_Schwangerschaft_Text;Übersicht der Schwangerschaft - Dokument
+108252;9843-4;Patient_Kopfumfang_Aufnahme;Kopfumfang okzipital-frontal
+108502;9843-4;Patient_Kopfumfang_bit;Kopfumfang okzipital-frontal
+108503;8518-3;P_NBP_liBein;Femoral artery - left Diastolic blood pressure
+108503;8550-6;P_NBP_liBein;Dorsal pedal artery - left Systolic blood pressure
+108503;8532-4;P_NBP_liBein;Dorsal pedal artery - left Mean blood pressure
+108503;8517-5;P_NBP_liBein;Dorsal pedal artery - left Diastolic blood pressure
+108503;8553-0;P_NBP_liBein;Femoral artery - left Systolic blood pressure
+108503;8534-0;P_NBP_liBein;Femoral artery - left Mean blood pressure
+108504;8554-8;P_NBP_reBein;Femoral artery - right Systolic blood pressure
+108504;8519-1;P_NBP_reBein;Femoral artery - right Diastolic blood pressure
+108504;8535-7;P_NBP_reBein;Femoral artery - right Mean blood pressure
+108504;8516-7;P_NBP_reBein;Dorsal pedal artery - right Diastolic blood pressure
+108504;8533-2;P_NBP_reBein;Dorsal pedal artery - right Mean blood pressure
+108504;8551-4;P_NBP_reBein;Dorsal pedal artery - right Systolic blood pressure
+108505;8546-4;P_NBP_liArm;Brachial artery - left Systolic blood pressure
+108505;8514-2;P_NBP_liArm;Brachial artery - left Diastolic blood pressure
+108505;8530-8;P_NBP_liArm;Brachial artery - left Mean blood pressure
+108506;8515-9;P_NBP_reArm;Brachial artery - right Diastolic blood pressure
+108506;8531-6;P_NBP_reArm;Brachial artery - right Mean blood pressure
+108506;8547-2;P_NBP_reArm;Brachial artery - right Systolic blood pressure
+108508;33437-5;tcpO2;Oxygen [Partial pressure] in Capillary blood by Transcutaneous O2 monitor
+110786;12514-6;P_NEV_HD_ES_5008onl_Bicarbonat;Bicarbonat [Mol/Volumen] in Dialysat
+110806;12514-6;P_NEV_HD_VO_5008onl_Bicarbonat;Bicarbonat [Mol/Volumen] in Dialysat
+110839;76154-4;P_Beatmung_MS_3100A_Amplitude;Airway pressure delta --on ventilator
+110904;17609-9;P_Patient_Gewicht_Differenz;Gewicht [Masse/Zeit] von 72-Stunden-Stuhl
+110904;25530-7;P_Patient_Gewicht_Differenz;Gewicht [Masse/Zeit] von 24-Stunden-Stuhl
+110904;17608-1;P_Patient_Gewicht_Differenz;Gewicht [Masse/Zeit] von 48-Stunden-Stuhl
+110915;75931-6;Beatmung_MS_Servoi_I_E;Inspiration/Expiration time Ratio
+110919;60988-3;LAP1;Left atrial pressure
+110921;60996-6;RAP1;Right atrial pressure
+110922;75919-1;LCWI;Left ventricular Cardiac index
+110923;60956-0;ICP1;Intracranial pressure (ICP)
+110924;75987-8;P_Temperatur_Venoes;Venous blood temperature
+110926;39106-0;P_Temperatur_Haut;Temperature of Skin
+110927;76010-8;P_Temperatur_Naso;Nasal temperature
+110928;60836-4;P_Temperatur_Oesophagial;Esophageal temperature
+110929;8310-5;P_Temperatur_Tympanal;Ear temperature
+110930;8332-9;P_Temperatur_Rektal;Rectal temperature
+110931;8310-5;P_Temperatur_Messung_OrtAllg;Körpertemperatur
+110933;8329-5;P_Temperatur_Kern;Body temperature - Core
+110934;8310-5;P_Temperatur_generic;Körpertemperatur
+110936;8329-5;P_Temperatur_Messung_OrtKern;Body temperature - Core
