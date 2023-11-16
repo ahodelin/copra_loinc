@@ -1,0 +1,34 @@
+\chapter{Benutzer}
+\label{ch: usr}
+
+Der Benutzer her11a\_admin ist der Administrator der Server. Jede Schema hat mindesten ein Benutzer, einer davon darf lesen und Operationen der Insertion, Modifikation, und Löschen/Truncate durchführen. Momentan hat das System ein Benutzer (onlyreader), der nur Lesen-Zugriff in allen Schemata hat. 
+
+\begin{table}[ht]
+	\centering   
+	\caption{Benutzer im \ac{csdwh}}
+	\begin{tabular}{||l|l|p{3.4cm}|l||}
+		\hline
+		Benutzer & Schema & Berechtigungen & Anwendung\\ 
+		\hline\hline
+		\texttt{centrallabcdwuser} & \texttt{centrallab} & \texttt{select, insert, update, delete, truncate} & - \\
+		\hline
+		\texttt{her11\_admin} & \texttt{all} & \texttt{administrator} & - \\
+		\hline
+		\texttt{grafana} & \texttt{all in staging} & \texttt{select} & ja \\
+		\hline
+	    \texttt{kisvendor} & \texttt{kis} & \texttt{select, insert, update, delete, truncate} & - \\
+	    \hline 
+	    \texttt{p21user} & \texttt{p21} & \texttt{select, insert, update, delete, truncate} & - \\	    
+		\hline
+		\texttt{gtdscdwuser} & \texttt{gtdscdwuser} & \texttt{select, insert, update, delete, truncate} & - \\
+		\hline
+		\texttt{onlyreader} & \texttt{all in staging\_test} & \texttt{select} & - \\
+		\hline 
+		\texttt{copracdwuser} & \texttt{copra} & \texttt{select, insert, update, delete, truncate} & - \\
+		\hline
+		\texttt{imagiccdwuser} & \texttt{imagic} & \texttt{select, insert, update, delete, truncate} & - \\
+		\hline
+		\texttt{emergencydepartmentuser} & \texttt{aktin} & \texttt{select, insert, update, delete, truncate} & - \\
+		\hline
+	\end{tabular}
+\end{table}

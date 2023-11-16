@@ -1,0 +1,16 @@
+\chapter{Backup}
+\label{ch:back}
+  \section{Konzept}
+  Ein Dump der kompletten \ac{csdwh}-Instanz wird täglich um 01:00 durchgeführt. Das sind zwei Prozeduren, erst verläuft \texttt{dumpall} der \ac{csdwh}-Instanz und direkt danach werden die Backup-Dateien in einer ZIP-Datei verschlüssel komprimiert.
+  Diese Datei wird auf dem Server und auf einer extra-VM gespeichert.
+  \section{Technische Aspekte}
+  Ein Shell-Script garantiert die Speicherung und Verschlüsselung der \ac{csdwh}-Instanz sowie die lokale und ferne Speicherung. Dieses Skript wird jeden Tag um 01:00 via cron-daemon abgerufen.
+  
+  \begin{itemize}
+   \item Shell-Script: backDB.sh
+   \item Befehl in crontab: \texttt{0 1 * * * /media/db/cdw\_database/backDB.sh}
+   \item Backup-Ordner: /media/db/cdw\_database/dbBack\_standard
+   \item Backup-Name-Format: cdw\_standard\_YYYY-MM-DD.back.zip
+  \end{itemize}
+
+In dem Ordner /media/db/cdw\_database/dbBack\_standard befinden sich die letzte fünf Backup-Dateien.

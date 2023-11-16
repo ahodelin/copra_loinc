@@ -1,0 +1,106 @@
+\chapter{Installation und Konfiguration der Instanz des \acs{csdwh}}
+    
+    Das \ac{csdwh}, welches die Forschungsdaten beinhaltet, befindet sich in einem Ubuntu Server mit der Version Ubuntu 22.04.1 \ac{lts}. Diese \ac{db} wurde in PostgreSQL  implementiert.
+    
+    \section{Installation}
+    
+    Die Installation von PostgreSQL Version postgresql-15.0 folgte dem Installation Guide Software unter dem Link  (\url{https://www.postgresql.org/docs/current/install-procedure.html}). Davor wurden die notwendigen Pakete und Abhängigkeiten auf dem Ubuntu Server via \textsf{apt} installiert:
+    
+    Schritte um Paketen in Ubuntu zu installieren:
+    \begin{itemize}
+    	\item ssh IP\_of\_server -l cdw \# einloggen in Server als cdw-Benutzer
+    	\item sudo apt update \# liest alle eingetragenen Paketquellen neu ein
+    	\item sudo apt list --upgradable \# List neuer Pakete
+    	\item sudo apt upgrade \#  bringt die installierten Pakete auf den neuesten in den Paketquellen verfügbaren Stand
+    	\item sudo apt install pakete\_name \# installiert pakete\_name.
+    \end{itemize}
+    
+    Liste der notwendigen Paketen und Abhängigkeiten
+    
+    \begin{tabular}{ll}
+    	\textsf{zlib1g-dev} & \textsf{libssl-dev} \\ 
+    	\textsf{libldb-dev} & \textsf{libldap2-dev} \\
+    	\textsf{libperl-dev} & \textsf{python-dev-is-python3} \\
+    	\textsf{libreadline-dev} & \textsf{libxml2-dev} \\
+    	\textsf{libxslt1-dev} & \textsf{bison} \\
+    	\textsf{flex} & \textsf{uuid-dev} \\
+    	\textsf{make} & \textsf{make} \\
+    	\textsf{gcc} & \textsf{libsystemd-dev} \\
+    	\textsf{libxml2-utils} & \textsf{xsltproc} \\
+    \end{tabular} \\
+
+    \texttt{sudo apt install zlib1g-dev libldb-dev libperl-dev libreadline-dev flex libxml2-utils libssl-dev libldap2-dev libxml2-dev bison uuid-dev libsystemd-dev xsltproc python-dev-is-python libxslt1-dev}
+    
+    Um dem Postgres Server zu installieren werden die folgende Schritte gefolgt:
+    
+    \begin{itemize}
+        \item mkdir /path/of/some/directory/to/save/new\_postgres\_version \# erzeugt einen Ordner für die Speicherung der tar.gz-Datei der neuen Version von Postgres
+    	\item cd /path/of/some/directory/to/save/new\_postgres\_version \# geht zum Ordner wo die tar.gz-Datei gespeichert werden sollte
+    	\item wget https://www.postgresql.org/ftp/source/new\_postgres\_version/postgresql-new\_version.tar.gz \# Postgres herunterladen
+    	\item tar -xzvf postgresql-new\_version.tar.gz \#  entpackt die tar.gz-Datei
+    	\item cd postgresql-new\_version \# geht zum entpackten Ordner 
+    	\item sudo ./configure --prefix=/usr/local/pg\_new\_version --with-ssl=openssl --with-perl --with-python --with-ldap --with-libxml --with-libxslt --with-uuid=e2fs --with-systemd \# überprüft die Parameter für die Installation
+    	\item sudo make install \# kompiliert und installiert Postgres
+    	\item cd contrib \# geht zum Ordner mit extra Bibliotheken
+    	\item sudo make install \# kompiliert und installiert die extra Bibliotheken
+    \end{itemize} 
+    
+   In dem Ordner /user/local/pg\_new\_version befinden sich die Befehlen zur Steuerung der Server. \\ \\
+
+   Auf dem Betriebssystem wurde der Benutzer \textsf{clinicuser} angelegt, dieser ist für die Administration der \ac{db}-Instanz vorgesehen und besitzt keine administrative rechte auf dem Betriebssystem.
+ 
+   \section{\acs{db}-Instanz initialisieren}
+   
+    Die Initialisierung der \ac{db}-Instanz des \ac{csdwh} wurde mit Hilfe der Webseite \url{https://www.postgresql.org/docs/current/app-initdb.html} durchgeführt.
+    
+    Um die \ac{db}-Instanz zu initialisieren sollte man als clinicuser eingeloggt werden. Dazu es gibt zwei Optionen.
+    
+    1. Kommando \texttt{sudo su - clinicuser}
+
+    oder 
+    
+    2. Sich als clinicuser in dem Server einzuloggen: ssh clinicuser@ip\_addresse\_of\_server oder mit PuTTY
+      
+    Als clinicuser sollte man in den Ordner /media/db/cdw\_database/ gehen.
+    \\
+    
+    Das Start-Kommando zur Initialisierung der Instanz lautet: 
+    
+    \texttt{/usr/local/pg\_new\_version/bin/initdb -D /media/db/cdw\_database/new\_instance -E UTF8 -A scram-sha-256 -k -U administrator\_user -W}
+    
+    Wobei new\_instance ist der Name des Ordners der neuen \ac{db}-Instanz und administrator\_user ist der Benutzername des Administrator oder Administratorin der \ac{db}. Der Ordner new\_instance mit allen Dateien zur Steuerung der \ac{db} wird nach dem Abruf des vorherigen Befehl generiert.
+    
+    Optional kann die Umgebungsvariable \$PATH angepasst werden, sodass man nicht immer die komplette Wege der Postgres-Befehlen eintippen muss. Dies geschieht indem die Datei \texttt{.bashrc} wie folgt angepasst wird.
+    
+    \begin{itemize}
+    	\item nano/vi/vim .bashrc \# die Datei .bashrc mit einem von diesem Texteditoren öffnen.
+    	\item in der letzte Linie \texttt{export PATH="\$PATH:/usr/local/pg\_new\_version/bin"} schreiben und die Datei speichern.
+    \end{itemize}
+  
+    Wenn der vorherige Schritt gefolgt wurde, benötigt man den Weg \\ \texttt{/usr/local/pg\_new\_version/bin/} bei den Postgres-Befehlen nicht mehr einzutippen.
+
+	\subsection{Konfiguration der Instanz} 
+
+	Bevor die \ac{db}-Instanz gestartet wird sollten einige Dateien angepasst werden, sodass der PostgreSQL Server remote Verbindungen akzeptiert.
+	
+	Dazu sollte man in den Ordner new\_instance gehen (cd new\_instance).
+
+    \subsubsection{Modifikationen in den Instanz-Dateien}
+
+    In den folgende Dateien sollen die ausgelisteten Zeilen so angepasst werden.
+    \begin{itemize}
+    	\item \textbf{pg\_hba.conf} - \texttt{host    all     all     0.0.0.0/0       scram-sha-256}
+    	\item \textbf{postgresql.conf}
+    	\begin{itemize}
+    		\item \texttt{listen\_addresses = '*'}
+    		\item \texttt{shared\_buffers = 8GB}
+    	\end{itemize} 
+    \end{itemize}
+
+    \section{\acs{db}-Instanz starten}
+    
+    Nach der Änderung der Dateien kann die \ac{db}-Instanz gestartet werden. Dazu muss man zuerst den Ordner wechseln: \texttt{cd ..} Der Befehl um die \ac{db}-Instanz zu starten ist:
+    
+    \texttt{pg\_ctl start -D new\_instance -l log\_dateie -o "-p proxy\_number"}
+    
+    Wobei proxy\_number ist der definierte Port der \ac{db}-Instanz. Der Default Wert des Ports ist 5432.
